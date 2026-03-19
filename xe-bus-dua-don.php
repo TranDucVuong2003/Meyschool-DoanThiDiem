@@ -7,15 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=1" name="viewport" />
     <link rel="shortcut icon" href="storage/favicon.png">
-    <title>Xe Bus đưa đón</title>
+    <title>Xe bus đưa đón</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:site_name" content="The Olympia Schools">
-    <meta property="og:title" content="Xe Bus đưa đón">
+    <meta property="og:title" content="Xe bus đưa đón">
     <meta property="og:description" content="">
     <meta property="og:url" content="xe-bus-dua-don.html">
     <meta property="og:type" content="article">
     <meta property="og:image" content="storage/favicon.png">
-    <meta name="twitter:title" content="Xe Bus đưa đón">
+    <meta name="twitter:title" content="Xe bus đưa đón">
     <meta name="twitter:description" content="">
 
     <link media="all" type="text/css" rel="stylesheet" href="vendor/core/plugins/language/css/language-publice209.css?v=1.0.0">
@@ -52,7 +52,7 @@
             height: 50px;
             line-height: 50px;
             text-align: center;
-            background-color: #471873;
+            background-color: #2354a0;
             font-size: 14px;
             font-weight: 600;
             text-transform: uppercase;
@@ -60,13 +60,98 @@
             color: #fff;
             display: inline-block;
             margin-top: 20px;
+            border-radius: 10px;
         }
-        .btn-full {
-            text-align: center;
-            line-height: 60px;
+        .btn-full { text-align: center; line-height: 60px; }
+        body.show-admin-bar { margin-top: 0px !important; }
+
+        :root {
+            --blue-1: #2354a0;
+            --blue-2: #439bd4;
+            --blue-3: #4db0e4;
+            --blue-soft: #eef7ff;
         }
-        body.show-admin-bar {
-            margin-top: 0px !important;
+
+        .bus-wrap { background: #f7fbff; }
+        .bus-container { max-width: 1260px; margin: 0 auto; padding: 0 20px; }
+
+        .bus-hero {
+            padding: 130px 0 70px;
+            background: linear-gradient(120deg, rgba(35, 84, 160, 0.95) 0%, rgba(67, 155, 212, 0.9) 60%, rgba(77, 176, 228, 0.7) 100%);
+            color: #fff;
+        }
+
+        .bus-hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .bus-hero h1 {
+            font-family: 'Garamond', serif;
+            font-size: 42px;
+            margin: 16px 0 18px;
+        }
+
+        .bus-hero p {
+            font-size: 16px;
+            line-height: 1.8;
+            max-width: 520px;
+        }
+
+        .bus-hero .breadcrumb {
+            margin: 0 0 16px;
+            background: rgba(255, 255, 255, 0.15);
+            display: inline-flex;
+            padding: 10px 18px;
+            border-radius: 999px;
+        }
+
+        .bus-hero .breadcrumb-item a,
+        .bus-hero .breadcrumb-item.active { color: #fff; }
+
+        .bus-routes {
+            margin-top: 60px;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .route-card {
+            background: #fff;
+            border-radius: 18px;
+            padding: 24px;
+            box-shadow: 0 14px 30px rgba(0,0,0,0.08);
+            border: 1px solid rgba(67, 155, 212, 0.14);
+        }
+
+        .route-card h4 { color: var(--blue-1); margin-bottom: 8px; }
+        .route-card p { margin: 0; color: #5b6a82; font-size: 14px; line-height: 1.7; }
+
+        .bus-map {
+            margin-top: 50px;
+            background: #fff;
+            border-radius: 24px;
+            padding: 18px;
+            box-shadow: 0 16px 40px rgba(0,0,0,0.08);
+        }
+
+        .bus-map img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            border-radius: 18px;
+        }
+
+        @media (max-width: 1100px) {
+            .bus-hero-grid { grid-template-columns: 1fr; }
+            .bus-routes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        }
+
+        @media (max-width: 768px) {
+            .bus-hero h1 { font-size: 32px; }
+            .bus-routes { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -75,48 +160,42 @@
     <?php include 'includes/header.php'; ?>
     <div class="overlay_mark_search" style="display:none;"></div>
 
-    <main class="body-content">
-        <section class="about__header">
-            <div class="standard__header-cover header_cover show-on-scroll" id="english-header-title">
-                <div class="standard__header-img header-cover-img">
-                    <div class="overlay_mark"></div>
-                    <img class="img-cover pc-cover" src="storage/jnp2203-1-1920x1080.jpg" alt="">
-                    <img class="img-cover mb-cover" src="storage/jnp2203-1-1180x720.jpg" alt="">
-                </div>
-                <div class="big-cover-title-box">
-                    <ol class="breadcrumb container">
-                        <li class="breadcrumb-item white"><a href="index.php" class="white">Trang chủ</a></li>
-                        <li class="breadcrumb-item white"><a href="javascript:;" class="white">Dịch vụ học đường</a></li>
-                        <li class="breadcrumb-item white"><a href="javascript:;" class="white">Xe Bus đưa đón</a></li>
+    <main class="body-content bus-wrap">
+        <section class="bus-hero">
+            <div class="bus-container bus-hero-grid">
+                <div>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.php">Trang chủ</a></li>
+                        <li class="breadcrumb-item"><a href="javascript:;">Dịch vụ học đường</a></li>
+                        <li class="breadcrumb-item active">Xe bus đưa đón</li>
                     </ol>
-                    <h1 class="big__header-title container font-garamond-bold white header-title">Xe Bus đưa đón</h1>
+                    <h1>Xe bus đưa đón an toàn</h1>
+                    <p>Hệ thống xe bus hiện đại, tuyến điểm linh hoạt và đội ngũ giám sát giúp học sinh di chuyển an toàn, đúng giờ mỗi ngày.</p>
+                </div>
+                <div>
+                    <img src="storage/banner/ve-chung-toi-web.jpg" alt="Xe bus" style="width:100%;height:320px;object-fit:cover;border-radius:24px;box-shadow:0 18px 40px rgba(0,0,0,0.18);">
                 </div>
             </div>
-        </section>
 
-        <section class="program-content">
-            <div class="container" style="padding: 60px 20px;">
-                <h2 style="font-size: 32px; color: #471873; margin-bottom: 30px; font-weight: 600;">Dịch vụ xe Bus đưa đón</h2>
-                <p style="font-size: 16px; line-height: 1.8; color: #333; margin-bottom: 20px;">
-                    Meyschool Đoàn Thị Điểm cung cấp dịch vụ xe Bus đưa đón học sinh với 
-                    hệ thống xe hiện đại, an toàn và tài xế chuyên nghiệp. Dịch vụ được 
-                    thiết kế để đảm bảo sự thuận tiện và an toàn tối đa cho học sinh.
-                </p>
-                <p style="font-size: 16px; line-height: 1.8; color: #333; margin-bottom: 20px;">
-                    Hệ thống xe Bus bao gồm các tuyến đường phủ khắp các quận khu vực Hà Nội, 
-                    đảm bảo đón học sinh tại các điểm tập kết an toàn gần nhà. 
-                    Mỗi xe đều được trang bị điều hòa, ghế ngồi êm ái và thiết bị giám sát hành trình.
-                </p>
-                <p style="font-size: 16px; line-height: 1.8; color: #333; margin-bottom: 20px;">
-                    Tài xế và nhân viên phụ trách xe Bus đều được đào tạo chuyên sâu về 
-                    an toàn giao thông và chăm sóc học sinh. Mỗi xe có nhân viên phụ trách 
-                    đi kèm để đảm bảo học sinh lên xuống xe an toàn.
-                </p>
-                <p style="font-size: 16px; line-height: 1.8; color: #333;">
-                    Phụ huynh có thể theo dõi hành trình của xe Bus qua ứng dụng, 
-                    nhận thông báo khi xe đến điểm đón và khi học sinh đã lên xe. 
-                    Đây là giải pháp giúp phụ huynh yên tâm trong việc đưa đón con em.
-                </p>
+            <div class="bus-container">
+                <div class="bus-routes">
+                    <div class="route-card">
+                        <h4>Tuyến Bắc - Nam</h4>
+                        <p>Lộ trình phủ các khu dân cư đông học sinh, thời gian linh hoạt theo khung giờ học.</p>
+                    </div>
+                    <div class="route-card">
+                        <h4>Tuyến Trung tâm</h4>
+                        <p>Xe bus đón trả tại các điểm trung tâm, kết nối nhanh tới trường.</p>
+                    </div>
+                    <div class="route-card">
+                        <h4>Tuyến mở rộng</h4>
+                        <p>Phục vụ theo đăng ký, đảm bảo nhu cầu di chuyển của học sinh ở khu vực xa.</p>
+                    </div>
+                </div>
+
+                <div class="bus-map">
+                    <img src="storage/banner/trung-hoc.jpg" alt="Bản đồ tuyến xe">
+                </div>
             </div>
         </section>
     </main>

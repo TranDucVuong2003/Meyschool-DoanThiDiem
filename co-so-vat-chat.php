@@ -92,6 +92,149 @@
             /* position: relative; */
         }
     </style>
+
+    <style>
+        .csvc_main {
+            background: #f4f9ff;
+            padding-bottom: 48px;
+        }
+
+        .facility-hero-modern {
+            position: relative;
+            border-radius: 0 0 32px 32px;
+            overflow: hidden;
+            min-height: 420px;
+            background: linear-gradient(120deg, rgba(67, 155, 212, .88), rgba(77, 176, 228, .82)),
+                url('olympia/images/csvc-cover-new.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+        }
+
+        .facility-hero-modern .container {
+            position: relative;
+            z-index: 2;
+            color: #fff;
+            max-width: 1400px;
+            width: 100%;
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+
+        .facility-breadcrumb {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+            font-size: 14px;
+            opacity: .95;
+        }
+
+        .facility-breadcrumb a,
+        .facility-breadcrumb span {
+            color: #fff;
+        }
+
+        .facility-hero-title {
+            font-size: clamp(44px, 5vw, 82px);
+            line-height: 1.08;
+            letter-spacing: -0.5px;
+            margin: 0;
+            max-width: 1180px;
+        }
+
+        .facility-hero-desc {
+            font-size: clamp(18px, 1.2vw, 22px);
+            line-height: 1.85;
+            margin-bottom: 0;
+        }
+
+        .facility-intro {
+            max-width: 1400px;
+            margin: -52px auto 26px;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 18px 34px rgba(38, 86, 132, .12);
+            padding: 28px 32px;
+            position: relative;
+            z-index: 4;
+        }
+
+        .facility-intro p {
+            margin: 0;
+            color: #2c4963;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .cs-faci .container {
+            max-width: 1400px;
+            width: 100%;
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+
+        .cs-faci .tablist {
+            background: #fff;
+            border-radius: 14px;
+            padding: 10px;
+            box-shadow: 0 12px 26px rgba(38, 86, 132, .1);
+            margin-bottom: 24px;
+        }
+
+        .cs-faci .tablist li a {
+            border-radius: 999px;
+            transition: all .25s ease;
+        }
+
+        .cs-faci .tablist li.active a,
+        .cs-faci .tablist li a:hover {
+            background: linear-gradient(120deg, #439bd4, #4db0e4);
+            color: #fff !important;
+            padding: 8px 14px;
+        }
+
+        .cs-faci .img-box {
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 14px 24px rgba(23, 73, 118, .14);
+        }
+
+        .cs-faci .img-box img {
+            transition: transform .45s ease;
+        }
+
+        .cs-faci .img-box:hover img {
+            transform: scale(1.06);
+        }
+
+        @media (max-width: 991px) {
+            .facility-hero-modern {
+                min-height: 330px;
+                border-radius: 0 0 24px 24px;
+            }
+
+            .facility-hero-modern .container,
+            .cs-faci .container {
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+
+            .facility-hero-title {
+                font-size: clamp(32px, 9vw, 54px);
+                line-height: 1.14;
+            }
+
+            .facility-hero-desc {
+                font-size: 16px;
+                line-height: 1.75;
+            }
+
+            .facility-intro {
+                margin: -34px 14px 20px;
+                padding: 18px 20px;
+            }
+        }
+    </style>
     <!-- Google Tag Manager -->
     <script>
         (function(w, d, s, l, i) {
@@ -170,35 +313,28 @@
 
     <main class="body-content">
         <div class="csvc_main">
-            <section class="cs__header">
-                <div class="standard__header-cover header_cover show-on-scroll english-program"
-                    id="english-header-title">
-                    <div class="standard__header-img header-cover-img">
-                        <div class="overlay_mark"></div>
-                        <img class="img-cover pc-cover" src="olympia/images/csvc-cover-new.jpg" alt="">
-                        <img class="img-cover mb-cover" src="olympia/images/csvc-cover-new-mb.jpg" alt="">
+            <section class="cs__header facility-hero-modern">
+                <div class="container">
+                    <div class="facility-breadcrumb">
+                        <a href="index.php">Trang chủ</a>
+                        <span>/</span>
+                        <span>Cơ sở vật chất</span>
                     </div>
-                    <div class="big-cover-title-box">
-                        <ol class="breadcrumb container">
-                            <li class="breadcrumb-item white"><a href="index.html" class="white">Trang chủ</a></li>
-                            <li class="breadcrumb-item white"><a href="#" class="white">Cơ sở vật chất</a></li>
-                        </ol>
-                        <h1 class="big__header-title container font-garamond-bold white header-title">Cơ sở vật chất</h1>
-                    </div>
+                    <h1 class="big__header-title font-garamond-bold facility-hero-title">Cơ sở vật chất hiện đại, truyền cảm hứng học tập</h1>
+                    <p class="size-16 facility-hero-desc" style="max-width:860px;line-height:1.9;margin-top:16px;">
+                        Không gian trường học được thiết kế đồng bộ theo tiêu chí an toàn, thân thiện và sáng tạo,
+                        giúp mỗi ngày đến trường của học sinh là một trải nghiệm đầy cảm hứng.
+                    </p>
                 </div>
             </section>
 
-            <section class="cs_caption">
-                <div class="container">
-                    <p class="size-16 font-avenir-regular cs__caption_title color-3a">
-                        Khuôn viên trường PTLC Olympia trên khu đất rộng 10,000 m2 được thiết kế bởi công ty kiến trúc
-                        Mỹ Perkins Eastman với phong cách hiện đại, tạo không gian học tập, vui chơi, suy nghĩ và sáng
-                        tạo cho nhiều đối tượng học sinh. Olympia cho rằng mỗi góc trường, mỗi dãy hành lang, mỗi phòng
-                        học đều có thể là không gian học tập, vì vậy, tất cả được xây dựng với tiêu chí thân thiện, gần
-                        gũi và hướng tới học sinh, để Olympia xứng đáng là nơi cả cộng đồng chúng tôi lui tới học tập và
-                        chia sẻ kiến thức mỗi ngày.
-                    </p>
-                </div>
+            <section class="facility-intro">
+                <p>
+                    Khuôn viên trường PTLC Olympia trên khu đất rộng 10,000 m2 được thiết kế bởi công ty kiến trúc Mỹ
+                    Perkins Eastman với phong cách hiện đại. Mỗi góc trường, dãy hành lang, phòng học đều được quy
+                    hoạch thành không gian học tập - vui chơi - khám phá để học sinh phát triển toàn diện cả tri thức,
+                    kỹ năng và cảm xúc.
+                </p>
             </section>
 
             <section class="cs_content cs-faci">

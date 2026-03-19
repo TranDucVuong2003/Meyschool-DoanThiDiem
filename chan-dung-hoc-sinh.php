@@ -65,7 +65,7 @@
             height: 50px;
             line-height: 50px;
             text-align: center;
-            background-color: #471873;
+            background-color: #1e6f8c;
             font-size: 14px;
             font-weight: 600;
             text-transform: uppercase;
@@ -84,280 +84,658 @@
             margin-top: 0px !important;
         }
 
-        .student-profile-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 60px 20px;
-        }
-
-        .profile-intro {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .profile-intro h2 {
-            font-size: 36px;
-            color: #471873;
-            margin-bottom: 20px;
-        }
-
-        .profile-intro p {
-            font-size: 16px;
-            line-height: 1.8;
-            max-width: 800px;
-            margin: 0 auto;
-            color: #555;
-        }
-
-        .qualities-section {
-            margin-bottom: 60px;
-        }
-
-        .qualities-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-        }
-
-        .quality-card {
-            padding: 40px;
-            background: #f9f9f9;
-            border-radius: 12px;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .quality-card:hover {
-            transform: translateY(-5px);
-            background: #471873;
-            color: white;
-        }
-
-        .quality-card:hover .quality-title,
-        .quality-card:hover .quality-subtitle,
-        .quality-card:hover .quality-desc {
-            color: white;
-        }
-
-        .quality-icon {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-
-        .quality-title {
-            font-size: 24px;
-            color: #471873;
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-
-        .quality-subtitle {
-            font-size: 14px;
-            color: #888;
-            font-style: italic;
-            margin-bottom: 15px;
-        }
-
-        .quality-desc {
-            font-size: 14px;
-            line-height: 1.6;
-            color: #666;
-        }
-
-        .student-showcase {
-            margin-bottom: 60px;
-            padding: 40px 0;
-            background: #f9f9f9;
-        }
-
-        .testimonial-swiper {
-            max-width: 1000px;
+        /* Student Portraits - Masonry Gallery Design */
+        .student-container {
+            max-width: 1400px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        .swiper-slide {
+        /* Hero with Gallery Grid */
+        .student-hero {
+            position: relative;
+            min-height: 500px;
             display: flex;
             align-items: center;
-            gap: 60px;
-            padding: 40px;
+            overflow: hidden;
+            background: linear-gradient(135deg, #1a0a2e 0%, #1e6f8c 50%, #7b2cbf 100%);
         }
 
-        .testimonial-content {
-            flex: 1;
+        .student-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 60%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.05) 100%);
         }
 
-        .testimonial-quote {
-            font-size: 22px;
-            color: #333;
-            line-height: 1.6;
+        .student-hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 60px 40px;
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .student-hero-text h1 {
+            font-family: 'Garamond', serif;
+            font-size: 48px;
+            color: #fff;
             margin-bottom: 20px;
-            font-style: italic;
+            font-weight: 700;
+            line-height: 1.2;
         }
 
-        .testimonial-name {
-            font-size: 20px;
-            color: #471873;
-            font-weight: 600;
-            margin-bottom: 5px;
+        .student-hero-text p {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.7;
         }
 
-        .testimonial-info {
-            font-size: 14px;
-            color: #666;
-            line-height: 1.5;
+        .student-hero-badge {
+            display: inline-block;
+            background: #f1cc1f;
+            color: #1e6f8c;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
         }
 
-        .testimonial-image {
-            flex: 0 0 300px;
-            text-align: center;
+        /* Masonry Hero Gallery */
+        .student-hero-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 15px;
         }
 
-        .testimonial-image img {
-            width: 280px;
-            height: 280px;
-            border-radius: 50%;
+        .student-hero-gallery-item {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .student-hero-gallery-item:nth-child(1) {
+            grid-row: span 2;
+        }
+
+        .student-hero-gallery-item:nth-child(3) {
+            grid-column: span 1;
+            grid-row: span 2;
+        }
+
+        .student-hero-gallery-item img {
+            width: 100%;
+            height: 100%;
+            min-height: 120px;
             object-fit: cover;
-            box-shadow: 0 10px 30px rgba(71, 24, 115, 0.3);
+            transition: transform 0.5s ease;
         }
 
-        .swiper-pagination-bullet {
-            width: 12px;
-            height: 12px;
-            background: #ddd;
-            opacity: 1;
+        .student-hero-gallery-item:hover img {
+            transform: scale(1.1);
         }
 
-        .swiper-pagination-bullet-active {
-            background: #471873;
+        /* Main Layout */
+        .student-main-layout {
+            display: grid;
+            grid-template-columns: 280px 1fr 300px;
+            gap: 35px;
+            padding: 50px 0;
         }
 
-        .showcase-title {
-            font-size: 32px;
-            color: #471873;
+        /* Left Sidebar */
+        .student-sidebar-left {
+            position: sticky;
+            top: 100px;
+            height: fit-content;
+        }
+
+        .student-nav-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 8px 30px rgba(71, 24, 115, 0.1);
+            margin-bottom: 25px;
+        }
+
+        .student-nav-card h4 {
+            font-family: 'Garamond', serif;
+            font-size: 18px;
+            color: #1e6f8c;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #f1cc1f;
+        }
+
+        .student-nav-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .student-nav-menu li {
+            margin-bottom: 12px;
+        }
+
+        .student-nav-link {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            color: #555;
+            text-decoration: none;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            font-size: 13px;
+            font-weight: 500;
+            background: #f8f7fa;
+        }
+
+        .student-nav-link:hover,
+        .student-nav-link.active {
+            background: linear-gradient(135deg, #1e6f8c 0%, #5a2a8a 100%);
+            color: #fff;
+            transform: translateX(8px);
+            box-shadow: 0 4px 15px rgba(71, 24, 115, 0.3);
+        }
+
+        .student-nav-thumb {
+            width: 45px;
+            height: 45px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-right: 12px;
+            flex-shrink: 0;
+            border: 2px solid #f1cc1f;
+        }
+
+        .student-nav-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Quick Stats */
+        .student-quick-stats {
+            background: linear-gradient(135deg, #1e6f8c 0%, #6a1b9a 100%);
+            border-radius: 20px;
+            padding: 25px;
+            color: #fff;
+        }
+
+        .student-quick-stats h5 {
+            font-family: 'Garamond', serif;
+            font-size: 16px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #f1cc1f;
+        }
+
+        .quick-stat-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 13px;
+        }
+
+        .quick-stat-row:last-child {
+            border-bottom: none;
+        }
+
+        .quick-stat-value {
+            font-weight: 700;
+            color: #f1cc1f;
+        }
+
+        /* Center Content - Enhanced Testimonials */
+        .student-content-center {
+            background: #fff;
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 8px 40px rgba(71, 24, 115, 0.08);
+        }
+
+        /* Enhanced Testimonials */
+        .testimonials-section {
+            margin-bottom: 50px;
+        }
+
+        .testimonials-header {
             text-align: center;
             margin-bottom: 40px;
         }
 
-        .student-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .student-card {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .student-image {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            background: linear-gradient(135deg, #471873 0%, #6a1b9a 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 64px;
-        }
-
-        .student-info {
-            padding: 25px;
-        }
-
-        .student-name {
-            font-size: 18px;
-            color: #471873;
-            margin-bottom: 8px;
-            font-weight: 600;
-        }
-
-        .student-class {
-            font-size: 14px;
-            color: #888;
+        .testimonials-header h3 {
+            font-family: 'Garamond', serif;
+            font-size: 32px;
+            color: #1e6f8c;
             margin-bottom: 15px;
         }
 
-        .student-achievement {
-            font-size: 14px;
+        .testimonials-header p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        .testimonial-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .testimonial-card-enhanced {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            gap: 30px;
+            background: linear-gradient(135deg, #faf9fb 0%, #f5f3f7 100%);
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid #f0eef2;
+            transition: all 0.4s ease;
+        }
+
+        .testimonial-card-enhanced:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(71, 24, 115, 0.15);
+        }
+
+        .testimonial-card-image {
+            border-radius: 16px;
+            overflow: hidden;
+            height: 180px;
+        }
+
+        .testimonial-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .testimonial-card-enhanced:hover .testimonial-card-image img {
+            transform: scale(1.1);
+        }
+
+        .testimonial-card-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .testimonial-quote-mark {
+            font-size: 48px;
+            color: #f1cc1f;
+            line-height: 1;
+            margin-bottom: 10px;
+            font-family: Georgia, serif;
+        }
+
+        .testimonial-quote-text {
+            font-size: 16px;
             color: #555;
-            line-height: 1.6;
+            line-height: 1.8;
+            margin-bottom: 20px;
             font-style: italic;
         }
 
-        .achievements-banner {
-            background: linear-gradient(135deg, #471873 0%, #6a1b9a 100%);
-            color: white;
-            padding: 60px 40px;
-            border-radius: 12px;
-            text-align: center;
-            margin-bottom: 60px;
+        .testimonial-card-info h4 {
+            font-family: 'Garamond', serif;
+            font-size: 20px;
+            color: #1e6f8c;
+            margin-bottom: 5px;
         }
 
-        .achievements-banner h3 {
-            font-size: 28px;
+        .testimonial-card-detail {
+            font-size: 13px;
+            color: #888;
+            line-height: 1.6;
+        }
+
+        .testimonial-achievement-badge {
+            display: inline-block;
+            background: #f1cc1f;
+            color: #1e6f8c;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        /* Qualities Section - Image Cards */
+        .qualities-new-section {
+            margin-bottom: 50px;
+        }
+
+        .qualities-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #f0eef2;
+        }
+
+        .qualities-header h2 {
+            font-family: 'Garamond', serif;
+            font-size: 32px;
+            color: #1e6f8c;
+            margin-bottom: 15px;
+        }
+
+        .qualities-header p {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.8;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .qualities-masonry {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .quality-card-new {
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+            border: 1px solid #f0eef2;
+        }
+
+        .quality-card-new:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(71, 24, 115, 0.2);
+        }
+
+        .quality-card-new.featured {
+            grid-row: span 2;
+        }
+
+        .quality-card-image {
+            height: 160px;
+            overflow: hidden;
+        }
+
+        .quality-card-new.featured .quality-card-image {
+            height: 240px;
+        }
+
+        .quality-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .quality-card-new:hover .quality-card-image img {
+            transform: scale(1.1);
+        }
+
+        .quality-card-content {
+            padding: 25px;
+        }
+
+        .quality-card-content h3 {
+            font-family: 'Garamond', serif;
+            font-size: 22px;
+            color: #1e6f8c;
+            margin-bottom: 8px;
+        }
+
+        .quality-en {
+            font-size: 12px;
+            color: #f1cc1f;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .quality-desc {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Achievements Bar */
+        .achievements-bar {
+            background: linear-gradient(135deg, #1e6f8c 0%, #6a1b9a 100%);
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .achievements-bar h4 {
+            font-family: 'Garamond', serif;
+            font-size: 24px;
             margin-bottom: 30px;
         }
 
-        .stats-row {
+        .achievements-stats {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-            margin-top: 30px;
+            gap: 20px;
         }
 
-        .stat-box {
-            text-align: center;
+        .achievement-stat-box {
+            padding: 20px;
         }
 
-        .stat-number-white {
+        .achievement-stat-number {
+            font-family: 'Garamond', serif;
             font-size: 36px;
-            font-weight: bold;
-            margin-bottom: 10px;
+            font-weight: 700;
+            color: #f1cc1f;
+            margin-bottom: 8px;
         }
 
-        .stat-label-white {
-            font-size: 14px;
+        .achievement-stat-label {
+            font-size: 13px;
             opacity: 0.9;
         }
 
-        @media (max-width: 768px) {
-            .qualities-grid {
+        /* Right Sidebar */
+        .student-sidebar-right {
+            position: sticky;
+            top: 100px;
+            height: fit-content;
+        }
+
+        .student-cta-card {
+            background: linear-gradient(135deg, #f1cc1f 0%, #e5b81a 100%);
+            border-radius: 20px;
+            padding: 30px 25px;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .student-cta-card h5 {
+            font-family: 'Garamond', serif;
+            font-size: 22px;
+            color: #1e6f8c;
+            margin-bottom: 15px;
+        }
+
+        .student-cta-card p {
+            font-size: 14px;
+            color: #1e6f8c;
+            margin-bottom: 20px;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        .student-cta-btn {
+            display: inline-block;
+            background: #1e6f8c;
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .student-cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(71, 24, 115, 0.4);
+        }
+
+        .student-gallery-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 8px 30px rgba(71, 24, 115, 0.1);
+        }
+
+        .student-gallery-card h5 {
+            font-family: 'Garamond', serif;
+            font-size: 16px;
+            color: #1e6f8c;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #f1cc1f;
+        }
+
+        .student-gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .student-gallery-item {
+            border-radius: 12px;
+            overflow: hidden;
+            aspect-ratio: 1;
+        }
+
+        .student-gallery-item.featured {
+            grid-column: span 2;
+            aspect-ratio: 16/9;
+        }
+
+        .student-gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .student-gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .student-main-layout {
+                grid-template-columns: 240px 1fr 240px;
+                gap: 25px;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .student-hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                padding: 40px 20px;
+            }
+
+            .student-hero-text h1 {
+                font-size: 36px;
+            }
+
+            .student-hero-gallery {
+                max-width: 500px;
+                margin: 0 auto;
+            }
+
+            .student-main-layout {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .student-sidebar-left,
+            .student-sidebar-right {
+                position: static;
+            }
+
+            .testimonial-card-enhanced {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .testimonial-card-image {
+                height: 200px;
+                max-width: 200px;
+                margin: 0 auto;
+            }
+
+            .qualities-masonry {
                 grid-template-columns: 1fr;
             }
 
-            .stats-row {
+            .quality-card-new.featured {
+                grid-row: span 1;
+            }
+
+            .quality-card-new.featured .quality-card-image {
+                height: 160px;
+            }
+
+            .achievements-stats {
                 grid-template-columns: repeat(2, 1fr);
             }
 
-            .testimonial-swiper .swiper-slide {
-                flex-direction: column-reverse;
-                gap: 30px;
-                padding: 20px;
+            .student-gallery-grid {
+                grid-template-columns: repeat(4, 1fr);
             }
 
-            .testimonial-image {
-                flex: none;
+            .student-gallery-item.featured {
+                grid-column: span 2;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .student-hero {
+                min-height: 400px;
             }
 
-            .testimonial-image img {
-                width: 200px;
-                height: 200px;
+            .student-hero-text h1 {
+                font-size: 28px;
             }
 
-            .testimonial-quote {
-                font-size: 18px;
-                text-align: center;
+            .student-content-center {
+                padding: 25px 20px;
             }
 
-            .testimonial-name {
-                text-align: center;
+            .testimonial-card-image {
+                height: 160px;
             }
 
-            .testimonial-info {
-                text-align: center;
+            .achievements-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .achievement-stat-number {
+                font-size: 28px;
+            }
+
+            .student-gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
     </style>
@@ -368,186 +746,338 @@
     <div class="overlay_mark_search" style="display:none;"></div>
 
     <main class="body-content">
-        <section class="about__header">
-            <div class="standard__header-cover header_cover show-on-scroll" id="english-header-title">
-                <div class="standard__header-img header-cover-img">
-                    <div class="overlay_mark"></div>
-                    <img class="img-cover pc-cover" src="storage/jnp2203-1-1920x1080.jpg" alt="">
-                    <img class="img-cover mb-cover" src="storage/jnp2203-1-1180x720.jpg" alt="">
+        <!-- Hero Section -->
+        <section class="student-hero">
+            <div class="student-hero-content student-container">
+                <div class="student-hero-text">
+                    <span class="student-hero-badge">Về chúng tôi</span>
+                    <h1>Chân dung học sinh</h1>
+                    <p>"Công dân toàn cầu tương lai - Những phẩm chất và kỹ năng của học sinh Meyschool trong thế kỷ 21"</p>
                 </div>
-                <div class="big-cover-title-box">
-                    <ol class="breadcrumb container">
-                        <li class="breadcrumb-item white"><a href="index.php" class="white">Trang chủ</a></li>
-                        <li class="breadcrumb-item white"><a href="javascript:;" class="white">Chân dung học sinh</a></li>
-                    </ol>
-                    <h1 class="big__header-title container font-garamond-bold white header-title">
-                        Chân dung học sinh Meyschool</h1>
-                </div>
-            </div>
-        </section>
-
-        <section class="student-showcase">
-            <h3 class="showcase-title font-garamond-bold">Học sinh tiêu biểu</h3>
-            <div class="testimonial-swiper swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="testimonial-content">
-                            <p class="testimonial-quote">"Tôi rất tự hào khi được học tại Meyschool. Trường đã giúp tôi phát hiện và phát triển niềm đam mê Toán học. Huy chương Vàng Olympic Toán Quốc tế và học bổng Stanford là những thành quả từ sự đồng hành của thầy cô."</p>
-                            <p class="testimonial-name font-garamond-bold">Nguyễn Thị Anh Thư</p>
-                            <p class="testimonial-info">Lớp 12 - Chuyên Toán<br>Huy chương Vàng Olympic Toán 2024 - Thủ khoa Stanford</p>
-                        </div>
-                        <div class="testimonial-image">
-                            <img src="storage/doi-ngu-olym/nguyen-thi-thu-thao.png" alt="Nguyễn Thị Anh Thư">
-                        </div>
+                <div class="student-hero-gallery">
+                    <div class="student-hero-gallery-item">
+                        <img src="storage/banner/tieu-hoc.jpg" alt="Học sinh Meyschool">
                     </div>
-
-                    <div class="swiper-slide">
-                        <div class="testimonial-content">
-                            <p class="testimonial-quote">"Meyschool đã cho tôi cơ hội thực hiện đam mê nghiên cứu khoa học. Dự án 'Hệ thống lọc nước biển' của tôi được đề cử giải thưởng quốc tế nhờ sự hướng dẫn tận tâm của thầy cô."</p>
-                            <p class="testimonial-name font-garamond-bold">Trần Minh Khôi</p>
-                            <p class="testimonial-info">Lớp 11 - Chuyên Lý<br>Giải Nhất Khoa học Kỹ thuật Quốc gia</p>
-                        </div>
-                        <div class="testimonial-image">
-                            <img src="storage/doi-ngu-olym/tran-quoc-dan-2.png" alt="Trần Minh Khôi">
-                        </div>
+                    <div class="student-hero-gallery-item">
+                        <img src="storage/banner/trung-hoc.jpg" alt="Học sinh Meyschool">
                     </div>
-
-                    <div class="swiper-slide">
-                        <div class="testimonial-content">
-                            <p class="testimonial-quote">"Nhờ môi trường song ngữ tại Meyschool, tôi tự tin giao tiếp và đại diện cho thanh niên Việt Nam tại hội nghị ASEAN. Đây là trải nghiệm quý giá mà tôi không thể có ở nơi khác."</p>
-                            <p class="testimonial-name font-garamond-bold">Lê Ngọc Bảo An</p>
-                            <p class="testimonial-info">Lớp 10 - Song ngữ<br>Giải Nhất Hùng biện tiếng Anh toàn quốc - Đại sứ văn hóa ASEAN</p>
-                        </div>
-                        <div class="testimonial-image">
-                            <img src="storage/doi-ngu-olym/do-thi-bao-linh-2.jpg" alt="Lê Ngọc Bảo An">
-                        </div>
+                    <div class="student-hero-gallery-item">
+                        <img src="storage/banner/ve-chung-toi-web.jpg" alt="Học sinh Meyschool">
                     </div>
-
-                    <div class="swiper-slide">
-                        <div class="testimonial-content">
-                            <p class="testimonial-quote">"Meyschool không chỉ dạy tôi kiến thức mà còn dạy cách tư duy khoa học. 3 bài báo quốc tế và Huy chương Bạc Olympic Hóa học Châu Á là minh chứng cho phương pháp giáo dục xuất sắc tại đây."</p>
-                            <p class="testimonial-name font-garamond-bold">Phạm Quang Vinh</p>
-                            <p class="testimonial-info">Lớp 12 - Chuyên Hóa<br>Huy chương Bạc Olympic Hóa học Châu Á - Tác giả 3 bài báo quốc tế</p>
-                        </div>
-                        <div class="testimonial-image">
-                            <img src="storage/doi-ngu-olym/hoang-diep-trinh-2.png" alt="Phạm Quang Vinh">
-                        </div>
+                    <div class="student-hero-gallery-item">
+                        <img src="olympia/images/0201.jpg" alt="Học sinh Meyschool">
                     </div>
-
-                    <div class="swiper-slide">
-                        <div class="testimonial-content">
-                            <p class="testimonial-quote">"Nhờ sự phát hiện và bồi dưỡng của thầy cô Meyschool, tôi được biểu diễn tại Nhà hát Lớn và đoạt giải Piano quốc tế Steinway. Đây là ước mơ thành hiện thực."</p>
-                            <p class="testimonial-name font-garamond-bold">Hoàng Thảo Vy</p>
-                            <p class="testimonial-info">Lớp 9 - Năng khiếu<br>Nghệ sĩ Piano trẻ tuổi nhất Nhà hát Lớn - Giải Nhất Steinway</p>
-                        </div>
-                        <div class="testimonial-image">
-                            <img src="storage/doi-ngu-olym/pham-hai-ha.png" alt="Hoàng Thảo Vy">
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="testimonial-content">
-                            <p class="testimonial-quote">"Meyschool đã trang bị cho tôi tư duy lập trình và tinh thần sáng tạo. Huy chương Vàng IOI 2024 và dự án EduTech giúp học sinh vùng cao là niềm tự hào của tôi."</p>
-                            <p class="testimonial-name font-garamond-bold">Vũ Hoàng Long</p>
-                            <p class="testimonial-info">Lớp 12 - Chuyên Tin<br>Huy chương Vàng IOI 2024 - Founder EduTech</p>
-                        </div>
-                        <div class="testimonial-image">
-                            <img src="storage/doi-ngu-olym/nguyen-mai-phuong.png" alt="Vũ Hoàng Long">
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-pagination"></div>
-            </div>
-        </section>
-
-        <section class="student-profile-content">
-            <div class="profile-intro">
-                <h2 class="font-garamond-bold">Học sinh Meyschool - Công dân toàn cầu tương lai</h2>
-                <p>Tại Meyschool, chúng tôi không chỉ đào tạo học sinh giỏi về kiến thức mà còn chú trọng phát triển toàn diện các phẩm chất và năng lực cần thiết để trở thành công dân toàn cầu trong thế kỷ 21. Mỗi học sinh Meyschool đều mang trong mình những giá trị cốt lõi và kỹ năng vượt trội.</p>
-            </div>
-
-            <div class="qualities-section">
-                <div class="qualities-grid">
-                    <div class="quality-card">
-                        <div class="quality-icon">🎓</div>
-                        <h3 class="quality-title font-garamond-bold">Tự hào</h3>
-                        <p class="quality-subtitle">Proud Global Citizens</p>
-                        <p class="quality-desc">Tự hào và hành động theo những truyền thống và giá trị tốt đẹp của nền văn hóa, của trường học và của bản thân. Cân bằng giữa truyền thống và hiện đại.</p>
-                    </div>
-
-                    <div class="quality-card">
-                        <div class="quality-icon">💝</div>
-                        <h3 class="quality-title font-garamond-bold">Thấu cảm</h3>
-                        <p class="quality-subtitle">Empathetic</p>
-                        <p class="quality-desc">Nỗ lực thấu hiểu, quan tâm đến suy nghĩ, cảm xúc của người khác. Hợp tác trong sự hiểu biết lẫn nhau để làm cho thế giới tốt đẹp hơn.</p>
-                    </div>
-
-                    <div class="quality-card">
-                        <div class="quality-icon">🤝</div>
-                        <h3 class="quality-title font-garamond-bold">Giao tiếp tôn trọng</h3>
-                        <p class="quality-subtitle">Respectful Communicators</p>
-                        <p class="quality-desc">Thể hiện bản thân rõ ràng và tự tin. Giao tiếp và đối xử mọi người với sự tôn trọng và bình đẳng, bất kể bối cảnh cá nhân, giới tính, địa vị.</p>
-                    </div>
-
-                    <div class="quality-card">
-                        <div class="quality-icon">💪</div>
-                        <h3 class="quality-title font-garamond-bold">Kiên định</h3>
-                        <p class="quality-subtitle">Perseverant</p>
-                        <p class="quality-desc">Đặt ra mục tiêu và nỗ lực bền bỉ để đạt được mục tiêu, dù công việc có thử thách đến đâu đi nữa. Không bỏ cuộc trước khó khăn.</p>
-                    </div>
-
-                    <div class="quality-card">
-                        <div class="quality-icon">⭐</div>
-                        <h3 class="quality-title font-garamond-bold">Trách nhiệm</h3>
-                        <p class="quality-subtitle">Responsible</p>
-                        <p class="quality-desc">Hoàn thành những việc được giao cho cá nhân và trong đội nhóm, chịu trách nhiệm với kết quả mà không vội vàng đổ lỗi cho người khác.</p>
-                    </div>
-
-                    <div class="quality-card">
-                        <div class="quality-icon">🔍</div>
-                        <h3 class="quality-title font-garamond-bold">Thích ứng, ham học hỏi</h3>
-                        <p class="quality-subtitle">Agile Inquirers</p>
-                        <p class="quality-desc">Nuôi dưỡng trí tò mò thông qua học hỏi và nghiên cứu. Cởi mở trước cơ hội học tập. Bình tĩnh và lạc quan trước khó khăn, sẵn sàng điều chỉnh, thích ứng.</p>
-                    </div>
-
-                    <div class="quality-card">
-                        <div class="quality-icon">💡</div>
-                        <h3 class="quality-title font-garamond-bold">Tư duy và sáng tạo xuất sắc</h3>
-                        <p class="quality-subtitle">Excellent Thinkers & Creators</p>
-                        <p class="quality-desc">Tiếp nhận kiến thức từ nhiều góc nhìn. Tiếp cận vấn đề bằng tư duy phản biện và sáng tạo. Kiến tạo giải pháp cho những vấn đề của cộng đồng.</p>
-                    </div>
-
-                    <div class="quality-card">
-                        <div class="quality-icon">🌍</div>
-                        <h3 class="quality-title font-garamond-bold">Công dân toàn cầu</h3>
-                        <p class="quality-subtitle">Global Citizens</p>
-                        <p class="quality-desc">Có kiến thức và kỹ năng để hoạt động hiệu quả trong môi trường quốc tế. Tôn trọng đa dạng văn hóa và đóng góp tích cực cho cộng đồng toàn cầu.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="achievements-banner">
-                <h3 class="font-garamond-bold">Thành tựu nổi bật của học sinh Meyschool</h3>
-                <div class="stats-row">
-                    <div class="stat-box">
-                        <div class="stat-number-white font-garamond-bold">95%</div>
-                        <div class="stat-label-white">Đỗ vào trường TOP</div>
-                    </div>
-                    <div class="stat-box">
-                        <div class="stat-number-white font-garamond-bold">50+</div>
-                        <div class="stat-label-white">Giải thi đấu Quốc gia</div>
-                    </div>
-                    <div class="stat-box">
-                        <div class="stat-number-white font-garamond-bold">100+</div>
-                        <div class="stat-label-white">Học sinh giỏi cấp Thành</div>
-                    </div>
-                    <div class="stat-box">
-                        <div class="stat-number-white font-garamond-bold">30+</div>
-                        <div class="stat-label-white">Học bổng Quốc tế</div>
+                    <div class="student-hero-gallery-item">
+                        <img src="olympia/images/0208.jpg" alt="Học sinh Meyschool">
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- Breadcrumb -->
+        <div class="student-container" style="padding-top: 20px;">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.php">Trang chủ</a></li>
+                <li class="breadcrumb-item"><a href="ve-chung-toi.php">Về chúng tôi</a></li>
+                <li class="breadcrumb-item active">Chân dung học sinh</li>
+            </ol>
+        </div>
+
+        <!-- Main Layout -->
+        <div class="student-container">
+            <div class="student-main-layout">
+                <!-- Left Sidebar -->
+                <aside class="student-sidebar-left">
+                    <div class="student-nav-card">
+                        <h4>Khám phá thêm</h4>
+                        <ul class="student-nav-menu">
+                            <li>
+                                <a href="thong-diep-nguoi-sang-lap.php" class="student-nav-link">
+                                    <span class="student-nav-thumb">
+                                        <img src="storage/doi-ngu-olym/nguyen-thi-thu-thao.png" alt="">
+                                    </span>
+                                    Thông điệp Nhà sáng lập
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tam-nhin-su-menh.php" class="student-nav-link">
+                                    <span class="student-nav-thumb">
+                                        <img src="storage/banner/ve-chung-toi-web.jpg" alt="">
+                                    </span>
+                                    Tầm nhìn - Sứ mệnh
+                                </a>
+                            </li>
+                            <li>
+                                <a href="ban-lanh-dao.php" class="student-nav-link">
+                                    <span class="student-nav-thumb">
+                                        <img src="storage/doi-ngu-olym/dang-thu-huong-2.jpg" alt="">
+                                    </span>
+                                    Ban lãnh đạo
+                                </a>
+                            </li>
+                            <li>
+                                <a href="doi-ngu-giao-vien.php" class="student-nav-link">
+                                    <span class="student-nav-thumb">
+                                        <img src="storage/doi-ngu-olym/nguyen-hanh-chi-ucc.png" alt="">
+                                    </span>
+                                    Đội ngũ giáo viên
+                                </a>
+                            </li>
+                            <li>
+                                <a href="chan-dung-hoc-sinh.php" class="student-nav-link active">
+                                    <span class="student-nav-thumb">
+                                        <img src="storage/banner/trung-hoc.jpg" alt="">
+                                    </span>
+                                    Chân dung học sinh
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="student-quick-stats">
+                        <h5>Thống kê học sinh</h5>
+                        <div class="quick-stat-row">
+                            <span>Tổng số học sinh</span>
+                            <span class="quick-stat-value">2000+</span>
+                        </div>
+                        <div class="quick-stat-row">
+                            <span>Học sinh giỏi cấp Thành</span>
+                            <span class="quick-stat-value">100+</span>
+                        </div>
+                        <div class="quick-stat-row">
+                            <span>Giải thi đấu Quốc gia</span>
+                            <span class="quick-stat-value">50+</span>
+                        </div>
+                        <div class="quick-stat-row">
+                            <span>Học bổng Quốc tế</span>
+                            <span class="quick-stat-value">30+</span>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Center Content -->
+                <div class="student-content-center">
+                    <!-- Testimonials Section -->
+                    <div class="testimonials-section">
+                        <div class="testimonials-header">
+                            <h3 class="font-garamond-bold">Học sinh tiêu biểu</h3>
+                            <p>Những câu chuyện truyền cảm hứng từ học sinh Meyschool</p>
+                        </div>
+                        <div class="testimonial-cards">
+                            <div class="testimonial-card-enhanced">
+                                <div class="testimonial-card-image">
+                                    <img src="storage/doi-ngu-olym/nguyen-thi-thu-thao.png" alt="Nguyễn Thị Anh Thư">
+                                </div>
+                                <div class="testimonial-card-content">
+                                    <span class="testimonial-quote-mark">"</span>
+                                    <p class="testimonial-quote-text">Tôi rất tự hào khi được học tại Meyschool. Trường đã giúp tôi phát hiện và phát triển niềm đam mê Toán học. Huy chương Vàng Olympic Toán Quốc tế và học bổng Stanford là những thành quả từ sự đồng hành của thầy cô.</p>
+                                    <div class="testimonial-card-info">
+                                        <h4>Nguyễn Thị Anh Thư</h4>
+                                        <p class="testimonial-card-detail">Lớp 12 - Chuyên Toán</p>
+                                        <span class="testimonial-achievement-badge">Huy chương Vàng Olympic Toán 2024 - Thủ khoa Stanford</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="testimonial-card-enhanced">
+                                <div class="testimonial-card-image">
+                                    <img src="storage/doi-ngu-olym/tran-quoc-dan-2.png" alt="Trần Minh Khôi">
+                                </div>
+                                <div class="testimonial-card-content">
+                                    <span class="testimonial-quote-mark">"</span>
+                                    <p class="testimonial-quote-text">Meyschool đã cho tôi cơ hội thực hiện đam mê nghiên cứu khoa học. Dự án 'Hệ thống lọc nước biển' của tôi được đề cử giải thưởng quốc tế nhờ sự hướng dẫn tận tâm của thầy cô.</p>
+                                    <div class="testimonial-card-info">
+                                        <h4>Trần Minh Khôi</h4>
+                                        <p class="testimonial-card-detail">Lớp 11 - Chuyên Lý</p>
+                                        <span class="testimonial-achievement-badge">Giải Nhất Khoa học Kỹ thuật Quốc gia</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="testimonial-card-enhanced">
+                                <div class="testimonial-card-image">
+                                    <img src="storage/doi-ngu-olym/do-thi-bao-linh-2.jpg" alt="Lê Ngọc Bảo An">
+                                </div>
+                                <div class="testimonial-card-content">
+                                    <span class="testimonial-quote-mark">"</span>
+                                    <p class="testimonial-quote-text">Nhờ môi trường song ngữ tại Meyschool, tôi tự tin giao tiếp và đại diện cho thanh niên Việt Nam tại hội nghị ASEAN. Đây là trải nghiệm quý giá mà tôi không thể có ở nơi khác.</p>
+                                    <div class="testimonial-card-info">
+                                        <h4>Lê Ngọc Bảo An</h4>
+                                        <p class="testimonial-card-detail">Lớp 10 - Song ngữ</p>
+                                        <span class="testimonial-achievement-badge">Giải Nhất Hùng biện tiếng Anh toàn quốc - Đại sứ văn hóa ASEAN</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="testimonial-card-enhanced">
+                                <div class="testimonial-card-image">
+                                    <img src="storage/doi-ngu-olym/hoang-diep-trinh-2.png" alt="Phạm Quang Vinh">
+                                </div>
+                                <div class="testimonial-card-content">
+                                    <span class="testimonial-quote-mark">"</span>
+                                    <p class="testimonial-quote-text">Meyschool không chỉ dạy tôi kiến thức mà còn dạy cách tư duy khoa học. 3 bài báo quốc tế và Huy chương Bạc Olympic Hóa học Châu Á là minh chứng cho phương pháp giáo dục xuất sắc tại đây.</p>
+                                    <div class="testimonial-card-info">
+                                        <h4>Phạm Quang Vinh</h4>
+                                        <p class="testimonial-card-detail">Lớp 12 - Chuyên Hóa</p>
+                                        <span class="testimonial-achievement-badge">Huy chương Bạc Olympic Hóa học Châu Á - Tác giả 3 bài báo quốc tế</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Qualities Section - Masonry Grid -->
+                    <div class="qualities-new-section">
+                        <div class="qualities-header">
+                            <h2 class="font-garamond-bold">Học sinh Meyschool - Công dân toàn cầu tương lai</h2>
+                            <p>Tại Meyschool, chúng tôi không chỉ đào tạo học sinh giỏi về kiến thức mà còn chú trọng phát triển toàn diện các phẩm chất và năng lực cần thiết để trở thành công dân toàn cầu trong thế kỷ 21.</p>
+                        </div>
+                        <div class="qualities-masonry">
+                            <div class="quality-card-new featured">
+                                <div class="quality-card-image">
+                                    <img src="storage/banner/ve-chung-toi-web.jpg" alt="Tự hào">
+                                </div>
+                                <div class="quality-card-content">
+                                    <h3 class="font-garamond-bold">Tự hào</h3>
+                                    <span class="quality-en">Proud Global Citizens</span>
+                                    <p class="quality-desc">Tự hào và hành động theo những truyền thống và giá trị tốt đẹp của nền văn hóa, của trường học và của bản thân. Cân bằng giữa truyền thống và hiện đại.</p>
+                                </div>
+                            </div>
+
+                            <div class="quality-card-new">
+                                <div class="quality-card-image">
+                                    <img src="olympia/images/0201.jpg" alt="Thấu cảm">
+                                </div>
+                                <div class="quality-card-content">
+                                    <h3 class="font-garamond-bold">Thấu cảm</h3>
+                                    <span class="quality-en">Empathetic</span>
+                                    <p class="quality-desc">Nỗ lực thấu hiểu, quan tâm đến suy nghĩ, cảm xúc của người khác. Hợp tác trong sự hiểu biết lẫn nhau.</p>
+                                </div>
+                            </div>
+
+                            <div class="quality-card-new">
+                                <div class="quality-card-image">
+                                    <img src="olympia/images/0202.jpg" alt="Giao tiếp tôn trọng">
+                                </div>
+                                <div class="quality-card-content">
+                                    <h3 class="font-garamond-bold">Giao tiếp tôn trọng</h3>
+                                    <span class="quality-en">Respectful Communicators</span>
+                                    <p class="quality-desc">Thể hiện bản thân rõ ràng và tự tin. Giao tiếp và đối xử mọi người với sự tôn trọng và bình đẳng.</p>
+                                </div>
+                            </div>
+
+                            <div class="quality-card-new">
+                                <div class="quality-card-image">
+                                    <img src="olympia/images/0206.jpg" alt="Kiên định">
+                                </div>
+                                <div class="quality-card-content">
+                                    <h3 class="font-garamond-bold">Kiên định</h3>
+                                    <span class="quality-en">Perseverant</span>
+                                    <p class="quality-desc">Đặt ra mục tiêu và nỗ lực bền bỉ để đạt được mục tiêu, dù công việc có thử thách đến đâu đi nữa.</p>
+                                </div>
+                            </div>
+
+                            <div class="quality-card-new">
+                                <div class="quality-card-image">
+                                    <img src="storage/banner/tieu-hoc.jpg" alt="Trách nhiệm">
+                                </div>
+                                <div class="quality-card-content">
+                                    <h3 class="font-garamond-bold">Trách nhiệm</h3>
+                                    <span class="quality-en">Responsible</span>
+                                    <p class="quality-desc">Hoàn thành những việc được giao cho cá nhân và trong đội nhóm, chịu trách nhiệm với kết quả.</p>
+                                </div>
+                            </div>
+
+                            <div class="quality-card-new featured">
+                                <div class="quality-card-image">
+                                    <img src="storage/banner/trung-hoc.jpg" alt="Công dân toàn cầu">
+                                </div>
+                                <div class="quality-card-content">
+                                    <h3 class="font-garamond-bold">Công dân toàn cầu</h3>
+                                    <span class="quality-en">Global Citizens</span>
+                                    <p class="quality-desc">Có kiến thức và kỹ năng để hoạt động hiệu quả trong môi trường quốc tế. Tôn trọng đa dạng văn hóa và đóng góp tích cực cho cộng đồng toàn cầu.</p>
+                                </div>
+                            </div>
+
+                            <div class="quality-card-new">
+                                <div class="quality-card-image">
+                                    <img src="olympia/images/noibat_2.jpg" alt="Thích ứng, ham học hỏi">
+                                </div>
+                                <div class="quality-card-content">
+                                    <h3 class="font-garamond-bold">Thích ứng, ham học hỏi</h3>
+                                    <span class="quality-en">Agile Inquirers</span>
+                                    <p class="quality-desc">Nuôi dưỡng trí tò mò thông qua học hỏi và nghiên cứu. Cởi mở trước cơ hội học tập. Bình tĩnh và lạc quan trước khó khăn.</p>
+                                </div>
+                            </div>
+
+                            <div class="quality-card-new">
+                                <div class="quality-card-image">
+                                    <img src="olympia/images/noibat_5.png" alt="Tư duy và sáng tạo">
+                                </div>
+                                <div class="quality-card-content">
+                                    <h3 class="font-garamond-bold">Tư duy và sáng tạo xuất sắc</h3>
+                                    <span class="quality-en">Excellent Thinkers & Creators</span>
+                                    <p class="quality-desc">Tiếp nhận kiến thức từ nhiều góc nhìn. Tiếp cận vấn đề bằng tư duy phản biện và sáng tạo. Kiến tạo giải pháp cho những vấn đề của cộng đồng.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Achievements Bar -->
+                    <div class="achievements-bar">
+                        <h4 class="font-garamond-bold">Thành tựu nổi bật của học sinh Meyschool</h4>
+                        <div class="achievements-stats">
+                            <div class="achievement-stat-box">
+                                <div class="achievement-stat-number">95%</div>
+                                <div class="achievement-stat-label">Đỗ vào trường TOP</div>
+                            </div>
+                            <div class="achievement-stat-box">
+                                <div class="achievement-stat-number">50+</div>
+                                <div class="achievement-stat-label">Giải thi đấu Quốc gia</div>
+                            </div>
+                            <div class="achievement-stat-box">
+                                <div class="achievement-stat-number">100+</div>
+                                <div class="achievement-stat-label">Học sinh giỏi cấp Thành</div>
+                            </div>
+                            <div class="achievement-stat-box">
+                                <div class="achievement-stat-number">30+</div>
+                                <div class="achievement-stat-label">Học bổng Quốc tế</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Sidebar -->
+                <aside class="student-sidebar-right">
+                    <div class="student-cta-card">
+                        <h5>Trở thành học sinh Meyschool</h5>
+                        <p>Đăng ký tư vấn để tìm hiểu thêm về chương trình học và cơ hội nhập học</p>
+                        <a href="dang-ky-tu-van.php" class="student-cta-btn">Đăng ký ngay</a>
+                    </div>
+
+                    <div class="student-gallery-card">
+                        <h5>Khoảnh khắc đáng nhớ</h5>
+                        <div class="student-gallery-grid">
+                            <div class="student-gallery-item featured">
+                                <img src="storage/banner/tieu-hoc.jpg" alt="">
+                            </div>
+                            <div class="student-gallery-item">
+                                <img src="olympia/images/0201.jpg" alt="">
+                            </div>
+                            <div class="student-gallery-item">
+                                <img src="olympia/images/0202.jpg" alt="">
+                            </div>
+                            <div class="student-gallery-item">
+                                <img src="storage/banner/trung-hoc.jpg" alt="">
+                            </div>
+                            <div class="student-gallery-item">
+                                <img src="olympia/images/0208.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
     </main>
 
     <?php include 'includes/footer.php'; ?>
@@ -555,28 +1085,6 @@
     <script type="text/javascript" src="olympia/js/jquery.toast.min.js"></script>
     <script type="text/javascript" src="olympia/js/jquery.validate.min.js"></script>
     <script src="olympia/js/main.js"></script>
-    <script>
-        // Initialize Swiper for testimonial slider
-        document.addEventListener('DOMContentLoaded', function() {
-            new Swiper('.testimonial-swiper', {
-                loop: true,
-                autoplay: {
-                    delay: 5000,
-                    disableOnInteraction: false,
-                },
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-                grabCursor: true,
-                touchRatio: 1,
-                simulateTouch: true,
-                allowTouchMove: true,
-                threshold: 10,
-                touchStartPreventDefault: false,
-            });
-        });
-    </script>
 </body>
 
 </html>

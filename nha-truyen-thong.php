@@ -52,7 +52,7 @@
             height: 50px;
             line-height: 50px;
             text-align: center;
-            background-color: #471873;
+            background-color: #2354a0;
             font-size: 14px;
             font-weight: 600;
             text-transform: uppercase;
@@ -60,13 +60,122 @@
             color: #fff;
             display: inline-block;
             margin-top: 20px;
+            border-radius: 10px;
         }
-        .btn-full {
-            text-align: center;
-            line-height: 60px;
+        .btn-full { text-align: center; line-height: 60px; }
+        body.show-admin-bar { margin-top: 0px !important; }
+
+        :root {
+            --blue-1: #2354a0;
+            --blue-2: #439bd4;
+            --blue-3: #4db0e4;
+            --blue-soft: #eef7ff;
         }
-        body.show-admin-bar {
-            margin-top: 0px !important;
+
+        .heritage-wrap { background: #f6fbff; }
+        .heritage-container { max-width: 1260px; margin: 0 auto; padding: 0 20px; }
+
+        .heritage-hero {
+            padding: 130px 0 70px;
+            background: linear-gradient(120deg, rgba(35, 84, 160, 0.95) 0%, rgba(67, 155, 212, 0.9) 60%, rgba(77, 176, 228, 0.7) 100%);
+            color: #fff;
+        }
+
+        .heritage-hero h1 {
+            font-family: 'Garamond', serif;
+            font-size: 44px;
+            margin: 16px 0 18px;
+        }
+
+        .heritage-hero p {
+            font-size: 16px;
+            line-height: 1.8;
+            max-width: 620px;
+        }
+
+        .heritage-hero .breadcrumb {
+            margin: 0 0 16px;
+            background: rgba(255, 255, 255, 0.15);
+            display: inline-flex;
+            padding: 10px 18px;
+            border-radius: 999px;
+        }
+
+        .heritage-hero .breadcrumb-item a,
+        .heritage-hero .breadcrumb-item.active { color: #fff; }
+
+        .heritage-timeline {
+            margin-top: 60px;
+            border-left: 2px dashed rgba(67, 155, 212, 0.4);
+            padding-left: 40px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -50px;
+            top: 10px;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: var(--blue-2);
+            box-shadow: 0 0 0 6px rgba(67, 155, 212, 0.2);
+        }
+
+        .timeline-item h4 {
+            color: var(--blue-1);
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .timeline-item p {
+            margin: 0;
+            font-size: 15px;
+            line-height: 1.8;
+            color: #54647f;
+        }
+
+        .heritage-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+            margin-top: 50px;
+        }
+
+        .heritage-grid img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+
+        .heritage-cta {
+            margin-top: 60px;
+            background: #fff;
+            border-radius: 22px;
+            padding: 30px 35px;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 20px;
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .heritage-cta h3 { color: var(--blue-1); margin-bottom: 10px; }
+        .heritage-cta p { margin: 0; color: #53657f; }
+
+        @media (max-width: 1100px) {
+            .heritage-cta { grid-template-columns: 1fr; }
+            .heritage-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        }
+
+        @media (max-width: 768px) {
+            .heritage-hero h1 { font-size: 34px; }
+            .heritage-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -75,43 +184,55 @@
     <?php include 'includes/header.php'; ?>
     <div class="overlay_mark_search" style="display:none;"></div>
 
-    <main class="body-content">
-        <section class="about__header">
-            <div class="standard__header-cover header_cover show-on-scroll" id="english-header-title">
-                <div class="standard__header-img header-cover-img">
-                    <div class="overlay_mark"></div>
-                    <img class="img-cover pc-cover" src="olympia/images/csvc-cover-new.jpg" alt="">
-                    <img class="img-cover mb-cover" src="olympia/images/csvc-cover-new-mb.jpg" alt="">
-                </div>
-                <div class="big-cover-title-box">
-                    <ol class="breadcrumb container">
-                        <li class="breadcrumb-item white"><a href="index.php" class="white">Trang chủ</a></li>
-                        <li class="breadcrumb-item white"><a href="javascript:;" class="white">Cơ sở vật chất</a></li>
-                        <li class="breadcrumb-item white"><a href="javascript:;" class="white">Nhà truyền thống</a></li>
-                    </ol>
-                    <h1 class="big__header-title container font-garamond-bold white header-title">Nhà truyền thống</h1>
-                </div>
+    <main class="body-content heritage-wrap">
+        <section class="heritage-hero">
+            <div class="heritage-container">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.php">Trang chủ</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:;">Cơ sở vật chất</a></li>
+                    <li class="breadcrumb-item active">Nhà truyền thống</li>
+                </ol>
+                <h1>Nhà truyền thống</h1>
+                <p>Không gian lưu giữ ký ức và dấu ấn Olympia, nơi các thế hệ học sinh tìm về nguồn cội, hiểu hơn về hành trình phát triển của ngôi trường.</p>
             </div>
         </section>
 
-        <section class="program-content">
-            <div class="container" style="padding: 60px 20px;">
-                <h2 style="font-size: 32px; color: #471873; margin-bottom: 30px; font-weight: 600;">Nhà truyền thống</h2>
-                <p style="font-size: 16px; line-height: 1.8; color: #333; margin-bottom: 20px;">
-                    Nhà truyền thống là nơi lưu giữ và tôn vinh lịch sử phát triển của 
-                    trường Meyschool Đoàn Thị Điểm. Đây là không gian giáo dục truyền thống 
-                    gắn kết các thế hệ học sinh, giáo viên và cộng đồng Olympians.
-                </p>
-                <p style="font-size: 16px; line-height: 1.8; color: #333; margin-bottom: 20px;">
-                    Trong nhà truyền thống, học sinh có thể tìm hiểu về quá trình thành lập 
-                    và phát triển của trường, xem các hình ảnh, tài liệu lịch sử, 
-                    và cảm nhận tinh thần Olympia qua các thế hệ.
-                </p>
-                <p style="font-size: 16px; line-height: 1.8; color: #333;">
-                    Nhà truyền thống cũng là nơi tổ chức các buổi giao lưu, 
-                    gặp gỡ cựu học sinh, và các hoạt động giáo dục truyền thống 
-                    giúp học sinh hiểu và tự hào về mái trường của mình.
-                </p>
+        <section class="heritage-section">
+            <div class="heritage-container">
+                <div class="heritage-timeline">
+                    <div class="timeline-item">
+                        <h4>2005 - Khởi nguồn</h4>
+                        <p>Hình thành nền tảng giáo dục tiên phong, xây dựng những giá trị đầu tiên cho cộng đồng Olympia.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>2012 - Lan tỏa</h4>
+                        <p>Mở rộng quy mô và mở ra hành trình gắn kết, ghi dấu những thành tựu của học sinh, giáo viên.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>2020 - Bứt phá</h4>
+                        <p>Ứng dụng công nghệ, chuyển đổi mô hình học tập và nâng cao trải nghiệm học sinh toàn diện.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>2026 - Tự hào tiếp nối</h4>
+                        <p>Nhà truyền thống trở thành điểm kết nối ký ức, nơi nuôi dưỡng tinh thần tự hào Olympia.</p>
+                    </div>
+                </div>
+
+                <div class="heritage-grid">
+                    <img src="storage/banner/tieu-hoc.jpg" alt="Ký ức Olympia">
+                    <img src="storage/banner/trung-hoc.jpg" alt="Truyền thống">
+                    <img src="olympia/images/0208.jpg" alt="Khoảnh khắc">
+                </div>
+
+                <div class="heritage-cta">
+                    <div>
+                        <h3>Kết nối thế hệ Olympians</h3>
+                        <p>Nhà truyền thống là nơi lưu giữ những câu chuyện, khơi gợi niềm tự hào và truyền cảm hứng cho thế hệ học sinh hôm nay.</p>
+                    </div>
+                    <div style="text-align:right;">
+                        <a class="btn-dk" href="dang-ky-tu-van.php" style="width:auto; padding: 0 24px;">Đăng ký tham quan</a>
+                    </div>
+                </div>
             </div>
         </section>
     </main>

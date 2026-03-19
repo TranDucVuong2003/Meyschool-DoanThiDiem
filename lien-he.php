@@ -1,352 +1,511 @@
 <!DOCTYPE html>
 <html lang="vi">
-    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
 <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=1" name="viewport"/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=1" name="viewport" />
 
+    <link rel="shortcut icon" href="storage/favicon.png">
 
-        <link rel="shortcut icon" href="storage/favicon.png">
+    <title>Liên hệ</title>
+    <meta name="description" content="Liên hệ">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:site_name" content="Meyschool Đoàn Thị Điểm">
+    <meta property="og:title" content="Liên hệ">
+    <meta property="og:description" content="Liên hệ">
+    <meta property="og:url" content="lien-he.php">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="storage/favicon.png">
+    <meta name="twitter:title" content="Liên hệ">
+    <meta name="twitter:description" content="Liên hệ">
 
-<title>Liên hệ</title>
-<meta name="description" content="Liên hệ">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta property="og:site_name" content="The Olympia Schools">
-<meta property="og:title" content="Liên hệ">
-<meta property="og:description" content="Liên hệ">
-<meta property="og:url" content="lien-he.php">
-<meta property="og:type" content="article">
-<meta property="og:image" content="storage/favicon.png">
-<meta name="twitter:title" content="Liên hệ">
-<meta name="twitter:description" content="Liên hệ">
+    <link media="all" type="text/css" rel="stylesheet" href="vendor/core/plugins/language/css/language-publice209.css?v=1.0.0">
+    <link href="../unpkg.com/aos%402.3.1/dist/aos.css" rel="stylesheet">
 
-<link media="all" type="text/css" rel="stylesheet" href="vendor/core/plugins/language/css/language-publice209.css?v=1.0.0">
+    <link rel="stylesheet" href="olympia/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="olympia/css/reset.css">
+    <link rel="stylesheet" href="olympia/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="olympia/css/fonts.css">
+    <link rel="stylesheet" href="olympia/css/style.css">
+    <link rel="stylesheet" href="olympia/css/styles-new.css">
+    <link type="image/x-icon" href="#" rel="shortcut icon" />
+    <link rel="stylesheet" type="text/css" href="olympia/css/slick.css">
+    <link rel="stylesheet" type="text/css" href="olympia/css/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="olympia/css/jquery.toast.min.css">
+    <script type="text/javascript" src="olympia/js/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="olympia/js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="olympia/js/swiper-bundle.min.js"></script>
+    <script src="olympia/js/slick.js"></script>
+    <script src="../unpkg.com/aos%402.3.1/dist/aos.js"></script>
 
+    <style>
+        nav#admin_bar {
+            display: none;
+        }
 
+        body.show-admin-bar {
+            margin-top: 0 !important;
+        }
 
+        .jq-toast-wrap {
+            display: block;
+            position: fixed;
+            width: 250px;
+            pointer-events: none !important;
+            letter-spacing: normal;
+            z-index: 9000999999999 !important;
+        }
 
-<link rel="alternate" href="en/contact.php" hreflang="en" />
-    <link rel="alternate" href="lien-he.php" hreflang="vi" />
+        :root {
+            --ct-blue-1: #439bd4;
+            --ct-blue-2: #4db0e4;
+            --ct-blue-3: #eaf7ff;
+            --ct-text: #1f3c58;
+        }
 
+        .contact-page {
+            background: #f6fbff;
+            color: var(--ct-text);
+        }
 
-        <link href="../unpkg.com/aos%402.3.1/dist/aos.css" rel="stylesheet">
+        .ct-wide {
+            width: min(96vw, 1520px);
+            margin: 0 auto;
+        }
 
-        <link rel="stylesheet" href="olympia/css/swiper-bundle.min.css">
-        <link rel="stylesheet" href="olympia/css/reset.css">
-        <link rel="stylesheet" href="olympia/css/bootstrap-datetimepicker.min.css">
-        <link rel="stylesheet" href="olympia/css/fonts.css">
-        <link rel="stylesheet" href="olympia/css/style.css">
-        <link rel="stylesheet" href="olympia/css/styles-new.css">
-        <link type="image/x-icon" href="#" rel="shortcut icon"/>
-        <link rel="stylesheet" type="text/css" href="olympia/css/slick.css">
-        <link rel="stylesheet" type="text/css" href="olympia/css/slick-theme.css">
-        <link rel="stylesheet" type="text/css" href="olympia/css/jquery.toast.min.css">
-        <script type="text/javascript" src="olympia/js/jquery-2.1.3.min.js"></script>
-        <script type="text/javascript" src="olympia/js/jquery.validate.min.js"></script>
-        <script type="text/javascript" src="olympia/js/swiper-bundle.min.js"></script>
-        <script src="olympia/js/slick.js"></script>
-        <script src="../unpkg.com/aos%402.3.1/dist/aos.js"></script>
+        .contact-top {
+            padding: 112px 0 26px;
+        }
 
-                    <link rel="alternate" href="en.php" hreflang="en" />
-                <style>
-            nav#admin_bar{
-                display: none;
+        .ct-breadcrumb {
+            margin: 0 0 14px;
+            display: inline-flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            border-radius: 999px;
+            padding: 7px 14px;
+            background: #ebf8ff;
+            border: 1px solid rgba(67, 155, 212, 0.22);
+        }
 
+        .ct-breadcrumb li,
+        .ct-breadcrumb li a {
+            color: #2a7fb7;
+            font-size: 13px;
+            position: static !important;
+        }
+
+        .contact-top h1 {
+            margin: 0 0 10px;
+            font-family: 'Garamond', serif;
+            color: #236ea4;
+            font-size: clamp(34px, 4vw, 56px);
+            line-height: 1.08;
+        }
+
+        .contact-top p {
+            margin: 0;
+            color: #48617c;
+            line-height: 1.8;
+            max-width: 980px;
+        }
+
+        .contact-layout {
+            padding-bottom: 32px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 22px;
+            align-items: start;
+        }
+
+        .ct-card {
+            background: #fff;
+            border: 1px solid rgba(67, 155, 212, 0.16);
+            border-radius: 20px;
+            box-shadow: 0 14px 28px rgba(14, 49, 79, 0.08);
+            padding: 22px;
+        }
+
+        .ct-card h2 {
+            margin: 0 0 6px;
+            color: #2472a8;
+            font-family: 'Garamond', serif;
+            font-size: clamp(28px, 2.6vw, 40px);
+            line-height: 1.2;
+            padding: 0 !important;
+        }
+
+        .ct-card h3 {
+            margin: 0 0 10px;
+            color: #286d9d;
+            font-family: 'Garamond', serif;
+            font-size: 26px;
+            line-height: 1.2;
+            padding: 0 !important;
+        }
+
+        .ct-sub {
+            margin: 0 0 18px;
+            color: #58718d;
+            font-size: 14px;
+            line-height: 1.75;
+        }
+
+        .ct-form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .ct-field {
+            display: grid;
+            gap: 7px;
+        }
+
+        .ct-field label {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #4a6886;
+            letter-spacing: 0.4px;
+        }
+
+        .ct-field input,
+        .ct-field textarea,
+        .ct-field select {
+            width: 100%;
+            border: 1px solid rgba(67, 155, 212, 0.24);
+            border-radius: 12px;
+            padding: 11px 12px;
+            font-size: 14px;
+            color: #284761;
+            outline: none;
+            background: #fff;
+        }
+
+        .ct-field textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
+
+        .ct-full {
+            grid-column: 1 / -1;
+        }
+
+        .ct-radio-box {
+            border: 1px solid rgba(67, 155, 212, 0.2);
+            background: #f8fcff;
+            border-radius: 12px;
+            padding: 10px 12px;
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .ct-radio-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            color: #3e5c79;
+        }
+
+        .ct-submit {
+            margin-top: 2px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 20px;
+            border: 0;
+            border-radius: 999px;
+            background: linear-gradient(140deg, #439bd4, #4db0e4);
+            color: #fff;
+            font-weight: 700;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .ct-info-list {
+            display: grid;
+            gap: 12px;
+        }
+
+        .ct-info-block {
+            border: 1px solid rgba(67, 155, 212, 0.18);
+            border-radius: 14px;
+            padding: 12px;
+            background: #f9fdff;
+        }
+
+        .ct-info-block b {
+            display: block;
+            margin: 0 0 7px;
+            color: #2a78ae;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 0.4px;
+        }
+
+        .ct-info-block p {
+            margin: 0 0 6px;
+            font-size: 14px;
+            line-height: 1.65;
+            color: #42607e;
+        }
+
+        .ct-info-block a {
+            color: #2f85bc;
+            text-decoration: none;
+        }
+
+        .ct-action-row {
+            margin-top: 14px;
+            display: grid;
+            gap: 10px;
+        }
+
+        .ct-action {
+            border: 1px solid rgba(67, 155, 212, 0.24);
+            background: #ebf7ff;
+            color: #2b7db4;
+            border-radius: 12px;
+            padding: 10px 12px;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        .ct-social {
+            margin-top: 14px;
+            display: flex;
+            gap: 8px;
+        }
+
+        .ct-social a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #ecf8ff;
+            border: 1px solid rgba(67, 155, 212, 0.22);
+        }
+
+        .ct-social img {
+            width: 18px;
+            height: 18px;
+        }
+
+        .ct-map-wrap {
+            margin: 18px 0 0;
+            width: 100vw;
+            margin-left: calc(50% - 50vw);
+            margin-right: calc(50% - 50vw);
+            border-radius: 0;
+            overflow: hidden;
+            border: 0;
+            box-shadow: none;
+        }
+
+        .ct-map-wrap iframe {
+            width: 100%;
+            height: 520px;
+            border: 0;
+            display: block;
+        }
+
+        @media (max-width: 1100px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
             }
-            .jq-toast-wrap{
-                display: block;
-                position: fixed;
-                width: 250px;
-                pointer-events: none!important;
-                letter-spacing: normal;
-                z-index: 9000999999999!important;
+        }
+
+        @media (max-width: 768px) {
+            .ct-wide {
+                width: min(94vw, 1520px);
             }
 
-            .btn-dk {
-                width: 210px;
-                height: 50px;
-                line-height: 50px;
-                text-align: center;
-                background-color: #471873;
-                font-size: 14px;
-                font-weight: 600;
-                text-transform: uppercase;
-                border: none;
-                color: #fff;
-                display: inline-block;
-                margin-top: 20px;
+            .contact-top {
+                padding: 96px 0 18px;
             }
 
-            .btn-full {
-                text-align: center;
-                line-height: 60px;
+            .ct-form-grid {
+                grid-template-columns: 1fr;
             }
 
-            body.show-admin-bar {
-                margin-top: 0px!important;
-                /* position: relative; */
+            .ct-map-wrap iframe {
+                height: 360px;
             }
+        }
+    </style>
+</head>
 
-        </style>
-        <!-- Google Tag Manager -->
-        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-                    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-                '../www.googletagmanager.com/gtm5445.php?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-5SS24C7N');</script>
-        <!-- End Google Tag Manager -->
+<body>
+    <?php include 'includes/header.php'; ?>
+    <div class="overlay_mark_search" style="display:none;"></div>
 
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-GDK27ZMYYW"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-GDK27ZMYYW');
-        </script>
-        <meta property="fb:admins" content="100003174617936"/>
-        <meta property="fb:admins" content="100000009019012" />
-        <script type="text/javascript" src="../platform-api.sharethis.com/js/sharethis.js#property=65b715d1dce46a00126a9bb7&product=inline-share-buttons&source=platform" async="async"></script>
-    </head>
-    <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.php?id=GTM-5SS24C7N"
-                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <script>
-        window.fbAsyncInit = function() {
-            FB.init({
-                appId      : '1759201507895169',
-                xfbml      : true,
-                version    : 'v19.0'
-            });
-            FB.AppEvents.logPageView();
-        };
-
-        (function(d, s, id){
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) {return;}
-            js = d.createElement(s); js.id = id;
-            js.src = "../connect.facebook.net/en_US/sdk.js";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-    </script>
-        <style>
-            nav#admin_bar{
-                display: none;
-            }
-            body.show-admin-bar {
-                margin-top: 0px!important;
-            }
-        </style>
-        <?php include 'includes/header.php'; ?>
-        <div class="overlay_mark_search" style="display:none;"></div>
-
-<link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-      integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-<main class="body-content">
-    <section class="contact" style="border: none">
-        <div class="contact-inner">
-            <div class="container-fluid">
-                <div class="contact-header">
-                    <ol class="contact-header-breadcrumb">
-                        <li class="breadcrumb-item color-ab"><a href="index.php" class="color-ab text-uppercase font-avenir-demibold">Trang chủ</a></li>
-                        <li class="breadcrumb-item color-ab"><a href="#" class="color-ab white text-uppercase font-avenir-demibold">liên hệ</a></li>
-                    </ol>
-                    <h1 class="contact-title">Liên hệ với chúng tôi</h1>
-                </div>
-                <div class="contact-body">
-                    <div class="contact-form">
-                        <p class="contact-form-title">Gửi lời nhắn</p>
-
-                        <form id="contact-form" action="https://theolympiaschools.edu.vn/send-contact" method="POST" class="contact-form-group">
-                            <input type="hidden" name="_token" value="Xp0QD4AXEKvVFRQgq6zl6ESvt4HEk1o59HIf5UOU">                            <div class="form-group-inline">
-                                <div class="form-group">
-                                    <label for="name" class="contact-label text-uppercase">họ tên*</label>
-                                    <input type="text" name="name" id="name" placeholder="Nguyễn Ngọc Anh" class="contact-input input-name">
-                                </div>
-                                <div class="form-group">
-                                    <label for="phone" class="contact-label text-uppercase">điện thoại</label>
-                                    <input type="text" name="phone" id="phone" placeholder="" class="contact-input input-phone">
-                                </div>
-                            </div>
-                            <div class="form-group-inline">
-                                <div class="form-group">
-                                    <label for="email" class="contact-label text-uppercase">email*</label>
-                                    <input type="text" name="email" id="email" placeholder="ngocanhnguyen@gmail.com" class="contact-input input-email">
-                                </div>
-                                <div class="form-group form-ct-vendor">
-                                    <label class="contact-label text-uppercase">anh/chị là</label>
-
-                                    <div class="select-box">
-                                        <div class="selected">
-                                            <span class="text-selected">Phụ huynh</span>
-                                            <img src="olympia/images/btn-select-dark.svg" alt="">
-                                        </div>
-                                        <div class="option-container-box">
-                                            <div class="option-container">
-                                                <div class="option">
-                                                    <input type="radio" class="radio" value="parents" checked id="parents" name="ct-position">
-                                                    <label for="parents">Phụ huynh</label>
-                                                </div>
-                                                <div class="option">
-                                                    <input type="radio" class="radio" value="students" id="students" name="ct-position">
-                                                    <label for="students">Học sinh</label>
-                                                </div>
-                                                <div class="option">
-                                                    <input type="radio" class="radio"  value="vendor" id="vendor" name="ct-position">
-                                                    <label for="vendor">Đối tác/liên hệ làm việc</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group-full">
-                                <label for="ct-mess" class="contact-label text-uppercase">lời nhắn</label>
-                                <textarea type="text" name="ct-mess" id="ct-mess" class="contact-input input-mess"></textarea>
-                            </div>
-
-
-                            
-                           
-
-
-
-                            <div class="contact-button-send">
-                                <button type="submit" class="btn bg-white btn-normal btn-submit-js">
-                                    <a class="color-471873 btn-send">Gửi
-                                        <img src="olympia/images/button-1-2.svg" alt="">
-                                    </a>
-                                </button>
-
-                                <input type="hidden" name="url" value="lien-he.php">
-                                <input type="hidden" name="type" value="contact">
-                            </div>
-                        </form>
-                    </div>
-                    <div class="contact-info container">
-                        <div class="contact-info-button">
-                            <a class="" href="faq.php" target="_blank">
-                                <button class="btn btn-document bg-f8f0ff color-471873">Câu hỏi thường gặp
-                                    <img src="olympia/images/button-1-2.svg" alt="">
-                                </button>
-                            </a>
-                           
-                            <a href="#" download="" class="item-title download_multiple_file" style="cursor:pointer;">
-                                <button class="btn btn-document bg-f8f0ff color-471873">
-                                    Tải về tài liệu Đoàn Thị Điểm
-                                    <img src="olympia/images/button-1-2.svg" alt="">
-                                </button>
-                            </a>
-                        </div>
-                        <div class="contact-info-text">
-                            <ul class="contact-list">
-                                <li class="contact-item">
-                                    <p class="contact-item-title text-uppercase">Hotline</p>
-                                    <p class="contact-item-value">Văn phòng THCS cơ sở 1: <a href="tel:+842462872448" class="contact-phone-number">0246.2872.448</a> – <a href="tel:+842466744699" class="contact-phone-number">0246.6744.699</a></p>
-                                    <p class="contact-item-value">Văn phòng THCS cơ sở 2: <a href="tel:+842462652709" class="contact-phone-number">0246.265.2709</a></p>
-                                    <p class="contact-item-value">Văn phòng THPT: <a href="tel:+842466752216" class="contact-phone-number">0246.675.2216</a></p>
-                                    <p class="contact-item-value">Văn phòng đoàn đội: <a href="tel:+842462872441" class="contact-phone-number">0246.287.2441</a></p>
-                                    <p class="contact-item-value">Giám thị: <a href="tel:+842462962698" class="contact-phone-number">0246.296.2698</a></p>
-                                    <p class="contact-item-value">Kế toán cơ sở 1: <a href="tel:+842422189450" class="contact-phone-number">0242.218.9450</a> - <a href="tel:+842422189445" class="contact-phone-number">0242.218.9445</a></p>
-                                    <p class="contact-item-value">Kế toán cơ sở 2: <a href="tel:+842462910750" class="contact-phone-number">0246.291.0750</a> - <a href="tel:+842462652760" class="contact-phone-number">0246.265.2760</a></p>
-                                    <p class="contact-item-value">Phòng y tế: <a href="tel:+842462968798" class="contact-phone-number">0246.296.8798</a></p>
-                                    <p class="contact-item-value">Phòng bếp: <a href="tel:+842462953255" class="contact-phone-number">0246.295.3255</a></p>
-                                </li>
-                                <li class="contact-item">
-                                    <p class="contact-item-title text-uppercase">Email</p>
-                                    <p class="contact-item-value contact-item-value-title">Hòm thư góp ý của phụ huynh với nhà trường:</p>
-                                    <p class="contact-item-value contact-item-value-email">ykphdoanthidiem@gmail.com</p>
-                                    <p class="contact-item-value contact-item-value-title">Liên hệ với ban giám hiệu:</p>
-                                    <p class="contact-item-value contact-item-value-email">bghdoanthidiem@gmail.com</p>
-                                    <p class="contact-item-value contact-item-value-title">Liên hệ, gửi bài góp ý cho ban biên tập website:</p>
-                                    <p class="contact-item-value contact-item-value-email">bbtdoanthidiem@gmail.com</p>
-                                </li>
-                                <li class="contact-item">
-                                    <p class="contact-item-title text-uppercase">Địa chỉ</p>
-                                    <p class="contact-item-value">Cơ sở 1: Số 64 Lưu Hữu Phước, phường Từ Liêm, TP Hà Nội</p>
-                                    <p class="contact-item-value">Cơ sở 2: Phố Nguyễn Đình Tứ, KĐT Bắc Cổ Nhuế, phường Đông Ngạc, TP Hà Nội</p>
-                                    <p class="contact-item-value">Website: <a href="https://www.thcs-doanthidiem.edu.vn" target="_blank" rel="noopener" class="contact-phone-number">www.thcs-doanthidiem.edu.vn</a></p>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="contact-info-social">
-                            <a href="https://www.facebook.com/theolympiaschools/" target="_blank" class="link-social-item link-social-facebook">
-                                <img class="link-social-img" src="olympia/images/facebook.svg" alt="">
-                            </a>
-                            <a href="https://www.instagram.com/theolympiaschools/" target="_blank" class="link-social-item link-social-instagram">
-                                <img class="link-social-img" src="olympia/images/instagram.svg" alt="">
-                            </a>
-                            <a href="https://www.youtube.com/user/Olympiaschools" target="_blank" class="link-social-item link-social-youtube">
-                                <img class="link-social-img" src="olympia/images/youtube.svg" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="contact-map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.438051721944!2d105.7992801759767!3d21.01515148824447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab001745cb03%3A0x5512842ae90b2dd7!2zVHLGsOG7nW5nIFRow6BuaCBXZWI!5e0!3m2!1svi!2s!4v1768911025495!5m2!1svi!2s" width="100%" height="750" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-    </section>
-    <!-- Modal -->
-    <div class="csvc_main">
-        <div class="modal" id="submit_modal" tabindex="-1">
-            <div class="modal-inner">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <div id="register-suceess" class="text-center">
-                            <img src="olympia/images/success-icon.png">
-                            <p>Yêu cầu của anh/chị đã được gửi tới đội ngũ Olympia. Chúng tôi sẽ phản hồi trong thời gian sớm nhất.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</main>
-<?php include 'includes/footer.php'; ?>
-                   <section id="callnow" class="hotline mobile__none">
-            <div class="hotline-phone-ring-wrap">
-                <div class="hotline-phone-ring" id="call-now-1">
-                    <div class="hotline-phone-ring-circle"></div>
-                    <div class="hotline-phone-ring-circle-fill"></div>
-                    <div class="hotline-phone-ring-img-circle">
-                        <a href="tel:0934525889" class="pps-btn-img"> <img src="data:image/webp;base64,UklGRswAAABXRUJQVlA4TMAAAAAvMUAMECcw//M//2raNmBTAdOrhFaAC0dguIokSbEODCycABSAAqj9m1qqe/Af0X8FbtsoOWZoX1H9UzC2hqmXZsgtHbBPkljzCjS0LXW0DSf2EQeETlxi2he8aGA83qirUAi71oznrahYPNg4sahVz5cZ8YlPGOATWz4wv3MhdZtnLFwmo7S4i9teSdGXj+sTL9zSjMzuVuKhRXEArzdPGstdaw6hYUZfarCuLkC6kPImRCiW2ZJEwrCPIf17qAA=" alt="Gọi điện thoại">
-                        </a>
-                    </div>
-                </div>
-                <div class="hotline-bar">
-                    <a href="tel:0934525889"> <span class="text-hotline" id="call-now-1">024 6267 7999</span> </a>
-                </div>
+    <main class="body-content contact-page">
+        <section class="contact-top">
+            <div class="ct-wide" data-aos="fade-up">
+                <ol class="breadcrumb ct-breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.php">Trang chủ</a></li>
+                    <li class="breadcrumb-item active">Liên hệ</li>
+                </ol>
+                <h1>Liên hệ với Meyschool Đoàn Thị Điểm</h1>
+                <p>Trang liên hệ được tối ưu theo chức năng chính: gửi yêu cầu nhanh, tìm đúng đầu mối phụ trách và tra cứu địa điểm thuận tiện. Phụ huynh, học sinh và đối tác có thể liên hệ trực tiếp qua biểu mẫu hoặc các thông tin bên cạnh.</p>
             </div>
         </section>
-        <script>
-            AOS.init({
-                once: true,
 
-                disable: function() {
-                    var maxWidth = 767;
-                    return window.innerWidth < maxWidth;
-                }
-            });
-        </script>
-        <script src="olympia/js/bootstrap.min.js"></script>
-        <script src="olympia/js/jquery.toast.min.js"></script>
-        <script src="olympia/js/main.js"></script>
-        <script src="vendor/core/plugins/language/js/language-publice209.js?v=1.0.0"></script>
+        <section class="contact-layout">
+            <div class="ct-wide contact-grid">
+                <article class="ct-card" data-aos="fade-up">
+                    <h2>Gửi lời nhắn</h2>
+                    <p class="ct-sub">Vui lòng điền thông tin chính xác để nhà trường phản hồi nhanh nhất.</p>
 
+                    <form id="contact-form" action="https://theolympiaschools.edu.vn/send-contact" method="POST">
+                        <input type="hidden" name="_token" value="Xp0QD4AXEKvVFRQgq6zl6ESvt4HEk1o59HIf5UOU">
 
+                        <div class="ct-form-grid">
+                            <div class="ct-field">
+                                <label for="name">Họ tên *</label>
+                                <input type="text" name="name" id="name" placeholder="Nguyễn Ngọc Anh" class="input-name">
+                            </div>
 
+                            <div class="ct-field">
+                                <label for="phone">Điện thoại</label>
+                                <input type="text" name="phone" id="phone" placeholder="09xxxxxxxx" class="input-phone">
+                            </div>
 
+                            <div class="ct-field">
+                                <label for="email">Email *</label>
+                                <input type="text" name="email" id="email" placeholder="ngocanh@gmail.com" class="input-email">
+                            </div>
 
-        <script src="olympia/js/contact.js"></script>
-        <script src="olympia/js/custom.js"></script>
-    </body>
+                            <div class="ct-field">
+                                <label>Anh/chị là</label>
+                                <div class="ct-radio-box">
+                                    <label class="ct-radio-item"><input type="radio" value="parents" checked id="parents" name="ct-position"> Phụ huynh</label>
+                                    <label class="ct-radio-item"><input type="radio" value="students" id="students" name="ct-position"> Học sinh</label>
+                                    <label class="ct-radio-item"><input type="radio" value="vendor" id="vendor" name="ct-position"> Đối tác</label>
+                                </div>
+                            </div>
+
+                            <div class="ct-field ct-full">
+                                <label for="ct-mess">Lời nhắn</label>
+                                <textarea name="ct-mess" id="ct-mess" class="input-mess" placeholder="Nhập nội dung cần hỗ trợ..."></textarea>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="ct-submit btn-submit-js">Gửi thông tin</button>
+                        <input type="hidden" name="url" value="lien-he.php">
+                        <input type="hidden" name="type" value="contact">
+                    </form>
+                </article>
+
+                <aside class="ct-card" data-aos="fade-up" data-aos-delay="120">
+                    <h3>Thông tin liên hệ</h3>
+
+                    <div class="ct-info-list">
+                        <div class="ct-info-block">
+                            <b>Hotline</b>
+                            <p>Văn phòng THCS cơ sở 1: <a href="tel:+842462872448">0246.2872.448</a> – <a href="tel:+842466744699">0246.6744.699</a></p>
+                            <p>Văn phòng THCS cơ sở 2: <a href="tel:+842462652709">0246.265.2709</a></p>
+                            <p>Văn phòng THPT: <a href="tel:+842466752216">0246.675.2216</a></p>
+                        </div>
+
+                        <div class="ct-info-block">
+                            <b>Email</b>
+                            <p>Góp ý phụ huynh: <a href="mailto:ykphdoanthidiem@gmail.com">ykphdoanthidiem@gmail.com</a></p>
+                            <p>Ban giám hiệu: <a href="mailto:bghdoanthidiem@gmail.com">bghdoanthidiem@gmail.com</a></p>
+                            <p>Ban biên tập website: <a href="mailto:bbtdoanthidiem@gmail.com">bbtdoanthidiem@gmail.com</a></p>
+                        </div>
+
+                        <div class="ct-info-block">
+                            <b>Địa chỉ</b>
+                            <p>Cơ sở 1: Số 64 Lưu Hữu Phước, phường Từ Liêm, TP Hà Nội</p>
+                            <p>Cơ sở 2: Phố Nguyễn Đình Tứ, KĐT Bắc Cổ Nhuế, phường Đông Ngạc, TP Hà Nội</p>
+                            <p>Website: <a href="https://www.thcs-doanthidiem.edu.vn" target="_blank" rel="noopener">www.thcs-doanthidiem.edu.vn</a></p>
+                        </div>
+                    </div>
+
+                    <div class="ct-action-row">
+                        <a class="ct-action" href="faq.php" target="_blank">Câu hỏi thường gặp</a>
+                        <a class="ct-action download_multiple_file" href="#" style="cursor:pointer;">Tải về tài liệu Đoàn Thị Điểm</a>
+                    </div>
+
+                    <div class="ct-social">
+                        <a href="https://www.facebook.com/theolympiaschools/" target="_blank"><img src="olympia/images/facebook.svg" alt="Facebook"></a>
+                        <a href="https://www.instagram.com/theolympiaschools/" target="_blank"><img src="olympia/images/instagram.svg" alt="Instagram"></a>
+                        <a href="https://www.youtube.com/user/Olympiaschools" target="_blank"><img src="olympia/images/youtube.svg" alt="Youtube"></a>
+                    </div>
+                </aside>
+            </div>
+
+            <div class="ct-wide ct-map-wrap" data-aos="fade-up">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.438051721944!2d105.7992801759767!3d21.01515148824447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab001745cb03%3A0x5512842ae90b2dd7!2zVHLGsOG7nW5nIFRow6BuaCBXZWI!5e0!3m2!1svi!2s!4v1768911025495!5m2!1svi!2s" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+
+        <div class="csvc_main">
+            <div class="modal" id="submit_modal" tabindex="-1">
+                <div class="modal-inner">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <div id="register-suceess" class="text-center">
+                                <img src="olympia/images/success-icon.png" alt="success">
+                                <p>Yêu cầu của anh/chị đã được gửi tới đội ngũ Meyschool Đoàn Thị Điểm. Chúng tôi sẽ phản hồi trong thời gian sớm nhất.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <?php include 'includes/footer.php'; ?>
+
+    <section id="callnow" class="hotline mobile__none">
+        <div class="hotline-phone-ring-wrap">
+            <div class="hotline-phone-ring" id="call-now-1">
+                <div class="hotline-phone-ring-circle"></div>
+                <div class="hotline-phone-ring-circle-fill"></div>
+                <div class="hotline-phone-ring-img-circle">
+                    <a href="tel:0934525889" class="pps-btn-img"><img src="data:image/webp;base64,UklGRswAAABXRUJQVlA4TMAAAAAvMUAMECcw//M//2raNmBTAdOrhFaAC0dguIokSbEODCycABSAAqj9m1qqe/Af0X8FbtsoOWZoX1H9UzC2hqmXZsgtHbBPkljzCjS0LXW0DSf2EQeETlxi2he8aGA83qirUAi71oznrahYPNg4sahVz5cZ8YlPGOATWz4wv3MhdZtnLFwmo7S4i9teSdGXj+sTL9zSjMzuVuKhRXEArzdPGstdaw6hYUZfarCuLkC6kPImRCiW2ZJEwrCPIf17qAA=" alt="Gọi điện thoại"></a>
+                </div>
+            </div>
+            <div class="hotline-bar">
+                <a href="tel:0934525889"><span class="text-hotline" id="call-now-1">024 6267 7999</span></a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        AOS.init({
+            once: true,
+            disable: function() {
+                return window.innerWidth < 768;
+            }
+        });
+    </script>
+
+    <script src="olympia/js/bootstrap.min.js"></script>
+    <script src="olympia/js/jquery.toast.min.js"></script>
+    <script src="olympia/js/main.js"></script>
+    <script src="vendor/core/plugins/language/js/language-publice209.js?v=1.0.0"></script>
+    <script src="olympia/js/contact.js"></script>
+    <script src="olympia/js/custom.js"></script>
+</body>
+
 </html>
-

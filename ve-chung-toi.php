@@ -93,21 +93,32 @@
         }
     </style>
     <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    '../www.googletagmanager.com/gtm5445.html?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-5SS24C7N');</script>
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                '../www.googletagmanager.com/gtm5445.html?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5SS24C7N');
+    </script>
     <!-- End Google Tag Manager -->
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GDK27ZMYYW"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
         gtag('js', new Date());
 
         gtag('config', 'G-GDK27ZMYYW');
@@ -125,7 +136,7 @@
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <script>
-        window.fbAsyncInit = function () {
+        window.fbAsyncInit = function() {
             FB.init({
                 appId: '1759201507895169',
                 xfbml: true,
@@ -134,10 +145,13 @@
             FB.AppEvents.logPageView();
         };
 
-        (function (d, s, id) {
+        (function(d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) { return; }
-            js = d.createElement(s); js.id = id;
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
             js.src = "../connect.facebook.net/en_US/sdk.js";
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
@@ -155,6 +169,7 @@
     <div class="overlay_mark_search" style="display:none;"></div>
 
     <main class="body-content">
+        <!-- Section: Banner/Header chính - Hiển thị ảnh bìa và tiêu đề trang "Về chúng tôi" -->
         <section class="about__header">
             <div class="standard__header-cover header_cover show-on-scroll english-program" id="english-header-title">
                 <div class="standard__header-img header-cover-img">
@@ -173,6 +188,7 @@
                 </div>
             </div>
         </section>
+        <!-- Section: Navigation Tabs - Thanh điều hướng nhanh đến các phần: Sứ mệnh, Thông điệp, Chân dung HS, Lịch sử, Đội ngũ, Đối tác, Cơ sở vật chất -->
         <section class="standard-tabs">
             <ul class="tabs-list container">
                 <li class="tabs-item"><a href="#tam-nhin-su-menh" class="tabs-link fix-scroll">Sứ mệnh</a></li>
@@ -187,6 +203,7 @@
                 </li>
             </ul>
         </section>
+        <!-- Section: Sứ mệnh (Tầm nhìn - Sứ mệnh) - Giới thiệu sứ mệnh của trường và hình ảnh minh họa -->
         <section class="tnsm show-on-scroll about-us" id="tam-nhin-su-menh">
             <img src="olympia/images/pc-02-pattern.png" alt="" class="tnsm-bg" style="opacity: 0">
             <div class="container">
@@ -215,6 +232,7 @@
                 </div>
             </div>
         </section>
+        <!-- Section: Thông điệp từ người sáng lập/Hiệu trưởng - Trích dẫn và lời chia sẻ từ Cô Phạm Thị Minh An -->
         <section id="thong-diep-hieu-truong" class="show-on-scroll about-us dtht">
             <div class="dtht_img" style="opacity: 0">
                 <img src="storage/chi-an-da-cat-dang-web-1180x720-1180x720.jpg" alt="">
@@ -244,8 +262,7 @@
                 </div>
             </div>
         </section>
-
-
+        <!-- Section: Chân dung học sinh (Student Profile) - Giới thiệu 8 phẩm chất/năng lực của học sinh Olympia -->
         <section id="tai-sao-chon-olympia" class=" why-hs">
             <div class="container text-center olympia-number-box home-index">
                 <div class="olympia-number-left olympia-number-left-pc text-left show-on-scroll home-page appear is-visible"
@@ -369,6 +386,7 @@
             </div>
         </section>
 
+        <!-- Section: Lịch sử hình thành - Timeline các mốc phát triển của trường từ 2003 đến 2017 -->
         <section id="lich-su-hinh-thanh">
             <div class="lsht">
                 <div class="history-content">
@@ -474,6 +492,7 @@
             </div>
         </section>
 
+        <!-- Section: Đội ngũ giáo viên - Slider hiển thị hình ảnh và thông tin các thành viên trong đội ngũ -->
         <section class="team learning-route" id="doi-ngu">
             <div class="team ">
                 <div class="team-intro">
@@ -975,6 +994,7 @@
             </div>
         </section>
 
+        <!-- Section: Đối tác - Logo các tổ chức và trường học đối tác của Olympia -->
         <section class="about-vendor" id="doi-tac">
             <div class="container about-vendor-inner">
                 <h3 class="vendor-title">Đối tác</h3>
@@ -1005,6 +1025,7 @@
             </div>
         </section>
 
+        <!-- Section: Cơ sở vật chất - Gallery hình ảnh các khu vực: Sân Osaka, Sân bóng, Sân mầm non, Thư viện và Modal Lightbox -->
         <section class="about-equipment" id="co-so-vat-chat">
             <div class="container">
                 <div class="tab-content">
@@ -1151,16 +1172,9 @@
             </div>
         </section>
 
+        <!-- Section: Liên kết nhanh - Đăng ký tư vấn và FAQ -->
         <section class="about-related">
             <div class="about-related-inner">
-
-
-
-
-
-
-
-
                 <div class="related-item">
                     <img src="olympia/images/pc-02-navigation-2.svg" alt="">
                     <p class="item-title"><a class="item-title" href="lien-he.html" title="">Đăng kí tư vấn</a></p>
@@ -1194,7 +1208,7 @@
         AOS.init({
             once: true,
 
-            disable: function () {
+            disable: function() {
                 var maxWidth = 767;
                 return window.innerWidth < maxWidth;
             }
@@ -1217,7 +1231,7 @@
 
 
 <script type="text/javascript">
-    $(document).on('ready', function () {
+    $(document).on('ready', function() {
         document.getElementById("defaultOpen").click();
 
         $('.list-vendor').slick({
@@ -1229,8 +1243,7 @@
             nextArrow: '<div class="rcl-next"><img src="https://theolympiaschools.edu.vn/olympia/images/button-1-3.svg"></div>',
             autoplaySpeed: 10000,
             cssEase: 'linear',
-            responsive: [
-                {
+            responsive: [{
                     breakpoint: 1024,
                     settings: {
                         slidesToShow: 4
@@ -1259,8 +1272,7 @@
             variableWidth: true,
             slidesToScroll: 1,
             // autoplay: true,
-            responsive: [
-                {
+            responsive: [{
                     breakpoint: 1024,
                     settings: {
                         prevArrow: '<div class="rcl-prev"><img src="https://theolympiaschools.edu.vn/olympia/images/button-1-3.svg"></div>',

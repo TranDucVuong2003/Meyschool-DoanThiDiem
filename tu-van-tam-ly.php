@@ -7,15 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=1" name="viewport" />
     <link rel="shortcut icon" href="storage/favicon.png">
-    <title>Tư vấn tâm lý học đường</title>
+    <title>Tư vấn tâm lý</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:site_name" content="The Olympia Schools">
-    <meta property="og:title" content="Tư vấn tâm lý học đường">
+    <meta property="og:title" content="Tư vấn tâm lý">
     <meta property="og:description" content="">
     <meta property="og:url" content="tu-van-tam-ly.html">
     <meta property="og:type" content="article">
     <meta property="og:image" content="storage/favicon.png">
-    <meta name="twitter:title" content="Tư vấn tâm lý học đường">
+    <meta name="twitter:title" content="Tư vấn tâm lý">
     <meta name="twitter:description" content="">
 
     <link media="all" type="text/css" rel="stylesheet" href="vendor/core/plugins/language/css/language-publice209.css?v=1.0.0">
@@ -52,7 +52,7 @@
             height: 50px;
             line-height: 50px;
             text-align: center;
-            background-color: #471873;
+            background-color: #2354a0;
             font-size: 14px;
             font-weight: 600;
             text-transform: uppercase;
@@ -60,13 +60,101 @@
             color: #fff;
             display: inline-block;
             margin-top: 20px;
+            border-radius: 10px;
         }
-        .btn-full {
-            text-align: center;
-            line-height: 60px;
+        .btn-full { text-align: center; line-height: 60px; }
+        body.show-admin-bar { margin-top: 0px !important; }
+
+        :root {
+            --blue-1: #2354a0;
+            --blue-2: #439bd4;
+            --blue-3: #4db0e4;
+            --blue-soft: #eef7ff;
         }
-        body.show-admin-bar {
-            margin-top: 0px !important;
+
+        .counsel-wrap { background: #f7fbff; }
+        .counsel-container { max-width: 1260px; margin: 0 auto; padding: 0 20px; }
+
+        .counsel-hero {
+            padding: 130px 0 70px;
+            background: #fff;
+        }
+
+        .counsel-hero-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .counsel-hero h1 {
+            font-family: 'Garamond', serif;
+            font-size: 42px;
+            margin: 16px 0 18px;
+            color: var(--blue-1);
+        }
+
+        .counsel-hero p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #40506c;
+            max-width: 520px;
+        }
+
+        .counsel-hero .breadcrumb {
+            margin: 0 0 16px;
+            background: var(--blue-soft);
+            display: inline-flex;
+            padding: 10px 18px;
+            border-radius: 999px;
+        }
+
+        .counsel-grid {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .counsel-card {
+            background: #fff;
+            border-radius: 18px;
+            padding: 24px;
+            border: 1px solid rgba(67, 155, 212, 0.14);
+            box-shadow: 0 14px 30px rgba(0,0,0,0.08);
+        }
+
+        .counsel-card h4 { color: var(--blue-1); margin-bottom: 8px; }
+        .counsel-card p { margin: 0; color: #5b6a82; font-size: 14px; line-height: 1.7; }
+
+        .counsel-highlight {
+            margin-top: 50px;
+            background: linear-gradient(120deg, var(--blue-1), var(--blue-2));
+            color: #fff;
+            border-radius: 22px;
+            padding: 35px 40px;
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .counsel-highlight img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+
+        @media (max-width: 1100px) {
+            .counsel-hero-grid,
+            .counsel-highlight { grid-template-columns: 1fr; }
+            .counsel-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        }
+
+        @media (max-width: 768px) {
+            .counsel-hero h1 { font-size: 32px; }
+            .counsel-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -75,48 +163,46 @@
     <?php include 'includes/header.php'; ?>
     <div class="overlay_mark_search" style="display:none;"></div>
 
-    <main class="body-content">
-        <section class="about__header">
-            <div class="standard__header-cover header_cover show-on-scroll" id="english-header-title">
-                <div class="standard__header-img header-cover-img">
-                    <div class="overlay_mark"></div>
-                    <img class="img-cover pc-cover" src="storage/jnp2203-1-1920x1080.jpg" alt="">
-                    <img class="img-cover mb-cover" src="storage/jnp2203-1-1180x720.jpg" alt="">
-                </div>
-                <div class="big-cover-title-box">
-                    <ol class="breadcrumb container">
-                        <li class="breadcrumb-item white"><a href="index.php" class="white">Trang chủ</a></li>
-                        <li class="breadcrumb-item white"><a href="javascript:;" class="white">Dịch vụ học đường</a></li>
-                        <li class="breadcrumb-item white"><a href="javascript:;" class="white">Tư vấn tâm lý học đường</a></li>
+    <main class="body-content counsel-wrap">
+        <section class="counsel-hero">
+            <div class="counsel-container counsel-hero-grid">
+                <div>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.php">Trang chủ</a></li>
+                        <li class="breadcrumb-item"><a href="javascript:;">Dịch vụ học đường</a></li>
+                        <li class="breadcrumb-item active">Tư vấn tâm lý</li>
                     </ol>
-                    <h1 class="big__header-title container font-garamond-bold white header-title">Tư vấn tâm lý học đường</h1>
+                    <h1>Phòng tư vấn tâm lý học đường</h1>
+                    <p>Không gian lắng nghe và hỗ trợ tâm lý, giúp học sinh phát triển cảm xúc tích cực, giải tỏa áp lực và duy trì sức khỏe tinh thần.</p>
+                </div>
+                <div>
+                    <img src="storage/banner/trung-hoc.jpg" alt="Tư vấn tâm lý" style="width:100%;height:320px;object-fit:cover;border-radius:24px;box-shadow:0 18px 40px rgba(0,0,0,0.12);">
                 </div>
             </div>
-        </section>
 
-        <section class="program-content">
-            <div class="container" style="padding: 60px 20px;">
-                <h2 style="font-size: 32px; color: #471873; margin-bottom: 30px; font-weight: 600;">Tư vấn tâm lý học đường</h2>
-                <p style="font-size: 16px; line-height: 1.8; color: #333; margin-bottom: 20px;">
-                    Meyschool Đoàn Thị Điểm chú trọng đến sức khỏe tinh thần của học sinh. 
-                    Dịch vụ tư vấn tâm lý học đường được thiết lập để hỗ trợ học sinh 
-                    vượt qua các khó khăn về cảm xúc, áp lực học tập và các vấn đề trong giao tiếp.
-                </p>
-                <p style="font-size: 16px; line-height: 1.8; color: #333; margin-bottom: 20px;">
-                    Đội ngũ chuyên gia tâm lý của trường có chuyên môn cao và kinh nghiệm 
-                    làm việc với trẻ em, vị thành niên. Các buổi tư vấn được tổ chức 
-                    trong không gian riêng tư, ấm cúng để học sinh cảm thấy thoải mái chia sẻ.
-                </p>
-                <p style="font-size: 16px; line-height: 1.8; color: #333; margin-bottom: 20px;">
-                    Dịch vụ bao gồm: tư vấn cá nhân, tư vấn nhóm, các buổi workshop kỹ năng 
-                    sống, và hỗ trợ phụ huynh trong việc hiểu và đồng hành cùng con. 
-                    Mọi thông tin đều được bảo mật tuyệt đối theo nguyên tắc đạo đức nghề nghiệp.
-                </p>
-                <p style="font-size: 16px; line-height: 1.8; color: #333;">
-                    Ngoài ra, nhà trường còn tổ chức các chương trình phòng ngừa như 
-                    giáo dục kỹ năng ứng phó stress, phòng chống bắt nạt học đường, 
-                    và xây dựng môi trường học tập tích cực, an toàn cho tất cả học sinh.
-                </p>
+            <div class="counsel-container">
+                <div class="counsel-grid">
+                    <div class="counsel-card">
+                        <h4>Hỗ trợ cảm xúc</h4>
+                        <p>Giúp học sinh quản lý cảm xúc, vượt qua lo lắng và nâng cao sự tự tin.</p>
+                    </div>
+                    <div class="counsel-card">
+                        <h4>Đồng hành học tập</h4>
+                        <p>Tư vấn phương pháp học tập, cân bằng giữa áp lực và hiệu quả.</p>
+                    </div>
+                    <div class="counsel-card">
+                        <h4>Gắn kết gia đình</h4>
+                        <p>Tư vấn cho phụ huynh trong việc thấu hiểu và hỗ trợ con đúng cách.</p>
+                    </div>
+                </div>
+
+                <div class="counsel-highlight">
+                    <div>
+                        <h3>Chúng tôi luôn sẵn sàng lắng nghe</h3>
+                        <p>Đội ngũ tư vấn chuyên môn đồng hành cùng học sinh và gia đình, giúp các em xây dựng sự cân bằng và sức khỏe tinh thần bền vững.</p>
+                    </div>
+                    <img src="storage/banner/tieu-hoc.jpg" alt="Không gian tư vấn">
+                </div>
             </div>
         </section>
     </main>

@@ -52,7 +52,7 @@
             height: 50px;
             line-height: 50px;
             text-align: center;
-            background-color: #471873;
+            background-color: #2354a0;
             font-size: 14px;
             font-weight: 600;
             text-transform: uppercase;
@@ -60,13 +60,114 @@
             color: #fff;
             display: inline-block;
             margin-top: 20px;
+            border-radius: 10px;
         }
-        .btn-full {
-            text-align: center;
-            line-height: 60px;
+        .btn-full { text-align: center; line-height: 60px; }
+        body.show-admin-bar { margin-top: 0px !important; }
+
+        :root {
+            --blue-1: #2354a0;
+            --blue-2: #439bd4;
+            --blue-3: #4db0e4;
+            --blue-soft: #eef7ff;
         }
-        body.show-admin-bar {
-            margin-top: 0px !important;
+
+        .boarding-wrap { background: #f7fbff; }
+        .boarding-container { max-width: 1260px; margin: 0 auto; padding: 0 20px; }
+
+        .boarding-hero {
+            padding: 130px 0 70px;
+            background: #fff;
+        }
+
+        .boarding-hero-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .boarding-hero h1 {
+            font-family: 'Garamond', serif;
+            font-size: 42px;
+            margin: 16px 0 18px;
+            color: var(--blue-1);
+        }
+
+        .boarding-hero p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #40506c;
+            max-width: 520px;
+        }
+
+        .boarding-hero .breadcrumb {
+            margin: 0 0 16px;
+            background: var(--blue-soft);
+            display: inline-flex;
+            padding: 10px 18px;
+            border-radius: 999px;
+        }
+
+        .boarding-frame {
+            background: linear-gradient(120deg, var(--blue-1), var(--blue-2));
+            padding: 18px;
+            border-radius: 24px;
+        }
+
+        .boarding-frame img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            border-radius: 18px;
+        }
+
+        .boarding-schedule {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .schedule-card {
+            background: #fff;
+            border-radius: 18px;
+            padding: 24px;
+            border: 1px solid rgba(67, 155, 212, 0.16);
+            box-shadow: 0 14px 30px rgba(0,0,0,0.08);
+        }
+
+        .schedule-card h4 { color: var(--blue-1); margin-bottom: 10px; }
+        .schedule-card p { margin: 0; color: #5b6a82; font-size: 14px; line-height: 1.7; }
+
+        .boarding-strip {
+            display: grid;
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+            gap: 12px;
+            margin-top: 40px;
+        }
+
+        .boarding-strip img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 18px;
+        }
+
+        @media (max-width: 1100px) {
+            .boarding-hero-grid { grid-template-columns: 1fr; }
+            .boarding-schedule { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .boarding-strip { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+        }
+
+        @media (max-width: 768px) {
+            .boarding-hero h1 { font-size: 32px; }
+            .boarding-schedule { grid-template-columns: 1fr; }
+            .boarding-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        }
+
+        @media (max-width: 520px) {
+            .boarding-strip { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -75,47 +176,46 @@
     <?php include 'includes/header.php'; ?>
     <div class="overlay_mark_search" style="display:none;"></div>
 
-    <main class="body-content">
-        <section class="about__header">
-            <div class="standard__header-cover header_cover show-on-scroll" id="english-header-title">
-                <div class="standard__header-img header-cover-img">
-                    <div class="overlay_mark"></div>
-                    <img class="img-cover pc-cover" src="storage/jnp2203-1-1920x1080.jpg" alt="">
-                    <img class="img-cover mb-cover" src="storage/jnp2203-1-1180x720.jpg" alt="">
-                </div>
-                <div class="big-cover-title-box">
-                    <ol class="breadcrumb container">
-                        <li class="breadcrumb-item white"><a href="index.php" class="white">Trang chủ</a></li>
-                        <li class="breadcrumb-item white"><a href="javascript:;" class="white">Dịch vụ học đường</a></li>
-                        <li class="breadcrumb-item white"><a href="javascript:;" class="white">Bán trú</a></li>
+    <main class="body-content boarding-wrap">
+        <section class="boarding-hero">
+            <div class="boarding-container boarding-hero-grid">
+                <div>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.php">Trang chủ</a></li>
+                        <li class="breadcrumb-item"><a href="javascript:;">Dịch vụ học đường</a></li>
+                        <li class="breadcrumb-item active">Bán trú</li>
                     </ol>
-                    <h1 class="big__header-title container font-garamond-bold white header-title">Bán trú</h1>
+                    <h1>Chương trình bán trú</h1>
+                    <p>Không gian bán trú an toàn, thoáng mát với lịch sinh hoạt khoa học giúp học sinh nghỉ ngơi và tái tạo năng lượng sau giờ học.</p>
+                </div>
+                <div class="boarding-frame">
+                    <img src="storage/banner/ve-chung-toi-web.jpg" alt="Bán trú">
                 </div>
             </div>
-        </section>
 
-        <section class="program-content">
-            <div class="container" style="padding: 60px 20px;">
-                <h2 style="font-size: 32px; color: #471873; margin-bottom: 30px; font-weight: 600;">Dịch vụ bán trú</h2>
-                <p style="font-size: 16px; line-height: 1.8; color: #333; margin-bottom: 20px;">
-                    Dịch vụ bán trú tại Meyschool Đoàn Thị Điểm cung cấp bữa trưa chất lượng cao 
-                    cho học sinh ngay tại trường. Chúng tôi hiểu rằng dinh dưỡng đóng vai trò 
-                    quan trọng trong sự phát triển thể chất và trí não của học sinh.
-                </p>
-                <p style="font-size: 16px; line-height: 1.8; color: #333; margin-bottom: 20px;">
-                    Thực đơn được thiết kế bởi chuyên gia dinh dưỡng, đảm bảo cân bằng 
-                    các nhóm chất: protein, carbohydrate, chất béo, vitamin và khoáng chất. 
-                    Mỗi bữa ăn đều tươi ngon, đa dạng và phù hợp khẩu vị của học sinh.
-                </p>
-                <p style="font-size: 16px; line-height: 1.8; color: #333; margin-bottom: 20px;">
-                    Hệ thống bếp ăn đạt chuẩn vệ sinh an toàn thực phẩm với quy trình 
-                    nấu ăn một chiều hiện đại. Nhà trường có 3 nhà ăn với tổng sức chứa 
-                    750 người, đảm bảo không gian thoải mái cho học sinh.
-                </p>
-                <p style="font-size: 16px; line-height: 1.8; color: #333;">
-                    Ngoài bữa trưa chính, học sinh còn được cung cấp bữa phụ buổi sáng 
-                    và chiều để đảm bảo năng lượng cho cả ngày học tập và hoạt động.
-                </p>
+            <div class="boarding-container">
+                <div class="boarding-schedule">
+                    <div class="schedule-card">
+                        <h4>Dinh dưỡng cân bằng</h4>
+                        <p>Thực đơn được thiết kế theo tiêu chuẩn dinh dưỡng, đa dạng món ăn và phù hợp với từng độ tuổi.</p>
+                    </div>
+                    <div class="schedule-card">
+                        <h4>Giờ nghỉ hợp lý</h4>
+                        <p>Khu nghỉ trưa yên tĩnh, sạch sẽ, đảm bảo học sinh ngủ đủ và phục hồi năng lượng.</p>
+                    </div>
+                    <div class="schedule-card">
+                        <h4>Hoạt động chiều</h4>
+                        <p>Hoạt động nhẹ nhàng sau giờ học giúp học sinh thư giãn và chuẩn bị cho các câu lạc bộ.</p>
+                    </div>
+                </div>
+
+                <div class="boarding-strip">
+                    <img src="storage/banner/tieu-hoc.jpg" alt="Dinh dưỡng">
+                    <img src="olympia/images/0201.jpg" alt="Không gian nghỉ">
+                    <img src="olympia/images/0202.jpg" alt="Hoạt động chiều">
+                    <img src="storage/banner/trung-hoc.jpg" alt="Bữa ăn">
+                    <img src="olympia/images/0206.jpg" alt="Chăm sóc">
+                </div>
             </div>
         </section>
     </main>

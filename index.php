@@ -91,6 +91,95 @@
             margin-top: 0px !important;
             /* position: relative; */
         }
+
+        /* Offset fixed header so it doesn't cover homepage banner */
+        .body-content {
+            padding-top: 70px !important;
+        }
+
+        #pc_slider_cover,
+        #mb_slider_cover {
+            margin-top: 0 !important;
+        }
+
+        .slider-item {
+            position: relative;
+        }
+
+        .slider-title-box {
+            position: absolute !important;
+            bottom: -280px !important;
+            right: 20px !important;
+            left: auto !important;
+            width: auto !important;
+            opacity: 1 !important;
+            transform: none !important;
+            z-index: 5;
+        }
+
+        .banner-cta {
+            display: inline-flex;
+            align-items: stretch;
+            background: #1f4b8f;
+            border-radius: 0;
+            overflow: hidden;
+            box-shadow: 0 18px 36px rgba(0, 0, 0, 0.28);
+            height: 100px;
+            margin-top: 516px;
+        }
+
+        .banner-cta a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 18px 26px;
+            min-width: 190px;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.9px;
+            text-decoration: none;
+            background: transparent;
+            color: #fff;
+            border-right: 1px solid rgba(255, 255, 255, 0.25);
+        }
+
+        .banner-cta a:last-child {
+            border-right: none;
+        }
+
+        .banner-cta a::after {
+            content: '›';
+            font-size: 18px;
+            line-height: 1;
+            color: #f6c343;
+        }
+
+        @media (max-width: 768px) {
+            .body-content {
+                padding-top: 70px !important;
+            }
+
+            .slider-title-box {
+                bottom: 14px;
+                right: 12px;
+            }
+
+            .banner-cta {
+                flex-direction: column;
+            }
+
+            .banner-cta a {
+                min-width: 0;
+                border-right: none;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            }
+
+            .banner-cta a:last-child {
+                border-bottom: none;
+            }
+        }
     </style>
     <!-- Google Tag Manager -->
     <script>
@@ -156,35 +245,24 @@
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </script>
-    <style>
-        nav#admin_bar {
-            display: none;
-        }
-
-        body.show-admin-bar {
-            margin-top: 0px !important;
-        }
-    </style>
     <?php include 'includes/header.php'; ?>
     <div class="overlay_mark_search" style="display:none;"></div>
 
     <main class="body-content">
 
-        <!-- Section: Banner/Slider Mobile -->
+        <!-- Section: Banner/Slider Mobile - Fixed CTA -->
         <section class="mobile slider show-on-scroll home-page" data-sizes="50vw" id="mb_slider_cover">
             <a href="./index.php" class="slider-item" title="">
                 <img src="assets/banner/banner1.jpeg" alt="">
-                <div class="slider-title-box" style="opacity: 0"></div>
-            </a>
-            <a href="./index.php" class="slider-item" title="">
-                <img src="assets/banner/banner2.jpeg" alt="">
-                <div class="slider-title-box" style="opacity: 0"></div>
-            </a>
-            <a href="./index.php" class="slider-item" title="">
-                <img src="assets/banner/banner3.jpeg" alt="">
-                <div class="slider-title-box" style="opacity: 0"></div>
             </a>
         </section>
+
+        <!-- Fixed CTA Buttons (outside slider) -->
+        <div class="mobile banner-cta-fixed">
+            <a class="primary" href="dang-ky-tu-van.php">Đăng ký tuyển sinh</a>
+            <a class="secondary" href="dang-ky-tham-quan.php">Đăng ký tham quan</a>
+            <a class="secondary" href="hoc-bong-2026-2027.php">Đăng ký ngày học trải nghiệm</a>
+        </div>
 
         <!-- Section: Banner/Slider PC -->
         <section class="pc slider show-on-scroll home-page" data-sizes="50vw" id="pc_slider_cover">
@@ -192,21 +270,58 @@
                 <a href="./index.php" title="">
                     <img src="assets/banner/banner1.jpeg" alt="">
                 </a>
-                <div class="slider-title-box"></div>
+                <div class="slider-title-box" style="opacity:1;transform:none;">
+                    <div class="banner-cta">
+                        <a class="primary" href="dang-ky-tu-van.php">Đăng ký tư vấn</a>
+                        <a class="secondary" href="dang-ky-tham-quan.php">Đăng ký tham quan</a>
+                        <a class="secondary" href="hoc-bong-2026-2027.php">Đăng ký học bổng</a>
+                    </div>
+                </div>
             </div>
             <div class="slider-item">
                 <a href="./index.php" title="">
                     <img src="assets/banner/banner2.jpeg" alt="">
                 </a>
-                <div class="slider-title-box"></div>
+                <div class="slider-title-box">
+                    <div class="banner-cta">
+                        <a class="primary" href="dang-ky-tu-van.php">Đăng ký tư vấn</a>
+                        <a class="secondary" href="dang-ky-tham-quan.php">Đăng ký tham quan</a>
+                        <a class="secondary" href="hoc-bong-2026-2027.php">Đăng ký học bổng</a>
+                    </div>
+                </div>
             </div>
             <div class="slider-item">
                 <a href="./index.php" title="">
                     <img src="assets/banner/banner3.jpeg" alt="">
                 </a>
-                <div class="slider-title-box"></div>
+                <div class="slider-title-box">
+                    <div class="banner-cta">
+                        <a class="primary" href="dang-ky-tu-van.php">Đăng ký tư vấn</a>
+                        <a class="secondary" href="dang-ky-tham-quan.php">Đăng ký tham quan</a>
+                        <a class="secondary" href="hoc-bong-2026-2027.php">Đăng ký học bổng</a>
+                    </div>
+                </div>
             </div>
         </section>
+
+        <!-- Hero Action Buttons -->
+        <!-- <div class="hero-actions-bar">
+            <a href="dang-ky-tu-van.php" class="hero-action-btn">
+                <span class="label-1">Đăng ký</span>
+                <span class="label-2">Tuyển sinh</span>
+                <span class="arrow">›</span>
+            </a>
+            <a href="#" class="hero-action-btn" onclick="alert('Vui lòng gọi hotline 0934 525 889 để đặt lịch tham quan'); return false;">
+                <span class="label-1">Đăng ký</span>
+                <span class="label-2">Tham quan</span>
+                <span class="arrow">›</span>
+            </a>
+            <a href="#" class="hero-action-btn" onclick="alert('Vui lòng gọi hotline 0934 525 889 để đăng ký ngày học trải nghiệm'); return false;">
+                <span class="label-1">Đăng ký</span>
+                <span class="label-2">Ngày học trải nghiệm</span>
+                <span class="arrow">›</span>
+            </a>
+        </div> -->
 
         <!-- Section: Lời chào của Hiệu Trưởng -->
         <section id="principal-welcome" class="show-on-scroll home-page">
@@ -217,7 +332,7 @@
                             <div class="principal-image text-center">
                                 <img src="assets/img/Gemini_Generated_Image_ft1vwvft1vwvft1v.png" alt="Hiệu Trưởng" style="border-radius: 20px; box-shadow: 0 10px 30px rgba(71, 24, 115, 0.2); max-width: 100%;">
                                 <h4 class="font-garamond-bold color-471873" style="margin-top: 20px; font-size: 24px;">Bà Nguyễn Thị Hương</h4>
-                                <p class="font-avenir-regular color-3a" style="font-size: 14px;">Hiệu Trưởng The Olympia Schools</p>
+                                <p class="font-avenir-regular color-3a" style="font-size: 14px;">Hiệu Trưởng The Meyschool</p>
                             </div>
                         </div>
                         <div class="col-md-7">
@@ -225,9 +340,9 @@
                                 <h2 class="font-garamond-bold color-471873" style="font-size: 42px; margin-bottom: 30px;">Lời chào của Hiệu Trưởng</h2>
                                 <div class="welcome-content font-avenir-regular color-3a" style="font-size: 16px; line-height: 1.8; text-align: justify;">
                                     <p style="margin-bottom: 20px;">Kính thưa quý phụ huynh và các em học sinh thân mến,</p>
-                                    <p style="margin-bottom: 20px;">Thay mặt cho toàn thể cán bộ, giáo viên và nhân viên của Trường Phổ thông liên cấp Song ngữ Olympia, tôi xin gửi lời chào trân trọng và nhiệt liệt nhất đến quý vị.</p>
-                                    <p style="margin-bottom: 20px;">Với gần 20 năm phát triển, Olympia tự hào là ngôi trường song ngữ tiên phong tại Việt Nam trong việc tiếp cận và vận dụng các phương pháp giáo dục hiện đại của thế giới. Chúng tôi luôn lấy học sinh làm trung tâm, xây dựng môi trường học tập an toàn, thân thiện và sáng tạo.</p>
-                                    <p style="margin-bottom: 20px;">Tại Olympia, mỗi học sinh đều được tôn trọng, được khuyến khích phát triển tối đa tiềm năng của bản thân. Chúng tôi tin rằng giáo dục không chỉ là truyền đạt kiến thức, mà còn là nuôi dưỡng nhân cách, kỹ năng và định hướng tương lai cho các em.</p>
+                                    <p style="margin-bottom: 20px;">Thay mặt cho toàn thể cán bộ, giáo viên và nhân viên của Trường Phổ thông liên cấp Meyschool, tôi xin gửi lời chào trân trọng và nhiệt liệt nhất đến quý vị.</p>
+                                    <p style="margin-bottom: 20px;">Với gần 20 năm phát triển, Meyschool tự hào là ngôi trường song ngữ tiên phong tại Việt Nam trong việc tiếp cận và vận dụng các phương pháp giáo dục hiện đại của thế giới. Chúng tôi luôn lấy học sinh làm trung tâm, xây dựng môi trường học tập an toàn, thân thiện và sáng tạo.</p>
+                                    <p style="margin-bottom: 20px;">Tại Meyschool, mỗi học sinh đều được tôn trọng, được khuyến khích phát triển tối đa tiềm năng của bản thân. Chúng tôi tin rằng giáo dục không chỉ là truyền đạt kiến thức, mà còn là nuôi dưỡng nhân cách, kỹ năng và định hướng tương lai cho các em.</p>
                                     <p>Trân trọng kính chào!</p>
                                 </div>
                             </div>
@@ -242,12 +357,12 @@
             <div class="olympia-number-left olympia-number-left-pc text-left show-on-scroll home-page"
                 id="olympia-number" style="width: 48%; margin-right: 0;">
                 <h1 class="olympia-number-title font-garamond-bold color-21" style="margin-bottom: 20px">Trường phổ
-                    thông liên cấp song ngữ Olympia</h1>
+                    thông liên cấp Meyschool Đoàn Thị Điểm</h1>
 
                 <p class="olympia-number-content font-avenir-regular size-14 color-3a">Không chỉ tiên phong trong xây
-                    dựng và đổi mới chương trình giáo dục theo định hướng phát triển năng lực tại Việt Nam, Olympia tự
+                    dựng và đổi mới chương trình giáo dục theo định hướng phát triển năng lực tại Việt Nam, Meyschool tự
                     hào là đơn vị dẫn đầu trong tiếp cận và vận dụng các nội dung, phương pháp giáo dục hiện đại của thế
-                    giới để học sinh Olympia tự tin bước ra thế giới với tri thức, kĩ năng, phẩm chất và năng lực của
+                    giới để học sinh Meyschool tự tin bước ra thế giới với tri thức, kĩ năng, phẩm chất và năng lực của
                     những công dân toàn cầu.</p>
 
                 <ul class="olym-index_list">
@@ -279,7 +394,7 @@
                         <div class="flex-center-center number-blck number-blck-v">
                             <div class="number-cnt text-center" style="color: #471873;">
                                 <span style="color: #471873;">17</span>
-                                <p>Quốc gia giáo viên Olympia đã theo học Đại học, Thạc sĩ, Tiến sĩ</p>
+                                <p>Quốc gia giáo viên Meyschool đã theo học Đại học, Thạc sĩ, Tiến sĩ</p>
                             </div>
                         </div>
                     </div>
@@ -320,11 +435,11 @@
             </div>
 
             <div class="olympia-number-right mobile-device show-on-scroll">
-                <h3 class="olympia-number-title font-garamond-bold color-21">Olympia qua những con số</h3>
+                <h3 class="olympia-number-title font-garamond-bold color-21">Meyschool qua những con số</h3>
                 <p class="olympia-number-content font-avenir-regular size-14 color-3a">Không chỉ đi tiên phong trong xây
                     dựng và đổi mới chương trình giáo dục theo định hướng phát triển năng lực tại Việt Nam, trường
-                    Olympia tự hào là đơn vị dẫn đầu trong tiếp cận và vận dụng các nội dung và phương pháp giáo dục
-                    hiện đại của thế giới để học sinh Olympia tự tin bước ra thế giới với tri thức, kĩ năng, phẩm chất
+                    Meyschool tự hào là đơn vị dẫn đầu trong tiếp cận và vận dụng các nội dung và phương pháp giáo dục
+                    hiện đại của thế giới để học sinh Meyschool tự tin bước ra thế giới với tri thức, kĩ năng, phẩm chất
                     và năng lực của những công dân thế kỷ 21.</p>
                 <a class="link-button font-avenir-demibold  color-471873 text-uppercase" href="page/ve-chung-toi.html"
                     title="" target="_blank">về chúng tôi</a>
@@ -337,7 +452,7 @@
                             <div class="flex-center-center number-blck number-blck-v">
                                 <div class="number-cnt text-center">
                                     <span>17</span>
-                                    <p>Quốc gia giáo viên Olympia đã theo học Đại học, Thạc sĩ, Tiến sĩ</p>
+                                    <p>Quốc gia giáo viên Meyschool đã theo học Đại học, Thạc sĩ, Tiến sĩ</p>
                                 </div>
                             </div>
                         </div>
@@ -435,9 +550,9 @@
                     </div>
                 </div>
                 <div class="olympia-level-right olympia-level-right-pc text-left" style="opacity: 0">
-                    <h3 class="olympia-number-title font-garamond-bold color-471873">4 cấp đào tạo tại <br> The Olympia
+                    <h3 class="olympia-number-title font-garamond-bold color-471873">4 cấp đào tạo tại <br> Meyschool
                         Schools</h3>
-                    <p class="olympia-level-content font-avenir-regular">Gia nhập cộng đồng Olympians để trải nghiệm môi
+                    <p class="olympia-level-content font-avenir-regular">Gia nhập cộng đồng Meyschool để trải nghiệm môi
                         trường học tập thân thiện, tích cực, hiện đại bậc nhất và cùng kiến tạo những giá trị tốt đẹp
                         cho bản thân và cộng đồng</p>
                     <a href="lo-trinh-hoc-tap.html" title="" class="link-button-bg white bg-471873 ltht-btn">Khám phá lộ
@@ -449,7 +564,7 @@
         <!-- Section: Hoạt động tại Olympia (Tin tức + Sự kiện) -->
         <section id="olympia-event" class="bg-471873">
             <div class="olympia-event">
-                <h2 class="color-f font-garamond-bold">Hoạt động tại Olympia</h2>
+                <h2 class="color-f font-garamond-bold">Hoạt động tại Meyschool</h2>
                 <div class="flex-center-between mgb-30">
                     <div class="olympia-event-entry-title font-24 text-underline font-weight-bold mgb-0">Tin tức</div>
                     <a href="tin-tuc.html" title="" class="link-button righthover color-f">Tất cả tin tức
@@ -463,7 +578,7 @@
                                     title=""><img src="storage/pcp-3248-300x300.jpg" alt=""></a>
                                 <p class="post-title"><a
                                         href="leap-week-2025-tuan-dinh-huong-nghe-nghiep-danh-cho-olympians-chuong-trinh-tich-hop.html">LEAP
-                                        WEEK 2025 – Tuần định hướng nghề nghiệp dành cho Olympians Chương trình Tích
+                                        WEEK 2025 – Tuần định hướng nghề nghiệp dành cho Meyschool Chương trình Tích
                                         hợp</a></p>
                             </div>
                         </div>
@@ -484,7 +599,7 @@
                                         alt=""></a>
                                 <p class="post-title"><a
                                         href="nhung-tieng-cuoi-gion-tan-trong-ngay-dai-hoi-the-thao-cua-cac-olympians-nhi.html">Những
-                                        tiếng cười giòn tan trong ngày Đại hội thể thao của các Olympians nhí!</a></p>
+                                        tiếng cười giòn tan trong ngày Đại hội thể thao của các Meyschool nhí!</a></p>
                             </div>
                         </div>
                         <div class="col-md-3">
@@ -494,7 +609,7 @@
                                         src="storage/565657460-1266642185500964-7927902821603982118-n-300x300.jpg"
                                         alt=""></a>
                                 <p class="post-title"><a
-                                        href="olympia-sport-family-2025-550-gia-dinh-cung-tham-gia-buoc-chay-hoa-no-cho-sach-ra-khoi.html">Olympia
+                                        href="olympia-sport-family-2025-550-gia-dinh-cung-tham-gia-buoc-chay-hoa-no-cho-sach-ra-khoi.html">Meyschool
                                         Sport Family 2025: 550 gia đình cùng tham gia Bước chạy hoa nở – Chở sách ra
                                         khơi</a></p>
                             </div>
@@ -515,7 +630,7 @@
                                         src="storage/561741140-1259781386187044-5214432535071835707-n-300x300.jpg"
                                         alt=""></a>
                                 <p class="post-title"><a
-                                        href="olympia-alumni-talk-university-insights-lessons-then-and-now.html">Olympia
+                                        href="olympia-alumni-talk-university-insights-lessons-then-and-now.html">Meyschool
                                         Alumni talk: “Hành trình Đại học - Bài học của ngày ấy và hôm nay&quot;</a></p>
                             </div>
                         </div>
@@ -527,7 +642,7 @@
                                         alt=""></a>
                                 <p class="post-title"><a
                                         href="chuc-mung-cac-olympians-xuat-sac-dat-giai-nhat-tai-vong-khoi-dong-giai-vex-robotic.html">Chúc
-                                        mứng các Olympians xuất sắc đạt giải nhất tại vòng khởi động giải Vex
+                                        mứng các Meyschool xuất sắc đạt giải nhất tại vòng khởi động giải Vex
                                         Robotics!</a></p>
                             </div>
                         </div>
@@ -537,7 +652,7 @@
                                         src="storage/557010394-1254697353362114-5404053930275027418-n-2-300x300.jpg"
                                         alt=""></a>
                                 <p class="post-title"><a href="vuot-30000-tac-pham-olympian-co.html">Vượt 30.000 tác
-                                        phẩm, Olympian có tranh trưng bày tại Triển lãm Mỹ thuật Thiếu nhi toàn quốc</a>
+                                        phẩm, Meyschool có tranh trưng bày tại Triển lãm Mỹ thuật Thiếu nhi toàn quốc</a>
                                 </p>
                             </div>
                         </div>
@@ -564,7 +679,7 @@
                                 <span class="time">17/01/2026</span>
                                 <span class="event-name"><a
                                         href="xuan-olympia-2026-gieo-mam-hanh-phuc-mo-loi-tuong-lai.html" title="">Xuân
-                                        Olympia 2026: Gieo mầm hạnh phúc, mở lối tương lai</a></span>
+                                        Meyschool 2026: Gieo mầm hạnh phúc, mở lối tương lai</a></span>
                             </div>
                         </div>
                         <div class="col-md-3">
@@ -600,18 +715,18 @@
         <!-- Section: Cảm nhận của phụ huynh và học sinh -->
         <section id="olympia-testimonial">
             <h2 class="font-garamond-bold" style="font-size: 50px; margin: 0 auto 60px auto; max-width: 1043px">Cảm nhận
-                của phụ huynh và học sinh của Olympia</h2>
+                của phụ huynh và học sinh của Meyschool</h2>
             <div class="olympia-testimonial slide-customs-dot show-on-scroll home-page" id="testimonial">
                 <div class="slide-item testimonial-item">
                     <div class="olympia-testimonial-entry" style="opacity: 0">
                         <h5 class="font-garamond-bold">“Ngay cả khi mình đi học ở Mỹ ở Harvard, thì mình vẫn thấy rằng
-                            triết lý giáo dục của họ không hề khác quá với cách làm của Olympia đâu”</h5>
+                            triết lý giáo dục của họ không hề khác quá với cách làm của Meyschool đâu”</h5>
                         <p class="olympia-testimonial-content font-avenir-regular size-14 color-3a">Một trong những
                             triết lý mà mình rất tâm đắc là luôn lấy học sinh làm trung tâm. Và mình tự hào khi biết
-                            điều này đã có ở Olympia từ những ngày đầu thành lập trường.</p>
+                            điều này đã có ở Meyschool từ những ngày đầu thành lập trường.</p>
                         <p class="olympia-testimonial-name font-garamond-bold">Nguyễn Vũ Thanh An</p>
                         <p class="olympia-testimonial-po4 font-avenir-regular size-14">Tốt nghiệp Thạc sỹ Đại học
-                            Harvard, Hoa Kỳ, cựu học sinh Olympia niên khóa 2013.</p>
+                            Harvard, Hoa Kỳ, cựu học sinh Meyschool niên khóa 2013.</p>
                     </div>
                     <div class="olympia-testimonial-photo" style="opacity: 0"><img src="storage/thac-si-havard.png"
                             alt="">
@@ -619,12 +734,12 @@
                 </div>
                 <div class="slide-item testimonial-item">
                     <div class="olympia-testimonial-entry" style="opacity: 0">
-                        <h5 class="font-garamond-bold">“Tôi rất tự hào vì con được học tại trường Olympia.”</h5>
+                        <h5 class="font-garamond-bold">“Tôi rất tự hào vì con được học tại trường Meyschool.”</h5>
                         <p class="olympia-testimonial-content font-avenir-regular size-14 color-3a">Việc nộp hồ sơ vào
                             các trường đại học không thông qua các công ty tư vấn bên ngoài mà chỉ nhờ tới văn phòng tư
-                            vấn của trường Olympia UCC đã giúp con chủ động và tự lập hơn nhiều. Đến nay, con đã nắm rất
+                            vấn của trường Meyschool UCC đã giúp con chủ động và tự lập hơn nhiều. Đến nay, con đã nắm rất
                             rõ việc học tập và sinh hoạt tại trường. Tôi thấy con khá tự tin và chắc chắn. Cảm ơn trường
-                            Olympia rất nhiều.</p>
+                            Meyschool rất nhiều.</p>
                         <p class="olympia-testimonial-name font-garamond-bold">Chị Nguyễn Phương Hà</p>
                         <p class="olympia-testimonial-po4 font-avenir-regular size-14">Phụ huynh học sinh Thảo Anh tốt
                             nghiệp khóa 2019.</p>
@@ -636,8 +751,8 @@
                 <div class="slide-item testimonial-item">
                     <div class="olympia-testimonial-entry" style="opacity: 0">
                         <h5 class="font-garamond-bold">“Mình nghĩ rằng bản thân đã lựa chọn đúng đắn khi quyết định gửi
-                            gắm những hoài bão ước mơ tuổi học trò của mình tại Olympia.”</h5>
-                        <p class="olympia-testimonial-content font-avenir-regular size-14 color-3a">Ba năm ở Olympia là
+                            gắm những hoài bão ước mơ tuổi học trò của mình tại Meyschool.”</h5>
+                        <p class="olympia-testimonial-content font-avenir-regular size-14 color-3a">Ba năm ở Meyschool là
                             khoảng thời gian khiến mình tự tin hơn, biết thấu cảm, suy nghĩ vì người khác, có trách
                             nhiệm và cũng như luôn biết tự hào về bản thân mà sống hết mình. Mỗi năm nhìn lại, mình đều
                             cảm thấy bất ngờ hơn một chút, rằng hoá ra mình cũng làm được nhiều thứ.</p>
@@ -649,8 +764,8 @@
                 </div>
                 <div class="slide-item testimonial-item">
                     <div class="olympia-testimonial-entry" style="opacity: 0">
-                        <h5 class="font-garamond-bold">&quot;Tôi rất yên tâm khi cho con theo học Olympia&quot;</h5>
-                        <p class="olympia-testimonial-content font-avenir-regular size-14 color-3a">Khi học ở Olympia,
+                        <h5 class="font-garamond-bold">&quot;Tôi rất yên tâm khi cho con theo học Meyschool&quot;</h5>
+                        <p class="olympia-testimonial-content font-avenir-regular size-14 color-3a">Khi học ở Meyschool,
                             con tỏ ra rất vui vẻ với các bạn, thầy cô và trường học. Tôi thấy môi trường học tập ở đây
                             thân thiện, các thầy cô tâm huyết, tận tâm, chương trình học cũng thú vị, không nặng nề đồng
                             thời giúp con phát triển nhiều kỹ năng.</p>
@@ -666,7 +781,7 @@
                     <div class="olympia-testimonial-entry" style="opacity: 0">
                         <h5 class="font-garamond-bold">&quot;Olympia là một môi trường tốt cho con tôi&quot;</h5>
                         <p class="olympia-testimonial-content font-avenir-regular size-14 color-3a">Qua thời gian học
-                            tại Olympia, tôi thấy con phát triển đều về kiến thức, kỹ năng và cả đạo đức. Olympia là một
+                            tại Olympia, tôi thấy con phát triển đều về kiến thức, kỹ năng và cả đạo đức. Meyschool là một
                             môi trường tốt cho con tôi, bởi trường được quản trị bởi Ban lãnh đạo có tâm và có tầm, và
                             có một đội ngũ nhân sự có chuyên môn rất có tâm với nghề. Tôi nhìn nhận thấy những điều này
                             dựa trên sự tiến bộ của con tôi từng ngày và cách thức tương tác của nhà trường với phụ
@@ -681,10 +796,10 @@
                 </div>
                 <div class="slide-item testimonial-item">
                     <div class="olympia-testimonial-entry" style="opacity: 0">
-                        <h5 class="font-garamond-bold">&quot;Học tại Olympia giúp con tôi phát triển toàn diện&quot;
+                        <h5 class="font-garamond-bold">&quot;Học tại Meyschool giúp con tôi phát triển toàn diện&quot;
                         </h5>
                         <p class="olympia-testimonial-content font-avenir-regular size-14 color-3a">Mình thấy môi trường
-                            học tập tại Olympia rất tốt cho con với nhiều hoạt động thể chất, dã ngoại. Con được trải
+                            học tập tại Meyschool rất tốt cho con với nhiều hoạt động thể chất, dã ngoại. Con được trải
                             nghiệm nhiều các dự án, bài tập nhóm với những nội dung mới mẻ, chính những điều này khiến
                             con mình luôn hào hứng đến trường mỗi ngày</p>
                         <p class="olympia-testimonial-name font-garamond-bold">Chị Dư Xuyến</p>
@@ -702,7 +817,7 @@
                         <p class="olympia-testimonial-content font-avenir-regular size-14 color-3a">Nhà trường hiện đang
                             làm rất tốt, đúng theo định hướng mà nhà trường đề ra. Đội ngũ giáo viên rất thân thiện và
                             nhiệt tình, có trình độ cao, đặc biệt được thể hiện qua thời điểm học online. Sau khi học ở
-                            Olympia, con đã chủ động hơn rất nhiều, đã biết tự sắp xếp công việc của mình, tự hoàn tất
+                            Meyschool, con đã chủ động hơn rất nhiều, đã biết tự sắp xếp công việc của mình, tự hoàn tất
                             bài tập về nhà. Con cũng hình thành tư duy về làm chủ tài chính trong khả năng có thể</p>
                         <p class="olympia-testimonial-name font-garamond-bold">Chị Lê Thanh Thủy</p>
                         <p class="olympia-testimonial-po4 font-avenir-regular size-14">Phụ huynh học sinh Lê Bảo Ngọc
@@ -727,7 +842,7 @@
                     </div>
                     <div class="email">
                         <p class="email-label">EMAIL</p>
-                        <p class="email-contact">tuyensinh@theolympiaschools.edu.vn</p>
+                        <p class="email-contact">tuyensinh@Meyschool.edu.vn</p>
                     </div>
                     <a href="lien-he.html" title=""
                         class="link-button-bg bg-white color-471873 olympia-readmore-btn">Tìm hiểu thêm<img
@@ -738,42 +853,7 @@
                     allowfullscreen></iframe>
             </div>
         </section>
-        <!-- Section: Podcast / Multi Media -->
-        <section class="share-pro">
-            <div class="show-pc-lgs">
-                <section class="dtht show-on-scroll home-page" id="share-pro">
-                    <div class="dtht_img relative" style="opacity: 0">
-                        <span class="head-phone"><i class="fas fa-headphones-alt"></i></span>
-                        <img src="./olympia/images/podcast.jpeg" alt="" id="expert-img">
-                    </div>
-                    <div class="dtht_content bg-F1CC1F" style="opacity: 0">
-                        <div class="dtht_content_box">
-                            <p class="font-avenir-demibold color-f size-13 text-uppercase">Multi Media</p>
-                            <h3 class="dtht_content-title font-garamond-bold" id="expert-title">
-                                Hướng nghiệp cho con giữa thế giới biến động
-                            </h3>
-                            <div class="dtht-link-btn">
-                                <a href="javascript:void(0)" title="" id="expert-link"
-                                    class="link-button righthover color-f podcast">
-                                    <span class="circle_btn"><img class="white" src="olympia/images/button-1-3.svg"
-                                            alt=""></span>
-                                    <span class="text-uppercase">Play podcast</span>
-                                    <span class="cir"></span>
-                                    <span>20 minutes</span>
-                                </a>
-                            </div>
-                            <div class="audioss">
-                                <iframe style="border-radius:12px"
-                                    src="https://open.spotify.com/embed/episode/1sJcpdSiZAEBs0Bcq4Fneb?utm_source=generator"
-                                    width="100%" height="250" frameBorder="0" allowfullscreen=""
-                                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                                    loading="lazy"></iframe>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </section>
+
 
 
 
@@ -914,8 +994,8 @@
         $(".mobile").slick({
             slidesToShow: 1,
             slidesToScroll: 1,
-            prevArrow: '<div class="rcl-prev"><img src="https://theolympiaschools.edu.vn/olympia/images/button-1-3.svg"></div>',
-            nextArrow: '<div class="rcl-next"><img src="https://theolympiaschools.edu.vn/olympia/images/button-1-3.svg"></div>',
+            prevArrow: false,
+            nextArrow: false,
             infinite: true,
             fade: true,
             cssEase: 'linear',

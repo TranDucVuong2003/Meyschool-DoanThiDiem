@@ -52,7 +52,7 @@
             height: 50px;
             line-height: 50px;
             text-align: center;
-            background-color: #471873;
+            background-color: #2354a0;
             font-size: 14px;
             font-weight: 600;
             text-transform: uppercase;
@@ -60,35 +60,167 @@
             color: #fff;
             display: inline-block;
             margin-top: 20px;
+            border-radius: 10px;
         }
-        .btn-full {
-            text-align: center;
-            line-height: 60px;
+        .btn-full { text-align: center; line-height: 60px; }
+        body.show-admin-bar { margin-top: 0px !important; }
+
+        :root {
+            --blue-1: #2354a0;
+            --blue-2: #439bd4;
+            --blue-3: #4db0e4;
+            --blue-soft: #eef7ff;
         }
-        body.show-admin-bar {
-            margin-top: 0px !important;
+
+        .uniform-wrap { background: #f7fbff; }
+        .uniform-container { max-width: 1260px; margin: 0 auto; padding: 0 20px; }
+
+        .uniform-hero {
+            padding: 130px 0 70px;
+            background: linear-gradient(120deg, rgba(35, 84, 160, 0.95) 0%, rgba(67, 155, 212, 0.9) 60%, rgba(77, 176, 228, 0.7) 100%);
+            color: #fff;
         }
+
+        .uniform-hero-grid {
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .uniform-hero h1 {
+            font-family: 'Garamond', serif;
+            font-size: 42px;
+            margin: 16px 0 18px;
+        }
+
+        .uniform-hero p {
+            font-size: 16px;
+            line-height: 1.8;
+            max-width: 520px;
+        }
+
+        .uniform-hero .breadcrumb {
+            margin: 0 0 16px;
+            background: rgba(255, 255, 255, 0.15);
+            display: inline-flex;
+            padding: 10px 18px;
+            border-radius: 999px;
+        }
+
+        .uniform-hero .breadcrumb-item a,
+        .uniform-hero .breadcrumb-item.active { color: #fff; }
+
+        .uniform-lookbook {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .uniform-lookbook img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            border-radius: 18px;
+            box-shadow: 0 16px 30px rgba(0, 0, 0, 0.18);
+        }
+
+        .uniform-section { padding: 70px 0; }
+
+        .uniform-tabs {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .uniform-tab {
+            background: #fff;
+            border-radius: 18px;
+            padding: 24px;
+            border: 1px solid rgba(67, 155, 212, 0.14);
+            box-shadow: 0 14px 30px rgba(0,0,0,0.08);
+        }
+
+        .uniform-tab h4 { color: var(--blue-1); margin-bottom: 8px; }
+        .uniform-tab p { margin: 0; font-size: 14px; line-height: 1.7; color: #5b6a82; }
+
+        .uniform-detail {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 32px;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .uniform-detail img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            border-radius: 22px;
+            box-shadow: 0 16px 35px rgba(0, 0, 0, 0.16);
+        }
+
+        .uniform-detail h3 {
+            color: var(--blue-1);
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+
+        .uniform-detail p {
+            margin: 0 0 12px;
+            color: #51627c;
+            line-height: 1.8;
+        }
+
         .uniform-gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 40px;
+            grid-template-columns: repeat(6, minmax(0, 1fr));
+            gap: 14px;
+            margin-top: 32px;
         }
-        .uniform-item {
-            background: #f9f9f9;
-            border-radius: 10px;
-            overflow: hidden;
-            text-align: center;
-        }
-        .uniform-item img {
+
+        .uniform-gallery img {
             width: 100%;
-            height: 300px;
+            height: 160px;
             object-fit: cover;
+            border-radius: 18px;
         }
-        .uniform-item h3 {
-            padding: 15px;
-            font-size: 18px;
-            color: #471873;
+
+        .uniform-gallery .wide {
+            grid-column: span 2;
+        }
+
+        .uniform-cta {
+            margin-top: 50px;
+            background: #fff;
+            border-radius: 20px;
+            padding: 30px 35px;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            align-items: center;
+            gap: 20px;
+            box-shadow: 0 16px 40px rgba(0,0,0,0.08);
+        }
+
+        .uniform-cta h3 { color: var(--blue-1); margin-bottom: 10px; }
+        .uniform-cta p { margin: 0; color: #52647f; }
+
+        @media (max-width: 1100px) {
+            .uniform-hero-grid,
+            .uniform-detail { grid-template-columns: 1fr; }
+            .uniform-lookbook { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .uniform-gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+            .uniform-cta { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .uniform-hero h1 { font-size: 32px; }
+            .uniform-tabs { grid-template-columns: 1fr; }
+            .uniform-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        }
+
+        @media (max-width: 520px) {
+            .uniform-gallery { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -97,55 +229,74 @@
     <?php include 'includes/header.php'; ?>
     <div class="overlay_mark_search" style="display:none;"></div>
 
-    <main class="body-content">
-        <section class="about__header">
-            <div class="standard__header-cover header_cover show-on-scroll" id="english-header-title">
-                <div class="standard__header-img header-cover-img">
-                    <div class="overlay_mark"></div>
-                    <img class="img-cover pc-cover" src="storage/jnp2203-1-1920x1080.jpg" alt="">
-                    <img class="img-cover mb-cover" src="storage/jnp2203-1-1180x720.jpg" alt="">
-                </div>
-                <div class="big-cover-title-box">
-                    <ol class="breadcrumb container">
-                        <li class="breadcrumb-item white"><a href="index.php" class="white">Trang chủ</a></li>
-                        <li class="breadcrumb-item white"><a href="javascript:;" class="white">Dịch vụ học đường</a></li>
-                        <li class="breadcrumb-item white"><a href="javascript:;" class="white">Đồng phục học sinh</a></li>
+    <main class="body-content uniform-wrap">
+        <section class="uniform-hero">
+            <div class="uniform-container uniform-hero-grid">
+                <div>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.php">Trang chủ</a></li>
+                        <li class="breadcrumb-item"><a href="javascript:;">Dịch vụ học đường</a></li>
+                        <li class="breadcrumb-item active">Đồng phục học sinh</li>
                     </ol>
-                    <h1 class="big__header-title container font-garamond-bold white header-title">Đồng phục học sinh</h1>
+                    <h1>Bộ sưu tập đồng phục Meyschool</h1>
+                    <p>Đồng phục được thiết kế trẻ trung, thanh lịch và dễ vận động, tạo sự tự tin cho học sinh trong mọi hoạt động học tập, ngoại khóa.</p>
+                </div>
+                <div class="uniform-lookbook">
+                    <img src="olympia/images/noibat_6.jpg" alt="Đồng phục thường ngày">
+                    <img src="olympia/images/noibat_2.jpg" alt="Đồng phục thể thao">
+                    <img src="olympia/images/noibat_4.jpg" alt="Đồng phục dự lễ">
+                    <img src="olympia/images/noibat_7.jpg" alt="Đồng phục mùa đông">
                 </div>
             </div>
         </section>
 
-        <section class="program-content">
-            <div class="container" style="padding: 60px 20px;">
-                <h2 style="font-size: 32px; color: #471873; margin-bottom: 30px; font-weight: 600;">Đồng phục học sinh Meyschool</h2>
-                <p style="font-size: 16px; line-height: 1.8; color: #333; margin-bottom: 20px;">
-                    Đồng phục học sinh Meyschool Đoàn Thị Điểm được thiết kế với phong cách hiện đại, 
-                    trẻ trung nhưng vẫn giữ được nét trang nhã và tính thẩm mỹ cao. 
-                    Mỗi bộ đồng phục là niềm tự hào của học sinh khi đến trường.
-                </p>
-                <p style="font-size: 16px; line-height: 1.8; color: #333; margin-bottom: 20px;">
-                    Hệ thống đồng phục bao gồm: đồng phục thường ngày, đồng phục thể thao, 
-                    đồng phục dự lễ và đồng phục mùa đông. Tất cả đều được làm từ chất liệu 
-                    cao cấp, thoáng mát và thoải mái cho học sinh.
-                </p>
+        <section class="uniform-section">
+            <div class="uniform-container">
+                <div class="uniform-tabs">
+                    <div class="uniform-tab">
+                        <h4>Đồng phục thường ngày</h4>
+                        <p>Thiết kế gọn gàng, thoáng mát, phù hợp học tập hàng ngày và hoạt động trong lớp.</p>
+                    </div>
+                    <div class="uniform-tab">
+                        <h4>Đồng phục thể thao</h4>
+                        <p>Chất liệu co giãn, thấm hút tốt, hỗ trợ tối ưu cho các giờ vận động và câu lạc bộ.</p>
+                    </div>
+                    <div class="uniform-tab">
+                        <h4>Đồng phục dự lễ</h4>
+                        <p>Trang trọng, lịch sự, phù hợp các sự kiện đặc biệt và ngày hội của nhà trường.</p>
+                    </div>
+                    <div class="uniform-tab">
+                        <h4>Đồng phục mùa đông</h4>
+                        <p>Giữ ấm tốt, thiết kế tinh tế, đồng bộ với nhận diện thương hiệu Meyschool.</p>
+                    </div>
+                </div>
 
+                <div class="uniform-detail">
+                    <img src="storage/banner/trung-hoc.jpg" alt="Chi tiết chất liệu">
+                    <div>
+                        <h3>Thiết kế đồng bộ, thoải mái cho mọi hoạt động</h3>
+                        <p>Đồng phục Meyschool ưu tiên form dáng gọn gàng, chất liệu thấm hút tốt và bền màu, đảm bảo học sinh luôn tự tin trong mọi hoạt động học tập lẫn ngoại khóa.</p>
+                        <p>Bảng màu xanh chủ đạo giúp đồng bộ nhận diện thương hiệu và mang lại cảm giác trẻ trung, hiện đại.</p>
+                    </div>
+                </div>
+
+                <h3 style="color: var(--blue-1); font-size: 28px; margin: 40px 0 18px;">Bộ sưu tập đồng phục</h3>
                 <div class="uniform-gallery">
-                    <div class="uniform-item">
-                        <img src="olympia/images/noibat_6.jpg" alt="Đồng phục thường ngày">
-                        <h3>Đồng phục thường ngày</h3>
+                    <img class="wide" src="olympia/images/noibat_6.jpg" alt="Đồng phục học sinh">
+                    <img src="olympia/images/noibat_2.jpg" alt="Đồng phục thể thao">
+                    <img src="olympia/images/noibat_4.jpg" alt="Đồng phục dự lễ">
+                    <img class="wide" src="olympia/images/noibat_7.jpg" alt="Đồng phục mùa đông">
+                    <img src="storage/banner/tieu-hoc.jpg" alt="Hoạt động học đường">
+                    <img src="storage/banner/tien-tieu-hoc.jpg" alt="Phong cách học đường">
+                </div>
+
+                <div class="uniform-cta">
+                    <div>
+                        <h3>Đồng hành cùng phong cách học đường</h3>
+                        <p>Liên hệ tư vấn để nhận thông tin chi tiết về kích cỡ, quy định và lịch phát đồng phục.</p>
                     </div>
-                    <div class="uniform-item">
-                        <img src="olympia/images/noibat_2.jpg" alt="Đồng phục thể thao">
-                        <h3>Đồng phục thể thao</h3>
-                    </div>
-                    <div class="uniform-item">
-                        <img src="olympia/images/noibat_4.jpg" alt="Đồng phục dự lễ">
-                        <h3>Đồng phục dự lễ</h3>
-                    </div>
-                    <div class="uniform-item">
-                        <img src="olympia/images/noibat_7.jpg" alt="Đồng phục mùa đông">
-                        <h3>Đồng phục mùa đông</h3>
+                    <div style="text-align:right;">
+                        <a class="btn-dk" href="dang-ky-tu-van.php" style="width:auto; padding: 0 24px;">Đăng ký tư vấn</a>
                     </div>
                 </div>
             </div>
