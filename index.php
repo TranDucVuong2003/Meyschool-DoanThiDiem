@@ -10,16 +10,18 @@
         name="viewport" />
 
 
-    <link rel="shortcut icon" href="storage/favicon.png">
+    <link rel="icon" type="image/png" href="storage/favicon.png?v=20260320-1">
+    <link rel="shortcut icon" type="image/png" href="storage/favicon.png?v=20260320-1">
+    <link rel="apple-touch-icon" href="storage/favicon.png?v=20260320-1">
 
     <title>Trang chủ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:site_name" content="The Olympia Schools">
+    <meta property="og:site_name" content="The Meyschool Đoàn Thị Điểm">
     <meta property="og:title" content="Trang chủ">
     <meta property="og:description" content="">
     <meta property="og:url" content="trang-chu.html">
     <meta property="og:type" content="article">
-    <meta property="og:image" content="storage/favicon.png">
+    <meta property="og:image" content="storage/favicon.png?v=20260320-1">
     <meta name="twitter:title" content="Trang chủ">
     <meta name="twitter:description" content="">
 
@@ -41,7 +43,7 @@
     <link rel="stylesheet" href="olympia/css/fonts.css">
     <link rel="stylesheet" href="olympia/css/style.css">
     <link rel="stylesheet" href="olympia/css/styles-new.css">
-    <link type="image/x-icon" href="#" rel="shortcut icon" />
+
     <link rel="stylesheet" type="text/css" href="olympia/css/slick.css">
     <link rel="stylesheet" type="text/css" href="olympia/css/slick-theme.css">
     <link rel="stylesheet" type="text/css" href="olympia/css/jquery.toast.min.css">
@@ -253,7 +255,7 @@
         <!-- Section: Banner/Slider Mobile - Fixed CTA -->
         <section class="mobile slider show-on-scroll home-page" data-sizes="50vw" id="mb_slider_cover">
             <a href="./index.php" class="slider-item" title="">
-                <img src="assets/banner/banner1.jpeg" alt="">
+                <img src="assets/img/banner/banner1.jpeg" alt="">
             </a>
         </section>
 
@@ -268,7 +270,7 @@
         <section class="pc slider show-on-scroll home-page" data-sizes="50vw" id="pc_slider_cover">
             <div class="slider-item">
                 <a href="./index.php" title="">
-                    <img src="assets/banner/banner1.jpeg" alt="">
+                    <img src="assets/img/banner/banner1.jpeg" alt="">
                 </a>
                 <div class="slider-title-box" style="opacity:1;transform:none;">
                     <div class="banner-cta">
@@ -280,7 +282,7 @@
             </div>
             <div class="slider-item">
                 <a href="./index.php" title="">
-                    <img src="assets/banner/banner2.jpeg" alt="">
+                    <img src="assets/img/banner/banner2.jpeg" alt="">
                 </a>
                 <div class="slider-title-box">
                     <div class="banner-cta">
@@ -292,7 +294,7 @@
             </div>
             <div class="slider-item">
                 <a href="./index.php" title="">
-                    <img src="assets/banner/banner3.jpeg" alt="">
+                    <img src="assets/img/banner/banner3.jpeg" alt="">
                 </a>
                 <div class="slider-title-box">
                     <div class="banner-cta">
@@ -330,19 +332,33 @@
                     <div class="row flex-center-between">
                         <div class="col-md-5">
                             <div class="principal-image text-center">
-                                <img src="assets/img/Gemini_Generated_Image_ft1vwvft1vwvft1v.png" alt="Hiệu Trưởng" style="border-radius: 20px; box-shadow: 0 10px 30px rgba(71, 24, 115, 0.2); max-width: 100%;">
-                                <h4 class="font-garamond-bold color-471873" style="margin-top: 20px; font-size: 24px;">Bà Nguyễn Thị Hương</h4>
-                                <p class="font-avenir-regular color-3a" style="font-size: 14px;">Hiệu Trưởng The Meyschool</p>
+                                <img src="assets/img/Gemini_Generated_Image_ft1vwvft1vwvft1v.png" alt="Hiệu Trưởng"
+                                    style="border-radius: 20px; box-shadow: 0 10px 30px rgba(71, 24, 115, 0.2); max-width: 100%;">
+                                <h4 class="font-garamond-bold color-471873" style="margin-top: 20px; font-size: 24px;">
+                                    Bà Nguyễn Thị Hương</h4>
+                                <p class="font-avenir-regular color-3a" style="font-size: 14px;">Hiệu Trưởng The
+                                    Meyschool</p>
                             </div>
                         </div>
                         <div class="col-md-7">
                             <div class="principal-message" style="padding-left: 40px;">
-                                <h2 class="font-garamond-bold color-471873" style="font-size: 42px; margin-bottom: 30px;">Lời chào của Hiệu Trưởng</h2>
-                                <div class="welcome-content font-avenir-regular color-3a" style="font-size: 16px; line-height: 1.8; text-align: justify;">
-                                    <p style="margin-bottom: 20px;">Kính thưa quý phụ huynh và các em học sinh thân mến,</p>
-                                    <p style="margin-bottom: 20px;">Thay mặt cho toàn thể cán bộ, giáo viên và nhân viên của Trường Phổ thông liên cấp Meyschool, tôi xin gửi lời chào trân trọng và nhiệt liệt nhất đến quý vị.</p>
-                                    <p style="margin-bottom: 20px;">Với gần 20 năm phát triển, Meyschool tự hào là ngôi trường song ngữ tiên phong tại Việt Nam trong việc tiếp cận và vận dụng các phương pháp giáo dục hiện đại của thế giới. Chúng tôi luôn lấy học sinh làm trung tâm, xây dựng môi trường học tập an toàn, thân thiện và sáng tạo.</p>
-                                    <p style="margin-bottom: 20px;">Tại Meyschool, mỗi học sinh đều được tôn trọng, được khuyến khích phát triển tối đa tiềm năng của bản thân. Chúng tôi tin rằng giáo dục không chỉ là truyền đạt kiến thức, mà còn là nuôi dưỡng nhân cách, kỹ năng và định hướng tương lai cho các em.</p>
+                                <h2 class="font-garamond-bold color-471873"
+                                    style="font-size: 42px; margin-bottom: 30px;">Lời chào của Hiệu Trưởng</h2>
+                                <div class="welcome-content font-avenir-regular color-3a"
+                                    style="font-size: 16px; line-height: 1.8; text-align: justify;">
+                                    <p style="margin-bottom: 20px;">Kính thưa quý phụ huynh và các em học sinh thân mến,
+                                    </p>
+                                    <p style="margin-bottom: 20px;">Thay mặt cho toàn thể cán bộ, giáo viên và nhân viên
+                                        của Trường Phổ thông liên cấp Meyschool, tôi xin gửi lời chào trân trọng và
+                                        nhiệt liệt nhất đến quý vị.</p>
+                                    <p style="margin-bottom: 20px;">Với gần 20 năm phát triển, Meyschool tự hào là ngôi
+                                        trường song ngữ tiên phong tại Việt Nam trong việc tiếp cận và vận dụng các
+                                        phương pháp giáo dục hiện đại của thế giới. Chúng tôi luôn lấy học sinh làm
+                                        trung tâm, xây dựng môi trường học tập an toàn, thân thiện và sáng tạo.</p>
+                                    <p style="margin-bottom: 20px;">Tại Meyschool, mỗi học sinh đều được tôn trọng, được
+                                        khuyến khích phát triển tối đa tiềm năng của bản thân. Chúng tôi tin rằng giáo
+                                        dục không chỉ là truyền đạt kiến thức, mà còn là nuôi dưỡng nhân cách, kỹ năng
+                                        và định hướng tương lai cho các em.</p>
                                     <p>Trân trọng kính chào!</p>
                                 </div>
                             </div>
@@ -353,7 +369,8 @@
         </section>
 
         <!-- Section: Mayschool qua những con số -->
-        <div class="container text-center olympia-number-box home-index" style="display: flex; justify-content: space-between; max-width: 1200px;">
+        <div class="container text-center olympia-number-box home-index"
+            style="display: flex; justify-content: space-between; max-width: 1200px;">
             <div class="olympia-number-left olympia-number-left-pc text-left show-on-scroll home-page"
                 id="olympia-number" style="width: 48%; margin-right: 0;">
                 <h1 class="olympia-number-title font-garamond-bold color-21" style="margin-bottom: 20px">Trường phổ
@@ -652,7 +669,8 @@
                                         src="storage/557010394-1254697353362114-5404053930275027418-n-2-300x300.jpg"
                                         alt=""></a>
                                 <p class="post-title"><a href="vuot-30000-tac-pham-olympian-co.html">Vượt 30.000 tác
-                                        phẩm, Meyschool có tranh trưng bày tại Triển lãm Mỹ thuật Thiếu nhi toàn quốc</a>
+                                        phẩm, Meyschool có tranh trưng bày tại Triển lãm Mỹ thuật Thiếu nhi toàn
+                                        quốc</a>
                                 </p>
                             </div>
                         </div>
@@ -737,7 +755,8 @@
                         <h5 class="font-garamond-bold">“Tôi rất tự hào vì con được học tại trường Meyschool.”</h5>
                         <p class="olympia-testimonial-content font-avenir-regular size-14 color-3a">Việc nộp hồ sơ vào
                             các trường đại học không thông qua các công ty tư vấn bên ngoài mà chỉ nhờ tới văn phòng tư
-                            vấn của trường Meyschool UCC đã giúp con chủ động và tự lập hơn nhiều. Đến nay, con đã nắm rất
+                            vấn của trường Meyschool UCC đã giúp con chủ động và tự lập hơn nhiều. Đến nay, con đã nắm
+                            rất
                             rõ việc học tập và sinh hoạt tại trường. Tôi thấy con khá tự tin và chắc chắn. Cảm ơn trường
                             Meyschool rất nhiều.</p>
                         <p class="olympia-testimonial-name font-garamond-bold">Chị Nguyễn Phương Hà</p>
@@ -752,7 +771,8 @@
                     <div class="olympia-testimonial-entry" style="opacity: 0">
                         <h5 class="font-garamond-bold">“Mình nghĩ rằng bản thân đã lựa chọn đúng đắn khi quyết định gửi
                             gắm những hoài bão ước mơ tuổi học trò của mình tại Meyschool.”</h5>
-                        <p class="olympia-testimonial-content font-avenir-regular size-14 color-3a">Ba năm ở Meyschool là
+                        <p class="olympia-testimonial-content font-avenir-regular size-14 color-3a">Ba năm ở Meyschool
+                            là
                             khoảng thời gian khiến mình tự tin hơn, biết thấu cảm, suy nghĩ vì người khác, có trách
                             nhiệm và cũng như luôn biết tự hào về bản thân mà sống hết mình. Mỗi năm nhìn lại, mình đều
                             cảm thấy bất ngờ hơn một chút, rằng hoá ra mình cũng làm được nhiều thứ.</p>
@@ -781,7 +801,8 @@
                     <div class="olympia-testimonial-entry" style="opacity: 0">
                         <h5 class="font-garamond-bold">&quot;Olympia là một môi trường tốt cho con tôi&quot;</h5>
                         <p class="olympia-testimonial-content font-avenir-regular size-14 color-3a">Qua thời gian học
-                            tại Olympia, tôi thấy con phát triển đều về kiến thức, kỹ năng và cả đạo đức. Meyschool là một
+                            tại Olympia, tôi thấy con phát triển đều về kiến thức, kỹ năng và cả đạo đức. Meyschool là
+                            một
                             môi trường tốt cho con tôi, bởi trường được quản trị bởi Ban lãnh đạo có tâm và có tầm, và
                             có một đội ngũ nhân sự có chuyên môn rất có tâm với nghề. Tôi nhìn nhận thấy những điều này
                             dựa trên sự tiến bộ của con tôi từng ngày và cách thức tương tác của nhà trường với phụ
@@ -1138,12 +1159,18 @@
 </script>
 
 <!-- Popup Tuyển sinh -->
-<div id="tuyensinh-popup" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 999999; justify-content: center; align-items: center;">
-    <div style="position: relative; max-width: 600px; width: 90%; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.3);">
-        <button onclick="closeTuyenSinhPopup()" style="position: absolute; top: 10px; right: 10px; width: 35px; height: 35px; background: rgba(255,255,255,0.9); border: none; border-radius: 50%; font-size: 20px; cursor: pointer; z-index: 100; display: flex; justify-content: center; align-items: center;">×</button>
+<div id="tuyensinh-popup"
+    style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 999999; justify-content: center; align-items: center;">
+    <div
+        style="position: relative; max-width: 920px; width: 96%; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.3);">
+        <button onclick="closeTuyenSinhPopup()"
+            style="position: absolute; top: 10px; right: 10px; width: 35px; height: 35px; background: rgba(255,255,255,0.9); border: none; border-radius: 50%; font-size: 20px; cursor: pointer; z-index: 100; display: flex; justify-content: center; align-items: center;">×</button>
         <div style="position: relative;">
-            <img src="assets/banner/popup-tuyensinh.jpg" alt="Tuyển sinh 2026-2027" style="width: 100%; height: auto; display: block;">
-            <a href="tuyen-dung.php" style="position: absolute; bottom: 15%; left: 50%; transform: translateX(-50%); display: inline-block; padding: 12px 35px; background: #ff6b35; color: white; text-decoration: none; font-weight: bold; font-size: 16px; border-radius: 30px; text-transform: uppercase; box-shadow: 0 5px 15px rgba(255,107,53,0.4); white-space: nowrap;">Đăng ký ngay</a>
+            <img src="assets/img/banner/popup-tuyensinh.jpg" alt="Tuyển sinh 2026-2027"
+                style="width: 100%; height: auto; display: block;">
+            <a href="tuyen-dung.php"
+                style="position: absolute; bottom: 15%; left: 50%; transform: translateX(-50%); display: inline-block; padding: 12px 35px; background: #ff6b35; color: white; text-decoration: none; font-weight: bold; font-size: 16px; border-radius: 30px; text-transform: uppercase; box-shadow: 0 5px 15px rgba(255,107,53,0.4); white-space: nowrap;">Đăng
+                ký ngay</a>
         </div>
     </div>
 </div>

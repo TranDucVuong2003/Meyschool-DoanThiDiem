@@ -8,7 +8,9 @@
     <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=1"
         name="viewport" />
 
-    <link rel="shortcut icon" href="storage/favicon.png">
+    <link rel="icon" type="image/png" href="storage/favicon.png?v=20260320-1">
+    <link rel="shortcut icon" type="image/png" href="storage/favicon.png?v=20260320-1">
+    <link rel="apple-touch-icon" href="storage/favicon.png?v=20260320-1">
 
     <title>Ưu đãi tuyển sinh - Meyschool Đoàn Thị Điểm</title>
     <meta name="description" content="Các chương trình ưu đãi tuyển sinh năm học 2026-2027 tại Meyschool Đoàn Thị Điểm">
@@ -34,7 +36,7 @@
     <link rel="stylesheet" href="olympia/css/fonts.css">
     <link rel="stylesheet" href="olympia/css/style.css">
     <link rel="stylesheet" href="olympia/css/styles-new.css">
-    <link type="image/x-icon" href="#" rel="shortcut icon" />
+
     <link rel="stylesheet" type="text/css" href="olympia/css/slick.css">
     <link rel="stylesheet" type="text/css" href="olympia/css/slick-theme.css">
     <link rel="stylesheet" type="text/css" href="olympia/css/jquery.toast.min.css">
@@ -58,581 +60,392 @@
             z-index: 9000999999999 !important;
         }
 
-        .btn-dk {
-            width: 210px;
-            height: 50px;
-            line-height: 50px;
-            text-align: center;
-            background-color: #1e6f8c;
-            font-size: 14px;
-            font-weight: 600;
-            text-transform: uppercase;
-            border: none;
-            color: #fff;
-            display: inline-block;
-            margin-top: 20px;
-        }
-
-        .btn-full {
-            text-align: center;
-            line-height: 60px;
-        }
-
         body.show-admin-bar {
-            margin-top: 0px !important;
-            font-family: Arial, sans-serif;
+            margin-top: 0 !important;
         }
 
-        /* Promotions Page - Premium Design */
-        .promo-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 20px;
+        :root {
+            --ad-blue-1: #439bd4;
+            --ad-blue-2: #4db0e4;
+            --ad-blue-3: #eaf7ff;
+            --ad-ink: #214963;
+            --ad-gold: #ffd166;
         }
 
-        /* Hero Section */
-        .promo-hero {
-            position: relative;
-            min-height: 450px;
-            display: flex;
-            align-items: center;
-            overflow: hidden;
-            background: linear-gradient(135deg, #1e6f8c 0%, #6a1b9a 50%, #8e24aa 100%);
+        .ad-page {
+            background: radial-gradient(circle at 0% 0%, #eaf7ff 0%, #f7fcff 45%, #fff 100%);
+            color: var(--ad-ink);
         }
 
-        .promo-hero-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('storage/banner/ve-chung-toi-web.jpg') center/cover no-repeat;
-            opacity: 0.3;
-        }
-
-        .promo-hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 60px 40px;
-            text-align: center;
-        }
-
-        .promo-hero-content h1 {
-            font-family: 'Garamond', serif;
-            font-size: 48px;
-            color: #fff;
-            margin-bottom: 20px;
-            font-weight: 700;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
-        }
-
-        .promo-hero-content .subtitle {
-            font-size: 18px;
-            color: rgba(255, 255, 255, 0.9);
-            line-height: 1.8;
-            max-width: 700px;
+        .ad-wrap {
+            width: min(94vw, 1480px);
             margin: 0 auto;
         }
 
-        .promo-hero-badge {
-            display: inline-block;
-            background: #f1cc1f;
-            color: #1e6f8c;
-            padding: 10px 25px;
-            border-radius: 30px;
-            font-size: 14px;
-            font-weight: 700;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-        }
-
-        /* Main Layout */
-        .promo-main-layout {
-            display: grid;
-            grid-template-columns: 280px 1fr 300px;
-            gap: 35px;
-            padding: 50px 0;
-        }
-
-        /* Left Sidebar */
-        .promo-sidebar-left {
-            position: sticky;
-            top: 100px;
-            height: fit-content;
-        }
-
-        .sidebar-nav-card {
-            background: #fff;
-            border-radius: 16px;
-            padding: 25px;
-            box-shadow: 0 4px 25px rgba(71, 24, 115, 0.08);
-            margin-bottom: 25px;
-        }
-
-        .sidebar-nav-card h4 {
-            font-family: 'Garamond', serif;
-            font-size: 18px;
-            color: #1e6f8c;
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 2px solid #f1cc1f;
-        }
-
-        .sidebar-menu {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .sidebar-menu li {
-            margin-bottom: 10px;
-        }
-
-        .sidebar-menu-link {
-            display: flex;
-            align-items: center;
-            padding: 12px 15px;
-            color: #555;
-            text-decoration: none;
-            border-radius: 10px;
-            transition: all 0.3s ease;
-            font-size: 14px;
-            font-weight: 500;
-            background: #faf9fb;
-            border-left: 3px solid transparent;
-        }
-
-        .sidebar-menu-link:hover,
-        .sidebar-menu-link.active {
-            background: linear-gradient(135deg, #1e6f8c 0%, #5a2a8a 100%);
-            color: #fff;
-            border-left-color: #f1cc1f;
-            transform: translateX(5px);
-        }
-
-        .menu-thumb {
-            width: 40px;
-            height: 40px;
-            border-radius: 8px;
-            overflow: hidden;
-            margin-right: 12px;
-            flex-shrink: 0;
-        }
-
-        .menu-thumb img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .quick-contact-card {
-            background: linear-gradient(135deg, #1e6f8c 0%, #6a1b9a 100%);
-            border-radius: 16px;
-            padding: 25px;
-            color: white;
-            text-align: center;
-        }
-
-        .quick-contact-card h5 {
-            font-family: 'Garamond', serif;
-            font-size: 18px;
-            margin-bottom: 15px;
-            color: #f1cc1f;
-        }
-
-        .quick-contact-card p {
-            font-size: 14px;
-            margin-bottom: 10px;
-            opacity: 0.9;
-        }
-
-        .quick-contact-card .hotline {
-            font-size: 24px;
-            font-weight: bold;
-            color: #f1cc1f;
-            margin: 15px 0;
-        }
-
-        /* Center Content */
-        .promo-content-center {
-            background: #fff;
-            border-radius: 16px;
-            padding: 40px;
-            box-shadow: 0 4px 25px rgba(71, 24, 115, 0.06);
-        }
-
-        .content-header {
-            text-align: center;
-            margin-bottom: 40px;
-            padding-bottom: 30px;
-            border-bottom: 1px solid #eee;
-        }
-
-        .content-header h2 {
-            font-family: 'Garamond', serif;
-            font-size: 36px;
-            color: #1e6f8c;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-
-        .content-subtitle {
-            font-size: 16px;
-            color: #888;
-        }
-
-        /* Promo Cards Grid */
-        .promo-cards-section {
-            margin-bottom: 40px;
-        }
-
-        .promo-cards-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-
-        .promo-card {
-            background: linear-gradient(135deg, #1e6f8c 0%, #6a1b9a 100%);
-            border-radius: 16px;
-            padding: 35px 25px;
-            color: white;
-            text-align: center;
-            transition: all 0.3s ease;
+        .ad-hero {
             position: relative;
             overflow: hidden;
+            padding: 112px 0 68px;
+            background: linear-gradient(132deg, rgba(67, 155, 212, 0.95) 0%, rgba(77, 176, 228, 0.9) 72%, rgba(77, 176, 228, 0.84) 100%), url('storage/banner/ve-chung-toi-web.jpg') center/cover no-repeat;
         }
 
-        .promo-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(71, 24, 115, 0.3);
-        }
-
-        .promo-card::before {
+        .ad-hero::before,
+        .ad-hero::after {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: #f1cc1f;
-        }
-
-        .promo-card-icon {
-            width: 70px;
-            height: 70px;
-            background: rgba(255, 255, 255, 0.2);
             border-radius: 50%;
-            display: flex;
+            pointer-events: none;
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .ad-hero::before {
+            width: 340px;
+            height: 340px;
+            top: -120px;
+            right: -100px;
+        }
+
+        .ad-hero::after {
+            width: 210px;
+            height: 210px;
+            left: -70px;
+            bottom: -85px;
+        }
+
+        .ad-hero-grid {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+            gap: 22px;
             align-items: center;
-            justify-content: center;
-            font-size: 32px;
-            margin: 0 auto 20px;
         }
 
-        .promo-card h4 {
+        .ad-breadcrumb {
+            margin: 0 0 14px;
+            display: inline-flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            position: static !important;
+            float: none !important;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.36);
+            border-radius: 999px;
+            padding: 8px 16px;
+        }
+
+        .ad-breadcrumb li,
+        .ad-breadcrumb li a {
+            color: #fff;
+            font-size: 13px;
+        }
+
+        .ad-hero h1 {
+            margin: 0;
+            color: #fff;
             font-family: 'Garamond', serif;
-            font-size: 20px;
-            margin-bottom: 15px;
+            font-size: clamp(38px, 5vw, 66px);
+            line-height: 1.03;
         }
 
-        .promo-card .discount {
-            font-size: 42px;
-            font-weight: bold;
-            color: #f1cc1f;
-            margin: 15px 0;
+        .ad-hero p {
+            margin: 16px 0 0;
+            color: rgba(255, 255, 255, 0.96);
+            font-size: 17px;
+            line-height: 1.75;
+            max-width: 780px;
         }
 
-        .promo-card p {
+        .ad-tags {
+            margin-top: 16px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .ad-tags span {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 12px;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .ad-hero-panel {
+            border-radius: 18px;
+            border: 1px solid rgba(255, 255, 255, 0.34);
+            background: rgba(255, 255, 255, 0.17);
+            padding: 16px;
+            color: #fff;
+        }
+
+        .ad-hero-panel h3 {
+            margin: 0 0 10px;
+            font-family: 'Garamond', serif;
+            font-size: 30px;
+            color: #fff;
+        }
+
+        .ad-hero-panel ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: grid;
+            gap: 8px;
+        }
+
+        .ad-hero-panel li {
+            padding: 10px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.14);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             font-size: 14px;
-            opacity: 0.9;
             line-height: 1.6;
         }
 
-        /* Promo Detail Section */
-        .promo-detail-section {
-            background: linear-gradient(135deg, #f9f9f9 0%, #fff 100%);
-            border-radius: 16px;
-            padding: 40px;
-            margin-bottom: 40px;
-            border: 2px solid #f1cc1f;
+        .ad-main {
+            padding: 40px 0 72px;
         }
 
-        .promo-detail-section h3 {
+        .ad-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1.35fr) minmax(290px, 0.65fr);
+            gap: 24px;
+        }
+
+        .ad-content,
+        .ad-side {
+            display: grid;
+            gap: 16px;
+            align-self: start;
+        }
+
+        .ad-card,
+        .ad-side-card {
+            background: #fff;
+            border: 1px solid rgba(67, 155, 212, 0.2);
+            border-radius: 20px;
+            box-shadow: 0 12px 24px rgba(16, 49, 79, 0.08);
+            padding: 22px;
+        }
+
+        .ad-card h2,
+        .ad-side-card h3 {
+            margin: 0 0 12px;
+            color: #256f9f;
             font-family: 'Garamond', serif;
-            font-size: 28px;
-            color: #1e6f8c;
-            text-align: center;
-            margin-bottom: 30px;
+            font-size: 34px;
+            line-height: 1.2;
+            padding: 0 !important;
         }
 
-        .promo-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
+        .ad-card p,
+        .ad-card li,
+        .ad-side-card p,
+        .ad-side-card li {
+            color: #416987;
+            font-size: 15px;
+            line-height: 1.75;
         }
 
-        .promo-list li {
-            display: flex;
-            align-items: flex-start;
-            gap: 20px;
-            padding: 20px 0;
-            border-bottom: 1px dashed #e8e5ec;
+        .ad-offers {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 12px;
         }
 
-        .promo-list li:last-child {
-            border-bottom: none;
+        .ad-offer {
+            border: 1px solid rgba(67, 155, 212, 0.2);
+            border-radius: 14px;
+            background: linear-gradient(125deg, #f5fbff 0%, #ecf8ff 100%);
+            padding: 14px;
         }
 
-        .promo-list-icon {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, #1e6f8c 0%, #6a1b9a 100%);
-            border-radius: 12px;
-            display: flex;
+        .ad-offer b {
+            display: inline-flex;
             align-items: center;
             justify-content: center;
-            color: #f1cc1f;
-            font-size: 20px;
-            font-weight: bold;
-            flex-shrink: 0;
-        }
-
-        .promo-list-content h4 {
-            font-size: 18px;
-            color: #1e6f8c;
+            min-width: 72px;
+            min-height: 36px;
+            border-radius: 999px;
+            color: #fff;
+            background: linear-gradient(120deg, var(--ad-blue-1), var(--ad-blue-2));
+            font-size: 16px;
             margin-bottom: 8px;
         }
 
-        .promo-list-content p {
-            font-size: 14px;
-            color: #666;
-            line-height: 1.6;
+        .ad-offer h4 {
+            margin: 0 0 8px;
+            color: #2f79ad;
+            font-size: 23px;
+            font-family: 'Garamond', serif;
+        }
+
+        .ad-rules {
             margin: 0;
-        }
-
-        /* Note Box */
-        .note-box-enhanced {
-            background: linear-gradient(135deg, #fff3cd 0%, #fff 100%);
-            border-radius: 16px;
-            padding: 30px;
-            margin-bottom: 40px;
-            border-left: 5px solid #f1cc1f;
-        }
-
-        .note-box-enhanced h4 {
-            font-family: 'Garamond', serif;
-            font-size: 20px;
-            color: #1e6f8c;
-            margin-bottom: 10px;
-        }
-
-        .note-box-enhanced p {
-            font-size: 14px;
-            color: #555;
-            line-height: 1.6;
-            margin: 0;
-        }
-
-        /* CTA Section */
-        .promo-cta-section {
-            background: linear-gradient(135deg, #1e6f8c 0%, #6a1b9a 100%);
-            border-radius: 16px;
-            padding: 50px 40px;
-            text-align: center;
-            color: white;
-        }
-
-        .promo-cta-section h3 {
-            font-family: 'Garamond', serif;
-            font-size: 32px;
-            margin-bottom: 20px;
-        }
-
-        .promo-cta-section .hotline {
-            font-size: 36px;
-            font-weight: bold;
-            color: #f1cc1f;
-            margin: 20px 0;
-        }
-
-        .promo-cta-section p {
-            font-size: 16px;
-            opacity: 0.9;
-        }
-
-        /* Right Sidebar */
-        .promo-sidebar-right {
-            position: sticky;
-            top: 100px;
-            height: fit-content;
-        }
-
-        .highlight-card {
-            background: linear-gradient(135deg, #f1cc1f 0%, #e5b81a 100%);
-            border-radius: 16px;
-            padding: 30px 25px;
-            text-align: center;
-            margin-bottom: 25px;
-        }
-
-        .highlight-card h5 {
-            font-family: 'Garamond', serif;
-            font-size: 20px;
-            color: #1e6f8c;
-            margin-bottom: 15px;
-        }
-
-        .highlight-card .big-number {
-            font-size: 48px;
-            font-weight: bold;
-            color: #1e6f8c;
-            margin: 15px 0;
-        }
-
-        .highlight-card p {
-            font-size: 14px;
-            color: #1e6f8c;
-            opacity: 0.9;
-        }
-
-        .gallery-card {
-            background: #fff;
-            border-radius: 16px;
-            padding: 25px;
-            box-shadow: 0 4px 25px rgba(71, 24, 115, 0.08);
-            margin-bottom: 25px;
-        }
-
-        .gallery-card h5 {
-            font-family: 'Garamond', serif;
-            font-size: 16px;
-            color: #1e6f8c;
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 2px solid #f1cc1f;
-        }
-
-        .mini-gallery {
+            padding: 0;
+            list-style: none;
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
             gap: 10px;
         }
 
-        .mini-gallery-item {
-            border-radius: 10px;
-            overflow: hidden;
-            aspect-ratio: 1;
+        .ad-rules li {
+            border: 1px solid rgba(67, 155, 212, 0.18);
+            border-radius: 12px;
+            background: #f9fdff;
+            padding: 12px;
         }
 
-        .mini-gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
+        .ad-rules li strong {
+            display: block;
+            color: #2f79ad;
+            margin-bottom: 6px;
+            font-size: 15px;
         }
 
-        .mini-gallery-item:hover img {
-            transform: scale(1.1);
+        .ad-note {
+            border: 1px solid rgba(255, 209, 102, 0.45);
+            border-left: 5px solid var(--ad-gold);
+            border-radius: 12px;
+            background: #fffbef;
+            padding: 12px;
         }
 
-        .cta-box {
-            background: linear-gradient(135deg, #1e6f8c 0%, #6a1b9a 100%);
-            border-radius: 16px;
-            padding: 30px 25px;
-            text-align: center;
-            color: white;
-        }
-
-        .cta-box h5 {
-            font-family: 'Garamond', serif;
-            font-size: 22px;
-            margin-bottom: 15px;
-        }
-
-        .cta-box p {
+        .ad-note b {
+            color: #976d00;
+            display: block;
+            margin-bottom: 4px;
             font-size: 14px;
-            margin-bottom: 20px;
-            opacity: 0.9;
         }
 
-        .cta-btn {
-            display: inline-block;
-            background: #f1cc1f;
-            color: #1e6f8c;
-            padding: 14px 30px;
-            border-radius: 30px;
+        .ad-side-links {
+            display: grid;
+            gap: 10px;
+        }
+
+        .ad-side-links a {
+            display: block;
             text-decoration: none;
+            color: #2f638f;
+            border: 1px solid rgba(67, 155, 212, 0.18);
+            border-radius: 12px;
+            background: #f9fdff;
+            padding: 10px 12px;
+            font-size: 14px;
+            line-height: 1.55;
+        }
+
+        .ad-side-links a:hover {
+            background: #eaf7ff;
+        }
+
+        .ad-emphasis {
+            background: linear-gradient(120deg, #3f9ad3, #56b4e7);
+            color: #fff;
+            border-radius: 16px;
+            padding: 18px;
+        }
+
+        .ad-emphasis h4 {
+            margin: 0 0 6px;
+            color: #fff;
+            font-size: 28px;
+            font-family: 'Garamond', serif;
+        }
+
+        .ad-emphasis p {
+            color: rgba(255, 255, 255, 0.96);
+            margin: 0;
+        }
+
+        .ad-contact {
+            background: #f7fcff;
+            border: 1px solid rgba(67, 155, 212, 0.22);
+            border-radius: 12px;
+            padding: 10px 12px;
+            margin-bottom: 10px;
+        }
+
+        .ad-contact b {
+            display: block;
+            color: #2d7bb1;
+            font-size: 13px;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        .ad-contact span {
+            color: #204c70;
             font-weight: 600;
             font-size: 14px;
-            transition: all 0.3s ease;
+            line-height: 1.5;
         }
 
-        .cta-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(241, 204, 31, 0.4);
+        .ad-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 12px;
         }
 
-        @media (max-width: 1200px) {
-            .promo-main-layout {
-                grid-template-columns: 260px 1fr 260px;
-                gap: 25px;
-            }
+        .ad-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 44px;
+            padding: 10px 16px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            font-weight: 700;
+            border: 1px solid transparent;
         }
 
-        @media (max-width: 991px) {
-            .promo-hero-content h1 {
-                font-size: 36px;
-            }
+        .ad-btn-primary {
+            color: #fff;
+            background: linear-gradient(120deg, var(--ad-blue-1), var(--ad-blue-2));
+            box-shadow: 0 10px 20px rgba(67, 155, 212, 0.24);
+        }
 
-            .promo-main-layout {
+        .ad-btn-light {
+            color: #2b79af;
+            background: #f7fcff;
+            border-color: rgba(67, 155, 212, 0.25);
+        }
+
+        @media (max-width: 1180px) {
+
+            .ad-hero-grid,
+            .ad-layout,
+            .ad-offers {
                 grid-template-columns: 1fr;
-                gap: 30px;
-            }
-
-            .promo-sidebar-left,
-            .promo-sidebar-right {
-                position: static;
-            }
-
-            .promo-cards-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .mini-gallery {
-                grid-template-columns: repeat(4, 1fr);
             }
         }
 
         @media (max-width: 768px) {
-            .promo-hero {
-                min-height: 350px;
+            .ad-wrap {
+                width: min(94vw, 1480px);
             }
 
-            .promo-hero-content h1 {
-                font-size: 28px;
+            .ad-hero {
+                padding: 94px 0 42px;
             }
 
-            .promo-content-center {
-                padding: 25px;
+            .ad-hero p {
+                font-size: 15px;
             }
 
-            .promo-detail-section {
-                padding: 25px;
-            }
-
-            .mini-gallery {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .promo-cta-section h3 {
-                font-size: 24px;
-            }
-
-            .promo-cta-section .hotline {
-                font-size: 28px;
+            .ad-card,
+            .ad-side-card {
+                padding: 16px;
+                border-radius: 16px;
             }
         }
     </style>
@@ -642,215 +455,136 @@
     <?php include 'includes/header.php'; ?>
     <div class="overlay_mark_search" style="display:none;"></div>
 
-    <main class="body-content">
-        <!-- Hero Section -->
-        <section class="promo-hero">
-            <div class="promo-hero-bg"></div>
-            <div class="promo-hero-content">
-                <span class="promo-hero-badge">Năm học 2026-2027</span>
-                <h1>Ưu đãi tuyển sinh</h1>
-                <p class="subtitle">Meyschool Đoàn Thị Điểm dành tặng nhiều chương trình ưu đãi hấp dẫn cho phụ huynh và học sinh đăng ký nhập học. Cơ hội nhận học bổng và giảm học phí lên đến 100%.</p>
+    <main class="body-content ad-page">
+        <section class="ad-hero">
+            <div class="ad-wrap">
+                <div class="ad-hero-grid" data-aos="fade-up">
+                    <div>
+                        <ol class="breadcrumb ad-breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.php">Trang chủ</a></li>
+                            <li class="breadcrumb-item"><a href="thong-tin-tuyen-sinh-tieu-hoc.php">Tuyển sinh</a></li>
+                            <li class="breadcrumb-item active">Ưu đãi tuyển sinh</li>
+                        </ol>
+
+                        <h1>Ưu đãi tuyển sinh 2026 - 2027</h1>
+                        <p>Meyschool Đoàn Thị Điểm triển khai các gói ưu đãi linh hoạt theo thời điểm đăng ký, thành tích học tập và chính sách gia đình, giúp phụ huynh chủ động kế hoạch tài chính ngay từ đầu năm học.</p>
+
+                        <div class="ad-tags">
+                            <span>Giảm học phí đến 50%</span>
+                            <span>Học bổng đến 100%</span>
+                            <span>Ưu đãi gia đình nhiều con</span>
+                        </div>
+                    </div>
+
+                    <aside class="ad-hero-panel">
+                        <h3>Mốc ưu đãi chính</h3>
+                        <ul>
+                            <li>Đăng ký sớm trước 31/03/2026: giảm học phí năm đầu.</li>
+                            <li>Học sinh có thành tích học thuật cao: ưu đãi theo mức giải.</li>
+                            <li>Đóng học phí cả năm: nhận thêm mức hỗ trợ tài chính.</li>
+                        </ul>
+                    </aside>
+                </div>
             </div>
         </section>
 
-        <!-- Breadcrumb -->
-        <div class="promo-container" style="padding-top: 20px;">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.php">Trang chủ</a></li>
-                <li class="breadcrumb-item"><a href="tuyen-dung.php">Tuyển sinh</a></li>
-                <li class="breadcrumb-item active">Ưu đãi tuyển sinh</li>
-            </ol>
-        </div>
-
-        <!-- Main Layout -->
-        <div class="promo-container">
-            <div class="promo-main-layout">
-                <!-- Left Sidebar -->
-                <aside class="promo-sidebar-left">
-                    <div class="sidebar-nav-card">
-                        <h4>Danh mục tuyển sinh</h4>
-                        <ul class="sidebar-menu">
-                            <li>
-                                <a href="thong-tin-tuyen-sinh-tieu-hoc.php" class="sidebar-menu-link">
-                                    <span class="menu-thumb">
-                                        <img src="storage/banner/tieu-hoc.jpg" alt="">
-                                    </span>
-                                    Tuyển sinh Tiểu học
-                                </a>
-                            </li>
-                            <li>
-                                <a href="thong-tin-tuyen-sinh-thcs.php" class="sidebar-menu-link">
-                                    <span class="menu-thumb">
-                                        <img src="storage/banner/trung-hoc.jpg" alt="">
-                                    </span>
-                                    Tuyển sinh THCS
-                                </a>
-                            </li>
-                            <li>
-                                <a href="uu-dai-tuyen-sinh.php" class="sidebar-menu-link active">
-                                    <span class="menu-thumb">
-                                        <img src="olympia/images/noibat_5.png" alt="">
-                                    </span>
-                                    Ưu đãi tuyển sinh
-                                </a>
-                            </li>
-                            <li>
-                                <a href="hoc-bong-2026-2027.php" class="sidebar-menu-link">
-                                    <span class="menu-thumb">
-                                        <img src="olympia/images/0208.jpg" alt="">
-                                    </span>
-                                    Học bổng 2026-2027
-                                </a>
-                            </li>
-                            <li>
-                                <a href="faq.php" class="sidebar-menu-link">
-                                    <span class="menu-thumb">
-                                        <img src="olympia/images/0206.jpg" alt="">
-                                    </span>
-                                    Câu hỏi thường gặp
-                                </a>
-                            </li>
-                            <li>
-                                <a href="dang-ky-tu-van.php" class="sidebar-menu-link">
-                                    <span class="menu-thumb">
-                                        <img src="storage/doi-ngu-olym/nguyen-thi-thu-thao.png" alt="">
-                                    </span>
-                                    Đăng ký tư vấn
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="quick-contact-card">
-                        <h5>Liên hệ tuyển sinh</h5>
-                        <p>Hotline tư vấn 24/7</p>
-                        <div class="hotline">0934 525 889</div>
-                        <p>Email: tuyensinh@doanthidiem.edu.vn</p>
-                    </div>
-                </aside>
-
-                <!-- Center Content -->
-                <div class="promo-content-center">
-                    <div class="content-header">
-                        <h2>Chương trình ưu đãi đặc biệt</h2>
-                        <p class="content-subtitle">Cơ hội nhận học bổng và giảm học phí lên đến 100%</p>
-                    </div>
-
-                    <!-- Promo Cards -->
-                    <div class="promo-cards-section">
-                        <div class="promo-cards-grid">
-                            <div class="promo-card">
-                                <div class="promo-card-icon">🎓</div>
-                                <h4>Ưu đãi sớm</h4>
-                                <div class="discount">10%</div>
-                                <p>Giảm 10% học phí năm đầu cho học sinh đăng ký và đóng phí trước 31/03/2026</p>
+        <section class="ad-main">
+            <div class="ad-wrap ad-layout">
+                <div class="ad-content">
+                    <article class="ad-card" data-aos="fade-up">
+                        <h2>Gói ưu đãi nổi bật</h2>
+                        <div class="ad-offers">
+                            <div class="ad-offer">
+                                <b>10%</b>
+                                <h4>Ưu đãi đăng ký sớm</h4>
+                                <p>Áp dụng cho hồ sơ hoàn tất thủ tục và đóng phí trong mốc thời gian ưu đãi.</p>
                             </div>
-                            <div class="promo-card">
-                                <div class="promo-card-icon">👨‍👩‍👧‍👦</div>
-                                <h4>Anh chị em ruột</h4>
-                                <div class="discount">15%</div>
-                                <p>Giảm 15% học phí cho anh/chị/em thứ 2, 3... cùng học tại trường</p>
+                            <div class="ad-offer">
+                                <b>15%</b>
+                                <h4>Ưu đãi anh chị em</h4>
+                                <p>Gia đình có từ 2 con theo học được hỗ trợ học phí theo từng thứ tự nhập học.</p>
                             </div>
-                            <div class="promo-card">
-                                <div class="promo-card-icon">🌟</div>
-                                <h4>Học sinh giỏi</h4>
-                                <div class="discount">50%</div>
-                                <p>Giảm 50% học phí cho học sinh đạt giải cấp Thành phố trở lên</p>
+                            <div class="ad-offer">
+                                <b>50%</b>
+                                <h4>Ưu đãi thành tích</h4>
+                                <p>Học sinh đạt giải từ cấp thành phố trở lên được xét mức hỗ trợ chuyên biệt.</p>
                             </div>
                         </div>
-                    </div>
+                    </article>
 
-                    <!-- Promo Detail Section -->
-                    <div class="promo-detail-section">
-                        <h3>Chi tiết các chương trình ưu đãi</h3>
-                        <ul class="promo-list">
+                    <article class="ad-card" data-aos="fade-up">
+                        <h2>Chi tiết điều kiện áp dụng</h2>
+                        <ul class="ad-rules">
                             <li>
-                                <div class="promo-list-icon">✓</div>
-                                <div class="promo-list-content">
-                                    <h4>Ưu đãi đăng ký sớm</h4>
-                                    <p>Học sinh hoàn thành thủ tục nhập học và đóng học phí trước 31/03/2026 sẽ được giảm 10% học phí năm học đầu tiên. Áp dụng cho cả cấp Tiểu học và THCS.</p>
-                                </div>
+                                <strong>Ưu đãi đăng ký sớm</strong>
+                                Hoàn thành hồ sơ và nghĩa vụ tài chính trong giai đoạn công bố để nhận mức hỗ trợ năm học đầu tiên.
                             </li>
                             <li>
-                                <div class="promo-list-icon">✓</div>
-                                <div class="promo-list-content">
-                                    <h4>Ưu đãi gia đình có nhiều con</h4>
-                                    <p>Con thứ 2 học tại trường được giảm 10% học phí, con thứ 3 trở đi được giảm 15% học phí. Áp dụng đồng thời với các ưu đãi khác.</p>
-                                </div>
+                                <strong>Ưu đãi gia đình có nhiều con</strong>
+                                Con thứ hai và các con tiếp theo học tại trường được áp dụng chính sách học phí theo quy định từng năm.
                             </li>
                             <li>
-                                <div class="promo-list-icon">✓</div>
-                                <div class="promo-list-content">
-                                    <h4>Ưu đãi học sinh xuất sắc</h4>
-                                    <p>Học sinh đạt giải cấp Thành phố: Giảm 30% học phí. Giải cấp Quốc gia: Giảm 50% học phí. Huy chương Quốc tế: Học bổng toàn phần 100%.</p>
-                                </div>
+                                <strong>Ưu đãi học sinh xuất sắc</strong>
+                                Căn cứ vào minh chứng thành tích và kết quả đánh giá đầu vào, hội đồng tuyển sinh xét mức ưu đãi tương ứng.
                             </li>
                             <li>
-                                <div class="promo-list-icon">✓</div>
-                                <div class="promo-list-content">
-                                    <h4>Ưu đãi đóng phí cả năm</h4>
-                                    <p>Phụ huynh đóng học phí cả năm học một lần được giảm thêm 5% trên tổng số tiền học phí.</p>
-                                </div>
+                                <strong>Ưu đãi đóng phí cả năm</strong>
+                                Phụ huynh lựa chọn phương án đóng học phí theo năm có thể nhận thêm hỗ trợ tài chính.
                             </li>
                             <li>
-                                <div class="promo-list-icon">✓</div>
-                                <div class="promo-list-content">
-                                    <h4>Ưu đãi giới thiệu học sinh mới</h4>
-                                    <p>Phụ huynh giới thiệu học sinh mới nhập học thành công được tặng voucher giảm 2,000,000 VNĐ cho học phí kỳ tiếp theo.</p>
-                                </div>
+                                <strong>Ưu đãi giới thiệu học sinh mới</strong>
+                                Phụ huynh đồng hành tuyển sinh thành công có thể nhận voucher học phí theo chương trình từng thời kỳ.
                             </li>
                         </ul>
-                    </div>
+                    </article>
 
-                    <!-- Note Box -->
-                    <div class="note-box-enhanced">
-                        <h4>Lưu ý quan trọng</h4>
-                        <p>Các chương trình ưu đãi không cộng dồn, trừ trường hợp ưu đãi gia đình có nhiều con. Mỗi học sinh chỉ được áp dụng một chương trình ưu đãi cao nhất. Vui lòng liên hệ văn phòng tuyển sinh để biết thêm chi tiết.</p>
-                    </div>
+                    <article class="ad-card" data-aos="fade-up">
+                        <h2>Lưu ý quan trọng</h2>
+                        <div class="ad-note">
+                            <b>Chính sách cộng dồn</b>
+                            <p>Các ưu đãi không mặc định cộng dồn, trừ các trường hợp được quy định cụ thể. Mỗi học sinh được áp dụng mức cao nhất theo hồ sơ xét duyệt tại thời điểm nhập học.</p>
+                        </div>
+                    </article>
 
-                    <!-- CTA Section -->
-                    <div class="promo-cta-section">
-                        <h3>Đăng ký ngay để nhận ưu đãi</h3>
-                        <p>Hotline tuyển sinh</p>
-                        <div class="hotline">0934 525 889</div>
-                        <p>Email: tuyensinh@doanthidiem.edu.vn</p>
-                    </div>
+                    <section class="ad-emphasis" data-aos="fade-up">
+                        <h4>Đăng ký sớm để tối ưu quyền lợi tuyển sinh</h4>
+                        <p>Đội ngũ tuyển sinh luôn sẵn sàng tư vấn lộ trình phù hợp, mức ưu đãi tương ứng và kế hoạch nhập học cho từng gia đình.</p>
+                    </section>
                 </div>
 
-                <!-- Right Sidebar -->
-                <aside class="promo-sidebar-right">
-                    <div class="highlight-card">
-                        <h5>Ưu đãi tối đa</h5>
-                        <div class="big-number">100%</div>
-                        <p>Học bổng toàn phần cho học sinh xuất sắc</p>
-                    </div>
-
-                    <div class="gallery-card">
-                        <h5>Khoảnh khắc tại Meyschool</h5>
-                        <div class="mini-gallery">
-                            <div class="mini-gallery-item">
-                                <img src="olympia/images/0201.jpg" alt="">
-                            </div>
-                            <div class="mini-gallery-item">
-                                <img src="olympia/images/0208.jpg" alt="">
-                            </div>
-                            <div class="mini-gallery-item">
-                                <img src="storage/banner/trung-hoc.jpg" alt="">
-                            </div>
-                            <div class="mini-gallery-item">
-                                <img src="olympia/images/0206.jpg" alt="">
-                            </div>
+                <aside class="ad-side" data-aos="fade-up" data-aos-delay="120">
+                    <div class="ad-side-card">
+                        <h3>Danh mục tuyển sinh</h3>
+                        <div class="ad-side-links">
+                            <a href="thong-tin-tuyen-sinh-tieu-hoc.php">Tuyển sinh Tiểu học</a>
+                            <a href="thong-tin-tuyen-sinh-thcs.php">Tuyển sinh THCS</a>
+                            <a href="hoc-bong-2026-2027.php">Học bổng 2026 - 2027</a>
+                            <a href="cau-hoi-thuong-gap.php">Câu hỏi thường gặp</a>
                         </div>
                     </div>
 
-                    <div class="cta-box">
-                        <h5>Đăng ký ngay</h5>
-                        <p>Đăng ký tư vấn và tham quan trường miễn phí</p>
-                        <a href="dang-ky-tu-van.php" class="cta-btn">Đăng ký tư vấn</a>
+                    <div class="ad-side-card">
+                        <h3>Liên hệ tư vấn</h3>
+                        <div class="ad-contact">
+                            <b>Hotline</b>
+                            <span>0934 525 889</span>
+                        </div>
+                        <div class="ad-contact">
+                            <b>Email</b>
+                            <span>tuyensinh@doanthidiem.edu.vn</span>
+                        </div>
+                        <div class="ad-contact" style="margin-bottom: 0;">
+                            <b>Địa chỉ</b>
+                            <span>KĐT Trung Văn, Nam Từ Liêm, Hà Nội</span>
+                        </div>
+                        <div class="ad-actions">
+                            <a href="dang-ky-tu-van.php" class="ad-btn ad-btn-primary">Đăng ký tư vấn</a>
+                            <a href="lien-he.php" class="ad-btn ad-btn-light">Liên hệ ngay</a>
+                        </div>
                     </div>
                 </aside>
             </div>
-        </div>
+        </section>
     </main>
 
     <?php include 'includes/footer.php'; ?>

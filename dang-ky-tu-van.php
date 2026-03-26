@@ -8,7 +8,9 @@
     <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=1"
         name="viewport" />
 
-    <link rel="shortcut icon" href="storage/favicon.png">
+    <link rel="icon" type="image/png" href="storage/favicon.png?v=20260320-1">
+    <link rel="shortcut icon" type="image/png" href="storage/favicon.png?v=20260320-1">
+    <link rel="apple-touch-icon" href="storage/favicon.png?v=20260320-1">
 
     <title>Đăng ký tư vấn - Meyschool Đoàn Thị Điểm</title>
     <meta name="description" content="Đăng ký tư vấn tuyển sinh năm học 2026-2027 tại Meyschool Đoàn Thị Điểm">
@@ -34,7 +36,7 @@
     <link rel="stylesheet" href="olympia/css/fonts.css">
     <link rel="stylesheet" href="olympia/css/style.css">
     <link rel="stylesheet" href="olympia/css/styles-new.css">
-    <link type="image/x-icon" href="#" rel="shortcut icon" />
+
     <link rel="stylesheet" type="text/css" href="olympia/css/slick.css">
     <link rel="stylesheet" type="text/css" href="olympia/css/slick-theme.css">
     <link rel="stylesheet" type="text/css" href="olympia/css/jquery.toast.min.css">
@@ -58,330 +60,263 @@
             z-index: 9000999999999 !important;
         }
 
-        .btn-dk {
-            width: 210px;
-            height: 50px;
-            line-height: 50px;
-            text-align: center;
-            background-color: #1e6f8c;
-            font-size: 14px;
-            font-weight: 600;
-            text-transform: uppercase;
-            border: none;
-            color: #fff;
-            display: inline-block;
-            margin-top: 20px;
-            cursor: pointer;
-        }
-
-        .btn-full {
-            text-align: center;
-            line-height: 60px;
-        }
-
         body.show-admin-bar {
-            margin-top: 0px !important;
-            font-family: Arial, sans-serif;
+            margin-top: 0 !important;
         }
 
-        /* Consultation Page - Premium Design */
-        .consultation-container {
-            max-width: 1400px;
+        :root {
+            --cs-blue-1: #439bd4;
+            --cs-blue-2: #4db0e4;
+            --cs-blue-3: #eaf7ff;
+            --cs-ink: #214963;
+            --cs-green: #2ba66d;
+        }
+
+        .cs-page {
+            background: radial-gradient(circle at 0% 0%, #eaf7ff 0%, #f7fcff 45%, #fff 100%);
+            color: var(--cs-ink);
+        }
+
+        .cs-wrap {
+            width: min(94vw, 1480px);
             margin: 0 auto;
-            padding: 0 20px;
         }
 
-        /* Hero Section */
-        .consultation-hero {
+        .cs-hero {
             position: relative;
-            min-height: 450px;
-            display: flex;
-            align-items: center;
             overflow: hidden;
-            background: linear-gradient(135deg, #1e6f8c 0%, #6a1b9a 50%, #8e24aa 100%);
+            padding: 112px 0 68px;
+            background: linear-gradient(132deg, rgba(67, 155, 212, 0.95) 0%, rgba(77, 176, 228, 0.9) 72%, rgba(77, 176, 228, 0.84) 100%), url('storage/banner/tuyen-sinh.jpg') center/cover no-repeat;
         }
 
-        .consultation-hero-bg {
+        .cs-hero::before,
+        .cs-hero::after {
+            content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('storage/banner/tuyen-sinh.jpg') center/cover no-repeat;
-            opacity: 0.3;
-        }
-
-        .consultation-hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 60px 40px;
-            text-align: center;
-        }
-
-        .consultation-hero-content h1 {
-            font-family: 'Garamond', serif;
-            font-size: 48px;
-            color: #fff;
-            margin-bottom: 20px;
-            font-weight: 700;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
-        }
-
-        .consultation-hero-content .subtitle {
-            font-size: 18px;
-            color: rgba(255, 255, 255, 0.9);
-            line-height: 1.8;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .consultation-hero-badge {
-            display: inline-block;
-            background: #f1cc1f;
-            color: #1e6f8c;
-            padding: 10px 25px;
-            border-radius: 30px;
-            font-size: 14px;
-            font-weight: 700;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-        }
-
-        /* Main Layout */
-        .consultation-main-layout {
-            display: grid;
-            grid-template-columns: 280px 1fr 300px;
-            gap: 35px;
-            padding: 50px 0;
-        }
-
-        /* Left Sidebar */
-        .consultation-sidebar-left {
-            position: sticky;
-            top: 100px;
-            height: fit-content;
-        }
-
-        .sidebar-nav-card {
-            background: #fff;
-            border-radius: 16px;
-            padding: 25px;
-            box-shadow: 0 4px 25px rgba(71, 24, 115, 0.08);
-            margin-bottom: 25px;
-        }
-
-        .sidebar-nav-card h4 {
-            font-family: 'Garamond', serif;
-            font-size: 18px;
-            color: #1e6f8c;
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 2px solid #f1cc1f;
-        }
-
-        .sidebar-menu {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .sidebar-menu li {
-            margin-bottom: 10px;
-        }
-
-        .sidebar-menu-link {
-            display: flex;
-            align-items: center;
-            padding: 12px 15px;
-            color: #555;
-            text-decoration: none;
-            border-radius: 10px;
-            transition: all 0.3s ease;
-            font-size: 14px;
-            font-weight: 500;
-            background: #faf9fb;
-            border-left: 3px solid transparent;
-        }
-
-        .sidebar-menu-link:hover,
-        .sidebar-menu-link.active {
-            background: linear-gradient(135deg, #1e6f8c 0%, #5a2a8a 100%);
-            color: #fff;
-            border-left-color: #f1cc1f;
-            transform: translateX(5px);
-        }
-
-        .menu-thumb {
-            width: 40px;
-            height: 40px;
-            border-radius: 8px;
-            overflow: hidden;
-            margin-right: 12px;
-            flex-shrink: 0;
-        }
-
-        .menu-thumb img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .quick-contact-card {
-            background: linear-gradient(135deg, #1e6f8c 0%, #6a1b9a 100%);
-            border-radius: 16px;
-            padding: 25px;
-            color: white;
-            text-align: center;
-        }
-
-        .quick-contact-card h5 {
-            font-family: 'Garamond', serif;
-            font-size: 18px;
-            margin-bottom: 15px;
-            color: #f1cc1f;
-        }
-
-        .quick-contact-card p {
-            font-size: 14px;
-            margin-bottom: 10px;
-            opacity: 0.9;
-        }
-
-        .quick-contact-card .hotline {
-            font-size: 24px;
-            font-weight: bold;
-            color: #f1cc1f;
-            margin: 15px 0;
-        }
-
-        /* Center Content */
-        .consultation-content-center {
-            background: #fff;
-            border-radius: 16px;
-            padding: 40px;
-            box-shadow: 0 4px 25px rgba(71, 24, 115, 0.06);
-        }
-
-        .content-header {
-            text-align: center;
-            margin-bottom: 40px;
-            padding-bottom: 30px;
-            border-bottom: 1px solid #eee;
-        }
-
-        .content-header h2 {
-            font-family: 'Garamond', serif;
-            font-size: 36px;
-            color: #1e6f8c;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-
-        .content-subtitle {
-            font-size: 16px;
-            color: #888;
-        }
-
-        /* Contact Info Cards */
-        .contact-info-section {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            margin-bottom: 40px;
-        }
-
-        .contact-info-card {
-            background: linear-gradient(135deg, #f9f9f9 0%, #fff 100%);
-            border-radius: 16px;
-            padding: 30px 20px;
-            text-align: center;
-            border: 2px solid transparent;
-            transition: all 0.3s ease;
-        }
-
-        .contact-info-card:hover {
-            transform: translateY(-5px);
-            border-color: #f1cc1f;
-            box-shadow: 0 10px 30px rgba(71, 24, 115, 0.1);
-        }
-
-        .contact-info-card .icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #1e6f8c 0%, #6a1b9a 100%);
             border-radius: 50%;
-            display: flex;
+            pointer-events: none;
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .cs-hero::before {
+            width: 340px;
+            height: 340px;
+            top: -120px;
+            right: -100px;
+        }
+
+        .cs-hero::after {
+            width: 210px;
+            height: 210px;
+            left: -70px;
+            bottom: -85px;
+        }
+
+        .cs-hero-grid {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+            gap: 22px;
             align-items: center;
-            justify-content: center;
-            font-size: 28px;
-            margin: 0 auto 15px;
         }
 
-        .contact-info-card h4 {
-            font-family: 'Garamond', serif;
-            font-size: 18px;
-            color: #1e6f8c;
-            margin-bottom: 10px;
+        .cs-breadcrumb {
+            margin: 0 0 14px;
+            display: inline-flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            position: static !important;
+            float: none !important;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.36);
+            border-radius: 999px;
+            padding: 8px 16px;
         }
 
-        .contact-info-card .value {
-            font-size: 16px;
-            color: #1e6f8c;
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
-
-        .contact-info-card p {
+        .cs-breadcrumb li,
+        .cs-breadcrumb li a {
+            color: #fff;
             font-size: 13px;
-            color: #888;
-            margin: 0;
         }
 
-        /* Form Container */
-        .form-container-enhanced {
-            background: linear-gradient(135deg, #f9f9f9 0%, #fff 100%);
+        .cs-hero h1 {
+            margin: 0;
+            color: #fff;
+            font-family: 'Garamond', serif;
+            font-size: clamp(38px, 5vw, 66px);
+            line-height: 1.03;
+        }
+
+        .cs-hero p {
+            margin: 16px 0 0;
+            color: rgba(255, 255, 255, 0.96);
+            font-size: 17px;
+            line-height: 1.75;
+            max-width: 780px;
+        }
+
+        .cs-tags {
+            margin-top: 16px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .cs-tags span {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 12px;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .cs-hero-panel {
+            border-radius: 18px;
+            border: 1px solid rgba(255, 255, 255, 0.34);
+            background: rgba(255, 255, 255, 0.17);
+            padding: 16px;
+            color: #fff;
+        }
+
+        .cs-hero-panel h3 {
+            margin: 0 0 10px;
+            font-family: 'Garamond', serif;
+            font-size: 30px;
+            color: #fff;
+        }
+
+        .cs-hero-panel ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: grid;
+            gap: 8px;
+        }
+
+        .cs-hero-panel li {
+            padding: 10px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.14);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .cs-main {
+            padding: 40px 0 72px;
+        }
+
+        .cs-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1.35fr) minmax(290px, 0.65fr);
+            gap: 24px;
+        }
+
+        .cs-content,
+        .cs-side {
+            display: grid;
+            gap: 16px;
+            align-self: start;
+        }
+
+        .cs-card,
+        .cs-side-card {
+            background: #fff;
+            border: 1px solid rgba(67, 155, 212, 0.2);
+            border-radius: 20px;
+            box-shadow: 0 12px 24px rgba(16, 49, 79, 0.08);
+            padding: 22px;
+        }
+
+        .cs-card h2,
+        .cs-side-card h3 {
+            margin: 0 0 12px;
+            color: #256f9f;
+            font-family: 'Garamond', serif;
+            font-size: 34px;
+            line-height: 1.2;
+            padding: 0 !important;
+        }
+
+        .cs-card p,
+        .cs-card li,
+        .cs-side-card p,
+        .cs-side-card li,
+        .cs-form-note {
+            color: #416987;
+            font-size: 15px;
+            line-height: 1.75;
+        }
+
+        .cs-info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 10px;
+            margin-top: 4px;
+        }
+
+        .cs-info-item {
+            border: 1px solid rgba(67, 155, 212, 0.18);
+            border-radius: 12px;
+            background: #f9fdff;
+            padding: 12px;
+        }
+
+        .cs-info-item b {
+            display: block;
+            color: #2f79ad;
+            margin-bottom: 6px;
+            font-size: 15px;
+        }
+
+        .cs-form-box {
+            border: 1px solid rgba(67, 155, 212, 0.2);
             border-radius: 16px;
-            padding: 40px;
-            border: 2px solid #f1cc1f;
+            background: linear-gradient(125deg, #f6fbff 0%, #edf8ff 100%);
+            padding: 16px;
         }
 
         .form-group {
-            margin-bottom: 25px;
+            margin-bottom: 14px;
         }
 
         .form-group label {
             display: block;
+            margin-bottom: 6px;
+            color: #2f638f;
             font-size: 14px;
-            color: #333;
-            margin-bottom: 8px;
-            font-weight: 500;
+            font-weight: 600;
         }
 
         .form-group label .required {
-            color: #e74c3c;
+            color: #d9534f;
         }
 
         .form-group input,
         .form-group select,
         .form-group textarea {
             width: 100%;
-            padding: 15px;
-            border: 2px solid #e8e5ec;
+            border: 1px solid rgba(67, 155, 212, 0.25);
             border-radius: 10px;
-            font-size: 15px;
-            transition: all 0.3s;
-            font-family: inherit;
+            padding: 12px;
+            font-size: 14px;
+            line-height: 1.4;
             background: #fff;
+            color: #355f7e;
+            font-family: inherit;
         }
 
         .form-group input:focus,
         .form-group select:focus,
         .form-group textarea:focus {
-            border-color: #1e6f8c;
             outline: none;
-            box-shadow: 0 0 0 3px rgba(30, 111, 140, 0.1);
+            border-color: #439bd4;
+            box-shadow: 0 0 0 3px rgba(67, 155, 212, 0.16);
         }
 
         .form-group textarea {
@@ -391,204 +326,175 @@
 
         .form-row {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
         }
 
         .form-submit {
-            text-align: center;
-            margin-top: 30px;
+            margin-top: 4px;
         }
 
         .form-submit button {
-            background: linear-gradient(135deg, #1e6f8c 0%, #6a1b9a 100%);
-            color: white;
+            width: 100%;
+            min-height: 48px;
             border: none;
-            padding: 18px 60px;
-            font-size: 16px;
-            font-weight: 600;
-            border-radius: 30px;
-            cursor: pointer;
-            transition: all 0.3s;
+            border-radius: 12px;
+            background: linear-gradient(120deg, var(--cs-blue-1), var(--cs-blue-2));
+            color: #fff;
             text-transform: uppercase;
+            font-size: 13px;
+            letter-spacing: 0.4px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.15s ease;
         }
 
         .form-submit button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(71, 24, 115, 0.3);
+            transform: translateY(-1px);
         }
 
         .success-message {
-            background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
-            border: 2px solid #28a745;
-            color: #155724;
-            padding: 20px;
+            border: 1px solid rgba(43, 166, 109, 0.35);
+            background: #eafaf1;
+            color: #1f7a4f;
             border-radius: 12px;
-            margin-bottom: 30px;
+            padding: 10px 12px;
+            margin-bottom: 12px;
             display: none;
-            text-align: center;
-            font-weight: 500;
-        }
-
-        /* Right Sidebar */
-        .consultation-sidebar-right {
-            position: sticky;
-            top: 100px;
-            height: fit-content;
-        }
-
-        .highlight-card {
-            background: linear-gradient(135deg, #f1cc1f 0%, #e5b81a 100%);
-            border-radius: 16px;
-            padding: 30px 25px;
-            text-align: center;
-            margin-bottom: 25px;
-        }
-
-        .highlight-card h5 {
-            font-family: 'Garamond', serif;
-            font-size: 20px;
-            color: #1e6f8c;
-            margin-bottom: 15px;
-        }
-
-        .highlight-card p {
             font-size: 14px;
-            color: #1e6f8c;
-            opacity: 0.9;
+            font-weight: 600;
         }
 
-        .gallery-card {
-            background: #fff;
-            border-radius: 16px;
-            padding: 25px;
-            box-shadow: 0 4px 25px rgba(71, 24, 115, 0.08);
-            margin-bottom: 25px;
-        }
-
-        .gallery-card h5 {
-            font-family: 'Garamond', serif;
-            font-size: 16px;
-            color: #1e6f8c;
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 2px solid #f1cc1f;
-        }
-
-        .mini-gallery {
+        .cs-side-links {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
             gap: 10px;
         }
 
-        .mini-gallery-item {
-            border-radius: 10px;
-            overflow: hidden;
-            aspect-ratio: 1;
-        }
-
-        .mini-gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .mini-gallery-item:hover img {
-            transform: scale(1.1);
-        }
-
-        .cta-box {
-            background: linear-gradient(135deg, #1e6f8c 0%, #6a1b9a 100%);
-            border-radius: 16px;
-            padding: 30px 25px;
-            text-align: center;
-            color: white;
-        }
-
-        .cta-box h5 {
-            font-family: 'Garamond', serif;
-            font-size: 22px;
-            margin-bottom: 15px;
-        }
-
-        .cta-box p {
-            font-size: 14px;
-            margin-bottom: 20px;
-            opacity: 0.9;
-        }
-
-        .cta-btn {
-            display: inline-block;
-            background: #f1cc1f;
-            color: #1e6f8c;
-            padding: 14px 30px;
-            border-radius: 30px;
+        .cs-side-links a {
+            display: block;
             text-decoration: none;
+            color: #2f638f;
+            border: 1px solid rgba(67, 155, 212, 0.18);
+            border-radius: 12px;
+            background: #f9fdff;
+            padding: 10px 12px;
+            font-size: 14px;
+            line-height: 1.55;
+        }
+
+        .cs-side-links a:hover {
+            background: #eaf7ff;
+        }
+
+        .cs-contact {
+            background: #f7fcff;
+            border: 1px solid rgba(67, 155, 212, 0.22);
+            border-radius: 12px;
+            padding: 10px 12px;
+            margin-bottom: 10px;
+        }
+
+        .cs-contact b {
+            display: block;
+            color: #2d7bb1;
+            font-size: 13px;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        .cs-contact span {
+            color: #204c70;
             font-weight: 600;
             font-size: 14px;
-            transition: all 0.3s ease;
+            line-height: 1.5;
         }
 
-        .cta-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(241, 204, 31, 0.4);
+        .cs-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 12px;
         }
 
-        @media (max-width: 1200px) {
-            .consultation-main-layout {
-                grid-template-columns: 260px 1fr 260px;
-                gap: 25px;
-            }
+        .cs-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 44px;
+            padding: 10px 16px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            font-weight: 700;
+            border: 1px solid transparent;
         }
 
-        @media (max-width: 991px) {
-            .consultation-hero-content h1 {
-                font-size: 36px;
-            }
+        .cs-btn-primary {
+            color: #fff;
+            background: linear-gradient(120deg, var(--cs-blue-1), var(--cs-blue-2));
+            box-shadow: 0 10px 20px rgba(67, 155, 212, 0.24);
+        }
 
-            .consultation-main-layout {
+        .cs-btn-light {
+            color: #2b79af;
+            background: #f7fcff;
+            border-color: rgba(67, 155, 212, 0.25);
+        }
+
+        .cs-emphasis {
+            background: linear-gradient(120deg, #3f9ad3, #56b4e7);
+            color: #fff;
+            border-radius: 16px;
+            padding: 18px;
+        }
+
+        .cs-emphasis h4 {
+            margin: 0 0 6px;
+            color: #fff;
+            font-size: 28px;
+            font-family: 'Garamond', serif;
+        }
+
+        .cs-emphasis p {
+            color: rgba(255, 255, 255, 0.96);
+            margin: 0;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 1180px) {
+
+            .cs-hero-grid,
+            .cs-layout,
+            .cs-info-grid {
                 grid-template-columns: 1fr;
-                gap: 30px;
-            }
-
-            .consultation-sidebar-left,
-            .consultation-sidebar-right {
-                position: static;
-            }
-
-            .contact-info-section {
-                grid-template-columns: 1fr;
-            }
-
-            .mini-gallery {
-                grid-template-columns: repeat(4, 1fr);
             }
         }
 
         @media (max-width: 768px) {
-            .consultation-hero {
-                min-height: 350px;
+            .cs-wrap {
+                width: min(94vw, 1480px);
             }
 
-            .consultation-hero-content h1 {
-                font-size: 28px;
+            .cs-hero {
+                padding: 94px 0 42px;
             }
 
-            .consultation-content-center {
-                padding: 25px;
+            .cs-hero p {
+                font-size: 15px;
             }
 
-            .form-container-enhanced {
-                padding: 25px;
+            .cs-card,
+            .cs-side-card {
+                padding: 16px;
+                border-radius: 16px;
             }
 
             .form-row {
                 grid-template-columns: 1fr;
-            }
-
-            .mini-gallery {
-                grid-template-columns: repeat(2, 1fr);
             }
         }
     </style>
@@ -598,224 +504,172 @@
     <?php include 'includes/header.php'; ?>
     <div class="overlay_mark_search" style="display:none;"></div>
 
-    <main class="body-content">
-        <!-- Hero Section -->
-        <section class="consultation-hero">
-            <div class="consultation-hero-bg"></div>
-            <div class="consultation-hero-content">
-                <span class="consultation-hero-badge">Tuyển sinh 2026-2027</span>
-                <h1>Đăng ký tư vấn</h1>
-                <p class="subtitle">Quý phụ huynh vui lòng điền thông tin vào form bên dưới. Chuyên viên tuyển sinh của Meyschool sẽ liên hệ tư vấn trong vòng 24 giờ.</p>
+    <main class="body-content cs-page">
+        <section class="cs-hero">
+            <div class="cs-wrap">
+                <div class="cs-hero-grid" data-aos="fade-up">
+                    <div>
+                        <ol class="breadcrumb cs-breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.php">Trang chủ</a></li>
+                            <li class="breadcrumb-item"><a href="thong-tin-tuyen-sinh-tieu-hoc.php">Tuyển sinh</a></li>
+                            <li class="breadcrumb-item active">Đăng ký tư vấn</li>
+                        </ol>
+
+                        <h1>Đăng ký tư vấn tuyển sinh</h1>
+                        <p>Phụ huynh để lại thông tin để đội ngũ tuyển sinh Meyschool Đoàn Thị Điểm chủ động liên hệ tư vấn lộ trình học tập, chính sách học phí và các mốc tuyển sinh phù hợp.</p>
+
+                        <div class="cs-tags">
+                            <span>Phản hồi trong 24 giờ</span>
+                            <span>Tư vấn 1:1 theo nhu cầu</span>
+                            <span>Hỗ trợ hồ sơ đầu vào</span>
+                        </div>
+                    </div>
+
+                    <aside class="cs-hero-panel">
+                        <h3>Quy trình nhanh</h3>
+                        <ul>
+                            <li>Điền form thông tin phụ huynh và học sinh.</li>
+                            <li>Nhân sự tuyển sinh gọi lại để xác nhận nhu cầu.</li>
+                            <li>Đặt lịch tư vấn chi tiết hoặc tham quan trường.</li>
+                        </ul>
+                    </aside>
+                </div>
             </div>
         </section>
 
-        <!-- Breadcrumb -->
-        <div class="consultation-container" style="padding-top: 20px;">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.php">Trang chủ</a></li>
-                <li class="breadcrumb-item"><a href="tuyen-dung.php">Tuyển sinh</a></li>
-                <li class="breadcrumb-item active">Đăng ký tư vấn</li>
-            </ol>
-        </div>
-
-        <!-- Main Layout -->
-        <div class="consultation-container">
-            <div class="consultation-main-layout">
-                <!-- Left Sidebar -->
-                <aside class="consultation-sidebar-left">
-                    <div class="sidebar-nav-card">
-                        <h4>Danh mục tuyển sinh</h4>
-                        <ul class="sidebar-menu">
-                            <li>
-                                <a href="thong-tin-tuyen-sinh-tieu-hoc.php" class="sidebar-menu-link">
-                                    <span class="menu-thumb">
-                                        <img src="storage/banner/tieu-hoc.jpg" alt="">
-                                    </span>
-                                    Tuyển sinh Tiểu học
-                                </a>
-                            </li>
-                            <li>
-                                <a href="thong-tin-tuyen-sinh-thcs.php" class="sidebar-menu-link">
-                                    <span class="menu-thumb">
-                                        <img src="storage/banner/trung-hoc.jpg" alt="">
-                                    </span>
-                                    Tuyển sinh THCS
-                                </a>
-                            </li>
-                            <li>
-                                <a href="uu-dai-tuyen-sinh.php" class="sidebar-menu-link">
-                                    <span class="menu-thumb">
-                                        <img src="olympia/images/noibat_5.png" alt="">
-                                    </span>
-                                    Ưu đãi tuyển sinh
-                                </a>
-                            </li>
-                            <li>
-                                <a href="hoc-bong-2026-2027.php" class="sidebar-menu-link">
-                                    <span class="menu-thumb">
-                                        <img src="olympia/images/0208.jpg" alt="">
-                                    </span>
-                                    Học bổng 2026-2027
-                                </a>
-                            </li>
-                            <li>
-                                <a href="faq.php" class="sidebar-menu-link">
-                                    <span class="menu-thumb">
-                                        <img src="olympia/images/0206.jpg" alt="">
-                                    </span>
-                                    Câu hỏi thường gặp
-                                </a>
-                            </li>
-                            <li>
-                                <a href="dang-ky-tu-van.php" class="sidebar-menu-link active">
-                                    <span class="menu-thumb">
-                                        <img src="storage/doi-ngu-olym/nguyen-thi-thu-thao.png" alt="">
-                                    </span>
-                                    Đăng ký tư vấn
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="quick-contact-card">
-                        <h5>Liên hệ tuyển sinh</h5>
-                        <p>Hotline tư vấn 24/7</p>
-                        <div class="hotline">0934 525 889</div>
-                        <p>Email: tuyensinh@doanthidiem.edu.vn</p>
-                    </div>
-                </aside>
-
-                <!-- Center Content -->
-                <div class="consultation-content-center">
-                    <div class="content-header">
-                        <h2>Đăng ký tư vấn tuyển sinh</h2>
-                        <p class="content-subtitle">Quý phụ huynh vui lòng điền thông tin vào form bên dưới</p>
-                    </div>
-
-                    <!-- Contact Info Cards -->
-                    <div class="contact-info-section">
-                        <div class="contact-info-card">
-                            <div class="icon">📞</div>
-                            <h4>Hotline</h4>
-                            <div class="value">0934 525 889</div>
-                            <p>Thứ 2 - Thứ 7: 8:00 - 17:00</p>
+        <section class="cs-main">
+            <div class="cs-wrap cs-layout">
+                <div class="cs-content">
+                    <article class="cs-card" data-aos="fade-up">
+                        <h2>Kênh liên hệ nhanh</h2>
+                        <div class="cs-info-grid">
+                            <div class="cs-info-item">
+                                <b>Hotline</b>
+                                <p>0934 525 889<br>Thứ 2 - Thứ 7, 8:00 - 17:00</p>
+                            </div>
+                            <div class="cs-info-item">
+                                <b>Email</b>
+                                <p>tuyensinh@doanthidiem.edu.vn<br>Phản hồi trong 24 giờ</p>
+                            </div>
+                            <div class="cs-info-item">
+                                <b>Địa chỉ</b>
+                                <p>KĐT Trung Văn<br>Nam Từ Liêm, Hà Nội</p>
+                            </div>
                         </div>
-                        <div class="contact-info-card">
-                            <div class="icon">📧</div>
-                            <h4>Email</h4>
-                            <div class="value">tuyensinh@doanthidiem.edu.vn</div>
-                            <p>Phản hồi trong 24h</p>
+                    </article>
+
+                    <article class="cs-card" data-aos="fade-up">
+                        <h2>Biểu mẫu đăng ký</h2>
+                        <p class="cs-form-note">Vui lòng điền đúng thông tin liên hệ để nhà trường kết nối tư vấn thuận tiện nhất.</p>
+
+                        <div class="cs-form-box">
+                            <div class="success-message" id="successMessage">
+                                Cảm ơn quý phụ huynh đã đăng ký! Chúng tôi sẽ liên hệ tư vấn trong vòng 24 giờ.
+                            </div>
+
+                            <form id="consultationForm">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>Họ và tên phụ huynh <span class="required">*</span></label>
+                                        <input type="text" name="parent_name" required placeholder="Nhập họ và tên phụ huynh">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Số điện thoại <span class="required">*</span></label>
+                                        <input type="tel" name="phone" required placeholder="Nhập số điện thoại">
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>Email</label>
+                                        <input type="email" name="email" placeholder="Nhập địa chỉ email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Họ và tên học sinh <span class="required">*</span></label>
+                                        <input type="text" name="student_name" required placeholder="Nhập họ và tên học sinh">
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>Năm sinh của học sinh <span class="required">*</span></label>
+                                        <select name="birth_year" required>
+                                            <option value="">Chọn năm sinh</option>
+                                            <option value="2019">2019 (vào lớp 1 năm 2026)</option>
+                                            <option value="2018">2018</option>
+                                            <option value="2017">2017</option>
+                                            <option value="2016">2016</option>
+                                            <option value="2015">2015</option>
+                                            <option value="2014">2014</option>
+                                            <option value="2013">2013 (vào lớp 6 năm 2026)</option>
+                                            <option value="2012">2012</option>
+                                            <option value="2011">2011</option>
+                                            <option value="2010">2010</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Cấp học quan tâm <span class="required">*</span></label>
+                                        <select name="grade_level" required>
+                                            <option value="">Chọn cấp học</option>
+                                            <option value="tien-tieu-hoc">Tiền tiểu học</option>
+                                            <option value="tieu-hoc">Tiểu học</option>
+                                            <option value="thcs">Trung học cơ sở (THCS)</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Nội dung cần tư vấn</label>
+                                    <textarea name="message" placeholder="Mô tả nội dung bạn cần tư vấn (nếu có)"></textarea>
+                                </div>
+
+                                <div class="form-submit">
+                                    <button type="submit" class="font-garamond-bold">Gửi đăng ký tư vấn</button>
+                                </div>
+                            </form>
                         </div>
-                        <div class="contact-info-card">
-                            <div class="icon">📍</div>
-                            <h4>Địa chỉ</h4>
-                            <div class="value">KĐT Trung Văn</div>
-                            <p>Nam Từ Liêm, Hà Nội</p>
-                        </div>
-                    </div>
+                    </article>
 
-                    <!-- Form -->
-                    <div class="form-container-enhanced">
-                        <div class="success-message" id="successMessage">
-                            Cảm ơn quý phụ huynh đã đăng ký! Chúng tôi sẽ liên hệ tư vấn trong vòng 24 giờ.
-                        </div>
-
-                        <form id="consultationForm">
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label>Họ và tên phụ huynh <span class="required">*</span></label>
-                                    <input type="text" name="parent_name" required placeholder="Nhập họ và tên phụ huynh">
-                                </div>
-                                <div class="form-group">
-                                    <label>Số điện thoại <span class="required">*</span></label>
-                                    <input type="tel" name="phone" required placeholder="Nhập số điện thoại">
-                                </div>
-                            </div>
-
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label>Email</label>
-                                    <input type="email" name="email" placeholder="Nhập địa chỉ email">
-                                </div>
-                                <div class="form-group">
-                                    <label>Họ và tên học sinh <span class="required">*</span></label>
-                                    <input type="text" name="student_name" required placeholder="Nhập họ và tên học sinh">
-                                </div>
-                            </div>
-
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label>Năm sinh của học sinh <span class="required">*</span></label>
-                                    <select name="birth_year" required>
-                                        <option value="">Chọn năm sinh</option>
-                                        <option value="2019">2019 (vào lớp 1 năm 2026)</option>
-                                        <option value="2018">2018</option>
-                                        <option value="2017">2017</option>
-                                        <option value="2016">2016</option>
-                                        <option value="2015">2015</option>
-                                        <option value="2014">2014</option>
-                                        <option value="2013">2013 (vào lớp 6 năm 2026)</option>
-                                        <option value="2012">2012</option>
-                                        <option value="2011">2011</option>
-                                        <option value="2010">2010</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label>Cấp học quan tâm <span class="required">*</span></label>
-                                    <select name="grade_level" required>
-                                        <option value="">Chọn cấp học</option>
-                                        <option value="tien-tieu-hoc">Tiền tiểu học</option>
-                                        <option value="tieu-hoc">Tiểu học</option>
-                                        <option value="thcs">Trung học cơ sở (THCS)</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label>Nội dung cần tư vấn</label>
-                                <textarea name="message" placeholder="Mô tả nội dung bạn cần tư vấn (nếu có)"></textarea>
-                            </div>
-
-                            <div class="form-submit">
-                                <button type="submit" class="font-garamond-bold">Gửi đăng ký</button>
-                            </div>
-                        </form>
-                    </div>
+                    <section class="cs-emphasis" data-aos="fade-up">
+                        <h4>Đặt lịch tham quan trường</h4>
+                        <p>Nếu phụ huynh muốn trải nghiệm trực tiếp môi trường học tập, hãy để lại thông tin trong form hoặc liên hệ hotline để được hỗ trợ lịch tham quan phù hợp.</p>
+                    </section>
                 </div>
 
-                <!-- Right Sidebar -->
-                <aside class="consultation-sidebar-right">
-                    <div class="highlight-card">
-                        <h5>Ưu đãi đăng ký sớm</h5>
-                        <p>Giảm 10% học phí năm đầu cho học sinh đăng ký và đóng phí trước 31/03/2026</p>
-                    </div>
-
-                    <div class="gallery-card">
-                        <h5>Khoảnh khắc tại Meyschool</h5>
-                        <div class="mini-gallery">
-                            <div class="mini-gallery-item">
-                                <img src="olympia/images/0201.jpg" alt="">
-                            </div>
-                            <div class="mini-gallery-item">
-                                <img src="olympia/images/0208.jpg" alt="">
-                            </div>
-                            <div class="mini-gallery-item">
-                                <img src="storage/banner/trung-hoc.jpg" alt="">
-                            </div>
-                            <div class="mini-gallery-item">
-                                <img src="olympia/images/0206.jpg" alt="">
-                            </div>
+                <aside class="cs-side" data-aos="fade-up" data-aos-delay="120">
+                    <div class="cs-side-card">
+                        <h3>Danh mục tuyển sinh</h3>
+                        <div class="cs-side-links">
+                            <a href="thong-tin-tuyen-sinh-tieu-hoc.php">Tuyển sinh Tiểu học</a>
+                            <a href="thong-tin-tuyen-sinh-thcs.php">Tuyển sinh THCS</a>
+                            <a href="uu-dai-tuyen-sinh.php">Ưu đãi tuyển sinh</a>
+                            <a href="hoc-bong-2026-2027.php">Học bổng 2026 - 2027</a>
+                            <a href="cau-hoi-thuong-gap.php">Câu hỏi thường gặp</a>
                         </div>
                     </div>
 
-                    <div class="cta-box">
-                        <h5>Tham quan trường</h5>
-                        <p>Đăng ký tham quan trường miễn phí và trải nghiệm môi trường học tập tại Meyschool</p>
-                        <a href="#" class="cta-btn" onclick="alert('Vui lòng gọi hotline 0934 525 889 để đặt lịch tham quan'); return false;">Đặt lịch tham quan</a>
+                    <div class="cs-side-card">
+                        <h3>Liên hệ tư vấn</h3>
+                        <div class="cs-contact">
+                            <b>Hotline</b>
+                            <span>0934 525 889</span>
+                        </div>
+                        <div class="cs-contact">
+                            <b>Email</b>
+                            <span>tuyensinh@doanthidiem.edu.vn</span>
+                        </div>
+                        <div class="cs-contact" style="margin-bottom: 0;">
+                            <b>Địa chỉ</b>
+                            <span>KĐT Trung Văn, Nam Từ Liêm, Hà Nội</span>
+                        </div>
+                        <div class="cs-actions">
+                            <a href="dang-ky-tham-quan.php" class="cs-btn cs-btn-primary">Đặt lịch tham quan</a>
+                            <a href="lien-he.php" class="cs-btn cs-btn-light">Liên hệ ngay</a>
+                        </div>
                     </div>
                 </aside>
             </div>
-        </div>
+        </section>
     </main>
 
     <?php include 'includes/footer.php'; ?>

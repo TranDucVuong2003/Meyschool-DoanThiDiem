@@ -60,624 +60,495 @@
             z-index: 9000999999999 !important;
         }
 
-        .btn-dk {
-            width: 210px;
-            height: 50px;
-            line-height: 50px;
-            text-align: center;
-            background-color: #1e6f8c;
-            font-size: 14px;
-            font-weight: 600;
-            text-transform: uppercase;
-            border: none;
-            color: #fff;
-            display: inline-block;
-            margin-top: 20px;
-        }
-
-        .btn-full {
-            text-align: center;
-            line-height: 60px;
-        }
-
         body.show-admin-bar {
-            margin-top: 0px !important;
+            margin-top: 0 !important;
         }
 
-        /* Leadership Page - Gallery Style Design */
-        .leadership-container {
-            max-width: 1400px;
+        :root {
+            --ld-blue-1: #439bd4;
+            --ld-blue-2: #4db0e4;
+            --ld-blue-3: #eaf7ff;
+            --ld-ink: #214762;
+        }
+
+        .ld-page {
+            background: radial-gradient(circle at 0% 0%, #eaf7ff 0%, #f6fbff 46%, #ffffff 100%);
+            color: var(--ld-ink);
+        }
+
+        .ld-wrap {
+            width: min(95vw, 1520px);
             margin: 0 auto;
-            padding: 0 20px;
         }
 
-        /* Hero with Split Layout */
-        .leadership-hero {
+        .ld-hero {
             position: relative;
-            min-height: 500px;
-            display: flex;
-            align-items: center;
+            padding: 110px 0 58px;
             overflow: hidden;
-            background: linear-gradient(135deg, #1a1a2e 0%, #1e6f8c 50%, #6a1b9a 100%);
+            background: linear-gradient(132deg, rgba(67, 155, 212, 0.95) 0%, rgba(77, 176, 228, 0.92) 72%, rgba(77, 176, 228, 0.84) 100%), url('storage/banner/ve-chung-toi-web.jpg') center/cover no-repeat;
         }
 
-        .leadership-hero::before {
+        .ld-hero::before,
+        .ld-hero::after {
             content: '';
             position: absolute;
-            top: 0;
-            right: 0;
-            width: 50%;
-            height: 100%;
-            background: url('storage/banner/ve-chung-toi-web.jpg') center/cover no-repeat;
-            opacity: 0.4;
-            clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.18);
+            pointer-events: none;
         }
 
-        .leadership-hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 60px 40px;
-            width: 100%;
+        .ld-hero::before {
+            width: 360px;
+            height: 360px;
+            top: -120px;
+            right: -120px;
         }
 
-        .leadership-hero-badge {
-            display: inline-block;
-            background: #f1cc1f;
-            color: #1e6f8c;
-            padding: 10px 25px;
-            border-radius: 30px;
-            font-size: 14px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 20px;
+        .ld-hero::after {
+            width: 230px;
+            height: 230px;
+            left: -80px;
+            bottom: -90px;
         }
 
-        .leadership-hero h1 {
-            font-family: 'Garamond', serif;
-            font-size: 52px;
+        .ld-breadcrumb {
+            margin: 0 0 14px;
+            display: inline-flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.38);
+            border-radius: 999px;
+            padding: 8px 16px;
+        }
+
+        .ld-breadcrumb li,
+        .ld-breadcrumb li a {
             color: #fff;
-            margin-bottom: 20px;
-            font-weight: 700;
-            max-width: 600px;
-            line-height: 1.2;
+            font-size: 13px;
         }
 
-        .leadership-hero p {
-            font-size: 18px;
-            color: rgba(255, 255, 255, 0.9);
-            max-width: 500px;
-            line-height: 1.7;
-        }
-
-        /* Main Layout */
-        .leadership-main-layout {
+        .ld-hero-grid {
             display: grid;
-            grid-template-columns: 280px 1fr 300px;
-            gap: 35px;
-            padding: 50px 0;
-        }
-
-        /* Left Sidebar */
-        .leadership-sidebar-left {
-            position: sticky;
-            top: 100px;
-            height: fit-content;
-        }
-
-        .ld-nav-card {
-            background: #fff;
-            border-radius: 20px;
-            padding: 25px;
-            box-shadow: 0 8px 30px rgba(71, 24, 115, 0.1);
-            margin-bottom: 25px;
-        }
-
-        .ld-nav-card h4 {
-            font-family: 'Garamond', serif;
-            font-size: 18px;
-            color: #1e6f8c;
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 3px solid #f1cc1f;
-        }
-
-        .ld-nav-menu {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .ld-nav-menu li {
-            margin-bottom: 12px;
-        }
-
-        .ld-nav-link {
-            display: flex;
+            grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr);
+            gap: 24px;
             align-items: center;
-            padding: 12px;
-            color: #555;
-            text-decoration: none;
-            border-radius: 12px;
-            transition: all 0.3s ease;
-            font-size: 13px;
-            font-weight: 500;
-            background: #f8f7fa;
-        }
-
-        .ld-nav-link:hover,
-        .ld-nav-link.active {
-            background: linear-gradient(135deg, #1e6f8c 0%, #5a2a8a 100%);
-            color: #fff;
-            transform: translateX(8px);
-            box-shadow: 0 4px 15px rgba(71, 24, 115, 0.3);
-        }
-
-        .ld-nav-thumb {
-            width: 45px;
-            height: 45px;
-            border-radius: 10px;
-            overflow: hidden;
-            margin-right: 12px;
-            flex-shrink: 0;
-            border: 2px solid #f1cc1f;
-        }
-
-        .ld-nav-thumb img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Quick Stats Card */
-        .ld-quick-stats {
-            background: linear-gradient(135deg, #1e6f8c 0%, #6a1b9a 100%);
-            border-radius: 20px;
-            padding: 25px;
-            color: #fff;
-        }
-
-        .ld-quick-stats h5 {
-            font-family: 'Garamond', serif;
-            font-size: 16px;
-            margin-bottom: 20px;
-            text-align: center;
-            color: #f1cc1f;
-        }
-
-        .ld-stat-row {
-            display: flex;
-            justify-content: space-between;
-            padding: 10px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-            font-size: 13px;
-        }
-
-        .ld-stat-row:last-child {
-            border-bottom: none;
-        }
-
-        .ld-stat-value {
-            font-weight: 700;
-            color: #f1cc1f;
-        }
-
-        /* Center Content - Leadership Gallery */
-        .leadership-content-center {
-            background: #fff;
-            border-radius: 24px;
-            padding: 50px 40px;
-            box-shadow: 0 8px 40px rgba(71, 24, 115, 0.08);
-        }
-
-        .leadership-intro {
-            text-align: center;
-            margin-bottom: 50px;
-            padding-bottom: 40px;
-            border-bottom: 2px solid #f0eef2;
-        }
-
-        .leadership-intro h2 {
-            font-family: 'Garamond', serif;
-            font-size: 36px;
-            color: #1e6f8c;
-            margin-bottom: 15px;
-        }
-
-        .leadership-intro p {
-            font-size: 16px;
-            color: #666;
-            line-height: 1.8;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        /* Featured Leader - Large Card */
-        .featured-leader {
-            display: grid;
-            grid-template-columns: 350px 1fr;
-            gap: 40px;
-            background: linear-gradient(135deg, #faf9fb 0%, #f5f3f7 100%);
-            border-radius: 24px;
-            padding: 40px;
-            margin-bottom: 50px;
-            border: 2px solid #f1cc1f;
             position: relative;
-            overflow: hidden;
+            z-index: 1;
         }
 
-        .featured-leader::before {
-            content: 'Hiệu Trưởng';
-            position: absolute;
-            top: 20px;
-            right: -30px;
-            background: #f1cc1f;
-            color: #1e6f8c;
-            padding: 8px 40px;
-            font-size: 12px;
-            font-weight: 700;
-            text-transform: uppercase;
-            transform: rotate(45deg);
-            letter-spacing: 1px;
-        }
-
-        .featured-image {
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-        }
-
-        .featured-image img {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .featured-image:hover img {
-            transform: scale(1.05);
-        }
-
-        .featured-info h3 {
+        .ld-hero h1 {
+            margin: 0;
+            color: #fff;
             font-family: 'Garamond', serif;
-            font-size: 32px;
-            color: #1e6f8c;
-            margin-bottom: 8px;
+            font-size: clamp(34px, 4.6vw, 62px);
+            line-height: 1.06;
+            max-width: 860px;
         }
 
-        .featured-role {
-            font-size: 16px;
-            color: #f1cc1f;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 25px;
+        .ld-hero p {
+            margin: 16px 0 0;
+            color: rgba(255, 255, 255, 0.95);
+            line-height: 1.78;
+            font-size: 17px;
+            max-width: 820px;
         }
 
-        .featured-bio {
-            font-size: 15px;
-            color: #555;
-            line-height: 1.9;
-            margin-bottom: 25px;
-        }
-
-        .featured-achievements h4 {
-            font-family: 'Garamond', serif;
-            font-size: 18px;
-            color: #1e6f8c;
-            margin-bottom: 15px;
-        }
-
-        .achievement-tags {
+        .ld-chips {
+            margin-top: 18px;
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
         }
 
-        .achievement-tag {
-            background: #fff;
-            color: #1e6f8c;
-            padding: 8px 16px;
-            border-radius: 20px;
+        .ld-chips span {
+            display: inline-flex;
+            align-items: center;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
             font-size: 13px;
-            font-weight: 500;
-            border: 1px solid #e8e5ec;
+            font-weight: 700;
+            padding: 8px 12px;
         }
 
-        /* Leadership Team Grid */
-        .leadership-team-section {
-            margin-bottom: 50px;
+        .ld-hero-card {
+            background: rgba(255, 255, 255, 0.94);
+            border: 1px solid rgba(67, 155, 212, 0.24);
+            border-radius: 22px;
+            box-shadow: 0 16px 32px rgba(13, 54, 88, 0.22);
+            padding: 16px;
         }
 
-        .team-section-title {
-            font-family: 'Garamond', serif;
-            font-size: 28px;
-            color: #1e6f8c;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-
-        .leadership-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-        }
-
-        .leader-card {
-            background: #fff;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-            transition: all 0.4s ease;
-            border: 1px solid #f0eef2;
-        }
-
-        .leader-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 40px rgba(71, 24, 115, 0.2);
-        }
-
-        .leader-card-image {
-            height: 250px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .leader-card-image img {
+        .ld-hero-card img {
             width: 100%;
-            height: 100%;
+            height: 220px;
+            border-radius: 14px;
             object-fit: cover;
-            transition: transform 0.5s ease;
+            display: block;
+            margin-bottom: 10px;
         }
 
-        .leader-card:hover .leader-card-image img {
-            transform: scale(1.1);
-        }
-
-        .leader-card-badge {
-            position: absolute;
-            bottom: 15px;
-            left: 15px;
-            background: #f1cc1f;
-            color: #1e6f8c;
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 600;
-            text-transform: uppercase;
-        }
-
-        .leader-card-info {
-            padding: 25px;
-        }
-
-        .leader-card-info h4 {
-            font-family: 'Garamond', serif;
-            font-size: 22px;
-            color: #1e6f8c;
-            margin-bottom: 5px;
-        }
-
-        .leader-card-role {
-            font-size: 14px;
-            color: #888;
-            margin-bottom: 15px;
-        }
-
-        .leader-card-desc {
-            font-size: 14px;
-            color: #666;
-            line-height: 1.6;
-        }
-
-        .leader-card-achievements {
-            margin-top: 15px;
-            padding-top: 15px;
-            border-top: 1px dashed #e8e5ec;
-        }
-
-        .leader-card-achievements ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .leader-card-achievements li {
-            font-size: 13px;
-            color: #666;
-            padding: 4px 0;
-            padding-left: 20px;
-            position: relative;
-        }
-
-        .leader-card-achievements li::before {
-            content: '•';
-            position: absolute;
-            left: 0;
-            color: #f1cc1f;
-            font-weight: bold;
-            font-size: 18px;
-            line-height: 1;
-        }
-
-        /* Right Sidebar */
-        .leadership-sidebar-right {
-            position: sticky;
-            top: 100px;
-            height: fit-content;
-        }
-
-        .ld-gallery-card {
-            background: #fff;
-            border-radius: 20px;
-            padding: 25px;
-            box-shadow: 0 8px 30px rgba(71, 24, 115, 0.1);
-            margin-bottom: 25px;
-        }
-
-        .ld-gallery-card h5 {
-            font-family: 'Garamond', serif;
-            font-size: 16px;
-            color: #1e6f8c;
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 3px solid #f1cc1f;
-        }
-
-        .ld-gallery-grid {
+        .ld-hero-metrics {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(3, minmax(0, 1fr));
             gap: 10px;
         }
 
-        .ld-gallery-item {
+        .ld-hero-metrics div {
+            border: 1px solid rgba(67, 155, 212, 0.2);
+            border-radius: 12px;
+            background: #fff;
+            padding: 10px;
+        }
+
+        .ld-hero-metrics b {
+            display: block;
+            color: #2d7bb1;
+            font-size: 23px;
+            margin-bottom: 4px;
+        }
+
+        .ld-hero-metrics span {
+            color: #4b6f8c;
+            font-size: 12px;
+            line-height: 1.45;
+        }
+
+        .ld-content {
+            padding: 40px 0 72px;
+        }
+
+        .ld-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1.35fr) minmax(290px, 0.65fr);
+            gap: 24px;
+        }
+
+        .ld-main {
+            display: grid;
+            gap: 24px;
+        }
+
+        .ld-card,
+        .ld-side-card {
+            background: #fff;
+            border: 1px solid rgba(67, 155, 212, 0.16);
+            border-radius: 20px;
+            box-shadow: 0 12px 24px rgba(16, 49, 79, 0.08);
+            padding: 22px;
+        }
+
+        .ld-card h2,
+        .ld-side-card h3 {
+            margin: 0 0 12px;
+            color: #236c9d;
+            font-family: 'Garamond', serif;
+            font-size: 33px;
+            line-height: 1.2;
+            padding: 0 !important;
+        }
+
+        .ld-card p,
+        .ld-card li,
+        .ld-side-card p,
+        .ld-side-card li {
+            color: #3f6686;
+            font-size: 15px;
+            line-height: 1.76;
+        }
+
+        .ld-feature {
+            display: grid;
+            grid-template-columns: 260px minmax(0, 1fr);
+            gap: 16px;
+            border: 1px solid rgba(67, 155, 212, 0.22);
+            border-radius: 16px;
+            padding: 14px;
+            background: linear-gradient(120deg, #f4fbff 0%, #eaf7ff 100%);
+        }
+
+        .ld-feature img {
+            width: 100%;
+            height: 230px;
+            border-radius: 12px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .ld-feature h4 {
+            margin: 0 0 4px;
+            font-size: 24px;
+            color: #2d7bb1;
+            font-family: 'Garamond', serif;
+        }
+
+        .ld-role {
+            margin: 0 0 10px;
+            color: #4f7a9c;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+        }
+
+        .ld-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .ld-tags span {
+            border-radius: 999px;
+            border: 1px solid rgba(67, 155, 212, 0.26);
+            background: #fff;
+            color: #2d7bb1;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 6px 10px;
+        }
+
+        .ld-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+            margin-top: 12px;
+        }
+
+        .ld-member {
+            border: 1px solid rgba(67, 155, 212, 0.2);
+            border-radius: 14px;
+            overflow: hidden;
+            background: #fff;
+        }
+
+        .ld-member img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .ld-member-body {
+            padding: 12px;
+        }
+
+        .ld-member h5 {
+            margin: 0 0 4px;
+            color: #2f79ad;
+            font-size: 18px;
+            font-family: 'Garamond', serif;
+        }
+
+        .ld-member small {
+            display: block;
+            color: #5f7f99;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            margin-bottom: 6px;
+        }
+
+        .ld-member p {
+            margin: 0;
+            font-size: 14px;
+            line-height: 1.65;
+        }
+
+        .ld-gallery {
+            display: grid;
+            grid-template-columns: repeat(6, minmax(0, 1fr));
+            grid-auto-flow: dense;
+            gap: 10px;
+        }
+
+        .ld-gallery figure {
+            margin: 0;
             border-radius: 12px;
             overflow: hidden;
-            aspect-ratio: 1;
+            min-height: 180px;
+            position: relative;
+            box-shadow: 0 10px 20px rgba(16, 49, 79, 0.12);
         }
 
-        .ld-gallery-item.featured {
-            grid-column: span 2;
-            aspect-ratio: 16/9;
-        }
-
-        .ld-gallery-item img {
+        .ld-gallery img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.5s ease;
+            display: block;
         }
 
-        .ld-gallery-item:hover img {
-            transform: scale(1.1);
+        .ld-gallery figure.tall {
+            grid-column: span 2;
+            grid-row: span 2;
+            min-height: 370px;
         }
 
-        /* Contact CTA */
-        .ld-contact-cta {
-            background: linear-gradient(135deg, #f1cc1f 0%, #e5b81a 100%);
-            border-radius: 20px;
-            padding: 30px 25px;
-            text-align: center;
+        .ld-gallery figure.wide {
+            grid-column: span 4;
         }
 
-        .ld-contact-cta h5 {
-            font-family: 'Garamond', serif;
-            font-size: 22px;
-            color: #1e6f8c;
-            margin-bottom: 15px;
+        .ld-gallery figure.small {
+            grid-column: span 2;
         }
 
-        .ld-contact-cta p {
-            font-size: 14px;
-            color: #1e6f8c;
-            margin-bottom: 20px;
-            line-height: 1.6;
-            opacity: 0.9;
-        }
-
-        .ld-cta-btn {
-            display: inline-block;
-            background: #1e6f8c;
+        .ld-gallery figcaption {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
             color: #fff;
-            padding: 14px 30px;
-            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 700;
+            padding: 10px 12px;
+            background: linear-gradient(to top, rgba(20, 60, 92, 0.88), rgba(20, 60, 92, 0));
+        }
+
+        .ld-side {
+            display: grid;
+            gap: 16px;
+            align-self: start;
+        }
+
+        .ld-links {
+            display: grid;
+            gap: 10px;
+        }
+
+        .ld-links a {
+            display: block;
             text-decoration: none;
+            color: #2f638f;
+            border: 1px solid rgba(67, 155, 212, 0.18);
+            border-radius: 12px;
+            background: #f9fdff;
+            padding: 10px 12px;
+            font-size: 14px;
+            line-height: 1.55;
+        }
+
+        .ld-links a:hover {
+            background: #eaf7ff;
+        }
+
+        .ld-contact-item {
+            background: #f7fcff;
+            border: 1px solid rgba(67, 155, 212, 0.22);
+            border-radius: 12px;
+            padding: 10px 12px;
+            margin-bottom: 10px;
+        }
+
+        .ld-contact-item b {
+            display: block;
+            color: #2d7bb1;
+            font-size: 13px;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        .ld-contact-item span {
+            color: #204c70;
             font-weight: 600;
             font-size: 14px;
-            transition: all 0.3s ease;
+            line-height: 1.5;
         }
 
-        .ld-cta-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(71, 24, 115, 0.4);
+        .ld-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 12px;
         }
 
-        /* Responsive */
-        @media (max-width: 1200px) {
-            .leadership-main-layout {
-                grid-template-columns: 240px 1fr 240px;
-                gap: 25px;
-            }
-
-            .featured-leader {
-                grid-template-columns: 280px 1fr;
-            }
+        .ld-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 44px;
+            padding: 10px 16px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            font-weight: 700;
+            border: 1px solid transparent;
         }
 
-        @media (max-width: 991px) {
-            .leadership-hero h1 {
-                font-size: 36px;
-            }
+        .ld-btn-primary {
+            color: #fff;
+            background: linear-gradient(120deg, var(--ld-blue-1), var(--ld-blue-2));
+            box-shadow: 0 10px 20px rgba(67, 155, 212, 0.24);
+        }
 
-            .leadership-main-layout {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
+        .ld-btn-light {
+            color: #2b79af;
+            background: #f7fcff;
+            border-color: rgba(67, 155, 212, 0.25);
+        }
 
-            .leadership-sidebar-left,
-            .leadership-sidebar-right {
-                position: static;
-            }
+        @media (max-width: 1180px) {
 
-            .featured-leader {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .featured-leader::before {
-                display: none;
-            }
-
-            .featured-image img {
-                height: 300px;
-            }
-
-            .achievement-tags {
-                justify-content: center;
-            }
-
-            .leadership-grid {
+            .ld-hero-grid,
+            .ld-layout {
                 grid-template-columns: 1fr;
             }
 
-            .ld-gallery-grid {
-                grid-template-columns: repeat(4, 1fr);
+            .ld-grid {
+                grid-template-columns: 1fr;
             }
 
-            .ld-gallery-item.featured {
-                grid-column: span 2;
+            .ld-gallery {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .ld-gallery figure.tall,
+            .ld-gallery figure.wide,
+            .ld-gallery figure.small {
+                grid-column: span 1;
+                grid-row: span 1;
+                min-height: 220px;
             }
         }
 
         @media (max-width: 768px) {
-            .leadership-hero {
-                min-height: 400px;
+            .ld-wrap {
+                width: min(94vw, 1520px);
             }
 
-            .leadership-hero h1 {
-                font-size: 28px;
+            .ld-hero {
+                padding: 94px 0 42px;
             }
 
-            .leadership-content-center {
-                padding: 30px 20px;
+            .ld-hero p {
+                font-size: 15px;
             }
 
-            .featured-leader {
-                padding: 25px;
+            .ld-hero-metrics {
+                grid-template-columns: 1fr;
             }
 
-            .featured-image img {
+            .ld-card,
+            .ld-side-card {
+                padding: 16px;
+                border-radius: 16px;
+            }
+
+            .ld-feature {
+                grid-template-columns: 1fr;
+            }
+
+            .ld-feature img {
                 height: 250px;
             }
 
-            .leader-card-image {
-                height: 200px;
-            }
-
-            .ld-gallery-grid {
-                grid-template-columns: repeat(2, 1fr);
+            .ld-gallery {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -687,241 +558,169 @@
     <?php include 'includes/header.php'; ?>
     <div class="overlay_mark_search" style="display:none;"></div>
 
-    <main class="body-content">
-        <!-- Hero Section -->
-        <section class="leadership-hero">
-            <div class="leadership-hero-content leadership-container">
-                <div class="leadership-hero-text">
-                    <span class="leadership-hero-badge">Về chúng tôi</span>
-                    <h1>Ban lãnh đạo Meyschool</h1>
-                    <p>"Đội ngũ lãnh đạo tận tâm, giàu kinh nghiệm - Kiến tạo nền giáo dục vững chắc cho thế hệ tương lai"</p>
+    <main class="body-content ld-page">
+        <section class="ld-hero">
+            <div class="ld-wrap" data-aos="fade-up">
+                <div class="ld-hero-grid">
+                    <div>
+                        <ol class="breadcrumb ld-breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.php">Trang chủ</a></li>
+                            <li class="breadcrumb-item"><a href="ve-chung-toi.php">Về chúng tôi</a></li>
+                            <li class="breadcrumb-item active">Ban lãnh đạo</li>
+                        </ol>
+
+                        <h1>Ban lãnh đạo Meyschool Đoàn Thị Điểm</h1>
+                        <p>Đội ngũ lãnh đạo hội tụ chuyên môn sâu, kinh nghiệm quản lý giáo dục và tinh thần đổi mới, cùng xây dựng môi trường học tập nhân văn, hiện đại và hội nhập cho học sinh.</p>
+
+                        <div class="ld-chips">
+                            <span>Lãnh đạo học thuật</span>
+                            <span>Quản trị hiện đại</span>
+                            <span>Đồng hành cùng phụ huynh</span>
+                        </div>
+                    </div>
+
+                    <div class="ld-hero-card">
+                        <img src="storage/doi-ngu-olym/nguyen-thi-thu-thao.png" alt="Ban lãnh đạo Meyschool Đoàn Thị Điểm">
+                        <div class="ld-hero-metrics">
+                            <div><b>04</b><span>Nhân sự nòng cốt</span></div>
+                            <div><b>20+</b><span>Năm kinh nghiệm trung bình</span></div>
+                            <div><b>100%</b><span>Sau đại học và chứng chỉ chuyên môn</span></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Breadcrumb -->
-        <div class="leadership-container" style="padding-top: 20px;">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.php">Trang chủ</a></li>
-                <li class="breadcrumb-item"><a href="ve-chung-toi.php">Về chúng tôi</a></li>
-                <li class="breadcrumb-item active">Ban lãnh đạo</li>
-            </ol>
-        </div>
-
-        <!-- Main Layout -->
-        <div class="leadership-container">
-            <div class="leadership-main-layout">
-                <!-- Left Sidebar -->
-                <aside class="leadership-sidebar-left">
-                    <div class="ld-nav-card">
-                        <h4>Khám phá thêm</h4>
-                        <ul class="ld-nav-menu">
-                            <li>
-                                <a href="thong-diep-nguoi-sang-lap.php" class="ld-nav-link">
-                                    <span class="ld-nav-thumb">
-                                        <img src="storage/doi-ngu-olym/nguyen-thi-thu-thao.png" alt="">
-                                    </span>
-                                    Thông điệp Nhà sáng lập
-                                </a>
-                            </li>
-                            <li>
-                                <a href="tam-nhin-su-menh.php" class="ld-nav-link">
-                                    <span class="ld-nav-thumb">
-                                        <img src="storage/banner/ve-chung-toi-web.jpg" alt="">
-                                    </span>
-                                    Tầm nhìn - Sứ mệnh
-                                </a>
-                            </li>
-                            <li>
-                                <a href="ban-lanh-dao.php" class="ld-nav-link active">
-                                    <span class="ld-nav-thumb">
-                                        <img src="storage/doi-ngu-olym/dang-thu-huong-2.jpg" alt="">
-                                    </span>
-                                    Ban lãnh đạo
-                                </a>
-                            </li>
-                            <li>
-                                <a href="doi-ngu-giao-vien.php" class="ld-nav-link">
-                                    <span class="ld-nav-thumb">
-                                        <img src="storage/doi-ngu-olym/nguyen-hanh-chi-ucc.png" alt="">
-                                    </span>
-                                    Đội ngũ giáo viên
-                                </a>
-                            </li>
-                            <li>
-                                <a href="chan-dung-hoc-sinh.php" class="ld-nav-link">
-                                    <span class="ld-nav-thumb">
-                                        <img src="storage/banner/trung-hoc.jpg" alt="">
-                                    </span>
-                                    Chân dung học sinh
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="ld-quick-stats">
-                        <h5>Thống kê nhanh</h5>
-                        <div class="ld-stat-row">
-                            <span>Ban lãnh đạo</span>
-                            <span class="ld-stat-value">04</span>
-                        </div>
-                        <div class="ld-stat-row">
-                            <span>Năm kinh nghiệm TB</span>
-                            <span class="ld-stat-value">20+</span>
-                        </div>
-                        <div class="ld-stat-row">
-                            <span>Thạc sĩ/Tiến sĩ</span>
-                            <span class="ld-stat-value">100%</span>
-                        </div>
-                        <div class="ld-stat-row">
-                            <span>Chứng chỉ quốc tế</span>
-                            <span class="ld-stat-value">05</span>
-                        </div>
-                    </div>
-                </aside>
-
-                <!-- Center Content -->
-                <div class="leadership-content-center">
-                    <div class="leadership-intro">
-                        <h2 class="font-garamond-bold">Ban lãnh đạo Meyschool</h2>
-                        <p>Đội ngũ lãnh đạo của chúng tôi là những chuyên gia giáo dục giàu kinh nghiệm, tận tâm với sứ mệnh kiến tạo nền giáo dục chất lượng cao. Với tầm nhìn chiến lược và năng lực quản lý vượt trội, họ đã và đang dẫn dắt Meyschool trở thành ngôi trường hàng đầu.</p>
-                    </div>
-
-                    <!-- Featured Leader -->
-                    <div class="featured-leader">
-                        <div class="featured-image">
-                            <img src="storage/doi-ngu-olym/nguyen-thi-thu-thao.png" alt="Hiệu trưởng">
-                        </div>
-                        <div class="featured-info">
-                            <h3>Cô Nguyễn Thị Thu Thảo</h3>
-                            <p class="featured-role">Hiệu trưởng - Người sáng lập</p>
-                            <p class="featured-bio">Với hơn 25 năm kinh nghiệm trong lĩnh vực giáo dục, cô Thu Thảo đã xây dựng Meyschool với tầm nhìn trở thành ngôi trường hàng đầu tại Phú Quốc. Cô tin rằng mỗi học sinh đều có tiềm năng đặc biệt và sứ mệnh của nhà trường là giúp các em phát hiện và phát triển thế mạnh đó.</p>
-                            <div class="featured-achievements">
-                                <h4>Thành tựu nổi bật</h4>
-                                <div class="achievement-tags">
-                                    <span class="achievement-tag">Thạc sĩ Quản lý Giáo dục - Harvard</span>
-                                    <span class="achievement-tag">Cử nhân Sư phạm Toán</span>
-                                    <span class="achievement-tag">25 năm kinh nghiệm</span>
-                                    <span class="achievement-tag">Nhà giáo tiêu biểu 2020</span>
+        <section class="ld-content">
+            <div class="ld-wrap ld-layout">
+                <div class="ld-main">
+                    <article class="ld-card" data-aos="fade-up">
+                        <h2>Chân dung lãnh đạo nổi bật</h2>
+                        <div class="ld-feature">
+                            <img src="storage/doi-ngu-olym/nguyen-thi-thu-thao.png" alt="Cô Nguyễn Thị Thu Thảo">
+                            <div>
+                                <h4>Cô Nguyễn Thị Thu Thảo</h4>
+                                <p class="ld-role">Hiệu trưởng - Người sáng lập</p>
+                                <p>Với hơn 25 năm kinh nghiệm trong lĩnh vực giáo dục, cô Thu Thảo theo đuổi triết lý lấy học sinh làm trung tâm, chú trọng phát triển toàn diện và đề cao năng lực học tập suốt đời. Định hướng của cô là xây dựng một cộng đồng học tập giàu cảm hứng, nơi học sinh được khích lệ để tự tin khám phá thế mạnh cá nhân.</p>
+                                <div class="ld-tags">
+                                    <span>Quản lý giáo dục</span>
+                                    <span>Phát triển chương trình</span>
+                                    <span>Lãnh đạo trường học</span>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </article>
 
-                    <!-- Leadership Team -->
-                    <div class="leadership-team-section">
-                        <h3 class="team-section-title font-garamond-bold">Ban lãnh đạo</h3>
-                        <div class="leadership-grid">
-                            <div class="leader-card">
-                                <div class="leader-card-image">
-                                    <img src="storage/doi-ngu-olym/nguyen-thi-hang-pho-hieu-truong-th-thcs-thac-si-giao-duc-dai-hoc-su-pham-ha-noi.png" alt="Phó Hiệu trưởng">
-                                    <span class="leader-card-badge">Phó Hiệu trưởng</span>
-                                </div>
-                                <div class="leader-card-info">
-                                    <h4>Cô Nguyễn Thị Hằng</h4>
-                                    <p class="leader-card-role">Phụ trách Chuyên môn</p>
-                                    <p class="leader-card-desc">Đảm nhiệm vai trò phát triển chương trình giảng dạy và đảm bảo chất lượng đào tạo. Xây dựng đội ngũ giáo viên xuất sắc.</p>
-                                    <div class="leader-card-achievements">
-                                        <ul>
-                                            <li>Thạc sĩ Giáo dục - ĐH Sư phạm HN</li>
-                                            <li>Chứng chỉ IB Educator</li>
-                                            <li>20 năm kinh nghiệm</li>
-                                        </ul>
-                                    </div>
+                    <article class="ld-card" data-aos="fade-up">
+                        <h2>Đội ngũ ban lãnh đạo</h2>
+                        <div class="ld-grid">
+                            <div class="ld-member">
+                                <img src="storage/doi-ngu-olym/nguyen-thi-hang-pho-hieu-truong-th-thcs-thac-si-giao-duc-dai-hoc-su-pham-ha-noi.png" alt="Cô Nguyễn Thị Hằng">
+                                <div class="ld-member-body">
+                                    <h5>Cô Nguyễn Thị Hằng</h5>
+                                    <small>Phó Hiệu trưởng - Chuyên môn</small>
+                                    <p>Dẫn dắt công tác học thuật, chuẩn hóa chất lượng giảng dạy và phát triển đội ngũ giáo viên theo định hướng đổi mới.</p>
                                 </div>
                             </div>
 
-                            <div class="leader-card">
-                                <div class="leader-card-image">
-                                    <img src="storage/doi-ngu-olym/dang-thu-huong-2.jpg" alt="Trưởng khối">
-                                    <span class="leader-card-badge">Trưởng khối</span>
-                                </div>
-                                <div class="leader-card-info">
-                                    <h4>Cô Đặng Thu Hương</h4>
-                                    <p class="leader-card-role">Trưởng khối Tiểu học</p>
-                                    <p class="leader-card-desc">Chuyên phụ trách phát triển chương trình giáo dục khối Tiểu học, đảm bảo nền tảng vững chắc cho học sinh.</p>
-                                    <div class="leader-card-achievements">
-                                        <ul>
-                                            <li>Thạc sĩ Tâm lý Giáo dục</li>
-                                            <li>Chuyên gia Montessori</li>
-                                            <li>15 năm kinh nghiệm</li>
-                                        </ul>
-                                    </div>
+                            <div class="ld-member">
+                                <img src="storage/doi-ngu-olym/dang-thu-huong-2.jpg" alt="Cô Đặng Thu Hương">
+                                <div class="ld-member-body">
+                                    <h5>Cô Đặng Thu Hương</h5>
+                                    <small>Trưởng khối Tiểu học</small>
+                                    <p>Phụ trách nền tảng học thuật và kỹ năng cho học sinh tiểu học, đảm bảo lộ trình phát triển phù hợp từng độ tuổi.</p>
                                 </div>
                             </div>
 
-                            <div class="leader-card">
-                                <div class="leader-card-image">
-                                    <img src="storage/doi-ngu-olym/nguyen-thi-tam-hien.png" alt="Trưởng phòng">
-                                    <span class="leader-card-badge">Trưởng phòng</span>
-                                </div>
-                                <div class="leader-card-info">
-                                    <h4>Cô Nguyễn Thị Tâm Hiền</h4>
-                                    <p class="leader-card-role">Đào tạo & Phát triển</p>
-                                    <p class="leader-card-desc">Phụ trách công tác đào tạo giáo viên và phát triển chương trình học, đưa phương pháp tiên tiến vào nhà trường.</p>
-                                    <div class="leader-card-achievements">
-                                        <ul>
-                                            <li>Thạc sĩ Quản lý Giáo dục</li>
-                                            <li>Chuyên gia đào tạo GV</li>
-                                            <li>12 năm phát triển CT</li>
-                                        </ul>
-                                    </div>
+                            <div class="ld-member">
+                                <img src="storage/doi-ngu-olym/nguyen-thi-tam-hien.png" alt="Cô Nguyễn Thị Tâm Hiền">
+                                <div class="ld-member-body">
+                                    <h5>Cô Nguyễn Thị Tâm Hiền</h5>
+                                    <small>Đào tạo và phát triển</small>
+                                    <p>Tổ chức đào tạo giáo viên và triển khai các sáng kiến cải tiến chương trình, thúc đẩy chất lượng dạy học bền vững.</p>
                                 </div>
                             </div>
 
-                            <div class="leader-card">
-                                <div class="leader-card-image">
-                                    <img src="storage/doi-ngu-olym/tran-quoc-dan-2.png" alt="Trưởng phòng">
-                                    <span class="leader-card-badge">Trưởng phòng</span>
-                                </div>
-                                <div class="leader-card-info">
-                                    <h4>Thầy Trần Quốc Dân</h4>
-                                    <p class="leader-card-role">Quan hệ Quốc tế</p>
-                                    <p class="leader-card-desc">Phụ trách phát triển chương trình quốc tế, liên kết với các đối tác giáo dục toàn cầu và tổ chức trao đổi học sinh.</p>
-                                    <div class="leader-card-achievements">
-                                        <ul>
-                                            <li>Thạc sĩ Quan hệ Quốc tế</li>
-                                            <li>Chứng chỉ IB Coordinator</li>
-                                            <li>10 năm hợp tác QT</li>
-                                        </ul>
-                                    </div>
+                            <div class="ld-member">
+                                <img src="storage/doi-ngu-olym/tran-quoc-dan-2.png" alt="Thầy Trần Quốc Dân">
+                                <div class="ld-member-body">
+                                    <h5>Thầy Trần Quốc Dân</h5>
+                                    <small>Quan hệ quốc tế</small>
+                                    <p>Phát triển hợp tác quốc tế, kết nối các chương trình học thuật toàn cầu và mở rộng cơ hội hội nhập cho học sinh.</p>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </article>
+
+                    <article class="ld-card" data-aos="fade-up">
+                        <h2>Khoảnh khắc lãnh đạo</h2>
+                        <div class="ld-gallery">
+                            <figure class="tall">
+                                <img src="storage/banner/ve-chung-toi-web.jpg" alt="Ban lãnh đạo trong hoạt động trường học">
+                                <figcaption>Ban lãnh đạo đồng hành cùng các hoạt động trọng điểm của nhà trường</figcaption>
+                            </figure>
+                            <figure class="small">
+                                <img src="storage/banner/tieu-hoc.jpg" alt="Lãnh đạo tham gia hoạt động với học sinh">
+                                <figcaption>Kết nối gần gũi với học sinh</figcaption>
+                            </figure>
+                            <figure class="small">
+                                <img src="olympia/images/0201.jpg" alt="Không gian làm việc và học tập tại trường">
+                                <figcaption>Định hướng không gian học tập hiện đại</figcaption>
+                            </figure>
+                            <figure class="wide">
+                                <img src="storage/banner/trung-hoc.jpg" alt="Các chương trình phát triển tại Meyschool">
+                                <figcaption>Kiến tạo chương trình phát triển toàn diện từ tiểu học đến trung học</figcaption>
+                            </figure>
+                            <figure class="small">
+                                <img src="olympia/images/0202.jpg" alt="Hoạt động chuyên môn giáo viên">
+                                <figcaption>Đầu tư cho đội ngũ giáo viên chất lượng cao</figcaption>
+                            </figure>
+                            <figure class="small">
+                                <img src="olympia/images/0206.jpg" alt="Sự kiện cộng đồng của nhà trường">
+                                <figcaption>Xây dựng cộng đồng học tập nhân văn và hợp tác</figcaption>
+                            </figure>
+                        </div>
+                    </article>
                 </div>
 
-                <!-- Right Sidebar -->
-                <aside class="leadership-sidebar-right">
-                    <div class="ld-gallery-card">
-                        <h5>Khoảnh khắc lãnh đạo</h5>
-                        <div class="ld-gallery-grid">
-                            <div class="ld-gallery-item featured">
-                                <img src="storage/banner/ve-chung-toi-web.jpg" alt="">
-                            </div>
-                            <div class="ld-gallery-item">
-                                <img src="storage/banner/tieu-hoc.jpg" alt="">
-                            </div>
-                            <div class="ld-gallery-item">
-                                <img src="olympia/images/0201.jpg" alt="">
-                            </div>
-                            <div class="ld-gallery-item">
-                                <img src="olympia/images/0202.jpg" alt="">
-                            </div>
-                            <div class="ld-gallery-item">
-                                <img src="storage/banner/trung-hoc.jpg" alt="">
-                            </div>
+                <aside class="ld-side" data-aos="fade-up" data-aos-delay="120">
+                    <div class="ld-side-card">
+                        <h3>Khám phá thêm</h3>
+                        <div class="ld-links">
+                            <a href="thong-diep-nguoi-sang-lap.php">Thông điệp Nhà sáng lập</a>
+                            <a href="tam-nhin-su-menh.php">Tầm nhìn - Sứ mệnh</a>
+                            <a href="doi-ngu-giao-vien.php">Đội ngũ giáo viên</a>
+                            <a href="chan-dung-hoc-sinh.php">Chân dung học sinh</a>
                         </div>
                     </div>
 
-                    <div class="ld-contact-cta">
-                        <h5>Liên hệ ban lãnh đạo</h5>
-                        <p>Quý phụ huynh có thể liên hệ trực tiếp với ban lãnh đạo để tìm hiểu thêm về chương trình giáo dục</p>
-                        <a href="lien-he.php" class="ld-cta-btn">Liên hệ ngay</a>
+                    <div class="ld-side-card">
+                        <h3>Thông tin nhanh</h3>
+                        <p>Ban lãnh đạo duy trì đối thoại thường xuyên với giáo viên và phụ huynh nhằm đảm bảo các quyết định quản trị luôn nhất quán với mục tiêu phát triển học sinh.</p>
+                    </div>
+
+                    <div class="ld-side-card">
+                        <h3>Liên hệ</h3>
+                        <div class="ld-contact-item">
+                            <b>Hotline</b>
+                            <span>0934 525 889</span>
+                        </div>
+                        <div class="ld-contact-item">
+                            <b>Email</b>
+                            <span>info@meyschool.edu.vn</span>
+                        </div>
+                        <div class="ld-contact-item" style="margin-bottom: 0;">
+                            <b>Địa chỉ</b>
+                            <span>KĐT Trung Văn, Nam Từ Liêm, Hà Nội</span>
+                        </div>
+                        <div class="ld-actions">
+                            <a href="dang-ky-tu-van.php" class="ld-btn ld-btn-primary">Đăng ký tư vấn</a>
+                            <a href="lien-he.php" class="ld-btn ld-btn-light">Liên hệ ngay</a>
+                        </div>
                     </div>
                 </aside>
             </div>
-        </div>
+        </section>
     </main>
 
     <?php include 'includes/footer.php'; ?>

@@ -8,7 +8,9 @@
     <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=1"
         name="viewport" />
 
-    <link rel="shortcut icon" href="storage/favicon.png">
+    <link rel="icon" type="image/png" href="storage/favicon.png?v=20260320-1">
+    <link rel="shortcut icon" type="image/png" href="storage/favicon.png?v=20260320-1">
+    <link rel="apple-touch-icon" href="storage/favicon.png?v=20260320-1">
 
     <title>Học bổng 2026-2027 - Meyschool Đoàn Thị Điểm</title>
     <meta name="description" content="Chương trình học bổng năm học 2026-2027 tại Meyschool Đoàn Thị Điểm">
@@ -34,7 +36,7 @@
     <link rel="stylesheet" href="olympia/css/fonts.css">
     <link rel="stylesheet" href="olympia/css/style.css">
     <link rel="stylesheet" href="olympia/css/styles-new.css">
-    <link type="image/x-icon" href="#" rel="shortcut icon" />
+
     <link rel="stylesheet" type="text/css" href="olympia/css/slick.css">
     <link rel="stylesheet" type="text/css" href="olympia/css/slick-theme.css">
     <link rel="stylesheet" type="text/css" href="olympia/css/jquery.toast.min.css">
@@ -58,615 +60,452 @@
             z-index: 9000999999999 !important;
         }
 
-        .btn-dk {
-            width: 210px;
-            height: 50px;
-            line-height: 50px;
-            text-align: center;
-            background-color: #1e6f8c;
-            font-size: 14px;
-            font-weight: 600;
-            text-transform: uppercase;
-            border: none;
-            color: #fff;
-            display: inline-block;
-            margin-top: 20px;
-        }
-
-        .btn-full {
-            text-align: center;
-            line-height: 60px;
-        }
-
         body.show-admin-bar {
-            margin-top: 0px !important;
-            font-family: Arial, sans-serif;
+            margin-top: 0 !important;
         }
 
-        /* Scholarship Page - Premium Design */
-        .scholarship-container {
-            max-width: 1400px;
+        :root {
+            --sc-blue-1: #439bd4;
+            --sc-blue-2: #4db0e4;
+            --sc-blue-3: #eaf7ff;
+            --sc-ink: #214963;
+            --sc-gold: #ffd166;
+        }
+
+        .scholar-page {
+            background: radial-gradient(circle at 0% 0%, #eaf7ff 0%, #f7fcff 45%, #fff 100%);
+            color: var(--sc-ink);
+        }
+
+        .scholar-wrap {
+            width: min(94vw, 1480px);
             margin: 0 auto;
-            padding: 0 20px;
         }
 
-        /* Hero Section */
-        .scholarship-hero {
+        .sc-hero {
             position: relative;
-            min-height: 450px;
-            display: flex;
-            align-items: center;
             overflow: hidden;
-            background: linear-gradient(135deg, #1e6f8c 0%, #6a1b9a 50%, #8e24aa 100%);
+            padding: 112px 0 68px;
+            background: linear-gradient(132deg, rgba(67, 155, 212, 0.95) 0%, rgba(77, 176, 228, 0.9) 72%, rgba(77, 176, 228, 0.84) 100%), url('storage/banner/hoc-bong.jpg') center/cover no-repeat;
         }
 
-        .scholarship-hero-bg {
+        .sc-hero::before,
+        .sc-hero::after {
+            content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('storage/banner/hoc-bong.jpg') center/cover no-repeat;
-            opacity: 0.3;
-        }
-
-        .scholarship-hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 60px 40px;
-            text-align: center;
-        }
-
-        .scholarship-hero-content h1 {
-            font-family: 'Garamond', serif;
-            font-size: 48px;
-            color: #fff;
-            margin-bottom: 20px;
-            font-weight: 700;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
-        }
-
-        .scholarship-hero-content .subtitle {
-            font-size: 18px;
-            color: rgba(255, 255, 255, 0.9);
-            line-height: 1.8;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .scholarship-hero-badge {
-            display: inline-block;
-            background: #f1cc1f;
-            color: #1e6f8c;
-            padding: 10px 25px;
-            border-radius: 30px;
-            font-size: 14px;
-            font-weight: 700;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-        }
-
-        /* Main Layout */
-        .scholarship-main-layout {
-            display: grid;
-            grid-template-columns: 280px 1fr 300px;
-            gap: 35px;
-            padding: 50px 0;
-        }
-
-        /* Left Sidebar */
-        .scholarship-sidebar-left {
-            position: sticky;
-            top: 100px;
-            height: fit-content;
-        }
-
-        .sidebar-nav-card {
-            background: #fff;
-            border-radius: 16px;
-            padding: 25px;
-            box-shadow: 0 4px 25px rgba(71, 24, 115, 0.08);
-            margin-bottom: 25px;
-        }
-
-        .sidebar-nav-card h4 {
-            font-family: 'Garamond', serif;
-            font-size: 18px;
-            color: #1e6f8c;
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 2px solid #f1cc1f;
-        }
-
-        .sidebar-menu {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .sidebar-menu li {
-            margin-bottom: 10px;
-        }
-
-        .sidebar-menu-link {
-            display: flex;
-            align-items: center;
-            padding: 12px 15px;
-            color: #555;
-            text-decoration: none;
-            border-radius: 10px;
-            transition: all 0.3s ease;
-            font-size: 14px;
-            font-weight: 500;
-            background: #faf9fb;
-            border-left: 3px solid transparent;
-        }
-
-        .sidebar-menu-link:hover,
-        .sidebar-menu-link.active {
-            background: linear-gradient(135deg, #1e6f8c 0%, #5a2a8a 100%);
-            color: #fff;
-            border-left-color: #f1cc1f;
-            transform: translateX(5px);
-        }
-
-        .menu-thumb {
-            width: 40px;
-            height: 40px;
-            border-radius: 8px;
-            overflow: hidden;
-            margin-right: 12px;
-            flex-shrink: 0;
-        }
-
-        .menu-thumb img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .quick-contact-card {
-            background: linear-gradient(135deg, #1e6f8c 0%, #6a1b9a 100%);
-            border-radius: 16px;
-            padding: 25px;
-            color: white;
-            text-align: center;
-        }
-
-        .quick-contact-card h5 {
-            font-family: 'Garamond', serif;
-            font-size: 18px;
-            margin-bottom: 15px;
-            color: #f1cc1f;
-        }
-
-        .quick-contact-card p {
-            font-size: 14px;
-            margin-bottom: 10px;
-            opacity: 0.9;
-        }
-
-        .quick-contact-card .hotline {
-            font-size: 24px;
-            font-weight: bold;
-            color: #f1cc1f;
-            margin: 15px 0;
-        }
-
-        /* Center Content */
-        .scholarship-content-center {
-            background: #fff;
-            border-radius: 16px;
-            padding: 40px;
-            box-shadow: 0 4px 25px rgba(71, 24, 115, 0.06);
-        }
-
-        .content-header {
-            text-align: center;
-            margin-bottom: 40px;
-            padding-bottom: 30px;
-            border-bottom: 1px solid #eee;
-        }
-
-        .content-header h2 {
-            font-family: 'Garamond', serif;
-            font-size: 36px;
-            color: #1e6f8c;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-
-        .content-subtitle {
-            font-size: 16px;
-            color: #888;
-        }
-
-        /* Scholarship Cards */
-        .scholarship-types-section {
-            margin-bottom: 40px;
-        }
-
-        .scholarship-cards-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-
-        .scholarship-type-card {
-            background: linear-gradient(135deg, #fff 0%, #faf9fb 100%);
-            border-radius: 16px;
-            padding: 35px 25px;
-            text-align: center;
-            border: 2px solid transparent;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .scholarship-type-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(71, 24, 115, 0.15);
-        }
-
-        .scholarship-type-card.gold {
-            border-color: #ffd700;
-            background: linear-gradient(135deg, #fff 0%, #fff9e6 100%);
-        }
-
-        .scholarship-type-card.silver {
-            border-color: #c0c0c0;
-            background: linear-gradient(135deg, #fff 0%, #f5f5f5 100%);
-        }
-
-        .scholarship-type-card.bronze {
-            border-color: #cd7f32;
-            background: linear-gradient(135deg, #fff 0%, #faf0e6 100%);
-        }
-
-        .scholarship-type-card .medal {
-            font-size: 48px;
-            margin-bottom: 15px;
-        }
-
-        .scholarship-type-card h4 {
-            font-family: 'Garamond', serif;
-            font-size: 22px;
-            color: #1e6f8c;
-            margin-bottom: 10px;
-        }
-
-        .scholarship-type-card .value {
-            font-size: 42px;
-            font-weight: bold;
-            color: #1e6f8c;
-            margin: 15px 0;
-        }
-
-        .scholarship-type-card ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            text-align: left;
-        }
-
-        .scholarship-type-card li {
-            padding: 8px 0;
-            font-size: 14px;
-            color: #555;
-            border-bottom: 1px dashed #eee;
-        }
-
-        .scholarship-type-card li:last-child {
-            border-bottom: none;
-        }
-
-        .scholarship-type-card li::before {
-            content: "✓";
-            color: #1e6f8c;
-            margin-right: 8px;
-            font-weight: bold;
-        }
-
-        /* Criteria Section */
-        .criteria-section-enhanced {
-            background: linear-gradient(135deg, #1e6f8c 0%, #6a1b9a 100%);
-            border-radius: 16px;
-            padding: 40px;
-            color: white;
-            margin-bottom: 40px;
-        }
-
-        .criteria-section-enhanced h3 {
-            font-family: 'Garamond', serif;
-            font-size: 28px;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .criteria-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
-        }
-
-        .criteria-item {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            padding: 25px;
-            display: flex;
-            gap: 15px;
-            transition: all 0.3s ease;
-        }
-
-        .criteria-item:hover {
+            border-radius: 50%;
+            pointer-events: none;
             background: rgba(255, 255, 255, 0.2);
         }
 
-        .criteria-icon {
-            width: 50px;
-            height: 50px;
-            background: #f1cc1f;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            flex-shrink: 0;
+        .sc-hero::before {
+            width: 340px;
+            height: 340px;
+            top: -120px;
+            right: -100px;
         }
 
-        .criteria-content h4 {
-            font-size: 18px;
+        .sc-hero::after {
+            width: 210px;
+            height: 210px;
+            left: -70px;
+            bottom: -85px;
+        }
+
+        .sc-hero-grid {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+            gap: 22px;
+            align-items: center;
+        }
+
+        .sc-breadcrumb {
+            margin: 0 0 14px;
+            display: inline-flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            position: static !important;
+            float: none !important;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.36);
+            border-radius: 999px;
+            padding: 8px 16px;
+        }
+
+        .sc-breadcrumb li,
+        .sc-breadcrumb li a {
+            color: #fff;
+            font-size: 13px;
+        }
+
+        .sc-hero h1 {
+            margin: 0;
+            color: #fff;
+            font-family: 'Garamond', serif;
+            font-size: clamp(38px, 5vw, 66px);
+            line-height: 1.03;
+        }
+
+        .sc-hero p {
+            margin: 16px 0 0;
+            color: rgba(255, 255, 255, 0.96);
+            font-size: 17px;
+            line-height: 1.75;
+            max-width: 780px;
+        }
+
+        .sc-tags {
+            margin-top: 16px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .sc-tags span {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 12px;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .sc-hero-panel {
+            border-radius: 18px;
+            border: 1px solid rgba(255, 255, 255, 0.34);
+            background: rgba(255, 255, 255, 0.17);
+            padding: 16px;
+            color: #fff;
+        }
+
+        .sc-hero-panel h3 {
+            margin: 0 0 10px;
+            font-family: 'Garamond', serif;
+            font-size: 30px;
+            color: #fff;
+        }
+
+        .sc-hero-panel ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: grid;
+            gap: 8px;
+        }
+
+        .sc-hero-panel li {
+            padding: 10px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.14);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .sc-main {
+            padding: 40px 0 72px;
+        }
+
+        .sc-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1.35fr) minmax(290px, 0.65fr);
+            gap: 24px;
+        }
+
+        .sc-content,
+        .sc-side {
+            display: grid;
+            gap: 16px;
+            align-self: start;
+        }
+
+        .sc-card,
+        .sc-side-card {
+            background: #fff;
+            border: 1px solid rgba(67, 155, 212, 0.2);
+            border-radius: 20px;
+            box-shadow: 0 12px 24px rgba(16, 49, 79, 0.08);
+            padding: 22px;
+        }
+
+        .sc-card h2,
+        .sc-side-card h3 {
+            margin: 0 0 12px;
+            color: #256f9f;
+            font-family: 'Garamond', serif;
+            font-size: 34px;
+            line-height: 1.2;
+            padding: 0 !important;
+        }
+
+        .sc-card p,
+        .sc-card li,
+        .sc-side-card p,
+        .sc-side-card li {
+            color: #416987;
+            font-size: 15px;
+            line-height: 1.75;
+        }
+
+        .sc-scholarships {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 12px;
+        }
+
+        .sc-level {
+            border: 1px solid rgba(67, 155, 212, 0.2);
+            border-radius: 14px;
+            background: linear-gradient(125deg, #f5fbff 0%, #ecf8ff 100%);
+            padding: 14px;
+        }
+
+        .sc-level.sc-level-gold {
+            border-color: rgba(255, 209, 102, 0.8);
+            background: linear-gradient(125deg, #fffaf0 0%, #fff4d8 100%);
+        }
+
+        .sc-level.sc-level-silver {
+            border-color: rgba(173, 188, 201, 0.8);
+            background: linear-gradient(125deg, #f8fbfd 0%, #edf3f8 100%);
+        }
+
+        .sc-level.sc-level-bronze {
+            border-color: rgba(214, 156, 110, 0.8);
+            background: linear-gradient(125deg, #fff8f2 0%, #fef0e3 100%);
+        }
+
+        .sc-level b {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 74px;
+            min-height: 36px;
+            border-radius: 999px;
+            color: #fff;
+            background: linear-gradient(120deg, var(--sc-blue-1), var(--sc-blue-2));
+            font-size: 16px;
             margin-bottom: 8px;
         }
 
-        .criteria-content p {
-            font-size: 14px;
-            opacity: 0.9;
-            line-height: 1.6;
+        .sc-level h4 {
+            margin: 0 0 8px;
+            color: #2f79ad;
+            font-size: 23px;
+            font-family: 'Garamond', serif;
+        }
+
+        .sc-level ul {
             margin: 0;
-        }
-
-        /* Timeline */
-        .timeline-section {
-            background: linear-gradient(135deg, #f9f9f9 0%, #fff 100%);
-            border-radius: 16px;
-            padding: 40px;
-            margin-bottom: 40px;
-            border: 2px solid #f1cc1f;
-        }
-
-        .timeline-section h3 {
-            font-family: 'Garamond', serif;
-            font-size: 28px;
-            color: #1e6f8c;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .timeline-enhanced {
-            display: flex;
-            justify-content: space-between;
-            position: relative;
-        }
-
-        .timeline-enhanced::before {
-            content: '';
-            position: absolute;
-            top: 25px;
-            left: 50px;
-            right: 50px;
-            height: 4px;
-            background: linear-gradient(90deg, #1e6f8c, #6a1b9a);
-            border-radius: 2px;
-        }
-
-        .timeline-step {
-            text-align: center;
-            position: relative;
-            flex: 1;
-        }
-
-        .timeline-dot {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, #1e6f8c 0%, #6a1b9a 100%);
-            border-radius: 50%;
-            margin: 0 auto 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            font-weight: bold;
-            font-size: 18px;
-            position: relative;
-            z-index: 1;
-            border: 3px solid #f1cc1f;
-        }
-
-        .timeline-date {
-            font-size: 14px;
-            color: #1e6f8c;
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
-
-        .timeline-title {
-            font-size: 13px;
-            color: #666;
-        }
-
-        /* Contact Banner */
-        .contact-banner-enhanced {
-            background: linear-gradient(135deg, #1e6f8c 0%, #6a1b9a 100%);
-            border-radius: 16px;
-            padding: 40px;
-            text-align: center;
-            color: white;
-        }
-
-        .contact-banner-enhanced h3 {
-            font-family: 'Garamond', serif;
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
-
-        .contact-banner-enhanced .hotline {
-            font-size: 32px;
-            font-weight: bold;
-            color: #f1cc1f;
-            margin: 15px 0;
-        }
-
-        .contact-banner-enhanced p {
-            font-size: 16px;
-            opacity: 0.9;
-        }
-
-        /* Right Sidebar */
-        .scholarship-sidebar-right {
-            position: sticky;
-            top: 100px;
-            height: fit-content;
-        }
-
-        .gallery-card {
-            background: #fff;
-            border-radius: 16px;
-            padding: 25px;
-            box-shadow: 0 4px 25px rgba(71, 24, 115, 0.08);
-            margin-bottom: 25px;
-        }
-
-        .gallery-card h5 {
-            font-family: 'Garamond', serif;
-            font-size: 16px;
-            color: #1e6f8c;
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 2px solid #f1cc1f;
-        }
-
-        .mini-gallery {
+            padding: 0;
+            list-style: none;
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            gap: 6px;
+        }
+
+        .sc-level li {
+            border-top: 1px dashed rgba(67, 155, 212, 0.25);
+            padding-top: 6px;
+        }
+
+        .sc-criteria {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 10px;
         }
 
-        .mini-gallery-item {
-            border-radius: 10px;
-            overflow: hidden;
-            aspect-ratio: 1;
+        .sc-criterion {
+            border: 1px solid rgba(67, 155, 212, 0.18);
+            border-radius: 12px;
+            background: #f9fdff;
+            padding: 12px;
         }
 
-        .mini-gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
+        .sc-criterion strong {
+            display: block;
+            color: #2f79ad;
+            margin-bottom: 4px;
+            font-size: 15px;
         }
 
-        .mini-gallery-item:hover img {
-            transform: scale(1.1);
+        .sc-timeline {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: grid;
+            gap: 10px;
         }
 
-        .cta-box {
-            background: linear-gradient(135deg, #1e6f8c 0%, #6a1b9a 100%);
-            border-radius: 16px;
-            padding: 30px 25px;
-            text-align: center;
-            color: white;
+        .sc-timeline li {
+            border: 1px solid rgba(67, 155, 212, 0.18);
+            border-radius: 12px;
+            background: #f9fdff;
+            padding: 10px 12px;
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: 10px;
+            align-items: center;
         }
 
-        .cta-box h5 {
-            font-family: 'Garamond', serif;
-            font-size: 22px;
-            margin-bottom: 15px;
+        .sc-timeline span {
+            color: #2f79ad;
+            font-weight: 700;
+            font-size: 13px;
         }
 
-        .cta-box p {
+        .sc-note {
+            border: 1px solid rgba(255, 209, 102, 0.45);
+            border-left: 5px solid var(--sc-gold);
+            border-radius: 12px;
+            background: #fffbef;
+            padding: 12px;
+        }
+
+        .sc-note b {
+            color: #976d00;
+            display: block;
+            margin-bottom: 4px;
             font-size: 14px;
-            margin-bottom: 20px;
-            opacity: 0.9;
         }
 
-        .cta-btn {
-            display: inline-block;
-            background: #f1cc1f;
-            color: #1e6f8c;
-            padding: 14px 30px;
-            border-radius: 30px;
+        .sc-side-links {
+            display: grid;
+            gap: 10px;
+        }
+
+        .sc-side-links a {
+            display: block;
             text-decoration: none;
+            color: #2f638f;
+            border: 1px solid rgba(67, 155, 212, 0.18);
+            border-radius: 12px;
+            background: #f9fdff;
+            padding: 10px 12px;
+            font-size: 14px;
+            line-height: 1.55;
+        }
+
+        .sc-side-links a:hover {
+            background: #eaf7ff;
+        }
+
+        .sc-emphasis {
+            background: linear-gradient(120deg, #3f9ad3, #56b4e7);
+            color: #fff;
+            border-radius: 16px;
+            padding: 18px;
+        }
+
+        .sc-emphasis h4 {
+            margin: 0 0 6px;
+            color: #fff;
+            font-size: 28px;
+            font-family: 'Garamond', serif;
+        }
+
+        .sc-emphasis p {
+            color: rgba(255, 255, 255, 0.96);
+            margin: 0;
+        }
+
+        .sc-contact {
+            background: #f7fcff;
+            border: 1px solid rgba(67, 155, 212, 0.22);
+            border-radius: 12px;
+            padding: 10px 12px;
+            margin-bottom: 10px;
+        }
+
+        .sc-contact b {
+            display: block;
+            color: #2d7bb1;
+            font-size: 13px;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        .sc-contact span {
+            color: #204c70;
             font-weight: 600;
             font-size: 14px;
-            transition: all 0.3s ease;
+            line-height: 1.5;
         }
 
-        .cta-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(241, 204, 31, 0.4);
+        .sc-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 12px;
         }
 
-        @media (max-width: 1200px) {
-            .scholarship-main-layout {
-                grid-template-columns: 260px 1fr 260px;
-                gap: 25px;
-            }
+        .sc-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 44px;
+            padding: 10px 16px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            font-weight: 700;
+            border: 1px solid transparent;
         }
 
-        @media (max-width: 991px) {
-            .scholarship-hero-content h1 {
-                font-size: 36px;
-            }
+        .sc-btn-primary {
+            color: #fff;
+            background: linear-gradient(120deg, var(--sc-blue-1), var(--sc-blue-2));
+            box-shadow: 0 10px 20px rgba(67, 155, 212, 0.24);
+        }
 
-            .scholarship-main-layout {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
+        .sc-btn-light {
+            color: #2b79af;
+            background: #f7fcff;
+            border-color: rgba(67, 155, 212, 0.25);
+        }
 
-            .scholarship-sidebar-left,
-            .scholarship-sidebar-right {
-                position: static;
-            }
+        @media (max-width: 1180px) {
 
-            .scholarship-cards-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .criteria-grid {
+            .sc-hero-grid,
+            .sc-layout,
+            .sc-scholarships {
                 grid-template-columns: 1fr;
             }
 
-            .timeline-enhanced {
-                flex-direction: column;
-                gap: 20px;
-            }
-
-            .timeline-enhanced::before {
-                display: none;
-            }
-
-            .mini-gallery {
-                grid-template-columns: repeat(4, 1fr);
+            .sc-criteria {
+                grid-template-columns: 1fr;
             }
         }
 
         @media (max-width: 768px) {
-            .scholarship-hero {
-                min-height: 350px;
+            .scholar-wrap {
+                width: min(94vw, 1480px);
             }
 
-            .scholarship-hero-content h1 {
-                font-size: 28px;
+            .sc-hero {
+                padding: 94px 0 42px;
             }
 
-            .scholarship-content-center {
-                padding: 25px;
+            .sc-hero p {
+                font-size: 15px;
             }
 
-            .mini-gallery {
-                grid-template-columns: repeat(2, 1fr);
+            .sc-card,
+            .sc-side-card {
+                padding: 16px;
+                border-radius: 16px;
+            }
+
+            .sc-timeline li {
+                grid-template-columns: 1fr;
+                gap: 6px;
             }
         }
     </style>
@@ -676,246 +515,155 @@
     <?php include 'includes/header.php'; ?>
     <div class="overlay_mark_search" style="display:none;"></div>
 
-    <main class="body-content">
-        <!-- Hero Section -->
-        <section class="scholarship-hero">
-            <div class="scholarship-hero-bg"></div>
-            <div class="scholarship-hero-content">
-                <span class="scholarship-hero-badge">Năm học 2026-2027</span>
-                <h1>Học bổng tài năng</h1>
-                <p class="subtitle">Meyschool Đoàn Thị Điểm tự hào mang đến chương trình học bổng toàn phần và bán phần cho học sinh xuất sắc. Chúng tôi tin rằng mỗi học sinh tài năng đều xứng đáng có cơ hội tiếp cận nền giáo dục chất lượng cao.</p>
+    <main class="body-content scholar-page">
+        <section class="sc-hero">
+            <div class="scholar-wrap">
+                <div class="sc-hero-grid" data-aos="fade-up">
+                    <div>
+                        <ol class="breadcrumb sc-breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.php">Trang chủ</a></li>
+                            <li class="breadcrumb-item"><a href="thong-tin-tuyen-sinh-tieu-hoc.php">Tuyển sinh</a></li>
+                            <li class="breadcrumb-item active">Học bổng 2026 - 2027</li>
+                        </ol>
+
+                        <h1>Học bổng 2026 - 2027</h1>
+                        <p>Meyschool Đoàn Thị Điểm xây dựng quỹ học bổng đa dạng để khuyến khích học sinh có thành tích học thuật xuất sắc, năng lực lãnh đạo và tinh thần đóng góp cộng đồng.</p>
+
+                        <div class="sc-tags">
+                            <span>Học bổng đến 100%</span>
+                            <span>Xét theo năng lực thực chất</span>
+                            <span>Gia hạn theo kết quả học tập</span>
+                        </div>
+                    </div>
+
+                    <aside class="sc-hero-panel">
+                        <h3>Trọng tâm chương trình</h3>
+                        <ul>
+                            <li>Đánh giá toàn diện: học thuật, ngoại ngữ, hoạt động cá nhân.</li>
+                            <li>Nhiều mức học bổng theo hồ sơ và kết quả đánh giá đầu vào.</li>
+                            <li>Đồng hành cùng học sinh tài năng trên hành trình dài hạn.</li>
+                        </ul>
+                    </aside>
+                </div>
             </div>
         </section>
 
-        <!-- Breadcrumb -->
-        <div class="scholarship-container" style="padding-top: 20px;">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.php">Trang chủ</a></li>
-                <li class="breadcrumb-item"><a href="tuyen-dung.php">Tuyển sinh</a></li>
-                <li class="breadcrumb-item active">Học bổng 2026-2027</li>
-            </ol>
-        </div>
-
-        <!-- Main Layout -->
-        <div class="scholarship-container">
-            <div class="scholarship-main-layout">
-                <!-- Left Sidebar -->
-                <aside class="scholarship-sidebar-left">
-                    <div class="sidebar-nav-card">
-                        <h4>Danh mục tuyển sinh</h4>
-                        <ul class="sidebar-menu">
-                            <li>
-                                <a href="thong-tin-tuyen-sinh-tieu-hoc.php" class="sidebar-menu-link">
-                                    <span class="menu-thumb">
-                                        <img src="storage/banner/tieu-hoc.jpg" alt="">
-                                    </span>
-                                    Tuyển sinh Tiểu học
-                                </a>
-                            </li>
-                            <li>
-                                <a href="thong-tin-tuyen-sinh-thcs.php" class="sidebar-menu-link">
-                                    <span class="menu-thumb">
-                                        <img src="storage/banner/trung-hoc.jpg" alt="">
-                                    </span>
-                                    Tuyển sinh THCS
-                                </a>
-                            </li>
-                            <li>
-                                <a href="uu-dai-tuyen-sinh.php" class="sidebar-menu-link">
-                                    <span class="menu-thumb">
-                                        <img src="olympia/images/noibat_5.png" alt="">
-                                    </span>
-                                    Ưu đãi tuyển sinh
-                                </a>
-                            </li>
-                            <li>
-                                <a href="hoc-bong-2026-2027.php" class="sidebar-menu-link active">
-                                    <span class="menu-thumb">
-                                        <img src="olympia/images/0208.jpg" alt="">
-                                    </span>
-                                    Học bổng 2026-2027
-                                </a>
-                            </li>
-                            <li>
-                                <a href="faq.php" class="sidebar-menu-link">
-                                    <span class="menu-thumb">
-                                        <img src="olympia/images/0206.jpg" alt="">
-                                    </span>
-                                    Câu hỏi thường gặp
-                                </a>
-                            </li>
-                            <li>
-                                <a href="dang-ky-tu-van.php" class="sidebar-menu-link">
-                                    <span class="menu-thumb">
-                                        <img src="storage/doi-ngu-olym/nguyen-thi-thu-thao.png" alt="">
-                                    </span>
-                                    Đăng ký tư vấn
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="quick-contact-card">
-                        <h5>Liên hệ tuyển sinh</h5>
-                        <p>Hotline tư vấn 24/7</p>
-                        <div class="hotline">0934 525 889</div>
-                        <p>Email: tuyensinh@doanthidiem.edu.vn</p>
-                    </div>
-                </aside>
-
-                <!-- Center Content -->
-                <div class="scholarship-content-center">
-                    <div class="content-header">
-                        <h2>Chương trình học bổng tài năng</h2>
-                        <p class="content-subtitle">Cơ hội nhận học bổng lên đến 100% học phí</p>
-                    </div>
-
-                    <!-- Scholarship Types -->
-                    <div class="scholarship-types-section">
-                        <div class="scholarship-cards-grid">
-                            <div class="scholarship-type-card gold">
-                                <div class="medal">🏆</div>
+        <section class="sc-main">
+            <div class="scholar-wrap sc-layout">
+                <div class="sc-content">
+                    <article class="sc-card" data-aos="fade-up">
+                        <h2>Các mức học bổng</h2>
+                        <div class="sc-scholarships">
+                            <div class="sc-level sc-level-gold">
+                                <b>100%</b>
                                 <h4>Học bổng Vàng</h4>
-                                <div class="value">100%</div>
                                 <ul>
-                                    <li>Huy chương Olympic Quốc tế</li>
-                                    <li>Thủ khoa đầu vào cấp 2</li>
-                                    <li>Chứng chỉ IELTS 8.0+</li>
-                                    <li>Kéo dài 3 năm học</li>
-                                    <li>Gia hạn theo thành tích</li>
+                                    <li>Thành tích học thuật và giải thưởng cấp cao.</li>
+                                    <li>Năng lực ngoại ngữ vượt trội theo chuẩn tuyển sinh.</li>
+                                    <li>Được xét gia hạn theo kết quả học tập từng năm.</li>
                                 </ul>
                             </div>
-                            <div class="scholarship-type-card silver">
-                                <div class="medal">🥈</div>
+                            <div class="sc-level sc-level-silver">
+                                <b>50%</b>
                                 <h4>Học bổng Bạc</h4>
-                                <div class="value">50%</div>
                                 <ul>
-                                    <li>Giải Nhất/Nhì cấp Quốc gia</li>
-                                    <li>Học sinh giỏi cấp Thành phố</li>
-                                    <li>Chứng chỉ IELTS 7.0+</li>
-                                    <li>Kéo dài 2 năm học</li>
-                                    <li>Gia hạn theo GPA ≥ 8.5</li>
+                                    <li>Hồ sơ học tập nổi bật, có định hướng phát triển rõ.</li>
+                                    <li>Đáp ứng tiêu chí đánh giá của hội đồng tuyển sinh.</li>
+                                    <li>Duy trì theo mức yêu cầu kết quả học tập.</li>
                                 </ul>
                             </div>
-                            <div class="scholarship-type-card bronze">
-                                <div class="medal">🥉</div>
+                            <div class="sc-level sc-level-bronze">
+                                <b>30%</b>
                                 <h4>Học bổng Đồng</h4>
-                                <div class="value">30%</div>
                                 <ul>
-                                    <li>Giải Ba cấp Quốc gia</li>
-                                    <li>Giải cấp Thành phố</li>
-                                    <li>Chứng chỉ IELTS 6.5+</li>
-                                    <li>Kéo dài 1 năm học</li>
-                                    <li>Gia hạn theo GPA ≥ 8.0</li>
+                                    <li>Khuyến khích học sinh có tiềm năng phát triển.</li>
+                                    <li>Xét theo thành tích và năng lực toàn diện đầu vào.</li>
+                                    <li>Có thể nâng mức ở các kỳ đánh giá tiếp theo.</li>
                                 </ul>
                             </div>
                         </div>
-                    </div>
+                    </article>
 
-                    <!-- Criteria Section -->
-                    <div class="criteria-section-enhanced">
-                        <h3>Tiêu chí xét duyệt học bổng</h3>
-                        <div class="criteria-grid">
-                            <div class="criteria-item">
-                                <div class="criteria-icon">📚</div>
-                                <div class="criteria-content">
-                                    <h4>Thành tích học tập</h4>
-                                    <p>Học sinh phải có thành tích học tập xuất sắc, GPA ≥ 8.0 trong năm học gần nhất.</p>
-                                </div>
+                    <article class="sc-card" data-aos="fade-up">
+                        <h2>Tiêu chí xét duyệt</h2>
+                        <div class="sc-criteria">
+                            <div class="sc-criterion">
+                                <strong>Thành tích học tập</strong>
+                                Kết quả học tập ổn định, minh chứng năng lực phù hợp mục tiêu chương trình.
                             </div>
-                            <div class="criteria-item">
-                                <div class="criteria-icon">🏅</div>
-                                <div class="criteria-content">
-                                    <h4>Giải thưởng</h4>
-                                    <p>Có giải trong các kỳ thi học sinh giỏi cấp Thành phố, Quốc gia hoặc Quốc tế.</p>
-                                </div>
+                            <div class="sc-criterion">
+                                <strong>Giải thưởng học thuật</strong>
+                                Ưu tiên hồ sơ có thành tích tại các cuộc thi từ cấp thành phố trở lên.
                             </div>
-                            <div class="criteria-item">
-                                <div class="criteria-icon">🌐</div>
-                                <div class="criteria-content">
-                                    <h4>Ngoại ngữ</h4>
-                                    <p>Chứng chỉ tiếng Anh quốc tế: IELTS, TOEFL, Cambridge (theo từng cấp học bổng).</p>
-                                </div>
+                            <div class="sc-criterion">
+                                <strong>Ngoại ngữ</strong>
+                                Chứng chỉ tiếng Anh quốc tế hoặc năng lực tương đương theo quy định từng mức học bổng.
                             </div>
-                            <div class="criteria-item">
-                                <div class="criteria-icon">🤝</div>
-                                <div class="criteria-content">
-                                    <h4>Kỹ năng mềm</h4>
-                                    <p>Có thành tích trong hoạt động ngoại khóa, cộng đồng và kỹ năng lãnh đạo.</p>
-                                </div>
+                            <div class="sc-criterion">
+                                <strong>Kỹ năng cá nhân</strong>
+                                Khả năng lãnh đạo, tư duy độc lập và đóng góp tích cực cho cộng đồng học tập.
                             </div>
                         </div>
-                    </div>
+                    </article>
 
-                    <!-- Timeline -->
-                    <div class="timeline-section">
-                        <h3>Lịch trình xét duyệt học bổng</h3>
-                        <div class="timeline-enhanced">
-                            <div class="timeline-step">
-                                <div class="timeline-dot">1</div>
-                                <div class="timeline-date">01/03 - 30/04</div>
-                                <div class="timeline-title">Nộp hồ sơ</div>
-                            </div>
-                            <div class="timeline-step">
-                                <div class="timeline-dot">2</div>
-                                <div class="timeline-date">01/05 - 15/05</div>
-                                <div class="timeline-title">Sơ tuyển</div>
-                            </div>
-                            <div class="timeline-step">
-                                <div class="timeline-dot">3</div>
-                                <div class="timeline-date">16/05 - 31/05</div>
-                                <div class="timeline-title">Phỏng vấn</div>
-                            </div>
-                            <div class="timeline-step">
-                                <div class="timeline-dot">4</div>
-                                <div class="timeline-date">15/06</div>
-                                <div class="timeline-title">Công bố KQ</div>
-                            </div>
-                            <div class="timeline-step">
-                                <div class="timeline-dot">5</div>
-                                <div class="timeline-date">01/09</div>
-                                <div class="timeline-title">Nhập học</div>
-                            </div>
+                    <article class="sc-card" data-aos="fade-up">
+                        <h2>Lịch trình xét học bổng</h2>
+                        <ul class="sc-timeline">
+                            <li><span>01/03 - 30/04</span> Tiếp nhận hồ sơ và tư vấn lựa chọn mức học bổng</li>
+                            <li><span>01/05 - 15/05</span> Đánh giá hồ sơ và sơ tuyển</li>
+                            <li><span>16/05 - 31/05</span> Phỏng vấn và/hoặc bài đánh giá năng lực</li>
+                            <li><span>15/06</span> Công bố kết quả học bổng</li>
+                            <li><span>01/09</span> Hoàn tất thủ tục nhập học</li>
+                        </ul>
+                    </article>
+
+                    <article class="sc-card" data-aos="fade-up">
+                        <h2>Lưu ý quan trọng</h2>
+                        <div class="sc-note">
+                            <b>Chính sách áp dụng</b>
+                            <p>Mỗi hồ sơ được xét theo bộ tiêu chí tại thời điểm tuyển sinh. Mức học bổng được công nhận theo kết quả xét duyệt chính thức của hội đồng tuyển sinh.</p>
                         </div>
-                    </div>
+                    </article>
 
-                    <!-- Contact Banner -->
-                    <div class="contact-banner-enhanced">
-                        <h3>Đăng ký xét duyệt học bổng</h3>
-                        <p>Hotline tuyển sinh</p>
-                        <div class="hotline">0934 525 889</div>
-                        <p>Email: tuyensinh@doanthidiem.edu.vn</p>
-                    </div>
+                    <section class="sc-emphasis" data-aos="fade-up">
+                        <h4>Đăng ký để được tư vấn mức học bổng phù hợp</h4>
+                        <p>Đội ngũ tuyển sinh sẽ hỗ trợ gia đình chuẩn bị hồ sơ, nắm rõ tiêu chí và lộ trình xét duyệt.</p>
+                    </section>
                 </div>
 
-                <!-- Right Sidebar -->
-                <aside class="scholarship-sidebar-right">
-                    <div class="gallery-card">
-                        <h5>Khoảnh khắc tại Meyschool</h5>
-                        <div class="mini-gallery">
-                            <div class="mini-gallery-item">
-                                <img src="olympia/images/0201.jpg" alt="">
-                            </div>
-                            <div class="mini-gallery-item">
-                                <img src="olympia/images/0208.jpg" alt="">
-                            </div>
-                            <div class="mini-gallery-item">
-                                <img src="storage/banner/trung-hoc.jpg" alt="">
-                            </div>
-                            <div class="mini-gallery-item">
-                                <img src="olympia/images/0206.jpg" alt="">
-                            </div>
+                <aside class="sc-side" data-aos="fade-up" data-aos-delay="120">
+                    <div class="sc-side-card">
+                        <h3>Danh mục tuyển sinh</h3>
+                        <div class="sc-side-links">
+                            <a href="thong-tin-tuyen-sinh-tieu-hoc.php">Tuyển sinh Tiểu học</a>
+                            <a href="thong-tin-tuyen-sinh-thcs.php">Tuyển sinh THCS</a>
+                            <a href="uu-dai-tuyen-sinh.php">Ưu đãi tuyển sinh</a>
+                            <a href="cau-hoi-thuong-gap.php">Câu hỏi thường gặp</a>
                         </div>
                     </div>
 
-                    <div class="cta-box">
-                        <h5>Đăng ký ngay</h5>
-                        <p>Đăng ký tư vấn và tham quan trường miễn phí</p>
-                        <a href="dang-ky-tu-van.php" class="cta-btn">Đăng ký tư vấn</a>
+                    <div class="sc-side-card">
+                        <h3>Liên hệ tư vấn</h3>
+                        <div class="sc-contact">
+                            <b>Hotline</b>
+                            <span>0934 525 889</span>
+                        </div>
+                        <div class="sc-contact">
+                            <b>Email</b>
+                            <span>tuyensinh@doanthidiem.edu.vn</span>
+                        </div>
+                        <div class="sc-contact" style="margin-bottom: 0;">
+                            <b>Địa chỉ</b>
+                            <span>KĐT Trung Văn, Nam Từ Liêm, Hà Nội</span>
+                        </div>
+                        <div class="sc-actions">
+                            <a href="dang-ky-tu-van.php" class="sc-btn sc-btn-primary">Đăng ký tư vấn</a>
+                            <a href="lien-he.php" class="sc-btn sc-btn-light">Liên hệ ngay</a>
+                        </div>
                     </div>
                 </aside>
             </div>
-        </div>
+        </section>
     </main>
 
     <?php include 'includes/footer.php'; ?>

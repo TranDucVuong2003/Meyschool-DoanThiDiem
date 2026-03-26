@@ -8,7 +8,9 @@
     <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=1"
         name="viewport" />
 
-    <link rel="shortcut icon" href="storage/favicon.png">
+    <link rel="icon" type="image/png" href="storage/favicon.png?v=20260320-1">
+    <link rel="shortcut icon" type="image/png" href="storage/favicon.png?v=20260320-1">
+    <link rel="apple-touch-icon" href="storage/favicon.png?v=20260320-1">
 
     <title>Câu hỏi thường gặp (FAQ) - Meyschool Đoàn Thị Điểm</title>
     <meta name="description" content="Câu hỏi thường gặp về tuyển sinh và học tập tại Meyschool Đoàn Thị Điểm">
@@ -34,7 +36,7 @@
     <link rel="stylesheet" href="olympia/css/fonts.css">
     <link rel="stylesheet" href="olympia/css/style.css">
     <link rel="stylesheet" href="olympia/css/styles-new.css">
-    <link type="image/x-icon" href="#" rel="shortcut icon" />
+
     <link rel="stylesheet" type="text/css" href="olympia/css/slick.css">
     <link rel="stylesheet" type="text/css" href="olympia/css/slick-theme.css">
     <link rel="stylesheet" type="text/css" href="olympia/css/jquery.toast.min.css">
@@ -58,99 +60,249 @@
             z-index: 9000999999999 !important;
         }
 
-        .btn-dk {
-            width: 210px;
-            height: 50px;
-            line-height: 50px;
-            text-align: center;
-            background-color: #471873;
-            font-size: 14px;
-            font-weight: 600;
-            text-transform: uppercase;
-            border: none;
-            color: #fff;
-            display: inline-block;
-            margin-top: 20px;
-        }
-
-        .btn-full {
-            text-align: center;
-            line-height: 60px;
-        }
-
         body.show-admin-bar {
-            margin-top: 0px !important;
+            margin-top: 0 !important;
         }
 
-        .faq-content {
-            max-width: 1000px;
+        :root {
+            --faq-blue-1: #439bd4;
+            --faq-blue-2: #4db0e4;
+            --faq-blue-3: #eaf7ff;
+            --faq-ink: #214963;
+        }
+
+        .faq-page {
+            background: radial-gradient(circle at 0% 0%, #eaf7ff 0%, #f7fcff 45%, #fff 100%);
+            color: var(--faq-ink);
+        }
+
+        .faq-wrap {
+            width: min(94vw, 1480px);
             margin: 0 auto;
-            padding: 60px 20px;
         }
 
-        .faq-intro {
-            text-align: center;
-            margin-bottom: 60px;
+        .fq-hero {
+            position: relative;
+            overflow: hidden;
+            padding: 112px 0 68px;
+            background: linear-gradient(132deg, rgba(67, 155, 212, 0.95) 0%, rgba(77, 176, 228, 0.9) 72%, rgba(77, 176, 228, 0.84) 100%), url('storage/jnp2203-1-1920x1080.jpg') center/cover no-repeat;
         }
 
-        .faq-intro h2 {
-            font-size: 36px;
-            color: #471873;
-            margin-bottom: 20px;
+        .fq-hero::before,
+        .fq-hero::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            background: rgba(255, 255, 255, 0.2);
         }
 
-        .faq-intro p {
-            font-size: 16px;
-            line-height: 1.8;
-            max-width: 800px;
-            margin: 0 auto;
-            color: #555;
+        .fq-hero::before {
+            width: 340px;
+            height: 340px;
+            top: -120px;
+            right: -100px;
+        }
+
+        .fq-hero::after {
+            width: 210px;
+            height: 210px;
+            left: -70px;
+            bottom: -85px;
+        }
+
+        .fq-hero-grid {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+            gap: 22px;
+            align-items: center;
+        }
+
+        .fq-breadcrumb {
+            margin: 0 0 14px;
+            display: inline-flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            position: static !important;
+            float: none !important;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.36);
+            border-radius: 999px;
+            padding: 8px 16px;
+        }
+
+        .fq-breadcrumb li,
+        .fq-breadcrumb li a {
+            color: #fff;
+            font-size: 13px;
+        }
+
+        .fq-hero h1 {
+            margin: 0;
+            color: #fff;
+            font-family: 'Garamond', serif;
+            font-size: clamp(38px, 5vw, 66px);
+            line-height: 1.03;
+        }
+
+        .fq-hero p {
+            margin: 16px 0 0;
+            color: rgba(255, 255, 255, 0.96);
+            font-size: 17px;
+            line-height: 1.75;
+            max-width: 780px;
+        }
+
+        .fq-tags {
+            margin-top: 16px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .fq-tags span {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 12px;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .fq-hero-panel {
+            border-radius: 18px;
+            border: 1px solid rgba(255, 255, 255, 0.34);
+            background: rgba(255, 255, 255, 0.17);
+            padding: 16px;
+            color: #fff;
+        }
+
+        .fq-hero-panel h3 {
+            margin: 0 0 10px;
+            font-family: 'Garamond', serif;
+            font-size: 30px;
+            color: #fff;
+        }
+
+        .fq-hero-panel ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: grid;
+            gap: 8px;
+        }
+
+        .fq-hero-panel li {
+            padding: 10px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.14);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .fq-main {
+            padding: 40px 0 72px;
+        }
+
+        .fq-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1.35fr) minmax(290px, 0.65fr);
+            gap: 24px;
+        }
+
+        .fq-content,
+        .fq-side {
+            display: grid;
+            gap: 16px;
+            align-self: start;
+        }
+
+        .fq-card,
+        .fq-side-card {
+            background: #fff;
+            border: 1px solid rgba(67, 155, 212, 0.2);
+            border-radius: 20px;
+            box-shadow: 0 12px 24px rgba(16, 49, 79, 0.08);
+            padding: 22px;
+        }
+
+        .fq-card h2,
+        .fq-side-card h3 {
+            margin: 0 0 12px;
+            color: #256f9f;
+            font-family: 'Garamond', serif;
+            font-size: 34px;
+            line-height: 1.2;
+            padding: 0 !important;
+        }
+
+        .fq-card p,
+        .fq-card li,
+        .fq-side-card p,
+        .fq-side-card li {
+            color: #416987;
+            font-size: 15px;
+            line-height: 1.75;
         }
 
         .faq-category {
-            margin-bottom: 40px;
+            margin-bottom: 14px;
+        }
+
+        .faq-category:last-child {
+            margin-bottom: 0;
         }
 
         .faq-category-title {
-            font-size: 24px;
-            color: #471873;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #471873;
-            font-weight: 600;
+            margin: 0 0 10px;
+            color: #2f79ad;
+            font-family: 'Garamond', serif;
+            font-size: 30px;
+            border: none;
+            padding: 0;
         }
 
         .faq-item {
-            background: #f9f9f9;
-            border-radius: 8px;
-            margin-bottom: 15px;
+            background: #f9fdff;
+            border: 1px solid rgba(67, 155, 212, 0.2);
+            border-radius: 12px;
+            margin-bottom: 10px;
             overflow: hidden;
         }
 
         .faq-question {
-            padding: 20px 25px;
+            padding: 16px;
             cursor: pointer;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            transition: background 0.3s;
+            transition: background 0.2s ease;
         }
 
         .faq-question:hover {
-            background: #f0f0f0;
+            background: #eaf7ff;
         }
 
         .faq-question h4 {
             font-size: 16px;
-            color: #333;
-            font-weight: 500;
+            color: #2a4f6d;
+            font-weight: 600;
             margin: 0;
+            padding-right: 10px;
         }
 
         .faq-icon {
-            font-size: 20px;
-            color: #471873;
+            font-size: 16px;
+            color: #2f79ad;
             transition: transform 0.3s;
+            line-height: 1;
+            min-width: 16px;
         }
 
         .faq-item.active .faq-icon {
@@ -158,57 +310,153 @@
         }
 
         .faq-answer {
-            padding: 0 25px;
+            padding: 0 16px;
             max-height: 0;
             overflow: hidden;
             transition: all 0.3s ease;
         }
 
         .faq-item.active .faq-answer {
-            padding: 0 25px 20px;
-            max-height: 500px;
+            padding: 0 16px 16px;
+            max-height: 460px;
         }
 
         .faq-answer p {
             font-size: 15px;
-            line-height: 1.8;
-            color: #666;
+            line-height: 1.75;
+            color: #4a6f8d;
             margin: 0;
         }
 
-        .contact-banner {
-            background: linear-gradient(135deg, #471873 0%, #6a1b9a 100%);
-            color: white;
-            padding: 60px 40px;
+        .fq-side-links {
+            display: grid;
+            gap: 10px;
+        }
+
+        .fq-side-links a {
+            display: block;
+            text-decoration: none;
+            color: #2f638f;
+            border: 1px solid rgba(67, 155, 212, 0.18);
             border-radius: 12px;
-            text-align: center;
-            margin-top: 40px;
+            background: #f9fdff;
+            padding: 10px 12px;
+            font-size: 14px;
+            line-height: 1.55;
         }
 
-        .contact-banner h3 {
-            font-size: 28px;
-            margin-bottom: 20px;
+        .fq-side-links a:hover {
+            background: #eaf7ff;
         }
 
-        .contact-banner p {
-            font-size: 16px;
+        .fq-contact {
+            background: #f7fcff;
+            border: 1px solid rgba(67, 155, 212, 0.22);
+            border-radius: 12px;
+            padding: 10px 12px;
             margin-bottom: 10px;
-            opacity: 0.9;
         }
 
-        .contact-banner .hotline {
-            font-size: 32px;
-            font-weight: bold;
-            margin: 20px 0;
+        .fq-contact b {
+            display: block;
+            color: #2d7bb1;
+            font-size: 13px;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        .fq-contact span {
+            color: #204c70;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .fq-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 12px;
+        }
+
+        .fq-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 44px;
+            padding: 10px 16px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            font-weight: 700;
+            border: 1px solid transparent;
+        }
+
+        .fq-btn-primary {
+            color: #fff;
+            background: linear-gradient(120deg, var(--faq-blue-1), var(--faq-blue-2));
+            box-shadow: 0 10px 20px rgba(67, 155, 212, 0.24);
+        }
+
+        .fq-btn-light {
+            color: #2b79af;
+            background: #f7fcff;
+            border-color: rgba(67, 155, 212, 0.25);
+        }
+
+        .fq-contact-banner {
+            background: linear-gradient(120deg, #3f9ad3, #56b4e7);
+            color: #fff;
+            border-radius: 16px;
+            padding: 18px;
+            margin-top: 8px;
+        }
+
+        .fq-contact-banner h4 {
+            margin: 0 0 6px;
+            color: #fff;
+            font-family: 'Garamond', serif;
+            font-size: 30px;
+        }
+
+        .fq-contact-banner p {
+            margin: 0;
+            color: rgba(255, 255, 255, 0.96);
+        }
+
+        @media (max-width: 1180px) {
+
+            .fq-hero-grid,
+            .fq-layout {
+                grid-template-columns: 1fr;
+            }
         }
 
         @media (max-width: 768px) {
-            .faq-question h4 {
+            .faq-wrap {
+                width: min(94vw, 1480px);
+            }
+
+            .fq-hero {
+                padding: 94px 0 42px;
+            }
+
+            .fq-hero p,
+            .faq-answer p {
                 font-size: 14px;
             }
 
-            .faq-answer p {
-                font-size: 14px;
+            .fq-card,
+            .fq-side-card {
+                padding: 16px;
+                border-radius: 16px;
+            }
+
+            .faq-question h4 {
+                font-size: 15px;
             }
         }
     </style>
@@ -218,174 +466,219 @@
     <?php include 'includes/header.php'; ?>
     <div class="overlay_mark_search" style="display:none;"></div>
 
-    <main class="body-content">
-        <section class="about__header">
-            <div class="standard__header-cover header_cover show-on-scroll" id="english-header-title">
-                <div class="standard__header-img header-cover-img">
-                    <div class="overlay_mark"></div>
-                    <img class="img-cover pc-cover" src="storage/jnp2203-1-1920x1080.jpg" alt="">
-                    <img class="img-cover mb-cover" src="storage/jnp2203-1-1180x720.jpg" alt="">
-                </div>
-                <div class="big-cover-title-box">
-                    <ol class="breadcrumb container">
-                        <li class="breadcrumb-item white"><a href="index.php" class="white">Trang chủ</a></li>
-                        <li class="breadcrumb-item white"><a href="tuyen-dung.php" class="white">Tuyển sinh</a></li>
-                        <li class="breadcrumb-item white"><a href="javascript:;" class="white">Câu hỏi thường gặp</a></li>
-                    </ol>
-                    <h1 class="big__header-title container font-garamond-bold white header-title">
-                        Câu hỏi thường gặp</h1>
+    <main class="body-content faq-page">
+        <section class="fq-hero">
+            <div class="faq-wrap">
+                <div class="fq-hero-grid" data-aos="fade-up">
+                    <div>
+                        <ol class="breadcrumb fq-breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.php">Trang chủ</a></li>
+                            <li class="breadcrumb-item"><a href="thong-tin-tuyen-sinh-tieu-hoc.php">Tuyển sinh</a></li>
+                            <li class="breadcrumb-item active">Câu hỏi thường gặp</li>
+                        </ol>
+
+                        <h1>Câu hỏi thường gặp</h1>
+                        <p>Tổng hợp các thông tin phụ huynh quan tâm nhất về tuyển sinh, học phí, chương trình học và dịch vụ học đường tại Meyschool Đoàn Thị Điểm.</p>
+
+                        <div class="fq-tags">
+                            <span>Tuyển sinh 2026 - 2027</span>
+                            <span>Học phí và chính sách</span>
+                            <span>Dịch vụ học đường</span>
+                        </div>
+                    </div>
+
+                    <aside class="fq-hero-panel">
+                        <h3>Tìm nhanh theo nhóm</h3>
+                        <ul>
+                            <li>Tuyển sinh và hồ sơ đầu vào</li>
+                            <li>Học phí, ưu đãi và học bổng</li>
+                            <li>Chương trình học, bán trú, xe đưa đón</li>
+                        </ul>
+                    </aside>
                 </div>
             </div>
         </section>
 
-        <section class="faq-content">
-            <div class="faq-intro">
-                <h2 class="font-garamond-bold">FAQ - Những câu hỏi thường gặp</h2>
-                <p>Dưới đây là những câu hỏi phổ biến mà phụ huynh thường quan tâm khi tìm hiểu về Meyschool Đoàn Thị Điểm. Nếu bạn không tìm thấy câu trả lời, vui lòng liên hệ với chúng tôi.</p>
-            </div>
+        <section class="fq-main">
+            <div class="faq-wrap fq-layout">
+                <div class="fq-content">
+                    <article class="fq-card" data-aos="fade-up">
+                        <h2>FAQ tuyển sinh và học tập</h2>
 
-            <div class="faq-category">
-                <h3 class="faq-category-title font-garamond-bold">Tuyển sinh</h3>
+                        <div class="faq-category">
+                            <h3 class="faq-category-title">Tuyển sinh</h3>
 
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4>Thời gian tuyển sinh năm học 2026-2027 là khi nào?</h4>
-                        <span class="faq-icon">▼</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Tuyển sinh năm học 2026-2027 có 3 đợt: Đợt 1 từ 15/02/2026 đến 30/03/2026, Đợt 2 từ 01/04/2026 đến 30/06/2026, và Đợt bổ sung từ 01/07/2026 đến 15/08/2026 (nếu còn chỉ tiêu).</p>
-                    </div>
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <h4>Thời gian tuyển sinh năm học 2026-2027 là khi nào?</h4>
+                                    <span class="faq-icon">▼</span>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Tuyển sinh năm học 2026-2027 dự kiến theo các đợt xét tuyển từ đầu năm, kéo dài đến khi đủ chỉ tiêu ở từng cấp học. Phụ huynh nên đăng ký sớm để được tư vấn và giữ suất.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <h4>Hồ sơ đăng ký tuyển sinh cần những gì?</h4>
+                                    <span class="faq-icon">▼</span>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Hồ sơ thường gồm: đơn đăng ký, giấy khai sinh, giấy tờ cư trú, ảnh chân dung học sinh, học bạ và các minh chứng học tập liên quan theo từng cấp lớp.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <h4>Có cần thi đầu vào không?</h4>
+                                    <span class="faq-icon">▼</span>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Nhà trường tổ chức đánh giá phù hợp theo độ tuổi và cấp học, kết hợp quan sát năng lực, phỏng vấn phụ huynh - học sinh và bài đánh giá đầu vào nếu cần.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq-category">
+                            <h3 class="faq-category-title">Học phí và chính sách</h3>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <h4>Học phí năm 2026-2027 được công bố như thế nào?</h4>
+                                    <span class="faq-icon">▼</span>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Biểu phí được tư vấn chi tiết theo cấp học, chương trình đăng ký và dịch vụ đi kèm. Phụ huynh sẽ nhận bảng phí đầy đủ khi hoàn tất bước tư vấn tuyển sinh.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <h4>Có chính sách ưu đãi và học bổng không?</h4>
+                                    <span class="faq-icon">▼</span>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Có. Nhà trường áp dụng chính sách ưu đãi theo thời điểm đăng ký, gia đình nhiều con và xét học bổng theo năng lực học thuật, thành tích nổi bật.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <h4>Phụ huynh có thể chọn hình thức đóng phí nào?</h4>
+                                    <span class="faq-icon">▼</span>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Phụ huynh có thể lựa chọn phương án đóng phí theo kỳ hoặc theo năm học tùy chính sách từng thời điểm; phương án đóng theo năm thường đi kèm hỗ trợ tài chính bổ sung.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq-category">
+                            <h3 class="faq-category-title">Chương trình học</h3>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <h4>Chương trình song ngữ tại Meyschool có gì nổi bật?</h4>
+                                    <span class="faq-icon">▼</span>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Chương trình tích hợp học thuật Việt Nam với định hướng song ngữ, tăng cường ngoại ngữ và kỹ năng thế kỷ 21 thông qua dự án học tập, trải nghiệm và hợp tác liên môn.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <h4>Học sinh có được học thêm ngoại ngữ khác ngoài tiếng Anh không?</h4>
+                                    <span class="faq-icon">▼</span>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Tùy theo cấp lớp và kế hoạch triển khai từng năm học, học sinh có thể được tiếp cận thêm các lựa chọn ngoại ngữ bổ trợ trong lộ trình phát triển cá nhân.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <h4>Nhà trường có dịch vụ bán trú không?</h4>
+                                    <span class="faq-icon">▼</span>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Có. Dịch vụ bán trú bao gồm bữa ăn, nghỉ trưa và quản lý học sinh theo khung giờ, bảo đảm an toàn và phù hợp với nhịp sinh hoạt của từng lứa tuổi.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq-category">
+                            <h3 class="faq-category-title">Cơ sở vật chất và dịch vụ</h3>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <h4>Trường có dịch vụ xe đưa đón không?</h4>
+                                    <span class="faq-icon">▼</span>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Có. Xe đưa đón được tổ chức theo tuyến, có giám sát hành trình và nhân sự đi kèm nhằm hỗ trợ học sinh di chuyển an toàn mỗi ngày.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <h4>Chế độ dinh dưỡng tại trường được xây dựng ra sao?</h4>
+                                    <span class="faq-icon">▼</span>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Thực đơn được thiết kế cân bằng dinh dưỡng theo nhóm tuổi, cập nhật định kỳ và quản lý theo quy trình an toàn thực phẩm.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <h4>Trường có hỗ trợ y tế học đường không?</h4>
+                                    <span class="faq-icon">▼</span>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Có. Bộ phận y tế học đường theo dõi sức khỏe học sinh trong ngày học và phối hợp với phụ huynh trong các tình huống cần hỗ trợ chuyên môn.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <section class="fq-contact-banner" data-aos="fade-up">
+                        <h4>Bạn còn câu hỏi khác?</h4>
+                        <p>Đội ngũ tuyển sinh luôn sẵn sàng tư vấn chi tiết theo nhu cầu từng gia đình.</p>
+                    </section>
                 </div>
 
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4>Hồ sơ đăng ký tuyển sinh cần những gì?</h4>
-                        <span class="faq-icon">▼</span>
+                <aside class="fq-side" data-aos="fade-up" data-aos-delay="120">
+                    <div class="fq-side-card">
+                        <h3>Danh mục tuyển sinh</h3>
+                        <div class="fq-side-links">
+                            <a href="thong-tin-tuyen-sinh-tieu-hoc.php">Tuyển sinh Tiểu học</a>
+                            <a href="thong-tin-tuyen-sinh-thcs.php">Tuyển sinh THCS</a>
+                            <a href="uu-dai-tuyen-sinh.php">Ưu đãi tuyển sinh</a>
+                            <a href="hoc-bong-2026-2027.php">Học bổng 2026 - 2027</a>
+                        </div>
                     </div>
-                    <div class="faq-answer">
-                        <p>Hồ sơ bao gồm: Đơn đăng ký tuyển sinh (theo mẫu nhà trường), bản sao giấy khai sinh có công chứng, bản sao hộ khẩu, 02 ảnh 3x4 chụp trong vòng 6 tháng, học bạ và giấy chứng nhận tốt nghiệp cấp dưới.</p>
-                    </div>
-                </div>
 
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4>Có cần thi đầu vào không?</h4>
-                        <span class="faq-icon">▼</span>
+                    <div class="fq-side-card">
+                        <h3>Liên hệ tư vấn</h3>
+                        <div class="fq-contact">
+                            <b>Hotline</b>
+                            <span>0934 525 889</span>
+                        </div>
+                        <div class="fq-contact">
+                            <b>Email</b>
+                            <span>tuyensinh@doanthidiem.edu.vn</span>
+                        </div>
+                        <div class="fq-contact" style="margin-bottom: 0;">
+                            <b>Địa chỉ</b>
+                            <span>KĐT Trung Văn, Nam Từ Liêm, Hà Nội</span>
+                        </div>
+                        <div class="fq-actions">
+                            <a href="dang-ky-tu-van.php" class="fq-btn fq-btn-primary">Đăng ký tư vấn</a>
+                            <a href="lien-he.php" class="fq-btn fq-btn-light">Liên hệ ngay</a>
+                        </div>
                     </div>
-                    <div class="faq-answer">
-                        <p>Học sinh vào lớp 1 và tiền tiểu học sẽ tham gia buổi đánh giá năng lực nhẹ nhàng. Học sinh vào lớp 6 và chuyển cấp sẽ thi đánh giá năng lực các môn Toán, Tiếng Việt và Tiếng Anh.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-category">
-                <h3 class="faq-category-title font-garamond-bold">Học phí & Chính sách</h3>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4>Học phí năm 2026-2027 là bao nhiêu?</h4>
-                        <span class="faq-icon">▼</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Học phí cấp Tiểu học: 85,000,000 VNĐ/năm. Học phí cấp THCS: 95,000,000 VNĐ/năm. Phí bán trú: 15-18 triệu/năm tùy cấp. Phí xe đưa đón tính theo tuyến.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4>Có chính sách miễn giảm học phí không?</h4>
-                        <span class="faq-icon">▼</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Có. Học sinh đạt giải cấp Thành phố giảm 30%, cấp Quốc gia giảm 50%, Quốc tế học bổng toàn phần. Anh chị em ruột cùng học giảm 10-15%. Đăng ký sớm giảm 10%.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4>Có thể đóng học phí theo tháng không?</h4>
-                        <span class="faq-icon">▼</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Phụ huynh có thể chọn đóng học phí theo học kỳ hoặc cả năm. Đóng cả năm một lần được giảm thêm 5%. Hiện chưa có chính sách đóng theo tháng.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-category">
-                <h3 class="faq-category-title font-garamond-bold">Chương trình học</h3>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4>Chương trình song ngữ tại Meyschool như thế nào?</h4>
-                        <span class="faq-icon">▼</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Meyschool áp dụng chương trình song ngữ với 50% thời lượng bằng tiếng Anh. Học sinh được học Toán, Khoa học, Nghệ thuật bằng tiếng Anh với giáo viên bản ngữ và giáo viên Việt Nam có chứng chỉ quốc tế.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4>Học sinh có được học thêm ngoại ngữ khác không?</h4>
-                        <span class="faq-icon">▼</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Ngoài tiếng Anh, học sinh có thể chọn học thêm tiếng Trung, tiếng Hàn hoặc tiếng Pháp như ngoại ngữ thứ 2 (tùy theo khối lớp và lịch học).</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4>Có chương trình bán trú không?</h4>
-                        <span class="faq-icon">▼</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Có. Nhà trường có dịch vụ bán trú với bữa trưa dinh dưỡng, giờ ngủ trưa và hoạt động buổi chiều do giáo viên quản lý. Phụ huynh đăng ký thêm dịch vụ này.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-category">
-                <h3 class="faq-category-title font-garamond-bold">Cơ sở vật chất & Dịch vụ</h3>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4>Trường có xe đưa đón không?</h4>
-                        <span class="faq-icon">▼</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Có. Nhà trường có dịch vụ xe đưa đón với nhiều tuyến khác nhau trong nội thành Hà Nội. Xe được trang bị điều hòa, ghế an toàn cho trẻ và có bảo mẫu đi cùng.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4>Bữa ăn tại trường như thế nào?</h4>
-                        <span class="faq-icon">▼</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Thực đơn được thiết kế bởi chuyên gia dinh dưỡng, đảm bảo đủ chất cho sự phát triển của trẻ. Nguyên liệu tươi sạch, nguồn gốc rõ ràng. Phụ huynh có thể xem thực đơn hàng tuần trên website.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4>Có dịch vụ y tế tại trường không?</h4>
-                        <span class="faq-icon">▼</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Có. Trường có phòng y tế với điều dưỡng túc trực trong giờ học. Liên kết với bệnh viện gần trường để xử lý các trường hợp khẩn cấp.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="contact-banner">
-                <h3 class="font-garamond-bold">Vẫn còn thắc mắc?</h3>
-                <p>Liên hệ với chúng tôi để được tư vấn chi tiết</p>
-                <p class="hotline font-garamond-bold">0934 525 889</p>
-                <p>Email: tuyensinh@doanthidiem.edu.vn</p>
-                <p>Hoặc đăng ký tư vấn tại <a href="dang-ky-tu-van.php" style="color: #fff; text-decoration: underline;">đây</a></p>
+                </aside>
             </div>
         </section>
     </main>

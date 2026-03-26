@@ -56,7 +56,6 @@
     <style>
         nav#admin_bar {
             display: none;
-
         }
 
         .jq-toast-wrap {
@@ -68,47 +67,399 @@
             z-index: 9000999999999 !important;
         }
 
-        .btn-dk {
-            width: 210px;
-            height: 50px;
-            line-height: 50px;
-            text-align: center;
-            background-color: #471873;
-            font-size: 14px;
-            font-weight: 600;
-            text-transform: uppercase;
-            border: none;
-            color: #fff;
-            display: inline-block;
-            margin-top: 20px;
-        }
-
-        .btn-full {
-            text-align: center;
-            line-height: 60px;
-        }
-
         body.show-admin-bar {
-            margin-top: 0px !important;
-            /* position: relative; */
+            margin-top: 0 !important;
+        }
+
+        :root {
+            --lr-blue-1: #439bd4;
+            --lr-blue-2: #4db0e4;
+            --lr-blue-3: #eaf7ff;
+            --lr-ink: #214864;
+        }
+
+        .learning-page {
+            background: radial-gradient(circle at 0% 0%, #eaf7ff 0%, #f7fcff 50%, #fff 100%);
+            color: var(--lr-ink);
+        }
+
+        .learning-shell {
+            width: min(94vw, 1420px);
+            margin: 0 auto;
+        }
+
+        .lr-hero {
+            position: relative;
+            overflow: hidden;
+            padding: 116px 0 76px;
+            background: linear-gradient(135deg, rgba(67, 155, 212, 0.94) 0%, rgba(77, 176, 228, 0.92) 66%, rgba(77, 176, 228, 0.86) 100%), url('olympia/images/lo-trinh-hoc-tap-web.jpg') center/cover no-repeat;
+        }
+
+        .lr-hero::before,
+        .lr-hero::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.16);
+        }
+
+        .lr-hero::before {
+            width: 360px;
+            height: 360px;
+            right: -120px;
+            top: -110px;
+        }
+
+        .lr-hero::after {
+            width: 220px;
+            height: 220px;
+            left: -80px;
+            bottom: -90px;
+        }
+
+        .lr-breadcrumb {
+            margin: 0 0 16px;
+            display: inline-flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            position: static !important;
+            float: none !important;
+            background: rgba(255, 255, 255, 0.18);
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            border-radius: 999px;
+            padding: 8px 16px;
+        }
+
+        .lr-breadcrumb li,
+        .lr-breadcrumb li a {
+            color: #fff;
+            font-size: 13px;
+        }
+
+        .lr-hero-content {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+            gap: 24px;
+            align-items: center;
+        }
+
+        .lr-hero h1 {
+            margin: 0;
+            color: #fff;
+            font-family: 'Garamond', serif;
+            font-size: clamp(38px, 5vw, 66px);
+            line-height: 1.05;
+        }
+
+        .lr-hero p {
+            margin: 16px 0 0;
+            color: rgba(255, 255, 255, 0.96);
+            font-size: 17px;
+            line-height: 1.75;
+            max-width: 760px;
+        }
+
+        .lr-tag-list {
+            margin-top: 18px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .lr-tag-list span {
+            padding: 8px 12px;
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 700;
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.32);
+            background: rgba(255, 255, 255, 0.18);
+        }
+
+        .lr-hero-panel {
+            background: rgba(255, 255, 255, 0.14);
+            border: 1px solid rgba(255, 255, 255, 0.28);
+            border-radius: 20px;
+            padding: 16px;
+            backdrop-filter: blur(2px);
+        }
+
+        .lr-hero-panel h3 {
+            margin: 0 0 10px;
+            color: #fff;
+            font-size: 24px;
+            font-family: 'Garamond', serif;
+        }
+
+        .lr-hero-panel ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: grid;
+            gap: 8px;
+        }
+
+        .lr-hero-panel li {
+            color: rgba(255, 255, 255, 0.98);
+            font-size: 14px;
+            line-height: 1.6;
+            padding: 10px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .lr-main {
+            padding: 44px 0 72px;
+        }
+
+        .lr-grid {
+            display: grid;
+            gap: 22px;
+        }
+
+        .lr-card {
+            background: #fff;
+            border: 1px solid rgba(67, 155, 212, 0.18);
+            border-radius: 20px;
+            box-shadow: 0 12px 26px rgba(18, 51, 80, 0.08);
+            padding: 24px;
+        }
+
+        .lr-card h2 {
+            margin: 0 0 12px;
+            color: #256f9f;
+            font-family: 'Garamond', serif;
+            font-size: 34px;
+            line-height: 1.2;
+            padding: 0 !important;
+        }
+
+        .lr-card p,
+        .lr-card li {
+            color: #416987;
+            font-size: 15px;
+            line-height: 1.75;
+        }
+
+        .lr-philosophy {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 12px;
+            margin-top: 12px;
+        }
+
+        .lr-philo-item {
+            border-radius: 14px;
+            border: 1px solid rgba(67, 155, 212, 0.2);
+            background: linear-gradient(120deg, #f5fbff 0%, #edf8ff 100%);
+            padding: 14px;
+        }
+
+        .lr-philo-item h4 {
+            margin: 0 0 8px;
+            color: #2f79ad;
+            font-size: 22px;
+            font-family: 'Garamond', serif;
+        }
+
+        .lr-route-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 12px;
+        }
+
+        .lr-stage {
+            border-radius: 14px;
+            border: 1px solid rgba(67, 155, 212, 0.24);
+            background: #f9fdff;
+            padding: 14px;
+        }
+
+        .lr-stage b {
+            display: block;
+            color: #2b7bb1;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            margin-bottom: 4px;
+        }
+
+        .lr-stage h5 {
+            margin: 0 0 8px;
+            color: #2d6790;
+            font-family: 'Garamond', serif;
+            font-size: 22px;
+        }
+
+        .lr-programs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+
+        .lr-program-item {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 230px;
+            gap: 12px;
+            border: 1px solid rgba(67, 155, 212, 0.2);
+            border-radius: 14px;
+            background: #fff;
+            overflow: hidden;
+        }
+
+        .lr-program-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            min-height: 180px;
+        }
+
+        .lr-program-body {
+            padding: 14px;
+        }
+
+        .lr-program-body h4 {
+            margin: 0 0 8px;
+            color: #2d7bb1;
+            font-size: 25px;
+            font-family: 'Garamond', serif;
+        }
+
+        .lr-link {
+            color: #2d7bb1;
+            text-decoration: none;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 700;
+        }
+
+        .lr-cta {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 12px;
+            align-items: center;
+            border-radius: 16px;
+            overflow: hidden;
+            background: linear-gradient(120deg, #3e98d3, #57b5e7);
+            color: #fff;
+            padding: 18px;
+        }
+
+        .lr-cta h3 {
+            margin: 0 0 8px;
+            color: #fff;
+            font-size: 34px;
+            font-family: 'Garamond', serif;
+        }
+
+        .lr-cta p {
+            color: rgba(255, 255, 255, 0.95);
+            margin: 0;
+        }
+
+        .lr-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .lr-btn {
+            min-height: 44px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 16px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            font-weight: 700;
+            border: 1px solid transparent;
+        }
+
+        .lr-btn-primary {
+            background: #fff;
+            color: #2c77ac;
+        }
+
+        .lr-btn-outline {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.4);
+            color: #fff;
+        }
+
+        @media (max-width: 1180px) {
+
+            .lr-hero-content,
+            .lr-cta,
+            .lr-program-item {
+                grid-template-columns: 1fr;
+            }
+
+            .lr-route-grid,
+            .lr-philosophy,
+            .lr-programs {
+                grid-template-columns: 1fr;
+            }
+
+            .lr-actions {
+                justify-content: flex-start;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .learning-shell {
+                width: min(94vw, 1420px);
+            }
+
+            .lr-hero {
+                padding: 94px 0 46px;
+            }
+
+            .lr-card {
+                border-radius: 16px;
+                padding: 16px;
+            }
+
+            .lr-hero p {
+                font-size: 15px;
+            }
         }
     </style>
     <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    '../www.googletagmanager.com/gtm5445.html?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-5SS24C7N');</script>
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                '../www.googletagmanager.com/gtm5445.html?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5SS24C7N');
+    </script>
     <!-- End Google Tag Manager -->
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GDK27ZMYYW"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
         gtag('js', new Date());
 
         gtag('config', 'G-GDK27ZMYYW');
@@ -126,7 +477,7 @@
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <script>
-        window.fbAsyncInit = function () {
+        window.fbAsyncInit = function() {
             FB.init({
                 appId: '1759201507895169',
                 xfbml: true,
@@ -135,10 +486,13 @@
             FB.AppEvents.logPageView();
         };
 
-        (function (d, s, id) {
+        (function(d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) { return; }
-            js = d.createElement(s); js.id = id;
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
             js.src = "../connect.facebook.net/en_US/sdk.js";
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
@@ -155,293 +509,116 @@
     <?php include './includes/header.php'; ?>
     <div class="overlay_mark_search" style="display:none;"></div>
 
-    <main class="body-content">
-        <section class="learning-route">
-            <section class="route__header">
-                <div class="route__header-cover header_cover show-on-scroll learning-program"
-                    id="learning-header-title">
-                    <div class="route__header-img header-cover-img">
-                        <div class="overlay_mark"></div>
-                        <img class="img-cover pc-cover" src="olympia/images/lo-trinh-hoc-tap-web.jpg" alt="">
-                        <img class="img-cover mb-cover" src="olympia/images/lo-trinh-hoc-tap-mobile.jpg" alt="">
+    <main class="body-content learning-page">
+        <section class="lr-hero">
+            <div class="learning-shell">
+                <div class="lr-hero-content" data-aos="fade-up">
+                    <div>
+                        <ol class="breadcrumb lr-breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.php">Trang chủ</a></li>
+                            <li class="breadcrumb-item active">Lộ trình học tập</li>
+                        </ol>
+                        <h1>Lộ trình học tập</h1>
+                        <p>Lộ trình tại Olympia được thiết kế theo từng giai đoạn phát triển của học sinh, bảo đảm nền tảng học thuật vững chắc, năng lực toàn diện và định hướng cá nhân hóa cho tương lai.</p>
+                        <div class="lr-tag-list">
+                            <span>Cá nhân hóa</span>
+                            <span>Liên thông</span>
+                            <span>Hội nhập quốc tế</span>
+                        </div>
                     </div>
-
-                    <ol class="breadcrumb" style="opacity: 0">
-                        <li class="breadcrumb-item white"><a href="index.html" class="white">Trang chủ</a></li>
-                        <li class="breadcrumb-item white"><a href="javascript:;" class="white">Lộ trình học tập</a></li>
-                    </ol>
-                    <h1 class="route__header-title header-title font-garamond-bold white  container" style="opacity: 0">
-                        Lộ trình học tập</h1>
+                    <aside class="lr-hero-panel">
+                        <h3>Trọng tâm phát triển</h3>
+                        <ul>
+                            <li>Tư duy phản biện, giải quyết vấn đề và sáng tạo.</li>
+                            <li>Năng lực học thuật song ngữ cùng giá trị Việt Nam.</li>
+                            <li>Kỹ năng xã hội, tự chủ và bản lĩnh công dân toàn cầu.</li>
+                        </ul>
+                    </aside>
                 </div>
-            </section>
-            <section class="standard-tabs">
-                <ul class="tabs-list container">
-                    <li class="tabs-item"><a href="#triet-ly-gd" class="fix-scroll tabs-link">triết lý giáo dục</a></li>
+            </div>
+        </section>
 
-                    <li class="tabs-item"><a href="#lo-trinh-1" class="fix-scroll tabs-link">lộ trình</a></li>
-
-                    <li class="tabs-item"><a href="#chuong-trinh-dao-tao" class="fix-scroll tabs-link">chương trình đào
-                            tạo</a></li>
-                    <li class="tabs-item"><a href="#doi-song-hoc-duong" class="fix-scroll tabs-link">Tin tức &amp; Sự
-                            kiện</a></li>
-                </ul>
-            </section>
-            <section class="philosophy philosophy_new container show-on-scroll learning-program" id="triet-ly-gd">
-                <div class="philosophy-content" style="opacity: 0">
-                    <div class="philo_1 font-garamond-bold">Triết lí giáo dục của trường Olympia dựa trên những tư tưởng
-                        giáo dục tiến bộ, phù hợp với triết lý giáo dục khai phóng và những xu hướng đột phá của các môi
-                        trường giáo dục tiên tiến trên thế giới</div>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="philo_item">
-                                <div class="cover"><img src="storage/lo-trinh/lo-trinh-1.png" alt=""> </div>
-                                <h5 class="font-garamond-bold">Khai sáng</h5>
-                                <p>Học để trưởng thành có khả năng tự chủ, sáng tạo và trách nhiệm.</p>
-                            </div>
+        <section class="lr-main">
+            <div class="learning-shell lr-grid">
+                <article class="lr-card" id="triet-ly-gd" data-aos="fade-up">
+                    <h2>Triết lý giáo dục</h2>
+                    <p>Olympia theo đuổi triết lý giáo dục khai phóng, kết hợp tinh thần học thuật hiện đại với sự phát triển nhân cách toàn diện, để mỗi học sinh đều có cơ hội phát huy tối đa tiềm năng riêng.</p>
+                    <div class="lr-philosophy">
+                        <div class="lr-philo-item">
+                            <h4>Khai sáng</h4>
+                            <p>Học để trưởng thành với tư duy độc lập, năng lực tự chủ và tinh thần trách nhiệm.</p>
                         </div>
-                        <div class="col-md-4">
-                            <div class="philo_item">
-                                <div class="cover"><img src="storage/lo-trinh/lo-trinh-2.png" alt=""> </div>
-                                <h5 class="font-garamond-bold">Nhân văn</h5>
-                                <p>Học để phát triển hài hòa nhân cách, phát huy tối đa tiềm năng cá nhân.</p>
-                            </div>
+                        <div class="lr-philo-item">
+                            <h4>Nhân văn</h4>
+                            <p>Học để hiểu mình, tôn trọng sự khác biệt và phát triển nhân cách hài hòa.</p>
                         </div>
-                        <div class="col-md-4">
-                            <div class="philo_item">
-                                <div class="cover"><img src="storage/lo-trinh/lo-trinh-3.png" alt=""> </div>
-                                <h5 class="font-garamond-bold">Định hướng cuộc sống</h5>
-                                <p>Học để kiến tạo cuộc sống cá nhân, gia đình và cùng kiến tạo xã hội.</p>
-                            </div>
+                        <div class="lr-philo-item">
+                            <h4>Định hướng cuộc sống</h4>
+                            <p>Học để kiến tạo cuộc sống có ý nghĩa cho bản thân, gia đình và cộng đồng.</p>
                         </div>
                     </div>
+                </article>
 
-
-
-                </div>
-            </section>
-
-            <section class="route route_new show-on-scroll learning-program" id="lo-trinh">
-
-                <h3 class="route-title route-title_new font-garamond-bold white text-capitalize" style="opacity: 0;">
-                    Chương trình Song ngữ và Chương trình Tích hợp đa dạng tại Olympia giúp cá nhân hóa lộ trình học tập
-                    cho học sinh và phù hợp với định hướng của mỗi gia đình.</h3>
-                <div class="route-level">
-                    <div class="route-row route-row-1">
-                        <div class="level-item level-1">
-                            <img src="olympia/images/route-tien-tieu-hoc.svg" style="opacity: 0" alt=""
-                                class="level-img">
-                            <div class="level-info" style="opacity: 0">
-                                <div class="level-style">
-                                    <p class="level-title">Mầm non</p>
-                                    <ul>
-                                        <li>Chương trình Song ngữ</li>
-                                    </ul>
-                                </div>
-
-                            </div>
+                <article class="lr-card" id="lo-trinh-1" data-aos="fade-up">
+                    <h2>Lộ trình phát triển theo cấp học</h2>
+                    <div class="lr-route-grid">
+                        <div class="lr-stage">
+                            <b>Mầm non (4-5 tuổi)</b>
+                            <h5>Ươm dưỡng</h5>
+                            <p>Tạo môi trường an toàn để học sinh thể hiện tiếng nói cá nhân và nuôi dưỡng sự tự tin.</p>
                         </div>
-                        <div class="level-item level-2">
-                            <img src="olympia/images/route-tieu-hoc.svg" style="opacity: 0" alt="" class="level-img">
-                            <div class="level-info" style="opacity: 0">
-                                <div class="level-style">
-                                    <p class="level-title">Tiểu học</p>
-                                    <ul>
-                                        <li>Chương trình Song ngữ</li>
-
-
-                                    </ul>
-                                </div>
-
-                            </div>
+                        <div class="lr-stage">
+                            <b>Tiểu học (Khối 1-4)</b>
+                            <h5>Khai mở</h5>
+                            <p>Nuôi dưỡng tò mò học tập, rèn thói quen tự học và hình thành bản sắc cá nhân tích cực.</p>
                         </div>
-                        <div class="level-connect-1 level-connect" style="opacity: 0">
-                            <img src="olympia/images/path-1.svg" alt="">
+                        <div class="lr-stage">
+                            <b>THCS (Khối 5-8)</b>
+                            <h5>Phát triển</h5>
+                            <p>Đẩy mạnh tư duy phản biện, học tập liên môn và khả năng đánh giá đa chiều.</p>
+                        </div>
+                        <div class="lr-stage">
+                            <b>THPT (Khối 9-12)</b>
+                            <h5>Tối ưu</h5>
+                            <p>Cá nhân hóa định hướng đại học - nghề nghiệp qua môn tự chọn, dự án và tư vấn chuyên sâu.</p>
                         </div>
                     </div>
-                    <div class="route-row route-row-2">
-                        <div class="level-item level-3">
-                            <img src="olympia/images/route-thcs.svg" style="opacity: 0" alt="" class="level-img">
-                            <div class="level-info" style="opacity: 0">
-                                <div class="level-style">
-                                    <p class="level-title">Trung học cơ sở</p>
-                                    <ul>
-                                        <li>Chương trình Song ngữ</li>
-                                    </ul>
-                                </div>
+                </article>
 
+                <article class="lr-card" id="chuong-trinh-dao-tao" data-aos="fade-up">
+                    <h2>Chương trình đào tạo</h2>
+                    <div class="lr-programs">
+                        <div class="lr-program-item">
+                            <div class="lr-program-body">
+                                <h4>Chương trình Song ngữ Olympia</h4>
+                                <p>Đảm bảo mục tiêu chương trình quốc gia, đồng thời tích hợp tinh hoa giáo dục thế giới theo định hướng song ngữ.</p>
+                                <a class="lr-link" href="chuong-trinh-song-ngu-olympia.html">Tìm hiểu thêm</a>
                             </div>
+                            <img src="olympia/images/ct-1.jpg" alt="Chương trình Song ngữ Olympia">
                         </div>
-                        <div class="level-item level-4">
-                            <img src="olympia/images/route-thpt.svg" style="opacity: 0" alt="" class="level-img">
-                            <div class="level-info" style="opacity: 0">
-                                <div class="level-style">
-                                    <p class="level-title">Trung học phổ thông</p>
-                                    <ul>
-                                        <li>Chương trình Song ngữ</li>
-                                        <li>Chương trình Tích hợp</li>
 
-
-                                    </ul>
-                                </div>
-
+                        <div class="lr-program-item">
+                            <div class="lr-program-body">
+                                <h4>Chương trình Tích hợp</h4>
+                                <p>Mở rộng cơ hội nhận bằng Việt Nam và Hoa Kỳ cho học sinh từ lớp 9, đồng thời giữ vững bản sắc văn hóa Việt.</p>
+                                <a class="lr-link" href="chuong-trinh-tich-hop.html">Tìm hiểu thêm</a>
                             </div>
-                        </div>
-                        <div class="level-connect-2 level-connect" style="opacity: 0">
-                            <img src="olympia/images/path-2.svg" alt="">
-                        </div>
-                        <div class="level-connect-3 level-connect" style="opacity: 0">
-                            <img src="olympia/images/path-33.svg" alt="">
+                            <img src="olympia/images/ct-2.jpg" alt="Chương trình Tích hợp">
                         </div>
                     </div>
-                </div>
-            </section>
-            <section id="lo-trinh-1" class="steps_lt pd-90">
-                <div class="container">
-                    <div class="font-60 font-weight-bold font-garamond-bold text-violet text-center mgb-30">Lộ trình
-                        phát triển</div>
-                    <div class="lt_flex">
-                        <div class="lt_item">
-                            <div class="lt_head relative">
-                                <span>Mầm non <br> (4-5 tuổi)</span>
-                            </div>
-                            <div class="lt_content">
-                                <div class="font-24 font-weight-bold font-garamond-bold">Ươm dưỡng</div>
-                                <p>Tôn trọng sự đa dạng, học sinh có quyền thể hiện tiếng nói của mình trong một môi
-                                    trường an toàn về thể chất và cảm xúc.</p>
-                            </div>
-                        </div>
-                        <div class="lt_item">
-                            <div class="lt_head relative">
-                                <span>Tiểu học <br> (Khối 1-4)</span>
-                            </div>
-                            <div class="lt_content">
-                                <div class="font-24 font-weight-bold font-garamond-bold">Khai mở</div>
-                                <p>Thông qua việc nuôi dưỡng trí tò mò, sáng tạo và mở ra các cơ hội trải nghiệm, Tiểu
-                                    học Olympia duy trì tình yêu của trẻ với hành trình học tập, từ đó học tập trở thành
-                                    động lực tự thân của học sinh.Học sinh được hướng dẫn để phản chiếu và hiểu bản
-                                    thân, tự hào về giá trị cá nhân, tự chủ trong việc đưa ra quyết định - nền tảng quan
-                                    trọng trước khi trở thành một công dân toàn cầu.</p>
-                            </div>
-                        </div>
-                        <div class="lt_item">
-                            <div class="lt_head relative">
-                                <span>THCS <br> (Khối 5-8)</span>
-                            </div>
-                            <div class="lt_content">
-                                <div class="font-24 font-weight-bold font-garamond-bold">Phát triển</div>
-                                <p>Hàm lượng học thuật tăng lên, học sinh học tập những tri thức, kỹ năng gần gũi với
-                                    cuộc sống.Tư duy phản biện được đẩy mạnh. Học sinh làm quen với học tập liên môn, từ
-                                    đó học sinh có năng lực phân tích, đánh giá đa chiều và đề xuất được các giải pháp
-                                    cho các vấn đề của cuộc sống quanh mình.</p>
-                            </div>
-                        </div>
-                        <div class="lt_item">
-                            <div class="lt_head relative">
-                                <span>THPT <br> (Khối 9-12)</span>
-                            </div>
-                            <div class="lt_content">
-                                <div class="font-24 font-weight-bold font-garamond-bold">Tối ưu</div>
-                                <p>Học tập trong giai đoạn THPT được cá nhân hóa cao độ qua chương trình phân ban, hàng
-                                    loạt môn học tự chọn và quá trình tư vấn hướng nghiệp, chuẩn bị hồ sơ cá nhân.Các dự
-                                    án học tập liên môn quy mô và độc đáo, cùng các cơ hội trải nghiệm trong nước và
-                                    quốc tế phong phú, giúp học sinh phát triển tối ưu tiềm năng.</p>
-                            </div>
-                        </div>
+                </article>
+
+                <section class="lr-cta" data-aos="fade-up">
+                    <div>
+                        <h3>Tuyển sinh năm học mới</h3>
+                        <p>Đăng ký tư vấn để lựa chọn lộ trình phù hợp nhất cho con và gia đình.</p>
                     </div>
-                </div>
-            </section>
-            <section class="education-program education-program_new container" id="chuong-trinh-dao-tao">
-                <h3 class="program-title font-garamond-bold">Chương trình đào tạo</h3>
-                <div class="program-list">
-                    <div class="program-group">
-                        <div class="program-item">
-                            <div class="item-info">
-                                <a href="chuong-trinh-song-ngu-olympia.html" class="pro-title font-24">Chương trình Song
-                                    ngữ Olympia</a>
-                                <p class="pro-des">Là trường Việt Nam, chương trình giáo dục ở Olympia đảm bảo mục tiêu
-                                    giáo dục của chương trình quốc gia; đồng thời tiếp thu có chọn lọc các tinh hoa của
-                                    giáo dục thế giới.</p>
-                                <a href="chuong-trinh-song-ngu-olympia.html"
-                                    class="link-button link-normal purple righthover">Tìm hiểu thêm <img
-                                        src="olympia/images/button-1-2.svg" alt=""></a>
-                            </div>
-                            <div class="item-img">
-                                <img src="olympia/images/ct-1.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="program-item program-item_haslist relative">
-                            <div class="item-info">
-                                <a href="chuong-trinh-tich-hop.html" class="pro-title font-24">Chương trình Tích hợp</a>
-                                <p class="pro-des">Chương trình Tích hợp mở ra cơ hội cho học sinh có 2 bằng tốt nghiệp
-                                    Việt Nam và Hoa Kỳ và vẫn giữ gìn được các giá trị văn hoá Việt Nam. Chương trình
-                                    này dành cho học sinh từ lớp 9 trở lên.</p>
-                                <a id="link_hover" href="chuong-trinh-tich-hop.html"
-                                    class="link-button link-normal purple righthover">Tìm hiểu thêm <img
-                                        src="olympia/images/button-1-2.svg" alt=""></a>
-                            </div>
-                            <div class="item-img">
-                                <img src="olympia/images/ct-2.jpg" alt="">
-                            </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                        </div>
+                    <div class="lr-actions">
+                        <a class="lr-btn lr-btn-primary" href="dang-ky-tu-van.php">Đăng ký tư vấn</a>
+                        <a class="lr-btn lr-btn-outline" href="lien-he.php">Liên hệ ngay</a>
                     </div>
-                </div>
-            </section>
-
-            <section class="luggage-skill luggage-skill2" id="hanh-trang-ky-nang">
-                <div class="route-banner-cover header_cover show-on-scroll learning-program" id="tuyen-sinh">
-                    <div class="route-banner-img header-cover-img">
-                        <img class="img-cover pc-cover" src="olympia/images/learn-route-banner-2.jpg" alt="">
-                        <img class="img-cover mb-cover" src="olympia/images/learn-route-banner-mb.jpg" alt="">
-                    </div>
-                    <div class="route-banner-title route-banner-title2" style="opacity: 0">
-                        <h2 class="font-garamond-bold white banner-title">The Olympia Schools tuyển sinh 2024 - 2025
-                        </h2>
-                        <div class="button-register">
-                            <a class="btn bg-yellow btn-res" href="lien-he.html" target="__blank"><span
-                                    class="text-uppercase" style="color: #000">Tìm hiểu thêm</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
+                </section>
+            </div>
         </section>
         <section class="school-life pro-action show-on-scroll english-program" id="doi-song-hoc-duong">
             <div class="pro-action-inner container-fluid">
@@ -551,7 +728,7 @@
         AOS.init({
             once: true,
 
-            disable: function () {
+            disable: function() {
                 var maxWidth = 767;
                 return window.innerWidth < maxWidth;
             }

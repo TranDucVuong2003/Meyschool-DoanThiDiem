@@ -2334,3 +2334,72 @@ img {
   }
 }
 
+/* Unified breadcrumb style for subpage hero sections */
+.header_cover .breadcrumb,
+.cp-hero .breadcrumb,
+.ad-hero .breadcrumb,
+.sc-hero .breadcrumb,
+.fq-hero .breadcrumb,
+.cs-hero .breadcrumb,
+.sp-hero .breadcrumb,
+.lr-hero .breadcrumb {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 14px !important;
+  padding: 8px 16px !important;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.2);
+  position: static !important;
+  float: none !important;
+  z-index: 2;
+}
+
+.header_cover .breadcrumb .breadcrumb-item,
+.cp-hero .breadcrumb .breadcrumb-item,
+.ad-hero .breadcrumb .breadcrumb-item,
+.sc-hero .breadcrumb .breadcrumb-item,
+.fq-hero .breadcrumb .breadcrumb-item,
+.cs-hero .breadcrumb .breadcrumb-item,
+.sp-hero .breadcrumb .breadcrumb-item,
+.lr-hero .breadcrumb .breadcrumb-item {
+  color: #fff !important;
+  font-size: 13px !important;
+  letter-spacing: 0.3px;
+  margin-left: 0 !important;
+}
+
+.header_cover .breadcrumb .breadcrumb-item a,
+.cp-hero .breadcrumb .breadcrumb-item a,
+.ad-hero .breadcrumb .breadcrumb-item a,
+.sc-hero .breadcrumb .breadcrumb-item a,
+.fq-hero .breadcrumb .breadcrumb-item a,
+.cs-hero .breadcrumb .breadcrumb-item a,
+.sp-hero .breadcrumb .breadcrumb-item a,
+.lr-hero .breadcrumb .breadcrumb-item a {
+  color: #fff !important;
+  text-decoration: none;
+  opacity: 0.96;
+}
+
+.header_cover .breadcrumb .breadcrumb-item + .breadcrumb-item::before,
+.cp-hero .breadcrumb .breadcrumb-item + .breadcrumb-item::before,
+.ad-hero .breadcrumb .breadcrumb-item + .breadcrumb-item::before,
+.sc-hero .breadcrumb .breadcrumb-item + .breadcrumb-item::before,
+.fq-hero .breadcrumb .breadcrumb-item + .breadcrumb-item::before,
+.cs-hero .breadcrumb .breadcrumb-item + .breadcrumb-item::before,
+.sp-hero .breadcrumb .breadcrumb-item + .breadcrumb-item::before,
+.lr-hero .breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+  content: "\00b7" !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  float: none !important;
+  position: static !important;
+  display: inline-block;
+  width: auto !important;
+  height: auto !important;
+  background: transparent !important;
+  margin: 0 8px 0 2px;
+  padding: 0 !important;
+}
