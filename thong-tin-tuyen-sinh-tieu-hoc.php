@@ -579,57 +579,114 @@
             overflow: hidden;
         }
 
-        .cta-panel {
-            padding: 34px;
-            background: linear-gradient(135deg, rgba(23, 52, 93, .96), rgba(31, 75, 143, .95) 56%, rgba(83, 167, 216, .9)), url('assets/banner/banner2.jpeg') center/cover no-repeat;
+        .tq-footer-consult-wrap {
+            --tq-consult-half-height: 92px;
+            position: relative;
+            z-index: 5;
+            margin: calc(-1 * var(--tq-consult-half-height)) 20px calc(-1 * var(--tq-consult-half-height));
+            background: transparent;
         }
 
-        .cta-panel .kicker,
-        .cta-panel h2,
-        .cta-panel p {
+        .tq-footer-consult-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        .tq-footer-consult-card {
+            width: min(100%, 1020px);
+            min-height: calc(var(--tq-consult-half-height) * 2);
+            border-radius: 26px;
+            overflow: hidden;
+            position: relative;
+            background: url('olympia/images/noibat_1.jpg') center/cover no-repeat;
+            box-shadow: 0 20px 40px rgba(16, 52, 92, 0.3);
             color: #fff;
+            padding: 24px 32px;
         }
 
-        .cta-panel .kicker {
-            background: rgba(255, 255, 255, .12);
-            border: 1px solid rgba(255, 255, 255, .18);
+        .tq-footer-consult-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(110deg, rgba(17, 64, 114, 0.93) 0%, rgba(28, 89, 153, 0.9) 52%, rgba(44, 121, 190, 0.82) 100%);
         }
 
-        .cta-grid {
-            grid-template-columns: 1.05fr .95fr;
-            align-items: end;
-        }
-
-        .contact-grid {
+        .tq-footer-consult-content {
+            position: relative;
+            z-index: 2;
             display: grid;
-            gap: 14px;
+            grid-template-columns: 1fr auto;
+            align-items: center;
+            gap: 24px;
         }
 
-        .contact-card {
-            padding: 20px 22px;
-            border-radius: 24px;
-            background: rgba(255, 255, 255, .12);
-            border: 1px solid rgba(255, 255, 255, .16);
+        .tq-footer-consult-text>div {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 6px;
+            flex-wrap: nowrap;
         }
 
-        .contact-card span {
-            display: block;
-            margin-bottom: 8px;
-            font-size: 12px;
+        .tq-footer-consult-text small {
+            display: inline-block;
+            font-size: 13px;
             font-weight: 700;
+            letter-spacing: 0.06em;
             text-transform: uppercase;
-            letter-spacing: .12em;
-            color: rgba(255, 255, 255, .68);
+            padding: 6px 12px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.18);
+            margin-bottom: 0;
         }
 
-        .contact-card h3 {
-            margin-top: 0;
+        .tq-footer-consult-text h3 {
+            font-family: 'Garamond', serif;
+            font-size: clamp(30px, 2.6vw, 40px);
+            margin: 0;
             color: #fff;
         }
 
-        .contact-card p {
-            color: rgba(255, 255, 255, .86);
+        .tq-footer-consult-text p {
+            font-size: 24px;
+            line-height: 1.35;
             margin: 0;
+            color: rgba(255, 255, 255, 0.96);
+        }
+
+        .tq-footer-consult-actions {
+            text-align: right;
+        }
+
+        .tq-footer-consult-note {
+            margin-top: 10px;
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.88);
+        }
+
+        .tq-footer-consult-btn {
+            display: inline-block;
+            min-width: 188px;
+            padding: 13px 28px;
+            border-radius: 999px;
+            background: #fff;
+            color: #1d4f87;
+            font-weight: 700;
+            font-size: 17px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .tq-footer-consult-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.22);
+        }
+
+        #footer,
+        #footer .footer {
+            margin-top: 0;
         }
 
         @media (max-width: 1100px) {
@@ -638,7 +695,6 @@
             .split,
             .capability-wrap,
             .policy-grid,
-            .cta-grid,
             .gallery {
                 grid-template-columns: 1fr;
             }
@@ -673,6 +729,42 @@
 
             .anchor-bar {
                 top: 70px;
+            }
+
+            .tq-footer-consult-wrap {
+                --tq-consult-half-height: 72px;
+                margin: calc(-1 * var(--tq-consult-half-height)) 12px calc(-1 * var(--tq-consult-half-height));
+            }
+
+            .tq-footer-consult-card {
+                padding: 20px 16px;
+            }
+
+            .tq-footer-consult-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 16px;
+            }
+
+            .tq-footer-consult-text>div {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .tq-footer-consult-text p {
+                font-size: 20px;
+            }
+
+            .tq-footer-consult-actions {
+                text-align: center;
+            }
+
+            #footer {
+                padding-top: 32px;
+            }
+
+            #footer .footer {
+                padding-top: 96px;
             }
         }
 
@@ -969,37 +1061,21 @@
             </div>
         </section>
 
-        <section id="lien-he" class="section">
-            <div class="wrap">
-                <div class="cta-panel" data-aos="zoom-in-up">
-                    <div class="cta-grid">
-                        <div>
-                            <span class="kicker">Liên hệ tuyển sinh</span>
-                            <h2>Sẵn sàng cho một buổi tư vấn cụ thể, rõ ràng và đúng nhu cầu của gia đình.</h2>
-                            <p>Nếu phụ huynh muốn xem thực tế môi trường học tập, tìm hiểu hồ sơ hoặc cần lộ trình phù
-                                hợp
-                                cho con, đội ngũ tuyển sinh có thể hỗ trợ trực tiếp mỗi ngày.</p>
-                            <div class="hero-actions">
-                                <a class="btn-pill btn-gold" href="dang-ky-tu-van.php">Đăng ký tư vấn</a>
-                                <a class="btn-pill btn-outline" href="tel:0934525889">Gọi 0934 525 889</a>
+        <!-- section CTA đăng ký tư vấn -->
+        <section id="lien-he" class="tq-footer-consult-wrap">
+            <div class="tq-footer-consult-inner">
+                <div class="tq-footer-consult-card" data-aos="zoom-in-up">
+                    <div class="tq-footer-consult-content">
+                        <div class="tq-footer-consult-text">
+                            <div>
+                                <small>Tuyển sinh 2026 - 2027</small>
+                                <h3>Đăng ký tư vấn</h3>
                             </div>
+                            <p>Liên hệ ngay để được tư vấn chi tiết lộ trình học phù hợp cho con.</p>
                         </div>
-                        <div class="contact-grid">
-                            <div class="contact-card">
-                                <span>Hotline</span>
-                                <h3>0934 525 889</h3>
-                                <p>Tư vấn tuyển sinh và đặt lịch tham quan trường.</p>
-                            </div>
-                            <div class="contact-card">
-                                <span>Email</span>
-                                <h3>tuyensinh@doanthidiem.edu.vn</h3>
-                                <p>Tiếp nhận câu hỏi về hồ sơ, học phí và chỉ tiêu tuyển sinh.</p>
-                            </div>
-                            <div class="contact-card">
-                                <span>Địa chỉ</span>
-                                <h3>KĐT Trung Văn</h3>
-                                <p>Nam Từ Liêm, Hà Nội.</p>
-                            </div>
+                        <div class="tq-footer-consult-actions">
+                            <a href="lien-he.php" class="tq-footer-consult-btn">Liên hệ ngay</a>
+                            <div class="tq-footer-consult-note">Phản hồi trong vòng 24 giờ làm việc</div>
                         </div>
                     </div>
                 </div>

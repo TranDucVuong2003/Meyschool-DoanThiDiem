@@ -5,7 +5,8 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=1" name="viewport" />
+    <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=1"
+        name="viewport" />
     <link rel="shortcut icon" href="storage/favicon.png">
     <title>Hoạt động ngoại khóa</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,7 +19,8 @@
     <meta name="twitter:title" content="Hoạt động ngoại khóa">
     <meta name="twitter:description" content="">
 
-    <link media="all" type="text/css" rel="stylesheet" href="vendor/core/plugins/language/css/language-publice209.css?v=1.0.0">
+    <link media="all" type="text/css" rel="stylesheet"
+        href="vendor/core/plugins/language/css/language-publice209.css?v=1.0.0">
     <link href="../unpkg.com/aos%402.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="olympia/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="olympia/css/reset.css">
@@ -185,6 +187,7 @@
             gap: 35px;
             position: relative;
             z-index: 10;
+            margin-bottom: 150px;
         }
 
         /* Left Sidebar */
@@ -372,7 +375,7 @@
         /* Activity Cards - Image Focused */
         .nk-activities {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: 25px;
             margin: 40px 0;
         }
@@ -684,6 +687,125 @@
             color: #64748b;
         }
 
+
+        .tq-footer-consult-wrap {
+            --tq-consult-half-height: 92px;
+            position: relative;
+            z-index: 5;
+            margin: calc(-1 * var(--tq-consult-half-height)) 20px calc(-1 * var(--tq-consult-half-height));
+            background: transparent;
+        }
+
+        .tq-footer-consult-spacer {
+            height: var(--tq-consult-half-height);
+        }
+
+        .tq-footer-consult-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        .tq-footer-consult-card {
+            width: min(100%, 1020px);
+            min-height: calc(var(--tq-consult-half-height) * 2);
+            border-radius: 26px;
+            overflow: hidden;
+            position: relative;
+            background: url('olympia/images/noibat_1.jpg') center/cover no-repeat;
+            box-shadow: 0 20px 40px rgba(16, 52, 92, 0.3);
+            color: #fff;
+            padding: 24px 32px;
+        }
+
+        .tq-footer-consult-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(110deg, rgba(17, 64, 114, 0.93) 0%, rgba(28, 89, 153, 0.9) 52%, rgba(44, 121, 190, 0.82) 100%);
+        }
+
+        .tq-footer-consult-content {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .tq-footer-consult-text>div {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 6px;
+            flex-wrap: nowrap;
+        }
+
+        .tq-footer-consult-text small {
+            display: inline-block;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            padding: 6px 12px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.18);
+            margin-bottom: 0;
+        }
+
+        .tq-footer-consult-text h3 {
+            font-family: 'Garamond', serif;
+            font-size: clamp(30px, 2.6vw, 40px);
+            margin: 0;
+            color: #fff;
+        }
+
+        .tq-footer-consult-text p {
+            font-size: 24px;
+            line-height: 1.35;
+            margin: 0;
+            color: rgba(255, 255, 255, 0.96);
+        }
+
+        .tq-footer-consult-actions {
+            text-align: right;
+        }
+
+        .tq-footer-consult-note {
+            margin-top: 10px;
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.88);
+        }
+
+        .tq-footer-consult-btn {
+            display: inline-block;
+            min-width: 188px;
+            padding: 13px 28px;
+            border-radius: 999px;
+            background: #fff;
+            color: #1d4f87;
+            font-weight: 700;
+            font-size: 17px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .tq-footer-consult-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.22);
+        }
+
+        #footer,
+        #footer .footer {
+            margin-top: 0;
+        }
+
+        #footer .footer {
+            padding-top: 128px;
+        }
+
         /* Responsive */
         @media (max-width: 1200px) {
             .nk-main-layout {
@@ -738,6 +860,46 @@
 
             .nk-gallery-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .tq-footer-consult-wrap {
+                --tq-consult-half-height: 72px;
+                margin: calc(-1 * var(--tq-consult-half-height)) 12px calc(-1 * var(--tq-consult-half-height));
+            }
+
+            .tq-footer-consult-spacer {
+                height: var(--tq-consult-half-height);
+            }
+
+            .tq-footer-consult-card {
+                padding: 20px 16px;
+            }
+
+            .tq-footer-consult-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 16px;
+            }
+
+            .tq-footer-consult-text>div {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .tq-footer-consult-text p {
+                font-size: 20px;
+            }
+
+            .tq-footer-consult-actions {
+                text-align: center;
+            }
+
+            #footer {
+                padding-top: 32px;
+            }
+
+            #footer .footer {
+                padding-top: 96px;
             }
         }
     </style>
@@ -832,13 +994,16 @@
                 <!-- Intro Section -->
                 <div class="nk-section-header">
                     <h2>Khám phá thế giới ngoại khóa</h2>
-                    <p>Giáo dục không chỉ diễn ra trong lớp học. Các hoạt động ngoại khóa giúp học sinh phát triển toàn diện nhân cách, kỹ năng sống và tài năng.</p>
+                    <p>Giáo dục không chỉ diễn ra trong lớp học. Các hoạt động ngoại khóa giúp học sinh phát triển toàn
+                        diện nhân cách, kỹ năng sống và tài năng.</p>
                 </div>
 
                 <div class="nk-intro">
                     <div class="nk-intro-text">
                         <h3>Tại sao chọn ngoại khóa tại Olympia?</h3>
-                        <p>Chúng tôi cung cấp <strong>đa dạng các hoạt động</strong> từ thể thao, nghệ thuật, khoa học đến các hoạt động cộng đồng. Mỗi học sinh đều có thể tìm thấy đam mê và phát triển tiềm năng của bản thân.</p>
+                        <p>Chúng tôi cung cấp <strong>đa dạng các hoạt động</strong> từ thể thao, nghệ thuật, khoa học
+                            đến các hoạt động cộng đồng. Mỗi học sinh đều có thể tìm thấy đam mê và phát triển tiềm năng
+                            của bản thân.</p>
                     </div>
                     <div class="nk-intro-image">
                         <img src="olympia/images/about-us-1.jpg" alt="Hoạt động ngoại khóa">
@@ -859,7 +1024,8 @@
                         </div>
                         <div class="nk-activity-content">
                             <h3>Thể thao</h3>
-                            <p>Bóng đá, bóng rổ, bơi lội, cầu lông và nhiều môn thể thao khác giúp học sinh phát triển thể chất và tinh thần đồng đội.</p>
+                            <p>Bóng đá, bóng rổ, bơi lội, cầu lông và nhiều môn thể thao khác giúp học sinh phát triển
+                                thể chất và tinh thần đồng đội.</p>
                             <div class="nk-activity-tags">
                                 <span class="nk-tag">Bóng đá</span>
                                 <span class="nk-tag">Bơi lội</span>
@@ -891,7 +1057,8 @@
                         </div>
                         <div class="nk-activity-content">
                             <h3>STEM & Công nghệ</h3>
-                            <p>Khoa học, Công nghệ, Kỹ thuật và Toán học - nơi học sinh khám phá và sáng tạo với robotics, lập trình.</p>
+                            <p>Khoa học, Công nghệ, Kỹ thuật và Toán học - nơi học sinh khám phá và sáng tạo với
+                                robotics, lập trình.</p>
                             <div class="nk-activity-tags">
                                 <span class="nk-tag">Robotics</span>
                                 <span class="nk-tag">Lập trình</span>
@@ -907,7 +1074,8 @@
                         </div>
                         <div class="nk-activity-content">
                             <h3>Cộng đồng</h3>
-                            <p>Các dự án tình nguyện và hoạt động xã hội giúp học sinh phát triển lòng nhân ái và trách nhiệm công dân.</p>
+                            <p>Các dự án tình nguyện và hoạt động xã hội giúp học sinh phát triển lòng nhân ái và trách
+                                nhiệm công dân.</p>
                             <div class="nk-activity-tags">
                                 <span class="nk-tag">Tình nguyện</span>
                                 <span class="nk-tag">Môi trường</span>
@@ -922,7 +1090,8 @@
                         </div>
                         <div class="nk-activity-content">
                             <h3>Kỹ năng sống</h3>
-                            <p>Workshops và chương trình phát triển kỹ năng giao tiếp, lãnh đạo và quản lý thời gian.</p>
+                            <p>Workshops và chương trình phát triển kỹ năng giao tiếp, lãnh đạo và quản lý thời gian.
+                            </p>
                             <div class="nk-activity-tags">
                                 <span class="nk-tag">Lãnh đạo</span>
                                 <span class="nk-tag">Giao tiếp</span>
@@ -1023,21 +1192,44 @@
                     </div>
                 </div>
 
-                <div class="nk-cta-box">
+                <!-- <div class="nk-cta-box">
                     <h4>Tham gia cùng chúng tôi!</h4>
                     <p>Đăng ký tư vấn để tìm hiểu các hoạt động phù hợp với sở thích của con bạn</p>
                     <a href="lien-he.php" class="nk-cta-btn">Đăng ký ngay</a>
-                </div>
+                </div> -->
 
                 <div class="nk-photo-card">
                     <img src="olympia/images/about-us-2.jpg" alt="Thành tích">
                     <div class="nk-photo-card-content">
                         <h5>Thành tích ngoại khóa</h5>
-                        <p>Học sinh Olympia đạt nhiều giải thưởng trong các cuộc thi thể thao, nghệ thuật và STEM quốc gia.</p>
+                        <p>Học sinh Olympia đạt nhiều giải thưởng trong các cuộc thi thể thao, nghệ thuật và STEM quốc
+                            gia.</p>
                     </div>
                 </div>
             </aside>
         </div>
+
+        <div class="tq-footer-consult-spacer"></div>
+        <!-- section CTA đăng ký tư vấn -->
+        <section class="tq-footer-consult-wrap">
+            <div class="tq-footer-consult-inner">
+                <div class="tq-footer-consult-card">
+                    <div class="tq-footer-consult-content">
+                        <div class="tq-footer-consult-text">
+                            <div>
+                                <small>Tuyển sinh 2026 - 2027</small>
+                                <h3>Đăng ký tư vấn</h3>
+                            </div>
+                            <p>Liên hệ ngay để được tư vấn chi tiết lộ trình học phù hợp cho con.</p>
+                        </div>
+                        <div class="tq-footer-consult-actions">
+                            <a href="lien-he.php" class="tq-footer-consult-btn">Liên hệ ngay</a>
+                            <div class="tq-footer-consult-note">Phản hồi trong vòng 24 giờ làm việc</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <?php include 'includes/footer.php'; ?>

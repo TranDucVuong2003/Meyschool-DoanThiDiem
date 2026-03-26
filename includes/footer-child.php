@@ -22,10 +22,12 @@
                     <span class="footer-modern-title">Thông tin liên hệ</span>
                     <ul class="footer-contact-list">
                         <li class="footer-contact-item">
-                            <p class="contact-item-value">Địa chỉ: Phường An Thới, Meyhomes Capital Phú Quốc, Phu Quoc, Vietnam</p>
+                            <p class="contact-item-value">Địa chỉ: Phường An Thới, Meyhomes Capital Phú Quốc, Phu Quoc,
+                                Vietnam</p>
                         </li>
                         <li class="footer-contact-item">
-                            <p class="contact-item-value">Hotline: <a href="tel:+0934525889" class="address-phone-number">0934 525 889</a></p>
+                            <p class="contact-item-value">Hotline: <a href="tel:+0934525889"
+                                    class="address-phone-number">0934 525 889</a></p>
                         </li>
                         <li class="footer-contact-item">
                             <p class="contact-item-value">Email: tuyensinh@theolympiaschools.edu.vn</p>
@@ -44,7 +46,8 @@
                         <iframe
                             src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fmeyschooldtd.phuquoc%2F&tabs=timeline&width=360&height=220&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true"
                             width="360" height="220" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
-                            allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                            allowfullscreen="true"
+                            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
                     </div>
                 </div>
                 <div class="footer-modern-col">

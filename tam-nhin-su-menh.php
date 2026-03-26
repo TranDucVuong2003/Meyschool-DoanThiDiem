@@ -561,7 +561,8 @@
                         </ol>
 
                         <h1>Tầm nhìn - Sứ mệnh - Giá trị cốt lõi</h1>
-                        <p>Meyschool Đoàn Thị Điểm theo đuổi mô hình giáo dục khai phóng, nuôi dưỡng bản lĩnh, nhân cách và năng lực hội nhập để mỗi học sinh tự tin trưởng thành trong thế giới luôn đổi thay.</p>
+                        <p>Meyschool Đoàn Thị Điểm theo đuổi mô hình giáo dục khai phóng, nuôi dưỡng bản lĩnh, nhân cách
+                            và năng lực hội nhập để mỗi học sinh tự tin trưởng thành trong thế giới luôn đổi thay.</p>
 
                         <div class="vm-chips">
                             <span>Tư duy toàn cầu</span>
@@ -588,14 +589,19 @@
                     <article class="vm-card" data-aos="fade-up">
                         <h2>Tầm nhìn</h2>
                         <div class="vm-lead">
-                            <p>Trở thành ngôi trường song ngữ chất lượng cao, nơi học sinh được chuẩn bị đầy đủ năng lực học thuật, cảm xúc xã hội và kỹ năng công dân để chủ động kiến tạo tương lai của chính mình.</p>
+                            <p>Trở thành ngôi trường song ngữ chất lượng cao, nơi học sinh được chuẩn bị đầy đủ năng lực
+                                học thuật, cảm xúc xã hội và kỹ năng công dân để chủ động kiến tạo tương lai của chính
+                                mình.</p>
                         </div>
-                        <p>Nhà trường xây dựng cộng đồng học tập đa dạng, tôn trọng sự khác biệt và khuyến khích mỗi học sinh phát triển theo lộ trình cá nhân. Từ nền tảng học thuật vững chắc đến trải nghiệm thực tế phong phú, học sinh được truyền cảm hứng để học tập suốt đời.</p>
+                        <p>Nhà trường xây dựng cộng đồng học tập đa dạng, tôn trọng sự khác biệt và khuyến khích mỗi học
+                            sinh phát triển theo lộ trình cá nhân. Từ nền tảng học thuật vững chắc đến trải nghiệm thực
+                            tế phong phú, học sinh được truyền cảm hứng để học tập suốt đời.</p>
                     </article>
 
                     <article class="vm-card" data-aos="fade-up">
                         <h2>Sứ mệnh</h2>
-                        <p>Meyschool Đoàn Thị Điểm cam kết đồng hành cùng học sinh qua một hành trình giáo dục có chiều sâu, giúp các em phát triển cân bằng giữa tri thức, kỹ năng và nhân cách.</p>
+                        <p>Meyschool Đoàn Thị Điểm cam kết đồng hành cùng học sinh qua một hành trình giáo dục có chiều
+                            sâu, giúp các em phát triển cân bằng giữa tri thức, kỹ năng và nhân cách.</p>
                         <div class="vm-mission-grid">
                             <div class="vm-mission-item">
                                 <b>Phát triển toàn diện</b>
@@ -618,7 +624,8 @@
 
                     <article class="vm-card" data-aos="fade-up">
                         <h2>Giá trị cốt lõi</h2>
-                        <p>Năm giá trị cốt lõi là trục phát triển xuyên suốt trong mọi hoạt động dạy học, giáo dục kỹ năng và văn hóa trường học.</p>
+                        <p>Năm giá trị cốt lõi là trục phát triển xuyên suốt trong mọi hoạt động dạy học, giáo dục kỹ
+                            năng và văn hóa trường học.</p>
                         <div class="vm-values">
                             <div class="vm-value">
                                 <span>Respect</span>
@@ -647,7 +654,8 @@
                         <h2>Khoảnh khắc giáo dục</h2>
                         <div class="vm-gallery">
                             <figure class="tall">
-                                <img src="storage/banner/tieu-hoc.jpg" alt="Học sinh trong hoạt động học tập tại Meyschool">
+                                <img src="storage/banner/tieu-hoc.jpg"
+                                    alt="Học sinh trong hoạt động học tập tại Meyschool">
                                 <figcaption>Học sinh tự tin khám phá năng lực của bản thân</figcaption>
                             </figure>
                             <figure class="small">

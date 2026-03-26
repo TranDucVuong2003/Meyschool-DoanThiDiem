@@ -1185,11 +1185,13 @@ $(document).on('ready', function() {
         <button onclick="closeTuyenSinhPopup()"
             style="position: absolute; top: 10px; right: 10px; width: 35px; height: 35px; background: rgba(255,255,255,0.9); border: none; border-radius: 50%; font-size: 20px; cursor: pointer; z-index: 100; display: flex; justify-content: center; align-items: center;">×</button>
         <div style="position: relative;">
-            <img src="assets/img/banner/popup-tuyensinh.jpg" alt="Tuyển sinh 2026-2027"
-                style="width: 500px; height: 500px; max-width: 100%; object-fit: cover; display: block;">
-            <a href="tuyen-dung.php"
+            <a href="tuyen-dung.php" style="display: block; line-height: 0;">
+                <img src="assets/img/banner/popup-tuyensinh.jpg" alt="Tuyển sinh 2026-2027"
+                    style="width: 500px; height: 500px; max-width: 100%; object-fit: cover; display: block; cursor: pointer;">
+            </a>
+            <!-- <a href="tuyen-dung.php"
                 style="position: absolute; bottom: 15%; left: 50%; transform: translateX(-50%); display: inline-block; padding: 12px 35px; background: #ff6b35; color: white; text-decoration: none; font-weight: bold; font-size: 16px; border-radius: 30px; text-transform: uppercase; box-shadow: 0 5px 15px rgba(255,107,53,0.4); white-space: nowrap;">Đăng
-                ký ngay</a>
+                ký ngay</a> -->
         </div>
     </div>
 </div>

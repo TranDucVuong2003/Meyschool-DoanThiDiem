@@ -5,7 +5,8 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=1" name="viewport" />
+    <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=1"
+        name="viewport" />
     <link rel="shortcut icon" href="storage/favicon.png">
     <title>Tổng quan chương trình</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,7 +19,8 @@
     <meta name="twitter:title" content="Tổng quan chương trình">
     <meta name="twitter:description" content="">
 
-    <link media="all" type="text/css" rel="stylesheet" href="vendor/core/plugins/language/css/language-publice209.css?v=1.0.0">
+    <link media="all" type="text/css" rel="stylesheet"
+        href="vendor/core/plugins/language/css/language-publice209.css?v=1.0.0">
     <link href="../unpkg.com/aos%402.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="olympia/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="olympia/css/reset.css">
@@ -38,647 +40,733 @@
 
     <link rel="alternate" href="en.html" hreflang="en" />
     <style>
-        nav#admin_bar {
-            display: none;
-        }
+    nav#admin_bar {
+        display: none;
+    }
 
-        .jq-toast-wrap {
-            display: block;
-            position: fixed;
-            width: 250px;
-            pointer-events: none !important;
-            letter-spacing: normal;
-            z-index: 9000999999999 !important;
-        }
+    .jq-toast-wrap {
+        display: block;
+        position: fixed;
+        width: 250px;
+        pointer-events: none !important;
+        letter-spacing: normal;
+        z-index: 9000999999999 !important;
+    }
 
-        .btn-dk {
-            width: 210px;
-            height: 50px;
-            line-height: 50px;
-            text-align: center;
-            background-color: #471873;
-            font-size: 14px;
-            font-weight: 600;
-            text-transform: uppercase;
-            border: none;
-            color: #fff;
-            display: inline-block;
-            margin-top: 20px;
-        }
+    .btn-dk {
+        width: 210px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        background-color: #471873;
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase;
+        border: none;
+        color: #fff;
+        display: inline-block;
+        margin-top: 20px;
+    }
 
-        .btn-full {
-            text-align: center;
-            line-height: 60px;
-        }
+    .btn-full {
+        text-align: center;
+        line-height: 60px;
+    }
 
-        body.show-admin-bar {
-            margin-top: 0px !important;
-        }
+    body.show-admin-bar {
+        margin-top: 0px !important;
+    }
 
-        body.show-admin-bar {
-            margin-top: 0px !important;
-        }
+    body.show-admin-bar {
+        margin-top: 0px !important;
+    }
 
-        /* ============================================
+    /* ============================================
            PAGE 1: TONG QUAN - MODERN OVERVIEW STYLE
            Màu xanh chủ đạo #1e4a7e
            ============================================ */
-        .tq-container {
-            background: linear-gradient(180deg, #f8fafc 0%, #eef4f8 100%);
-            min-height: 100vh;
+    .tq-container {
+        background: linear-gradient(180deg, #f8fafc 0%, #eef4f8 100%);
+        min-height: 100vh;
+    }
+
+    /* Hero Section with Real Image */
+    .tq-hero {
+        position: relative;
+        height: 650px;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .tq-hero-bg {
+        position: absolute;
+        inset: 0;
+        background: url('storage/banner/ve-chung-toi-web.jpg') center/cover;
+    }
+
+    .tq-hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, rgba(30, 74, 126, 0.92) 0%, rgba(30, 74, 126, 0.7) 50%, rgba(245, 158, 11, 0.5) 100%);
+    }
+
+    .tq-hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 40px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 60px;
+        align-items: center;
+    }
+
+    .tq-hero-text {
+        color: #fff;
+        padding: 20px 0;
+    }
+
+    .tq-hero-text ol {
+        margin: 0 0 20px 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 14px;
+    }
+
+    .tq-hero-text ol a {
+        color: rgba(255, 255, 255, 0.85);
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .tq-hero-text ol a:hover {
+        color: #fff;
+    }
+
+    .tq-hero-text h1 {
+        font-family: 'Garamond', serif;
+        font-size: 52px;
+        font-weight: 700;
+        margin: 0 0 20px 0;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+        line-height: 1.2;
+        color: #fff;
+    }
+
+    .tq-hero-text p {
+        font-size: 20px;
+        margin: 0;
+        line-height: 1.6;
+        color: rgba(255, 255, 255, 0.95);
+    }
+
+    .tq-hero-images {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .tq-hero-img {
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        border: 3px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .tq-hero-img:first-child {
+        grid-row: span 2;
+    }
+
+    .tq-hero-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+    }
+
+    .tq-hero-img:hover img {
+        transform: scale(1.05);
+    }
+
+    /* Program Cards with Images */
+    .tq-programs-float {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        margin-top: -60px;
+        padding: 0 40px;
+        position: relative;
+        z-index: 10;
+    }
+
+    .tq-program-card {
+        background: #fff;
+        border-radius: 20px;
+        overflow: hidden;
+        width: 270px;
+        box-shadow: 0 20px 60px rgba(30, 74, 126, 0.15);
+        transition: all 0.4s ease;
+        text-decoration: none;
+    }
+
+    .tq-program-card:hover {
+        transform: translateY(-15px);
+        box-shadow: 0 30px 80px rgba(30, 74, 126, 0.25);
+    }
+
+    .tq-program-card-img {
+        height: 140px;
+        overflow: hidden;
+    }
+
+    .tq-program-card-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+    }
+
+    .tq-program-card:hover .tq-program-card-img img {
+        transform: scale(1.1);
+    }
+
+    .tq-program-card-content {
+        padding: 25px;
+        text-align: center;
+    }
+
+    .tq-program-card.active .tq-program-card-content {
+        background: linear-gradient(135deg, #1e4a7e 0%, #2d6da8 100%);
+    }
+
+    .tq-program-card h3 {
+        font-family: 'Garamond', serif;
+        font-size: 22px;
+        color: #1e4a7e;
+        margin-bottom: 8px;
+    }
+
+    .tq-program-card.active h3 {
+        color: #fff;
+    }
+
+    .tq-program-card p {
+        font-size: 13px;
+        color: #666;
+        line-height: 1.5;
+    }
+
+    .tq-program-card.active p {
+        color: rgba(255, 255, 255, 0.9);
+    }
+
+    /* Main Layout with Side Content */
+    .tq-main-layout {
+        max-width: 1400px;
+        margin: 60px auto;
+        padding: 0 20px;
+        display: grid;
+        grid-template-columns: 250px 1fr 250px;
+        gap: 40px;
+    }
+
+    /* Left Sidebar with Gallery */
+    .tq-sidebar-left {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        position: sticky;
+        top: 90px;
+        align-self: start;
+        max-height: calc(100vh - 110px);
+        overflow-y: auto;
+    }
+
+    .tq-sidebar-card {
+        background: #fff;
+        border-radius: 16px;
+        padding: 25px 20px;
+        box-shadow: 0 4px 20px rgba(30, 74, 126, 0.08);
+    }
+
+    .tq-sidebar-card h4 {
+        font-family: 'Garamond', serif;
+        font-size: 18px;
+        color: #1e4a7e;
+        margin-bottom: 15px;
+        padding-bottom: 12px;
+        border-bottom: 2px solid #e8f0f8;
+    }
+
+    .tq-mini-gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .tq-mini-img {
+        border-radius: 10px;
+        overflow: hidden;
+        aspect-ratio: 1;
+    }
+
+    .tq-mini-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+
+    .tq-mini-img:hover img {
+        transform: scale(1.1);
+    }
+
+    .tq-info-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .tq-info-list li {
+        padding: 12px 0;
+        border-bottom: 1px solid #f0f4f8;
+        font-size: 13px;
+        color: #555;
+    }
+
+    .tq-info-list li:last-child {
+        border-bottom: none;
+    }
+
+    .tq-info-list strong {
+        color: #1e4a7e;
+        display: block;
+        font-size: 14px;
+        margin-bottom: 3px;
+    }
+
+    /* Center Content */
+    .tq-content-center {
+        background: #fff;
+        border-radius: 20px;
+        padding: 50px;
+        box-shadow: 0 4px 30px rgba(30, 74, 126, 0.08);
+    }
+
+    .tq-section-title {
+        font-family: 'Garamond', serif;
+        font-size: 36px;
+        color: #1e4a7e;
+        margin-bottom: 30px;
+        text-align: center;
+        position: relative;
+        padding-bottom: 20px;
+    }
+
+    .tq-section-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(90deg, #1e4a7e, #3a8bc8);
+        border-radius: 2px;
+    }
+
+    .tq-intro-text {
+        font-size: 16px;
+        line-height: 2;
+        color: #444;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .tq-intro-text strong {
+        color: #1e4a7e;
+    }
+
+    /* Feature Items with Images */
+    .tq-features {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        margin: 40px 0;
+    }
+
+    .tq-feature-item {
+        background: #fff;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(30, 74, 126, 0.08);
+        transition: all 0.3s ease;
+    }
+
+    .tq-feature-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(30, 74, 126, 0.15);
+    }
+
+    .tq-feature-img {
+        height: 140px;
+        overflow: hidden;
+    }
+
+    .tq-feature-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+    }
+
+    .tq-feature-item:hover .tq-feature-img img {
+        transform: scale(1.1);
+    }
+
+    .tq-feature-content {
+        padding: 20px;
+        border-top: 3px solid #1e4a7e;
+    }
+
+    .tq-feature-item h4 {
+        font-family: 'Garamond', serif;
+        font-size: 18px;
+        color: #1e4a7e;
+        margin-bottom: 8px;
+    }
+
+    .tq-feature-item p {
+        font-size: 13px;
+        color: #666;
+        line-height: 1.6;
+    }
+
+    /* Right Sidebar - CTA & News */
+    .tq-sidebar-right {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        position: sticky;
+        top: 90px;
+        align-self: start;
+        max-height: calc(100vh - 110px);
+        overflow-y: auto;
+    }
+
+    .tq-cta-box {
+        background: linear-gradient(135deg, #1e4a7e 0%, #2d6da8 100%);
+        border-radius: 16px;
+        padding: 30px 20px;
+        text-align: center;
+        color: #fff;
+    }
+
+    .tq-cta-box h4 {
+        font-family: 'Garamond', serif;
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    .tq-cta-box p {
+        font-size: 14px;
+        opacity: 0.9;
+        margin-bottom: 20px;
+        line-height: 1.6;
+    }
+
+    .tq-cta-btn {
+        display: inline-block;
+        padding: 12px 30px;
+        background: #fff;
+        color: #1e4a7e;
+        text-decoration: none;
+        border-radius: 25px;
+        font-weight: 600;
+        font-size: 14px;
+        transition: all 0.3s ease;
+    }
+
+    .tq-cta-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .tq-news-box {
+        background: #fff;
+        border-radius: 16px;
+        padding: 25px 20px;
+        box-shadow: 0 4px 20px rgba(30, 74, 126, 0.08);
+    }
+
+    .tq-news-box h4 {
+        font-family: 'Garamond', serif;
+        font-size: 18px;
+        color: #1e4a7e;
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+        border-bottom: 2px solid #e8f0f8;
+    }
+
+    .tq-news-item {
+        padding: 15px 0;
+        border-bottom: 1px solid #f0f4f8;
+    }
+
+    .tq-news-item:last-child {
+        border-bottom: none;
+    }
+
+    .tq-news-date {
+        font-size: 12px;
+        color: #3a8bc8;
+        margin-bottom: 5px;
+    }
+
+    .tq-news-title {
+        font-size: 14px;
+        color: #444;
+        line-height: 1.5;
+        text-decoration: none;
+        display: block;
+        transition: color 0.3s ease;
+    }
+
+    .tq-news-title:hover {
+        color: #1e4a7e;
+    }
+
+    /* Stats Banner */
+    .tq-stats-banner {
+        background: linear-gradient(90deg, #5f86b3 0%, #78a6ce 50%, #95c2e1 100%);
+        padding: 130px 20px 165px;
+        margin-top: 60px;
+    }
+
+    .tq-footer-consult-wrap {
+        --tq-consult-half-height: 92px;
+        position: relative;
+        z-index: 5;
+        margin: calc(-1 * var(--tq-consult-half-height)) 20px calc(-1 * var(--tq-consult-half-height));
+        background: transparent;
+    }
+
+    .tq-footer-consult-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .tq-footer-consult-card {
+        width: min(100%, 1020px);
+        min-height: calc(var(--tq-consult-half-height) * 2);
+        border-radius: 26px;
+        overflow: hidden;
+        position: relative;
+        background: url('olympia/images/noibat_1.jpg') center/cover no-repeat;
+        box-shadow: 0 20px 40px rgba(16, 52, 92, 0.3);
+        color: #fff;
+        padding: 24px 32px;
+    }
+
+    .tq-footer-consult-card::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(110deg, rgba(17, 64, 114, 0.93) 0%, rgba(28, 89, 153, 0.9) 52%, rgba(44, 121, 190, 0.82) 100%);
+    }
+
+    .tq-footer-consult-content {
+        position: relative;
+        z-index: 2;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .tq-footer-consult-text>div {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 6px;
+        flex-wrap: nowrap;
+    }
+
+    .tq-footer-consult-text small {
+        display: inline-block;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        padding: 6px 12px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.18);
+        margin-bottom: 0;
+    }
+
+    .tq-footer-consult-text h3 {
+        font-family: 'Garamond', serif;
+        font-size: clamp(30px, 2.6vw, 40px);
+        margin: 0;
+        color: #fff;
+    }
+
+    .tq-footer-consult-text p {
+        font-size: 24px;
+        line-height: 1.35;
+        margin: 0;
+        color: rgba(255, 255, 255, 0.96);
+    }
+
+    .tq-footer-consult-actions {
+        text-align: right;
+    }
+
+    .tq-footer-consult-note {
+        margin-top: 10px;
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.88);
+    }
+
+    .tq-footer-consult-btn {
+        display: inline-block;
+        min-width: 188px;
+        padding: 13px 28px;
+        border-radius: 999px;
+        background: #fff;
+        color: #1d4f87;
+        font-weight: 700;
+        font-size: 17px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+
+    .tq-footer-consult-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.22);
+    }
+
+    .tq-stats-grid {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px;
+        text-align: center;
+    }
+
+    #footer,
+    #footer .footer {
+        margin-top: 0;
+    }
+
+    #footer .footer {
+        padding-top: 128px;
+    }
+
+    .tq-stat-item {
+        color: #fff;
+    }
+
+    .tq-stat-number {
+        font-family: 'Garamond', serif;
+        font-size: 48px;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    .tq-stat-label {
+        font-size: 16px;
+        opacity: 0.9;
+    }
+
+    /* Responsive */
+    @media (max-width: 1200px) {
+        .tq-main-layout {
+            grid-template-columns: 1fr;
+            max-width: 900px;
         }
 
-        /* Hero Section with Real Image */
-        .tq-hero {
-            position: relative;
-            height: 650px;
-            display: flex;
-            align-items: center;
-            overflow: hidden;
+        .tq-sidebar-left,
+        .tq-sidebar-right {
+            display: none;
         }
 
-        .tq-hero-bg {
-            position: absolute;
-            inset: 0;
-            background: url('storage/banner/ve-chung-toi-web.jpg') center/cover;
-        }
-
-        .tq-hero-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, rgba(30, 74, 126, 0.92) 0%, rgba(30, 74, 126, 0.7) 50%, rgba(245, 158, 11, 0.5) 100%);
-        }
-
-        .tq-hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 40px;
-            width: 100%;
-            display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .tq-hero-text {
-            color: #fff;
-            padding: 20px 0;
-        }
-
-        .tq-hero-text ol {
-            margin: 0 0 20px 0;
-            padding: 0;
-            list-style: none;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 14px;
-        }
-
-        .tq-hero-text ol a {
-            color: rgba(255, 255, 255, 0.85);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .tq-hero-text ol a:hover {
-            color: #fff;
-        }
-
-        .tq-hero-text h1 {
-            font-family: 'Garamond', serif;
-            font-size: 52px;
-            font-weight: 700;
-            margin: 0 0 20px 0;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
-            line-height: 1.2;
-            color: #fff;
-        }
-
-        .tq-hero-text p {
-            font-size: 20px;
-            margin: 0;
-            line-height: 1.6;
-            color: rgba(255, 255, 255, 0.95);
-        }
-
-        .tq-hero-images {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-        }
-
-        .tq-hero-img {
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            border: 3px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .tq-hero-img:first-child {
-            grid-row: span 2;
-        }
-
-        .tq-hero-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.4s ease;
-        }
-
-        .tq-hero-img:hover img {
-            transform: scale(1.05);
-        }
-
-        /* Program Cards with Images */
         .tq-programs-float {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            margin-top: -60px;
-            padding: 0 40px;
-            position: relative;
-            z-index: 10;
+            flex-wrap: wrap;
+            padding: 0 20px;
         }
 
         .tq-program-card {
-            background: #fff;
-            border-radius: 20px;
-            overflow: hidden;
-            width: 270px;
-            box-shadow: 0 20px 60px rgba(30, 74, 126, 0.15);
-            transition: all 0.4s ease;
-            text-decoration: none;
+            width: calc(50% - 15px);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .tq-hero h1 {
+            font-size: 32px;
         }
 
-        .tq-program-card:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 30px 80px rgba(30, 74, 126, 0.25);
-        }
-
-        .tq-program-card-img {
-            height: 140px;
-            overflow: hidden;
-        }
-
-        .tq-program-card-img img {
+        .tq-program-card {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.4s ease;
         }
 
-        .tq-program-card:hover .tq-program-card-img img {
-            transform: scale(1.1);
-        }
-
-        .tq-program-card-content {
-            padding: 25px;
-            text-align: center;
-        }
-
-        .tq-program-card.active .tq-program-card-content {
-            background: linear-gradient(135deg, #1e4a7e 0%, #2d6da8 100%);
-        }
-
-        .tq-program-card h3 {
-            font-family: 'Garamond', serif;
-            font-size: 22px;
-            color: #1e4a7e;
-            margin-bottom: 8px;
-        }
-
-        .tq-program-card.active h3 {
-            color: #fff;
-        }
-
-        .tq-program-card p {
-            font-size: 13px;
-            color: #666;
-            line-height: 1.5;
-        }
-
-        .tq-program-card.active p {
-            color: rgba(255, 255, 255, 0.9);
-        }
-
-        /* Main Layout with Side Content */
-        .tq-main-layout {
-            max-width: 1400px;
-            margin: 60px auto;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: 250px 1fr 250px;
-            gap: 40px;
-        }
-
-        /* Left Sidebar with Gallery */
-        .tq-sidebar-left {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            position: sticky;
-            top: 90px;
-            align-self: start;
-            max-height: calc(100vh - 110px);
-            overflow-y: auto;
-        }
-
-        .tq-sidebar-card {
-            background: #fff;
-            border-radius: 16px;
-            padding: 25px 20px;
-            box-shadow: 0 4px 20px rgba(30, 74, 126, 0.08);
-        }
-
-        .tq-sidebar-card h4 {
-            font-family: 'Garamond', serif;
-            font-size: 18px;
-            color: #1e4a7e;
-            margin-bottom: 15px;
-            padding-bottom: 12px;
-            border-bottom: 2px solid #e8f0f8;
-        }
-
-        .tq-mini-gallery {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 8px;
-        }
-
-        .tq-mini-img {
-            border-radius: 10px;
-            overflow: hidden;
-            aspect-ratio: 1;
-        }
-
-        .tq-mini-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .tq-mini-img:hover img {
-            transform: scale(1.1);
-        }
-
-        .tq-info-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .tq-info-list li {
-            padding: 12px 0;
-            border-bottom: 1px solid #f0f4f8;
-            font-size: 13px;
-            color: #555;
-        }
-
-        .tq-info-list li:last-child {
-            border-bottom: none;
-        }
-
-        .tq-info-list strong {
-            color: #1e4a7e;
-            display: block;
-            font-size: 14px;
-            margin-bottom: 3px;
-        }
-
-        /* Center Content */
-        .tq-content-center {
-            background: #fff;
-            border-radius: 20px;
-            padding: 50px;
-            box-shadow: 0 4px 30px rgba(30, 74, 126, 0.08);
-        }
-
-        .tq-section-title {
-            font-family: 'Garamond', serif;
-            font-size: 36px;
-            color: #1e4a7e;
-            margin-bottom: 30px;
-            text-align: center;
-            position: relative;
-            padding-bottom: 20px;
-        }
-
-        .tq-section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(90deg, #1e4a7e, #3a8bc8);
-            border-radius: 2px;
-        }
-
-        .tq-intro-text {
-            font-size: 16px;
-            line-height: 2;
-            color: #444;
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .tq-intro-text strong {
-            color: #1e4a7e;
-        }
-
-        /* Feature Items with Images */
         .tq-features {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
-            margin: 40px 0;
-        }
-
-        .tq-feature-item {
-            background: #fff;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 4px 20px rgba(30, 74, 126, 0.08);
-            transition: all 0.3s ease;
-        }
-
-        .tq-feature-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(30, 74, 126, 0.15);
-        }
-
-        .tq-feature-img {
-            height: 140px;
-            overflow: hidden;
-        }
-
-        .tq-feature-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.4s ease;
-        }
-
-        .tq-feature-item:hover .tq-feature-img img {
-            transform: scale(1.1);
-        }
-
-        .tq-feature-content {
-            padding: 20px;
-            border-top: 3px solid #1e4a7e;
-        }
-
-        .tq-feature-item h4 {
-            font-family: 'Garamond', serif;
-            font-size: 18px;
-            color: #1e4a7e;
-            margin-bottom: 8px;
-        }
-
-        .tq-feature-item p {
-            font-size: 13px;
-            color: #666;
-            line-height: 1.6;
-        }
-
-        /* Right Sidebar - CTA & News */
-        .tq-sidebar-right {
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-            position: sticky;
-            top: 90px;
-            align-self: start;
-            max-height: calc(100vh - 110px);
-            overflow-y: auto;
-        }
-
-        .tq-cta-box {
-            background: linear-gradient(135deg, #1e4a7e 0%, #2d6da8 100%);
-            border-radius: 16px;
-            padding: 30px 20px;
-            text-align: center;
-            color: #fff;
-        }
-
-        .tq-cta-box h4 {
-            font-family: 'Garamond', serif;
-            font-size: 22px;
-            margin-bottom: 15px;
-        }
-
-        .tq-cta-box p {
-            font-size: 14px;
-            opacity: 0.9;
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-
-        .tq-cta-btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background: #fff;
-            color: #1e4a7e;
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: 600;
-            font-size: 14px;
-            transition: all 0.3s ease;
-        }
-
-        .tq-cta-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .tq-news-box {
-            background: #fff;
-            border-radius: 16px;
-            padding: 25px 20px;
-            box-shadow: 0 4px 20px rgba(30, 74, 126, 0.08);
-        }
-
-        .tq-news-box h4 {
-            font-family: 'Garamond', serif;
-            font-size: 18px;
-            color: #1e4a7e;
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 2px solid #e8f0f8;
-        }
-
-        .tq-news-item {
-            padding: 15px 0;
-            border-bottom: 1px solid #f0f4f8;
-        }
-
-        .tq-news-item:last-child {
-            border-bottom: none;
-        }
-
-        .tq-news-date {
-            font-size: 12px;
-            color: #3a8bc8;
-            margin-bottom: 5px;
-        }
-
-        .tq-news-title {
-            font-size: 14px;
-            color: #444;
-            line-height: 1.5;
-            text-decoration: none;
-            display: block;
-            transition: color 0.3s ease;
-        }
-
-        .tq-news-title:hover {
-            color: #1e4a7e;
-        }
-
-        /* Stats Banner */
-        .tq-stats-banner {
-            background: linear-gradient(90deg, #1e4a7e 0%, #2d6da8 50%, #3a8bc8 100%);
-            padding: 60px 20px;
-            margin-top: 60px;
-        }
-
-        .tq-footer-consult-wrap {
-            padding: 18px 20px 0;
-            background: transparent;
-        }
-
-        .tq-footer-consult-inner {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: center;
-        }
-
-        .tq-footer-consult-card {
-            width: min(100%, 720px);
-            border-radius: 24px;
-            overflow: hidden;
-            position: relative;
-            background: url('olympia/images/noibat_1.jpg') center/cover no-repeat;
-            box-shadow: 0 18px 36px rgba(20, 56, 98, 0.2);
-            text-align: center;
-            color: #fff;
-            padding: 44px 30px 36px;
-        }
-
-        .tq-footer-consult-card::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, rgba(22, 70, 122, 0.92), rgba(40, 98, 166, 0.85));
-        }
-
-        .tq-footer-consult-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        .tq-footer-consult-content h3 {
-            font-family: 'Garamond', serif;
-            font-size: clamp(34px, 3vw, 44px);
-            margin-bottom: 12px;
-            color: #fff;
-        }
-
-        .tq-footer-consult-content p {
-            font-size: 26px;
-            line-height: 1.4;
-            margin-bottom: 22px;
-            color: rgba(255, 255, 255, 0.95);
-        }
-
-        .tq-footer-consult-btn {
-            display: inline-block;
-            min-width: 180px;
-            padding: 12px 28px;
-            border-radius: 999px;
-            background: #fff;
-            color: #1e4a7e;
-            font-weight: 700;
-            font-size: 18px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .tq-footer-consult-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+            grid-template-columns: 1fr;
         }
 
         .tq-stats-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 40px;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .tq-stats-banner {
+            padding-bottom: 136px;
+        }
+
+        .tq-footer-consult-wrap {
+            --tq-consult-half-height: 72px;
+            margin: calc(-1 * var(--tq-consult-half-height)) 12px calc(-1 * var(--tq-consult-half-height));
+        }
+
+        .tq-footer-consult-card {
+            padding: 20px 16px;
+        }
+
+        .tq-footer-consult-content {
+            grid-template-columns: 1fr;
+            text-align: center;
+            gap: 16px;
+        }
+
+        .tq-footer-consult-text>div {
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .tq-footer-consult-text p {
+            font-size: 20px;
+        }
+
+        .tq-footer-consult-actions {
             text-align: center;
         }
 
-        .tq-stat-item {
-            color: #fff;
+        #footer {
+            padding-top: 32px;
         }
 
-        .tq-stat-number {
-            font-family: 'Garamond', serif;
-            font-size: 48px;
-            font-weight: 700;
-            margin-bottom: 10px;
+        #footer .footer {
+            padding-top: 96px;
         }
-
-        .tq-stat-label {
-            font-size: 16px;
-            opacity: 0.9;
-        }
-
-        /* Responsive */
-        @media (max-width: 1200px) {
-            .tq-main-layout {
-                grid-template-columns: 1fr;
-                max-width: 900px;
-            }
-
-            .tq-sidebar-left,
-            .tq-sidebar-right {
-                display: none;
-            }
-
-            .tq-programs-float {
-                flex-wrap: wrap;
-                padding: 0 20px;
-            }
-
-            .tq-program-card {
-                width: calc(50% - 15px);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .tq-hero h1 {
-                font-size: 32px;
-            }
-
-            .tq-program-card {
-                width: 100%;
-            }
-
-            .tq-features {
-                grid-template-columns: 1fr;
-            }
-
-            .tq-stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
+    }
     </style>
 </head>
 
@@ -854,7 +942,8 @@
                 </div>
 
                 <div class="tq-sidebar-card" style="padding: 0; overflow: hidden;">
-                    <img src="olympia/images/about-us-2.jpg" alt="" style="width: 100%; height: 150px; object-fit: cover;">
+                    <img src="olympia/images/about-us-2.jpg" alt=""
+                        style="width: 100%; height: 150px; object-fit: cover;">
                     <div style="padding: 20px;">
                         <h4 style="font-size: 16px; margin-bottom: 8px;">Cơ sở vật chất hiện đại</h4>
                         <p style="font-size: 13px; color: #666;">Phòng học, thư viện, phòng lab đạt chuẩn quốc tế</p>
@@ -864,18 +953,6 @@
         </div>
 
         <!-- Stats Banner -->
-        <section class="tq-footer-consult-wrap">
-            <div class="tq-footer-consult-inner">
-                <div class="tq-footer-consult-card">
-                    <div class="tq-footer-consult-content">
-                        <h3>Đăng ký tư vấn</h3>
-                        <p>Liên hệ ngay để được tư vấn<br>chi tiết về chương trình</p>
-                        <a href="lien-he.php" class="tq-footer-consult-btn">Liên hệ ngay</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <section class="tq-stats-banner">
             <div class="tq-stats-grid">
                 <div class="tq-stat-item">
@@ -896,6 +973,28 @@
                 </div>
             </div>
         </section>
+
+        <!-- section CTA đăng ký tư vấn -->
+        <section class="tq-footer-consult-wrap">
+            <div class="tq-footer-consult-inner">
+                <div class="tq-footer-consult-card">
+                    <div class="tq-footer-consult-content">
+                        <div class="tq-footer-consult-text">
+                            <div>
+                                <small>Tuyển sinh 2026 - 2027</small>
+                                <h3>Đăng ký tư vấn</h3>
+                            </div>
+                            <p>Liên hệ ngay để được tư vấn chi tiết lộ trình học phù hợp cho con.</p>
+                        </div>
+                        <div class="tq-footer-consult-actions">
+                            <a href="lien-he.php" class="tq-footer-consult-btn">Liên hệ ngay</a>
+                            <div class="tq-footer-consult-note">Phản hồi trong vòng 24 giờ làm việc</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <?php include 'includes/footer.php'; ?>
