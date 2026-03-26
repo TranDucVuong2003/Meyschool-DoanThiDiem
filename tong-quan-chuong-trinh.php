@@ -279,6 +279,11 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
+            position: sticky;
+            top: 90px;
+            align-self: start;
+            max-height: calc(100vh - 110px);
+            overflow-y: auto;
         }
 
         .tq-sidebar-card {
@@ -446,6 +451,11 @@
             display: flex;
             flex-direction: column;
             gap: 25px;
+            position: sticky;
+            top: 90px;
+            align-self: start;
+            max-height: calc(100vh - 110px);
+            overflow-y: auto;
         }
 
         .tq-cta-box {
@@ -535,6 +545,74 @@
             background: linear-gradient(90deg, #1e4a7e 0%, #2d6da8 50%, #3a8bc8 100%);
             padding: 60px 20px;
             margin-top: 60px;
+        }
+
+        .tq-footer-consult-wrap {
+            padding: 18px 20px 0;
+            background: transparent;
+        }
+
+        .tq-footer-consult-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        .tq-footer-consult-card {
+            width: min(100%, 720px);
+            border-radius: 24px;
+            overflow: hidden;
+            position: relative;
+            background: url('olympia/images/noibat_1.jpg') center/cover no-repeat;
+            box-shadow: 0 18px 36px rgba(20, 56, 98, 0.2);
+            text-align: center;
+            color: #fff;
+            padding: 44px 30px 36px;
+        }
+
+        .tq-footer-consult-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(22, 70, 122, 0.92), rgba(40, 98, 166, 0.85));
+        }
+
+        .tq-footer-consult-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .tq-footer-consult-content h3 {
+            font-family: 'Garamond', serif;
+            font-size: clamp(34px, 3vw, 44px);
+            margin-bottom: 12px;
+            color: #fff;
+        }
+
+        .tq-footer-consult-content p {
+            font-size: 26px;
+            line-height: 1.4;
+            margin-bottom: 22px;
+            color: rgba(255, 255, 255, 0.95);
+        }
+
+        .tq-footer-consult-btn {
+            display: inline-block;
+            min-width: 180px;
+            padding: 12px 28px;
+            border-radius: 999px;
+            background: #fff;
+            color: #1e4a7e;
+            font-weight: 700;
+            font-size: 18px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .tq-footer-consult-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
         }
 
         .tq-stats-grid {
@@ -759,15 +837,6 @@
 
             <!-- Right Sidebar -->
             <aside class="tq-sidebar-right">
-                <div class="tq-cta-box" style="background: url('olympia/images/noibat_1.jpg') center/cover; position: relative;">
-                    <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(30, 74, 126, 0.95) 0%, rgba(30, 74, 126, 0.8) 100%); border-radius: 16px;"></div>
-                    <div style="position: relative; z-index: 2;">
-                        <h4>Đăng ký tư vấn</h4>
-                        <p>Liên hệ ngay để được tư vấn chi tiết về chương trình</p>
-                        <a href="lien-he.php" class="tq-cta-btn">Liên hệ ngay</a>
-                    </div>
-                </div>
-
                 <div class="tq-news-box">
                     <h4>Tin tức nổi bật</h4>
                     <div class="tq-news-item">
@@ -795,6 +864,18 @@
         </div>
 
         <!-- Stats Banner -->
+        <section class="tq-footer-consult-wrap">
+            <div class="tq-footer-consult-inner">
+                <div class="tq-footer-consult-card">
+                    <div class="tq-footer-consult-content">
+                        <h3>Đăng ký tư vấn</h3>
+                        <p>Liên hệ ngay để được tư vấn<br>chi tiết về chương trình</p>
+                        <a href="lien-he.php" class="tq-footer-consult-btn">Liên hệ ngay</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="tq-stats-banner">
             <div class="tq-stats-grid">
                 <div class="tq-stat-item">

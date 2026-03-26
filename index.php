@@ -55,164 +55,183 @@
 
     <link rel="alternate" href="en.html" hreflang="en" />
     <style>
-        nav#admin_bar {
-            display: none;
+    nav#admin_bar {
+        display: none;
 
-        }
+    }
 
-        .jq-toast-wrap {
-            display: block;
-            position: fixed;
-            width: 250px;
-            pointer-events: none !important;
-            letter-spacing: normal;
-            z-index: 9000999999999 !important;
-        }
+    .jq-toast-wrap {
+        display: block;
+        position: fixed;
+        width: 250px;
+        pointer-events: none !important;
+        letter-spacing: normal;
+        z-index: 9000999999999 !important;
+    }
 
-        .btn-dk {
-            width: 210px;
-            height: 50px;
-            line-height: 50px;
-            text-align: center;
-            background-color: #471873;
-            font-size: 14px;
-            font-weight: 600;
-            text-transform: uppercase;
-            border: none;
-            color: #fff;
-            display: inline-block;
-            margin-top: 20px;
-        }
+    .btn-dk {
+        width: 210px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        background-color: #471873;
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase;
+        border: none;
+        color: #fff;
+        display: inline-block;
+        margin-top: 20px;
+    }
 
-        .btn-full {
-            text-align: center;
-            line-height: 60px;
-        }
+    .btn-full {
+        text-align: center;
+        line-height: 60px;
+    }
 
-        body.show-admin-bar {
-            margin-top: 0px !important;
-            /* position: relative; */
-        }
+    body.show-admin-bar {
+        margin-top: 0px !important;
+        /* position: relative; */
+    }
 
-        /* Offset fixed header so it doesn't cover homepage banner */
+    /* Offset fixed header so it doesn't cover homepage banner */
+    .body-content {
+        padding-top: 70px !important;
+    }
+
+    #pc_slider_cover,
+    #mb_slider_cover {
+        margin-top: 0 !important;
+    }
+
+    .slider-item {
+        position: relative;
+    }
+
+    .slider-title-box {
+        position: absolute !important;
+        bottom: -280px !important;
+        right: 20px !important;
+        left: auto !important;
+        width: auto !important;
+        opacity: 1 !important;
+        transform: none !important;
+        z-index: 5;
+    }
+
+    .banner-cta {
+        display: inline-flex;
+        align-items: stretch;
+        background: #1f4b8f;
+        border-radius: 0;
+        overflow: hidden;
+        box-shadow: 0 18px 36px rgba(0, 0, 0, 0.28);
+        height: 100px;
+        margin-top: 516px;
+    }
+
+    .banner-cta a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 18px 26px;
+        min-width: 190px;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.9px;
+        text-decoration: none;
+        background: transparent;
+        color: #fff;
+        border-right: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .banner-cta a:last-child {
+        border-right: none;
+    }
+
+    .banner-cta a::after {
+        content: '›';
+        font-size: 18px;
+        line-height: 1;
+        color: #f6c343;
+    }
+
+    @media (max-width: 768px) {
         .body-content {
             padding-top: 70px !important;
         }
 
-        #pc_slider_cover,
-        #mb_slider_cover {
-            margin-top: 0 !important;
-        }
-
-        .slider-item {
-            position: relative;
-        }
-
         .slider-title-box {
-            position: absolute !important;
-            bottom: -280px !important;
-            right: 20px !important;
-            left: auto !important;
-            width: auto !important;
-            opacity: 1 !important;
-            transform: none !important;
-            z-index: 5;
+            bottom: 14px;
+            right: 12px;
         }
 
         .banner-cta {
-            display: inline-flex;
-            align-items: stretch;
-            background: #1f4b8f;
-            border-radius: 0;
-            overflow: hidden;
-            box-shadow: 0 18px 36px rgba(0, 0, 0, 0.28);
-            height: 100px;
-            margin-top: 516px;
+            flex-direction: column;
         }
 
         .banner-cta a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 12px;
-            padding: 18px 26px;
-            min-width: 190px;
-            font-size: 14px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.9px;
-            text-decoration: none;
-            background: transparent;
-            color: #fff;
-            border-right: 1px solid rgba(255, 255, 255, 0.25);
+            min-width: 0;
+            border-right: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .banner-cta a:last-child {
-            border-right: none;
+            border-bottom: none;
         }
+    }
 
-        .banner-cta a::after {
-            content: '›';
-            font-size: 18px;
-            line-height: 1;
-            color: #f6c343;
-        }
+    /* Hiệu ứng fade-in cho Lời chào Hiệu trưởng */
+    .principal-image {
+        opacity: 0;
+        transform: translateY(5em);
+        transition: all 0.8s ease-in-out;
+    }
 
-        @media (max-width: 768px) {
-            .body-content {
-                padding-top: 70px !important;
-            }
+    .principal-message {
+        opacity: 0;
+        transform: translateY(5em);
+        transition: all 0.8s ease-in-out 0.2s;
+    }
 
-            .slider-title-box {
-                bottom: 14px;
-                right: 12px;
-            }
-
-            .banner-cta {
-                flex-direction: column;
-            }
-
-            .banner-cta a {
-                min-width: 0;
-                border-right: none;
-                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-            }
-
-            .banner-cta a:last-child {
-                border-bottom: none;
-            }
-        }
+    .is-visible .principal-image,
+    .is-visible .principal-message {
+        opacity: 1;
+        transform: none;
+    }
     </style>
     <!-- Google Tag Manager -->
     <script>
-        (function(w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({
-                'gtm.start': new Date().getTime(),
-                event: 'gtm.js'
-            });
-            var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s),
-                dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true;
-            j.src =
-                '../www.googletagmanager.com/gtm5445.html?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-5SS24C7N');
+    (function(w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+            'gtm.start': new Date().getTime(),
+            event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+            '../www.googletagmanager.com/gtm5445.html?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-5SS24C7N');
     </script>
     <!-- End Google Tag Manager -->
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GDK27ZMYYW"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
+    window.dataLayer = window.dataLayer || [];
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
 
-        gtag('config', 'G-GDK27ZMYYW');
+    gtag('config', 'G-GDK27ZMYYW');
     </script>
     <meta property="fb:admins" content="100003174617936" />
     <meta property="fb:admins" content="100000009019012" />
@@ -227,25 +246,25 @@
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <script>
-        window.fbAsyncInit = function() {
-            FB.init({
-                appId: '1759201507895169',
-                xfbml: true,
-                version: 'v19.0'
-            });
-            FB.AppEvents.logPageView();
-        };
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId: '1759201507895169',
+            xfbml: true,
+            version: 'v19.0'
+        });
+        FB.AppEvents.logPageView();
+    };
 
-        (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) {
-                return;
-            }
-            js = d.createElement(s);
-            js.id = id;
-            js.src = "../connect.facebook.net/en_US/sdk.js";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+            return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "../connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
     </script>
     <?php include 'includes/header.php'; ?>
     <div class="overlay_mark_search" style="display:none;"></div>
@@ -933,14 +952,14 @@
         </div>
     </section>
     <script>
-        AOS.init({
-            once: true,
+    AOS.init({
+        once: true,
 
-            disable: function() {
-                var maxWidth = 767;
-                return window.innerWidth < maxWidth;
-            }
-        });
+        disable: function() {
+            var maxWidth = 767;
+            return window.innerWidth < maxWidth;
+        }
+    });
     </script>
     <script src="olympia/js/bootstrap.min.js"></script>
     <script src="olympia/js/jquery.toast.min.js"></script>
@@ -958,128 +977,111 @@
 </html>
 
 <script type="text/javascript">
-    $(document).on('ready', function() {
-        $('.olympia-testimonial').slick({
-            initialSlide: 0,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            dots: true,
-            infinite: true,
-            autoplay: true,
-            autoplaySpeed: 10200,
-            customPaging: function(slider, i) {
-                return '<div class="pager__item" id=' + i + "></div>";
-            },
-            prevArrow: false,
-            nextArrow: false,
-            // autoplaySpeed: 5000,
-            responsive: [{
-                breakpoint: 1024,
-                settings: {
-                    dots: false,
-                    autoplay: true,
-                }
-            }]
-        });
-        // effect for slider olympia-testimonial
-        var slider = $('.olympia-testimonial');
-        slider.on('init reInit afterChange', function(event, slick, currentSlide, nextSlide) {
-
-            var slick_slide = document.getElementsByClassName('olympia-testimonial')[0];
-            var slick_item = slick_slide.getElementsByClassName('slick-slide');
-
-            for (var i = 0; i < slick_item.length; i++) {
-                var slick_item_info = slick_item[i].getElementsByClassName('olympia-testimonial-entry')[0];
-                var slick_item_img = slick_item[i].getElementsByClassName('olympia-testimonial-photo')[0];
-
-                if (slick_item[i].classList.contains('slick-active')) {
-                    opacityEffect(slick_item_img, 0, 1, 500, 10);
-                    translateEffect(slick_item_img, 80, 0, 500, 10, 'y');
-
-                    opacityEffect(slick_item_info, 0, 1, 500, 10, 700);
-                    translateEffect(slick_item_info, 65, 0, 500, 10, 'y', 700);
-                } else {
-                    // opacityEffect(slick_item_img, 1, 0, 500, 10);
-                    // translateEffect(slick_item_img, 0, 80, 500, 10, 'y');
-                    slick_item_img.style.opacity = 0;
-                    slick_item_img.style.transform = 'translate3d(0px, 80px, 0px)';
-
-                    // opacityEffect(slick_item_info, 1, 0, 500, 10);
-                    // translateEffect( slick_item_info, 0, 80, 500, 10, 'y');
-                    slick_item_info.style.opacity = 0;
-                    slick_item_info.style.transform = 'translate3d(0px, 80px, 0px)';
-                }
+$(document).on('ready', function() {
+    $('.olympia-testimonial').slick({
+        initialSlide: 0,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 10200,
+        customPaging: function(slider, i) {
+            return '<div class="pager__item" id=' + i + "></div>";
+        },
+        prevArrow: false,
+        nextArrow: false,
+        // autoplaySpeed: 5000,
+        responsive: [{
+            breakpoint: 1024,
+            settings: {
+                dots: false,
+                autoplay: true,
             }
-        });
+        }]
+    });
+    // effect for slider olympia-testimonial
+    var slider = $('.olympia-testimonial');
+    slider.on('init reInit afterChange', function(event, slick, currentSlide, nextSlide) {
 
-        $(".mobile").slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            prevArrow: false,
-            nextArrow: false,
-            infinite: true,
-            fade: true,
-            cssEase: 'linear',
-            autoplay: true,
-            autoplaySpeed: 5000,
-        });
-        // effect for slider pc
-        var slider = $('.mobile');
-        slider.on('init reInit afterChange', function(event, slick, currentSlide, nextSlide) {
+        var slick_slide = document.getElementsByClassName('olympia-testimonial')[0];
+        var slick_item = slick_slide.getElementsByClassName('slick-slide');
 
-            var slick_slide = document.getElementsByClassName('mobile')[0];
-            var slick_item = slick_slide.getElementsByClassName('slick-slide');
+        for (var i = 0; i < slick_item.length; i++) {
+            var slick_item_info = slick_item[i].getElementsByClassName('olympia-testimonial-entry')[0];
+            var slick_item_img = slick_item[i].getElementsByClassName('olympia-testimonial-photo')[0];
 
-            for (var i = 0; i < slick_item.length; i++) {
-                var slick_item_info = slick_item[i].getElementsByClassName('slider-title-box')[0];
+            if (slick_item[i].classList.contains('slick-active')) {
+                opacityEffect(slick_item_img, 0, 1, 500, 10);
+                translateEffect(slick_item_img, 80, 0, 500, 10, 'y');
 
-                if (slick_item[i].classList.contains('slick-active')) {
+                opacityEffect(slick_item_info, 0, 1, 500, 10, 700);
+                translateEffect(slick_item_info, 65, 0, 500, 10, 'y', 700);
+            } else {
+                // opacityEffect(slick_item_img, 1, 0, 500, 10);
+                // translateEffect(slick_item_img, 0, 80, 500, 10, 'y');
+                slick_item_img.style.opacity = 0;
+                slick_item_img.style.transform = 'translate3d(0px, 80px, 0px)';
 
-                    opacityEffect(slick_item_info, 0, 1, 500, 10);
-                    translateEffect(slick_item_info, 65, 0, 500, 10, 'y');
-                } else {
-                    opacityEffect(slick_item_info, 1, 0, 500, 10);
-                    translateEffect(slick_item_info, 0, 80, 500, 10, 'y');
-                }
+                // opacityEffect(slick_item_info, 1, 0, 500, 10);
+                // translateEffect( slick_item_info, 0, 80, 500, 10, 'y');
+                slick_item_info.style.opacity = 0;
+                slick_item_info.style.transform = 'translate3d(0px, 80px, 0px)';
             }
-        });
+        }
+    });
 
-        $(".pc").slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            prevArrow: '<div class="rcl-prev"><img src="https://theolympiaschools.edu.vn/olympia/images/button-1-3.svg"></div>',
-            nextArrow: '<div class="rcl-next"><img src="https://theolympiaschools.edu.vn/olympia/images/button-1-3.svg"></div>',
-            infinite: true,
-            cssEase: 'linear',
-            autoplay: true,
-            autoplaySpeed: 5000,
-            fade: true,
-        });
-        // effect for slider pc
-        var slider = $('.pc');
-        slider.on('init reInit afterChange', function(event, slick, currentSlide, nextSlide) {
+    $(".mobile").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        prevArrow: false,
+        nextArrow: false,
+        infinite: true,
+        fade: true,
+        cssEase: 'linear',
+        autoplay: true,
+        autoplaySpeed: 5000,
+    });
+    // effect for slider pc
+    var slider = $('.mobile');
+    slider.on('init reInit afterChange', function(event, slick, currentSlide, nextSlide) {
 
-            // effect for the first time.
-            var pc_slider = document.getElementById('pc_slider_cover');
+        var slick_slide = document.getElementsByClassName('mobile')[0];
+        var slick_item = slick_slide.getElementsByClassName('slick-slide');
 
-            if (pc_slider.classList.contains('appear is-visible')) {
-                var slick_slide = document.getElementsByClassName('pc')[0];
-                var slick_item = slick_slide.getElementsByClassName('slick-slide');
+        for (var i = 0; i < slick_item.length; i++) {
+            var slick_item_info = slick_item[i].getElementsByClassName('slider-title-box')[0];
 
-                for (var i = 0; i < slick_item.length; i++) {
-                    var slick_item_info = slick_item[i].getElementsByClassName('slider-title-box')[0];
+            if (slick_item[i].classList.contains('slick-active')) {
 
-                    if (slick_item[i].classList.contains('slick-active')) {
-
-                        opacityEffect(slick_item_info, 0, 1, 500, 10);
-                        translateEffect(slick_item_info, 65, 0, 500, 10, 'y');
-                    } else {
-                        opacityEffect(slick_item_info, 1, 0, 500, 10);
-                        translateEffect(slick_item_info, 0, 80, 500, 10, 'y');
-                    }
-                }
+                opacityEffect(slick_item_info, 0, 1, 500, 10);
+                translateEffect(slick_item_info, 65, 0, 500, 10, 'y');
+            } else {
+                opacityEffect(slick_item_info, 1, 0, 500, 10);
+                translateEffect(slick_item_info, 0, 80, 500, 10, 'y');
             }
+        }
+    });
 
+    $(".pc").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        prevArrow: '<div class="rcl-prev"><img src="https://theolympiaschools.edu.vn/olympia/images/button-1-3.svg"></div>',
+        nextArrow: '<div class="rcl-next"><img src="https://theolympiaschools.edu.vn/olympia/images/button-1-3.svg"></div>',
+        infinite: true,
+        cssEase: 'linear',
+        autoplay: true,
+        autoplaySpeed: 5000,
+        fade: true,
+    });
+    // effect for slider pc
+    var slider = $('.pc');
+    slider.on('init reInit afterChange', function(event, slick, currentSlide, nextSlide) {
+
+        // effect for the first time.
+        var pc_slider = document.getElementById('pc_slider_cover');
+
+        if (pc_slider.classList.contains('appear is-visible')) {
             var slick_slide = document.getElementsByClassName('pc')[0];
             var slick_item = slick_slide.getElementsByClassName('slick-slide');
 
@@ -1095,79 +1097,96 @@
                     translateEffect(slick_item_info, 0, 80, 500, 10, 'y');
                 }
             }
-        });
+        }
 
+        var slick_slide = document.getElementsByClassName('pc')[0];
+        var slick_item = slick_slide.getElementsByClassName('slick-slide');
 
-        var mb_slider = document.getElementById('mb_slider_cover');
+        for (var i = 0; i < slick_item.length; i++) {
+            var slick_item_info = slick_item[i].getElementsByClassName('slider-title-box')[0];
 
-        if (mb_slider.classList.contains('appear is-visible')) {
-            var slick_slide = document.getElementsByClassName('mobile')[0];
-            var slick_item = slick_slide.getElementsByClassName('slick-slide');
+            if (slick_item[i].classList.contains('slick-active')) {
 
-            for (var i = 0; i < slick_item.length; i++) {
-                var slick_item_info = slick_item[i].getElementsByClassName('slider-title-box')[0];
-
-                if (slick_item[i].classList.contains('slick-active')) {
-
-                    opacityEffect(slick_item_info, 0, 1, 500, 10);
-                    translateEffect(slick_item_info, 65, 0, 500, 10, 'y');
-                } else {
-                    opacityEffect(slick_item_info, 1, 0, 500, 10);
-                    translateEffect(slick_item_info, 0, 80, 500, 10, 'y');
-                }
+                opacityEffect(slick_item_info, 0, 1, 500, 10);
+                translateEffect(slick_item_info, 65, 0, 500, 10, 'y');
+            } else {
+                opacityEffect(slick_item_info, 1, 0, 500, 10);
+                translateEffect(slick_item_info, 0, 80, 500, 10, 'y');
             }
         }
+    });
 
-        function newSlick() {
-            $('.olympia-event-posts').slick({
-                infinite: true,
-                slidesToShow: 2,
-                slidesToScroll: 1,
-                autoplay: true,
-                prevArrow: false,
-                nextArrow: false,
-                autoplaySpeed: 2000,
-                cssEase: 'linear',
-                responsive: [{
-                        breakpoint: 1024,
-                        settings: {
-                            slidesToShow: 3,
-                            slidesToScroll: 1,
-                            variableWidth: true,
-                            autoplay: true,
-                            prevArrow: '<div class="rcl-prev"><img class="disable" src="https://theolympiaschools.edu.vn/olympia/images/button-1-3.svg" alt=""></div>',
-                            nextArrow: '<div class="rcl-next"><img class="disable" src="https://theolympiaschools.edu.vn/olympia/images/button-1-3.svg" alt=""></div>'
-                        }
-                    },
-                    {
-                        breakpoint: 800,
-                        settings: {
-                            slidesToShow: 2,
-                            variableWidth: true,
-                            slidesToScroll: 1,
-                            autoplay: true,
-                            prevArrow: '<div class="rcl-prev"><img class="disable" src="https://theolympiaschools.edu.vn/olympia/images/button-1-3.svg" alt=""></div>',
-                            nextArrow: '<div class="rcl-next"><img class="disable" src="https://theolympiaschools.edu.vn/olympia/images/button-1-3.svg" alt=""></div>'
-                        }
-                    }
-                ]
-            });
+
+    var mb_slider = document.getElementById('mb_slider_cover');
+
+    if (mb_slider.classList.contains('appear is-visible')) {
+        var slick_slide = document.getElementsByClassName('mobile')[0];
+        var slick_item = slick_slide.getElementsByClassName('slick-slide');
+
+        for (var i = 0; i < slick_item.length; i++) {
+            var slick_item_info = slick_item[i].getElementsByClassName('slider-title-box')[0];
+
+            if (slick_item[i].classList.contains('slick-active')) {
+
+                opacityEffect(slick_item_info, 0, 1, 500, 10);
+                translateEffect(slick_item_info, 65, 0, 500, 10, 'y');
+            } else {
+                opacityEffect(slick_item_info, 1, 0, 500, 10);
+                translateEffect(slick_item_info, 0, 80, 500, 10, 'y');
+            }
         }
+    }
 
-        newSlick()
-    })
+    function newSlick() {
+        $('.olympia-event-posts').slick({
+            infinite: true,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            autoplay: true,
+            prevArrow: false,
+            nextArrow: false,
+            autoplaySpeed: 2000,
+            cssEase: 'linear',
+            responsive: [{
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                        variableWidth: true,
+                        autoplay: true,
+                        prevArrow: '<div class="rcl-prev"><img class="disable" src="https://theolympiaschools.edu.vn/olympia/images/button-1-3.svg" alt=""></div>',
+                        nextArrow: '<div class="rcl-next"><img class="disable" src="https://theolympiaschools.edu.vn/olympia/images/button-1-3.svg" alt=""></div>'
+                    }
+                },
+                {
+                    breakpoint: 800,
+                    settings: {
+                        slidesToShow: 2,
+                        variableWidth: true,
+                        slidesToScroll: 1,
+                        autoplay: true,
+                        prevArrow: '<div class="rcl-prev"><img class="disable" src="https://theolympiaschools.edu.vn/olympia/images/button-1-3.svg" alt=""></div>',
+                        nextArrow: '<div class="rcl-next"><img class="disable" src="https://theolympiaschools.edu.vn/olympia/images/button-1-3.svg" alt=""></div>'
+                    }
+                }
+            ]
+        });
+    }
+
+    newSlick()
+})
 </script>
 
 <!-- Popup Tuyển sinh -->
 <div id="tuyensinh-popup"
     style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 999999; justify-content: center; align-items: center;">
     <div
-        style="position: relative; max-width: 920px; width: 96%; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.3);">
+        style="position: relative; width: 500px; max-width: 96vw; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.3);">
         <button onclick="closeTuyenSinhPopup()"
             style="position: absolute; top: 10px; right: 10px; width: 35px; height: 35px; background: rgba(255,255,255,0.9); border: none; border-radius: 50%; font-size: 20px; cursor: pointer; z-index: 100; display: flex; justify-content: center; align-items: center;">×</button>
         <div style="position: relative;">
             <img src="assets/img/banner/popup-tuyensinh.jpg" alt="Tuyển sinh 2026-2027"
-                style="width: 100%; height: auto; display: block;">
+                style="width: 500px; height: 500px; max-width: 100%; object-fit: cover; display: block;">
             <a href="tuyen-dung.php"
                 style="position: absolute; bottom: 15%; left: 50%; transform: translateX(-50%); display: inline-block; padding: 12px 35px; background: #ff6b35; color: white; text-decoration: none; font-weight: bold; font-size: 16px; border-radius: 30px; text-transform: uppercase; box-shadow: 0 5px 15px rgba(255,107,53,0.4); white-space: nowrap;">Đăng
                 ký ngay</a>
@@ -1176,45 +1195,45 @@
 </div>
 
 <style>
-    body.popup-open {
-        overflow: hidden !important;
-        height: 100% !important;
-    }
+body.popup-open {
+    overflow: hidden !important;
+    height: 100% !important;
+}
 </style>
 
 <script>
-    // Xóa localStorage để test (có thể comment dòng này sau khi test xong)
-    localStorage.removeItem('tuyensinhPopupShown');
+// Xóa localStorage để test (có thể comment dòng này sau khi test xong)
+localStorage.removeItem('tuyensinhPopupShown');
 
-    // Hiện popup sau 10 giây khi DOM ready
-    document.addEventListener('DOMContentLoaded', function() {
-        setTimeout(function() {
-            var popup = document.getElementById('tuyensinh-popup');
-            if (popup && !localStorage.getItem('tuyensinhPopupShown')) {
-                popup.style.display = 'flex';
-                document.body.classList.add('popup-open');
-                localStorage.setItem('tuyensinhPopupShown', 'true');
-            }
-        }, 10000);
-    });
-
-    function closeTuyenSinhPopup() {
+// Hiện popup sau 10 giây khi DOM ready
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
         var popup = document.getElementById('tuyensinh-popup');
-        if (popup) {
-            popup.style.display = 'none';
-            document.body.classList.remove('popup-open');
+        if (popup && !localStorage.getItem('tuyensinhPopupShown')) {
+            popup.style.display = 'flex';
+            document.body.classList.add('popup-open');
+            localStorage.setItem('tuyensinhPopupShown', 'true');
         }
+    }, 10000);
+});
+
+function closeTuyenSinhPopup() {
+    var popup = document.getElementById('tuyensinh-popup');
+    if (popup) {
+        popup.style.display = 'none';
+        document.body.classList.remove('popup-open');
     }
+}
 
-    // Đóng popup khi click ra ngoài
-    document.addEventListener('DOMContentLoaded', function() {
-        var popup = document.getElementById('tuyensinh-popup');
-        if (popup) {
-            popup.addEventListener('click', function(e) {
-                if (e.target === this) {
-                    closeTuyenSinhPopup();
-                }
-            });
-        }
-    });
+// Đóng popup khi click ra ngoài
+document.addEventListener('DOMContentLoaded', function() {
+    var popup = document.getElementById('tuyensinh-popup');
+    if (popup) {
+        popup.addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeTuyenSinhPopup();
+            }
+        });
+    }
+});
 </script>

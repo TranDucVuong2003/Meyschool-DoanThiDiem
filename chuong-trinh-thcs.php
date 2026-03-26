@@ -191,6 +191,11 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
+            position: sticky;
+            top: 90px;
+            align-self: start;
+            max-height: calc(100vh - 110px);
+            overflow-y: auto;
         }
 
         .thcs-nav-card {
@@ -514,6 +519,11 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
+            position: sticky;
+            top: 90px;
+            align-self: start;
+            max-height: calc(100vh - 110px);
+            overflow-y: auto;
         }
 
         .thcs-event-card {
