@@ -459,6 +459,31 @@
                 font-size: 15px;
             }
         }
+
+        .ts-banner-slider {
+            position: relative;
+            padding-top: 67px;
+        }
+
+        .ts-banner-slider img {
+            width: 100%;
+            display: block;
+        }
+
+        .ts-banner-slider .rcl-prev,
+        .ts-banner-slider .rcl-next {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .ts-banner-slider .rcl-prev {
+            left: 15px;
+            transform: translateY(-50%) scaleX(-1);
+        }
+
+        .ts-banner-slider .rcl-next {
+            right: 15px;
+        }
     </style>
 </head>
 
@@ -467,36 +492,11 @@
     <div class="overlay_mark_search" style="display:none;"></div>
 
     <main class="body-content faq-page">
-        <section class="fq-hero">
-            <div class="faq-wrap">
-                <div class="fq-hero-grid" data-aos="fade-up">
-                    <div>
-                        <ol class="breadcrumb fq-breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.php">Trang chủ</a></li>
-                            <li class="breadcrumb-item"><a href="thong-tin-tuyen-sinh-tieu-hoc.php">Tuyển sinh</a></li>
-                            <li class="breadcrumb-item active">Câu hỏi thường gặp</li>
-                        </ol>
-
-                        <h1>Câu hỏi thường gặp</h1>
-                        <p>Tổng hợp các thông tin phụ huynh quan tâm nhất về tuyển sinh, học phí, chương trình học và dịch vụ học đường tại Meyschool Đoàn Thị Điểm.</p>
-
-                        <div class="fq-tags">
-                            <span>Tuyển sinh 2026 - 2027</span>
-                            <span>Học phí và chính sách</span>
-                            <span>Dịch vụ học đường</span>
-                        </div>
-                    </div>
-
-                    <aside class="fq-hero-panel">
-                        <h3>Tìm nhanh theo nhóm</h3>
-                        <ul>
-                            <li>Tuyển sinh và hồ sơ đầu vào</li>
-                            <li>Học phí, ưu đãi và học bổng</li>
-                            <li>Chương trình học, bán trú, xe đưa đón</li>
-                        </ul>
-                    </aside>
-                </div>
-            </div>
+        <section class="ts-banner-slider">
+            <div class="ts-banner-slide"><img src="assets/img/tuyensinh/banner5.jpg"
+                    alt="Mey School Đoàn Thị Điểm Phú Quốc Tuyển Sinh 2026-2027"></div>
+            <div class="ts-banner-slide"><img src="assets/img/tuyensinh/banner4.jpg"
+                    alt="Câu Lạc Bộ Tuổi Thơ - Hành Trang Vào Lớp 1"></div>
         </section>
 
         <section class="fq-main">
@@ -514,7 +514,9 @@
                                     <span class="faq-icon">▼</span>
                                 </div>
                                 <div class="faq-answer">
-                                    <p>Tuyển sinh năm học 2026-2027 dự kiến theo các đợt xét tuyển từ đầu năm, kéo dài đến khi đủ chỉ tiêu ở từng cấp học. Phụ huynh nên đăng ký sớm để được tư vấn và giữ suất.</p>
+                                    <p>Tuyển sinh năm học 2026-2027 dự kiến theo các đợt xét tuyển từ đầu năm, kéo dài
+                                        đến khi đủ chỉ tiêu ở từng cấp học. Phụ huynh nên đăng ký sớm để được tư vấn và
+                                        giữ suất.</p>
                                 </div>
                             </div>
 
@@ -524,7 +526,8 @@
                                     <span class="faq-icon">▼</span>
                                 </div>
                                 <div class="faq-answer">
-                                    <p>Hồ sơ thường gồm: đơn đăng ký, giấy khai sinh, giấy tờ cư trú, ảnh chân dung học sinh, học bạ và các minh chứng học tập liên quan theo từng cấp lớp.</p>
+                                    <p>Hồ sơ thường gồm: đơn đăng ký, giấy khai sinh, giấy tờ cư trú, ảnh chân dung học
+                                        sinh, học bạ và các minh chứng học tập liên quan theo từng cấp lớp.</p>
                                 </div>
                             </div>
 
@@ -534,7 +537,8 @@
                                     <span class="faq-icon">▼</span>
                                 </div>
                                 <div class="faq-answer">
-                                    <p>Nhà trường tổ chức đánh giá phù hợp theo độ tuổi và cấp học, kết hợp quan sát năng lực, phỏng vấn phụ huynh - học sinh và bài đánh giá đầu vào nếu cần.</p>
+                                    <p>Nhà trường tổ chức đánh giá phù hợp theo độ tuổi và cấp học, kết hợp quan sát
+                                        năng lực, phỏng vấn phụ huynh - học sinh và bài đánh giá đầu vào nếu cần.</p>
                                 </div>
                             </div>
                         </div>
@@ -548,7 +552,8 @@
                                     <span class="faq-icon">▼</span>
                                 </div>
                                 <div class="faq-answer">
-                                    <p>Biểu phí được tư vấn chi tiết theo cấp học, chương trình đăng ký và dịch vụ đi kèm. Phụ huynh sẽ nhận bảng phí đầy đủ khi hoàn tất bước tư vấn tuyển sinh.</p>
+                                    <p>Biểu phí được tư vấn chi tiết theo cấp học, chương trình đăng ký và dịch vụ đi
+                                        kèm. Phụ huynh sẽ nhận bảng phí đầy đủ khi hoàn tất bước tư vấn tuyển sinh.</p>
                                 </div>
                             </div>
 
@@ -558,7 +563,8 @@
                                     <span class="faq-icon">▼</span>
                                 </div>
                                 <div class="faq-answer">
-                                    <p>Có. Nhà trường áp dụng chính sách ưu đãi theo thời điểm đăng ký, gia đình nhiều con và xét học bổng theo năng lực học thuật, thành tích nổi bật.</p>
+                                    <p>Có. Nhà trường áp dụng chính sách ưu đãi theo thời điểm đăng ký, gia đình nhiều
+                                        con và xét học bổng theo năng lực học thuật, thành tích nổi bật.</p>
                                 </div>
                             </div>
 
@@ -568,7 +574,9 @@
                                     <span class="faq-icon">▼</span>
                                 </div>
                                 <div class="faq-answer">
-                                    <p>Phụ huynh có thể lựa chọn phương án đóng phí theo kỳ hoặc theo năm học tùy chính sách từng thời điểm; phương án đóng theo năm thường đi kèm hỗ trợ tài chính bổ sung.</p>
+                                    <p>Phụ huynh có thể lựa chọn phương án đóng phí theo kỳ hoặc theo năm học tùy chính
+                                        sách từng thời điểm; phương án đóng theo năm thường đi kèm hỗ trợ tài chính bổ
+                                        sung.</p>
                                 </div>
                             </div>
                         </div>
@@ -582,7 +590,9 @@
                                     <span class="faq-icon">▼</span>
                                 </div>
                                 <div class="faq-answer">
-                                    <p>Chương trình tích hợp học thuật Việt Nam với định hướng song ngữ, tăng cường ngoại ngữ và kỹ năng thế kỷ 21 thông qua dự án học tập, trải nghiệm và hợp tác liên môn.</p>
+                                    <p>Chương trình tích hợp học thuật Việt Nam với định hướng song ngữ, tăng cường
+                                        ngoại ngữ và kỹ năng thế kỷ 21 thông qua dự án học tập, trải nghiệm và hợp tác
+                                        liên môn.</p>
                                 </div>
                             </div>
 
@@ -592,7 +602,8 @@
                                     <span class="faq-icon">▼</span>
                                 </div>
                                 <div class="faq-answer">
-                                    <p>Tùy theo cấp lớp và kế hoạch triển khai từng năm học, học sinh có thể được tiếp cận thêm các lựa chọn ngoại ngữ bổ trợ trong lộ trình phát triển cá nhân.</p>
+                                    <p>Tùy theo cấp lớp và kế hoạch triển khai từng năm học, học sinh có thể được tiếp
+                                        cận thêm các lựa chọn ngoại ngữ bổ trợ trong lộ trình phát triển cá nhân.</p>
                                 </div>
                             </div>
 
@@ -602,7 +613,8 @@
                                     <span class="faq-icon">▼</span>
                                 </div>
                                 <div class="faq-answer">
-                                    <p>Có. Dịch vụ bán trú bao gồm bữa ăn, nghỉ trưa và quản lý học sinh theo khung giờ, bảo đảm an toàn và phù hợp với nhịp sinh hoạt của từng lứa tuổi.</p>
+                                    <p>Có. Dịch vụ bán trú bao gồm bữa ăn, nghỉ trưa và quản lý học sinh theo khung giờ,
+                                        bảo đảm an toàn và phù hợp với nhịp sinh hoạt của từng lứa tuổi.</p>
                                 </div>
                             </div>
                         </div>
@@ -616,7 +628,8 @@
                                     <span class="faq-icon">▼</span>
                                 </div>
                                 <div class="faq-answer">
-                                    <p>Có. Xe đưa đón được tổ chức theo tuyến, có giám sát hành trình và nhân sự đi kèm nhằm hỗ trợ học sinh di chuyển an toàn mỗi ngày.</p>
+                                    <p>Có. Xe đưa đón được tổ chức theo tuyến, có giám sát hành trình và nhân sự đi kèm
+                                        nhằm hỗ trợ học sinh di chuyển an toàn mỗi ngày.</p>
                                 </div>
                             </div>
 
@@ -626,7 +639,8 @@
                                     <span class="faq-icon">▼</span>
                                 </div>
                                 <div class="faq-answer">
-                                    <p>Thực đơn được thiết kế cân bằng dinh dưỡng theo nhóm tuổi, cập nhật định kỳ và quản lý theo quy trình an toàn thực phẩm.</p>
+                                    <p>Thực đơn được thiết kế cân bằng dinh dưỡng theo nhóm tuổi, cập nhật định kỳ và
+                                        quản lý theo quy trình an toàn thực phẩm.</p>
                                 </div>
                             </div>
 
@@ -636,7 +650,8 @@
                                     <span class="faq-icon">▼</span>
                                 </div>
                                 <div class="faq-answer">
-                                    <p>Có. Bộ phận y tế học đường theo dõi sức khỏe học sinh trong ngày học và phối hợp với phụ huynh trong các tình huống cần hỗ trợ chuyên môn.</p>
+                                    <p>Có. Bộ phận y tế học đường theo dõi sức khỏe học sinh trong ngày học và phối hợp
+                                        với phụ huynh trong các tình huống cần hỗ trợ chuyên môn.</p>
                                 </div>
                             </div>
                         </div>
@@ -688,6 +703,21 @@
     <script type="text/javascript" src="olympia/js/jquery.toast.min.js"></script>
     <script type="text/javascript" src="olympia/js/jquery.validate.min.js"></script>
     <script src="olympia/js/main.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".ts-banner-slider").slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                prevArrow: '<div class="rcl-prev"><img src="olympia/images/button-1-3.svg"></div>',
+                nextArrow: '<div class="rcl-next"><img src="olympia/images/button-1-3.svg"></div>',
+                infinite: true,
+                autoplay: true,
+                autoplaySpeed: 5000,
+                fade: true,
+                cssEase: 'linear'
+            });
+        });
+    </script>
     <script>
         // Accordion functionality
         document.querySelectorAll('.faq-question').forEach(question => {

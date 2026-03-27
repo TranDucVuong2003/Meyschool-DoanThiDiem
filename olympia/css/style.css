@@ -6439,7 +6439,6 @@ select.select-day option {
 }
 
 .menu-list .menu-item:hover > .dropdown-content,
-.menu-list .menu-item:focus-within > .dropdown-content,
 .menu-list .menu-item .dropdown-content:hover {
   visibility: visible;
   opacity: 1;

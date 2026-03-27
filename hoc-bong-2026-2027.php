@@ -508,6 +508,31 @@
                 gap: 6px;
             }
         }
+
+        .ts-banner-slider {
+            position: relative;
+            padding-top: 67px;
+        }
+
+        .ts-banner-slider img {
+            width: 100%;
+            display: block;
+        }
+
+        .ts-banner-slider .rcl-prev,
+        .ts-banner-slider .rcl-next {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .ts-banner-slider .rcl-prev {
+            left: 15px;
+            transform: translateY(-50%) scaleX(-1);
+        }
+
+        .ts-banner-slider .rcl-next {
+            right: 15px;
+        }
     </style>
 </head>
 
@@ -516,152 +541,30 @@
     <div class="overlay_mark_search" style="display:none;"></div>
 
     <main class="body-content scholar-page">
-        <section class="sc-hero">
-            <div class="scholar-wrap">
-                <div class="sc-hero-grid" data-aos="fade-up">
-                    <div>
-                        <ol class="breadcrumb sc-breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.php">Trang chủ</a></li>
-                            <li class="breadcrumb-item"><a href="thong-tin-tuyen-sinh-tieu-hoc.php">Tuyển sinh</a></li>
-                            <li class="breadcrumb-item active">Học bổng 2026 - 2027</li>
-                        </ol>
-
-                        <h1>Học bổng 2026 - 2027</h1>
-                        <p>Meyschool Đoàn Thị Điểm xây dựng quỹ học bổng đa dạng để khuyến khích học sinh có thành tích học thuật xuất sắc, năng lực lãnh đạo và tinh thần đóng góp cộng đồng.</p>
-
-                        <div class="sc-tags">
-                            <span>Học bổng đến 100%</span>
-                            <span>Xét theo năng lực thực chất</span>
-                            <span>Gia hạn theo kết quả học tập</span>
-                        </div>
-                    </div>
-
-                    <aside class="sc-hero-panel">
-                        <h3>Trọng tâm chương trình</h3>
-                        <ul>
-                            <li>Đánh giá toàn diện: học thuật, ngoại ngữ, hoạt động cá nhân.</li>
-                            <li>Nhiều mức học bổng theo hồ sơ và kết quả đánh giá đầu vào.</li>
-                            <li>Đồng hành cùng học sinh tài năng trên hành trình dài hạn.</li>
-                        </ul>
-                    </aside>
-                </div>
-            </div>
+        <section class="ts-banner-slider">
+            <div class="ts-banner-slide"><img src="assets/img/tuyensinh/banner5.jpg"
+                    alt="Mey School Đoàn Thị Điểm Phú Quốc Tuyển Sinh 2026-2027"></div>
+            <div class="ts-banner-slide"><img src="assets/img/tuyensinh/banner4.jpg"
+                    alt="Câu Lạc Bộ Tuổi Thơ - Hành Trang Vào Lớp 1"></div>
         </section>
 
         <section class="sc-main">
-            <div class="scholar-wrap sc-layout">
-                <div class="sc-content">
-                    <article class="sc-card" data-aos="fade-up">
-                        <h2>Các mức học bổng</h2>
-                        <div class="sc-scholarships">
-                            <div class="sc-level sc-level-gold">
-                                <b>100%</b>
-                                <h4>Học bổng Vàng</h4>
-                                <ul>
-                                    <li>Thành tích học thuật và giải thưởng cấp cao.</li>
-                                    <li>Năng lực ngoại ngữ vượt trội theo chuẩn tuyển sinh.</li>
-                                    <li>Được xét gia hạn theo kết quả học tập từng năm.</li>
-                                </ul>
-                            </div>
-                            <div class="sc-level sc-level-silver">
-                                <b>50%</b>
-                                <h4>Học bổng Bạc</h4>
-                                <ul>
-                                    <li>Hồ sơ học tập nổi bật, có định hướng phát triển rõ.</li>
-                                    <li>Đáp ứng tiêu chí đánh giá của hội đồng tuyển sinh.</li>
-                                    <li>Duy trì theo mức yêu cầu kết quả học tập.</li>
-                                </ul>
-                            </div>
-                            <div class="sc-level sc-level-bronze">
-                                <b>30%</b>
-                                <h4>Học bổng Đồng</h4>
-                                <ul>
-                                    <li>Khuyến khích học sinh có tiềm năng phát triển.</li>
-                                    <li>Xét theo thành tích và năng lực toàn diện đầu vào.</li>
-                                    <li>Có thể nâng mức ở các kỳ đánh giá tiếp theo.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="sc-card" data-aos="fade-up">
-                        <h2>Tiêu chí xét duyệt</h2>
-                        <div class="sc-criteria">
-                            <div class="sc-criterion">
-                                <strong>Thành tích học tập</strong>
-                                Kết quả học tập ổn định, minh chứng năng lực phù hợp mục tiêu chương trình.
-                            </div>
-                            <div class="sc-criterion">
-                                <strong>Giải thưởng học thuật</strong>
-                                Ưu tiên hồ sơ có thành tích tại các cuộc thi từ cấp thành phố trở lên.
-                            </div>
-                            <div class="sc-criterion">
-                                <strong>Ngoại ngữ</strong>
-                                Chứng chỉ tiếng Anh quốc tế hoặc năng lực tương đương theo quy định từng mức học bổng.
-                            </div>
-                            <div class="sc-criterion">
-                                <strong>Kỹ năng cá nhân</strong>
-                                Khả năng lãnh đạo, tư duy độc lập và đóng góp tích cực cho cộng đồng học tập.
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="sc-card" data-aos="fade-up">
-                        <h2>Lịch trình xét học bổng</h2>
-                        <ul class="sc-timeline">
-                            <li><span>01/03 - 30/04</span> Tiếp nhận hồ sơ và tư vấn lựa chọn mức học bổng</li>
-                            <li><span>01/05 - 15/05</span> Đánh giá hồ sơ và sơ tuyển</li>
-                            <li><span>16/05 - 31/05</span> Phỏng vấn và/hoặc bài đánh giá năng lực</li>
-                            <li><span>15/06</span> Công bố kết quả học bổng</li>
-                            <li><span>01/09</span> Hoàn tất thủ tục nhập học</li>
-                        </ul>
-                    </article>
-
-                    <article class="sc-card" data-aos="fade-up">
-                        <h2>Lưu ý quan trọng</h2>
-                        <div class="sc-note">
-                            <b>Chính sách áp dụng</b>
-                            <p>Mỗi hồ sơ được xét theo bộ tiêu chí tại thời điểm tuyển sinh. Mức học bổng được công nhận theo kết quả xét duyệt chính thức của hội đồng tuyển sinh.</p>
-                        </div>
-                    </article>
-
-                    <section class="sc-emphasis" data-aos="fade-up">
-                        <h4>Đăng ký để được tư vấn mức học bổng phù hợp</h4>
-                        <p>Đội ngũ tuyển sinh sẽ hỗ trợ gia đình chuẩn bị hồ sơ, nắm rõ tiêu chí và lộ trình xét duyệt.</p>
-                    </section>
+            <div class="scholar-wrap">
+                <div class="hero-card" data-aos="fade-up">
+                    <div class="hero-photo">
+                        <img src="assets/img/tuyensinh/tuyển sinh chung.jpg" alt="Tuyển sinh Meyschool">
+                    </div>
                 </div>
-
-                <aside class="sc-side" data-aos="fade-up" data-aos-delay="120">
-                    <div class="sc-side-card">
-                        <h3>Danh mục tuyển sinh</h3>
-                        <div class="sc-side-links">
-                            <a href="thong-tin-tuyen-sinh-tieu-hoc.php">Tuyển sinh Tiểu học</a>
-                            <a href="thong-tin-tuyen-sinh-thcs.php">Tuyển sinh THCS</a>
-                            <a href="uu-dai-tuyen-sinh.php">Ưu đãi tuyển sinh</a>
-                            <a href="cau-hoi-thuong-gap.php">Câu hỏi thường gặp</a>
-                        </div>
+                <div class="hero-card" data-aos="fade-up">
+                    <div class="hero-photo">
+                        <img src="assets/img/tuyensinh/thông tin tuyển sinh.jpg" alt="Thông tin tuyển sinh">
                     </div>
-
-                    <div class="sc-side-card">
-                        <h3>Liên hệ tư vấn</h3>
-                        <div class="sc-contact">
-                            <b>Hotline</b>
-                            <span>0934 525 889</span>
-                        </div>
-                        <div class="sc-contact">
-                            <b>Email</b>
-                            <span>tuyensinh@doanthidiem.edu.vn</span>
-                        </div>
-                        <div class="sc-contact" style="margin-bottom: 0;">
-                            <b>Địa chỉ</b>
-                            <span>KĐT Trung Văn, Nam Từ Liêm, Hà Nội</span>
-                        </div>
-                        <div class="sc-actions">
-                            <a href="dang-ky-tu-van.php" class="sc-btn sc-btn-primary">Đăng ký tư vấn</a>
-                            <a href="lien-he.php" class="sc-btn sc-btn-light">Liên hệ ngay</a>
-                        </div>
+                </div>
+                <div class="hero-card" data-aos="fade-up">
+                    <div class="hero-photo">
+                        <img src="assets/img/tuyensinh/thông tin tuyển sinh 2.jpg" alt="Thông tin tuyển sinh">
                     </div>
-                </aside>
+                </div>
             </div>
         </section>
     </main>
@@ -671,6 +574,21 @@
     <script type="text/javascript" src="olympia/js/jquery.toast.min.js"></script>
     <script type="text/javascript" src="olympia/js/jquery.validate.min.js"></script>
     <script src="olympia/js/main.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".ts-banner-slider").slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                prevArrow: '<div class="rcl-prev"><img src="olympia/images/button-1-3.svg"></div>',
+                nextArrow: '<div class="rcl-next"><img src="olympia/images/button-1-3.svg"></div>',
+                infinite: true,
+                autoplay: true,
+                autoplaySpeed: 5000,
+                fade: true,
+                cssEase: 'linear'
+            });
+        });
+    </script>
 </body>
 
 </html>

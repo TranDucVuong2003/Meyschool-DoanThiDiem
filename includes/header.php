@@ -37,8 +37,8 @@
                 <!--===========HEADER=========-->
                 <div class="header-menu">
                     <ul class="menu-list">
-                        <li class="menu-item <?php echo isActive('index.php', $current_page); ?>">
-                            <a href="javascript:;" title="" class="menu_link">Giới thiệu</a>
+                        <li class="menu-item <?php echo isActive('thong-diep-nguoi-sang-lap.php', $current_page); ?>">
+                            <a href="javascript:void(0)" title="" class="menu_link">Giới thiệu</a>
                             <ul class="dropdown-content">
                                 <li>
                                     <a href="thong-diep-nguoi-sang-lap.php">
@@ -68,11 +68,11 @@
                             </ul>
                         </li>
                         <li class="menu-item <?php echo isActive('tuyen-dung.php', $current_page); ?>">
-                            <a href="./tuyen-dung.php" title="" class="menu_link">Tuyển sinh 2026 - 2027</a>
+                            <a href="javascript:void(0)" title="" class="menu_link">Tuyển sinh 2026 - 2027</a>
                             <ul class="dropdown-content">
                                 <li>
                                     <a href="thong-tin-tuyen-sinh-tieu-hoc.php">
-                                        <span>Thông tin tuyển sinh Tiểu học</span>
+                                        <span>Thông tin tuyển sinh tiền tiểu học và tiểu học</span>
                                     </a>
                                 </li>
                                 <li>
@@ -103,7 +103,7 @@
                             </ul>
                         </li>
                         <li class="menu-item <?php echo isActive('lo-trinh-hoc-tap.php', $current_page); ?>">
-                            <a href="./lo-trinh-hoc-tap.php" title="" class="menu_link">Chương trình đào tạo</a>
+                            <a href="javascript:void(0)" title="" class="menu_link">Chương trình đào tạo</a>
                             <ul class="dropdown-content">
                                 <li>
                                     <a href="tong-quan-chuong-trinh.php">
@@ -128,7 +128,7 @@
                             </ul>
                         </li>
                         <li class="menu-item <?php echo isActive('co-so-vat-chat.php', $current_page); ?>">
-                            <a href="./co-so-vat-chat.php" title="" class="menu_link">Cơ sở vật chất</a>
+                            <a href="javascript:void(0)" title="" class="menu_link">Cơ sở vật chất</a>
                             <ul class="dropdown-content">
                                 <li>
                                     <a href="tong-quan-campus.php">
@@ -163,7 +163,7 @@
                             </ul>
                         </li>
                         <li class="menu-item <?php echo isActive('dich-vu-xe-dua-don-hoc-sinh.php', $current_page); ?>">
-                            <a href="./dich-vu-xe-dua-don-hoc-sinh.php" title="" class="menu_link">Dịch vụ học đường</a>
+                            <a href="javascript:void(0)" title="" class="menu_link">Dịch vụ học đường</a>
                             <ul class="dropdown-content">
                                 <li>
                                     <a href="dong-phuc-hoc-sinh.php">
@@ -188,7 +188,7 @@
                             </ul>
                         </li>
                         <li class="menu-item <?php echo isActive('tin-tuc.php', $current_page); ?>">
-                            <a href="./tin-tuc.php" title="" class="menu_link">Tin tức</a>
+                            <a href="javascript:void(0)" title="" class="menu_link">Tin tức</a>
                             <ul class="dropdown-content">
                                 <li>
                                     <a href="tin-hoat-dong.php">
@@ -213,7 +213,7 @@
                             </ul>
                         </li>
                         <li class="menu-item <?php echo isActive('lien-he.php', $current_page); ?>">
-                            <a href="./lien-he.php" title="" class="menu_link">Liên hệ</a>
+                            <a href="javascript:void(0)" title="" class="menu_link">Liên hệ</a>
                             <ul class="dropdown-content">
                                 <li>
                                     <a href="lien-he.php">
@@ -241,8 +241,8 @@
                                     <img src="./olympia/images/pc-header-search.svg" alt=""></a>
                             </li>
                             <li class="info-item">
-                                <a href="#" title="Login Canvas" class="account"
-                                    target="_blank"><img src="./olympia/images/pc-header-login.svg" alt=""></a>
+                                <a href="#" title="Login Canvas" class="account" target="_blank"><img
+                                        src="./olympia/images/pc-header-login.svg" alt=""></a>
                             </li>
 
                         </ul>
@@ -255,7 +255,8 @@
         <div class="header-mb">
             <div class="header-mb-container" style="height: 70px !important;">
                 <div class="header-mb-logo">
-                    <a href="./index.php"><img src="./assets/logo/logo.png" alt="Meyschool Đoàn Thị Điểm" style="max-height: 60px !important; width: auto;"></a>
+                    <a href="./index.php"><img src="./assets/logo/logo.png" alt="Meyschool Đoàn Thị Điểm"
+                            style="max-height: 60px !important; width: auto;"></a>
                 </div>
                 <div class="header-mb-menu">
                     <div class="mb-search">
@@ -286,11 +287,17 @@
                                 <div class="mb-menu-sub">
                                     <div class="mb-menu-body">
                                         <ul class="mb-menu-sub-list">
-                                            <li class="mb-sub-item"><a href="thong-diep-nguoi-sang-lap.php" title="" class="mb-sub-link">Thông điệp từ Nhà sáng lập</a></li>
-                                            <li class="mb-sub-item"><a href="tam-nhin-su-menh.php" title="" class="mb-sub-link">Tầm nhìn – Sứ mệnh – Giá trị cốt lõi</a></li>
-                                            <li class="mb-sub-item"><a href="ban-lanh-dao.php" title="" class="mb-sub-link">Ban lãnh đạo Trường Meyschool Đoàn Thị Điểm</a></li>
-                                            <li class="mb-sub-item"><a href="doi-ngu-olympia.php" title="" class="mb-sub-link">Đội ngũ giáo viên</a></li>
-                                            <li class="mb-sub-item"><a href="chan-dung-hoc-sinh.php" title="" class="mb-sub-link">Chân dung học sinh Meyschool</a></li>
+                                            <li class="mb-sub-item"><a href="thong-diep-nguoi-sang-lap.php" title=""
+                                                    class="mb-sub-link">Thông điệp từ Nhà sáng lập</a></li>
+                                            <li class="mb-sub-item"><a href="tam-nhin-su-menh.php" title=""
+                                                    class="mb-sub-link">Tầm nhìn – Sứ mệnh – Giá trị cốt lõi</a></li>
+                                            <li class="mb-sub-item"><a href="ban-lanh-dao.php" title=""
+                                                    class="mb-sub-link">Ban lãnh đạo Trường Meyschool Đoàn Thị Điểm</a>
+                                            </li>
+                                            <li class="mb-sub-item"><a href="doi-ngu-olympia.php" title=""
+                                                    class="mb-sub-link">Đội ngũ giáo viên</a></li>
+                                            <li class="mb-sub-item"><a href="chan-dung-hoc-sinh.php" title=""
+                                                    class="mb-sub-link">Chân dung học sinh Meyschool</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -302,10 +309,14 @@
                                 <div class="mb-menu-sub">
                                     <div class="mb-menu-body">
                                         <ul class="mb-menu-sub-list">
-                                            <li class="mb-sub-item"><a href="tien-tieu-hoc.php" title="" class="mb-sub-link">GIỚI THIỆU TIỀN TIỂU HỌC</a></li>
-                                            <li class="mb-sub-item"><a href="tieu-hoc.php" title="" class="mb-sub-link">GIỚI THIỆU TIỂU HỌC</a></li>
-                                            <li class="mb-sub-item"><a href="chuong-trinh-tien-tieu-hoc.php" title="" class="mb-sub-link">CHƯƠNG TRÌNH HỌC</a></li>
-                                            <li class="mb-sub-item"><a href="hoat-dong-tien-tieu-hoc.php" title="" class="mb-sub-link">HOẠT ĐỘNG NGOẠI KHÓA</a></li>
+                                            <li class="mb-sub-item"><a href="tien-tieu-hoc.php" title=""
+                                                    class="mb-sub-link">GIỚI THIỆU TIỀN TIỂU HỌC</a></li>
+                                            <li class="mb-sub-item"><a href="tieu-hoc.php" title=""
+                                                    class="mb-sub-link">GIỚI THIỆU TIỂU HỌC</a></li>
+                                            <li class="mb-sub-item"><a href="chuong-trinh-tien-tieu-hoc.php" title=""
+                                                    class="mb-sub-link">CHƯƠNG TRÌNH HỌC</a></li>
+                                            <li class="mb-sub-item"><a href="hoat-dong-tien-tieu-hoc.php" title=""
+                                                    class="mb-sub-link">HOẠT ĐỘNG NGOẠI KHÓA</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -322,10 +333,14 @@
                                 <div class="mb-menu-sub">
                                     <div class="mb-menu-body">
                                         <ul class="mb-menu-sub-list">
-                                            <li class="mb-sub-item"><a href="tong-quan-chuong-trinh.php" title="" class="mb-sub-link">Tổng quan chương trình</a></li>
-                                            <li class="mb-sub-item"><a href="chuong-trinh-tieu-hoc.php" title="" class="mb-sub-link">Chương trình Tiểu học</a></li>
-                                            <li class="mb-sub-item"><a href="chuong-trinh-thcs.php" title="" class="mb-sub-link">Chương trình THCS</a></li>
-                                            <li class="mb-sub-item"><a href="hoat-dong-ngoai-khoa.php" title="" class="mb-sub-link">Hoạt động ngoại khóa</a></li>
+                                            <li class="mb-sub-item"><a href="tong-quan-chuong-trinh.php" title=""
+                                                    class="mb-sub-link">Tổng quan chương trình</a></li>
+                                            <li class="mb-sub-item"><a href="chuong-trinh-tieu-hoc.php" title=""
+                                                    class="mb-sub-link">Chương trình Tiểu học</a></li>
+                                            <li class="mb-sub-item"><a href="chuong-trinh-thcs.php" title=""
+                                                    class="mb-sub-link">Chương trình THCS</a></li>
+                                            <li class="mb-sub-item"><a href="hoat-dong-ngoai-khoa.php" title=""
+                                                    class="mb-sub-link">Hoạt động ngoại khóa</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -337,12 +352,18 @@
                                 <div class="mb-menu-sub">
                                     <div class="mb-menu-body">
                                         <ul class="mb-menu-sub-list">
-                                            <li class="mb-sub-item"><a href="tong-quan-campus.php" title="" class="mb-sub-link">Tổng quan campus</a></li>
-                                            <li class="mb-sub-item"><a href="phong-hoc.php" title="" class="mb-sub-link">Phòng học</a></li>
-                                            <li class="mb-sub-item"><a href="khu-the-thao.php" title="" class="mb-sub-link">Khu thể thao</a></li>
-                                            <li class="mb-sub-item"><a href="thu-vien.php" title="" class="mb-sub-link">Thư viện</a></li>
-                                            <li class="mb-sub-item"><a href="khong-gian-sang-tao.php" title="" class="mb-sub-link">Không gian sáng tạo/ Trò chơi dân gian</a></li>
-                                            <li class="mb-sub-item"><a href="nha-truyen-thong.php" title="" class="mb-sub-link">Nhà truyền thống</a></li>
+                                            <li class="mb-sub-item"><a href="tong-quan-campus.php" title=""
+                                                    class="mb-sub-link">Tổng quan campus</a></li>
+                                            <li class="mb-sub-item"><a href="phong-hoc.php" title=""
+                                                    class="mb-sub-link">Phòng học</a></li>
+                                            <li class="mb-sub-item"><a href="khu-the-thao.php" title=""
+                                                    class="mb-sub-link">Khu thể thao</a></li>
+                                            <li class="mb-sub-item"><a href="thu-vien.php" title=""
+                                                    class="mb-sub-link">Thư viện</a></li>
+                                            <li class="mb-sub-item"><a href="khong-gian-sang-tao.php" title=""
+                                                    class="mb-sub-link">Không gian sáng tạo/ Trò chơi dân gian</a></li>
+                                            <li class="mb-sub-item"><a href="nha-truyen-thong.php" title=""
+                                                    class="mb-sub-link">Nhà truyền thống</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -354,10 +375,14 @@
                                 <div class="mb-menu-sub">
                                     <div class="mb-menu-body">
                                         <ul class="mb-menu-sub-list">
-                                            <li class="mb-sub-item"><a href="dong-phuc-hoc-sinh.php" title="" class="mb-sub-link">Đồng phục học sinh</a></li>
-                                            <li class="mb-sub-item"><a href="ban-tru.php" title="" class="mb-sub-link">Bán trú</a></li>
-                                            <li class="mb-sub-item"><a href="xe-bus-dua-don.php" title="" class="mb-sub-link">Xe Bus đưa đón</a></li>
-                                            <li class="mb-sub-item"><a href="tu-van-tam-ly.php" title="" class="mb-sub-link">Tư vấn tâm lý học đường</a></li>
+                                            <li class="mb-sub-item"><a href="dong-phuc-hoc-sinh.php" title=""
+                                                    class="mb-sub-link">Đồng phục học sinh</a></li>
+                                            <li class="mb-sub-item"><a href="ban-tru.php" title=""
+                                                    class="mb-sub-link">Bán trú</a></li>
+                                            <li class="mb-sub-item"><a href="xe-bus-dua-don.php" title=""
+                                                    class="mb-sub-link">Xe Bus đưa đón</a></li>
+                                            <li class="mb-sub-item"><a href="tu-van-tam-ly.php" title=""
+                                                    class="mb-sub-link">Tư vấn tâm lý học đường</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -369,12 +394,19 @@
                                 <div class="mb-menu-sub">
                                     <div class="mb-menu-body">
                                         <ul class="mb-menu-sub-list">
-                                            <li class="mb-sub-item"><a href="thong-tin-tuyen-sinh-tieu-hoc.php" title="" class="mb-sub-link">Thông tin tuyển sinh Tiểu học</a></li>
-                                            <li class="mb-sub-item"><a href="thong-tin-tuyen-sinh-thcs.php" title="" class="mb-sub-link">Thông tin tuyển sinh THCS</a></li>
-                                            <li class="mb-sub-item"><a href="uu-dai-tuyen-sinh.php" title="" class="mb-sub-link">Ưu đãi tuyển sinh</a></li>
-                                            <li class="mb-sub-item"><a href="hoc-bong-2026-2027.php" title="" class="mb-sub-link">Học bổng 2026 - 2027</a></li>
-                                            <li class="mb-sub-item"><a href="cau-hoi-thuong-gap.php" title="" class="mb-sub-link">Câu hỏi thường gặp (FAQ)</a></li>
-                                            <li class="mb-sub-item"><a href="dang-ky-tu-van.php" title="" class="mb-sub-link">Đăng ký tư vấn</a></li>
+                                            <li class="mb-sub-item"><a href="thong-tin-tuyen-sinh-tieu-hoc.php" title=""
+                                                    class="mb-sub-link">Thông tin tuyển sinh tiền tiểu học và tiểu
+                                                    học</a></li>
+                                            <li class="mb-sub-item"><a href="thong-tin-tuyen-sinh-thcs.php" title=""
+                                                    class="mb-sub-link">Thông tin tuyển sinh THCS</a></li>
+                                            <li class="mb-sub-item"><a href="uu-dai-tuyen-sinh.php" title=""
+                                                    class="mb-sub-link">Ưu đãi tuyển sinh</a></li>
+                                            <li class="mb-sub-item"><a href="hoc-bong-2026-2027.php" title=""
+                                                    class="mb-sub-link">Học bổng 2026 - 2027</a></li>
+                                            <li class="mb-sub-item"><a href="cau-hoi-thuong-gap.php" title=""
+                                                    class="mb-sub-link">Câu hỏi thường gặp (FAQ)</a></li>
+                                            <li class="mb-sub-item"><a href="dang-ky-tu-van.php" title=""
+                                                    class="mb-sub-link">Đăng ký tư vấn</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -386,14 +418,14 @@
                                 <div class="mb-menu-sub">
                                     <div class="mb-menu-body">
                                         <ul class="mb-menu-sub-list">
-                                            <li class="mb-sub-item"><a href="category/goc-nhin-chuyen-gia.php"
-                                                    title="" class="mb-sub-link">HỢP TÁC QUỐC TẾ</a></li>
-                                            <li class="mb-sub-item"><a href="thong-tin-du-hoc.php"
-                                                    title="" class="mb-sub-link">THÔNG TIN DU HỌC</a></li>
-                                            <li class="mb-sub-item"><a href="category/goc-nhin-chuyen-gia.php"
-                                                    title="" class="mb-sub-link">THI TÀI NĂNG QUỐC TẾ</a></li>
-                                            <li class="mb-sub-item"><a href="category/goc-nhin-chuyen-gia.php"
-                                                    title="" class="mb-sub-link">HOẠT ĐỘNG KHỐI SONG NGỮ</a></li>
+                                            <li class="mb-sub-item"><a href="category/goc-nhin-chuyen-gia.php" title=""
+                                                    class="mb-sub-link">HỢP TÁC QUỐC TẾ</a></li>
+                                            <li class="mb-sub-item"><a href="thong-tin-du-hoc.php" title=""
+                                                    class="mb-sub-link">THÔNG TIN DU HỌC</a></li>
+                                            <li class="mb-sub-item"><a href="category/goc-nhin-chuyen-gia.php" title=""
+                                                    class="mb-sub-link">THI TÀI NĂNG QUỐC TẾ</a></li>
+                                            <li class="mb-sub-item"><a href="category/goc-nhin-chuyen-gia.php" title=""
+                                                    class="mb-sub-link">HOẠT ĐỘNG KHỐI SONG NGỮ</a></li>
                                         </ul>
 
 
@@ -409,8 +441,8 @@
                                         <ul class="mb-menu-sub-list">
                                             <li class="mb-sub-item"><a href="su-kien.php" title=""
                                                     class="mb-sub-link">THÔNG BÁO</a></li>
-                                            <li class="mb-sub-item"><a href="dich-vu-xe-dua-don-hoc-sinh.php"
-                                                    title="" class="mb-sub-link">LỊCH HOẠT ĐỘNG</a></li>
+                                            <li class="mb-sub-item"><a href="dich-vu-xe-dua-don-hoc-sinh.php" title=""
+                                                    class="mb-sub-link">LỊCH HOẠT ĐỘNG</a></li>
                                             <li class="mb-sub-item"><a href="dinh-duong-truong-hoc.php" title=""
                                                     class="mb-sub-link">CÂU CHUYỆN HỌC ĐƯỜNG</a></li>
                                             <li class="mb-sub-item"><a href="dong-phuc-va-hoc-pham.php" title=""
@@ -434,8 +466,8 @@
                                                     class="mb-sub-link">Tin tức Olympia</a></li>
                                             <li class="mb-sub-item"><a href="su-kien.php" title=""
                                                     class="mb-sub-link">Sự kiện Olympia</a></li>
-                                            <li class="mb-sub-item"><a href="category/goc-nhin-chuyen-gia.php"
-                                                    title="" class="mb-sub-link">Góc nhìn chuyên gia</a></li>
+                                            <li class="mb-sub-item"><a href="category/goc-nhin-chuyen-gia.php" title=""
+                                                    class="mb-sub-link">Góc nhìn chuyên gia</a></li>
                                             <li class="mb-sub-item"><a href="tuyen-dung.php" title=""
                                                     class="mb-sub-link">Tuyển dụng</a></li>
                                         </ul>
@@ -451,10 +483,10 @@
                                 <div class="mb-menu-sub">
                                     <div class="mb-menu-body">
                                         <ul class="mb-menu-sub-list">
-                                            <li class="mb-sub-item"><a href="faq.php" title=""
-                                                    class="mb-sub-link">Câu hỏi thường gặp</a></li>
-                                            <li class="mb-sub-item"><a href="#"
-                                                    title="" class="mb-sub-link">Canvas</a></li>
+                                            <li class="mb-sub-item"><a href="faq.php" title="" class="mb-sub-link">Câu
+                                                    hỏi thường gặp</a></li>
+                                            <li class="mb-sub-item"><a href="#" title="" class="mb-sub-link">Canvas</a>
+                                            </li>
                                             <li class="mb-sub-item"><a href="category/talkshow.php" title=""
                                                     class="mb-sub-link">Talkshow</a></li>
                                             <li class="mb-sub-item"><a href="https://onepay.vn/olympia/" title=""
@@ -472,10 +504,14 @@
                                 <div class="mb-menu-sub">
                                     <div class="mb-menu-body">
                                         <ul class="mb-menu-sub-list">
-                                            <li class="mb-sub-item"><a href="tin-hoat-dong.php" title="" class="mb-sub-link">Tin hoạt động</a></li>
-                                            <li class="mb-sub-item"><a href="thanh-tich.php" title="" class="mb-sub-link">Thành tích</a></li>
-                                            <li class="mb-sub-item"><a href="su-kien-truong.php" title="" class="mb-sub-link">Sự kiện trường</a></li>
-                                            <li class="mb-sub-item"><a href="thong-bao.php" title="" class="mb-sub-link">Thông báo</a></li>
+                                            <li class="mb-sub-item"><a href="tin-hoat-dong.php" title=""
+                                                    class="mb-sub-link">Tin hoạt động</a></li>
+                                            <li class="mb-sub-item"><a href="thanh-tich.php" title=""
+                                                    class="mb-sub-link">Thành tích</a></li>
+                                            <li class="mb-sub-item"><a href="su-kien-truong.php" title=""
+                                                    class="mb-sub-link">Sự kiện trường</a></li>
+                                            <li class="mb-sub-item"><a href="thong-bao.php" title=""
+                                                    class="mb-sub-link">Thông báo</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -487,9 +523,12 @@
                                 <div class="mb-menu-sub">
                                     <div class="mb-menu-body">
                                         <ul class="mb-menu-sub-list">
-                                            <li class="mb-sub-item"><a href="lien-he.php" title="" class="mb-sub-link">Thông tin liên hệ</a></li>
-                                            <li class="mb-sub-item"><a href="ban-do.php" title="" class="mb-sub-link">Bản đồ</a></li>
-                                            <li class="mb-sub-item"><a href="dang-ky-tham-quan.php" title="" class="mb-sub-link">Đăng ký tham quan trường</a></li>
+                                            <li class="mb-sub-item"><a href="lien-he.php" title=""
+                                                    class="mb-sub-link">Thông tin liên hệ</a></li>
+                                            <li class="mb-sub-item"><a href="ban-do.php" title=""
+                                                    class="mb-sub-link">Bản đồ</a></li>
+                                            <li class="mb-sub-item"><a href="dang-ky-tham-quan.php" title=""
+                                                    class="mb-sub-link">Đăng ký tham quan trường</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -542,8 +581,8 @@
                 <div class="mb-menu-info">
                     <span class="mb-info-icon" id="icon-email"><img class="icon-email"
                             src="olympia/images/icon-email.svg" alt=""></span>
-                    <span class="mb-info-icon" id="icon-phone"><img class="icon-call"
-                            src="olympia/images/icon-call.svg" alt=""></span>
+                    <span class="mb-info-icon" id="icon-phone"><img class="icon-call" src="olympia/images/icon-call.svg"
+                            alt=""></span>
                     <span class="mb-info-icon" id="icon-address"><img class="icon-location"
                             src="olympia/images/icon-location.svg" alt=""></span>
                 </div>
@@ -554,8 +593,8 @@
             <div class="search-header">
                 <div class="search-toolbar">
                     <div class="icon-logo"><img src="olympia/images/pc-00-search-logo.svg" alt=""></div>
-                    <div class="btn-search-close" id="btn-search-close"><img
-                            src="olympia/images/pc-00-search-close.svg" alt="">
+                    <div class="btn-search-close" id="btn-search-close"><img src="olympia/images/pc-00-search-close.svg"
+                            alt="">
                     </div>
                 </div>
                 <div class="form-search-lp">
@@ -564,8 +603,7 @@
                         <div class="search-input">
                             <input type="text" name="q" class="search-input-lp pc-input-search" id="search-key"
                                 placeholder="Nhập từ khoá tìm kiếm">
-                            <img class="icon-search icon-search-js" src="olympia/images/pc-00-search-search.svg"
-                                alt="">
+                            <img class="icon-search icon-search-js" src="olympia/images/pc-00-search-search.svg" alt="">
                         </div>
                     </form>
                 </div>

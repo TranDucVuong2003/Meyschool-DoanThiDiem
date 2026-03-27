@@ -47,456 +47,481 @@
     <script src="../unpkg.com/aos%402.3.1/dist/aos.js"></script>
 
     <style>
-        nav#admin_bar {
-            display: none;
-        }
+    nav#admin_bar {
+        display: none;
+    }
 
-        .jq-toast-wrap {
-            display: block;
-            position: fixed;
-            width: 250px;
-            pointer-events: none !important;
-            letter-spacing: normal;
-            z-index: 9000999999999 !important;
-        }
+    .jq-toast-wrap {
+        display: block;
+        position: fixed;
+        width: 250px;
+        pointer-events: none !important;
+        letter-spacing: normal;
+        z-index: 9000999999999 !important;
+    }
 
-        body.show-admin-bar {
-            margin-top: 0 !important;
-        }
+    body.show-admin-bar {
+        margin-top: 0 !important;
+    }
 
-        :root {
-            --cs-blue-1: #439bd4;
-            --cs-blue-2: #4db0e4;
-            --cs-blue-3: #eaf7ff;
-            --cs-ink: #214963;
-            --cs-green: #2ba66d;
-        }
+    :root {
+        --cs-blue-1: #439bd4;
+        --cs-blue-2: #4db0e4;
+        --cs-blue-3: #eaf7ff;
+        --cs-ink: #214963;
+        --cs-green: #2ba66d;
+    }
 
-        .cs-page {
-            background: radial-gradient(circle at 0% 0%, #eaf7ff 0%, #f7fcff 45%, #fff 100%);
-            color: var(--cs-ink);
-        }
+    .cs-page {
+        background: radial-gradient(circle at 0% 0%, #eaf7ff 0%, #f7fcff 45%, #fff 100%);
+        color: var(--cs-ink);
+    }
 
+    .cs-wrap {
+        width: min(94vw, 1480px);
+        margin: 0 auto;
+    }
+
+    .cs-hero {
+        position: relative;
+        overflow: hidden;
+        padding: 112px 0 68px;
+        background: linear-gradient(132deg, rgba(67, 155, 212, 0.95) 0%, rgba(77, 176, 228, 0.9) 72%, rgba(77, 176, 228, 0.84) 100%), url('storage/banner/tuyen-sinh.jpg') center/cover no-repeat;
+    }
+
+    .cs-hero::before,
+    .cs-hero::after {
+        content: '';
+        position: absolute;
+        border-radius: 50%;
+        pointer-events: none;
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    .cs-hero::before {
+        width: 340px;
+        height: 340px;
+        top: -120px;
+        right: -100px;
+    }
+
+    .cs-hero::after {
+        width: 210px;
+        height: 210px;
+        left: -70px;
+        bottom: -85px;
+    }
+
+    .cs-hero-grid {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+        gap: 22px;
+        align-items: center;
+    }
+
+    .cs-breadcrumb {
+        margin: 0 0 14px;
+        display: inline-flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        position: static !important;
+        float: none !important;
+        background: rgba(255, 255, 255, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.36);
+        border-radius: 999px;
+        padding: 8px 16px;
+    }
+
+    .cs-breadcrumb li,
+    .cs-breadcrumb li a {
+        color: #fff;
+        font-size: 13px;
+    }
+
+    .cs-hero h1 {
+        margin: 0;
+        color: #fff;
+        font-family: 'Garamond', serif;
+        font-size: clamp(38px, 5vw, 66px);
+        line-height: 1.03;
+    }
+
+    .cs-hero p {
+        margin: 16px 0 0;
+        color: rgba(255, 255, 255, 0.96);
+        font-size: 17px;
+        line-height: 1.75;
+        max-width: 780px;
+    }
+
+    .cs-tags {
+        margin-top: 16px;
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .cs-tags span {
+        display: inline-flex;
+        align-items: center;
+        padding: 8px 12px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        background: rgba(255, 255, 255, 0.2);
+        color: #fff;
+        font-size: 13px;
+        font-weight: 700;
+    }
+
+    .cs-hero-panel {
+        border-radius: 18px;
+        border: 1px solid rgba(255, 255, 255, 0.34);
+        background: rgba(255, 255, 255, 0.17);
+        padding: 16px;
+        color: #fff;
+    }
+
+    .cs-hero-panel h3 {
+        margin: 0 0 10px;
+        font-family: 'Garamond', serif;
+        font-size: 30px;
+        color: #fff;
+    }
+
+    .cs-hero-panel ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 8px;
+    }
+
+    .cs-hero-panel li {
+        padding: 10px;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.14);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .cs-main {
+        padding: 40px 0 72px;
+    }
+
+    .cs-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1.35fr) minmax(290px, 0.65fr);
+        gap: 24px;
+    }
+
+    .cs-content,
+    .cs-side {
+        display: grid;
+        gap: 16px;
+        align-self: start;
+    }
+
+    .cs-card,
+    .cs-side-card {
+        background: #fff;
+        border: 1px solid rgba(67, 155, 212, 0.2);
+        border-radius: 20px;
+        box-shadow: 0 12px 24px rgba(16, 49, 79, 0.08);
+        padding: 22px;
+    }
+
+    .cs-card h2,
+    .cs-side-card h3 {
+        margin: 0 0 12px;
+        color: #256f9f;
+        font-family: 'Garamond', serif;
+        font-size: 34px;
+        line-height: 1.2;
+        padding: 0 !important;
+    }
+
+    .cs-card p,
+    .cs-card li,
+    .cs-side-card p,
+    .cs-side-card li,
+    .cs-form-note {
+        color: #416987;
+        font-size: 15px;
+        line-height: 1.75;
+    }
+
+    .cs-info-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+        margin-top: 4px;
+    }
+
+    .cs-info-item {
+        border: 1px solid rgba(67, 155, 212, 0.18);
+        border-radius: 12px;
+        background: #f9fdff;
+        padding: 12px;
+    }
+
+    .cs-info-item b {
+        display: block;
+        color: #2f79ad;
+        margin-bottom: 6px;
+        font-size: 15px;
+    }
+
+    .cs-form-box {
+        border: 1px solid rgba(67, 155, 212, 0.2);
+        border-radius: 16px;
+        background: linear-gradient(125deg, #f6fbff 0%, #edf8ff 100%);
+        padding: 16px;
+    }
+
+    .form-group {
+        margin-bottom: 14px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 6px;
+        color: #2f638f;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .form-group label .required {
+        color: #d9534f;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        border: 1px solid rgba(67, 155, 212, 0.25);
+        border-radius: 10px;
+        padding: 12px;
+        font-size: 14px;
+        line-height: 1.4;
+        background: #fff;
+        color: #355f7e;
+        font-family: inherit;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+        outline: none;
+        border-color: #439bd4;
+        box-shadow: 0 0 0 3px rgba(67, 155, 212, 0.16);
+    }
+
+    .form-group textarea {
+        min-height: 120px;
+        resize: vertical;
+    }
+
+    .form-row {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .form-submit {
+        margin-top: 4px;
+    }
+
+    .form-submit button {
+        width: 100%;
+        min-height: 48px;
+        border: none;
+        border-radius: 12px;
+        background: linear-gradient(120deg, var(--cs-blue-1), var(--cs-blue-2));
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 13px;
+        letter-spacing: 0.4px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: transform 0.15s ease;
+    }
+
+    .form-submit button:hover {
+        transform: translateY(-1px);
+    }
+
+    .success-message {
+        border: 1px solid rgba(43, 166, 109, 0.35);
+        background: #eafaf1;
+        color: #1f7a4f;
+        border-radius: 12px;
+        padding: 10px 12px;
+        margin-bottom: 12px;
+        display: none;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .cs-side-links {
+        display: grid;
+        gap: 10px;
+    }
+
+    .cs-side-links a {
+        display: block;
+        text-decoration: none;
+        color: #2f638f;
+        border: 1px solid rgba(67, 155, 212, 0.18);
+        border-radius: 12px;
+        background: #f9fdff;
+        padding: 10px 12px;
+        font-size: 14px;
+        line-height: 1.55;
+    }
+
+    .cs-side-links a:hover {
+        background: #eaf7ff;
+    }
+
+    .cs-contact {
+        background: #f7fcff;
+        border: 1px solid rgba(67, 155, 212, 0.22);
+        border-radius: 12px;
+        padding: 10px 12px;
+        margin-bottom: 10px;
+    }
+
+    .cs-contact b {
+        display: block;
+        color: #2d7bb1;
+        font-size: 13px;
+        margin-bottom: 4px;
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+    }
+
+    .cs-contact span {
+        color: #204c70;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .cs-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 12px;
+    }
+
+    .cs-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        padding: 10px 16px;
+        border-radius: 12px;
+        text-decoration: none;
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+        font-weight: 700;
+        border: 1px solid transparent;
+    }
+
+    .cs-btn-primary {
+        color: #fff;
+        background: linear-gradient(120deg, var(--cs-blue-1), var(--cs-blue-2));
+        box-shadow: 0 10px 20px rgba(67, 155, 212, 0.24);
+    }
+
+    .cs-btn-light {
+        color: #2b79af;
+        background: #f7fcff;
+        border-color: rgba(67, 155, 212, 0.25);
+    }
+
+    .cs-emphasis {
+        background: linear-gradient(120deg, #3f9ad3, #56b4e7);
+        color: #fff;
+        border-radius: 16px;
+        padding: 18px;
+    }
+
+    .cs-emphasis h4 {
+        margin: 0 0 6px;
+        color: #fff;
+        font-size: 28px;
+        font-family: 'Garamond', serif;
+    }
+
+    .cs-emphasis p {
+        color: rgba(255, 255, 255, 0.96);
+        margin: 0;
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    @media (max-width: 1180px) {
+
+        .cs-hero-grid,
+        .cs-layout,
+        .cs-info-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media (max-width: 768px) {
         .cs-wrap {
             width: min(94vw, 1480px);
-            margin: 0 auto;
         }
 
         .cs-hero {
-            position: relative;
-            overflow: hidden;
-            padding: 112px 0 68px;
-            background: linear-gradient(132deg, rgba(67, 155, 212, 0.95) 0%, rgba(77, 176, 228, 0.9) 72%, rgba(77, 176, 228, 0.84) 100%), url('storage/banner/tuyen-sinh.jpg') center/cover no-repeat;
-        }
-
-        .cs-hero::before,
-        .cs-hero::after {
-            content: '';
-            position: absolute;
-            border-radius: 50%;
-            pointer-events: none;
-            background: rgba(255, 255, 255, 0.2);
-        }
-
-        .cs-hero::before {
-            width: 340px;
-            height: 340px;
-            top: -120px;
-            right: -100px;
-        }
-
-        .cs-hero::after {
-            width: 210px;
-            height: 210px;
-            left: -70px;
-            bottom: -85px;
-        }
-
-        .cs-hero-grid {
-            position: relative;
-            z-index: 1;
-            display: grid;
-            grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
-            gap: 22px;
-            align-items: center;
-        }
-
-        .cs-breadcrumb {
-            margin: 0 0 14px;
-            display: inline-flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            position: static !important;
-            float: none !important;
-            background: rgba(255, 255, 255, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.36);
-            border-radius: 999px;
-            padding: 8px 16px;
-        }
-
-        .cs-breadcrumb li,
-        .cs-breadcrumb li a {
-            color: #fff;
-            font-size: 13px;
-        }
-
-        .cs-hero h1 {
-            margin: 0;
-            color: #fff;
-            font-family: 'Garamond', serif;
-            font-size: clamp(38px, 5vw, 66px);
-            line-height: 1.03;
+            padding: 94px 0 42px;
         }
 
         .cs-hero p {
-            margin: 16px 0 0;
-            color: rgba(255, 255, 255, 0.96);
-            font-size: 17px;
-            line-height: 1.75;
-            max-width: 780px;
-        }
-
-        .cs-tags {
-            margin-top: 16px;
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-
-        .cs-tags span {
-            display: inline-flex;
-            align-items: center;
-            padding: 8px 12px;
-            border-radius: 999px;
-            border: 1px solid rgba(255, 255, 255, 0.35);
-            background: rgba(255, 255, 255, 0.2);
-            color: #fff;
-            font-size: 13px;
-            font-weight: 700;
-        }
-
-        .cs-hero-panel {
-            border-radius: 18px;
-            border: 1px solid rgba(255, 255, 255, 0.34);
-            background: rgba(255, 255, 255, 0.17);
-            padding: 16px;
-            color: #fff;
-        }
-
-        .cs-hero-panel h3 {
-            margin: 0 0 10px;
-            font-family: 'Garamond', serif;
-            font-size: 30px;
-            color: #fff;
-        }
-
-        .cs-hero-panel ul {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            display: grid;
-            gap: 8px;
-        }
-
-        .cs-hero-panel li {
-            padding: 10px;
-            border-radius: 12px;
-            background: rgba(255, 255, 255, 0.14);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            font-size: 14px;
-            line-height: 1.6;
-        }
-
-        .cs-main {
-            padding: 40px 0 72px;
-        }
-
-        .cs-layout {
-            display: grid;
-            grid-template-columns: minmax(0, 1.35fr) minmax(290px, 0.65fr);
-            gap: 24px;
-        }
-
-        .cs-content,
-        .cs-side {
-            display: grid;
-            gap: 16px;
-            align-self: start;
+            font-size: 15px;
         }
 
         .cs-card,
         .cs-side-card {
-            background: #fff;
-            border: 1px solid rgba(67, 155, 212, 0.2);
-            border-radius: 20px;
-            box-shadow: 0 12px 24px rgba(16, 49, 79, 0.08);
-            padding: 22px;
-        }
-
-        .cs-card h2,
-        .cs-side-card h3 {
-            margin: 0 0 12px;
-            color: #256f9f;
-            font-family: 'Garamond', serif;
-            font-size: 34px;
-            line-height: 1.2;
-            padding: 0 !important;
-        }
-
-        .cs-card p,
-        .cs-card li,
-        .cs-side-card p,
-        .cs-side-card li,
-        .cs-form-note {
-            color: #416987;
-            font-size: 15px;
-            line-height: 1.75;
-        }
-
-        .cs-info-grid {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 10px;
-            margin-top: 4px;
-        }
-
-        .cs-info-item {
-            border: 1px solid rgba(67, 155, 212, 0.18);
-            border-radius: 12px;
-            background: #f9fdff;
-            padding: 12px;
-        }
-
-        .cs-info-item b {
-            display: block;
-            color: #2f79ad;
-            margin-bottom: 6px;
-            font-size: 15px;
-        }
-
-        .cs-form-box {
-            border: 1px solid rgba(67, 155, 212, 0.2);
-            border-radius: 16px;
-            background: linear-gradient(125deg, #f6fbff 0%, #edf8ff 100%);
             padding: 16px;
-        }
-
-        .form-group {
-            margin-bottom: 14px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 6px;
-            color: #2f638f;
-            font-size: 14px;
-            font-weight: 600;
-        }
-
-        .form-group label .required {
-            color: #d9534f;
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            border: 1px solid rgba(67, 155, 212, 0.25);
-            border-radius: 10px;
-            padding: 12px;
-            font-size: 14px;
-            line-height: 1.4;
-            background: #fff;
-            color: #355f7e;
-            font-family: inherit;
-        }
-
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #439bd4;
-            box-shadow: 0 0 0 3px rgba(67, 155, 212, 0.16);
-        }
-
-        .form-group textarea {
-            min-height: 120px;
-            resize: vertical;
+            border-radius: 16px;
         }
 
         .form-row {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 12px;
+            grid-template-columns: 1fr;
         }
+    }
 
-        .form-submit {
-            margin-top: 4px;
-        }
+    .ts-banner-slider {
+        position: relative;
+        padding-top: 67px;
+    }
 
-        .form-submit button {
-            width: 100%;
-            min-height: 48px;
-            border: none;
-            border-radius: 12px;
-            background: linear-gradient(120deg, var(--cs-blue-1), var(--cs-blue-2));
-            color: #fff;
-            text-transform: uppercase;
-            font-size: 13px;
-            letter-spacing: 0.4px;
-            font-weight: 700;
-            cursor: pointer;
-            transition: transform 0.15s ease;
-        }
+    .ts-banner-slider img {
+        width: 100%;
+        display: block;
+    }
 
-        .form-submit button:hover {
-            transform: translateY(-1px);
-        }
+    .ts-banner-slider .rcl-prev,
+    .ts-banner-slider .rcl-next {
+        top: 50%;
+        transform: translateY(-50%);
+    }
 
-        .success-message {
-            border: 1px solid rgba(43, 166, 109, 0.35);
-            background: #eafaf1;
-            color: #1f7a4f;
-            border-radius: 12px;
-            padding: 10px 12px;
-            margin-bottom: 12px;
-            display: none;
-            font-size: 14px;
-            font-weight: 600;
-        }
+    .ts-banner-slider .rcl-prev {
+        left: 15px;
+        transform: translateY(-50%) scaleX(-1);
+    }
 
-        .cs-side-links {
-            display: grid;
-            gap: 10px;
-        }
-
-        .cs-side-links a {
-            display: block;
-            text-decoration: none;
-            color: #2f638f;
-            border: 1px solid rgba(67, 155, 212, 0.18);
-            border-radius: 12px;
-            background: #f9fdff;
-            padding: 10px 12px;
-            font-size: 14px;
-            line-height: 1.55;
-        }
-
-        .cs-side-links a:hover {
-            background: #eaf7ff;
-        }
-
-        .cs-contact {
-            background: #f7fcff;
-            border: 1px solid rgba(67, 155, 212, 0.22);
-            border-radius: 12px;
-            padding: 10px 12px;
-            margin-bottom: 10px;
-        }
-
-        .cs-contact b {
-            display: block;
-            color: #2d7bb1;
-            font-size: 13px;
-            margin-bottom: 4px;
-            text-transform: uppercase;
-            letter-spacing: 0.3px;
-        }
-
-        .cs-contact span {
-            color: #204c70;
-            font-weight: 600;
-            font-size: 14px;
-            line-height: 1.5;
-        }
-
-        .cs-actions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 12px;
-        }
-
-        .cs-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 44px;
-            padding: 10px 16px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 0.4px;
-            font-weight: 700;
-            border: 1px solid transparent;
-        }
-
-        .cs-btn-primary {
-            color: #fff;
-            background: linear-gradient(120deg, var(--cs-blue-1), var(--cs-blue-2));
-            box-shadow: 0 10px 20px rgba(67, 155, 212, 0.24);
-        }
-
-        .cs-btn-light {
-            color: #2b79af;
-            background: #f7fcff;
-            border-color: rgba(67, 155, 212, 0.25);
-        }
-
-        .cs-emphasis {
-            background: linear-gradient(120deg, #3f9ad3, #56b4e7);
-            color: #fff;
-            border-radius: 16px;
-            padding: 18px;
-        }
-
-        .cs-emphasis h4 {
-            margin: 0 0 6px;
-            color: #fff;
-            font-size: 28px;
-            font-family: 'Garamond', serif;
-        }
-
-        .cs-emphasis p {
-            color: rgba(255, 255, 255, 0.96);
-            margin: 0;
-            font-size: 15px;
-            line-height: 1.7;
-        }
-
-        @media (max-width: 1180px) {
-
-            .cs-hero-grid,
-            .cs-layout,
-            .cs-info-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .cs-wrap {
-                width: min(94vw, 1480px);
-            }
-
-            .cs-hero {
-                padding: 94px 0 42px;
-            }
-
-            .cs-hero p {
-                font-size: 15px;
-            }
-
-            .cs-card,
-            .cs-side-card {
-                padding: 16px;
-                border-radius: 16px;
-            }
-
-            .form-row {
-                grid-template-columns: 1fr;
-            }
-        }
+    .ts-banner-slider .rcl-next {
+        right: 15px;
+    }
     </style>
 </head>
 
@@ -505,36 +530,11 @@
     <div class="overlay_mark_search" style="display:none;"></div>
 
     <main class="body-content cs-page">
-        <section class="cs-hero">
-            <div class="cs-wrap">
-                <div class="cs-hero-grid" data-aos="fade-up">
-                    <div>
-                        <ol class="breadcrumb cs-breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.php">Trang chủ</a></li>
-                            <li class="breadcrumb-item"><a href="thong-tin-tuyen-sinh-tieu-hoc.php">Tuyển sinh</a></li>
-                            <li class="breadcrumb-item active">Đăng ký tư vấn</li>
-                        </ol>
-
-                        <h1>Đăng ký tư vấn tuyển sinh</h1>
-                        <p>Phụ huynh để lại thông tin để đội ngũ tuyển sinh Meyschool Đoàn Thị Điểm chủ động liên hệ tư vấn lộ trình học tập, chính sách học phí và các mốc tuyển sinh phù hợp.</p>
-
-                        <div class="cs-tags">
-                            <span>Phản hồi trong 24 giờ</span>
-                            <span>Tư vấn 1:1 theo nhu cầu</span>
-                            <span>Hỗ trợ hồ sơ đầu vào</span>
-                        </div>
-                    </div>
-
-                    <aside class="cs-hero-panel">
-                        <h3>Quy trình nhanh</h3>
-                        <ul>
-                            <li>Điền form thông tin phụ huynh và học sinh.</li>
-                            <li>Nhân sự tuyển sinh gọi lại để xác nhận nhu cầu.</li>
-                            <li>Đặt lịch tư vấn chi tiết hoặc tham quan trường.</li>
-                        </ul>
-                    </aside>
-                </div>
-            </div>
+        <section class="ts-banner-slider">
+            <div class="ts-banner-slide"><img src="assets/img/tuyensinh/banner5.jpg"
+                    alt="Mey School Đoàn Thị Điểm Phú Quốc Tuyển Sinh 2026-2027"></div>
+            <div class="ts-banner-slide"><img src="assets/img/tuyensinh/banner4.jpg"
+                    alt="Câu Lạc Bộ Tuổi Thơ - Hành Trang Vào Lớp 1"></div>
         </section>
 
         <section class="cs-main">
@@ -560,7 +560,8 @@
 
                     <article class="cs-card" data-aos="fade-up">
                         <h2>Biểu mẫu đăng ký</h2>
-                        <p class="cs-form-note">Vui lòng điền đúng thông tin liên hệ để nhà trường kết nối tư vấn thuận tiện nhất.</p>
+                        <p class="cs-form-note">Vui lòng điền đúng thông tin liên hệ để nhà trường kết nối tư vấn thuận
+                            tiện nhất.</p>
 
                         <div class="cs-form-box">
                             <div class="success-message" id="successMessage">
@@ -571,7 +572,8 @@
                                 <div class="form-row">
                                     <div class="form-group">
                                         <label>Họ và tên phụ huynh <span class="required">*</span></label>
-                                        <input type="text" name="parent_name" required placeholder="Nhập họ và tên phụ huynh">
+                                        <input type="text" name="parent_name" required
+                                            placeholder="Nhập họ và tên phụ huynh">
                                     </div>
                                     <div class="form-group">
                                         <label>Số điện thoại <span class="required">*</span></label>
@@ -586,7 +588,8 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Họ và tên học sinh <span class="required">*</span></label>
-                                        <input type="text" name="student_name" required placeholder="Nhập họ và tên học sinh">
+                                        <input type="text" name="student_name" required
+                                            placeholder="Nhập họ và tên học sinh">
                                     </div>
                                 </div>
 
@@ -620,7 +623,8 @@
 
                                 <div class="form-group">
                                     <label>Nội dung cần tư vấn</label>
-                                    <textarea name="message" placeholder="Mô tả nội dung bạn cần tư vấn (nếu có)"></textarea>
+                                    <textarea name="message"
+                                        placeholder="Mô tả nội dung bạn cần tư vấn (nếu có)"></textarea>
                                 </div>
 
                                 <div class="form-submit">
@@ -632,7 +636,8 @@
 
                     <section class="cs-emphasis" data-aos="fade-up">
                         <h4>Đặt lịch tham quan trường</h4>
-                        <p>Nếu phụ huynh muốn trải nghiệm trực tiếp môi trường học tập, hãy để lại thông tin trong form hoặc liên hệ hotline để được hỗ trợ lịch tham quan phù hợp.</p>
+                        <p>Nếu phụ huynh muốn trải nghiệm trực tiếp môi trường học tập, hãy để lại thông tin trong form
+                            hoặc liên hệ hotline để được hỗ trợ lịch tham quan phù hợp.</p>
                     </section>
                 </div>
 
@@ -678,25 +683,40 @@
     <script type="text/javascript" src="olympia/js/jquery.validate.min.js"></script>
     <script src="olympia/js/main.js"></script>
     <script>
-        document.getElementById('consultationForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            // Show success message
-            document.getElementById('successMessage').style.display = 'block';
-
-            // Reset form
-            this.reset();
-
-            // Scroll to success message
-            document.getElementById('successMessage').scrollIntoView({
-                behavior: 'smooth'
-            });
-
-            // Hide success message after 5 seconds
-            setTimeout(function() {
-                document.getElementById('successMessage').style.display = 'none';
-            }, 5000);
+    $(document).ready(function() {
+        $(".ts-banner-slider").slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            prevArrow: '<div class="rcl-prev"><img src="olympia/images/button-1-3.svg"></div>',
+            nextArrow: '<div class="rcl-next"><img src="olympia/images/button-1-3.svg"></div>',
+            infinite: true,
+            autoplay: true,
+            autoplaySpeed: 5000,
+            fade: true,
+            cssEase: 'linear'
         });
+    });
+    </script>
+    <script>
+    document.getElementById('consultationForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // Show success message
+        document.getElementById('successMessage').style.display = 'block';
+
+        // Reset form
+        this.reset();
+
+        // Scroll to success message
+        document.getElementById('successMessage').scrollIntoView({
+            behavior: 'smooth'
+        });
+
+        // Hide success message after 5 seconds
+        setTimeout(function() {
+            document.getElementById('successMessage').style.display = 'none';
+        }, 5000);
+    });
     </script>
 </body>
 

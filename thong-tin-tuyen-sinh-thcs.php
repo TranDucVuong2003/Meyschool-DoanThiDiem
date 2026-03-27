@@ -11,15 +11,18 @@
     <link rel="shortcut icon" href="storage/favicon.png">
 
     <title>Thông tin tuyển sinh THCS - Meyschool Đoàn Thị Điểm</title>
-    <meta name="description" content="Thông tin tuyển sinh cấp Trung học cơ sở (THCS) năm học 2026-2027 tại Meyschool Đoàn Thị Điểm">
+    <meta name="description"
+        content="Thông tin tuyển sinh cấp Trung học cơ sở (THCS) năm học 2026-2027 tại Meyschool Đoàn Thị Điểm">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:site_name" content="The Olympia Schools">
     <meta property="og:title" content="Thông tin tuyển sinh THCS - Meyschool Đoàn Thị Điểm">
-    <meta property="og:description" content="Thông tin tuyển sinh cấp Trung học cơ sở (THCS) năm học 2026-2027 tại Meyschool Đoàn Thị Điểm">
+    <meta property="og:description"
+        content="Thông tin tuyển sinh cấp Trung học cơ sở (THCS) năm học 2026-2027 tại Meyschool Đoàn Thị Điểm">
     <meta property="og:url" content="thong-tin-tuyen-sinh-thcs.html">
     <meta property="og:type" content="article">
     <meta name="twitter:title" content="Thông tin tuyển sinh THCS - Meyschool Đoàn Thị Điểm">
-    <meta name="twitter:description" content="Thông tin tuyển sinh cấp Trung học cơ sở (THCS) năm học 2026-2027 tại Meyschool Đoàn Thị Điểm">
+    <meta name="twitter:description"
+        content="Thông tin tuyển sinh cấp Trung học cơ sở (THCS) năm học 2026-2027 tại Meyschool Đoàn Thị Điểm">
 
     <link media="all" type="text/css" rel="stylesheet"
         href="vendor/core/plugins/language/css/language-publice209.css?v=1.0.0">
@@ -597,6 +600,107 @@
             border-color: rgba(67, 155, 212, 0.25);
         }
 
+
+        .hero-card {
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: 0 20px 38px rgba(23, 52, 93, .1);
+            background: rgba(255, 255, 255, .9);
+            padding: 20px;
+        }
+
+        .tq-footer-consult-wrap {
+            position: relative;
+            z-index: 3;
+            margin-top: 20px;
+            margin-bottom: -64px;
+        }
+
+        .tq-footer-consult-inner {
+            width: min(1120px, 92vw);
+            margin: 0 auto;
+        }
+
+        .tq-footer-consult-card {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            padding: 40px clamp(24px, 4vw, 52px);
+            background: linear-gradient(130deg, rgba(31, 108, 170, 0.9), rgba(77, 176, 228, 0.82)), url('assets/img/tuyensinh/tuyển sinh chung.jpg') center/cover no-repeat;
+            box-shadow: 0 22px 48px rgba(23, 63, 104, 0.35);
+            color: #fff;
+        }
+
+        .tq-footer-consult-content {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) auto;
+            gap: 22px;
+            align-items: end;
+        }
+
+        .tq-footer-consult-text small {
+            display: inline-block;
+            margin-bottom: 8px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.94);
+        }
+
+        .tq-footer-consult-text h3 {
+            font-family: 'Garamond', serif;
+            font-size: clamp(42px, 5vw, 64px);
+            line-height: 0.95;
+            margin: 0;
+            color: #fff;
+            text-transform: none;
+        }
+
+        .tq-footer-consult-text p {
+            margin: 14px 0 0;
+            max-width: 760px;
+            font-size: 24px;
+            line-height: 1.35;
+            color: rgba(255, 255, 255, 0.96);
+        }
+
+        .tq-footer-consult-actions {
+            text-align: right;
+        }
+
+        .tq-footer-consult-btn {
+            display: inline-block;
+            min-width: 188px;
+            padding: 13px 28px;
+            border-radius: 999px;
+            background: #fff;
+            color: #1d4f87;
+            font-weight: 700;
+            font-size: 17px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .tq-footer-consult-note {
+            margin-top: 10px;
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.88);
+        }
+
+        #footer,
+        #footer .footer {
+            margin-top: 0;
+        }
+
+        #footer {
+            padding-top: 32px;
+        }
+
+        #footer .footer {
+            padding-top: 96px;
+        }
+
         @media (max-width: 1180px) {
             .ad-hero-inner {
                 grid-template-columns: 1fr;
@@ -639,6 +743,28 @@
         @media (max-width: 768px) {
             .ad-wide {
                 width: min(94vw, 1520px);
+            }
+
+            .tq-footer-consult-wrap {
+                margin-bottom: -40px;
+            }
+
+            .tq-footer-consult-content {
+                grid-template-columns: 1fr;
+                align-items: start;
+                gap: 14px;
+            }
+
+            .tq-footer-consult-actions {
+                text-align: left;
+            }
+
+            .tq-footer-consult-text p {
+                font-size: 18px;
+            }
+
+            #footer .footer {
+                padding-top: 74px;
             }
 
             .ad-hero {
@@ -703,6 +829,31 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        .ts-banner-slider {
+            position: relative;
+            padding-top: 68px;
+        }
+
+        .ts-banner-slider img {
+            width: 100%;
+            display: block;
+        }
+
+        .ts-banner-slider .rcl-prev,
+        .ts-banner-slider .rcl-next {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .ts-banner-slider .rcl-prev {
+            left: 15px;
+            transform: translateY(-50%) scaleX(-1);
+        }
+
+        .ts-banner-slider .rcl-next {
+            right: 15px;
+        }
     </style>
 </head>
 
@@ -711,207 +862,52 @@
     <div class="overlay_mark_search" style="display:none;"></div>
 
     <main class="body-content ad-page">
-        <section class="ad-hero">
-            <div class="ad-wide" data-aos="fade-up">
-                <div class="ad-hero-inner">
-                    <div>
-                        <ol class="breadcrumb ad-breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.php">Trang chủ</a></li>
-                            <li class="breadcrumb-item"><a href="tuyen-dung.php">Tuyển sinh</a></li>
-                            <li class="breadcrumb-item active">Tuyển sinh THCS</li>
-                        </ol>
+        <section class="ts-banner-slider">
+            <div class="ts-banner-slide"><img src="assets/img/tuyensinh/banner5.jpg"
+                    alt="Mey School Đoàn Thị Điểm Phú Quốc Tuyển Sinh 2026-2027"></div>
+            <div class="ts-banner-slide"><img src="assets/img/tuyensinh/banner4.jpg"
+                    alt="Câu Lạc Bộ Tuổi Thơ - Hành Trang Vào Lớp 1"></div>
+        </section>
 
-                        <h1>Thông tin tuyển sinh THCS 2026-2027</h1>
-                        <p>Meyschool Đoàn Thị Điểm là điểm đến lý tưởng cho học sinh THCS với chương trình song ngữ chất lượng cao, môi trường học tập hiện đại và định hướng phát triển toàn diện về năng lực lẫn phẩm chất.</p>
-
-                        <div class="ad-highlight-strip">
-                            <span class="ad-highlight-item">Song ngữ học thuật</span>
-                            <span class="ad-highlight-item">Phát triển kỹ năng sống</span>
-                            <span class="ad-highlight-item">Lộ trình vào THPT vững chắc</span>
-                        </div>
+        <section class="ad-content">
+            <div class="ad-wide">
+                <div class="hero-card" data-aos="fade-up">
+                    <div class="hero-photo"
+                        style="position: relative; width: 100%; height: auto; min-height: 0; border: 0; box-shadow: none; animation: none; transform: none;">
+                        <img src="assets/img/tuyensinh/tuyển sinh chung.jpg" alt="Meyschool Đoàn Thị Điểm Tuyển Sinh 2026-2027" style="width:100%;display:block;">
                     </div>
-
-                    <div class="ad-hero-visual">
-                        <span class="hero-pill">Admissions 2026</span>
-                        <div class="hero-photo main">
-                            <img src="storage/banner/trung-hoc.jpg" alt="Học sinh THCS tại Meyschool Đoàn Thị Điểm">
-                        </div>
-                        <div class="hero-photo sub-1">
-                            <img src="olympia/images/0208.jpg" alt="Hoạt động học tập và ngoại khóa">
-                        </div>
-                        <div class="hero-photo sub-2">
-                            <img src="olympia/images/noibat_4.jpg" alt="Không gian thư viện và học tập">
-                        </div>
+                </div>
+                <div class="hero-card" data-aos="fade-up">
+                    <div class="hero-photo"
+                        style="position: relative; width: 100%; height: auto; min-height: 0; border: 0; box-shadow: none; animation: none; transform: none;">
+                        <img src="assets/img/tuyensinh/thông tin tuyển sinh.jpg" alt="Thông tin tuyển sinh năm học 2026-2027" style="width:100%;display:block;">
+                    </div>
+                </div>
+                <div class="hero-card" data-aos="fade-up">
+                    <div class="hero-photo"
+                        style="position: relative; width: 100%; height: auto; min-height: 0; border: 0; box-shadow: none; animation: none; transform: none;">
+                        <img src="assets/img/tuyensinh/thông tin tuyển sinh 2.jpg" alt="Hướng dẫn đăng ký tuyển sinh" style="width:100%;display:block;">
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="ad-content">
-            <div class="ad-wide">
-                <div class="ad-intro" data-aos="fade-up">
-                    <h2 class="font-garamond-bold">Tuyển sinh cấp THCS năm học 2026-2027</h2>
-                    <p>Chương trình THCS tại Meyschool Đoàn Thị Điểm giúp học sinh xây nền tảng học thuật chắc chắn, tăng cường tiếng Anh và tư duy phản biện, đồng thời phát triển năng lực cá nhân qua các dự án trải nghiệm thực tế.</p>
-                    <div class="ad-mini-gallery">
-                        <figure>
-                            <img src="olympia/images/0201.jpg" alt="Học sinh THCS học tập theo dự án">
-                            <figcaption>Dự án học tập liên môn</figcaption>
-                        </figure>
-                        <figure>
-                            <img src="olympia/images/0206.jpg" alt="Hoạt động nhóm của học sinh THCS">
-                            <figcaption>Kỹ năng hợp tác và lãnh đạo</figcaption>
-                        </figure>
-                        <figure>
-                            <img src="olympia/images/0208.jpg" alt="Hoạt động ngoại khóa THCS">
-                            <figcaption>Hoạt động ngoại khóa đa dạng</figcaption>
-                        </figure>
-                        <figure>
-                            <img src="storage/olympia-schools-1.jpg" alt="Khuôn viên học tập hiện đại">
-                            <figcaption>Môi trường học tập hiện đại</figcaption>
-                        </figure>
-                    </div>
-                </div>
-
-                <div class="ad-grid">
-                    <div class="ad-main">
-                        <div class="admission-info-grid" data-aos="fade-up">
-                            <div class="admission-card">
-                                <h3 class="font-garamond-bold">Đối tượng tuyển sinh</h3>
-                                <ul>
-                                    <li><strong>Học sinh lớp 6:</strong> Học sinh tốt nghiệp Tiểu học năm 2026</li>
-                                    <li><strong>Học sinh chuyển cấp:</strong> Học sinh lớp 7-9 muốn chuyển trường</li>
-                                    <li><strong>Học sinh song ngữ:</strong> Ưu tiên học sinh có chứng chỉ tiếng Anh quốc tế</li>
-                                    <li><strong>Học sinh năng khiếu:</strong> Có thành tích trong các kỳ thi học sinh giỏi</li>
-                                </ul>
+        <section id="lien-he" class="tq-footer-consult-wrap">
+            <div class="tq-footer-consult-inner">
+                <div class="tq-footer-consult-card" data-aos="zoom-in-up">
+                    <div class="tq-footer-consult-content">
+                        <div class="tq-footer-consult-text">
+                            <div>
+                                <small>Tuyển sinh 2026 - 2027</small>
+                                <h3>Đăng ký tư vấn</h3>
                             </div>
-
-                            <div class="admission-card">
-                                <h3 class="font-garamond-bold">Thời gian tuyển sinh</h3>
-                                <ul>
-                                    <li><strong>Đợt 1:</strong> Từ 01/03/2026 đến 30/04/2026</li>
-                                    <li><strong>Đợt 2:</strong> Từ 01/05/2026 đến 30/06/2026</li>
-                                    <li><strong>Đợt bổ sung:</strong> Từ 01/07/2026 đến 15/08/2026 (nếu còn chỉ tiêu)</li>
-                                    <li><strong>Khai giảng:</strong> 05/09/2026</li>
-                                </ul>
-                            </div>
-
-                            <div class="admission-card">
-                                <h3 class="font-garamond-bold">Hồ sơ đăng ký</h3>
-                                <ul>
-                                    <li>Đơn đăng ký tuyển sinh (theo mẫu của nhà trường)</li>
-                                    <li>Bản sao giấy khai sinh (có công chứng)</li>
-                                    <li>Học bạ và giấy chứng nhận tốt nghiệp cấp dưới</li>
-                                    <li>02 ảnh 3x4 (chụp trong vòng 6 tháng)</li>
-                                </ul>
-                            </div>
-
-                            <div class="admission-card">
-                                <h3 class="font-garamond-bold">Học phí & Chính sách</h3>
-                                <ul>
-                                    <li><strong>Học phí cơ bản:</strong> 95,000,000 VNĐ/năm học</li>
-                                    <li><strong>Phí bán trú:</strong> 18,000,000 VNĐ/năm học</li>
-                                    <li>Học bổng toàn phần cho thủ khoa đầu vào</li>
-                                    <li>Giảm 50% học phí cho học sinh giỏi cấp thành phố</li>
-                                </ul>
-                            </div>
+                            <p>Liên hệ ngay để được tư vấn chi tiết lộ trình học phù hợp cho con.</p>
                         </div>
-
-                        <div class="process-section" data-aos="fade-up">
-                            <h3 class="font-garamond-bold">Quy trình tuyển sinh THCS</h3>
-                            <div class="process-steps">
-                                <div class="process-step">
-                                    <div class="step-number">1</div>
-                                    <div class="step-title">Đăng ký</div>
-                                    <div class="step-desc">Nộp hồ sơ đăng ký trực tiếp hoặc trực tuyến.</div>
-                                </div>
-                                <div class="process-step">
-                                    <div class="step-number">2</div>
-                                    <div class="step-title">Đánh giá năng lực</div>
-                                    <div class="step-desc">Thi đánh giá Toán, Tiếng Việt và Tiếng Anh.</div>
-                                </div>
-                                <div class="process-step">
-                                    <div class="step-number">3</div>
-                                    <div class="step-title">Phỏng vấn</div>
-                                    <div class="step-desc">Phỏng vấn học sinh và trao đổi cùng phụ huynh.</div>
-                                </div>
-                                <div class="process-step">
-                                    <div class="step-number">4</div>
-                                    <div class="step-title">Nhập học</div>
-                                    <div class="step-desc">Nhận kết quả và hoàn tất thủ tục nhập học.</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="ad-gallery-card" data-aos="fade-up">
-                            <h3 class="font-garamond-bold">Khoảnh khắc học tập tại Meyschool</h3>
-                            <div class="ad-gallery">
-                                <figure class="tall">
-                                    <img src="storage/banner/trung-hoc.jpg" alt="Học sinh THCS trong giờ học">
-                                    <figcaption>Môi trường THCS năng động và tích cực</figcaption>
-                                </figure>
-                                <figure class="small">
-                                    <img src="olympia/images/0201.jpg" alt="Học sinh trình bày dự án">
-                                    <figcaption>Dự án học tập theo nhóm</figcaption>
-                                </figure>
-                                <figure class="small">
-                                    <img src="olympia/images/0206.jpg" alt="Hoạt động kỹ năng mềm">
-                                    <figcaption>Rèn luyện kỹ năng mềm</figcaption>
-                                </figure>
-                                <figure class="wide">
-                                    <img src="storage/olympia-schools-1.jpg" alt="Toàn cảnh cơ sở trường">
-                                    <figcaption>Cơ sở vật chất hỗ trợ học tập và phát triển toàn diện</figcaption>
-                                </figure>
-                                <figure class="small">
-                                    <img src="olympia/images/0208.jpg" alt="Hoạt động ngoại khóa học sinh">
-                                    <figcaption>Ngoại khóa đa trải nghiệm</figcaption>
-                                </figure>
-                                <figure class="small">
-                                    <img src="olympia/images/noibat_4.jpg" alt="Không gian thư viện">
-                                    <figcaption>Thư viện và không gian tự học</figcaption>
-                                </figure>
-                            </div>
+                        <div class="tq-footer-consult-actions">
+                            <a href="lien-he.php" class="tq-footer-consult-btn">Liên hệ ngay</a>
+                            <div class="tq-footer-consult-note">Phản hồi trong vòng 24 giờ làm việc</div>
                         </div>
                     </div>
-
-                    <aside class="ad-side" data-aos="fade-up" data-aos-delay="120">
-                        <div class="side-card">
-                            <h3 class="font-garamond-bold">Danh mục tuyển sinh</h3>
-                            <ul>
-                                <li><a href="thong-tin-tuyen-sinh-tieu-hoc.php">Tuyển sinh Tiểu học</a></li>
-                                <li><a href="thong-tin-tuyen-sinh-thcs.php">Tuyển sinh THCS</a></li>
-                                <li><a href="uu-dai-tuyen-sinh.php">Ưu đãi tuyển sinh</a></li>
-                                <li><a href="hoc-bong-2026-2027.php">Học bổng 2026-2027</a></li>
-                                <li><a href="faq.php">Câu hỏi thường gặp</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="side-card ad-contact">
-                            <h3 class="font-garamond-bold">Liên hệ tuyển sinh</h3>
-                            <div class="contact-item">
-                                <b>Hotline</b>
-                                <span>0934 525 889</span>
-                            </div>
-                            <div class="contact-item">
-                                <b>Email</b>
-                                <span>tuyensinh@doanthidiem.edu.vn</span>
-                            </div>
-                            <div class="contact-item" style="margin-bottom: 0;">
-                                <b>Địa chỉ</b>
-                                <span>KĐT Trung Văn, Nam Từ Liêm, Hà Nội</span>
-                            </div>
-
-                            <div class="btn-row">
-                                <a href="dang-ky-tu-van.php" class="btn-ad btn-ad-primary">Đăng ký tư vấn</a>
-                                <a href="dang-ky-tham-quan.php" class="btn-ad btn-ad-light">Đăng ký tham quan</a>
-                            </div>
-                        </div>
-
-                        <div class="side-card">
-                            <h3 class="font-garamond-bold">Giờ làm việc</h3>
-                            <p>Thứ 2 - Thứ 7: 8:00 - 17:00</p>
-                            <p>Đội ngũ tuyển sinh luôn sẵn sàng hỗ trợ phụ huynh qua hotline và tư vấn trực tiếp tại trường.</p>
-                        </div>
-                    </aside>
                 </div>
             </div>
         </section>
@@ -922,6 +918,21 @@
     <script type="text/javascript" src="olympia/js/jquery.toast.min.js"></script>
     <script type="text/javascript" src="olympia/js/jquery.validate.min.js"></script>
     <script src="olympia/js/main.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".ts-banner-slider").slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                prevArrow: '<div class="rcl-prev"><img src="olympia/images/button-1-3.svg"></div>',
+                nextArrow: '<div class="rcl-next"><img src="olympia/images/button-1-3.svg"></div>',
+                infinite: true,
+                autoplay: true,
+                autoplaySpeed: 5000,
+                fade: true,
+                cssEase: 'linear'
+            });
+        });
+    </script>
 </body>
 
 </html>

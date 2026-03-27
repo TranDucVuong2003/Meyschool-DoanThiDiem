@@ -63,6 +63,7 @@
 
         .section {
             padding: 36px 0;
+            margin-bottom: 170px;
         }
 
         .kicker {
@@ -99,12 +100,12 @@
             display: grid;
             grid-template-columns: 1.15fr .85fr;
             gap: 24px;
-            align-items: end;
+            align-items: start;
         }
 
         .hero-copy {
             color: #fff;
-            padding: 42px 0 8px;
+            padding: 12px 0 8px;
         }
 
         .hero-breadcrumb {
@@ -171,6 +172,152 @@
             font-size: 17px;
             line-height: 1.8;
             color: rgba(255, 255, 255, .88);
+        }
+
+
+        .ad-hero {
+            position: relative;
+            overflow: hidden;
+            padding: 96px 0 58px;
+            background: linear-gradient(130deg, rgba(67, 155, 212, 0.95) 0%, rgba(77, 176, 228, 0.9) 68%, rgba(77, 176, 228, 0.84) 100%), url('assets/img/tuyensinh/tuyển sinh chung.jpg') center/cover no-repeat;
+        }
+
+        .ad-hero::before,
+        .ad-hero::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .ad-hero::before {
+            width: 360px;
+            height: 360px;
+            right: -130px;
+            top: -120px;
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .ad-hero::after {
+            width: 260px;
+            height: 260px;
+            left: -90px;
+            bottom: -110px;
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        .ad-hero-inner {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+            gap: 24px;
+            align-items: start;
+        }
+
+        .ad-breadcrumb {
+            margin: 0 0 14px;
+            display: inline-flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 999px;
+            padding: 8px 16px;
+            position: static !important;
+        }
+
+        .ad-breadcrumb li,
+        .ad-breadcrumb li a {
+            color: #fff;
+            font-size: 13px;
+            position: static !important;
+        }
+
+        .ad-hero h1 {
+            margin: 0;
+            color: #fff;
+            font-size: clamp(34px, 4.2vw, 58px);
+            line-height: 1.08;
+            font-family: 'Garamond', serif;
+            max-width: 980px;
+        }
+
+        .ad-hero-visual {
+            position: relative;
+            min-height: 320px;
+        }
+
+        .ad-photo {
+            position: absolute;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 16px 30px rgba(20, 61, 95, 0.35);
+            border: 2px solid rgba(255, 255, 255, 0.45);
+            animation: heroFloat 6s ease-in-out infinite;
+        }
+
+        .ad-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .ad-photo.main {
+            width: 270px;
+            height: 210px;
+            right: 20px;
+            top: 18px;
+            z-index: 3;
+        }
+
+        .ad-photo.sub-1 {
+            width: 210px;
+            height: 160px;
+            left: 18px;
+            bottom: 24px;
+            transform: rotate(-6deg);
+            z-index: 2;
+            animation-delay: 1.1s;
+        }
+
+        .ad-photo.sub-2 {
+            width: 160px;
+            height: 120px;
+            right: 12px;
+            bottom: 8px;
+            transform: rotate(7deg);
+            z-index: 4;
+            animation-delay: 2s;
+        }
+
+        .hero-pill {
+            position: absolute;
+            top: -4px;
+            left: 0;
+            z-index: 5;
+            background: rgba(255, 255, 255, 0.9);
+            color: #2b7eb6;
+            border-radius: 999px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.35px;
+            text-transform: uppercase;
+            padding: 8px 12px;
+            box-shadow: 0 10px 18px rgba(20, 61, 95, 0.22);
+        }
+
+        @keyframes heroFloat {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
         }
 
         .hero-actions {
@@ -692,11 +839,20 @@
         @media (max-width: 1100px) {
 
             .hero-grid,
+            .ad-hero-inner,
             .split,
             .capability-wrap,
             .policy-grid,
             .gallery {
                 grid-template-columns: 1fr;
+            }
+
+            .ad-hero {
+                padding: 84px 0 54px;
+            }
+
+            .ad-hero-visual {
+                margin-top: 18px;
             }
 
             .story-grid {
@@ -713,6 +869,31 @@
             .hero::before {
                 height: 600px;
                 border-radius: 0 0 28px 28px;
+            }
+
+            .ad-hero {
+                padding: 65px 0 46px;
+            }
+
+            .ad-hero-visual {
+                min-height: 280px;
+            }
+
+            .ad-photo.main {
+                width: 240px;
+                height: 190px;
+                right: 8px;
+            }
+
+            .ad-photo.sub-1 {
+                width: 180px;
+                height: 138px;
+                left: 8px;
+            }
+
+            .ad-photo.sub-2 {
+                width: 136px;
+                height: 100px;
             }
 
             .hero-mini,
@@ -787,6 +968,31 @@
                 min-height: 300px;
             }
         }
+
+        .ts-banner-slider {
+            position: relative;
+            padding-top: 18px;
+        }
+
+        .ts-banner-slider img {
+            width: 100%;
+            display: block;
+        }
+
+        .ts-banner-slider .rcl-prev,
+        .ts-banner-slider .rcl-next {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .ts-banner-slider .rcl-prev {
+            left: 15px;
+            transform: translateY(-50%) scaleX(-1);
+        }
+
+        .ts-banner-slider .rcl-next {
+            right: 15px;
+        }
     </style>
 </head>
 
@@ -795,271 +1001,33 @@
     <div class="overlay_mark_search" style="display:none;"></div>
 
     <main class="body-content primary-page">
-        <section class="hero">
-            <div class="wrap hero-grid">
-                <div class="hero-copy" data-aos="fade-up">
-                    <ol class="breadcrumb hero-breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.php">Trang chủ</a></li>
-                        <li class="breadcrumb-item"><a href="thong-tin-tuyen-sinh-tieu-hoc.php">Tuyển sinh 2026-2027</a></li>
-                        <li class="breadcrumb-item active">Khối Tiểu học</li>
-                    </ol>
-                    <h1>Một khởi đầu đẹp, đủ ấm áp để trẻ tự tin lớn lên.</h1>
-                    <p>Chương trình Tiểu học tại Meyschool Đoàn Thị Điểm chú trọng nền nếp học tập, năng lực tự học, kỹ
-                        năng sống và sự đồng hành chặt chẽ với gia đình. Thông tin tuyển sinh được trình bày rõ ràng để
-                        phụ huynh dễ theo dõi và đăng ký.</p>
-                    <div class="hero-actions">
-                        <a class="btn-pill btn-gold" href="dang-ky-tu-van.php">Đăng ký tư vấn</a>
-                        <a class="btn-pill btn-outline" href="dang-ky-tham-quan.php">Đăng ký tham quan</a>
-                    </div>
-                </div>
+        <section class="ts-banner-slider">
+            <div class="ts-banner-slide"><img src="assets/img/tuyensinh/banner5.jpg"
+                    alt="Mey School Đoàn Thị Điểm Phú Quốc Tuyển Sinh 2026-2027"></div>
+            <div class="ts-banner-slide"><img src="assets/img/tuyensinh/banner4.jpg"
+                    alt="Câu Lạc Bộ Tuổi Thơ - Hành Trang Vào Lớp 1"></div>
+        </section>
 
-                <div class="hero-card" data-aos="fade-left">
+        <section class="section">
+            <div class="wrap">
+                <div class="hero-card" data-aos="fade-up">
                     <div class="hero-photo">
-                        <img src="storage/banner/tieu-hoc.jpg" alt="Tuyển sinh Tiểu học">
-                    </div>
-                    <div class="hero-mini">
-                        <div><b>4</b><span>bước trong quy trình tuyển sinh</span></div>
-                        <div><b>1:1</b><span>tư vấn riêng cho từng gia đình</span></div>
-                        <div><b>2026</b><span>mùa tuyển sinh lớp 1 và chuyển cấp</span></div>
+                        <img src="assets/img/tuyensinh/tuyển sinh chung.jpg" alt="Meyschool Đoàn Thị Điểm Tuyển Sinh 2026-2027" style="width:100%;display:block;">
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <div class="wrap anchor-bar">
-            <nav class="anchor-inner">
-                <a href="#tam-nhin">Tầm nhìn</a>
-                <a href="#hanh-trinh">Một ngày ở trường</a>
-                <a href="#thong-tin">Thông tin</a>
-                <a href="#quy-trinh">Quy trình</a>
-                <a href="#ho-so">Hồ sơ</a>
-                <a href="#lien-he">Liên hệ</a>
-            </nav>
-        </div>
-
-        <section id="tam-nhin" class="section">
-            <div class="wrap split">
-                <div class="media" data-aos="fade-right">
-                    <img src="assets/img/Gemini_Generated_Image_ft1vwvft1vwvft1v.png" alt="Học sinh Tiểu học Meyschool">
+                <div class="hero-card" data-aos="fade-up">
+                    <div class="hero-photo">
+                        <img src="assets/img/tuyensinh/thông tin tuyển sinh.jpg" alt="Thông tin tuyển sinh năm học 2026-2027" style="width:100%;display:block;">
+                    </div>
                 </div>
-                <div class="quote" data-aos="fade-left">
-                    <span class="kicker">Thông điệp từ nhà trường</span>
-                    <h2>Mỗi em nhỏ đều cần một môi trường vừa có kỷ luật, vừa có sự dịu dàng.</h2>
-                    <p>Ở bậc Tiểu học, điều phụ huynh tìm kiếm không chỉ là chương trình học tốt mà còn là nơi con cảm
-                        thấy an toàn, được tôn trọng và được dẫn dắt mỗi ngày. Meyschool Đoàn Thị Điểm theo đuổi sự cân
-                        bằng giữa học thuật, trải nghiệm và phát triển nhân cách.</p>
-                    <p>Nhà trường xây dựng lộ trình học tập theo từng giai đoạn, giúp học sinh hình thành thói quen học
-                        chủ động, khả năng hợp tác và sự tự tin trong giao tiếp ngay từ những năm đầu.</p>
-                    <div class="signature"><strong>Meyschool Đoàn Thị Điểm</strong> Khối Tiểu học hướng tới một khởi đầu
-                        học tập nền nếp, hạnh phúc và bền vững.</div>
-                </div>
-            </div>
-        </section>
-
-        <section id="hanh-trinh" class="section">
-            <div class="wrap">
-                <div class="section-head" data-aos="fade-up">
-                    <span class="kicker">Trải nghiệm học đường</span>
-                    <h2>Một ngày học của học sinh Tiểu học được tổ chức nhịp nhàng và cân bằng.</h2>
-                    <p>Học sinh học tập theo dự án nhỏ, tăng cường vận động và phát triển kỹ năng xã hội. Gia đình luôn
-                        được cập nhật tiến bộ để đồng hành cùng con sát sao.</p>
-                </div>
-                <div class="story-grid">
-                    <article class="story" data-aos="fade-up">
-                        <img src="assets/img/banner/banner1.jpeg" alt="Buổi sáng học tập">
-                        <div class="story-copy">
-                            <span>Buổi sáng</span>
-                            <h3>Học bằng sự chủ động</h3>
-                            <p>Trẻ đặt câu hỏi, trình bày ý tưởng và học theo nhịp độ phù hợp với lứa tuổi.</p>
-                        </div>
-                    </article>
-                    <article class="story" data-aos="fade-up" data-aos-delay="120">
-                        <img src="olympia/images/0206.jpg" alt="Vận động và nghệ thuật">
-                        <div class="story-copy">
-                            <span>Giữa ngày</span>
-                            <h3>Nhịp sống có chuyển động</h3>
-                            <p>Âm nhạc, thể chất và hoạt động trải nghiệm giúp trẻ cân bằng cảm xúc.</p>
-                        </div>
-                    </article>
-                    <article class="story" data-aos="fade-up" data-aos-delay="240">
-                        <img src="assets/img/banner/banner3.jpeg" alt="Kết nối gia đình">
-                        <div class="story-copy">
-                            <span>Cuối ngày</span>
-                            <h3>Gia đình luôn đồng hành</h3>
-                            <p>Thông tin tiến bộ được phản hồi rõ ràng để phụ huynh theo sát hành trình học tập của con.
-                            </p>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="thong-tin" class="section">
-            <div class="wrap">
-                <div class="section-head" data-aos="fade-up">
-                    <span class="kicker">Thông tin cốt lõi</span>
-                    <h2>Thông tin tuyển sinh được trình bày ngắn gọn, minh bạch và dễ tra cứu.</h2>
-                    <p>Phụ huynh có thể xem nhanh đối tượng tuyển sinh, mốc thời gian, hồ sơ cần chuẩn bị và chính sách
-                        học phí trong cùng một khu vực.</p>
-                </div>
-                <div class="info-grid">
-                    <article class="info-card" data-aos="fade-up">
-                        <em>01</em>
-                        <h3>Đối tượng</h3>
-                        <ul>
-                            <li>Học sinh vào lớp 1, sinh năm 2019, đủ 6 tuổi trong năm học 2026-2027.</li>
-                            <li>Học sinh lớp 2-5 có nhu cầu chuyển cấp, chuyển trường.</li>
-                            <li>Nhà trường tư vấn riêng theo từng nhóm học sinh.</li>
-                        </ul>
-                    </article>
-                    <article class="info-card" data-aos="fade-up" data-aos-delay="90">
-                        <em>02</em>
-                        <h3>Thời gian</h3>
-                        <ul>
-                            <li>Đợt 1: 15/02/2026 - 30/03/2026.</li>
-                            <li>Đợt 2: 01/04/2026 - 30/06/2026.</li>
-                            <li>Đợt bổ sung: 01/07/2026 - 15/08/2026 nếu còn chỉ tiêu.</li>
-                        </ul>
-                    </article>
-                    <article class="info-card" data-aos="fade-up" data-aos-delay="180">
-                        <em>03</em>
-                        <h3>Hồ sơ</h3>
-                        <ul>
-                            <li>Đơn đăng ký theo mẫu của nhà trường.</li>
-                            <li>Bản sao giấy khai sinh và giấy tờ cư trú hợp lệ.</li>
-                            <li>02 ảnh 3x4 và học bạ gần nhất nếu chuyển cấp.</li>
-                        </ul>
-                    </article>
-                    <article class="info-card" data-aos="fade-up" data-aos-delay="270">
-                        <em>04</em>
-                        <h3>Học phí</h3>
-                        <ul>
-                            <li>Học phí cơ bản: 85.000.000 VND/năm học.</li>
-                            <li>Phí bán trú: 15.000.000 VND/năm học.</li>
-                            <li>Giảm 5% cho anh chị em và 10% khi đóng theo năm.</li>
-                        </ul>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="wrap capability-wrap">
-                <div class="media" data-aos="fade-right">
-                    <img src="assets/img/banner/banner2.jpeg" alt="Năng lực học sinh tiểu học">
-                </div>
-                <div class="capability-grid">
-                    <article class="capability" data-aos="fade-up">
-                        <span class="capability-label">Năng lực 01</span>
-                        <h3>Tự học có hướng dẫn</h3>
-                        <p>Học sinh được rèn thói quen chuẩn bị bài, hoàn thành nhiệm vụ và chủ động hơn từng ngày.</p>
-                    </article>
-                    <article class="capability" data-aos="fade-up" data-aos-delay="90">
-                        <span class="capability-label">Năng lực 02</span>
-                        <h3>Ngôn ngữ và biểu đạt</h3>
-                        <p>Khả năng nói, viết và trình bày được nuôi dưỡng qua nhiều hoạt động học tập nhỏ.</p>
-                    </article>
-                    <article class="capability" data-aos="fade-up" data-aos-delay="180">
-                        <span class="capability-label">Năng lực 03</span>
-                        <h3>Cân bằng cảm xúc</h3>
-                        <p>Không gian học tập an toàn tâm lý giúp trẻ cảm thấy được lắng nghe và tôn trọng.</p>
-                    </article>
-                    <article class="capability" data-aos="fade-up" data-aos-delay="270">
-                        <span class="capability-label">Năng lực 04</span>
-                        <h3>Kết nối với đời sống</h3>
-                        <p>Dự án và trải nghiệm giúp trẻ hiểu rằng việc học luôn gắn với thế giới thực.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="quy-trinh" class="section">
-            <div class="wrap">
-                <div class="section-head" data-aos="fade-up">
-                    <span class="kicker">Quy trình tuyển sinh</span>
-                    <h2>Lộ trình ngắn gọn, minh bạch và thân thiện với phụ huynh.</h2>
-                    <p>Quy trình gồm 4 bước rõ ràng, có hướng dẫn chi tiết ở từng giai đoạn.</p>
-                </div>
-                <div class="steps">
-                    <article class="step" data-aos="fade-up">
-                        <div class="step-number">1</div>
-                        <h3>Đăng ký tư vấn</h3>
-                        <p>Phụ huynh điền form online hoặc gọi hotline để nhận tư vấn phù hợp.</p>
-                    </article>
-                    <article class="step" data-aos="fade-up" data-aos-delay="90">
-                        <div class="step-number">2</div>
-                        <h3>Nộp hồ sơ</h3>
-                        <p>Nhà trường tiếp nhận hồ sơ cơ bản và hẹn lịch trao đổi hoặc đánh giá.</p>
-                    </article>
-                    <article class="step" data-aos="fade-up" data-aos-delay="180">
-                        <div class="step-number">3</div>
-                        <h3>Đánh giá phù hợp</h3>
-                        <p>Học sinh tham gia buổi làm quen, quan sát năng lực và trao đổi cùng phụ huynh.</p>
-                    </article>
-                    <article class="step" data-aos="fade-up" data-aos-delay="270">
-                        <div class="step-number">4</div>
-                        <h3>Hoàn tất nhập học</h3>
-                        <p>Gia đình nhận thông báo và hoàn thiện các bước thủ tục nhập học.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="ho-so" class="section">
-            <div class="wrap policy-grid">
-                <div class="policy-box" data-aos="fade-right">
-                    <span class="kicker">Gia đình cần chuẩn bị</span>
-                    <h3>Hồ sơ tuyển sinh</h3>
-                    <ul>
-                        <li>Đơn đăng ký tuyển sinh theo biểu mẫu của nhà trường.</li>
-                        <li>Bản sao giấy khai sinh có công chứng hoặc đối chiếu bản gốc.</li>
-                        <li>Giấy tờ cư trú của học sinh và phụ huynh.</li>
-                        <li>02 ảnh 3x4 chụp trong 6 tháng gần nhất.</li>
-                        <li>Học bạ hoặc nhận xét học tập đối với học sinh chuyển cấp.</li>
-                    </ul>
-                </div>
-                <div class="policy-box" data-aos="fade-left">
-                    <span class="kicker">Thông tin tài chính</span>
-                    <h3>Chính sách học phí</h3>
-                    <div class="policy-table">
-                        <div class="policy-row"><strong>Học phí</strong><span>85.000.000 VND/năm học cho chương trình cơ
-                                bản.</span></div>
-                        <div class="policy-row"><strong>Bán trú</strong><span>15.000.000 VND/năm học, áp dụng theo chính
-                                sách hiện hành.</span></div>
-                        <div class="policy-row"><strong>Ưu đãi</strong><span>Giảm 5% cho anh chị em cùng học và giảm 10%
-                                khi đóng học phí cả năm.</span></div>
-                        <div class="policy-row"><strong>Hỗ trợ</strong><span>Bộ phận tuyển sinh tư vấn trực tiếp các
-                                khoản
-                                phí và lộ trình thanh toán.</span></div>
+                <div class="hero-card" data-aos="fade-up">
+                    <div class="hero-photo">
+                        <img src="assets/img/tuyensinh/thông tin tuyển sinh 2.jpg" alt="Hướng dẫn đăng ký tuyển sinh" style="width:100%;display:block;">
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section">
-            <div class="wrap">
-                <div class="section-head" data-aos="fade-up">
-                    <span class="kicker">Không khí học đường</span>
-                    <h2>Hình ảnh lớp học và hoạt động thực tế của khối Tiểu học.</h2>
-                    <p>Phụ huynh có thể tham khảo thêm các khoảnh khắc học tập, vận động và trải nghiệm của học sinh tại
-                        trường.
-                    </p>
-                </div>
-                <div class="gallery">
-                    <div class="gallery-main">
-                        <div class="card" data-aos="fade-right"><img src="assets/img/banner/banner3.jpeg"
-                                alt="Hoạt động tại trường"></div>
-                    </div>
-                    <div class="gallery-stack">
-                        <div class="card" data-aos="fade-left"><img src="olympia/images/0201.jpg" alt="Lớp học"></div>
-                        <div class="card" data-aos="fade-up" data-aos-delay="80"><img src="olympia/images/0202.jpg"
-                                alt="Vận động"></div>
-                        <div class="card" data-aos="fade-up" data-aos-delay="160"><img src="olympia/images/0208.jpg"
-                                alt="Trải nghiệm"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <!-- section CTA đăng ký tư vấn -->
         <section id="lien-he" class="tq-footer-consult-wrap">
@@ -1088,6 +1056,21 @@
     <script type="text/javascript" src="olympia/js/jquery.toast.min.js"></script>
     <script type="text/javascript" src="olympia/js/jquery.validate.min.js"></script>
     <script src="olympia/js/main.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".ts-banner-slider").slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                prevArrow: '<div class="rcl-prev"><img src="olympia/images/button-1-3.svg"></div>',
+                nextArrow: '<div class="rcl-next"><img src="olympia/images/button-1-3.svg"></div>',
+                infinite: true,
+                autoplay: true,
+                autoplaySpeed: 5000,
+                fade: true,
+                cssEase: 'linear'
+            });
+        });
+    </script>
     <script>
         AOS.init({
             once: true,

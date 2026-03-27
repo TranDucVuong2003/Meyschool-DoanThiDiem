@@ -163,23 +163,11 @@
             padding-top: 70px !important;
         }
 
-        .slider-title-box {
-            bottom: 14px;
-            right: 12px;
-        }
-
-        .banner-cta {
-            flex-direction: column;
-        }
-
-        .banner-cta a {
-            min-width: 0;
-            border-right: none;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .banner-cta a:last-child {
-            border-bottom: none;
+        /* Ẩn CTA trên banner khi ở mobile */
+        .slider-title-box,
+        .banner-cta,
+        .banner-cta-fixed {
+            display: none !important;
         }
     }
 
@@ -344,43 +332,20 @@
             </a>
         </div> -->
 
-        <!-- Section: Lời chào của Hiệu Trưởng -->
+        <!-- Section: Clip giới thiệu về trường -->
         <section id="principal-welcome" class="show-on-scroll home-page">
-            <div class="container">
+            <div class="container-fluid" style="padding: 0 40px;">
                 <div class="principal-welcome-wrapper" style="padding: 60px 0;">
-                    <div class="row flex-center-between">
-                        <div class="col-md-5">
-                            <div class="principal-image text-center">
-                                <img src="assets/img/Gemini_Generated_Image_ft1vwvft1vwvft1v.png" alt="Hiệu Trưởng"
-                                    style="border-radius: 20px; box-shadow: 0 10px 30px rgba(71, 24, 115, 0.2); max-width: 100%;">
-                                <h4 class="font-garamond-bold color-471873" style="margin-top: 20px; font-size: 24px;">
-                                    Bà Nguyễn Thị Hương</h4>
-                                <p class="font-avenir-regular color-3a" style="font-size: 14px;">Hiệu Trưởng The
-                                    Meyschool</p>
-                            </div>
-                        </div>
-                        <div class="col-md-7">
-                            <div class="principal-message" style="padding-left: 40px;">
-                                <h2 class="font-garamond-bold color-471873"
-                                    style="font-size: 42px; margin-bottom: 30px;">Lời chào của Hiệu Trưởng</h2>
-                                <div class="welcome-content font-avenir-regular color-3a"
-                                    style="font-size: 16px; line-height: 1.8; text-align: justify;">
-                                    <p style="margin-bottom: 20px;">Kính thưa quý phụ huynh và các em học sinh thân mến,
-                                    </p>
-                                    <p style="margin-bottom: 20px;">Thay mặt cho toàn thể cán bộ, giáo viên và nhân viên
-                                        của Trường Phổ thông liên cấp Meyschool, tôi xin gửi lời chào trân trọng và
-                                        nhiệt liệt nhất đến quý vị.</p>
-                                    <p style="margin-bottom: 20px;">Với gần 20 năm phát triển, Meyschool tự hào là ngôi
-                                        trường song ngữ tiên phong tại Việt Nam trong việc tiếp cận và vận dụng các
-                                        phương pháp giáo dục hiện đại của thế giới. Chúng tôi luôn lấy học sinh làm
-                                        trung tâm, xây dựng môi trường học tập an toàn, thân thiện và sáng tạo.</p>
-                                    <p style="margin-bottom: 20px;">Tại Meyschool, mỗi học sinh đều được tôn trọng, được
-                                        khuyến khích phát triển tối đa tiềm năng của bản thân. Chúng tôi tin rằng giáo
-                                        dục không chỉ là truyền đạt kiến thức, mà còn là nuôi dưỡng nhân cách, kỹ năng
-                                        và định hướng tương lai cho các em.</p>
-                                    <p>Trân trọng kính chào!</p>
-                                </div>
-                            </div>
+                    <div class="principal-message text-center" style="max-width: 1400px; margin: 0 auto; width: 100%;">
+                        <h2 class="font-garamond-bold color-471873" style="font-size: 42px; margin-bottom: 30px;">
+                            Hiểu rõ hơn về trường học
+                        </h2>
+                        <div
+                            style="position: relative; width: 100%; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 16px; box-shadow: 0 10px 30px rgba(71, 24, 115, 0.2);">
+                            <iframe src="https://drive.google.com/file/d/15ooKZnmIPhTUymJR2lkzK9euVjBJQTs0/preview"
+                                title="Clip giới thiệu về trường Meyschool" allow="autoplay"
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+                                allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
@@ -1207,16 +1172,18 @@ body.popup-open {
 // Xóa localStorage để test (có thể comment dòng này sau khi test xong)
 localStorage.removeItem('tuyensinhPopupShown');
 
-// Hiện popup sau 10 giây khi DOM ready
+// Hiện popup sau 10 giây khi DOM ready, sau khi tắt thì 3 phút lại hiện lại
 document.addEventListener('DOMContentLoaded', function() {
-    setTimeout(function() {
+    function showPopup() {
         var popup = document.getElementById('tuyensinh-popup');
-        if (popup && !localStorage.getItem('tuyensinhPopupShown')) {
+        if (popup) {
             popup.style.display = 'flex';
             document.body.classList.add('popup-open');
-            localStorage.setItem('tuyensinhPopupShown', 'true');
         }
-    }, 10000);
+    }
+
+    // Lần đầu: hiện sau 10 giây
+    setTimeout(showPopup, 10000);
 });
 
 function closeTuyenSinhPopup() {
@@ -1224,6 +1191,11 @@ function closeTuyenSinhPopup() {
     if (popup) {
         popup.style.display = 'none';
         document.body.classList.remove('popup-open');
+        // Sau 3 phút (180000ms) hiện lại popup
+        setTimeout(function() {
+            popup.style.display = 'flex';
+            document.body.classList.add('popup-open');
+        }, 180000);
     }
 }
 
