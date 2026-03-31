@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=1" name="viewport" />
     <link rel="shortcut icon" href="storage/favicon.png">
+
     <title>Sự kiện trường</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:site_name" content="The Olympia Schools">
@@ -55,69 +56,58 @@
         }
 
         :root {
-            --ev-blue-1: #439bd4;
-            --ev-blue-2: #4db0e4;
-            --ev-blue-3: #e9f7ff;
-            --ev-text: #1e3c5a;
+            --ac-blue-1: #439bd4;
+            --ac-blue-2: #4db0e4;
+            --ac-blue-3: #e7f6ff;
+            --ac-text: #1e3953;
         }
 
-        .events-page {
-            background: #f7fcff;
-            color: var(--ev-text);
+        .achievements-page {
+            background: #f5fbff;
+            color: var(--ac-text);
         }
 
-        .ev-wide {
+        .ac-wide {
             width: min(96vw, 1520px);
             margin: 0 auto;
         }
 
-        .ev-hero {
-            padding: 116px 0 48px;
-            background: linear-gradient(125deg, rgba(67, 155, 212, 0.97) 0%, rgba(77, 176, 228, 0.9) 55%, rgba(77, 176, 228, 0.72) 100%);
+        .ac-hero {
+            padding: 118px 0 58px;
+            background: linear-gradient(120deg, rgba(67, 155, 212, 0.97) 0%, rgba(77, 176, 228, 0.9) 65%, rgba(77, 176, 228, 0.72) 100%);
             position: relative;
             overflow: hidden;
         }
 
-        .ev-hero::before {
+        .ac-hero::before {
             content: '';
             position: absolute;
-            width: 340px;
-            height: 340px;
-            left: -80px;
+            width: 380px;
+            height: 380px;
+            border-radius: 50%;
+            right: -120px;
             top: -120px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.18);
         }
 
-        .ev-hero::after {
-            content: '';
-            position: absolute;
-            width: 250px;
-            height: 250px;
-            right: -70px;
-            bottom: -90px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.14);
-        }
-
-        .ev-hero-grid {
+        .ac-hero-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 22px;
-            align-items: end;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 24px;
+            align-items: center;
             position: relative;
             z-index: 2;
         }
 
-        .ev-breadcrumb {
-            margin: 0 0 15px;
+        .ac-breadcrumb {
+            margin: 0 0 16px;
             display: inline-flex;
             gap: 8px;
             flex-wrap: wrap;
-            padding: 8px 16px;
-            border-radius: 999px;
             background: rgba(255, 255, 255, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.42);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 999px;
+            padding: 8px 16px;
             position: static !important;
             left: auto !important;
             right: auto !important;
@@ -126,296 +116,288 @@
             transform: none !important;
         }
 
-        .ev-breadcrumb li,
-        .ev-breadcrumb li a {
+        .ac-breadcrumb li,
+        .ac-breadcrumb li a {
             color: #fff;
             font-size: 13px;
             position: static !important;
         }
 
-        .ev-hero h1 {
-            margin: 0 0 12px;
+        .ac-hero h1 {
             color: #fff;
-            font-size: clamp(36px, 4vw, 58px);
+            font-size: clamp(36px, 4.1vw, 60px);
             line-height: 1.1;
+            margin: 0 0 14px;
             font-family: 'Garamond', serif;
         }
 
-        .ev-hero p {
+        .ac-hero p {
             margin: 0;
-            max-width: 760px;
             color: rgba(255, 255, 255, 0.95);
+            line-height: 1.85;
             font-size: 17px;
-            line-height: 1.8;
+            max-width: 760px;
         }
 
-        .ev-hero-media {
+        .ac-highlight {
             display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 10px;
-            background: rgba(255, 255, 255, 0.18);
-            border: 1px solid rgba(255, 255, 255, 0.4);
-            border-radius: 22px;
-            padding: 12px;
-            box-shadow: 0 20px 36px rgba(15, 58, 97, 0.23);
+            gap: 12px;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.42);
+            border-radius: 24px;
+            padding: 16px;
+            box-shadow: 0 20px 40px rgba(14, 55, 91, 0.22);
         }
 
-        .ev-hero-media img {
+        .ac-highlight img {
             width: 100%;
-            height: 140px;
+            height: 180px;
             object-fit: cover;
-            border-radius: 12px;
+            border-radius: 14px;
         }
 
-        .ev-content {
-            padding: 54px 0;
+        .ac-highlight p {
+            margin: 0;
+            font-size: 14px;
+            color: #fff;
         }
 
-        .ev-schedule {
+        .ac-section {
+            padding: 56px 0;
+        }
+
+        .ac-intro {
             display: grid;
-            grid-template-columns: 0.92fr 1.08fr;
-            gap: 22px;
-            margin-bottom: 22px;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 24px;
         }
 
-        .ev-panel {
+        .ac-card {
             background: #fff;
             border: 1px solid rgba(67, 155, 212, 0.14);
+            box-shadow: 0 16px 32px rgba(13, 51, 85, 0.08);
             border-radius: 22px;
-            padding: 22px;
-            box-shadow: 0 14px 30px rgba(13, 47, 80, 0.08);
+            padding: 24px;
         }
 
-        .ev-panel h2 {
+        .ac-card h2 {
             margin: 0 0 12px;
+            color: #2476ac;
             font-family: 'Garamond', serif;
-            font-size: clamp(30px, 3vw, 42px);
+            font-size: clamp(28px, 3vw, 42px);
             line-height: 1.2;
-            color: #2475ac;
         }
 
-        .ev-panel p {
+        .ac-card p {
             margin: 0;
-            font-size: 15px;
-            line-height: 1.8;
-            color: #4a627d;
+            color: #445d78;
+            font-size: 16px;
+            line-height: 1.85;
         }
 
-        .ev-upcoming {
+        .ac-kpis {
             display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+        }
+
+        .ac-kpi {
+            background: linear-gradient(145deg, #439bd4 0%, #4db0e4 100%);
+            border-radius: 18px;
+            min-height: 115px;
+            padding: 16px;
+            color: #fff;
+            box-shadow: 0 14px 28px rgba(67, 155, 212, 0.3);
+        }
+
+        .ac-kpi strong {
+            display: block;
+            font-size: 34px;
+            font-family: 'Garamond', serif;
+            line-height: 1;
+            margin-bottom: 6px;
+        }
+
+        .ac-kpi span {
+            font-size: 13px;
+            line-height: 1.55;
+            display: block;
+        }
+
+        .ac-tabs {
+            margin-top: 28px;
+            display: flex;
+            flex-wrap: wrap;
             gap: 10px;
         }
 
-        .ev-upcoming-item {
-            border: 1px solid rgba(67, 155, 212, 0.16);
-            border-radius: 16px;
-            padding: 12px;
-            display: grid;
-            grid-template-columns: 72px 1fr;
-            gap: 12px;
-            align-items: center;
-            background: #f5fbff;
+        .ac-tab {
+            border: none;
+            background: #dff3ff;
+            color: #2c7fb7;
+            padding: 10px 14px;
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: 13px;
+            letter-spacing: 0.4px;
+            cursor: pointer;
         }
 
-        .ev-date {
-            border-radius: 12px;
+        .ac-tab.active {
             background: linear-gradient(145deg, #439bd4, #4db0e4);
             color: #fff;
-            text-align: center;
-            padding: 8px 4px;
         }
 
-        .ev-date b {
-            display: block;
-            font-size: 24px;
-            line-height: 1;
-            font-family: 'Garamond', serif;
-        }
-
-        .ev-date small {
-            font-size: 12px;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-        }
-
-        .ev-upcoming-item h3 {
-            margin: 0 0 4px;
-            font-size: 17px;
-            color: #235f8d;
-            font-family: 'Garamond', serif;
-        }
-
-        .ev-upcoming-item p {
-            margin: 0;
-            font-size: 13px;
-            line-height: 1.6;
-            color: #4f6881;
-        }
-
-        .ev-feature-grid {
+        .ac-grid {
+            margin-top: 22px;
             display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
             gap: 20px;
-            margin-bottom: 22px;
         }
 
-        .ev-feature-main {
-            position: relative;
-            border-radius: 24px;
+        .ac-item {
+            background: #fff;
+            border: 1px solid rgba(67, 155, 212, 0.15);
+            border-radius: 20px;
             overflow: hidden;
-            min-height: 360px;
-            box-shadow: 0 18px 36px rgba(12, 47, 78, 0.14);
+            box-shadow: 0 14px 30px rgba(15, 48, 78, 0.08);
+            display: flex;
+            flex-direction: column;
         }
 
-        .ev-feature-main img {
+        .ac-item img {
             width: 100%;
-            height: 100%;
+            height: 220px;
             object-fit: cover;
         }
 
-        .ev-feature-overlay {
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            padding: 24px;
-            background: linear-gradient(to top, rgba(8, 33, 56, 0.86), rgba(8, 33, 56, 0));
-            color: #fff;
+        .ac-item-content {
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            flex: 1;
         }
 
-        .ev-feature-overlay span {
+        .ac-item-year {
             display: inline-flex;
-            font-size: 12px;
+            align-self: flex-start;
             padding: 6px 10px;
             border-radius: 999px;
-            background: rgba(255, 255, 255, 0.22);
-            margin-bottom: 8px;
-            text-transform: uppercase;
+            background: #ebf8ff;
+            color: #2a7db5;
+            font-size: 12px;
             font-weight: 700;
         }
 
-        .ev-feature-overlay h3 {
-            margin: 0 0 8px;
+        .ac-item h3 {
+            margin: 0;
+            font-size: 22px;
+            line-height: 1.35;
             font-family: 'Garamond', serif;
-            font-size: 28px;
-            line-height: 1.25;
-            color: #fff;
+            color: #235f8d;
         }
 
-        .ev-feature-overlay p {
+        .ac-item p {
             margin: 0;
             font-size: 14px;
             line-height: 1.7;
-            color: rgba(255, 255, 255, 0.96);
+            color: #4c6580;
+            flex: 1;
         }
 
-        .ev-feature-side {
+        .ac-item a {
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: 700;
+            color: #2a88c1;
+            letter-spacing: 0.5px;
+        }
+
+        .ac-gallery {
+            margin-top: 28px;
             display: grid;
+            grid-template-columns: repeat(12, minmax(0, 1fr));
             gap: 12px;
         }
 
-        .ev-mini {
-            border-radius: 18px;
-            overflow: hidden;
-            background: #fff;
-            border: 1px solid rgba(67, 155, 212, 0.15);
-            box-shadow: 0 12px 28px rgba(12, 47, 78, 0.08);
-            display: grid;
-            grid-template-columns: 118px 1fr;
-        }
-
-        .ev-mini img {
+        .ac-gallery img {
             width: 100%;
             height: 100%;
-            min-height: 120px;
             object-fit: cover;
+            border-radius: 16px;
+            box-shadow: 0 12px 24px rgba(15, 42, 70, 0.1);
         }
 
-        .ev-mini-content {
-            padding: 12px;
+        .ac-gallery .g1 {
+            grid-column: span 4;
+            height: 310px;
         }
 
-        .ev-mini-content h4 {
-            margin: 0 0 6px;
-            font-size: 18px;
-            line-height: 1.35;
-            color: #245e8b;
-            font-family: 'Garamond', serif;
+        .ac-gallery .g2 {
+            grid-column: span 4;
+            height: 150px;
         }
 
-        .ev-mini-content p {
-            margin: 0;
-            font-size: 13px;
-            line-height: 1.6;
-            color: #526b84;
+        .ac-gallery .g3 {
+            grid-column: span 4;
+            height: 150px;
         }
 
-        .ev-gallery {
-            display: grid;
-            grid-template-columns: repeat(5, minmax(0, 1fr));
-            gap: 12px;
+        .ac-gallery .g4 {
+            grid-column: span 4;
+            height: 150px;
         }
 
-        .ev-gallery img {
-            width: 100%;
-            height: 165px;
-            object-fit: cover;
-            border-radius: 14px;
-            box-shadow: 0 10px 22px rgba(12, 47, 78, 0.1);
+        .ac-gallery .g5 {
+            grid-column: span 4;
+            height: 150px;
         }
 
-        .ev-gallery .wide {
-            grid-column: span 2;
+        .ac-gallery .g6 {
+            grid-column: span 4;
+            height: 310px;
         }
 
         @media (max-width: 1200px) {
-            .ev-hero-grid,
-            .ev-schedule,
-            .ev-feature-grid {
+            .ac-hero-grid,
+            .ac-intro {
                 grid-template-columns: 1fr;
             }
 
-            .ev-gallery {
-                grid-template-columns: repeat(3, minmax(0, 1fr));
+            .ac-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
             }
         }
 
         @media (max-width: 900px) {
-            .ev-hero-media {
+            .ac-gallery {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
             }
 
-            .ev-gallery {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-            }
-
-            .ev-gallery .wide {
+            .ac-gallery .g1,
+            .ac-gallery .g2,
+            .ac-gallery .g3,
+            .ac-gallery .g4,
+            .ac-gallery .g5,
+            .ac-gallery .g6 {
                 grid-column: auto;
+                height: 210px;
             }
         }
 
         @media (max-width: 768px) {
-            .ev-wide {
+            .ac-wide {
                 width: min(94vw, 1520px);
             }
 
-            .ev-hero {
-                padding: 96px 0 38px;
+            .ac-hero {
+                padding: 96px 0 40px;
             }
 
-            .ev-feature-main {
-                min-height: 300px;
-            }
-
-            .ev-mini {
-                grid-template-columns: 1fr;
-            }
-
-            .ev-mini img {
-                min-height: 160px;
-            }
-
-            .ev-gallery {
+            .ac-grid,
+            .ac-kpis {
                 grid-template-columns: 1fr;
             }
         }
@@ -426,103 +408,116 @@
     <?php include 'includes/header.php'; ?>
     <div class="overlay_mark_search" style="display:none;"></div>
 
-    <main class="body-content events-page">
-        <section class="ev-hero">
-            <div class="ev-wide ev-hero-grid">
+    <main class="body-content achievements-page">
+        <section class="ac-hero">
+            <div class="ac-wide ac-hero-grid">
                 <div>
-                    <ol class="breadcrumb ev-breadcrumb">
+                    <ol class="breadcrumb ac-breadcrumb">
                         <li class="breadcrumb-item"><a href="index.php">Trang chủ</a></li>
                         <li class="breadcrumb-item"><a href="javascript:;">Tin tức</a></li>
                         <li class="breadcrumb-item active">Sự kiện trường</li>
                     </ol>
-                    <h1>Lịch sự kiện học đường nổi bật tại Meyschool</h1>
-                    <p>Tổng hợp các sự kiện trọng điểm trong năm học: lễ hội, ngày hội học thuật, workshop chuyên đề, hoạt động trải nghiệm và chương trình kết nối cộng đồng dành cho học sinh - phụ huynh.</p>
+                    <h1>Sự kiện nổi bật tại Meyschool Đoàn Thị Điểm</h1>
+                    <p>Tổng hợp các sự kiện quan trọng trong năm học: lễ khai giảng, ngày hội gia đình, hội thảo chuyên đề, chương trình giao lưu quốc tế và những dấu mốc đáng nhớ của cộng đồng Meyschool.</p>
                 </div>
-                <div class="ev-hero-media">
-                    <img src="assets/banner/banner1.jpeg" alt="Sự kiện 1">
-                    <img src="assets/banner/banner2.jpeg" alt="Sự kiện 2">
-                    <img src="assets/banner/banner3.jpeg" alt="Sự kiện 3">
-                    <img src="storage/jnp2203-1-1180x720.jpg" alt="Sự kiện 4">
+                <div class="ac-highlight">
+                    <img src="storage/jnp2203-1-1920x1080.jpg" alt="Sự kiện nổi bật">
+                    <p>Mỗi sự kiện là cơ hội để học sinh trải nghiệm, kết nối và phát triển bản thân trong môi trường giáo dục hiện đại và nhân văn.</p>
                 </div>
             </div>
         </section>
 
-        <section class="ev-content">
-            <div class="ev-wide">
-                <div class="ev-schedule">
-                    <article class="ev-panel" data-aos="fade-up">
-                        <h2>Không gian sự kiện đa trải nghiệm</h2>
-                        <p>Các sự kiện tại Meyschool được thiết kế theo định hướng học qua trải nghiệm, giúp học sinh phát triển tri thức, năng lực hợp tác và bản lĩnh thể hiện bản thân. Từng chương trình đều có mục tiêu rõ ràng, nội dung thực tiễn và tạo cơ hội để học sinh kết nối với cộng đồng trong và ngoài nhà trường.</p>
+        <section class="ac-section">
+            <div class="ac-wide">
+                <div class="ac-intro">
+                    <article class="ac-card" data-aos="fade-up">
+                        <h2>Điểm lại các sự kiện trong năm học</h2>
+                        <p>Meyschool tổ chức đa dạng các sự kiện nhằm tạo không gian phát triển toàn diện cho học sinh, kết nối gia đình và nhà trường, đồng thời mở rộng quan hệ đối tác giáo dục trong và ngoài nước. Mỗi sự kiện đều được thiết kế theo định hướng giáo dục trải nghiệm.</p>
                     </article>
-
-                    <div class="ev-panel ev-upcoming" data-aos="fade-up" data-aos-delay="100">
-                        <div class="ev-upcoming-item">
-                            <div class="ev-date"><b>22</b><small>MAR</small></div>
-                            <div>
-                                <h3>Ngày hội STEM toàn trường</h3>
-                                <p>Trưng bày dự án liên môn và thử thách sáng tạo theo nhóm.</p>
-                            </div>
-                        </div>
-                        <div class="ev-upcoming-item">
-                            <div class="ev-date"><b>05</b><small>APR</small></div>
-                            <div>
-                                <h3>Lễ hội văn hóa quốc tế</h3>
-                                <p>Giao lưu ngôn ngữ, nghệ thuật và trải nghiệm đa văn hóa.</p>
-                            </div>
-                        </div>
-                        <div class="ev-upcoming-item">
-                            <div class="ev-date"><b>20</b><small>APR</small></div>
-                            <div>
-                                <h3>Career Day - Định hướng nghề nghiệp</h3>
-                                <p>Diễn giả khách mời và workshop kỹ năng cho học sinh THCS.</p>
-                            </div>
-                        </div>
+                    <div class="ac-kpis" data-aos="fade-up" data-aos-delay="100">
+                        <div class="ac-kpi"><strong>40+</strong><span>Sự kiện lớn được tổ chức mỗi năm học</span></div>
+                        <div class="ac-kpi"><strong>10+</strong><span>Chương trình giao lưu quốc tế và hội thảo chuyên đề</span></div>
+                        <div class="ac-kpi"><strong>5000+</strong><span>Lượt phụ huynh và học sinh tham gia sự kiện mỗi năm</span></div>
+                        <div class="ac-kpi"><strong>100%</strong><span>Sự kiện được tổ chức theo tiêu chuẩn giáo dục trải nghiệm</span></div>
                     </div>
                 </div>
 
-                <div class="ev-feature-grid">
-                    <article class="ev-feature-main" data-aos="fade-up">
-                        <img src="storage/banner/trung-hoc.jpg" alt="Sự kiện nổi bật">
-                        <div class="ev-feature-overlay">
-                            <span>Sự kiện tiêu điểm</span>
-                            <h3>Festival học sinh: Trí tuệ - Sáng tạo - Hội nhập</h3>
-                            <p>Chuỗi hoạt động quy mô lớn kết hợp học thuật, thể thao, nghệ thuật và trải nghiệm cộng đồng dành cho toàn bộ học sinh.</p>
+                <div class="ac-tabs" id="ac-tabs">
+                    <button class="ac-tab active" data-year="all">Tất cả</button>
+                    <button class="ac-tab" data-year="2023-2024">2023 - 2024</button>
+                    <button class="ac-tab" data-year="2024-2025">2024 - 2025</button>
+                    <button class="ac-tab" data-year="2025-2026">2025 - 2026</button>
+                </div>
+
+                <div class="ac-grid" id="ac-grid">
+                    <article class="ac-item" data-year="2025-2026" data-aos="fade-up">
+                        <img src="assets/banner/banner1.jpeg" alt="Lễ khai giảng">
+                        <div class="ac-item-content">
+                            <span class="ac-item-year">2025 - 2026</span>
+                            <h3>Lễ khai giảng năm học mới: Khởi đầu hành trình mới</h3>
+                            <p>Toàn trường chào đón năm học mới với chương trình khai giảng trang trọng, truyền cảm hứng cho học sinh và gia đình.</p>
+                            <a href="javascript:;">Xem chi tiết ›</a>
                         </div>
                     </article>
 
-                    <div class="ev-feature-side">
-                        <article class="ev-mini" data-aos="fade-up" data-aos-delay="80">
-                            <img src="storage/banner/tieu-hoc.jpg" alt="Workshop phụ huynh">
-                            <div class="ev-mini-content">
-                                <h4>Workshop phụ huynh đồng hành</h4>
-                                <p>Chia sẻ phương pháp đồng hành cùng con trong từng giai đoạn phát triển.</p>
-                            </div>
-                        </article>
-                        <article class="ev-mini" data-aos="fade-up" data-aos-delay="140">
-                            <img src="storage/banner/tien-tieu-hoc.jpg" alt="Ngày hội thể thao">
-                            <div class="ev-mini-content">
-                                <h4>Ngày hội thể thao liên cấp</h4>
-                                <p>Tăng cường thể chất, xây dựng tinh thần fair-play và gắn kết tập thể.</p>
-                            </div>
-                        </article>
-                        <article class="ev-mini" data-aos="fade-up" data-aos-delay="200">
-                            <img src="olympia/images/noibat_6.jpg" alt="Triển lãm học sinh">
-                            <div class="ev-mini-content">
-                                <h4>Triển lãm sản phẩm học sinh</h4>
-                                <p>Trưng bày các dự án cá nhân và dự án nhóm nổi bật trong năm học.</p>
-                            </div>
-                        </article>
-                    </div>
+                    <article class="ac-item" data-year="2025-2026" data-aos="fade-up" data-aos-delay="80">
+                        <img src="assets/banner/banner2.jpeg" alt="Ngày hội gia đình">
+                        <div class="ac-item-content">
+                            <span class="ac-item-year">2025 - 2026</span>
+                            <h3>Ngày hội gia đình Meyschool: Gắn kết yêu thương</h3>
+                            <p>Sân chơi dành cho cả gia đình với các hoạt động vui nhộn, gian hàng sáng tạo và chương trình biểu diễn đặc sắc.</p>
+                            <a href="javascript:;">Xem chi tiết ›</a>
+                        </div>
+                    </article>
+
+                    <article class="ac-item" data-year="2024-2025" data-aos="fade-up" data-aos-delay="140">
+                        <img src="assets/banner/banner3.jpeg" alt="Hội thảo giáo dục">
+                        <div class="ac-item-content">
+                            <span class="ac-item-year">2024 - 2025</span>
+                            <h3>Hội thảo chuyên đề: Giáo dục trong thời đại số</h3>
+                            <p>Diễn đàn quy tụ chuyên gia giáo dục trong và ngoài nước, chia sẻ phương pháp giảng dạy hiện đại và xu hướng đổi mới.</p>
+                            <a href="javascript:;">Xem chi tiết ›</a>
+                        </div>
+                    </article>
+
+                    <article class="ac-item" data-year="2024-2025" data-aos="fade-up">
+                        <img src="olympia/images/noibat_2.jpg" alt="Giao lưu quốc tế">
+                        <div class="ac-item-content">
+                            <span class="ac-item-year">2024 - 2025</span>
+                            <h3>Chương trình giao lưu quốc tế với đoàn học sinh Singapore</h3>
+                            <p>Hai tuần trải nghiệm xuyên văn hóa, học sinh hai nước cùng tham gia các dự án học tập và hoạt động ngoại khóa.</p>
+                            <a href="javascript:;">Xem chi tiết ›</a>
+                        </div>
+                    </article>
+
+                    <article class="ac-item" data-year="2023-2024" data-aos="fade-up" data-aos-delay="80">
+                        <img src="olympia/images/noibat_4.jpg" alt="Lễ tốt nghiệp">
+                        <div class="ac-item-content">
+                            <span class="ac-item-year">2023 - 2024</span>
+                            <h3>Lễ tốt nghiệp và tri ân: Cánh cửa mới rộng mở</h3>
+                            <p>Buổi lễ trang trọng vinh danh thành quả học tập của các em, ghi nhận nỗ lực của thầy cô và sự đồng hành của phụ huynh.</p>
+                            <a href="javascript:;">Xem chi tiết ›</a>
+                        </div>
+                    </article>
+
+                    <article class="ac-item" data-year="2023-2024" data-aos="fade-up" data-aos-delay="140">
+                        <img src="olympia/images/noibat_6.jpg" alt="Open Day">
+                        <div class="ac-item-content">
+                            <span class="ac-item-year">2023 - 2024</span>
+                            <h3>Open Day: Trải nghiệm một ngày làm học sinh Meyschool</h3>
+                            <p>Chương trình tham quan trường dành cho phụ huynh và học sinh quan tâm, trực tiếp trải nghiệm môi trường học tập.</p>
+                            <a href="javascript:;">Xem chi tiết ›</a>
+                        </div>
+                    </article>
                 </div>
 
-                <div class="ev-gallery" data-aos="fade-up">
-                    <img class="wide" src="olympia/images/noibat_2.jpg" alt="Hình sự kiện 1">
-                    <img src="olympia/images/noibat_4.jpg" alt="Hình sự kiện 2">
-                    <img src="olympia/images/noibat_7.jpg" alt="Hình sự kiện 3">
-                    <img class="wide" src="storage/jnp2203-1-1920x1080.jpg" alt="Hình sự kiện 4">
-                    <img src="storage/banner/tieu-hoc.jpg" alt="Hình sự kiện 5">
-                    <img src="storage/banner/trung-hoc.jpg" alt="Hình sự kiện 6">
-                    <img src="storage/banner/tien-tieu-hoc.jpg" alt="Hình sự kiện 7">
+                <div class="ac-gallery" data-aos="fade-up">
+                    <img class="g1" src="olympia/images/noibat_6.jpg" alt="Sự kiện 1">
+                    <img class="g2" src="olympia/images/noibat_2.jpg" alt="Sự kiện 2">
+                    <img class="g3" src="olympia/images/noibat_4.jpg" alt="Sự kiện 3">
+                    <img class="g4" src="olympia/images/noibat_7.jpg" alt="Sự kiện 4">
+                    <img class="g5" src="storage/banner/tieu-hoc.jpg" alt="Sự kiện 5">
+                    <img class="g6" src="storage/banner/trung-hoc.jpg" alt="Sự kiện 6">
                 </div>
             </div>
         </section>
@@ -530,14 +525,13 @@
 
     <?php include 'includes/footer.php'; ?>
 
-    <script type="text/javascript" src="olympia/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="olympia/js/toastr.min.js"></script>
-    <script type="text/javascript" src="olympia/js/moment.min.js"></script>
-    <script type="text/javascript" src="olympia/js/moment-timezone.min.js"></script>
-    <script type="text/javascript" src="olympia/js/bootstrap-datetimepicker.min.js"></script>
-    <script src="olympia/js/slick.js"></script>
-    <script type="text/javascript" src="olympia/js/script.js"></script>
-    <script type="text/javascript" src="olympia/js/main.js"></script>
+    <script src="olympia/js/bootstrap.min.js"></script>
+    <script src="olympia/js/jquery.toast.min.js"></script>
+    <script src="olympia/js/main.js"></script>
+    <script src="vendor/core/plugins/language/js/language-publice209.js?v=1.0.0"></script>
+    <script src="olympia/js/contact.js"></script>
+    <script src="olympia/js/custom.js"></script>
+
     <script>
         AOS.init({
             once: true,
@@ -545,6 +539,29 @@
                 return window.innerWidth < 768;
             }
         });
+
+        (function() {
+            var tabs = document.querySelectorAll('#ac-tabs .ac-tab');
+            var cards = document.querySelectorAll('#ac-grid .ac-item');
+
+            tabs.forEach(function(tab) {
+                tab.addEventListener('click', function() {
+                    tabs.forEach(function(t) {
+                        t.classList.remove('active');
+                    });
+                    tab.classList.add('active');
+
+                    var year = tab.getAttribute('data-year');
+                    cards.forEach(function(card) {
+                        if (year === 'all' || card.getAttribute('data-year') === year) {
+                            card.style.display = 'flex';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        })();
     </script>
 </body>
 

@@ -77,6 +77,11 @@
             color: var(--sc-ink);
         }
 
+        .wrap {
+            width: min(1180px, calc(100vw - 32px));
+            margin: 0 auto;
+        }
+
         .scholar-wrap {
             width: min(94vw, 1480px);
             margin: 0 auto;
@@ -509,9 +514,30 @@
             }
         }
 
+        .hero-card {
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: 0 20px 38px rgba(23, 52, 93, .1);
+            background: rgba(255, 255, 255, .9);
+            padding: 20px;
+        }
+
+        .hero-photo {
+            border-radius: 22px;
+            overflow: hidden;
+            min-height: 280px;
+        }
+
+        .hero-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
         .ts-banner-slider {
             position: relative;
-            padding-top: 67px;
+            padding-top: 18px;
         }
 
         .ts-banner-slider img {
@@ -549,7 +575,7 @@
         </section>
 
         <section class="sc-main">
-            <div class="scholar-wrap">
+            <div class="wrap">
                 <div class="hero-card" data-aos="fade-up">
                     <div class="hero-photo">
                         <img src="assets/img/tuyensinh/tuyển sinh chung.jpg" alt="Tuyển sinh Meyschool">
@@ -567,6 +593,220 @@
                 </div>
             </div>
         </section>
+
+        <!-- Section: Tin tức Tuyển sinh -->
+        <section class="ts-news-section" style="padding:60px 0 40px; margin-bottom: 115px;">
+            <div class="wrap">
+                <h2 class="ts-news-title"
+                    style="font-family:'EB Garamond',serif;font-size:36px;font-weight:700;color:var(--sc-ink);text-transform:uppercase;margin-bottom:36px;text-align:center;">
+                    Tuyển sinh</h2>
+                <div class="ts-news-slider">
+                    <div class="ts-news-card">
+                        <a href="thong-tin-tuyen-sinh-tieu-hoc.php" style="display:block;">
+                            <img src="assets/img/tuyensinh/banner4.jpg" alt="Thông báo lịch xét tuyển">
+                        </a>
+                        <div class="ts-news-card-body">
+                            <h3>Mở cổng đăng ký tuyển sinh lớp 1: Hành trình khởi đầu cho con yêu</h3>
+                            <a href="thong-tin-tuyen-sinh-tieu-hoc.php" class="ts-news-link">Xem thêm <span>&rarr;</span></a>
+                        </div>
+                    </div>
+                    <div class="ts-news-card">
+                        <a href="uu-dai-tuyen-sinh.php" style="display:block;">
+                            <img src="assets/img/tuyensinh/tuyển sinh chung.jpg" alt="Ưu đãi tuyển sinh">
+                        </a>
+                        <div class="ts-news-card-body">
+                            <h3>Ưu đãi tuyển sinh và học bổng năm học 2026-2027</h3>
+                            <a href="uu-dai-tuyen-sinh.php" class="ts-news-link">Xem thêm <span>&rarr;</span></a>
+                        </div>
+                    </div>
+                    <div class="ts-news-card">
+                        <a href="thong-tin-tuyen-sinh-tieu-hoc.php" style="display:block;">
+                            <img src="assets/img/tuyensinh/tiền tiểu học 1.jpg" alt="Chương trình tiền tiểu học">
+                        </a>
+                        <div class="ts-news-card-body">
+                            <h3>Chương trình Tiền tiểu học – Sẵn sàng cho hành trình học tập mới</h3>
+                            <a href="thong-tin-tuyen-sinh-tieu-hoc.php" class="ts-news-link">Xem thêm <span>&rarr;</span></a>
+                        </div>
+                    </div>
+                    <div class="ts-news-card">
+                        <a href="thong-tin-tuyen-sinh-thcs.php" style="display:block;">
+                            <img src="assets/img/tuyensinh/banner5.jpg" alt="Tuyển sinh THCS">
+                        </a>
+                        <div class="ts-news-card-body">
+                            <h3>Thông tin tuyển sinh lớp 6 năm học 2026-2027</h3>
+                            <a href="thong-tin-tuyen-sinh-thcs.php" class="ts-news-link">Xem thêm <span>&rarr;</span></a>
+                        </div>
+                    </div>
+                    <div class="ts-news-card">
+                        <a href="hoc-bong-2026-2027.php" style="display:block;">
+                            <img src="assets/img/tuyensinh/thông tin tuyển sinh.jpg" alt="Học bổng">
+                        </a>
+                        <div class="ts-news-card-body">
+                            <h3>Chương trình học bổng năm học 2026-2027 dành cho học sinh xuất sắc</h3>
+                            <a href="hoc-bong-2026-2027.php" class="ts-news-link">Xem thêm <span>&rarr;</span></a>
+                        </div>
+                    </div>
+                    <div class="ts-news-card">
+                        <a href="thong-tin-tuyen-sinh-tieu-hoc.php" style="display:block;">
+                            <img src="assets/img/tuyensinh/tiền tiểu học 2.jpg" alt="Ngày hội tuyển sinh">
+                        </a>
+                        <div class="ts-news-card-body">
+                            <h3>Ngày hội trải nghiệm và tư vấn tuyển sinh Meyschool 2026</h3>
+                            <a href="thong-tin-tuyen-sinh-tieu-hoc.php" class="ts-news-link">Xem thêm <span>&rarr;</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <style>
+                .ts-news-slider {
+                    margin: 0 -12px;
+                }
+
+                .ts-news-slider .slick-slide {
+                    padding: 0 12px;
+                }
+
+                .ts-news-slider .slick-list {
+                    overflow: hidden;
+                }
+
+                .ts-news-card {
+                    background: #fff;
+                    border-radius: 16px;
+                    overflow: hidden;
+                    box-shadow: 0 4px 24px rgba(23, 52, 93, .08);
+                    transition: transform .3s, box-shadow .3s;
+                }
+
+                .ts-news-card:hover {
+                    transform: translateY(-6px);
+                    box-shadow: 0 12px 36px rgba(23, 52, 93, .14);
+                }
+
+                .ts-news-card img {
+                    width: 100%;
+                    height: 220px;
+                    object-fit: cover;
+                    display: block;
+                }
+
+                .ts-news-card-body {
+                    padding: 20px 22px 24px;
+                }
+
+                .ts-news-card-body h3 {
+                    font-size: 16px;
+                    font-weight: 700;
+                    color: var(--sc-ink);
+                    line-height: 1.5;
+                    margin: 0 0 16px;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                }
+
+                .ts-news-link {
+                    font-size: 14px;
+                    font-weight: 600;
+                    color: var(--sc-blue-1);
+                    text-decoration: none;
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 4px;
+                }
+
+                .ts-news-link span {
+                    font-size: 18px;
+                }
+
+                .ts-news-slider .slick-prev,
+                .ts-news-slider .slick-next {
+                    width: 44px;
+                    height: 44px;
+                    z-index: 2;
+                    background: #fff;
+                    border-radius: 50%;
+                    box-shadow: 0 2px 12px rgba(23, 52, 93, .15);
+                    transition: background .25s, box-shadow .25s;
+                }
+
+                .ts-news-slider .slick-prev:hover,
+                .ts-news-slider .slick-next:hover {
+                    background: var(--sc-blue-1);
+                    box-shadow: 0 4px 18px rgba(67, 155, 212, .35);
+                }
+
+                .ts-news-slider .slick-prev {
+                    left: -22px;
+                }
+
+                .ts-news-slider .slick-next {
+                    right: -22px;
+                }
+
+                .ts-news-slider .slick-prev:before,
+                .ts-news-slider .slick-next:before {
+                    color: var(--sc-ink);
+                    font-size: 20px;
+                    opacity: 1;
+                }
+
+                .ts-news-slider .slick-prev:hover:before,
+                .ts-news-slider .slick-next:hover:before {
+                    color: #fff;
+                }
+
+                .ts-news-slider .slick-dots {
+                    bottom: -40px;
+                }
+
+                .ts-news-slider .slick-dots li {
+                    margin: 0 4px;
+                }
+
+                .ts-news-slider .slick-dots li button:before {
+                    font-size: 10px;
+                    color: #c5d3e0;
+                    opacity: 1;
+                }
+
+                .ts-news-slider .slick-dots li.slick-active button:before {
+                    color: var(--sc-blue-1);
+                }
+
+                @media(max-width:1220px) {
+                    .ts-news-slider .slick-prev {
+                        left: 4px;
+                    }
+
+                    .ts-news-slider .slick-next {
+                        right: 4px;
+                    }
+                }
+
+                @media(max-width:768px) {
+                    .ts-news-title {
+                        font-size: 28px !important;
+                    }
+
+                    .ts-news-card img {
+                        height: 180px;
+                    }
+
+                    .ts-news-slider .slick-prev,
+                    .ts-news-slider .slick-next {
+                        width: 36px;
+                        height: 36px;
+                    }
+
+                    .ts-news-slider .slick-prev:before,
+                    .ts-news-slider .slick-next:before {
+                        font-size: 16px;
+                    }
+                }
+            </style>
+        </section>
     </main>
 
     <?php include 'includes/footer.php'; ?>
@@ -576,6 +816,31 @@
     <script src="olympia/js/main.js"></script>
     <script>
         $(document).ready(function() {
+            $(".ts-news-slider").slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                infinite: false,
+                dots: true,
+                arrows: true,
+                autoplay: true,
+                autoplaySpeed: 4000,
+                prevArrow: '<button class="slick-prev"><span>&#10094;</span></button>',
+                nextArrow: '<button class="slick-next"><span>&#10095;</span></button>',
+                responsive: [{
+                        breakpoint: 992,
+                        settings: {
+                            slidesToShow: 2
+                        }
+                    },
+                    {
+                        breakpoint: 576,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+
             $(".ts-banner-slider").slick({
                 slidesToShow: 1,
                 slidesToScroll: 1,

@@ -94,9 +94,507 @@
     </style>
 
     <style>
-        .csvc_main {
+        :root {
+            --csvc-blue-1: #2354a0;
+            --csvc-blue-2: #439bd4;
+            --csvc-blue-3: #4db0e4;
+            --csvc-ink: #1f3f5d;
+            --csvc-soft: #eef7ff;
+        }
+
+        .csvc-page {
             background: #f4f9ff;
-            padding-bottom: 48px;
+        }
+
+        .csvc-wrap {
+            width: min(1260px, calc(100vw - 32px));
+            margin: 0 auto;
+        }
+
+        .csvc-wide {
+            width: min(95vw, 1500px);
+            margin: 0 auto;
+        }
+
+        /* ===== HERO ===== */
+        .csvc-hero {
+            position: relative;
+            overflow: hidden;
+            padding: 120px 0 64px;
+            background: linear-gradient(130deg, rgba(35, 84, 160, .94) 0%, rgba(67, 155, 212, .9) 60%, rgba(77, 176, 228, .82) 100%),
+                url('assets/img/co-so-vat-chat/bản 3d.jpg') center/cover no-repeat;
+        }
+
+        .csvc-hero::before {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            width: 380px;
+            height: 380px;
+            right: -140px;
+            top: -130px;
+            background: rgba(255, 255, 255, .16);
+            pointer-events: none;
+        }
+
+        .csvc-hero::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            width: 270px;
+            height: 270px;
+            left: -100px;
+            bottom: -120px;
+            background: rgba(255, 255, 255, .09);
+            pointer-events: none;
+        }
+
+        .csvc-hero-inner {
+            display: grid;
+            grid-template-columns: minmax(0, 1.2fr) minmax(280px, .8fr);
+            gap: 28px;
+            align-items: center;
+        }
+
+        .csvc-breadcrumb {
+            display: inline-flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin: 0 0 14px;
+            background: rgba(255, 255, 255, .18);
+            border: 1px solid rgba(255, 255, 255, .38);
+            border-radius: 999px;
+            padding: 8px 16px;
+            position: static !important;
+            transform: none !important;
+        }
+
+        .csvc-breadcrumb li,
+        .csvc-breadcrumb li a {
+            color: #fff;
+            font-size: 13px;
+            position: static !important;
+        }
+
+        .csvc-hero h1 {
+            margin: 0;
+            color: #fff;
+            font-size: clamp(28px, 3.8vw, 50px);
+            line-height: 1.1;
+            font-family: 'Garamond', serif;
+        }
+
+        .csvc-hero p {
+            margin: 14px 0 0;
+            color: rgba(255, 255, 255, .93);
+            font-size: 16px;
+            line-height: 1.8;
+            max-width: 600px;
+        }
+
+        .csvc-hero-pills {
+            margin-top: 18px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .csvc-hero-pills span {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 14px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, .18);
+            color: #fff;
+            font-size: 13px;
+            font-weight: 700;
+            border: 1px solid rgba(255, 255, 255, .32);
+        }
+
+        .csvc-hero-card {
+            background: rgba(255, 255, 255, .93);
+            border-radius: 22px;
+            border: 1px solid rgba(67, 155, 212, .16);
+            box-shadow: 0 16px 32px rgba(20, 55, 100, .26);
+            padding: 16px;
+        }
+
+        .csvc-hero-card img {
+            width: 100%;
+            height: 220px;
+            border-radius: 16px;
+            object-fit: cover;
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        .csvc-hero-metrics {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 10px;
+        }
+
+        .csvc-hero-metrics div {
+            background: #fff;
+            border: 1px solid rgba(67, 155, 212, .2);
+            border-radius: 12px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .csvc-hero-metrics b {
+            display: block;
+            color: #2354a0;
+            font-size: 22px;
+            margin-bottom: 3px;
+        }
+
+        .csvc-hero-metrics span {
+            color: #436b8b;
+            font-size: 12px;
+            line-height: 1.4;
+        }
+
+        /* ===== INTRO CARD ===== */
+        .csvc-intro {
+            margin: 32px auto;
+        }
+
+        .csvc-intro-card {
+            background: #fff;
+            border-radius: 22px;
+            box-shadow: 0 14px 30px rgba(35, 84, 160, .1);
+            padding: 32px 36px;
+            border-left: 5px solid var(--csvc-blue-2);
+        }
+
+        .csvc-intro-card p {
+            margin: 0;
+            color: #2c4963;
+            line-height: 1.85;
+            font-size: 16px;
+        }
+
+        /* ===== FEATURE SECTIONS ===== */
+        .csvc-content {
+            padding: 0 0 60px;
+        }
+
+        .csvc-feature {
+            background: #fff;
+            border-radius: 22px;
+            border: 1px solid rgba(67, 155, 212, .14);
+            box-shadow: 0 12px 26px rgba(20, 55, 100, .08);
+            padding: 36px;
+            margin-bottom: 28px;
+            display: grid;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .csvc-feature.two-col {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .csvc-feature.two-col.reverse {
+            direction: rtl;
+        }
+
+        .csvc-feature.two-col.reverse>* {
+            direction: ltr;
+        }
+
+        .csvc-feature-icon {
+            font-size: 40px;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .csvc-feature h2 {
+            font-family: 'Garamond', serif;
+            font-size: clamp(24px, 2.5vw, 34px);
+            color: var(--csvc-blue-1);
+            margin: 0 0 14px;
+            line-height: 1.15;
+        }
+
+        .csvc-feature p {
+            color: #3f6686;
+            font-size: 15px;
+            line-height: 1.8;
+            margin: 0 0 10px;
+        }
+
+        .csvc-feature p:last-child {
+            margin: 0;
+        }
+
+        .csvc-feature-imgs {
+            display: grid;
+            gap: 12px;
+        }
+
+        .csvc-feature-imgs.grid-2 {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .csvc-feature-imgs.grid-1 {
+            grid-template-columns: 1fr;
+        }
+
+        .csvc-feature-imgs figure {
+            margin: 0;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 22px rgba(20, 55, 100, .14);
+            position: relative;
+        }
+
+        .csvc-feature-imgs figure img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+            transition: transform .4s ease;
+        }
+
+        .csvc-feature-imgs figure:hover img {
+            transform: scale(1.05);
+        }
+
+        .csvc-feature-imgs figure figcaption {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 10px 14px;
+            font-size: 13px;
+            font-weight: 700;
+            color: #fff;
+            background: linear-gradient(to top, rgba(20, 55, 100, .82), rgba(20, 55, 100, 0));
+        }
+
+        /* ===== GALLERY GRID ===== */
+        .csvc-gallery-section {
+            padding: 0 0 60px;
+            margin-bottom: 120px;
+        }
+
+        .csvc-gallery-section h2 {
+            font-family: 'Garamond', serif;
+            font-size: clamp(28px, 3vw, 40px);
+            color: var(--csvc-blue-1);
+            margin: 0 0 24px;
+            text-align: center;
+        }
+
+        .csvc-gallery {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .csvc-gallery figure {
+            margin: 0;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 22px rgba(20, 55, 100, .12);
+            position: relative;
+        }
+
+        .csvc-gallery figure.wide {
+            grid-column: span 2;
+        }
+
+        .csvc-gallery figure img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            transition: transform .4s ease;
+        }
+
+        .csvc-gallery figure.wide img {
+            height: 260px;
+        }
+
+        .csvc-gallery figure:hover img {
+            transform: scale(1.05);
+        }
+
+        .csvc-gallery figcaption {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 10px 14px;
+            font-size: 13px;
+            font-weight: 700;
+            color: #fff;
+            background: linear-gradient(to top, rgba(20, 55, 100, .82), rgba(20, 55, 100, 0));
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width:1024px) {
+            .csvc-hero-inner {
+                grid-template-columns: 1fr;
+            }
+
+            .csvc-hero-card {
+                display: none;
+            }
+
+            .csvc-feature.two-col {
+                grid-template-columns: 1fr;
+            }
+
+            .csvc-feature.two-col.reverse {
+                direction: ltr;
+            }
+
+            .csvc-gallery {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .csvc-gallery figure.wide {
+                grid-column: span 1;
+            }
+        }
+
+        @media (max-width:600px) {
+            .csvc-hero {
+                padding: 96px 0 44px;
+            }
+
+            .csvc-intro-card {
+                padding: 22px 20px;
+            }
+
+            .csvc-feature {
+                padding: 24px 20px;
+            }
+
+            .csvc-gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .csvc-feature-imgs.grid-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ===== CTA ===== */
+        .ct-cta-wrap {
+            --ct-cta-h: 92px;
+            position: relative;
+            z-index: 5;
+            margin: calc(-1 * var(--ct-cta-h)) 20px calc(-1 * var(--ct-cta-h));
+            background: transparent;
+        }
+
+        .ct-cta-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        .ct-cta-card {
+            width: min(100%, 1020px);
+            min-height: calc(var(--ct-cta-h)*2);
+            border-radius: 26px;
+            overflow: hidden;
+            position: relative;
+            background: url('storage/banner/ve-chung-toi-web.jpg') center/cover no-repeat;
+            box-shadow: 0 20px 40px rgba(16, 52, 92, .3);
+            color: #fff;
+            padding: 24px 32px;
+        }
+
+        .ct-cta-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(110deg, rgba(17, 64, 114, .93), rgba(28, 89, 153, .9) 52%, rgba(44, 121, 190, .82));
+        }
+
+        .ct-cta-content {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .ct-cta-text>div {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 6px;
+        }
+
+        .ct-cta-text small {
+            display: inline-block;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: .06em;
+            text-transform: uppercase;
+            padding: 6px 12px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, .18);
+        }
+
+        .ct-cta-text h3 {
+            font-family: 'Garamond', serif;
+            font-size: clamp(30px, 2.6vw, 40px);
+            margin: 0;
+            color: #fff;
+        }
+
+        .ct-cta-text p {
+            font-size: 18px;
+            line-height: 1.5;
+            margin: 0;
+            color: rgba(255, 255, 255, .96);
+        }
+
+        .ct-cta-actions {
+            text-align: right;
+        }
+
+        .ct-cta-note {
+            margin-top: 10px;
+            font-size: 13px;
+            color: rgba(255, 255, 255, .88);
+        }
+
+        .ct-cta-btn {
+            display: inline-block;
+            min-width: 160px;
+            padding: 13px 28px;
+            border-radius: 999px;
+            background: #fff;
+            color: #1d4f87;
+            font-weight: 700;
+            font-size: 16px;
+            text-decoration: none;
+            transition: all .3s;
+        }
+
+        .ct-cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, .22);
+        }
+
+        @media (max-width: 768px) {
+            .ct-cta-content {
+                grid-template-columns: 1fr;
+            }
+
+            .ct-cta-actions {
+                text-align: left;
+            }
         }
 
         .facility-hero-modern {
@@ -311,2153 +809,210 @@
     <?php include 'includes/header.php'; ?>
     <div class="overlay_mark_search" style="display:none;"></div>
 
-    <main class="body-content">
-        <div class="csvc_main">
-            <section class="cs__header facility-hero-modern">
-                <div class="container">
-                    <div class="facility-breadcrumb">
-                        <a href="index.php">Trang chủ</a>
-                        <span>/</span>
-                        <span>Cơ sở vật chất</span>
-                    </div>
-                    <h1 class="big__header-title font-garamond-bold facility-hero-title">Cơ sở vật chất hiện đại, truyền cảm hứng học tập</h1>
-                    <p class="size-16 facility-hero-desc" style="max-width:860px;line-height:1.9;margin-top:16px;">
-                        Không gian trường học được thiết kế đồng bộ theo tiêu chí an toàn, thân thiện và sáng tạo,
-                        giúp mỗi ngày đến trường của học sinh là một trải nghiệm đầy cảm hứng.
-                    </p>
-                </div>
-            </section>
+    <main class="body-content csvc-page">
 
-            <section class="facility-intro">
-                <p>
-                    Khuôn viên trường PTLC Olympia trên khu đất rộng 10,000 m2 được thiết kế bởi công ty kiến trúc Mỹ
-                    Perkins Eastman với phong cách hiện đại. Mỗi góc trường, dãy hành lang, phòng học đều được quy
-                    hoạch thành không gian học tập - vui chơi - khám phá để học sinh phát triển toàn diện cả tri thức,
-                    kỹ năng và cảm xúc.
-                </p>
-            </section>
-
-            <section class="cs_content cs-faci">
-                <div class="container">
-                    <ul class="tablist">
-                        <li class="tablinks size-16 color-8a font-avenir-medium"
-                            onclick="openCity(event, 'NoiBat', 'csvc')">
-                            <a class="color-8a" href="#NoiBat" id="defaultOpen">Nổi bật <span
-                                    class="csvc-total-item"></span></a>
-                        </li>
-                        <li class="tablinks size-16 color-8a font-avenir-medium "
-                            onclick="openCity(event, 'KhuonVienNgoaiTroi',  'csvc')">
-                            <a class="color-8a" href="#KhuonVienNgoaiTroi">Khuôn viên ngoài trời <span
-                                    class="csvc-total-item"></span></a>
-                        </li>
-                        <li class="tablinks size-16  font-avenir-medium"
-                            onclick="openCity(event, 'PhongChucNang', 'csvc')">
-                            <a class="color-8a" href="#PhongChucNang">Phòng chức năng <span
-                                    class="csvc-total-item"></span></a>
-                        </li>
-                        <li class="tablinks size-16 color-8a font-avenir-medium"
-                            onclick="openCity(event, 'NhaAn', 'csvc')">
-                            <a class="color-8a" href="#NhaAn">Nhà ăn <span class="csvc-total-item"></span></a>
-                        </li>
-                        <li class="tablinks size-16 color-8a font-avenir-medium"
-                            onclick="openCity(event, 'NhaHat', 'csvc')">
-                            <a class="color-8a" href="#NhaHat">Nhà hát <span class="csvc-total-item"></span></a>
-                        </li>
-                        <li class="tablinks size-16 color-8a font-avenir-medium"
-                            onclick="openCity(event, 'Khac',  'csvc')">
-                            <a class="color-8a" href="#Khac">Khác <span class="csvc-total-item"></span></a>
-                        </li>
-                    </ul>
-
-                    <div id="NoiBat" class="tab-content-img tabcontent">
-                        <div class="tab-content">
-                            <div class="tab-iframe"><iframe width="560" height="315"
-                                    src="https://www.youtube.com/embed/yuNF7ge0COU" title="YouTube video player"
-                                    frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen></iframe></div>
-                            <div class="tab-content-1 tab-content-item">
-                                <div class="img-row img-box img-box-1"
-                                    onclick="openModal('NoiBatModal');currentSlide(1, 'NoiBatModal')">
-                                    <img class="cs_img" src="olympia/images/noibat_1.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="h7 white font-garamond-bold description-title ">Sân Osaka</p>
-                                            <p class="size-14 white font-avenir-regular cs_des">Sân Osaka mang tên loài
-                                                hoa đỏ được trồng tại Olympia từ những ngày đầu thành lập trường. Đây là
-                                                khoảng sân ngợp nắng được các bạn hoc sinh yêu thích tản ra vui chơi, đi
-                                                bộ hoặc học tập trong những tiết ngoài trời.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="tab-content-2 tab-content-item">
-                                <div class="img-left img-box img-box-2"
-                                    onclick="openModal('NoiBatModal');currentSlide(2, 'NoiBatModal')">
-                                    <img class="cs_img" src="olympia/images/noibat_2.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="h7 white font-garamond-bold description-title ">Sân bóng</p>
-                                            <p class="size-14 white font-avenir-regular cs_des">Sân bóng đá cỏ nhân tạo
-                                                mini, phục vụ các hoạt động thể thao chính khoá và CLB tại trường.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="img-right img-box img-box-3"
-                                    onclick="openModal('NoiBatModal');currentSlide(3, 'NoiBatModal')">
-                                    <img class="cs_img" src="olympia/images/noibat_3.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="h7 white font-garamond-bold description-title ">Sân sắc màu</p>
-                                            <p class="size-14 white font-avenir-regular cs_des">Khoảnh sân nhỏ được
-                                                trang trí bắt mắt dành cho các bạn khối Mầm non tại trường.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-content-3 tab-content-item">
-                                <div class="img-left img-box img-box-4"
-                                    onclick="openModal('NoiBatModal');currentSlide(4, 'NoiBatModal')">
-                                    <img class="cs_img" src="olympia/images/noibat_4.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="h7 white font-garamond-bold description-title ">Thư viện Olympus
-                                            </p>
-                                            <p class="size-14 white font-avenir-regular cs_des">Thư viện là khoảng không
-                                                gian yên tĩnh với hàng ngàn đầu sách được cập nhật và đóng góp hàng năm
-                                                bởi nhà trường và cộng đồng Olympians. Thư viện được bố trí chỗ ngồi
-                                                linh hoạt, phục vụ đa dạng nhu cầu của học sinh, giáo viên nhân viên.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="img-right img-box img-box-5"
-                                    onclick="openModal('NoiBatModal');currentSlide(5, 'NoiBatModal')">
-                                    <img class="cs_img" src="olympia/images/noibat_5.png">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="h7 white font-garamond-bold description-title ">Vườn khoa học</p>
-                                            <p class="size-14 white font-avenir-regular cs_des">Đây vừa là khu vực trồng
-                                                nhiều loại cây gia vị, vườn ươm hạt giống, vừa là khu vực học tập của
-                                                học sinh về các loại thực vật trong các giờ khoa học hay LiFE... Đây là
-                                                khu vực ưa thích của những tiết học ngoài trời đầy cảm hứng của cô trò
-                                                Olympia.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-content-4 tab-content-item">
-                                <div class="img-left img-box img-box-6"
-                                    onclick="openModal('NoiBatModal');currentSlide(6, 'NoiBatModal')">
-                                    <img class="cs_img" src="olympia/images/noibat_6.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="h7 white font-garamond-bold description-title ">Phòng học</p>
-                                            <p class="size-14 white font-avenir-regular cs_des">Olympia có 50 phòng học
-                                                được trang bị đầy đủ tiện nghi: ánh sáng, điều hoà hệ thống, máy chiếu,
-                                                loa, bảng nỉ ghim/bảng mica... Bên ngoài phòng học là tủ đựng đồ cá nhân
-                                                của học sinh.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="img-right img-box img-box-7"
-                                    onclick="openModal('NoiBatModal');currentSlide(7, 'NoiBatModal')">
-                                    <img class="cs_img" src="olympia/images/noibat_7.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="h7 white font-garamond-bold description-title ">Hệ thống giáo dục
-                                                Olympia</p>
-                                            <p class="size-14 white font-avenir-regular cs_des">Hệ thống giáo dục
-                                                Olympia bao gồm trường Trung học phổ thông Olympia, trường Trung học cơ
-                                                sở Olympia, trường Tiểu học Olympia và Tiền tiểu học Olympia, tọa lạc
-                                                tại khu đô thị mới Trung Văn, Nam Từ Liêm, Hà Nội.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-content-3 tab-content-item">
-                                <div class="img-left img-box img-box-4"
-                                    onclick="openModal('NoiBatModal');currentSlide(8, 'NoiBatModal')">
-                                    <img class="cs_img" src="olympia/images/noibat_8.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="h7 white font-garamond-bold description-title ">Nhà ăn</p>
-                                            <p class="size-14 white font-avenir-regular cs_des">Olympia có 3 nhà ăn, 2
-                                                nhà ăn toà Mind và 1 nhà ăn toà Heart với tổng sức chứa 750 người. Quy
-                                                trình bếp ăn một chiều đảm bảo an toàn vệ sinh thực phẩm. Bếp ăn Olympia
-                                                là ấn tượng sâu đậm với nhiều thế hệ học sinh và phụ huynh.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="img-right img-box img-box-5"
-                                    onclick="openModal('NoiBatModal');currentSlide(9, 'NoiBatModal')">
-                                    <img class="cs_img" src="olympia/images/noibat_9.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="h7 white font-garamond-bold description-title ">Vệ sinh</p>
-                                            <p class="size-14 white font-avenir-regular cs_des">Phòng vệ sinh sạch sẽ,
-                                                được lau dọn theo giờ và phát nhạc cổ điển thư thái.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+        <!-- ===== HERO ===== -->
+        <section class="csvc-hero">
+            <div class="csvc-wrap" data-aos="fade-up">
+                <div class="csvc-hero-inner">
+                    <div>
+                        <ol class="breadcrumb csvc-breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.php">Trang chủ</a></li>
+                            <li class="breadcrumb-item active">Cơ sở vật chất</li>
+                        </ol>
+                        <h1>Quy mô đẳng cấp &amp; Không gian giáo dục truyền cảm hứng</h1>
+                        <p>Tọa lạc tại "trái tim" của đại đô thị tinh khiết Meyhomes Capital, Meyschool Đoàn Thị Điểm sở
+                            hữu khuôn viên rộng lớn lên đến 16.000 m² với hệ sinh thái giáo dục hiện đại bậc nhất Đảo
+                            Ngọc.</p>
+                        <div class="csvc-hero-pills">
+                            <span>16.000 m² khuôn viên</span>
+                            <span>Gần 60 phòng học &amp; chức năng</span>
+                            <span>Trường học trong công viên</span>
                         </div>
                     </div>
-
-                    <!-- The Modal/Lightbox -->
-                    <div id="NoiBatModal" class="modal fade">
-                        <div class="modal-inner">
-                            <span class="close cursor" onclick="closeModal('NoiBatModal')"><img class="close-popup"
-                                    src="olympia/images/close-popup.svg" alt=""></span>
-                            <div class="modal-content flexdiv">
-                                <div class="modal-content-img container">
-
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">1 / 9</span>
-                                        </div>
-                                        <img src="olympia/images/noibat_1.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="h7 white font-garamond-bold description-title ">Sân Osaka</p>
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Sân Osaka
-                                                    mang tên loài hoa đỏ được trồng tại Olympia từ những ngày đầu thành
-                                                    lập trường.Đây là khoảng sân ngợp nắng được các bạn hoc sinh yêu
-                                                    thích tản ra vui chơi, đi bộ hoặc học tập trong những tiết ngoài
-                                                    trời.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">2 / 9</span>
-                                        </div>
-                                        <img src="olympia/images/noibat_2.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="h7 white font-garamond-bold description-title ">Sân bóng</p>
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Sân bóng đá
-                                                    cỏ nhân tạo mini, phục vụ các hoạt động thể thao chính khoá và CLB
-                                                    tại trường.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">3 / 9</span>
-                                        </div>
-                                        <img src="olympia/images/noibat_3.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="h7 white font-garamond-bold description-title ">Sân sắc màu
-                                                </p>
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Khoảnh sân
-                                                    nhỏ được trang trí bắt mắt dành cho các bạn khối Mầm non tại trường.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">4 / 9</span>
-                                        </div>
-                                        <img src="olympia/images/noibat_4.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="h7 white font-garamond-bold description-title ">Thư viện
-                                                    Olympus</p>
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Thư viện là
-                                                    khoảng không gian yên tĩnh với hàng ngàn đầu sách được cập nhật và
-                                                    đóng góp hàng năm bởi nhà trường và cộng đồng Olympians. Thư viện
-                                                    được bố trí chỗ ngồi linh hoạt, phục vụ đa dạng nhu cầu của học
-                                                    sinh, giáo viên nhân viên.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">5 / 9</span>
-                                        </div>
-                                        <img src="olympia/images/noibat_5.png">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="h7 white font-garamond-bold description-title ">Vườn khoa học
-                                                </p>
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Đây vừa là
-                                                    khu vực trồng nhiều loại cây gia vị, vườn ươm hạt giống, vừa là khu
-                                                    vực học tập của học sinh về các loại thực vật trong các giờ khoa học
-                                                    hay LiFE... Đây là khu vực ưa thích của những tiết học ngoài trời
-                                                    đầy cảm hứng của cô trò Olympia.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">6 / 9</span>
-                                        </div>
-                                        <img src="olympia/images/noibat_6.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="h7 white font-garamond-bold description-title ">Phòng học</p>
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Olympia có
-                                                    50 phòng học được trang bị đầy đủ tiện nghi: ánh sáng, điều hoà hệ
-                                                    thống, máy chiếu, loa, bảng nỉ ghim/bảng mica... Bên ngoài phòng học
-                                                    là tủ đựng đồ cá nhân của học sinh.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">7 / 9</span>
-                                        </div>
-                                        <img src="olympia/images/noibat_7.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="h7 white font-garamond-bold description-title ">Hệ thống giáo
-                                                    dục Olympia</p>
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Hệ thống
-                                                    giáo dục Olympia bao gồm trường Trung học phổ thông Olympia, trường
-                                                    Trung học cơ sở Olympia, trường Tiểu học Olympia và Tiền tiểu học
-                                                    Olympia, tọa lạc tại khu đô thị mới Trung Văn, Nam Từ Liêm, Hà Nội.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">8 / 9</span>
-                                        </div>
-                                        <img src="olympia/images/noibat_8.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="h7 white font-garamond-bold description-title ">Nhà ăn</p>
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Olympia có
-                                                    3 nhà ăn, 2 nhà ăn toà Mind và 1 nhà ăn toà Heart với tổng sức chứa
-                                                    750 người. Quy trình bếp ăn một chiều đảm bảo an toàn vệ sinh thực
-                                                    phẩm. Bếp ăn Olympia là ấn tượng sâu đậm với nhiều thế hệ học sinh
-                                                    và phụ huynh.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">9 / 9</span>
-                                        </div>
-                                        <img src="olympia/images/noibat_9.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="h7 white font-garamond-bold description-title ">Vệ sinh</p>
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Phòng vệ
-                                                    sinh sạch sẽ, được lau dọn theo giờ và phát nhạc cổ điển thư thái.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Next/previous controls -->
-                                <a class="prev white" onclick="plusSlides(-1, 'NoiBatModal')"><img
-                                        class="modal-btn-prev" src="olympia/images/button-1-3.svg" alt=""></a>
-                                <a class="next white" onclick="plusSlides(1, 'NoiBatModal')"><img class="modal-btn-next"
-                                        src="olympia/images/button-1-3.svg" alt=""></a>
-
-                            </div>
-                        </div>
-                    </div> <!-- The Modal/Lightbox end -->
-
-                    <div id="KhuonVienNgoaiTroi" class="tabcontent">
-                        <div class="tab-content">
-                            <div class="tab-iframe"><iframe width="560" height="315"
-                                    src="https://www.youtube.com/embed/vL0hhBH0l0U" title="YouTube video player"
-                                    frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen></iframe></div>
-
-                            <div class="tab-content-1 tab-content-item">
-                                <div class="img-row img-box img-box-1"
-                                    onclick="openModal('KhuonVienNgoaiTroiModal');currentSlide(1, 'KhuonVienNgoaiTroiModal')">
-                                    <img class="cs_img" src="olympia/images/ngoaitroi_1.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="size-14 white font-avenir-regular cs_des">Ảnh panorama nhìn từ mặt
-                                                ngoài khu đô thị, thấy rõ toàn bộ hai toà nhà chính: toà Mind (Trung
-                                                học) và toà Heart (Tiểu học) cạnh nhau.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="tab-content-2 tab-content-item">
-                                <div class="img-left img-box img-box-6"
-                                    onclick="openModal('KhuonVienNgoaiTroiModal');currentSlide(2, 'KhuonVienNgoaiTroiModal')">
-                                    <img class="cs_img" src="olympia/images/ngoaitroi_2.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="h7 white font-garamond-bold description-title "></p>
-                                            <p class="size-14 white font-avenir-regular cs_des">Khuôn viên vườn trường
-                                                quanh năm được phủ nhiều loại hoa đa sắc, mang tới không gian gần gũi
-                                                thiên nhiên, ấm áp.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="img-right img-box img-box-7"
-                                    onclick="openModal('KhuonVienNgoaiTroiModal');currentSlide(3, 'KhuonVienNgoaiTroiModal')">
-                                    <img class="cs_img" src="olympia/images/ngoaitroi_3.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="h7 white font-garamond-bold description-title "></p>
-                                            <p class="size-14 white font-avenir-regular cs_des">Vườn khoa học: Đây vừa
-                                                là khu vực trồng nhiều loại cây gia vị, vườn ươm hạt giống, vừa là khu
-                                                vực học tập của học sinh về các loại thực vật trong các giờ khoa học hay
-                                                LiFE... Đây là khu vực ưa thích của những tiết học ngoài trời đầy cảm
-                                                hứng của cô trò Olympia.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="tab-content-3 tab-content-item">
-                                <div class="img-left img-box img-box-6"
-                                    onclick="openModal('KhuonVienNgoaiTroiModal');currentSlide(4, 'KhuonVienNgoaiTroiModal')">
-                                    <img class="cs_img" src="olympia/images/ngoaitroi_4.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="h7 white font-garamond-bold description-title "></p>
-                                            <p class="size-14 white font-avenir-regular cs_des">Học sinh chơi bóng đá
-                                                trong một buổi chiều đẹp trời.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="img-right img-box img-box-7"
-                                    onclick="openModal('KhuonVienNgoaiTroiModal');currentSlide(5, 'KhuonVienNgoaiTroiModal')">
-                                    <img class="cs_img" src="olympia/images/ngoaitroi_5.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="h7 white font-garamond-bold description-title "></p>
-                                            <p class="size-14 white font-avenir-regular cs_des">Sân Osaka mang tên loài
-                                                hoa đỏ được trồng tại Olympia từ những ngày đầu thành lập trường. Đây là
-                                                khoảng sân ngợp nắng được các bạn hoc sinh yêu thích tản ra vui chơi, đi
-                                                bộ hoặc học tập trong những tiết ngoài trời.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="tab-content-4 tab-content-item">
-                                <div class="img-left img-box img-box-6"
-                                    onclick="openModal('KhuonVienNgoaiTroiModal');currentSlide(6, 'KhuonVienNgoaiTroiModal')">
-                                    <img class="cs_img" src="olympia/images/ngoaitroi_6.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="h7 white font-garamond-bold description-title "></p>
-                                            <p class="size-14 white font-avenir-regular cs_des">Vườn khoa học: Đây vừa
-                                                là khu vực trồng nhiều loại cây gia vị, vườn ươm hạt giống, vừa là khu
-                                                vực học tập của học sinh về các loại thực vật trong các giờ khoa học hay
-                                                LiFE... Đây là khu vực ưa thích của những tiết học ngoài trời đầy cảm
-                                                hứng của cô trò Olympia.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="img-right img-box img-box-7"
-                                    onclick="openModal('KhuonVienNgoaiTroiModal');currentSlide(7, 'KhuonVienNgoaiTroiModal')">
-                                    <img class="cs_img" src="olympia/images/ngoaitroi_7.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="h7 white font-garamond-bold description-title "></p>
-                                            <p class="size-14 white font-avenir-regular cs_des"></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="tab-content-5 tab-content-item">
-                                <div class="img-left img-box img-box-6"
-                                    onclick="openModal('KhuonVienNgoaiTroiModal');currentSlide(8, 'KhuonVienNgoaiTroiModal')">
-                                    <img class="cs_img" src="olympia/images/ngoaitroi_8.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="h7 white font-garamond-bold description-title "></p>
-                                            <p class="size-14 white font-avenir-regular cs_des">Sân Osaka mang tên loài
-                                                hoa đỏ được trồng tại Olympia từ những ngày đầu thành lập trường. Đây là
-                                                khoảng sân ngợp nắng được các bạn hoc sinh yêu thích tản ra vui chơi, đi
-                                                bộ hoặc học tập trong những tiết ngoài trời.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="img-right img-box img-box-7"
-                                    onclick="openModal('KhuonVienNgoaiTroiModal');currentSlide(9, 'KhuonVienNgoaiTroiModal')">
-                                    <img class="cs_img" src="olympia/images/ngoaitroi_9.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="h7 white font-garamond-bold description-title "></p>
-                                            <p class="size-14 white font-avenir-regular cs_des">Olympia nhìn từ mặt
-                                                ngoài khu đô thị.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="tab-content-4 tab-content-item">
-                                <div class="img-left img-box img-box-6"
-                                    onclick="openModal('KhuonVienNgoaiTroiModal');currentSlide(10, 'KhuonVienNgoaiTroiModal')">
-                                    <img class="cs_img" src="olympia/images/ngoaitroi_10.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="h7 white font-garamond-bold description-title "></p>
-                                            <p class="size-14 white font-avenir-regular cs_des">Hàng bàng Đài Loan ở
-                                                vườn Khoa học (đoạn nối giữa sân bóng rổ và sân bóng đá) là một trong
-                                                hai hàng cây lâu đời nhất tại Olympia, đã từng trải qua nhiều trận bão
-                                                lớn và sinh tồn đến ngày nay.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="img-right img-box img-box-7"
-                                    onclick="openModal('KhuonVienNgoaiTroiModal');currentSlide(11, 'KhuonVienNgoaiTroiModal')">
-                                    <img class="cs_img" src="olympia/images/ngoaitroi_11.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="h7 white font-garamond-bold description-title "></p>
-                                            <p class="size-14 white font-avenir-regular cs_des">Hàng bàng Đài Loan ở
-                                                vườn Khoa học (đoạn nối giữa sân bóng rổ và sân bóng đá) là một trong
-                                                hai hàng cây lâu đời nhất tại Olympia, đã từng trải qua nhiều trận bão
-                                                lớn và sinh tồn đến ngày nay.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="tab-content-5 tab-content-item">
-                                <div class="img-left img-box img-box-6"
-                                    onclick="openModal('KhuonVienNgoaiTroiModal');currentSlide(12, 'KhuonVienNgoaiTroiModal')">
-                                    <img class="cs_img" src="olympia/images/ngoaitroi_12.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="h7 white font-garamond-bold description-title ">Sân bóng</p>
-                                            <p class="size-14 white font-avenir-regular cs_des">Sân bóng đá cỏ nhân tạo
-                                                mini, phục vụ các hoạt động thể thao chính khoá và CLB tại trường.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="img-right img-box img-box-7"
-                                    onclick="openModal('KhuonVienNgoaiTroiModal');currentSlide(13, 'KhuonVienNgoaiTroiModal')">
-                                    <img class="cs_img" src="olympia/images/ngoaitroi_13.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="h7 white font-garamond-bold description-title ">Sân bóng</p>
-                                            <p class="size-14 white font-avenir-regular cs_des">Sân bóng đá cỏ nhân tạo
-                                                mini, phục vụ các hoạt động thể thao chính khoá và CLB tại trường.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="tab-content-4 tab-content-item">
-                                <div class="img-left img-box img-box-6"
-                                    onclick="openModal('KhuonVienNgoaiTroiModal');currentSlide(14, 'KhuonVienNgoaiTroiModal')">
-                                    <img class="cs_img" src="olympia/images/ngoaitroi_14.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="h7 white font-garamond-bold description-title "></p>
-                                            <p class="size-14 white font-avenir-regular cs_des">Khoảnh vườn nhỏ xinh của
-                                                học sinh Tiểu học, được đặt tại sảnh ngoài trời tầng 2 toà Heart. Đây
-                                                cũng là địa điểm học tập của các tiết khoa học hay LiFE.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="img-right img-box img-box-7"
-                                    onclick="openModal('KhuonVienNgoaiTroiModal');currentSlide(15, 'KhuonVienNgoaiTroiModal')">
-                                    <img class="cs_img" src="olympia/images/ngoaitroi_15.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="h7 white font-garamond-bold description-title ">Sân sắc màu</p>
-                                            <p class="size-14 white font-avenir-regular cs_des">Khoảnh sân nhỏ được
-                                                trang trí bắt mắt dành cho các bạn khối Mầm non tại trường.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="tab-content-5 tab-content-item">
-                                <div class="img-left img-box img-box-6"
-                                    onclick="openModal('KhuonVienNgoaiTroiModal');currentSlide(16, 'KhuonVienNgoaiTroiModal')">
-                                    <img class="cs_img" src="olympia/images/ngoaitroi_16.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="h7 white font-garamond-bold description-title ">Sân bóng rổ ngoài
-                                                trời</p>
-                                            <p class="size-14 white font-avenir-regular cs_des">Olympia là một trong số
-                                                ít trường tại Hà Nội có hai sân bóng rổ trong trường, nên thường xuyên
-                                                được lựa chọn là địa điểm tổ chức các giải đấu lớn trên địa bàn thành
-                                                phố.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="img-right img-box img-box-7"
-                                    onclick="openModal('KhuonVienNgoaiTroiModal');currentSlide(17, 'KhuonVienNgoaiTroiModal')">
-                                    <img class="cs_img" src="olympia/images/ngoaitroi_17.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="h7 white font-garamond-bold description-title ">Sân bóng rổ ngoài
-                                                trời</p>
-                                            <p class="size-14 white font-avenir-regular cs_des">Olympia là một trong số
-                                                ít trường tại Hà Nội có hai sân bóng rổ trong trường, nên thường xuyên
-                                                được lựa chọn là địa điểm tổ chức các giải đấu lớn trên địa bàn thành
-                                                phố.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <!-- The Modal/Lightbox -->
-                    <div id="KhuonVienNgoaiTroiModal" class="modal">
-                        <div class="modal-inner">
-                            <span class="close cursor" onclick="closeModal('KhuonVienNgoaiTroiModal')"><img
-                                    class="close-popup" src="olympia/images/close-popup.svg" alt=""></span>
-                            <div class="modal-content flexdiv">
-                                <div class="modal-content-img container">
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">1 / 17</span>
-                                        </div>
-                                        <img src="olympia/images/ngoaitroi_1.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="h7 white font-garamond-bold description-title "></p>
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Ảnh
-                                                    panorama nhìn từ mặt ngoài khu đô thị, thấy rõ toàn bộ hai toà nhà
-                                                    chính: toà Mind (Trung học) và toà Heart (Tiểu học) cạnh nhau.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">2 / 17</span>
-                                        </div>
-                                        <img src="olympia/images/ngoaitroi_2.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="h7 white font-garamond-bold description-title "></p>
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Khuôn viên
-                                                    vườn trường quanh năm được phủ nhiều loại hoa đa sắc, mang tới không
-                                                    gian gần gũi thiên nhiên, ấm áp.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">3 / 17</span>
-                                        </div>
-                                        <img src="olympia/images/ngoaitroi_3.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="h7 white font-garamond-bold description-title "></p>
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Vườn khoa
-                                                    học: Đây vừa là khu vực trồng nhiều loại cây gia vị, vườn ươm hạt
-                                                    giống, vừa là khu vực học tập của học sinh về các loại thực vật
-                                                    trong các giờ khoa học hay LiFE... Đây là khu vực ưa thích của những
-                                                    tiết học ngoài trời đầy cảm hứng của cô trò Olympia.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">4 / 17</span>
-                                        </div>
-                                        <img src="olympia/images/ngoaitroi_4.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="h7 white font-garamond-bold description-title "></p>
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Học sinh
-                                                    chơi bóng đá trong một buổi chiều đẹp trời.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">5 / 17</span>
-                                        </div>
-                                        <img src="olympia/images/ngoaitroi_5.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="h7 white font-garamond-bold description-title "></p>
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Sân Osaka
-                                                    mang tên loài hoa đỏ được trồng tại Olympia từ những ngày đầu thành
-                                                    lập trường. Đây là khoảng sân ngợp nắng được các bạn hoc sinh yêu
-                                                    thích tản ra vui chơi, đi bộ hoặc học tập trong những tiết ngoài
-                                                    trời.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">6 / 17</span>
-                                        </div>
-                                        <img src="olympia/images/ngoaitroi_6.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="h7 white font-garamond-bold description-title "></p>
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Vườn khoa
-                                                    học: Đây vừa là khu vực trồng nhiều loại cây gia vị, vườn ươm hạt
-                                                    giống, vừa là khu vực học tập của học sinh về các loại thực vật
-                                                    trong các giờ khoa học hay LiFE... Đây là khu vực ưa thích của những
-                                                    tiết học ngoài trời đầy cảm hứng của cô trò Olympia.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">7 / 17</span>
-                                        </div>
-                                        <img src="olympia/images/ngoaitroi_7.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="h7 white font-garamond-bold description-title "></p>
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des"></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">8 / 17</span>
-                                        </div>
-                                        <img src="olympia/images/ngoaitroi_8.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="h7 white font-garamond-bold description-title "></p>
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Sân Osaka
-                                                    mang tên loài hoa đỏ được trồng tại Olympia từ những ngày đầu thành
-                                                    lập trường. Đây là khoảng sân ngợp nắng được các bạn hoc sinh yêu
-                                                    thích tản ra vui chơi, đi bộ hoặc học tập trong những tiết ngoài
-                                                    trời.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">9 / 17</span>
-                                        </div>
-                                        <img src="olympia/images/ngoaitroi_9.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="h7 white font-garamond-bold description-title "></p>
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Olympia
-                                                    nhìn từ mặt ngoài khu đô thị.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">10 / 17</span>
-                                        </div>
-                                        <img src="olympia/images/ngoaitroi_10.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="h7 white font-garamond-bold description-title "></p>
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Hàng bàng
-                                                    Đài Loan ở vườn Khoa học (đoạn nối giữa sân bóng rổ và sân bóng đá)
-                                                    là một trong hai hàng cây lâu đời nhất tại Olympia, đã từng trải qua
-                                                    nhiều trận bão lớn và sinh tồn đến ngày nay.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">11 / 17</span>
-                                        </div>
-                                        <img src="olympia/images/ngoaitroi_11.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="h7 white font-garamond-bold description-title "></p>
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Hàng bàng
-                                                    Đài Loan ở vườn Khoa học (đoạn nối giữa sân bóng rổ và sân bóng đá)
-                                                    là một trong hai hàng cây lâu đời nhất tại Olympia, đã từng trải qua
-                                                    nhiều trận bão lớn và sinh tồn đến ngày nay.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">12 / 17</span>
-                                        </div>
-                                        <img src="olympia/images/ngoaitroi_12.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="h7 white font-garamond-bold description-title ">Sân bóng</p>
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Sân bóng đá
-                                                    cỏ nhân tạo mini, phục vụ các hoạt động thể thao chính khoá và CLB
-                                                    tại trường.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">13 / 17</span>
-                                        </div>
-                                        <img src="olympia/images/ngoaitroi_13.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="h7 white font-garamond-bold description-title ">Sân bóng</p>
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Sân bóng đá
-                                                    cỏ nhân tạo mini, phục vụ các hoạt động thể thao chính khoá và CLB
-                                                    tại trường.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">14 / 17</span>
-                                        </div>
-                                        <img src="olympia/images/ngoaitroi_14.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="h7 white font-garamond-bold description-title "></p>
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Khoảnh vườn
-                                                    nhỏ xinh của học sinh Tiểu học, được đặt tại sảnh ngoài trời tầng 2
-                                                    toà Heart. Đây cũng là địa điểm học tập của các tiết khoa học hay
-                                                    LiFE.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">15 / 17</span>
-                                        </div>
-                                        <img src="olympia/images/ngoaitroi_15.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="h7 white font-garamond-bold description-title ">Sân sắc màu
-                                                </p>
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Khoảnh sân
-                                                    nhỏ được trang trí bắt mắt dành cho các bạn khối Mầm non tại trường.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">16 / 17</span>
-                                        </div>
-                                        <img src="olympia/images/ngoaitroi_16.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="h7 white font-garamond-bold description-title ">Sân bóng rổ
-                                                    ngoài trời</p>
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Olympia là
-                                                    một trong số ít trường tại Hà Nội có hai sân bóng rổ trong trường,
-                                                    nên thường xuyên được lựa chọn là địa điểm tổ chức các giải đấu lớn
-                                                    trên địa bàn thành phố.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">17 / 17</span>
-                                        </div>
-                                        <img src="olympia/images/ngoaitroi_17.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="h7 white font-garamond-bold description-title ">Sân bóng rổ
-                                                    ngoài trời</p>
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Olympia là
-                                                    một trong số ít trường tại Hà Nội có hai sân bóng rổ trong trường,
-                                                    nên thường xuyên được lựa chọn là địa điểm tổ chức các giải đấu lớn
-                                                    trên địa bàn thành phố.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Next/previous controls -->
-                                <a class="prev white" onclick="plusSlides(-1, 'KhuonVienNgoaiTroiModal')"><img
-                                        class="modal-btn-prev" src="olympia/images/button-1-3.svg" alt=""></a>
-                                <a class="next white" onclick="plusSlides(1, 'KhuonVienNgoaiTroiModal')"><img
-                                        class="modal-btn-next" src="olympia/images/button-1-3.svg" alt=""></a>
-
-                            </div>
-                        </div>
-                    </div> <!-- The Modal/Lightbox end -->
-
-                    <div id="PhongChucNang" class="tabcontent">
-                        <div class="tab-content">
-                            <div class="tab-iframe"><iframe width="560" height="315"
-                                    src="https://www.youtube.com/embed/QjTqOki0jrM" title="YouTube video player"
-                                    frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen></iframe></div>
-
-                            <div class="tab-content-1 tab-content-item">
-                                <div class="img-row img-box img-box-1"
-                                    onclick="openModal('PhongChucNangModal');currentSlide(1, 'PhongChucNangModal')">
-                                    <img class="cs_img" src="olympia/images/chucnang_1.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="h7 white font-garamond-bold description-title ">Nhà thi đấu</p>
-                                            <p class="size-14 white font-avenir-regular cs_des">Nhà thi đấu bóng rổ
-                                                Olympia rộng hơn 500m2, được thiết kế theo chuẩn của Hiệp hội bóng rổ
-                                                quốc gia Hoa Kỳ (NBA).</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-content-2 tab-content-item chucnang">
-
-                                <div class="img-left img-box img-box-2"
-                                    onclick="openModal('PhongChucNangModal');currentSlide(2, 'PhongChucNangModal')">
-                                    <img class="cs_img" src="olympia/images/chucnang_2.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="h7 white font-garamond-bold description-title ">Bể bơi bốn mùa</p>
-                                            <p class="size-14 white font-avenir-regular cs_des">Bể bơi được đặt dưới
-                                                tầng hầm toà Mind, được xử lý lọc nước theo tiêu chuẩn quy định, đảm bảo
-                                                an toàn tuyệt đối cho học sinh.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="img-right img-box img-box-3"
-                                    onclick="openModal('PhongChucNangModal');currentSlide(3, 'PhongChucNangModal')">
-                                    <img class="cs_img" src="olympia/images/chucnang_3.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="h7 white font-garamond-bold description-title ">Bể bơi bốn mùa</p>
-                                            <p class="size-14 white font-avenir-regular cs_des">Bể bơi được đặt dưới
-                                                tầng hầm toà Mind, được xử lý lọc nước theo tiêu chuẩn quy định, đảm bảo
-                                                an toàn tuyệt đối cho học sinh.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-content-3 tab-content-item chucnang">
-
-                                <div class="img-left img-box img-box-2"
-                                    onclick="openModal('PhongChucNangModal');currentSlide(4, 'PhongChucNangModal')">
-                                    <img class="cs_img" src="olympia/images/chucnang_4.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="h7 white font-garamond-bold description-title ">Bể bơi bốn mùa</p>
-                                            <p class="size-14 white font-avenir-regular cs_des">Bể bơi được đặt dưới
-                                                tầng hầm toà Mind, được xử lý lọc nước theo tiêu chuẩn quy định, đảm bảo
-                                                an toàn tuyệt đối cho học sinh.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="img-right img-box img-box-3"
-                                    onclick="openModal('PhongChucNangModal');currentSlide(5, 'PhongChucNangModal')">
-                                    <img class="cs_img" src="olympia/images/chucnang_5.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="h7 white font-garamond-bold description-title ">Bể bơi bốn mùa</p>
-                                            <p class="size-14 white font-avenir-regular cs_des">Bể bơi được đặt dưới
-                                                tầng hầm toà Mind, được xử lý lọc nước theo tiêu chuẩn quy định, đảm bảo
-                                                an toàn tuyệt đối cho học sinh.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-content-4 tab-content-item chucnang">
-
-                                <div class="img-left img-box img-box-2"
-                                    onclick="openModal('PhongChucNangModal');currentSlide(6, 'PhongChucNangModal')">
-                                    <img class="cs_img" src="olympia/images/chucnang_6.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="h7 white font-garamond-bold description-title "></p>
-                                            <p class="size-14 white font-avenir-regular cs_des"></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="img-right img-box img-box-3"
-                                    onclick="openModal('PhongChucNangModal');currentSlide(7, 'PhongChucNangModal')">
-                                    <img class="cs_img" src="olympia/images/chucnang_7.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="h7 white font-garamond-bold description-title ">Phòng học</p>
-                                            <p class="size-14 white font-avenir-regular cs_des">Olympia có 50 phòng học
-                                                được trang bị đầy đủ tiện nghi: ánh sáng, điều hoà hệ thống, máy chiếu,
-                                                loa, bảng nỉ ghim/bảng mica... Bên ngoài phòng học là tủ đựng đồ cá nhân
-                                                của học sinh.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-content-5 tab-content-item chucnang">
-
-                                <div class="img-left img-box img-box-2"
-                                    onclick="openModal('PhongChucNangModal');currentSlide(8, 'PhongChucNangModal')">
-                                    <img class="cs_img" src="olympia/images/chucnang_7a.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="h7 white font-garamond-bold description-title ">Phòng học</p>
-                                            <p class="size-14 white font-avenir-regular cs_des">Olympia có 50 phòng học
-                                                được trang bị đầy đủ tiện nghi: ánh sáng, điều hoà hệ thống, máy chiếu,
-                                                loa, bảng nỉ ghim/bảng mica... Bên ngoài phòng học là tủ đựng đồ cá nhân
-                                                của học sinh.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="img-right img-box img-box-3"
-                                    onclick="openModal('PhongChucNangModal');currentSlide(9, 'PhongChucNangModal')">
-                                    <img class="cs_img" src="olympia/images/chucnang_8.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="h7 white font-garamond-bold description-title ">Thư viện Olympus
-                                            </p>
-                                            <p class="size-14 white font-avenir-regular cs_des">Thư viện là khoảng không
-                                                gian yên tĩnh với hàng ngàn đầu sách được cập nhật và đóng góp hàng năm
-                                                bởi nhà trường và cộng đồng Olympians. Thư viện được bố trí chỗ ngồi
-                                                linh hoạt, phục vụ đa dạng nhu cầu của học sinh, giáo viên nhân viên.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-content-4 tab-content-item chucnang">
-
-                                <div class="img-left img-box img-box-2"
-                                    onclick="openModal('PhongChucNangModal');currentSlide(10, 'PhongChucNangModal')">
-                                    <img class="cs_img" src="olympia/images/chucnang_8a.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="h7 white font-garamond-bold description-title ">Thư viện Olympus
-                                            </p>
-                                            <p class="size-14 white font-avenir-regular cs_des">Thư viện là khoảng không
-                                                gian yên tĩnh với hàng ngàn đầu sách được cập nhật và đóng góp hàng năm
-                                                bởi nhà trường và cộng đồng Olympians. Thư viện được bố trí chỗ ngồi
-                                                linh hoạt, phục vụ đa dạng nhu cầu của học sinh, giáo viên nhân viên.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="img-right img-box img-box-3"
-                                    onclick="openModal('PhongChucNangModal');currentSlide(11, 'PhongChucNangModal')">
-                                    <img class="cs_img" src="olympia/images/chucnang_9.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="h7 white font-garamond-bold description-title ">Thư viện Olympus
-                                            </p>
-                                            <p class="size-14 white font-avenir-regular cs_des">Thư viện là khoảng không
-                                                gian yên tĩnh với hàng ngàn đầu sách được cập nhật và đóng góp hàng năm
-                                                bởi nhà trường và cộng đồng Olympians. Thư viện được bố trí chỗ ngồi
-                                                linh hoạt, phục vụ đa dạng nhu cầu của học sinh, giáo viên nhân viên.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-content-5 tab-content-item chucnang">
-
-                                <div class="img-left img-box img-box-2"
-                                    onclick="openModal('PhongChucNangModal');currentSlide(12, 'PhongChucNangModal')">
-                                    <img class="cs_img" src="olympia/images/chucnang_10.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="h7 white font-garamond-bold description-title ">Phòng tin học</p>
-                                            <p class="size-14 white font-avenir-regular cs_des">Cả hai toà nhà đều có
-                                                phòng tin học được trang bị máy tính, loa, các phần mềm bản quyền... cho
-                                                học sinh học tập.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="img-right img-box img-box-3"
-                                    onclick="openModal('PhongChucNangModal');currentSlide(13, 'PhongChucNangModal')">
-                                    <img class="cs_img" src="olympia/images/chucnang_11.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="h7 white font-garamond-bold description-title ">Phòng thí nghiệm
-                                            </p>
-                                            <p class="size-14 white font-avenir-regular cs_des">Phòng thí nghiệm Vật lý,
-                                                Hoá học được trang bị đầy đủ đồ dùng, học liệu phục vụ các tiết học
-                                                STEAM của học sinh.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-content-4 tab-content-item chucnang">
-
-                                <div class="img-left img-box img-box-2"
-                                    onclick="openModal('PhongChucNangModal');currentSlide(14, 'PhongChucNangModal')">
-                                    <img class="cs_img" src="olympia/images/chucnang_12.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="h7 white font-garamond-bold description-title ">Phòng Mỹ thuật</p>
-                                            <p class="size-14 white font-avenir-regular cs_des">Olympia có 2 phòng mỹ
-                                                thuật với không gian được thiết kế sáng tạo, trang bị đầy đủ học phẩm,
-                                                học liệu phục vụ bộ môn. Các bạn học sinh cũng đã có nhiều trải nghiệm
-                                                làm triển lãm, dự án nghệ thuật tại phòng Mỹ thuật.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="img-right img-box img-box-3"
-                                    onclick="openModal('PhongChucNangModal');currentSlide(15, 'PhongChucNangModal')">
-                                    <img class="cs_img" src="olympia/images/chucnang_13.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="h7 white font-garamond-bold description-title ">Phòng Piano</p>
-                                            <p class="size-14 white font-avenir-regular cs_des">Phòng Piano được trang
-                                                bị 11 cây đàn điện nhãn hiệu Privia nổi tiếng với nhiều chức năng chuyển
-                                                tiếng, ghi âm, 01 cây đàn Cơ Casio. Ngoài ra, Olympia có 01 đàn grand
-                                                Yamaha được đặt tại Nhà hát phục vụ biểu diễn. Đàn được bảo dưỡng một
-                                                năm 2 lần với đội ngũ kỹ thuật chuyên nghiệp.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- The Modal/Lightbox -->
-                    <div id="PhongChucNangModal" class="modal">
-                        <div class="modal-inner">
-                            <span class="close cursor" onclick="closeModal('PhongChucNangModal')"><img
-                                    class="close-popup" src="olympia/images/close-popup.svg" alt=""></span>
-                            <div class="modal-content flexdiv">
-                                <div class="modal-content-img container">
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">1 / 15</span>
-                                        </div>
-                                        <img src="olympia/images/chucnang_1.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="h7 white font-garamond-bold description-title">Nhà thi đấu</p>
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Nhà thi đấu
-                                                    bóng rổ Olympia rộng hơn 500m2, được thiết kế theo chuẩn của Hiệp
-                                                    hội bóng rổ quốc gia Hoa Kỳ (NBA).</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">2 / 15</span>
-                                        </div>
-                                        <img src="olympia/images/chucnang_2.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="h7 white font-garamond-bold description-title">Bể bơi bốn mùa
-                                                </p>
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Bể bơi được
-                                                    đặt dưới tầng hầm toà Mind, được xử lý lọc nước theo tiêu chuẩn quy
-                                                    định, đảm bảo an toàn tuyệt đối cho học sinh.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">3 / 15</span>
-                                        </div>
-                                        <img src="olympia/images/chucnang_3.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="h7 white font-garamond-bold description-title">Bể bơi bốn mùa
-                                                </p>
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Bể bơi được
-                                                    đặt dưới tầng hầm toà Mind, được xử lý lọc nước theo tiêu chuẩn quy
-                                                    định, đảm bảo an toàn tuyệt đối cho học sinh.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">4 / 15</span>
-                                        </div>
-                                        <img src="olympia/images/chucnang_4.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="h7 white font-garamond-bold description-title">Bể bơi bốn mùa
-                                                </p>
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Bể bơi được
-                                                    đặt dưới tầng hầm toà Mind, được xử lý lọc nước theo tiêu chuẩn quy
-                                                    định, đảm bảo an toàn tuyệt đối cho học sinh.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">5 / 15</span>
-                                        </div>
-                                        <img src="olympia/images/chucnang_5.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="h7 white font-garamond-bold description-title">Bể bơi bốn mùa
-                                                </p>
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Bể bơi được
-                                                    đặt dưới tầng hầm toà Mind, được xử lý lọc nước theo tiêu chuẩn quy
-                                                    định, đảm bảo an toàn tuyệt đối cho học sinh.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">6 / 15</span>
-                                        </div>
-                                        <img src="olympia/images/chucnang_6.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="h7 white font-garamond-bold description-title"></p>
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des"></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">7 / 15</span>
-                                        </div>
-                                        <img src="olympia/images/chucnang_7.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="h7 white font-garamond-bold description-title">Phòng học</p>
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Olympia có
-                                                    50 phòng học được trang bị đầy đủ tiện nghi: ánh sáng, điều hoà hệ
-                                                    thống, máy chiếu, loa, bảng nỉ ghim/bảng mica... Bên ngoài phòng học
-                                                    là tủ đựng đồ cá nhân của học sinh.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">8 / 15</span>
-                                        </div>
-                                        <img src="olympia/images/chucnang_7a.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="h7 white font-garamond-bold description-title">Phòng học</p>
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Olympia có
-                                                    50 phòng học được trang bị đầy đủ tiện nghi: ánh sáng, điều hoà hệ
-                                                    thống, máy chiếu, loa, bảng nỉ ghim/bảng mica... Bên ngoài phòng học
-                                                    là tủ đựng đồ cá nhân của học sinh.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">9 / 15</span>
-                                        </div>
-                                        <img src="olympia/images/chucnang_8.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="h7 white font-garamond-bold description-title">Thư viện
-                                                    Olympus</p>
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Thư viện là
-                                                    khoảng không gian yên tĩnh với hàng ngàn đầu sách được cập nhật và
-                                                    đóng góp hàng năm bởi nhà trường và cộng đồng Olympians. Thư viện
-                                                    được bố trí chỗ ngồi linh hoạt, phục vụ đa dạng nhu cầu của học
-                                                    sinh, giáo viên nhân viên.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">10 / 15</span>
-                                        </div>
-                                        <img src="olympia/images/chucnang_8a.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="h7 white font-garamond-bold description-title">Thư viện
-                                                    Olympus</p>
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Thư viện là
-                                                    khoảng không gian yên tĩnh với hàng ngàn đầu sách được cập nhật và
-                                                    đóng góp hàng năm bởi nhà trường và cộng đồng Olympians. Thư viện
-                                                    được bố trí chỗ ngồi linh hoạt, phục vụ đa dạng nhu cầu của học
-                                                    sinh, giáo viên nhân viên.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">11 / 15</span>
-                                        </div>
-                                        <img src="olympia/images/chucnang_9.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="h7 white font-garamond-bold description-title">Thư viện
-                                                    Olympus</p>
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Thư viện là
-                                                    khoảng không gian yên tĩnh với hàng ngàn đầu sách được cập nhật và
-                                                    đóng góp hàng năm bởi nhà trường và cộng đồng Olympians. Thư viện
-                                                    được bố trí chỗ ngồi linh hoạt, phục vụ đa dạng nhu cầu của học
-                                                    sinh, giáo viên nhân viên.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">12 / 15</span>
-                                        </div>
-                                        <img src="olympia/images/chucnang_10.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="h7 white font-garamond-bold description-title">Phòng tin học
-                                                </p>
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Cả hai toà
-                                                    nhà đều có phòng tin học được trang bị máy tính, loa, các phần mềm
-                                                    bản quyền... cho học sinh học tập.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">13 / 15</span>
-                                        </div>
-                                        <img src="olympia/images/chucnang_11.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="h7 white font-garamond-bold description-title">Phòng thí
-                                                    nghiệm</p>
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Phòng thí
-                                                    nghiệm Vật lý, Hoá học được trang bị đầy đủ đồ dùng, học liệu phục
-                                                    vụ các tiết học STEAM của học sinh.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">14 / 15</span>
-                                        </div>
-                                        <img src="olympia/images/chucnang_12.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="h7 white font-garamond-bold description-title">Phòng Mỹ thuật
-                                                </p>
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Olympia có
-                                                    2 phòng mỹ thuật với không gian được thiết kế sáng tạo, trang bị đầy
-                                                    đủ học phẩm, học liệu phục vụ bộ môn. Các bạn học sinh cũng đã có
-                                                    nhiều trải nghiệm làm triển lãm, dự án nghệ thuật tại phòng Mỹ
-                                                    thuật.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">15 / 15</span>
-                                        </div>
-                                        <img src="olympia/images/chucnang_13.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="h7 white font-garamond-bold description-title">Phòng Piano</p>
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Phòng Piano
-                                                    được trang bị 11 cây đàn điện nhãn hiệu Privia nổi tiếng với nhiều
-                                                    chức năng chuyển tiếng, ghi âm, 01 cây đàn Cơ Casio. Ngoài ra,
-                                                    Olympia có 01 đàn grand Yamaha được đặt tại Nhà hát phục vụ biểu
-                                                    diễn. Đàn được bảo dưỡng một năm 2 lần với đội ngũ kỹ thuật chuyên
-                                                    nghiệp.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                                <!-- Next/previous controls -->
-                                <a class="prev white" onclick="plusSlides(-1, 'PhongChucNangModal')"><img
-                                        class="modal-btn-prev" src="olympia/images/button-1-3.svg" alt=""></a>
-                                <a class="next white" onclick="plusSlides(1, 'PhongChucNangModal')"><img
-                                        class="modal-btn-next" src="olympia/images/button-1-3.svg" alt=""></a>
-
-                            </div>
-                        </div>
-                    </div> <!-- The Modal/Lightbox end -->
-
-                    <div id="NhaAn" class="tabcontent">
-                        <div class="tab-content">
-                            <div class="tab-iframe"><iframe width="560" height="315"
-                                    src="https://www.youtube.com/embed/7OVA1tqpkMw" title="YouTube video player"
-                                    frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen></iframe></div>
-
-                            <div class="tab-content-1 tab-content-item">
-                                <div class="img-row img-box img-box-1"
-                                    onclick="openModal('NhaAnModal');currentSlide(1, 'NhaAnModal')">
-                                    <img class="cs_img" src="olympia/images/nhaan-3.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="h7 white font-garamond-bold description-title "></p>
-                                            <p class="size-14 white font-avenir-regular cs_des">Olympia có 3 nhà ăn, 2
-                                                nhà ăn toà Mind và 1 nhà ăn toà Heart với tổng sức chứa 750 người. Quy
-                                                trình bếp ăn một chiều đảm bảo an toàn vệ sinh thực phẩm. Bếp ăn Olympia
-                                                là ấn tượng sâu đậm với nhiều thế hệ học sinh và phụ huynh.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-content-2 tab-content-item chucnang">
-
-                                <div class="img-left img-box img-box-2"
-                                    onclick="openModal('NhaAnModal');currentSlide(2, 'NhaAnModal')">
-                                    <img class="cs_img" src="olympia/images/nhaan-2.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="size-14 white font-avenir-regular cs_des">Olympia có 3 nhà ăn, 2
-                                                nhà ăn toà Mind và 1 nhà ăn toà Heart với tổng sức chứa 750 người. Quy
-                                                trình bếp ăn một chiều đảm bảo an toàn vệ sinh thực phẩm. Bếp ăn Olympia
-                                                là ấn tượng sâu đậm với nhiều thế hệ học sinh và phụ huynh.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="img-right img-box img-box-3"
-                                    onclick="openModal('NhaAnModal');currentSlide(3, 'NhaAnModal')">
-                                    <img class="cs_img" src="olympia/images/nhaan-1.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="size-14 white font-avenir-regular cs_des">Olympia có 3 nhà ăn, 2
-                                                nhà ăn toà Mind và 1 nhà ăn toà Heart với tổng sức chứa 750 người. Quy
-                                                trình bếp ăn một chiều đảm bảo an toàn vệ sinh thực phẩm. Bếp ăn Olympia
-                                                là ấn tượng sâu đậm với nhiều thế hệ học sinh và phụ huynh.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-content-3 tab-content-item chucnang">
-
-                                <div class="img-left img-box img-box-2"
-                                    onclick="openModal('NhaAnModal');currentSlide(4, 'NhaAnModal')">
-                                    <img class="cs_img" src="olympia/images/nhaan-4.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="size-14 white font-avenir-regular cs_des">Olympia có 3 nhà ăn, 2
-                                                nhà ăn toà Mind và 1 nhà ăn toà Heart với tổng sức chứa 750 người. Quy
-                                                trình bếp ăn một chiều đảm bảo an toàn vệ sinh thực phẩm. Bếp ăn Olympia
-                                                là ấn tượng sâu đậm với nhiều thế hệ học sinh và phụ huynh.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="img-right img-box img-box-3"
-                                    onclick="openModal('NhaAnModal');currentSlide(5, 'NhaAnModal')">
-                                    <img class="cs_img" src="olympia/images/nhaan-5.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="size-14 white font-avenir-regular cs_des">Olympia có 3 nhà ăn, 2
-                                                nhà ăn toà Mind và 1 nhà ăn toà Heart với tổng sức chứa 750 người. Quy
-                                                trình bếp ăn một chiều đảm bảo an toàn vệ sinh thực phẩm. Bếp ăn Olympia
-                                                là ấn tượng sâu đậm với nhiều thế hệ học sinh và phụ huynh.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-content-4 tab-content-item chucnang">
-
-                                <div class="img-left img-box img-box-2"
-                                    onclick="openModal('NhaAnModal');currentSlide(6, 'NhaAnModal')">
-                                    <img class="cs_img" src="olympia/images/nhaan-7.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="size-14 white font-avenir-regular cs_des">Olympia có 3 nhà ăn, 2
-                                                nhà ăn toà Mind và 1 nhà ăn toà Heart với tổng sức chứa 750 người. Quy
-                                                trình bếp ăn một chiều đảm bảo an toàn vệ sinh thực phẩm. Bếp ăn Olympia
-                                                là ấn tượng sâu đậm với nhiều thế hệ học sinh và phụ huynh.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="img-right img-box img-box-3"
-                                    onclick="openModal('NhaAnModal');currentSlide(7, 'NhaAnModal')">
-                                    <img class="cs_img" src="olympia/images/nhaan-8.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="size-14 white font-avenir-regular cs_des">Olympia có 3 nhà ăn, 2
-                                                nhà ăn toà Mind và 1 nhà ăn toà Heart với tổng sức chứa 750 người. Quy
-                                                trình bếp ăn một chiều đảm bảo an toàn vệ sinh thực phẩm. Bếp ăn Olympia
-                                                là ấn tượng sâu đậm với nhiều thế hệ học sinh và phụ huynh.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-
-                        </div>
-                    </div>
-
-                    <!-- The Modal/Lightbox -->
-                    <div id="NhaAnModal" class="modal">
-                        <div class="modal-inner">
-                            <span class="close cursor" onclick="closeModal('NhaAnModal')"><img class="close-popup"
-                                    src="olympia/images/close-popup.svg" alt=""></span>
-                            <div class="modal-content flexdiv">
-                                <div class="modal-content-img container">
-
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">1 / 7</span>
-                                        </div>
-                                        <img src="olympia/images/nhaan-3.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="h7 white font-garamond-bold description-title"></p>
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Olympia có
-                                                    3 nhà ăn, 2 nhà ăn toà Mind và 1 nhà ăn toà Heart với tổng sức chứa
-                                                    750 người. Quy trình bếp ăn một chiều đảm bảo an toàn vệ sinh thực
-                                                    phẩm. Bếp ăn Olympia là ấn tượng sâu đậm với nhiều thế hệ học sinh
-                                                    và phụ huynh.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">2 / 7</span>
-                                        </div>
-                                        <img src="olympia/images/nhaan-2.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="h7 white font-garamond-bold description-title"></p>
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Olympia có
-                                                    3 nhà ăn, 2 nhà ăn toà Mind và 1 nhà ăn toà Heart với tổng sức chứa
-                                                    750 người. Quy trình bếp ăn một chiều đảm bảo an toàn vệ sinh thực
-                                                    phẩm. Bếp ăn Olympia là ấn tượng sâu đậm với nhiều thế hệ học sinh
-                                                    và phụ huynh.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">3 / 7</span>
-                                        </div>
-                                        <img src="olympia/images/nhaan-1.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="h7 white font-garamond-bold description-title"></p>
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Olympia có
-                                                    3 nhà ăn, 2 nhà ăn toà Mind và 1 nhà ăn toà Heart với tổng sức chứa
-                                                    750 người. Quy trình bếp ăn một chiều đảm bảo an toàn vệ sinh thực
-                                                    phẩm. Bếp ăn Olympia là ấn tượng sâu đậm với nhiều thế hệ học sinh
-                                                    và phụ huynh.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">4 / 7</span>
-                                        </div>
-                                        <img src="olympia/images/nhaan-4.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="h7 white font-garamond-bold description-title"></p>
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Olympia có
-                                                    3 nhà ăn, 2 nhà ăn toà Mind và 1 nhà ăn toà Heart với tổng sức chứa
-                                                    750 người. Quy trình bếp ăn một chiều đảm bảo an toàn vệ sinh thực
-                                                    phẩm. Bếp ăn Olympia là ấn tượng sâu đậm với nhiều thế hệ học sinh
-                                                    và phụ huynh.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">5 / 7</span>
-                                        </div>
-                                        <img src="olympia/images/nhaan-5.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="h7 white font-garamond-bold description-title"></p>
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Olympia có
-                                                    3 nhà ăn, 2 nhà ăn toà Mind và 1 nhà ăn toà Heart với tổng sức chứa
-                                                    750 người. Quy trình bếp ăn một chiều đảm bảo an toàn vệ sinh thực
-                                                    phẩm. Bếp ăn Olympia là ấn tượng sâu đậm với nhiều thế hệ học sinh
-                                                    và phụ huynh.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">6 / 7</span>
-                                        </div>
-                                        <img src="olympia/images/nhaan-7.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="h7 white font-garamond-bold description-title"></p>
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Olympia có
-                                                    3 nhà ăn, 2 nhà ăn toà Mind và 1 nhà ăn toà Heart với tổng sức chứa
-                                                    750 người. Quy trình bếp ăn một chiều đảm bảo an toàn vệ sinh thực
-                                                    phẩm. Bếp ăn Olympia là ấn tượng sâu đậm với nhiều thế hệ học sinh
-                                                    và phụ huynh.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">7 / 7</span>
-                                        </div>
-                                        <img src="olympia/images/nhaan-8.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="h7 white font-garamond-bold description-title"></p>
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Olympia có
-                                                    3 nhà ăn, 2 nhà ăn toà Mind và 1 nhà ăn toà Heart với tổng sức chứa
-                                                    750 người. Quy trình bếp ăn một chiều đảm bảo an toàn vệ sinh thực
-                                                    phẩm. Bếp ăn Olympia là ấn tượng sâu đậm với nhiều thế hệ học sinh
-                                                    và phụ huynh.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                                <!-- Next/previous controls -->
-                                <a class="prev white" onclick="plusSlides(-1, 'NhaAnModal')"><img class="modal-btn-prev"
-                                        src="olympia/images/button-1-3.svg" alt=""></a>
-                                <a class="next white" onclick="plusSlides(1, 'NhaAnModal')"><img class="modal-btn-next"
-                                        src="olympia/images/button-1-3.svg" alt=""></a>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="NhaHat" class="tabcontent">
-                        <div class="tab-content">
-                            <div class="tab-iframe"><iframe width="560" height="315"
-                                    src="https://www.youtube.com/embed/IiWpDxItU9Q" title="YouTube video player"
-                                    frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen></iframe></div>
-
-                            <div class="tab-content-1 tab-content-item">
-                                <div class="img-row img-box img-box-1"
-                                    onclick="openModal('NhaHatModal');currentSlide(1, 'NhaHatModal')">
-                                    <img class="cs_img" src="olympia/images/nhahat_1.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="h7 white font-garamond-bold description-title ">Nhà hát</p>
-                                            <p class="size-14 white font-avenir-regular cs_des">Nhà hát Olympia với sức
-                                                chứa 250 người, trang bị màn hình LED gần 30m2 với nhiều vật liệu gỗ,
-                                                sonic, tổng hợp cao cấp.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="tab-content-2 tab-content-item chucnang">
-
-                                <div class="img-left img-box img-box-2"
-                                    onclick="openModal('NhaHatModal');currentSlide(2, 'NhaHatModal')">
-                                    <img class="cs_img" src="olympia/images/nhahat_2.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="size-14 white font-avenir-regular cs_des">Việc đưa nhà hát Olympia
-                                                vào đã hoạt động tạo không gian cho các hoạt động kịch nghệ, biểu diễn,
-                                                các hội thảo và sự kiện trong nước, quốc tế.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="img-right img-box img-box-3"
-                                    onclick="openModal('NhaHatModal');currentSlide(3, 'NhaHatModal')">
-                                    <img class="cs_img" src="olympia/images/nhahat_3.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="size-14 white font-avenir-regular cs_des">Việc đưa nhà hát Olympia
-                                                vào đã hoạt động tạo không gian cho các hoạt động kịch nghệ, biểu diễn,
-                                                các hội thảo và sự kiện trong nước, quốc tế.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="tab-content-3 tab-content-item chucnang">
-
-                                <div class="img-left img-box img-box-2"
-                                    onclick="openModal('NhaHatModal');currentSlide(4, 'NhaHatModal')">
-                                    <img class="cs_img" src="olympia/images/nhahat_4.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="size-14 white font-avenir-regular cs_des">Việc đưa nhà hát Olympia
-                                                vào đã hoạt động tạo không gian cho các hoạt động kịch nghệ, biểu diễn,
-                                                các hội thảo và sự kiện trong nước, quốc tế.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="img-right img-box img-box-3"
-                                    onclick="openModal('NhaHatModal');currentSlide(5, 'NhaHatModal')">
-                                    <img class="cs_img" src="olympia/images/nhahat_5.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="size-14 white font-avenir-regular cs_des">Việc đưa nhà hát Olympia
-                                                vào đã hoạt động tạo không gian cho các hoạt động kịch nghệ, biểu diễn,
-                                                các hội thảo và sự kiện trong nước, quốc tế.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <!-- The Modal/Lightbox -->
-                    <div id="NhaHatModal" class="modal">
-                        <div class="modal-inner">
-                            <span class="close cursor" onclick="closeModal('NhaHatModal')"><img class="close-popup"
-                                    src="olympia/images/close-popup.svg" alt=""></span>
-                            <div class="modal-content flexdiv">
-                                <div class="modal-content-img container">
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">1 / 5</span>
-                                        </div>
-                                        <img src="olympia/images/nhahat_1.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="h7 white font-garamond-bold description-title">Nhà hát</p>
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Nhà hát
-                                                    Olympia với sức chứa 250 người, trang bị màn hình LED gần 30m2 với
-                                                    nhiều vật liệu gỗ, sonic, tổng hợp cao cấp.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">2 / 5</span>
-                                        </div>
-                                        <img src="olympia/images/nhahat_2.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="h7 white font-garamond-bold description-title"></p>
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Việc đưa
-                                                    nhà hát Olympia vào đã hoạt động tạo không gian cho các hoạt động
-                                                    kịch nghệ, biểu diễn, các hội thảo và sự kiện trong nước, quốc tế.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">3 / 5</span>
-                                        </div>
-                                        <img src="olympia/images/nhahat_3.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="h7 white font-garamond-bold description-title"></p>
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Việc đưa
-                                                    nhà hát Olympia vào đã hoạt động tạo không gian cho các hoạt động
-                                                    kịch nghệ, biểu diễn, các hội thảo và sự kiện trong nước, quốc tế.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">4 / 5</span>
-                                        </div>
-                                        <img src="olympia/images/nhahat_4.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="h7 white font-garamond-bold description-title"></p>
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Việc đưa
-                                                    nhà hát Olympia vào đã hoạt động tạo không gian cho các hoạt động
-                                                    kịch nghệ, biểu diễn, các hội thảo và sự kiện trong nước, quốc tế.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">5 / 5</span>
-                                        </div>
-                                        <img src="olympia/images/nhahat_5.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="h7 white font-garamond-bold description-title"></p>
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Việc đưa
-                                                    nhà hát Olympia vào đã hoạt động tạo không gian cho các hoạt động
-                                                    kịch nghệ, biểu diễn, các hội thảo và sự kiện trong nước, quốc tế.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                                <!-- Next/previous controls -->
-                                <a class="prev white" onclick="plusSlides(-1, 'NhaHatModal')"><img
-                                        class="modal-btn-prev" src="olympia/images/button-1-3.svg" alt=""></a>
-                                <a class="next white" onclick="plusSlides(1, 'NhaHatModal')"><img class="modal-btn-next"
-                                        src="olympia/images/button-1-3.svg" alt=""></a>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="Khac" class="tabcontent">
-                        <div class="tab-content">
-                            <div class="tab-content-1 tab-content-item">
-                                <div class="img-row img-box img-box-1"
-                                    onclick="openModal('KhacModal');currentSlide(1, 'KhacModal')">
-                                    <img class="cs_img" src="olympia/images/khac_8.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="h7 white font-garamond-bold description-title ">Tượng Điểu sư
-                                                Griffin</p>
-                                            <p class="size-14 white font-avenir-regular cs_des">Linh vật của Olympia,
-                                                đại diện cho sức mạnh thể chất, sự rắn rỏi và sắc bén, là chúa tể của
-                                                bầu trời, linh vật canh giữ kho báu tri thức và cuộc sống. Bức tường
-                                                &quot;Academic Showcase&quot; là nơi trưng bày nhiều sản phẩm học sinh
-                                                ấn tượng</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="tab-content-2 tab-content-item">
-                                <div class="img-left img-box img-box-2"
-                                    onclick="openModal('KhacModal');currentSlide(2, 'KhacModal')">
-                                    <img class="cs_img" src="olympia/images/khac_2.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="size-14 white font-avenir-regular cs_des">Hành lang rộng rãi, được
-                                                vệ sinh, lau dọn theo giờ, thoát hiểm thuận lợi, được trang trí thêm
-                                                nhiều loại cây cảnh nội thất phù hợp.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="img-left img-box img-box-2"
-                                    onclick="openModal('KhacModal');currentSlide(3, 'KhacModal')">
-                                    <img class="cs_img" src="olympia/images/khac_3.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="size-14 white font-avenir-regular cs_des">Hành lang rộng rãi, được
-                                                vệ sinh, lau dọn theo giờ, thoát hiểm thuận lợi, được trang trí thêm
-                                                nhiều loại cây cảnh nội thất phù hợp.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-content-3 tab-content-item">
-                                <div class="img-left img-box img-box-2"
-                                    onclick="openModal('KhacModal');currentSlide(4, 'KhacModal')">
-                                    <img class="cs_img" src="olympia/images/khac_4.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="size-14 white font-avenir-regular cs_des">Hành lang rộng rãi, được
-                                                vệ sinh, lau dọn theo giờ, thoát hiểm thuận lợi, được trang trí thêm
-                                                nhiều loại cây cảnh nội thất phù hợp.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="img-left img-box img-box-2"
-                                    onclick="openModal('KhacModal');currentSlide(5, 'KhacModal')">
-                                    <img class="cs_img" src="olympia/images/khac_5.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="size-14 white font-avenir-regular cs_des">Hành lang rộng rãi, được
-                                                vệ sinh, lau dọn theo giờ, thoát hiểm thuận lợi, được trang trí thêm
-                                                nhiều loại cây cảnh nội thất phù hợp.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-content-4 tab-content-item">
-                                <div class="img-left img-box img-box-6"
-                                    onclick="openModal('KhacModal');currentSlide(6, 'KhacModal')">
-                                    <img class="cs_img" src="olympia/images/khac_6.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="size-14 white font-avenir-regular cs_des">Bên ngoài phòng học là
-                                                tủ đựng đồ cá nhân của học sinh.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="img-right img-box img-box-7"
-                                    onclick="openModal('KhacModal');currentSlide(7, 'KhacModal')">
-                                    <img class="cs_img" src="olympia/images/khac_7.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="size-14 white font-avenir-regular cs_des">Sảnh chính tầng 1 tòa
-                                                nhà Mind. Đây là khu vực học sinh học tập, thư giãn sau giờ ăn, giờ học,
-                                                cũng như đã từng là nơi trưng bày của nhiều triển lãm, dự án học tập của
-                                                học sinh</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-content-5 tab-content-item">
-                                <div class="img-left img-box img-box-6"
-                                    onclick="openModal('KhacModal');currentSlide(8, 'KhacModal')">
-                                    <img class="cs_img" src="olympia/images/khac_7a.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="size-14 white font-avenir-regular cs_des">Sảnh chính tầng 1 tòa
-                                                nhà Mind. Đây là khu vực học sinh học tập, thư giãn sau giờ ăn, giờ học,
-                                                cũng như đã từng là nơi trưng bày của nhiều triển lãm, dự án học tập của
-                                                học sinh</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="img-right img-box img-box-7"
-                                    onclick="openModal('KhacModal');currentSlide(9, 'KhacModal')">
-                                    <img class="cs_img" src="olympia/images/khac_1.jpg">
-                                    <div class="img-description text-center">
-                                        <div class="box-description">
-                                            <p class="h7 white font-garamond-bold description-title ">Vệ sinh</p>
-                                            <p class="size-14 white font-avenir-regular cs_des">Phòng vệ sinh sạch sẽ,
-                                                được lau dọn theo giờ và phát nhạc cổ điển thư thái.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- The Modal/Lightbox -->
-                    <div id="KhacModal" class="modal">
-                        <div class="modal-inner">
-                            <span class="close cursor" onclick="closeModal('KhacModal')"><img class="close-popup"
-                                    src="olympia/images/close-popup.svg" alt=""></span>
-                            <div class="modal-content flexdiv">
-                                <div class="modal-content-img container">
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">1 / 9</span>
-                                        </div>
-                                        <img src="olympia/images/khac_8.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="h7 white font-garamond-bold description-title ">Tượng Điểu sư
-                                                    Griffin</p>
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Linh vật
-                                                    của Olympia, đại diện cho sức mạnh thể chất, sự rắn rỏi và sắc bén,
-                                                    là chúa tể của bầu trời, linh vật canh giữ kho báu tri thức và cuộc
-                                                    sống. Bức tường &quot;Academic Showcase&quot; là nơi trưng bày nhiều
-                                                    sản phẩm học sinh ấn tượng</p>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">2 / 9</span>
-                                        </div>
-                                        <img src="olympia/images/khac_8.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Hành lang
-                                                    rộng rãi, được vệ sinh, lau dọn theo giờ, thoát hiểm thuận lợi, được
-                                                    trang trí thêm nhiều loại cây cảnh nội thất phù hợp.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">3 / 9</span>
-                                        </div>
-                                        <img src="olympia/images/khac_3.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Hành lang
-                                                    rộng rãi, được vệ sinh, lau dọn theo giờ, thoát hiểm thuận lợi, được
-                                                    trang trí thêm nhiều loại cây cảnh nội thất phù hợp.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">4 / 9</span>
-                                        </div>
-                                        <img src="olympia/images/khac_4.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Hành lang
-                                                    rộng rãi, được vệ sinh, lau dọn theo giờ, thoát hiểm thuận lợi, được
-                                                    trang trí thêm nhiều loại cây cảnh nội thất phù hợp.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">5 / 9</span>
-                                        </div>
-                                        <img src="olympia/images/khac_5.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Hành lang
-                                                    rộng rãi, được vệ sinh, lau dọn theo giờ, thoát hiểm thuận lợi, được
-                                                    trang trí thêm nhiều loại cây cảnh nội thất phù hợp.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">6 / 9</span>
-                                        </div>
-                                        <img src="olympia/images/khac_6.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Bên ngoài
-                                                    phòng học là tủ đựng đồ cá nhân của học sinh.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">7 / 9</span>
-                                        </div>
-                                        <img src="olympia/images/khac_7.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Sảnh chính
-                                                    tầng 1 tòa nhà Mind. Đây là khu vực học sinh học tập, thư giãn sau
-                                                    giờ ăn, giờ học, cũng như đã từng là nơi trưng bày của nhiều triển
-                                                    lãm, dự án học tập của học sinh</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">8 / 9</span>
-                                        </div>
-                                        <img src="olympia/images/khac_7a.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Sảnh chính
-                                                    tầng 1 tòa nhà Mind. Đây là khu vực học sinh học tập, thư giãn sau
-                                                    giờ ăn, giờ học, cũng như đã từng là nơi trưng bày của nhiều triển
-                                                    lãm, dự án học tập của học sinh</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mySlides">
-                                        <div class="numbertext">
-                                            <span class="modal-number-slide">9 / 9</span>
-                                        </div>
-                                        <img src="olympia/images/khac_1.jpg">
-                                        <div class="model-des" style="opacity: 1">
-                                            <div class="box-description">
-                                                <p class="h7 white font-garamond-bold description-title ">Vệ sinh</p>
-                                                <p class="size-14 color-ab font-avenir-regular modal_cs_des">Phòng vệ
-                                                    sinh sạch sẽ, được lau dọn theo giờ và phát nhạc cổ điển thư thái.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Next/previous controls -->
-                                <a class="prev white" onclick="plusSlides(-1, 'KhacModal')"><img class="modal-btn-prev"
-                                        src="olympia/images/button-1-3.svg" alt=""></a>
-                                <a class="next white" onclick="plusSlides(1, 'KhacModal')"><img class="modal-btn-next"
-                                        src="olympia/images/button-1-3.svg" alt=""></a>
-
-                            </div>
-                        </div>
-                    </div> <!-- The Modal/Lightbox end -->
-
-                </div> <!-- The Modal/Lightbox end -->
-            </section>
-
-            <section class="register  show-on-scroll" id="register-form">
-                <div class="container-fluid olympia-number-title">
-                    <div class="register-box-yellow">
-                        <div class="register-left">
-                            <h5 class="h5 font-garamond-bold white">Đặt lịch tham quan trường</h5>
-                            <div class="register-form">
-                                <form id="contact-form" class="register-form-inner"
-                                    action="https://theolympiaschools.edu.vn/send-contact" method="POST">
-                                    <input type="hidden" name="_token" value="Xp0QD4AXEKvVFRQgq6zl6ESvt4HEk1o59HIf5UOU">
-                                    <div class="form-row register-form-row ">
-                                        <div class="form-group register-form-group">
-                                            <label
-                                                class="register-form-label color-21 font-avenir-demibold size-12 text-uppercase">Họ
-                                                tên anh/chị*</label>
-                                            <input type="text" class="form-control size-16 color-ab font-avenir-regular"
-                                                id="name" name='name' placeholder="Nguyễn Ngọc Anh">
-                                        </div>
-                                        <div class="form-group register-form-group">
-                                            <label
-                                                class="register-form-label color-21 font-avenir-demibold size-12 text-uppercase">Số
-                                                điện thoại</label>
-                                            <input type="number"
-                                                class="form-control  size-16 color-ab font-avenir-regular" id="phone"
-                                                name="phone">
-                                        </div>
-                                    </div>
-                                    <div class="form-row register-form-row">
-                                        <div class="form-group register-form-group">
-                                            <label
-                                                class="register-form-label color-21 font-avenir-demibold size-12 text-uppercase">email*</label>
-                                            <input type="email"
-                                                class="form-control size-16 color-ab font-avenir-regular" id="email"
-                                                name="email" placeholder="ngocanhnguyen@gmail">
-                                        </div>
-                                        <div class="form-group register-form-group">
-                                            <label for="date"
-                                                class="register-form-label color-21 font-avenir-demibold size-12 text-uppercase">lựa
-                                                chọn ngày*</label>
-                                            <div class="controls input-append date form_date" data-date=""
-                                                data-date-format="dd/mm/yyyy" data-link-field="dtp_input"
-                                                data-link-format="yyyy-mm-dd">
-                                                <div
-                                                    class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset">
-                                                    <input
-                                                        class="date-input form-control size-16 color-ab font-avenir-regular"
-                                                        type="text" readonly>
-                                                </div>
-                                                <span class="add-on"><i class="icon-remove"></i></span>
-                                                <span class="add-on"><i class="icon-th"></i></span>
-                                            </div>
-                                            <input id="dtp_input" name="dtp_input" value="" class="form-control"
-                                                style="visibility:hidden; width:0; height:0; padding:0;" />
-                                        </div>
-                                    </div>
-                                    <button type="submit"
-                                        class="btn register-form-submit size-14 white text-uppercase">Gửi
-                                        <img class="cs-img-button" src="olympia/images/button-1-3.svg" />
-                                    </button>
-
-                                    <input type="hidden" name="type" value="visit">
-                                    <input type="hidden" name="url" value="co-so-vat-chat.html">
-                                </form>
-                            </div>
-                        </div>
-                        <div class="register-right">
-                            <div class="register-infor">
-                                <div class="address-info">
-                                    <p class="school-name font-avenir-demibold size-13 white text-uppercase">Trường PTLC
-                                        Olympia</p>
-                                    <p class="school-address font-avenir-demibold size-15 white">Khu đô thị mới Trung
-                                        Văn, Nam Từ Liêm, Hà Nội (cơ sở duy nhất)</p>
-                                </div>
-                            </div>
-                            <div class="address-map">
-                                <div class="image-map">
-                                    <img class="map-pc" src="olympia/images/cs-map1.png">
-                                    <div class="map-view-full">
-                                        <a href="https://goo.gl/maps/t4syVEQibfZnmbgRA" target="_blank"
-                                            class="text-uppercase font-avenir-demibold white size-10"> view full map</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
+                    <div class="csvc-hero-card">
+                        <img src="assets/img/co-so-vat-chat/bản 3d(1).jpg" alt="Meyschool Đoàn Thị Điểm">
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
+        <!-- ===== INTRO ===== -->
+        <section class="csvc-intro csvc-wrap" data-aos="fade-up">
+            <div class="csvc-intro-card">
+                <p>Tọa lạc tại "trái tim" của đại đô thị tinh khiết <strong>Meyhomes Capital</strong>, <strong>Meyschool
+                        Đoàn Thị Điểm</strong> sở hữu khuôn viên rộng lớn lên đến <strong>16.000 m²</strong>. Trường
+                    được quy hoạch bài bản với hệ thống <strong>gần 60 phòng học và phòng chức năng</strong>, kiến tạo
+                    nên một hệ sinh thái giáo dục hiện đại và quy mô bậc nhất Đảo Ngọc.</p>
+            </div>
+        </section>
 
+        <!-- ===== CONTENT ===== -->
+        <div class="csvc-content csvc-wrap">
 
-            <div class="modal popup-result" id="submit_modal" tabindex="-1">
-                <div class="modal-inner">
-                    <div class="modal-content">
-                        <div class="modal-body">
-                            <div id="register-suceess">
-                                <h4 class="font-garamond-bold">Đăng kí thành công</h4>
-                                <p class="size-16 font-avenir-regular">Cảm ơn bạn đã quan tâm đến chương trình của The
-                                    Olympia School. Chúng tôi sẽ email tư vấn cho bạn trong thời gian sớm nhất.</p>
-                                <span onclick="closeModal('submit_modal')"
-                                    class="text-uppercase size-14 font-avenir-demibold lefthover">
-                                    <img src="olympia/images/button-1-3.svg" alt="">Quay lại
-                                </span>
-                            </div>
-                        </div>
-                    </div>
+            <!-- Feature 1: Khuôn viên xanh -->
+            <div class="csvc-feature two-col" data-aos="fade-up">
+                <div>
+                    <!-- <span class="csvc-feature-icon">🍀</span> -->
+                    <h2>Khuôn viên xanh – Điều hòa vi khí hậu</h2>
+                    <p>Đúng với mô hình <strong>"Trường học trong công viên"</strong>, sắc xanh bao phủ khắp 16.000 m²
+                        diện tích không chỉ giúp điều hòa vi khí hậu mà còn tạo ra một môi trường học tập thư giãn, lành
+                        mạnh.</p>
+                    <p>Đây là không gian lý tưởng để học sinh giải tỏa áp lực, nuôi dưỡng tâm hồn và tận hưởng sự trong
+                        lành mỗi ngày.</p>
+                </div>
+                <div class="csvc-feature-imgs grid-2">
+                    <figure>
+                        <img src="assets/img/co-so-vat-chat/bản 3d.jpg" alt="Khuôn viên Meyschool">
+                        <figcaption>Phối cảnh tổng thể</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/img/co-so-vat-chat/bản 3d(2).jpg" alt="Khuôn viên xanh">
+                        <figcaption>Khuôn viên xanh</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/img/co-so-vat-chat/sân bóng rổ.jpg" alt="Sân bóng rổ">
+                        <figcaption>Sân bóng rổ</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/img/co-so-vat-chat/sân bóng rỏ.jpg" alt="Khu thể thao">
+                        <figcaption>Khu thể thao ngoài trời</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <!-- Feature 2: Phòng học hiện đại -->
+            <div class="csvc-feature two-col reverse" data-aos="fade-up">
+                <div>
+                    <!-- <span class="csvc-feature-icon">📖</span> -->
+                    <h2>Phòng học hiện đại – Linh hoạt và sáng tạo</h2>
+                    <p>Mỗi phòng học tại Meyschool là một <strong>không gian mở</strong>, được thiết kế tối ưu để đáp
+                        ứng linh hoạt cho các phương pháp giáo dục tiên tiến: từ học tập theo dự án, thảo luận nhóm sôi
+                        nổi đến nghiên cứu độc lập chuyên sâu.</p>
+                    <p>Trang thiết bị thông minh cùng ánh sáng tự nhiên giúp kích thích tối đa tư duy của học sinh.</p>
+                </div>
+                <div class="csvc-feature-imgs grid-2">
+                    <figure>
+                        <img src="assets/img/co-so-vat-chat/phòng học.JPG" alt="Phòng học">
+                        <figcaption>Phòng học hiện đại</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/img/co-so-vat-chat/phòng học(1).JPG" alt="Phòng học">
+                        <figcaption>Không gian học tập linh hoạt</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/img/co-so-vat-chat/phòng tin.jpg" alt="Phòng tin học">
+                        <figcaption>Phòng tin học</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/img/co-so-vat-chat/phòng nhạc.jpg" alt="Phòng âm nhạc">
+                        <figcaption>Phòng âm nhạc</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <!-- Feature 3: Không gian sáng tạo -->
+            <div class="csvc-feature two-col" data-aos="fade-up">
+                <div>
+                    <!-- <span class="csvc-feature-icon">🎨</span> -->
+                    <h2>Không gian sáng tạo &amp; Hành lang trải nghiệm</h2>
+                    <p><strong>Hành lang trải nghiệm:</strong> Không chỉ là lối đi, đây là không gian trưng bày các sản
+                        phẩm học tập độc đáo, nơi nuôi dưỡng bản sắc cá nhân và lòng tự hào của mỗi học sinh về thành
+                        quả của mình.</p>
+                    <p><strong>Không gian sáng tạo:</strong> Hệ thống phòng Nghệ thuật, STEM và các khu thực hành đa
+                        giác quan được đầu tư hiện đại, là nơi các em tự do khám phá và hiện thực hóa những ý tưởng mới
+                        mẻ.</p>
+                </div>
+                <div class="csvc-feature-imgs grid-2">
+                    <figure>
+                        <img src="assets/img/co-so-vat-chat/mi thuật.jpg" alt="Phòng mỹ thuật">
+                        <figcaption>Phòng mỹ thuật</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/img/co-so-vat-chat/thư viện.jpg" alt="Thư viện">
+                        <figcaption>Thư viện</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/img/co-so-vat-chat/thư viện(1).jpg" alt="Thư viện">
+                        <figcaption>Không gian đọc sách</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/img/co-so-vat-chat/thư viện(2).jpg" alt="Thư viện">
+                        <figcaption>Góc nghiên cứu độc lập</figcaption>
+                    </figure>
                 </div>
             </div>
 
         </div>
+
+        <!-- ===== FULL GALLERY ===== -->
+        <section class="csvc-gallery-section csvc-wrap" data-aos="fade-up">
+            <h2>Hình ảnh cơ sở vật chất</h2>
+            <div class="csvc-gallery">
+                <figure class="wide">
+                    <img src="assets/img/co-so-vat-chat/bản 3d(1).jpg" alt="Phối cảnh Meyschool">
+                    <figcaption>Phối cảnh tổng thể Meyschool Đoàn Thị Điểm</figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/img/co-so-vat-chat/phòng học.JPG" alt="Phòng học">
+                    <figcaption>Phòng học</figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/img/co-so-vat-chat/phòng học(1).JPG" alt="Phòng học">
+                    <figcaption>Phòng học hiện đại</figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/img/co-so-vat-chat/thư viện(3).jpg" alt="Thư viện">
+                    <figcaption>Thư viện</figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/img/co-so-vat-chat/phòng tin.jpg" alt="Phòng tin học">
+                    <figcaption>Phòng tin học</figcaption>
+                </figure>
+                <figure class="wide">
+                    <img src="assets/img/co-so-vat-chat/sân bóng rổ.jpg" alt="Sân thể thao">
+                    <figcaption>Khu thể thao ngoài trời</figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/img/co-so-vat-chat/mi thuật.jpg" alt="Phòng mỹ thuật">
+                    <figcaption>Phòng mỹ thuật</figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/img/co-so-vat-chat/phòng nhạc.jpg" alt="Phòng âm nhạc">
+                    <figcaption>Phòng âm nhạc</figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/img/co-so-vat-chat/thư viện(2).jpg" alt="Thư viện">
+                    <figcaption>Góc đọc sách</figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/img/co-so-vat-chat/bản 3d(2).jpg" alt="Khuôn viên">
+                    <figcaption>Khuôn viên xanh</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- ═══ CTA ĐĂNG KÝ TƯ VẤN ═══ -->
+        <section class="ct-cta-wrap">
+            <div class="ct-cta-inner">
+                <div class="ct-cta-card" data-aos="zoom-in-up">
+                    <div class="ct-cta-content">
+                        <div class="ct-cta-text">
+                            <div>
+                                <small>Tuyển sinh 2026 - 2027</small>
+                                <h3>Đăng ký tư vấn</h3>
+                            </div>
+                            <p>Liên hệ ngay để được tư vấn chi tiết lộ trình học phù hợp cho con.</p>
+                        </div>
+                        <div class="ct-cta-actions">
+                            <a href="lien-he.php" class="ct-cta-btn">Liên hệ ngay</a>
+                            <div class="ct-cta-note">Phản hồi trong vòng 24 giờ làm việc</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <?php include 'includes/footer.php'; ?>

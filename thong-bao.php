@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=1" name="viewport" />
     <link rel="shortcut icon" href="storage/favicon.png">
+
     <title>Thông báo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:site_name" content="The Olympia Schools">
@@ -55,290 +56,348 @@
         }
 
         :root {
-            --notice-blue-1: #439bd4;
-            --notice-blue-2: #4db0e4;
-            --notice-blue-3: #eaf7ff;
-            --notice-text: #1f3a56;
+            --ac-blue-1: #439bd4;
+            --ac-blue-2: #4db0e4;
+            --ac-blue-3: #e7f6ff;
+            --ac-text: #1e3953;
         }
 
-        .notice-page {
+        .achievements-page {
             background: #f5fbff;
-            color: var(--notice-text);
+            color: var(--ac-text);
         }
 
-        .notice-wide {
+        .ac-wide {
             width: min(96vw, 1520px);
             margin: 0 auto;
         }
 
-        .notice-hero {
-            padding: 116px 0 54px;
-            background: linear-gradient(120deg, rgba(67, 155, 212, 0.96) 0%, rgba(77, 176, 228, 0.9) 60%, rgba(77, 176, 228, 0.72) 100%);
+        .ac-hero {
+            padding: 118px 0 58px;
+            background: linear-gradient(120deg, rgba(67, 155, 212, 0.97) 0%, rgba(77, 176, 228, 0.9) 65%, rgba(77, 176, 228, 0.72) 100%);
             position: relative;
             overflow: hidden;
         }
 
-        .notice-hero::before {
+        .ac-hero::before {
             content: '';
             position: absolute;
-            width: 360px;
-            height: 360px;
-            right: -120px;
-            top: -130px;
+            width: 380px;
+            height: 380px;
             border-radius: 50%;
+            right: -120px;
+            top: -120px;
             background: rgba(255, 255, 255, 0.18);
         }
 
-        .notice-hero-grid {
+        .ac-hero-grid {
             display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
+            grid-template-columns: 1.15fr 0.85fr;
             gap: 24px;
             align-items: center;
             position: relative;
             z-index: 2;
         }
 
-        .notice-breadcrumb {
+        .ac-breadcrumb {
             margin: 0 0 16px;
             display: inline-flex;
             gap: 8px;
             flex-wrap: wrap;
             background: rgba(255, 255, 255, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.42);
+            border: 1px solid rgba(255, 255, 255, 0.4);
             border-radius: 999px;
             padding: 8px 16px;
             position: static !important;
-            transform: none !important;
             left: auto !important;
             right: auto !important;
             top: auto !important;
             bottom: auto !important;
+            transform: none !important;
         }
 
-        .notice-breadcrumb li,
-        .notice-breadcrumb li a {
+        .ac-breadcrumb li,
+        .ac-breadcrumb li a {
             color: #fff;
             font-size: 13px;
             position: static !important;
         }
 
-        .notice-hero h1 {
-            margin: 0 0 12px;
+        .ac-hero h1 {
             color: #fff;
-            font-size: clamp(34px, 4.1vw, 58px);
+            font-size: clamp(36px, 4.1vw, 60px);
+            line-height: 1.1;
+            margin: 0 0 14px;
             font-family: 'Garamond', serif;
-            line-height: 1.08;
         }
 
-        .notice-hero p {
+        .ac-hero p {
             margin: 0;
             color: rgba(255, 255, 255, 0.95);
             line-height: 1.85;
-            font-size: 16px;
+            font-size: 17px;
             max-width: 760px;
         }
 
-        .notice-top-card {
-            border-radius: 22px;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.35);
-            box-shadow: 0 18px 36px rgba(16, 56, 90, 0.2);
-        }
-
-        .notice-top-card img {
-            width: 100%;
-            height: 230px;
-            object-fit: cover;
-        }
-
-        .notice-top-card .cap {
-            padding: 14px;
+        .ac-highlight {
+            display: grid;
+            gap: 12px;
             background: rgba(255, 255, 255, 0.2);
-            color: #fff;
-            font-size: 14px;
-            line-height: 1.6;
+            border: 1px solid rgba(255, 255, 255, 0.42);
+            border-radius: 24px;
+            padding: 16px;
+            box-shadow: 0 20px 40px rgba(14, 55, 91, 0.22);
         }
 
-        .notice-section {
-            padding: 52px 0 62px;
+        .ac-highlight img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 14px;
         }
 
-        .notice-head {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            gap: 16px;
-            margin-bottom: 20px;
-        }
-
-        .notice-head h2 {
+        .ac-highlight p {
             margin: 0;
+            font-size: 14px;
+            color: #fff;
+        }
+
+        .ac-section {
+            padding: 56px 0;
+        }
+
+        .ac-intro {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 24px;
+        }
+
+        .ac-card {
+            background: #fff;
+            border: 1px solid rgba(67, 155, 212, 0.14);
+            box-shadow: 0 16px 32px rgba(13, 51, 85, 0.08);
+            border-radius: 22px;
+            padding: 24px;
+        }
+
+        .ac-card h2 {
+            margin: 0 0 12px;
+            color: #2476ac;
             font-family: 'Garamond', serif;
-            color: #2475ac;
-            font-size: clamp(30px, 3vw, 44px);
+            font-size: clamp(28px, 3vw, 42px);
             line-height: 1.2;
         }
 
-        .notice-head p {
+        .ac-card p {
             margin: 0;
-            color: #4b6580;
-            font-size: 14px;
+            color: #445d78;
+            font-size: 16px;
+            line-height: 1.85;
         }
 
-        .notice-grid {
+        .ac-kpis {
             display: grid;
-            grid-template-columns: repeat(5, minmax(0, 1fr));
-            gap: 14px;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
         }
 
-        .notice-card {
+        .ac-kpi {
+            background: linear-gradient(145deg, #439bd4 0%, #4db0e4 100%);
+            border-radius: 18px;
+            min-height: 115px;
+            padding: 16px;
+            color: #fff;
+            box-shadow: 0 14px 28px rgba(67, 155, 212, 0.3);
+        }
+
+        .ac-kpi strong {
+            display: block;
+            font-size: 34px;
+            font-family: 'Garamond', serif;
+            line-height: 1;
+            margin-bottom: 6px;
+        }
+
+        .ac-kpi span {
+            font-size: 13px;
+            line-height: 1.55;
+            display: block;
+        }
+
+        .ac-tabs {
+            margin-top: 28px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .ac-tab {
+            border: none;
+            background: #dff3ff;
+            color: #2c7fb7;
+            padding: 10px 14px;
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: 13px;
+            letter-spacing: 0.4px;
+            cursor: pointer;
+        }
+
+        .ac-tab.active {
+            background: linear-gradient(145deg, #439bd4, #4db0e4);
+            color: #fff;
+        }
+
+        .ac-grid {
+            margin-top: 22px;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .ac-item {
             background: #fff;
-            border: 1px solid rgba(67, 155, 212, 0.17);
-            box-shadow: 0 12px 24px rgba(13, 47, 77, 0.08);
-            border-radius: 16px;
+            border: 1px solid rgba(67, 155, 212, 0.15);
+            border-radius: 20px;
             overflow: hidden;
-            text-decoration: none;
-            color: inherit;
+            box-shadow: 0 14px 30px rgba(15, 48, 78, 0.08);
             display: flex;
             flex-direction: column;
-            aspect-ratio: 1 / 1;
-            transition: transform 0.25s ease, box-shadow 0.25s ease;
         }
 
-        .notice-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 18px 30px rgba(14, 49, 79, 0.15);
-        }
-
-        .notice-card-thumb {
-            height: 46%;
-            min-height: 110px;
-        }
-
-        .notice-card-thumb img {
+        .ac-item img {
             width: 100%;
-            height: 100%;
+            height: 220px;
             object-fit: cover;
         }
 
-        .notice-card-body {
-            padding: 10px 12px 12px;
+        .ac-item-content {
+            padding: 16px;
             display: flex;
             flex-direction: column;
             gap: 8px;
             flex: 1;
         }
 
-        .notice-badge {
+        .ac-item-year {
             display: inline-flex;
             align-self: flex-start;
-            padding: 5px 10px;
+            padding: 6px 10px;
             border-radius: 999px;
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 0.3px;
-            text-transform: uppercase;
-            background: var(--notice-blue-3);
-            color: #277eb7;
-            line-height: 1.2;
-        }
-
-        .notice-title {
-            margin: 0;
-            font-size: 15px;
-            line-height: 1.45;
-            color: #225d89;
-            font-family: 'Garamond', serif;
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-
-        .notice-date {
-            margin-top: auto;
+            background: #ebf8ff;
+            color: #2a7db5;
             font-size: 12px;
-            color: #66819d;
-            font-weight: 600;
-        }
-
-        .notice-pagination {
-            margin-top: 26px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 8px;
-            flex-wrap: wrap;
-        }
-
-        .page-btn {
-            width: 38px;
-            height: 38px;
-            border-radius: 10px;
-            border: 1px solid rgba(67, 155, 212, 0.24);
-            background: #fff;
-            color: #2d7fb7;
             font-weight: 700;
+        }
+
+        .ac-item h3 {
+            margin: 0;
+            font-size: 22px;
+            line-height: 1.35;
+            font-family: 'Garamond', serif;
+            color: #235f8d;
+        }
+
+        .ac-item p {
+            margin: 0;
             font-size: 14px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.2s ease;
+            line-height: 1.7;
+            color: #4c6580;
+            flex: 1;
         }
 
-        .page-btn:hover {
-            background: #eef8ff;
+        .ac-item a {
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: 700;
+            color: #2a88c1;
+            letter-spacing: 0.5px;
         }
 
-        .page-btn.active {
-            background: linear-gradient(140deg, #439bd4, #4db0e4);
-            color: #fff;
-            border-color: transparent;
+        .ac-gallery {
+            margin-top: 28px;
+            display: grid;
+            grid-template-columns: repeat(12, minmax(0, 1fr));
+            gap: 12px;
         }
 
-        .page-btn.disabled {
-            opacity: 0.45;
-            pointer-events: none;
+        .ac-gallery img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 16px;
+            box-shadow: 0 12px 24px rgba(15, 42, 70, 0.1);
         }
 
-        @media (max-width: 1280px) {
-            .notice-grid {
-                grid-template-columns: repeat(4, minmax(0, 1fr));
-            }
+        .ac-gallery .g1 {
+            grid-column: span 4;
+            height: 310px;
         }
 
-        @media (max-width: 1100px) {
-            .notice-hero-grid {
+        .ac-gallery .g2 {
+            grid-column: span 4;
+            height: 150px;
+        }
+
+        .ac-gallery .g3 {
+            grid-column: span 4;
+            height: 150px;
+        }
+
+        .ac-gallery .g4 {
+            grid-column: span 4;
+            height: 150px;
+        }
+
+        .ac-gallery .g5 {
+            grid-column: span 4;
+            height: 150px;
+        }
+
+        .ac-gallery .g6 {
+            grid-column: span 4;
+            height: 310px;
+        }
+
+        @media (max-width: 1200px) {
+            .ac-hero-grid,
+            .ac-intro {
                 grid-template-columns: 1fr;
             }
 
-            .notice-grid {
-                grid-template-columns: repeat(3, minmax(0, 1fr));
-            }
-        }
-
-        @media (max-width: 768px) {
-            .notice-wide {
-                width: min(94vw, 1520px);
-            }
-
-            .notice-hero {
-                padding: 96px 0 40px;
-            }
-
-            .notice-head {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .notice-grid {
+            .ac-grid {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
             }
         }
 
-        @media (max-width: 480px) {
-            .notice-grid {
+        @media (max-width: 900px) {
+            .ac-gallery {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .ac-gallery .g1,
+            .ac-gallery .g2,
+            .ac-gallery .g3,
+            .ac-gallery .g4,
+            .ac-gallery .g5,
+            .ac-gallery .g6 {
+                grid-column: auto;
+                height: 210px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .ac-wide {
+                width: min(94vw, 1520px);
+            }
+
+            .ac-hero {
+                padding: 96px 0 40px;
+            }
+
+            .ac-grid,
+            .ac-kpis {
                 grid-template-columns: 1fr;
             }
         }
@@ -349,11 +408,11 @@
     <?php include 'includes/header.php'; ?>
     <div class="overlay_mark_search" style="display:none;"></div>
 
-    <main class="body-content notice-page">
-        <section class="notice-hero">
-            <div class="notice-wide notice-hero-grid">
+    <main class="body-content achievements-page">
+        <section class="ac-hero">
+            <div class="ac-wide ac-hero-grid">
                 <div>
-                    <ol class="breadcrumb notice-breadcrumb">
+                    <ol class="breadcrumb ac-breadcrumb">
                         <li class="breadcrumb-item"><a href="index.php">Trang chủ</a></li>
                         <li class="breadcrumb-item"><a href="javascript:;">Tin tức</a></li>
                         <li class="breadcrumb-item active">Thông báo</li>
@@ -361,46 +420,105 @@
                     <h1>Thông báo từ Nhà trường</h1>
                     <p>Cập nhật chính thức các thông báo về lịch học, lịch thi, sự kiện quan trọng và các nội dung điều chỉnh trong năm học. Phụ huynh và học sinh vui lòng theo dõi thường xuyên để nắm bắt thông tin kịp thời.</p>
                 </div>
-                <div class="notice-top-card">
+                <div class="ac-highlight">
                     <img src="storage/jnp2203-1-1920x1080.jpg" alt="Thông báo mới nhất">
-                    <div class="cap">Cập nhật liên tục theo tuần để đảm bảo mọi thông tin đến phụ huynh và học sinh nhanh chóng, chính xác.</div>
+                    <p>Cập nhật liên tục theo tuần để đảm bảo mọi thông tin đến phụ huynh và học sinh nhanh chóng, chính xác.</p>
                 </div>
             </div>
         </section>
 
-        <section class="notice-section">
-            <div class="notice-wide">
-                <div class="notice-head">
-                    <h2>Danh sách thông báo</h2>
-                    <p>Hiển thị dạng ô vuông, mỗi hàng 5 thông báo.</p>
+        <section class="ac-section">
+            <div class="ac-wide">
+                <div class="ac-intro">
+                    <article class="ac-card" data-aos="fade-up">
+                        <h2>Danh sách thông báo mới nhất</h2>
+                        <p>Trang thông báo tổng hợp toàn bộ các nội dung chính thức từ nhà trường bao gồm lịch học, lịch thi, thay đổi chế độ, sự kiện đặc biệt và các hướng dẫn dành cho phụ huynh, học sinh trong suốt năm học.</p>
+                    </article>
+                    <div class="ac-kpis" data-aos="fade-up" data-aos-delay="100">
+                        <div class="ac-kpi"><strong>50+</strong><span>Thông báo chính thức được phát hành mỗi năm học</span></div>
+                        <div class="ac-kpi"><strong>24h</strong><span>Cập nhật nhanh chóng mọi thay đổi quan trọng</span></div>
+                        <div class="ac-kpi"><strong>100%</strong><span>Phụ huynh được thông tin đầy đủ qua đa kênh</span></div>
+                        <div class="ac-kpi"><strong>5+</strong><span>Danh mục: Lịch học, Tuyển sinh, Sự kiện, Hành chính, Y tế</span></div>
+                    </div>
                 </div>
 
-                <div class="notice-grid" id="notice-grid">
-                    <a class="notice-card" href="javascript:;" data-page="1"><div class="notice-card-thumb"><img src="assets/banner/banner1.jpeg" alt=""></div><div class="notice-card-body"><span class="notice-badge">Lịch học</span><h3 class="notice-title">Thông báo điều chỉnh lịch học tuần 1 tháng 4</h3><span class="notice-date">19/03/2026</span></div></a>
-                    <a class="notice-card" href="javascript:;" data-page="1"><div class="notice-card-thumb"><img src="assets/banner/banner2.jpeg" alt=""></div><div class="notice-card-body"><span class="notice-badge">Tuyển sinh</span><h3 class="notice-title">Mở đăng ký tham quan campus đợt tháng 4</h3><span class="notice-date">18/03/2026</span></div></a>
-                    <a class="notice-card" href="javascript:;" data-page="1"><div class="notice-card-thumb"><img src="assets/banner/banner3.jpeg" alt=""></div><div class="notice-card-body"><span class="notice-badge">Sự kiện</span><h3 class="notice-title">Lịch Ngày hội STEAM dành cho khối THCS</h3><span class="notice-date">17/03/2026</span></div></a>
-                    <a class="notice-card" href="javascript:;" data-page="1"><div class="notice-card-thumb"><img src="olympia/images/noibat_2.jpg" alt=""></div><div class="notice-card-body"><span class="notice-badge">Hành chính</span><h3 class="notice-title">Hướng dẫn cập nhật thông tin học sinh trên cổng phụ huynh</h3><span class="notice-date">16/03/2026</span></div></a>
-                    <a class="notice-card" href="javascript:;" data-page="1"><div class="notice-card-thumb"><img src="olympia/images/noibat_4.jpg" alt=""></div><div class="notice-card-body"><span class="notice-badge">Bán trú</span><h3 class="notice-title">Thực đơn tuần mới và lưu ý dinh dưỡng theo cấp học</h3><span class="notice-date">15/03/2026</span></div></a>
-
-                    <a class="notice-card" href="javascript:;" data-page="2"><div class="notice-card-thumb"><img src="olympia/images/noibat_6.jpg" alt=""></div><div class="notice-card-body"><span class="notice-badge">Xe bus</span><h3 class="notice-title">Điều chỉnh tuyến xe bus khu vực Nam Từ Liêm</h3><span class="notice-date">14/03/2026</span></div></a>
-                    <a class="notice-card" href="javascript:;" data-page="2"><div class="notice-card-thumb"><img src="olympia/images/noibat_7.jpg" alt=""></div><div class="notice-card-body"><span class="notice-badge">Học bổng</span><h3 class="notice-title">Thông báo thời gian nộp hồ sơ xét học bổng 2026 - 2027</h3><span class="notice-date">13/03/2026</span></div></a>
-                    <a class="notice-card" href="javascript:;" data-page="2"><div class="notice-card-thumb"><img src="storage/banner/tieu-hoc.jpg" alt=""></div><div class="notice-card-body"><span class="notice-badge">Tiểu học</span><h3 class="notice-title">Kế hoạch kiểm tra định kỳ học kỳ II khối Tiểu học</h3><span class="notice-date">12/03/2026</span></div></a>
-                    <a class="notice-card" href="javascript:;" data-page="2"><div class="notice-card-thumb"><img src="storage/banner/trung-hoc.jpg" alt=""></div><div class="notice-card-body"><span class="notice-badge">THCS</span><h3 class="notice-title">Lịch ôn tập và tư vấn chọn môn học lớp 9</h3><span class="notice-date">11/03/2026</span></div></a>
-                    <a class="notice-card" href="javascript:;" data-page="2"><div class="notice-card-thumb"><img src="storage/banner/tien-tieu-hoc.jpg" alt=""></div><div class="notice-card-body"><span class="notice-badge">Y tế</span><h3 class="notice-title">Thông báo khám sức khỏe định kỳ học sinh toàn trường</h3><span class="notice-date">10/03/2026</span></div></a>
-
-                    <a class="notice-card" href="javascript:;" data-page="3"><div class="notice-card-thumb"><img src="storage/thanh-tich/tt-9.jpg" alt=""></div><div class="notice-card-body"><span class="notice-badge">Khẩn</span><h3 class="notice-title">Cập nhật kế hoạch học tập trong điều kiện thời tiết xấu</h3><span class="notice-date">09/03/2026</span></div></a>
-                    <a class="notice-card" href="javascript:;" data-page="3"><div class="notice-card-thumb"><img src="storage/thanh-tich/tt-10.jpg" alt=""></div><div class="notice-card-body"><span class="notice-badge">Tài chính</span><h3 class="notice-title">Thời hạn hoàn tất học phí học kỳ II năm học 2025 - 2026</h3><span class="notice-date">08/03/2026</span></div></a>
-                    <a class="notice-card" href="javascript:;" data-page="3"><div class="notice-card-thumb"><img src="storage/thanh-tich/tt-11.jpg" alt=""></div><div class="notice-card-body"><span class="notice-badge">CLB</span><h3 class="notice-title">Mở đăng ký câu lạc bộ Robotics và Tranh biện</h3><span class="notice-date">07/03/2026</span></div></a>
-                    <a class="notice-card" href="javascript:;" data-page="3"><div class="notice-card-thumb"><img src="storage/thanh-tich/tt-12.jpg" alt=""></div><div class="notice-card-body"><span class="notice-badge">Phụ huynh</span><h3 class="notice-title">Lịch họp phụ huynh toàn trường đợt cuối tháng 3</h3><span class="notice-date">06/03/2026</span></div></a>
-                    <a class="notice-card" href="javascript:;" data-page="3"><div class="notice-card-thumb"><img src="storage/thanh-tich/tt-13.jpg" alt=""></div><div class="notice-card-body"><span class="notice-badge">An toàn</span><h3 class="notice-title">Khuyến cáo an toàn giao thông cho học sinh khi đến trường</h3><span class="notice-date">05/03/2026</span></div></a>
+                <div class="ac-tabs" id="ac-tabs">
+                    <button class="ac-tab active" data-year="all">Tất cả</button>
+                    <button class="ac-tab" data-year="lich-hoc">Lịch học</button>
+                    <button class="ac-tab" data-year="tuyen-sinh">Tuyển sinh</button>
+                    <button class="ac-tab" data-year="su-kien">Sự kiện</button>
+                    <button class="ac-tab" data-year="hanh-chinh">Hành chính</button>
                 </div>
 
-                <div class="notice-pagination" id="notice-pagination">
-                    <button class="page-btn" data-page="prev">‹</button>
-                    <button class="page-btn active" data-page="1">1</button>
-                    <button class="page-btn" data-page="2">2</button>
-                    <button class="page-btn" data-page="3">3</button>
-                    <button class="page-btn" data-page="next">›</button>
+                <div class="ac-grid" id="ac-grid">
+                    <article class="ac-item" data-year="lich-hoc" data-aos="fade-up">
+                        <img src="assets/banner/banner1.jpeg" alt="Lịch học">
+                        <div class="ac-item-content">
+                            <span class="ac-item-year">Lịch học</span>
+                            <h3>Thông báo điều chỉnh lịch học tuần 1 tháng 4</h3>
+                            <p>Nhà trường thông báo lịch học điều chỉnh áp dụng từ tuần đầu tháng 4 cho toàn bộ các cấp học.</p>
+                            <a href="javascript:;">Xem chi tiết ›</a>
+                        </div>
+                    </article>
+
+                    <article class="ac-item" data-year="tuyen-sinh" data-aos="fade-up" data-aos-delay="80">
+                        <img src="assets/banner/banner2.jpeg" alt="Tuyển sinh">
+                        <div class="ac-item-content">
+                            <span class="ac-item-year">Tuyển sinh</span>
+                            <h3>Mở đăng ký tham quan campus đợt tháng 4</h3>
+                            <p>Phụ huynh có thể đăng ký tham quan trực tiếp cơ sở vật chất và tìm hiểu chương trình đào tạo của nhà trường.</p>
+                            <a href="javascript:;">Xem chi tiết ›</a>
+                        </div>
+                    </article>
+
+                    <article class="ac-item" data-year="su-kien" data-aos="fade-up" data-aos-delay="140">
+                        <img src="assets/banner/banner3.jpeg" alt="Sự kiện">
+                        <div class="ac-item-content">
+                            <span class="ac-item-year">Sự kiện</span>
+                            <h3>Lịch Ngày hội STEAM dành cho khối THCS</h3>
+                            <p>Sự kiện STEAM quy mô lớn với các hoạt động thực nghiệm khoa học, lập trình và sáng tạo công nghệ.</p>
+                            <a href="javascript:;">Xem chi tiết ›</a>
+                        </div>
+                    </article>
+
+                    <article class="ac-item" data-year="hanh-chinh" data-aos="fade-up">
+                        <img src="olympia/images/noibat_2.jpg" alt="Hành chính">
+                        <div class="ac-item-content">
+                            <span class="ac-item-year">Hành chính</span>
+                            <h3>Hướng dẫn cập nhật thông tin học sinh trên cổng phụ huynh</h3>
+                            <p>Phụ huynh vui lòng cập nhật thông tin cá nhân và liên lạc trên hệ thống quản lý học sinh theo hướng dẫn.</p>
+                            <a href="javascript:;">Xem chi tiết ›</a>
+                        </div>
+                    </article>
+
+                    <article class="ac-item" data-year="lich-hoc" data-aos="fade-up" data-aos-delay="80">
+                        <img src="olympia/images/noibat_4.jpg" alt="Bán trú">
+                        <div class="ac-item-content">
+                            <span class="ac-item-year">Lịch học</span>
+                            <h3>Thực đơn tuần mới và lưu ý dinh dưỡng theo cấp học</h3>
+                            <p>Thực đơn bán trú được cập nhật hàng tuần, đảm bảo dinh dưỡng cân đối và an toàn vệ sinh thực phẩm.</p>
+                            <a href="javascript:;">Xem chi tiết ›</a>
+                        </div>
+                    </article>
+
+                    <article class="ac-item" data-year="hanh-chinh" data-aos="fade-up" data-aos-delay="140">
+                        <img src="olympia/images/noibat_6.jpg" alt="Xe bus">
+                        <div class="ac-item-content">
+                            <span class="ac-item-year">Hành chính</span>
+                            <h3>Điều chỉnh tuyến xe bus khu vực Nam Từ Liêm</h3>
+                            <p>Thông báo thay đổi lộ trình xe bus phục vụ học sinh khu vực Nam Từ Liêm từ tuần tiếp theo.</p>
+                            <a href="javascript:;">Xem chi tiết ›</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="ac-gallery" data-aos="fade-up">
+                    <img class="g1" src="olympia/images/noibat_6.jpg" alt="Ảnh 1">
+                    <img class="g2" src="olympia/images/noibat_2.jpg" alt="Ảnh 2">
+                    <img class="g3" src="olympia/images/noibat_4.jpg" alt="Ảnh 3">
+                    <img class="g4" src="olympia/images/noibat_7.jpg" alt="Ảnh 4">
+                    <img class="g5" src="storage/banner/tieu-hoc.jpg" alt="Ảnh 5">
+                    <img class="g6" src="storage/banner/trung-hoc.jpg" alt="Ảnh 6">
                 </div>
             </div>
         </section>
@@ -408,14 +526,12 @@
 
     <?php include 'includes/footer.php'; ?>
 
-    <script type="text/javascript" src="olympia/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="olympia/js/toastr.min.js"></script>
-    <script type="text/javascript" src="olympia/js/moment.min.js"></script>
-    <script type="text/javascript" src="olympia/js/moment-timezone.min.js"></script>
-    <script type="text/javascript" src="olympia/js/bootstrap-datetimepicker.min.js"></script>
-    <script src="olympia/js/slick.js"></script>
-    <script type="text/javascript" src="olympia/js/script.js"></script>
-    <script type="text/javascript" src="olympia/js/main.js"></script>
+    <script src="olympia/js/bootstrap.min.js"></script>
+    <script src="olympia/js/jquery.toast.min.js"></script>
+    <script src="olympia/js/main.js"></script>
+    <script src="vendor/core/plugins/language/js/language-publice209.js?v=1.0.0"></script>
+    <script src="olympia/js/contact.js"></script>
+    <script src="olympia/js/custom.js"></script>
 
     <script>
         AOS.init({
@@ -426,67 +542,26 @@
         });
 
         (function() {
-            var cards = document.querySelectorAll('#notice-grid .notice-card');
-            var buttons = document.querySelectorAll('#notice-pagination .page-btn');
-            var totalPages = 3;
-            var currentPage = 1;
+            var tabs = document.querySelectorAll('#ac-tabs .ac-tab');
+            var cards = document.querySelectorAll('#ac-grid .ac-item');
 
-            function renderPagination() {
-                buttons.forEach(function(btn) {
-                    var page = btn.getAttribute('data-page');
-                    btn.classList.remove('active', 'disabled');
+            tabs.forEach(function(tab) {
+                tab.addEventListener('click', function() {
+                    tabs.forEach(function(t) {
+                        t.classList.remove('active');
+                    });
+                    tab.classList.add('active');
 
-                    if (String(currentPage) === page) {
-                        btn.classList.add('active');
-                    }
-
-                    if (page === 'prev' && currentPage === 1) {
-                        btn.classList.add('disabled');
-                    }
-
-                    if (page === 'next' && currentPage === totalPages) {
-                        btn.classList.add('disabled');
-                    }
-                });
-            }
-
-            function renderCards() {
-                cards.forEach(function(card) {
-                    var page = Number(card.getAttribute('data-page'));
-                    card.style.display = (page === currentPage) ? 'flex' : 'none';
-                });
-            }
-
-            function setPage(page) {
-                if (page < 1 || page > totalPages) {
-                    return;
-                }
-                currentPage = page;
-                renderCards();
-                renderPagination();
-                window.scrollTo({ top: document.querySelector('.notice-section').offsetTop - 90, behavior: 'smooth' });
-            }
-
-            buttons.forEach(function(btn) {
-                btn.addEventListener('click', function() {
-                    var page = btn.getAttribute('data-page');
-
-                    if (page === 'prev') {
-                        setPage(currentPage - 1);
-                        return;
-                    }
-
-                    if (page === 'next') {
-                        setPage(currentPage + 1);
-                        return;
-                    }
-
-                    setPage(Number(page));
+                    var year = tab.getAttribute('data-year');
+                    cards.forEach(function(card) {
+                        if (year === 'all' || card.getAttribute('data-year') === year) {
+                            card.style.display = 'flex';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
                 });
             });
-
-            renderCards();
-            renderPagination();
         })();
     </script>
 </body>

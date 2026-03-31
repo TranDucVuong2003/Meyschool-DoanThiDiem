@@ -102,65 +102,11 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="menu-item <?php echo isActive('lo-trinh-hoc-tap.php', $current_page); ?>">
-                            <a href="javascript:void(0)" title="" class="menu_link">Chương trình đào tạo</a>
-                            <ul class="dropdown-content">
-                                <li>
-                                    <a href="tong-quan-chuong-trinh.php">
-                                        <span>Tổng quan chương trình</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="chuong-trinh-tieu-hoc.php">
-                                        <span>Chương trình Tiểu học</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="chuong-trinh-thcs.php">
-                                        <span>Chương trình THCS</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="hoat-dong-ngoai-khoa.php">
-                                        <span>Hoạt động ngoại khóa</span>
-                                    </a>
-                                </li>
-                            </ul>
+                        <li class="menu-item <?php echo isActive('chuong-trinh-dao-tao.php', $current_page); ?>">
+                            <a href="chuong-trinh-dao-tao.php" title="" class="menu_link">Chương trình đào tạo</a>
                         </li>
                         <li class="menu-item <?php echo isActive('co-so-vat-chat.php', $current_page); ?>">
-                            <a href="javascript:void(0)" title="" class="menu_link">Cơ sở vật chất</a>
-                            <ul class="dropdown-content">
-                                <li>
-                                    <a href="tong-quan-campus.php">
-                                        <span>Tổng quan campus</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="phong-hoc.php">
-                                        <span>Phòng học</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="khu-the-thao.php">
-                                        <span>Khu thể thao</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="thu-vien.php">
-                                        <span>Thư viện</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="khong-gian-sang-tao.php">
-                                        <span>Không gian sáng tạo/ Trò chơi dân gian</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="nha-truyen-thong.php">
-                                        <span>Nhà truyền thống</span>
-                                    </a>
-                                </li>
-                            </ul>
+                            <a href="co-so-vat-chat.php" title="" class="menu_link">Cơ sở vật chất</a>
                         </li>
                         <li class="menu-item <?php echo isActive('dich-vu-xe-dua-don-hoc-sinh.php', $current_page); ?>">
                             <a href="javascript:void(0)" title="" class="menu_link">Dịch vụ học đường</a>
@@ -326,23 +272,9 @@
                                     <a class="mb-menu-link" href="tieu-bieu.php">Olympian tiêu biểu</a>
                                 </div>
                             </li>
-                            <li class="mb-menu-item  has-children ">
+                            <li class="mb-menu-item">
                                 <div class="mb-menu-item-box">
-                                    <a class="mb-menu-link" href="lo-trinh-hoc-tap.php"> Chương trình đào tạo</a>
-                                </div>
-                                <div class="mb-menu-sub">
-                                    <div class="mb-menu-body">
-                                        <ul class="mb-menu-sub-list">
-                                            <li class="mb-sub-item"><a href="tong-quan-chuong-trinh.php" title=""
-                                                    class="mb-sub-link">Tổng quan chương trình</a></li>
-                                            <li class="mb-sub-item"><a href="chuong-trinh-tieu-hoc.php" title=""
-                                                    class="mb-sub-link">Chương trình Tiểu học</a></li>
-                                            <li class="mb-sub-item"><a href="chuong-trinh-thcs.php" title=""
-                                                    class="mb-sub-link">Chương trình THCS</a></li>
-                                            <li class="mb-sub-item"><a href="hoat-dong-ngoai-khoa.php" title=""
-                                                    class="mb-sub-link">Hoạt động ngoại khóa</a></li>
-                                        </ul>
-                                    </div>
+                                    <a class="mb-menu-link" href="chuong-trinh-dao-tao.php"> Chương trình đào tạo</a>
                                 </div>
                             </li>
                             <li class="mb-menu-item  has-children ">

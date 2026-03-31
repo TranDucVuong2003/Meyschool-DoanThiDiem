@@ -112,7 +112,10 @@
         }
 
         .ld-breadcrumb {
-            margin: 0 0 14px;
+            position: relative;
+            left: 0;
+            margin: 0 auto 14px 0;
+            align-self: flex-start;
             display: inline-flex;
             flex-wrap: wrap;
             gap: 8px;
@@ -126,6 +129,12 @@
         .ld-breadcrumb li a {
             color: #fff;
             font-size: 13px;
+        }
+
+        .ld-hero-grid > div:first-child {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
         }
 
         .ld-hero-grid {

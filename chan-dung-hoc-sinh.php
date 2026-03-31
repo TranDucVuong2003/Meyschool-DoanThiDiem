@@ -210,8 +210,10 @@
 
         .sp-layout {
             display: grid;
-            grid-template-columns: minmax(0, 1.35fr) minmax(290px, 0.65fr);
+            grid-template-columns: 1fr;
             gap: 24px;
+            max-width: 1100px;
+            margin: 0 auto;
         }
 
         .sp-content {
@@ -552,21 +554,25 @@
                             <li class="breadcrumb-item active">Chân dung học sinh</li>
                         </ol>
 
-                        <h1>Chân dung học sinh Meyschool</h1>
-                        <p>Nơi mỗi học sinh được nhìn nhận như một cá thể độc đáo, có ước mơ riêng, năng lực riêng và hành trình riêng để trưởng thành thành công dân toàn cầu tự tin, nhân ái và sáng tạo.</p>
+                        <h1>Chân dung học sinh Meyschool Đoàn Thị Điểm</h1>
+                        <p>Tại Meyschool Đoàn Thị Điểm Phú Quốc, mỗi học sinh là một cá thể duy nhất với những tiềm năng
+                            vô hạn. Chúng tôi không chỉ dạy kiến thức, mà còn nuôi dưỡng để các em trở thành những Công
+                            dân toàn cầu mang trong mình 5 giá trị cốt lõi.</p>
 
                         <div class="sp-hero-chips">
-                            <span>Bản lĩnh học thuật</span>
-                            <span>Hành động vì cộng đồng</span>
-                            <span>Tư duy toàn cầu</span>
+                            <span>Nhân ái</span>
+                            <span>Chủ động</span>
+                            <span>Sáng tạo</span>
+                            <span>Trung thực</span>
+                            <span>Hội nhập</span>
                         </div>
                     </div>
 
                     <div class="sp-hero-collage">
-                        <img src="storage/banner/tieu-hoc.jpg" alt="Học sinh tiểu học Meyschool">
-                        <img src="storage/banner/trung-hoc.jpg" alt="Học sinh trung học Meyschool">
-                        <img src="olympia/images/0201.jpg" alt="Hoạt động học tập tại Meyschool">
-                        <img src="olympia/images/0208.jpg" alt="Không gian trải nghiệm của học sinh">
+                        <img src="assets/img/chan-dung-hoc-sinh/TUN09890.jpg" alt="Học sinh Meyschool Đoàn Thị Điểm">
+                        <img src="assets/img/chan-dung-hoc-sinh/TUN09909.jpg" alt="Học sinh trong hoạt động học tập">
+                        <img src="assets/img/chan-dung-hoc-sinh/TUN09926.jpg" alt="Hoạt động trải nghiệm tại Meyschool">
+                        <img src="assets/img/chan-dung-hoc-sinh/TUN09948.jpg" alt="Không gian học tập của học sinh">
                     </div>
                 </div>
             </div>
@@ -577,7 +583,9 @@
                 <div class="sp-content">
                     <article class="sp-card" data-aos="fade-up">
                         <h2>Hành trình phát triển</h2>
-                        <p>Tại Meyschool, học sinh không chỉ học để thi mà còn học để hiểu bản thân, kết nối cộng đồng và tạo ra giá trị tích cực. Mỗi giai đoạn học tập được thiết kế theo hướng mở, liên môn và giàu trải nghiệm thực tế.</p>
+                        <p>Tại Meyschool, học sinh không chỉ học để thi mà còn học để hiểu bản thân, kết nối cộng đồng
+                            và tạo ra giá trị tích cực. Mỗi giai đoạn học tập được thiết kế theo hướng mở, liên môn và
+                            giàu trải nghiệm thực tế.</p>
                         <div class="sp-journey">
                             <div class="sp-step">
                                 <b>Bước 1: Khám phá</b>
@@ -611,71 +619,392 @@
                         <h2>Khoảnh khắc học sinh</h2>
                         <div class="sp-gallery">
                             <figure class="tall">
-                                <img src="storage/banner/ve-chung-toi-web.jpg" alt="Học sinh trong hoạt động trải nghiệm">
+                                <img src="assets/img/chan-dung-hoc-sinh/TUN09961.jpg"
+                                    alt="Học sinh trong hoạt động trải nghiệm">
                                 <figcaption>Học qua trải nghiệm và dự án liên môn</figcaption>
                             </figure>
                             <figure class="small">
-                                <img src="storage/banner/tieu-hoc.jpg" alt="Học sinh tiểu học tham gia hoạt động">
+                                <img src="assets/img/chan-dung-hoc-sinh/TUN09890.jpg" alt="Học sinh tham gia hoạt động">
                                 <figcaption>Phát triển năng lực từ sớm</figcaption>
                             </figure>
                             <figure class="small">
-                                <img src="olympia/images/0201.jpg" alt="Không gian học tập sáng tạo">
+                                <img src="assets/img/chan-dung-hoc-sinh/TUN09909.jpg" alt="Không gian học tập sáng tạo">
                                 <figcaption>Không gian học tập truyền cảm hứng</figcaption>
                             </figure>
                             <figure class="wide">
-                                <img src="storage/banner/trung-hoc.jpg" alt="Học sinh trung học tại Meyschool">
+                                <img src="assets/img/chan-dung-hoc-sinh/thư viện.jpg" alt="Thư viện Meyschool">
                                 <figcaption>Tự tin, chủ động, sẵn sàng hội nhập</figcaption>
                             </figure>
                             <figure class="small">
-                                <img src="olympia/images/0202.jpg" alt="Học sinh trong lớp học">
+                                <img src="assets/img/chan-dung-hoc-sinh/thư viện (1).jpg" alt="Học sinh trong thư viện">
                                 <figcaption>Học thuật vững vàng</figcaption>
                             </figure>
                             <figure class="small">
-                                <img src="olympia/images/0206.jpg" alt="Học sinh tương tác nhóm">
+                                <img src="assets/img/chan-dung-hoc-sinh/thư viện (2).jpg" alt="Học sinh tương tác nhóm">
                                 <figcaption>Hợp tác và lãnh đạo trong cộng đồng học tập</figcaption>
                             </figure>
                         </div>
                     </article>
                 </div>
-
-                <aside class="sp-side" data-aos="fade-up" data-aos-delay="120">
-                    <div class="sp-side-card">
-                        <h3>Khám phá thêm</h3>
-                        <div class="sp-links">
-                            <a href="thong-diep-nguoi-sang-lap.php">Thông điệp Nhà sáng lập</a>
-                            <a href="tam-nhin-su-menh.php">Tầm nhìn - Sứ mệnh</a>
-                            <a href="ban-lanh-dao.php">Ban lãnh đạo</a>
-                            <a href="doi-ngu-giao-vien.php">Đội ngũ giáo viên</a>
-                        </div>
-                    </div>
-
-                    <div class="sp-side-card">
-                        <h3>Giá trị nổi bật</h3>
-                        <p>Học sinh Meyschool được rèn luyện trên 4 trục: tri thức học thuật, năng lực cảm xúc xã hội, bản lĩnh công dân và khả năng thích ứng với bối cảnh toàn cầu.</p>
-                    </div>
-
-                    <div class="sp-side-card">
-                        <h3>Liên hệ tư vấn</h3>
-                        <div class="sp-contact-item">
-                            <b>Hotline</b>
-                            <span>0934 525 889</span>
-                        </div>
-                        <div class="sp-contact-item">
-                            <b>Email</b>
-                            <span>tuyensinh@meyschool.edu.vn</span>
-                        </div>
-                        <div class="sp-contact-item" style="margin-bottom: 0;">
-                            <b>Địa chỉ</b>
-                            <span>KĐT Trung Văn, Nam Từ Liêm, Hà Nội</span>
-                        </div>
-                        <div class="sp-actions">
-                            <a href="dang-ky-tu-van.php" class="sp-btn sp-btn-primary">Đăng ký tư vấn</a>
-                            <a href="lien-he.php" class="sp-btn sp-btn-light">Liên hệ ngay</a>
-                        </div>
-                    </div>
-                </aside>
             </div>
         </section>
+
+        <!-- Section: Tin tức Tuyển sinh -->
+        <section class="ts-news-section" style="padding:60px 0 40px; margin-bottom: 115px;">
+            <div class="student-wrap" style="max-width:1100px;">
+                <h2 class="ts-news-title"
+                    style="font-family:'EB Garamond',serif;font-size:36px;font-weight:700;color:var(--sp-ink);text-transform:uppercase;margin-bottom:36px;text-align:center;">
+                    Tuyển sinh</h2>
+                <div class="ts-news-slider">
+                    <div class="ts-news-card">
+                        <a href="thong-tin-tuyen-sinh-tieu-hoc.php" style="display:block;">
+                            <img src="assets/img/tuyensinh/banner4.jpg" alt="Thông báo lịch xét tuyển">
+                        </a>
+                        <div class="ts-news-card-body">
+                            <h3>Thông báo lịch xét tuyển Lớp 1 năm học 2026-2027</h3>
+                            <a href="thong-tin-tuyen-sinh-tieu-hoc.php" class="ts-news-link">Xem thêm <span>→</span></a>
+                        </div>
+                    </div>
+                    <div class="ts-news-card">
+                        <a href="thong-tin-tuyen-sinh-tieu-hoc.php" style="display:block;">
+                            <img src="assets/img/tuyensinh/banner5.jpg" alt="Mở cổng đăng ký tuyển sinh">
+                        </a>
+                        <div class="ts-news-card-body">
+                            <h3>Mở cổng đăng ký tuyển sinh lớp 1: Hành trình khởi đầu cho con yêu</h3>
+                            <a href="thong-tin-tuyen-sinh-tieu-hoc.php" class="ts-news-link">Xem thêm <span>→</span></a>
+                        </div>
+                    </div>
+                    <div class="ts-news-card">
+                        <a href="hoc-bong-2026-2027.php" style="display:block;">
+                            <img src="assets/img/tuyensinh/tuyển sinh chung.jpg" alt="Ưu đãi tuyển sinh">
+                        </a>
+                        <div class="ts-news-card-body">
+                            <h3>Ưu đãi tuyển sinh và học bổng năm học 2026-2027</h3>
+                            <a href="hoc-bong-2026-2027.php" class="ts-news-link">Xem thêm <span>→</span></a>
+                        </div>
+                    </div>
+                    <div class="ts-news-card">
+                        <a href="thong-tin-tuyen-sinh-tieu-hoc.php" style="display:block;">
+                            <img src="assets/img/tuyensinh/tiền tiểu học 1.jpg" alt="Chương trình tiền tiểu học">
+                        </a>
+                        <div class="ts-news-card-body">
+                            <h3>Chương trình Tiền tiểu học – Sẵn sàng cho hành trình học tập mới</h3>
+                            <a href="thong-tin-tuyen-sinh-tieu-hoc.php" class="ts-news-link">Xem thêm <span>→</span></a>
+                        </div>
+                    </div>
+                    <div class="ts-news-card">
+                        <a href="thong-tin-tuyen-sinh-tieu-hoc.php" style="display:block;">
+                            <img src="assets/img/tuyensinh/tiền tiểu học 2.jpg" alt="Lịch thi tuyển sinh">
+                        </a>
+                        <div class="ts-news-card-body">
+                            <h3>Lịch thi và quy trình xét tuyển vào lớp 1 năm học 2026-2027</h3>
+                            <a href="thong-tin-tuyen-sinh-tieu-hoc.php" class="ts-news-link">Xem thêm <span>→</span></a>
+                        </div>
+                    </div>
+                    <div class="ts-news-card">
+                        <a href="thong-tin-tuyen-sinh-tieu-hoc.php" style="display:block;">
+                            <img src="assets/img/tuyensinh/thông tin tuyển sinh.jpg" alt="Ngày hội tuyển sinh">
+                        </a>
+                        <div class="ts-news-card-body">
+                            <h3>Ngày hội trải nghiệm và tư vấn tuyển sinh Meyschool 2026</h3>
+                            <a href="thong-tin-tuyen-sinh-tieu-hoc.php" class="ts-news-link">Xem thêm <span>→</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <style>
+                .ts-news-slider {
+                    margin: 0 -12px;
+                }
+
+                .ts-news-slider .slick-slide {
+                    padding: 0 12px;
+                }
+
+                .ts-news-slider .slick-list {
+                    overflow: hidden;
+                }
+
+                .ts-news-card {
+                    background: #fff;
+                    border-radius: 16px;
+                    overflow: hidden;
+                    box-shadow: 0 4px 24px rgba(23, 52, 93, .08);
+                    transition: transform .3s, box-shadow .3s;
+                }
+
+                .ts-news-card:hover {
+                    transform: translateY(-6px);
+                    box-shadow: 0 12px 36px rgba(23, 52, 93, .14);
+                }
+
+                .ts-news-card img {
+                    width: 100%;
+                    height: 220px;
+                    object-fit: cover;
+                    display: block;
+                }
+
+                .ts-news-card-body {
+                    padding: 20px 22px 24px;
+                }
+
+                .ts-news-card-body h3 {
+                    font-size: 16px;
+                    font-weight: 700;
+                    color: var(--sp-ink);
+                    line-height: 1.5;
+                    margin: 0 0 16px;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                }
+
+                .ts-news-link {
+                    font-size: 14px;
+                    font-weight: 600;
+                    color: var(--sp-blue-1);
+                    text-decoration: none;
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 4px;
+                }
+
+                .ts-news-link span {
+                    font-size: 18px;
+                }
+
+                .ts-news-slider .slick-prev,
+                .ts-news-slider .slick-next {
+                    width: 44px;
+                    height: 44px;
+                    z-index: 2;
+                    background: #fff;
+                    border-radius: 50%;
+                    box-shadow: 0 2px 12px rgba(23, 52, 93, .15);
+                    transition: background .25s, box-shadow .25s;
+                }
+
+                .ts-news-slider .slick-prev:hover,
+                .ts-news-slider .slick-next:hover {
+                    background: var(--sp-blue-1);
+                    box-shadow: 0 4px 18px rgba(83, 167, 216, .35);
+                }
+
+                .ts-news-slider .slick-prev {
+                    left: -22px;
+                }
+
+                .ts-news-slider .slick-next {
+                    right: -22px;
+                }
+
+                .ts-news-slider .slick-prev:before,
+                .ts-news-slider .slick-next:before {
+                    color: var(--sp-ink);
+                    font-size: 20px;
+                    opacity: 1;
+                }
+
+                .ts-news-slider .slick-prev:hover:before,
+                .ts-news-slider .slick-next:hover:before {
+                    color: #fff;
+                }
+
+                .ts-news-slider .slick-dots {
+                    bottom: -40px;
+                }
+
+                .ts-news-slider .slick-dots li {
+                    margin: 0 4px;
+                }
+
+                .ts-news-slider .slick-dots li button:before {
+                    font-size: 10px;
+                    color: #c5d3e0;
+                    opacity: 1;
+                }
+
+                .ts-news-slider .slick-dots li.slick-active button:before {
+                    color: var(--sp-blue-1);
+                }
+
+                @media(max-width:1220px) {
+                    .ts-news-slider .slick-prev {
+                        left: 4px;
+                    }
+
+                    .ts-news-slider .slick-next {
+                        right: 4px;
+                    }
+                }
+
+                @media(max-width:768px) {
+                    .ts-news-title {
+                        font-size: 28px !important;
+                    }
+
+                    .ts-news-card img {
+                        height: 180px;
+                    }
+
+                    .ts-news-slider .slick-prev,
+                    .ts-news-slider .slick-next {
+                        width: 36px;
+                        height: 36px;
+                    }
+
+                    .ts-news-slider .slick-prev:before,
+                    .ts-news-slider .slick-next:before {
+                        font-size: 16px;
+                    }
+                }
+            </style>
+        </section>
+
+        <!-- Section: CTA Đăng ký tư vấn -->
+        <section id="lien-he" class="tq-footer-consult-wrap">
+            <div class="tq-footer-consult-inner">
+                <div class="tq-footer-consult-card" data-aos="zoom-in-up">
+                    <div class="tq-footer-consult-content">
+                        <div class="tq-footer-consult-text">
+                            <div>
+                                <small>Tuyển sinh 2026 - 2027</small>
+                                <h3>Đăng ký tư vấn</h3>
+                            </div>
+                            <p>Liên hệ ngay để được tư vấn chi tiết lộ trình học phù hợp cho con.</p>
+                        </div>
+                        <div class="tq-footer-consult-actions">
+                            <a href="lien-he.php" class="tq-footer-consult-btn">Liên hệ ngay</a>
+                            <div class="tq-footer-consult-note">Phản hồi trong vòng 24 giờ làm việc</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <style>
+            .tq-footer-consult-wrap {
+                --tq-consult-half-height: 92px;
+                position: relative;
+                z-index: 5;
+                margin: calc(-1 * var(--tq-consult-half-height)) 20px calc(-1 * var(--tq-consult-half-height));
+                background: transparent;
+            }
+
+            .tq-footer-consult-inner {
+                max-width: 1200px;
+                margin: 0 auto;
+                display: flex;
+                justify-content: center;
+            }
+
+            .tq-footer-consult-card {
+                width: min(100%, 1020px);
+                min-height: calc(var(--tq-consult-half-height) * 2);
+                border-radius: 26px;
+                overflow: hidden;
+                position: relative;
+                background: url('olympia/images/noibat_1.jpg') center/cover no-repeat;
+                box-shadow: 0 20px 40px rgba(16, 52, 92, 0.3);
+                color: #fff;
+                padding: 24px 32px;
+            }
+
+            .tq-footer-consult-card::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(110deg, rgba(17, 64, 114, 0.93) 0%, rgba(28, 89, 153, 0.9) 52%, rgba(44, 121, 190, 0.82) 100%);
+            }
+
+            .tq-footer-consult-content {
+                position: relative;
+                z-index: 2;
+                display: grid;
+                grid-template-columns: 1fr auto;
+                align-items: center;
+                gap: 24px;
+            }
+
+            .tq-footer-consult-text>div {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                margin-bottom: 6px;
+                flex-wrap: nowrap;
+            }
+
+            .tq-footer-consult-text small {
+                display: inline-block;
+                font-size: 13px;
+                font-weight: 700;
+                letter-spacing: 0.06em;
+                text-transform: uppercase;
+                padding: 6px 12px;
+                border-radius: 999px;
+                background: rgba(255, 255, 255, 0.18);
+                margin-bottom: 0;
+            }
+
+            .tq-footer-consult-text h3 {
+                font-family: 'Garamond', serif;
+                font-size: clamp(30px, 2.6vw, 40px);
+                margin: 0;
+                color: #fff;
+            }
+
+            .tq-footer-consult-text p {
+                font-size: 24px;
+                line-height: 1.35;
+                margin: 0;
+                color: rgba(255, 255, 255, 0.96);
+            }
+
+            .tq-footer-consult-actions {
+                text-align: right;
+            }
+
+            .tq-footer-consult-note {
+                margin-top: 10px;
+                font-size: 13px;
+                color: rgba(255, 255, 255, 0.88);
+            }
+
+            .tq-footer-consult-btn {
+                display: inline-block;
+                min-width: 188px;
+                padding: 13px 28px;
+                border-radius: 999px;
+                background: #fff;
+                color: #1d4f87;
+                font-weight: 700;
+                font-size: 17px;
+                text-decoration: none;
+                transition: all 0.3s ease;
+            }
+
+            .tq-footer-consult-btn:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 12px 24px rgba(0, 0, 0, 0.22);
+            }
+
+            @media (max-width: 768px) {
+                .tq-footer-consult-content {
+                    grid-template-columns: 1fr;
+                    text-align: center;
+                }
+
+                .tq-footer-consult-text>div {
+                    justify-content: center;
+                    flex-wrap: wrap;
+                }
+
+                .tq-footer-consult-actions {
+                    text-align: center;
+                }
+            }
+        </style>
     </main>
 
     <?php include 'includes/footer.php'; ?>
@@ -683,6 +1012,32 @@
     <script type="text/javascript" src="olympia/js/jquery.toast.min.js"></script>
     <script type="text/javascript" src="olympia/js/jquery.validate.min.js"></script>
     <script src="olympia/js/main.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".ts-news-slider").slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                infinite: false,
+                dots: true,
+                arrows: true,
+                autoplay: true,
+                autoplaySpeed: 4000,
+                prevArrow: '<button class="slick-prev"><span>&#10094;</span></button>',
+                nextArrow: '<button class="slick-next"><span>&#10095;</span></button>',
+                responsive: [{
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                }, {
+                    breakpoint: 576,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }]
+            });
+        });
+    </script>
 </body>
 
 </html>

@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=1" name="viewport" />
     <link rel="shortcut icon" href="storage/favicon.png">
+
     <title>Tin hoạt động</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:site_name" content="The Olympia Schools">
@@ -36,7 +37,6 @@
     <script src="olympia/js/slick.js"></script>
     <script src="../unpkg.com/aos%402.3.1/dist/aos.js"></script>
 
-    <link rel="alternate" href="en.html" hreflang="en" />
     <style>
         nav#admin_bar {
             display: none;
@@ -56,68 +56,56 @@
         }
 
         :root {
-            --news-blue-1: #439bd4;
-            --news-blue-2: #4db0e4;
-            --news-blue-3: #dff3ff;
-            --news-text: #1f3147;
+            --ac-blue-1: #439bd4;
+            --ac-blue-2: #4db0e4;
+            --ac-blue-3: #e7f6ff;
+            --ac-text: #1e3953;
         }
 
-        .activity-news-page {
-            background: #f6fbff;
-            color: var(--news-text);
+        .achievements-page {
+            background: #f5fbff;
+            color: var(--ac-text);
         }
 
-        .activity-wide {
+        .ac-wide {
             width: min(96vw, 1520px);
             margin: 0 auto;
         }
 
-        .activity-hero {
-            padding: 118px 0 56px;
-            background: linear-gradient(120deg, rgba(67, 155, 212, 0.95) 0%, rgba(77, 176, 228, 0.9) 55%, rgba(77, 176, 228, 0.72) 100%);
+        .ac-hero {
+            padding: 118px 0 58px;
+            background: linear-gradient(120deg, rgba(67, 155, 212, 0.97) 0%, rgba(77, 176, 228, 0.9) 65%, rgba(77, 176, 228, 0.72) 100%);
             position: relative;
             overflow: hidden;
         }
 
-        .activity-hero::before,
-        .activity-hero::after {
+        .ac-hero::before {
             content: '';
             position: absolute;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.18);
-            filter: blur(2px);
-        }
-
-        .activity-hero::before {
             width: 380px;
             height: 380px;
+            border-radius: 50%;
+            right: -120px;
             top: -120px;
-            right: -90px;
+            background: rgba(255, 255, 255, 0.18);
         }
 
-        .activity-hero::after {
-            width: 240px;
-            height: 240px;
-            bottom: -90px;
-            left: -30px;
-        }
-
-        .activity-hero-grid {
+        .ac-hero-grid {
             display: grid;
             grid-template-columns: 1.15fr 0.85fr;
-            gap: 28px;
+            gap: 24px;
             align-items: center;
             position: relative;
             z-index: 2;
         }
 
-        .activity-breadcrumb {
-            margin: 0 0 18px;
+        .ac-breadcrumb {
+            margin: 0 0 16px;
             display: inline-flex;
-            gap: 10px;
+            gap: 8px;
             flex-wrap: wrap;
             background: rgba(255, 255, 255, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.36);
+            border: 1px solid rgba(255, 255, 255, 0.4);
             border-radius: 999px;
             padding: 8px 16px;
             position: static !important;
@@ -126,422 +114,291 @@
             top: auto !important;
             bottom: auto !important;
             transform: none !important;
-            z-index: 1;
         }
 
-        .activity-breadcrumb li,
-        .activity-breadcrumb li a {
+        .ac-breadcrumb li,
+        .ac-breadcrumb li a {
             color: #fff;
             font-size: 13px;
-            line-height: 1.3;
             position: static !important;
         }
 
-        .activity-hero h1 {
+        .ac-hero h1 {
             color: #fff;
-            font-size: clamp(34px, 4vw, 56px);
-            line-height: 1.12;
-            margin: 0 0 18px;
-            font-family: 'Garamond', serif;
-            font-weight: 700;
-            max-width: 720px;
-        }
-
-        .activity-hero p {
-            color: rgba(255, 255, 255, 0.95);
-            font-size: 17px;
-            line-height: 1.85;
-            max-width: 780px;
-            margin: 0;
-        }
-
-        .activity-hero-highlight {
-            background: rgba(255, 255, 255, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.45);
-            border-radius: 24px;
-            padding: 16px;
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 14px;
-            box-shadow: 0 20px 40px rgba(16, 57, 94, 0.2);
-        }
-
-        .activity-hero-highlight img {
-            width: 100%;
-            height: 170px;
-            object-fit: cover;
-            border-radius: 16px;
-        }
-
-        .activity-hero-highlight p {
-            font-size: 14px;
-            line-height: 1.7;
-            margin: 0;
-            color: #fff;
-        }
-
-        .activity-section {
-            padding: 56px 0;
-        }
-
-        .activity-intro {
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 26px;
-        }
-
-        .activity-intro-card {
-            background: #fff;
-            border-radius: 24px;
-            padding: 26px;
-            box-shadow: 0 18px 36px rgba(18, 63, 102, 0.08);
-            border: 1px solid rgba(67, 155, 212, 0.16);
-        }
-
-        .activity-intro-card h2 {
-            font-size: clamp(26px, 2.8vw, 38px);
-            color: #2b7fb8;
+            font-size: clamp(36px, 4.1vw, 60px);
+            line-height: 1.1;
             margin: 0 0 14px;
             font-family: 'Garamond', serif;
         }
 
-        .activity-intro-card p {
+        .ac-hero p {
             margin: 0;
-            line-height: 1.9;
-            color: #3f5873;
-            font-size: 16px;
+            color: rgba(255, 255, 255, 0.95);
+            line-height: 1.85;
+            font-size: 17px;
+            max-width: 760px;
         }
 
-        .activity-kpi-grid {
+        .ac-highlight {
             display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 14px;
+            gap: 12px;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.42);
+            border-radius: 24px;
+            padding: 16px;
+            box-shadow: 0 20px 40px rgba(14, 55, 91, 0.22);
         }
 
-        .activity-kpi {
-            background: linear-gradient(155deg, #439bd4 0%, #4db0e4 100%);
-            border-radius: 20px;
-            padding: 18px;
-            color: #fff;
-            min-height: 120px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            box-shadow: 0 14px 28px rgba(67, 155, 212, 0.3);
+        .ac-highlight img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 14px;
         }
 
-        .activity-kpi strong {
-            font-size: 34px;
-            line-height: 1;
-            margin-bottom: 8px;
-            display: block;
-            font-family: 'Garamond', serif;
-        }
-
-        .activity-kpi span {
+        .ac-highlight p {
+            margin: 0;
             font-size: 14px;
-            line-height: 1.5;
-            opacity: 0.96;
+            color: #fff;
         }
 
-        .activity-listing {
-            margin-top: 14px;
+        .ac-section {
+            padding: 56px 0;
+        }
+
+        .ac-intro {
             display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
+            grid-template-columns: 1.1fr 0.9fr;
             gap: 24px;
         }
 
-        .activity-item {
+        .ac-card {
             background: #fff;
+            border: 1px solid rgba(67, 155, 212, 0.14);
+            box-shadow: 0 16px 32px rgba(13, 51, 85, 0.08);
             border-radius: 22px;
-            overflow: hidden;
-            border: 1px solid rgba(67, 155, 212, 0.15);
-            box-shadow: 0 16px 30px rgba(16, 48, 79, 0.08);
-            display: flex;
-            flex-direction: column;
-            height: 100%;
+            padding: 24px;
         }
 
-        .activity-item img {
+        .ac-card h2 {
+            margin: 0 0 12px;
+            color: #2476ac;
+            font-family: 'Garamond', serif;
+            font-size: clamp(28px, 3vw, 42px);
+            line-height: 1.2;
+        }
+
+        .ac-card p {
+            margin: 0;
+            color: #445d78;
+            font-size: 16px;
+            line-height: 1.85;
+        }
+
+        .ac-kpis {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+        }
+
+        .ac-kpi {
+            background: linear-gradient(145deg, #439bd4 0%, #4db0e4 100%);
+            border-radius: 18px;
+            min-height: 115px;
+            padding: 16px;
+            color: #fff;
+            box-shadow: 0 14px 28px rgba(67, 155, 212, 0.3);
+        }
+
+        .ac-kpi strong {
+            display: block;
+            font-size: 34px;
+            font-family: 'Garamond', serif;
+            line-height: 1;
+            margin-bottom: 6px;
+        }
+
+        .ac-kpi span {
+            font-size: 13px;
+            line-height: 1.55;
+            display: block;
+        }
+
+        .ac-tabs {
+            margin-top: 28px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .ac-tab {
+            border: none;
+            background: #dff3ff;
+            color: #2c7fb7;
+            padding: 10px 14px;
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: 13px;
+            letter-spacing: 0.4px;
+            cursor: pointer;
+        }
+
+        .ac-tab.active {
+            background: linear-gradient(145deg, #439bd4, #4db0e4);
+            color: #fff;
+        }
+
+        .ac-grid {
+            margin-top: 22px;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .ac-item {
+            background: #fff;
+            border: 1px solid rgba(67, 155, 212, 0.15);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 14px 30px rgba(15, 48, 78, 0.08);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ac-item img {
             width: 100%;
             height: 220px;
             object-fit: cover;
         }
 
-        .activity-item-content {
-            padding: 18px 18px 22px;
+        .ac-item-content {
+            padding: 16px;
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 8px;
             flex: 1;
         }
 
-        .activity-tag {
+        .ac-item-year {
             display: inline-flex;
             align-self: flex-start;
-            padding: 7px 12px;
+            padding: 6px 10px;
             border-radius: 999px;
+            background: #ebf8ff;
+            color: #2a7db5;
             font-size: 12px;
-            font-weight: 600;
-            letter-spacing: 0.4px;
-            background: var(--news-blue-3);
-            color: #2576ad;
-            text-transform: uppercase;
+            font-weight: 700;
         }
 
-        .activity-item h3 {
+        .ac-item h3 {
+            margin: 0;
             font-size: 22px;
             line-height: 1.35;
-            color: #245986;
-            margin: 0;
             font-family: 'Garamond', serif;
+            color: #235f8d;
         }
 
-        .activity-item p {
+        .ac-item p {
             margin: 0;
             font-size: 14px;
-            line-height: 1.75;
-            color: #4a647f;
+            line-height: 1.7;
+            color: #4c6580;
             flex: 1;
         }
 
-        .activity-item a {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
+        .ac-item a {
+            text-decoration: none;
             text-transform: uppercase;
-            color: #2f8ec6;
             font-size: 12px;
             font-weight: 700;
-            letter-spacing: 0.6px;
-            text-decoration: none;
+            color: #2a88c1;
+            letter-spacing: 0.5px;
         }
 
-        .activity-timeline-wrap {
-            margin-top: 26px;
-            background: #fff;
-            border-radius: 24px;
-            padding: 24px;
-            border: 1px solid rgba(67, 155, 212, 0.15);
-            box-shadow: 0 18px 34px rgba(16, 48, 79, 0.08);
-        }
-
-        .activity-section-title {
-            margin: 0 0 18px;
-            font-family: 'Garamond', serif;
-            color: #236ea4;
-            font-size: clamp(30px, 3vw, 42px);
-            line-height: 1.2;
-        }
-
-        .activity-timeline {
-            display: grid;
-            grid-template-columns: repeat(4, minmax(0, 1fr));
-            gap: 14px;
-        }
-
-        .activity-step {
-            background: #f4fbff;
-            border: 1px solid rgba(67, 155, 212, 0.16);
-            border-radius: 18px;
-            padding: 16px;
-        }
-
-        .activity-step b {
-            width: 34px;
-            height: 34px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            background: linear-gradient(145deg, #439bd4, #4db0e4);
-            color: #fff;
-            font-size: 14px;
-            margin-bottom: 10px;
-        }
-
-        .activity-step h4 {
-            margin: 0 0 8px;
-            color: #256594;
-            font-size: 18px;
-            font-family: 'Garamond', serif;
-        }
-
-        .activity-step p {
-            margin: 0;
-            font-size: 13px;
-            line-height: 1.65;
-            color: #4f6780;
-        }
-
-        .activity-gallery {
-            margin-top: 24px;
+        .ac-gallery {
+            margin-top: 28px;
             display: grid;
             grid-template-columns: repeat(12, minmax(0, 1fr));
             gap: 12px;
         }
 
-        .activity-gallery img {
+        .ac-gallery img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            border-radius: 18px;
-            box-shadow: 0 12px 26px rgba(12, 44, 77, 0.1);
+            border-radius: 16px;
+            box-shadow: 0 12px 24px rgba(15, 42, 70, 0.1);
         }
 
-        .activity-gallery .g1 {
+        .ac-gallery .g1 {
             grid-column: span 4;
-            height: 320px;
+            height: 310px;
         }
 
-        .activity-gallery .g2 {
-            grid-column: span 3;
-            height: 155px;
-        }
-
-        .activity-gallery .g3 {
-            grid-column: span 5;
-            height: 155px;
-        }
-
-        .activity-gallery .g4 {
-            grid-column: span 3;
-            height: 155px;
-        }
-
-        .activity-gallery .g5 {
-            grid-column: span 5;
-            height: 155px;
-        }
-
-        .activity-gallery .g6 {
+        .ac-gallery .g2 {
             grid-column: span 4;
-            height: 320px;
+            height: 150px;
         }
 
-        .activity-cta {
-            margin-top: 28px;
-            border-radius: 24px;
-            background: linear-gradient(130deg, #439bd4 0%, #4db0e4 100%);
-            padding: 34px;
-            color: #fff;
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 20px;
-            align-items: center;
-            box-shadow: 0 18px 36px rgba(67, 155, 212, 0.35);
+        .ac-gallery .g3 {
+            grid-column: span 4;
+            height: 150px;
         }
 
-        .activity-cta h3 {
-            margin: 0 0 8px;
-            font-size: clamp(28px, 2.8vw, 40px);
-            line-height: 1.15;
-            font-family: 'Garamond', serif;
-            color: #fff;
+        .ac-gallery .g4 {
+            grid-column: span 4;
+            height: 150px;
         }
 
-        .activity-cta p {
-            margin: 0;
-            font-size: 15px;
-            line-height: 1.75;
-            color: rgba(255, 255, 255, 0.96);
-            max-width: 700px;
+        .ac-gallery .g5 {
+            grid-column: span 4;
+            height: 150px;
         }
 
-        .activity-cta-actions {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-            justify-content: flex-end;
-        }
-
-        .activity-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 12px 20px;
-            border-radius: 999px;
-            text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: 0.6px;
-            font-size: 12px;
-            font-weight: 700;
-            transition: all 0.25s ease;
-        }
-
-        .activity-btn-light {
-            background: #fff;
-            color: #2a7fb7;
-        }
-
-        .activity-btn-light:hover {
-            background: #eef9ff;
-            color: #1f6f9f;
-        }
-
-        .activity-btn-outline {
-            border: 1px solid rgba(255, 255, 255, 0.8);
-            color: #fff;
-        }
-
-        .activity-btn-outline:hover {
-            background: rgba(255, 255, 255, 0.14);
-            color: #fff;
+        .ac-gallery .g6 {
+            grid-column: span 4;
+            height: 310px;
         }
 
         @media (max-width: 1200px) {
-            .activity-hero-grid,
-            .activity-intro,
-            .activity-cta {
+            .ac-hero-grid,
+            .ac-intro {
                 grid-template-columns: 1fr;
             }
 
-            .activity-cta-actions {
-                justify-content: flex-start;
-            }
-
-            .activity-listing {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-            }
-
-            .activity-timeline {
+            .ac-grid {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
             }
         }
 
         @media (max-width: 900px) {
-            .activity-gallery {
+            .ac-gallery {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
             }
 
-            .activity-gallery .g1,
-            .activity-gallery .g2,
-            .activity-gallery .g3,
-            .activity-gallery .g4,
-            .activity-gallery .g5,
-            .activity-gallery .g6 {
+            .ac-gallery .g1,
+            .ac-gallery .g2,
+            .ac-gallery .g3,
+            .ac-gallery .g4,
+            .ac-gallery .g5,
+            .ac-gallery .g6 {
                 grid-column: auto;
-                height: 220px;
+                height: 210px;
             }
         }
 
         @media (max-width: 768px) {
-            .activity-hero {
-                padding: 98px 0 42px;
-            }
-
-            .activity-wide {
+            .ac-wide {
                 width: min(94vw, 1520px);
             }
 
-            .activity-listing,
-            .activity-timeline,
-            .activity-kpi-grid {
-                grid-template-columns: 1fr;
+            .ac-hero {
+                padding: 96px 0 40px;
             }
 
-            .activity-item img {
-                height: 206px;
+            .ac-grid,
+            .ac-kpis {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -551,128 +408,116 @@
     <?php include 'includes/header.php'; ?>
     <div class="overlay_mark_search" style="display:none;"></div>
 
-    <main class="body-content activity-news-page">
-        <section class="activity-hero">
-            <div class="activity-wide activity-hero-grid">
+    <main class="body-content achievements-page">
+        <section class="ac-hero">
+            <div class="ac-wide ac-hero-grid">
                 <div>
-                    <ol class="breadcrumb activity-breadcrumb">
+                    <ol class="breadcrumb ac-breadcrumb">
                         <li class="breadcrumb-item"><a href="index.php">Trang chủ</a></li>
                         <li class="breadcrumb-item"><a href="javascript:;">Tin tức</a></li>
                         <li class="breadcrumb-item active">Tin hoạt động</li>
                     </ol>
-                    <h1>Nhịp sống Meyschool qua các hoạt động học tập - sáng tạo - kết nối cộng đồng</h1>
+                    <h1>Nhịp sống Meyschool qua các hoạt động học tập - sáng tạo - kết nối</h1>
                     <p>Cập nhật liên tục các chương trình nổi bật tại Meyschool Đoàn Thị Điểm: dự án học tập liên môn, hoạt động ngoại khóa, ngày hội trải nghiệm, các sự kiện hợp tác quốc tế và hành trình phát triển toàn diện của học sinh trong từng giai đoạn.</p>
                 </div>
-                <div class="activity-hero-highlight">
+                <div class="ac-highlight">
                     <img src="storage/jnp2203-1-1920x1080.jpg" alt="Hoạt động nổi bật">
                     <p>Mỗi tuần, nhà trường triển khai chuỗi hoạt động đa dạng nhằm nuôi dưỡng tri thức, cảm xúc tích cực và kỹ năng hội nhập cho học sinh ở mọi cấp học.</p>
                 </div>
             </div>
         </section>
 
-        <section class="activity-section">
-            <div class="activity-wide">
-                <div class="activity-intro">
-                    <article class="activity-intro-card" data-aos="fade-up">
+        <section class="ac-section">
+            <div class="ac-wide">
+                <div class="ac-intro">
+                    <article class="ac-card" data-aos="fade-up">
                         <h2>Điểm tin hoạt động mới nhất</h2>
                         <p>Trang tin hoạt động được xây dựng theo định hướng trực quan - chi tiết - cập nhật nhanh, giúp phụ huynh và học sinh theo dõi toàn bộ hành trình học đường qua từng sự kiện cụ thể. Nội dung tập trung vào trải nghiệm thực tế, sản phẩm học tập và những khoảnh khắc giàu cảm hứng trong đời sống Meyschool.</p>
                     </article>
-                    <div class="activity-kpi-grid" data-aos="fade-up" data-aos-delay="120">
-                        <div class="activity-kpi">
-                            <strong>120+</strong>
-                            <span>Hoạt động học thuật và ngoại khóa mỗi năm học</span>
-                        </div>
-                        <div class="activity-kpi">
-                            <strong>30+</strong>
-                            <span>Sự kiện hợp tác - kết nối cộng đồng và đối tác giáo dục</span>
-                        </div>
-                        <div class="activity-kpi">
-                            <strong>4</strong>
-                            <span>Nhóm chủ đề chính: Học thuật, Nghệ thuật, Thể thao, Dự án xã hội</span>
-                        </div>
-                        <div class="activity-kpi">
-                            <strong>100%</strong>
-                            <span>Học sinh được tham gia ít nhất một hoạt động trải nghiệm mỗi tháng</span>
-                        </div>
+                    <div class="ac-kpis" data-aos="fade-up" data-aos-delay="100">
+                        <div class="ac-kpi"><strong>120+</strong><span>Hoạt động học thuật và ngoại khóa mỗi năm học</span></div>
+                        <div class="ac-kpi"><strong>30+</strong><span>Sự kiện hợp tác - kết nối cộng đồng và đối tác giáo dục</span></div>
+                        <div class="ac-kpi"><strong>4</strong><span>Nhóm chủ đề: Học thuật, Nghệ thuật, Thể thao, Dự án xã hội</span></div>
+                        <div class="ac-kpi"><strong>100%</strong><span>Học sinh tham gia ít nhất một hoạt động trải nghiệm mỗi tháng</span></div>
                     </div>
                 </div>
 
-                <div class="activity-listing">
-                    <article class="activity-item" data-aos="fade-up">
+                <div class="ac-tabs" id="ac-tabs">
+                    <button class="ac-tab active" data-year="all">Tất cả</button>
+                    <button class="ac-tab" data-year="hoc-thuat">Học thuật</button>
+                    <button class="ac-tab" data-year="van-hoa">Văn hóa</button>
+                    <button class="ac-tab" data-year="the-thao">Thể thao</button>
+                </div>
+
+                <div class="ac-grid" id="ac-grid">
+                    <article class="ac-item" data-year="hoc-thuat" data-aos="fade-up">
                         <img src="assets/banner/banner1.jpeg" alt="Ngày hội STEAM">
-                        <div class="activity-item-content">
-                            <span class="activity-tag">Học thuật</span>
+                        <div class="ac-item-content">
+                            <span class="ac-item-year">Học thuật</span>
                             <h3>Ngày hội STEAM: Khám phá khoa học qua dự án thực hành</h3>
                             <p>Học sinh trình bày mô hình sáng tạo, vận dụng kiến thức Toán - Khoa học - Công nghệ để giải quyết vấn đề thực tiễn trong đời sống.</p>
-                            <a href="javascript:;">Xem chi tiết <span>›</span></a>
+                            <a href="javascript:;">Xem chi tiết ›</a>
                         </div>
                     </article>
 
-                    <article class="activity-item" data-aos="fade-up" data-aos-delay="120">
-                        <img src="assets/banner/banner2.jpeg" alt="Lễ hội văn hóa">
-                        <div class="activity-item-content">
-                            <span class="activity-tag">Văn hóa</span>
+                    <article class="ac-item" data-year="van-hoa" data-aos="fade-up" data-aos-delay="80">
+                        <img src="assets/banner/banner2.jpeg" alt="Tuần lễ văn hóa">
+                        <div class="ac-item-content">
+                            <span class="ac-item-year">Văn hóa</span>
                             <h3>Tuần lễ văn hóa quốc tế và hành trình công dân toàn cầu</h3>
                             <p>Không gian đa văn hóa với các workshop ngôn ngữ, nghệ thuật và giao lưu chuyên đề giúp học sinh mở rộng góc nhìn quốc tế.</p>
-                            <a href="javascript:;">Xem chi tiết <span>›</span></a>
+                            <a href="javascript:;">Xem chi tiết ›</a>
                         </div>
                     </article>
 
-                    <article class="activity-item" data-aos="fade-up" data-aos-delay="220">
+                    <article class="ac-item" data-year="the-thao" data-aos="fade-up" data-aos-delay="140">
                         <img src="assets/banner/banner3.jpeg" alt="Hoạt động thể thao">
-                        <div class="activity-item-content">
-                            <span class="activity-tag">Thể thao</span>
+                        <div class="ac-item-content">
+                            <span class="ac-item-year">Thể thao</span>
                             <h3>Giải thể thao liên cấp: Năng lượng tích cực - tinh thần đồng đội</h3>
                             <p>Các môn thi đấu đa dạng từ bóng rổ, bơi lội đến điền kinh, giúp học sinh phát triển thể chất, bản lĩnh và tinh thần fair-play.</p>
-                            <a href="javascript:;">Xem chi tiết <span>›</span></a>
+                            <a href="javascript:;">Xem chi tiết ›</a>
+                        </div>
+                    </article>
+
+                    <article class="ac-item" data-year="hoc-thuat" data-aos="fade-up">
+                        <img src="olympia/images/noibat_2.jpg" alt="Dự án liên môn">
+                        <div class="ac-item-content">
+                            <span class="ac-item-year">Học thuật</span>
+                            <h3>Dự án học tập liên môn: Kết nối lý thuyết với thực tiễn</h3>
+                            <p>Học sinh nghiên cứu theo nhóm, tổng hợp kiến thức từ nhiều môn học để tạo ra sản phẩm học tập có giá trị ứng dụng thực tế.</p>
+                            <a href="javascript:;">Xem chi tiết ›</a>
+                        </div>
+                    </article>
+
+                    <article class="ac-item" data-year="van-hoa" data-aos="fade-up" data-aos-delay="80">
+                        <img src="olympia/images/noibat_4.jpg" alt="Giao lưu nghệ thuật">
+                        <div class="ac-item-content">
+                            <span class="ac-item-year">Văn hóa</span>
+                            <h3>Chương trình giao lưu nghệ thuật và văn hóa đọc</h3>
+                            <p>Tạo không gian sáng tạo cho học sinh thể hiện năng khiếu âm nhạc, hội họa và chia sẻ đam mê với sách.</p>
+                            <a href="javascript:;">Xem chi tiết ›</a>
+                        </div>
+                    </article>
+
+                    <article class="ac-item" data-year="the-thao" data-aos="fade-up" data-aos-delay="140">
+                        <img src="olympia/images/noibat_6.jpg" alt="Hội thao">
+                        <div class="ac-item-content">
+                            <span class="ac-item-year">Thể thao</span>
+                            <h3>Hội thao toàn trường: Vượt qua giới hạn bản thân</h3>
+                            <p>Sân chơi thể thao lành mạnh với đa dạng bộ môn, rèn luyện sức khỏe và tinh thần thể thao cao thượng cho học sinh mọi cấp học.</p>
+                            <a href="javascript:;">Xem chi tiết ›</a>
                         </div>
                     </article>
                 </div>
 
-                <div class="activity-timeline-wrap" data-aos="fade-up">
-                    <h2 class="activity-section-title">Lịch hoạt động theo tháng</h2>
-                    <div class="activity-timeline">
-                        <article class="activity-step">
-                            <b>01</b>
-                            <h4>Tháng hội nhập</h4>
-                            <p>Chuỗi hoạt động kết nối đầu năm, định hướng mục tiêu học tập và xây dựng văn hóa lớp học tích cực.</p>
-                        </article>
-                        <article class="activity-step">
-                            <b>02</b>
-                            <h4>Tháng trải nghiệm</h4>
-                            <p>Field-trip, hoạt động dự án và trải nghiệm liên môn giúp học sinh học qua thực hành và phản biện.</p>
-                        </article>
-                        <article class="activity-step">
-                            <b>03</b>
-                            <h4>Tháng bứt phá</h4>
-                            <p>Thi đấu học thuật, sân chơi tài năng và hoạt động thể thao liên cấp nhằm phát huy năng lực cá nhân.</p>
-                        </article>
-                        <article class="activity-step">
-                            <b>04</b>
-                            <h4>Tháng lan tỏa</h4>
-                            <p>Dự án cộng đồng, chương trình thiện nguyện và showcase sản phẩm học tập cuối kỳ của học sinh.</p>
-                        </article>
-                    </div>
-                </div>
-
-                <div class="activity-gallery" data-aos="fade-up">
-                    <img class="g1" src="olympia/images/noibat_6.jpg" alt="Hoạt động học sinh 1">
-                    <img class="g2" src="olympia/images/noibat_2.jpg" alt="Hoạt động học sinh 2">
-                    <img class="g3" src="olympia/images/noibat_4.jpg" alt="Hoạt động học sinh 3">
-                    <img class="g4" src="olympia/images/noibat_7.jpg" alt="Hoạt động học sinh 4">
-                    <img class="g5" src="storage/banner/tieu-hoc.jpg" alt="Hoạt động học sinh 5">
-                    <img class="g6" src="storage/banner/trung-hoc.jpg" alt="Hoạt động học sinh 6">
-                </div>
-
-                <div class="activity-cta" data-aos="fade-up">
-                    <div>
-                        <h3>Đăng ký nhận bản tin hoạt động định kỳ</h3>
-                        <p>Nhận thông tin mới về sự kiện, workshop, ngày hội trải nghiệm và các hoạt động nổi bật của học sinh Meyschool Đoàn Thị Điểm.</p>
-                    </div>
-                    <div class="activity-cta-actions">
-                        <a class="activity-btn activity-btn-light" href="dang-ky-tu-van.php">Đăng ký tư vấn</a>
-                        <a class="activity-btn activity-btn-outline" href="dang-ky-tham-quan.php">Đăng ký tham quan</a>
-                    </div>
+                <div class="ac-gallery" data-aos="fade-up">
+                    <img class="g1" src="olympia/images/noibat_6.jpg" alt="Hoạt động 1">
+                    <img class="g2" src="olympia/images/noibat_2.jpg" alt="Hoạt động 2">
+                    <img class="g3" src="olympia/images/noibat_4.jpg" alt="Hoạt động 3">
+                    <img class="g4" src="olympia/images/noibat_7.jpg" alt="Hoạt động 4">
+                    <img class="g5" src="storage/banner/tieu-hoc.jpg" alt="Hoạt động 5">
+                    <img class="g6" src="storage/banner/trung-hoc.jpg" alt="Hoạt động 6">
                 </div>
             </div>
         </section>
@@ -680,14 +525,12 @@
 
     <?php include 'includes/footer.php'; ?>
 
-    <script type="text/javascript" src="olympia/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="olympia/js/toastr.min.js"></script>
-    <script type="text/javascript" src="olympia/js/moment.min.js"></script>
-    <script type="text/javascript" src="olympia/js/moment-timezone.min.js"></script>
-    <script type="text/javascript" src="olympia/js/bootstrap-datetimepicker.min.js"></script>
-    <script src="olympia/js/slick.js"></script>
-    <script type="text/javascript" src="olympia/js/script.js"></script>
-    <script type="text/javascript" src="olympia/js/main.js"></script>
+    <script src="olympia/js/bootstrap.min.js"></script>
+    <script src="olympia/js/jquery.toast.min.js"></script>
+    <script src="olympia/js/main.js"></script>
+    <script src="vendor/core/plugins/language/js/language-publice209.js?v=1.0.0"></script>
+    <script src="olympia/js/contact.js"></script>
+    <script src="olympia/js/custom.js"></script>
 
     <script>
         AOS.init({
@@ -696,6 +539,29 @@
                 return window.innerWidth < 768;
             }
         });
+
+        (function() {
+            var tabs = document.querySelectorAll('#ac-tabs .ac-tab');
+            var cards = document.querySelectorAll('#ac-grid .ac-item');
+
+            tabs.forEach(function(tab) {
+                tab.addEventListener('click', function() {
+                    tabs.forEach(function(t) {
+                        t.classList.remove('active');
+                    });
+                    tab.classList.add('active');
+
+                    var year = tab.getAttribute('data-year');
+                    cards.forEach(function(card) {
+                        if (year === 'all' || card.getAttribute('data-year') === year) {
+                            card.style.display = 'flex';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        })();
     </script>
 </body>
 

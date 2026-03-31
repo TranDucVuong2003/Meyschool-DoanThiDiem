@@ -38,7 +38,10 @@
 
     <link rel="alternate" href="en.html" hreflang="en" />
     <style>
-        nav#admin_bar { display: none; }
+        nav#admin_bar {
+            display: none;
+        }
+
         .jq-toast-wrap {
             display: block;
             position: fixed;
@@ -47,6 +50,7 @@
             letter-spacing: normal;
             z-index: 9000999999999 !important;
         }
+
         .btn-dk {
             width: 210px;
             height: 50px;
@@ -62,8 +66,15 @@
             margin-top: 20px;
             border-radius: 10px;
         }
-        .btn-full { text-align: center; line-height: 60px; }
-        body.show-admin-bar { margin-top: 0px !important; }
+
+        .btn-full {
+            text-align: center;
+            line-height: 60px;
+        }
+
+        body.show-admin-bar {
+            margin-top: 0px !important;
+        }
 
         :root {
             --blue-1: #2354a0;
@@ -72,102 +83,190 @@
             --blue-soft: #eef7ff;
         }
 
-        .boarding-wrap { background: #f7fbff; }
-        .boarding-container { max-width: 1260px; margin: 0 auto; padding: 0 20px; }
+        .boarding-wrap {
+            background: #f7fbff;
+        }
+
+        .boarding-container {
+            max-width: 1260px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
         .boarding-hero {
-            padding: 130px 0 70px;
-            background: #fff;
+            padding: 120px 0 60px;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(130deg, rgba(35, 84, 160, 0.94) 0%, rgba(67, 155, 212, 0.9) 60%, rgba(77, 176, 228, 0.84) 100%), url('storage/banner/ve-chung-toi-web.jpg') center/cover no-repeat;
+        }
+
+        .boarding-hero::before,
+        .boarding-hero::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .boarding-hero::before {
+            width: 380px;
+            height: 380px;
+            right: -140px;
+            top: -130px;
+            background: rgba(255, 255, 255, 0.18);
+        }
+
+        .boarding-hero::after {
+            width: 270px;
+            height: 270px;
+            left: -100px;
+            bottom: -120px;
+            background: rgba(255, 255, 255, 0.1);
         }
 
         .boarding-hero-grid {
             display: grid;
-            grid-template-columns: 0.9fr 1.1fr;
-            gap: 50px;
+            grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+            gap: 28px;
             align-items: center;
         }
 
         .boarding-hero h1 {
             font-family: 'Garamond', serif;
-            font-size: 42px;
-            margin: 16px 0 18px;
-            color: var(--blue-1);
+            font-size: clamp(34px, 4.2vw, 52px);
+            margin: 14px 0 16px;
+            color: #fff;
+            line-height: 1.1;
         }
 
         .boarding-hero p {
             font-size: 16px;
             line-height: 1.8;
-            color: #40506c;
-            max-width: 520px;
+            color: rgba(255, 255, 255, 0.93);
+            max-width: 540px;
+            margin: 0;
         }
 
         .boarding-hero .breadcrumb {
-            margin: 0 0 16px;
-            background: var(--blue-soft);
+            margin: 0 0 14px;
+            background: rgba(255, 255, 255, 0.18);
+            border: 1px solid rgba(255, 255, 255, 0.38);
             display: inline-flex;
-            padding: 10px 18px;
+            flex-wrap: wrap;
+            padding: 8px 16px;
             border-radius: 999px;
+            position: static !important;
+            transform: none !important;
         }
 
-        .boarding-frame {
-            background: linear-gradient(120deg, var(--blue-1), var(--blue-2));
-            padding: 18px;
-            border-radius: 24px;
+        .boarding-hero .breadcrumb-item a,
+        .boarding-hero .breadcrumb-item.active {
+            color: #fff;
+            font-size: 13px;
         }
 
-        .boarding-frame img {
+        .boarding-highlights {
+            margin-top: 18px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .boarding-highlights span {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 14px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.18);
+            color: #fff;
+            font-size: 13px;
+            font-weight: 700;
+            border: 1px solid rgba(255, 255, 255, 0.32);
+        }
+
+        .boarding-card {
+            background: rgba(255, 255, 255, 0.93);
+            border-radius: 22px;
+            border: 1px solid rgba(67, 155, 212, 0.16);
+            box-shadow: 0 16px 32px rgba(20, 55, 100, 0.26);
+            padding: 16px;
+        }
+
+        .boarding-card img {
             width: 100%;
-            height: 320px;
+            height: 220px;
+            border-radius: 16px;
             object-fit: cover;
-            border-radius: 18px;
+            display: block;
+            margin-bottom: 12px;
         }
 
-        .boarding-schedule {
-            margin-top: 50px;
+        .boarding-metrics {
             display: grid;
             grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 18px;
+            gap: 10px;
         }
 
-        .schedule-card {
+        .boarding-metrics div {
             background: #fff;
-            border-radius: 18px;
-            padding: 24px;
-            border: 1px solid rgba(67, 155, 212, 0.16);
-            box-shadow: 0 14px 30px rgba(0,0,0,0.08);
+            border: 1px solid rgba(67, 155, 212, 0.2);
+            border-radius: 12px;
+            padding: 10px;
+            text-align: center;
         }
 
-        .schedule-card h4 { color: var(--blue-1); margin-bottom: 10px; }
-        .schedule-card p { margin: 0; color: #5b6a82; font-size: 14px; line-height: 1.7; }
-
-        .boarding-strip {
-            display: grid;
-            grid-template-columns: repeat(5, minmax(0, 1fr));
-            gap: 12px;
-            margin-top: 40px;
+        .boarding-metrics b {
+            display: block;
+            color: #2354a0;
+            font-size: 22px;
+            margin-bottom: 3px;
         }
 
-        .boarding-strip img {
+        .boarding-metrics span {
+            color: #436b8b;
+            font-size: 12px;
+            line-height: 1.4;
+        }
+
+        .boarding-content {
+            padding: 40px 0 60px;
+        }
+
+        .boarding-content .boarding-img-card {
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: 0 20px 38px rgba(23, 52, 93, .1);
+            background: rgba(255, 255, 255, .9);
+            padding: 20px;
+        }
+
+        .boarding-content .boarding-img-photo {
+            position: relative;
+            border-radius: 22px;
+            overflow: hidden;
+        }
+
+        .boarding-content .boarding-img-photo img {
             width: 100%;
-            height: 150px;
+            height: auto;
             object-fit: cover;
-            border-radius: 18px;
+            display: block;
         }
 
         @media (max-width: 1100px) {
-            .boarding-hero-grid { grid-template-columns: 1fr; }
-            .boarding-schedule { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-            .boarding-strip { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+            .boarding-hero-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .boarding-card {
+                display: none;
+            }
         }
 
         @media (max-width: 768px) {
-            .boarding-hero h1 { font-size: 32px; }
-            .boarding-schedule { grid-template-columns: 1fr; }
-            .boarding-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-        }
-
-        @media (max-width: 520px) {
-            .boarding-strip { grid-template-columns: 1fr; }
+            .boarding-hero {
+                padding: 96px 0 44px;
+            }
         }
     </style>
 </head>
@@ -178,43 +277,38 @@
 
     <main class="body-content boarding-wrap">
         <section class="boarding-hero">
-            <div class="boarding-container boarding-hero-grid">
+            <div class="boarding-container boarding-hero-grid" data-aos="fade-up">
                 <div>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="index.php">Trang chủ</a></li>
                         <li class="breadcrumb-item"><a href="javascript:;">Dịch vụ học đường</a></li>
                         <li class="breadcrumb-item active">Bán trú</li>
                     </ol>
-                    <h1>Chương trình bán trú</h1>
-                    <p>Không gian bán trú an toàn, thoáng mát với lịch sinh hoạt khoa học giúp học sinh nghỉ ngơi và tái tạo năng lượng sau giờ học.</p>
+                    <h1>Dịch vụ bán trú</h1>
+                    <p>Không gian bán trú an toàn, thoáng mát với lịch sinh hoạt khoa học giúp học sinh nghỉ ngơi và tái tạo năng lượng sau giờ học. Thực đơn dinh dưỡng được xây dựng bởi chuyên gia, đảm bảo sức khỏe toàn diện cho trẻ.</p>
+                    <div class="boarding-highlights">
+                        <span>Thực đơn dinh dưỡng cân bằng</span>
+                        <span>Giám sát an toàn thực phẩm</span>
+                        <span>Nghỉ trưa khoa học</span>
+                    </div>
                 </div>
-                <div class="boarding-frame">
-                    <img src="storage/banner/ve-chung-toi-web.jpg" alt="Bán trú">
+                <div class="boarding-card">
+                    <img src="storage/banner/ve-chung-toi-web.jpg" alt="Bán trú Meyschool">
+                    <div class="boarding-metrics">
+                        <div><b>2</b><span>Bữa ăn mỗi ngày</span></div>
+                        <div><b>100%</b><span>Thực phẩm sạch</span></div>
+                        <div><b>30'</b><span>Nghỉ trưa phục hồi</span></div>
+                    </div>
                 </div>
             </div>
+        </section>
 
+        <section class="boarding-content">
             <div class="boarding-container">
-                <div class="boarding-schedule">
-                    <div class="schedule-card">
-                        <h4>Dinh dưỡng cân bằng</h4>
-                        <p>Thực đơn được thiết kế theo tiêu chuẩn dinh dưỡng, đa dạng món ăn và phù hợp với từng độ tuổi.</p>
+                <div class="boarding-img-card" data-aos="fade-up">
+                    <div class="boarding-img-photo">
+                        <img src="assets/img/dich-vu-hoc-duong/Meys school 2006 (2) conv 25.png" alt="Dịch vụ bán trú">
                     </div>
-                    <div class="schedule-card">
-                        <h4>Giờ nghỉ hợp lý</h4>
-                        <p>Khu nghỉ trưa yên tĩnh, sạch sẽ, đảm bảo học sinh ngủ đủ và phục hồi năng lượng.</p>
-                    </div>
-                    <div class="schedule-card">
-                        <h4>Hoạt động chiều</h4>
-                        <p>Hoạt động nhẹ nhàng sau giờ học giúp học sinh thư giãn và chuẩn bị cho các câu lạc bộ.</p>
-                    </div>
-                </div>
-
-                <div class="boarding-strip">
-                    <img src="storage/banner/tieu-hoc.jpg" alt="Dinh dưỡng">
-                    <img src="olympia/images/0201.jpg" alt="Không gian nghỉ">
-                    <img src="olympia/images/0202.jpg" alt="Hoạt động chiều">
-                    <img src="storage/banner/trung-hoc.jpg" alt="Bữa ăn">
-                    <img src="olympia/images/0206.jpg" alt="Chăm sóc">
                 </div>
             </div>
         </section>
@@ -231,4 +325,5 @@
     <script type="text/javascript" src="olympia/js/script.js"></script>
     <script type="text/javascript" src="olympia/js/main.js"></script>
 </body>
+
 </html>
