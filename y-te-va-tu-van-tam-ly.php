@@ -8,15 +8,15 @@
     <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=1"
         name="viewport" />
     <link rel="shortcut icon" href="storage/favicon.png">
-    <title>Bán trú</title>
+    <title>Y tế và tư vấn tâm lý học đường</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:site_name" content="The Olympia Schools">
-    <meta property="og:title" content="Bán trú">
+    <meta property="og:site_name" content="Meyschool Đoàn Thị Điểm">
+    <meta property="og:title" content="Y tế và tư vấn tâm lý học đường">
     <meta property="og:description" content="">
-    <meta property="og:url" content="ban-tru.html">
+    <meta property="og:url" content="y-te-va-tu-van-tam-ly.php">
     <meta property="og:type" content="article">
     <meta property="og:image" content="storage/favicon.png">
-    <meta name="twitter:title" content="Bán trú">
+    <meta name="twitter:title" content="Y tế và tư vấn tâm lý học đường">
     <meta name="twitter:description" content="">
 
     <link media="all" type="text/css" rel="stylesheet"
@@ -87,6 +87,7 @@
 
     .boarding-wrap {
         background: #f7fbff;
+        margin-bottom: 120px;
     }
 
     .boarding-container {
@@ -200,39 +201,10 @@
         border-radius: 16px;
         object-fit: cover;
         display: block;
-        margin-bottom: 12px;
-    }
-
-    .boarding-metrics {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 10px;
-    }
-
-    .boarding-metrics div {
-        background: #fff;
-        border: 1px solid rgba(67, 155, 212, 0.2);
-        border-radius: 12px;
-        padding: 10px;
-        text-align: center;
-    }
-
-    .boarding-metrics b {
-        display: block;
-        color: #2354a0;
-        font-size: 22px;
-        margin-bottom: 3px;
-    }
-
-    .boarding-metrics span {
-        color: #436b8b;
-        font-size: 12px;
-        line-height: 1.4;
     }
 
     .boarding-content {
         padding: 40px 0 60px;
-        margin-bottom: 110px;
     }
 
     .boarding-content .boarding-text-card {
@@ -243,11 +215,15 @@
         padding: 36px 40px;
     }
 
-    .boarding-content .boarding-text-card>p:first-child {
+    .boarding-content .boarding-text-card p {
         font-size: 16px;
         line-height: 1.85;
         color: #2c4963;
-        margin: 0 0 28px;
+        margin: 0 0 20px;
+    }
+
+    .boarding-content .boarding-text-card p:last-child {
+        margin-bottom: 0;
     }
 
     .boarding-content h3 {
@@ -289,33 +265,8 @@
         background: var(--blue-2);
     }
 
-    .boarding-content ol {
-        padding-left: 20px;
-        margin: 0 0 8px;
-    }
-
-    .boarding-content ol li {
-        padding-left: 6px;
-        list-style: decimal;
-    }
-
-    .boarding-content ol li::before {
-        display: none;
-    }
-
-    .boarding-content .boarding-note {
-        margin-top: 28px;
-        background: #fffbeb;
-        border: 1px solid #fcd34d;
-        border-radius: 14px;
-        padding: 18px 22px;
-        font-size: 14px;
-        color: #78350f;
-        line-height: 1.75;
-    }
-
-    .boarding-content .boarding-note strong {
-        color: #92400e;
+    .boarding-content+.boarding-content {
+        padding-top: 0;
     }
 
     @media (max-width: 1100px) {
@@ -332,6 +283,10 @@
         .boarding-hero {
             padding: 96px 0 44px;
         }
+
+        .boarding-content .boarding-text-card {
+            padding: 24px 20px;
+        }
     }
     </style>
 </head>
@@ -347,25 +302,20 @@
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="index.php">Trang chủ</a></li>
                         <li class="breadcrumb-item"><a href="javascript:;">Dịch vụ học đường</a></li>
-                        <li class="breadcrumb-item active">Bán trú</li>
+                        <li class="breadcrumb-item active">Y tế và tư vấn tâm lý</li>
                     </ol>
-                    <h1>Dịch vụ bán trú</h1>
-                    <p>Không gian bán trú an toàn, thoáng mát với lịch sinh hoạt khoa học giúp học sinh nghỉ ngơi và tái
-                        tạo năng lượng sau giờ học. Thực đơn dinh dưỡng được xây dựng bởi chuyên gia, đảm bảo sức khỏe
-                        toàn diện cho trẻ.</p>
+                    <h1>Y tế và tư vấn tâm lý học đường</h1>
+                    <p>Phòng Y tế tại Trường TH & THCS Meyschool Đoàn Thị Điểm được trang bị đầy đủ thuốc thiết yếu và
+                        các thiết bị y tế cơ bản, sẵn sàng chăm sóc và theo dõi sức khỏe học sinh trong suốt thời gian
+                        học tập tại trường.</p>
                     <div class="boarding-highlights">
-                        <span>Thực đơn dinh dưỡng cân bằng</span>
-                        <span>Giám sát an toàn thực phẩm</span>
-                        <span>Nghỉ trưa khoa học</span>
+                        <span>Phòng y tế đầy đủ thiết bị</span>
+                        <span>Cán bộ y tế thường trực</span>
+                        <span>Khám sức khỏe định kỳ</span>
                     </div>
                 </div>
                 <div class="boarding-card">
-                    <img src="storage/banner/ve-chung-toi-web.jpg" alt="Bán trú Meyschool">
-                    <div class="boarding-metrics">
-                        <div><b>2</b><span>Bữa ăn mỗi ngày</span></div>
-                        <div><b>100%</b><span>Thực phẩm sạch</span></div>
-                        <div><b>30'</b><span>Nghỉ trưa phục hồi</span></div>
-                    </div>
+                    <img src="storage/banner/ve-chung-toi-web.jpg" alt="Y tế học đường Meyschool">
                 </div>
             </div>
         </section>
@@ -373,46 +323,36 @@
         <section class="boarding-content">
             <div class="boarding-container">
                 <div class="boarding-text-card" data-aos="fade-up">
-                    <p>Trường TH, THCS Meyschool Đoàn Thị Điểm cung cấp dịch vụ bán trú phục vụ học sinh học 2
-                        buổi/ngày, đảm bảo dinh dưỡng và vệ sinh an toàn thực phẩm.</p>
+                    <h3>Dịch vụ y tế</h3>
+                    <p>Phòng Y tế tại Trường TH & THCS Meyschool Đoàn Thị Điểm được trang bị đầy đủ thuốc thiết yếu và
+                        các thiết bị y tế cơ bản, sẵn sàng chăm sóc và theo dõi sức khỏe học sinh trong suốt thời gian
+                        học tập tại trường.</p>
+                    <p>Cán bộ y tế chuyên trách thường trực tại trường để giám sát tình hình sức khỏe của học sinh.
+                        Những trường hợp học sinh có vấn đề về sức khỏe sẽ được nghỉ ngơi, thăm khám và theo dõi tại
+                        phòng y tế. Tùy theo tình trạng, nhà trường sẽ liên hệ kịp thời với phụ huynh để phối hợp xử lý.
+                    </p>
+                    <p>Trong các trường hợp cần thiết, học sinh sẽ được đưa đến cơ sở y tế phù hợp để kiểm tra hoặc điều
+                        trị chuyên sâu (như: khó thở, ngất, chấn thương, nghi gãy xương, dị ứng nặng…). Cán bộ y tế sẽ
+                        tư vấn cho phụ huynh lựa chọn cơ sở y tế gần trường và phù hợp với tình trạng của học sinh.</p>
+                    <p>Trường hợp phụ huynh có yêu cầu riêng về cơ sở y tế, nhà trường sẽ phối hợp thực hiện trên cơ sở
+                        thống nhất về phương án và chi phí phát sinh.</p>
+                    <p>Việc xử lý nhanh chóng, đúng quy trình các tình huống y tế không chỉ đảm bảo an toàn cho học sinh
+                        mà còn mang lại sự yên tâm cho phụ huynh về sự chuyên nghiệp và trách nhiệm của nhà trường.</p>
+                </div>
+            </div>
+        </section>
 
-                    <h3>1.1. Cơ sở vật chất và quy trình</h3>
+        <section class="boarding-content">
+            <div class="boarding-container">
+                <div class="boarding-text-card" data-aos="fade-up">
+                    <h3>Khám sức khỏe</h3>
                     <ul>
-                        <li>Bếp ăn tập thể được thiết kế theo nguyên tắc bếp một chiều đảm bảo vệ sinh an toàn thực
-                            phẩm.</li>
-                        <li>Toàn bộ quy trình từ khâu nhập nguyên liệu đến chế biến và phục vụ đều được kiểm soát nghiêm
-                            ngặt để đảm bảo an toàn tối đa.</li>
+                        <li><strong>Khi nhập học:</strong> Học sinh lớp 1 được khám sức khỏe tổng quát và tầm soát tim
+                            bẩm sinh vào đầu năm học bởi các bác sĩ chuyên khoa từ các bệnh viện uy tín.</li>
+                        <li><strong>Khám định kỳ:</strong> Trong các năm học tiếp theo, học sinh được khám sức khỏe định
+                            kỳ toàn diện vào đầu mỗi năm học, giúp theo dõi và đảm bảo sự phát triển thể chất ổn định.
+                        </li>
                     </ul>
-
-                    <h3>1.2. Nguồn thực phẩm và thực đơn</h3>
-                    <ul>
-                        <li>Thực phẩm được cung cấp bởi các đơn vị uy tín, có giấy chứng nhận an toàn thực phẩm và được
-                            truy xuất nguồn gốc rõ ràng.</li>
-                        <li>Thực đơn đa dạng, dinh dưỡng được cân đối trên phần mềm dinh dưỡng, xây dựng theo độ tuổi,
-                            được công khai hàng tuần để cha mẹ học sinh dễ dàng theo dõi.</li>
-                    </ul>
-
-                    <h3>1.3. Phục vụ bán trú</h3>
-                    <ol>
-                        <li>100% học sinh ăn trưa tại trường, ngoài bữa ăn chính học sinh được phục vụ 2 bữa ăn phụ vào
-                            giờ ra chơi buổi sáng và buổi chiều. Nhà trường có cung cấp bữa sáng cho toàn thể học sinh
-                            các lớp theo nhu cầu của học sinh và cha mẹ học sinh. Toàn trường đều sử dụng nước uống
-                            Lavie, nước lọc.</li>
-                        <li>Học sinh ăn tại phòng ăn và ngủ trưa tại lớp. Mỗi lớp có cán bộ bán trú phụ trách để quản lý
-                            nền nếp trong giờ ăn, giờ ngủ, đảm bảo học sinh được nghỉ ngơi an toàn. Lớp học được trang
-                            bị đầy đủ đồ dùng bán trú cần thiết, đảm bảo chăm sóc tốt nhất cho học sinh.</li>
-                        <li>Rèn luyện thói quen: Các hoạt động bán trú được lồng ghép để rèn cho học sinh thói quen tự
-                            phục vụ, tự giác trong ăn uống, và hình thành nếp sống văn minh lành mạnh.</li>
-                    </ol>
-
-                    <div class="boarding-note">
-                        <strong>Lưu ý:</strong> Để Nhà trường có thể kiểm soát vấn đề vệ sinh an toàn thực phẩm, cũng
-                        như phòng tránh các nguy cơ ngộ độc thực phẩm từ nguồn thức ăn bên ngoài và vấn nạn thực phẩm
-                        không rõ nguồn gốc trên thị trường, Trường TH, THCS Meyschool Đoàn Thị Điểm quy định học sinh và
-                        cha mẹ học sinh không mang bất kỳ loại thức ăn, đồ uống từ bên ngoài vào trường.<br><br>
-                        Trường hợp học sinh phải ăn kiêng, điều trị bệnh,... Đề nghị cha mẹ học sinh liên hệ với Nhà
-                        trường để có phương án tốt nhất cho học sinh.
-                    </div>
                 </div>
             </div>
         </section>

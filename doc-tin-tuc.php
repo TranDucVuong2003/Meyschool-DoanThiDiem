@@ -568,7 +568,7 @@
         </section>
     </main>
 
-    <?php include 'includes/footer.php'; ?>
+    <?php include 'includes/footer-dangkytuvan.php'; ?>
 
     <script src="olympia/js/bootstrap.min.js"></script>
     <script src="olympia/js/jquery.toast.min.js"></script>

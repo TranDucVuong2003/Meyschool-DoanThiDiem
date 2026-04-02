@@ -1122,7 +1122,7 @@
         </div>
     </div>
 
-    <?php include 'includes/footer.php'; ?>
+    <?php include 'includes/footer-dangkytuvan.php'; ?>
     <section id="callnow" class="hotline mobile__none">
         <div class="hotline-phone-ring-wrap">
             <div class="hotline-phone-ring" id="call-now-1">

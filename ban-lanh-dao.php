@@ -131,7 +131,7 @@
             font-size: 13px;
         }
 
-        .ld-hero-grid > div:first-child {
+        .ld-hero-grid>div:first-child {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -227,6 +227,7 @@
 
         .ld-content {
             padding: 40px 0 72px;
+            margin-bottom: 100px;
         }
 
         .ld-layout {
@@ -579,7 +580,8 @@
                         </ol>
 
                         <h1>Ban lãnh đạo Meyschool Đoàn Thị Điểm</h1>
-                        <p>Đội ngũ lãnh đạo hội tụ chuyên môn sâu, kinh nghiệm quản lý giáo dục và tinh thần đổi mới, cùng xây dựng môi trường học tập nhân văn, hiện đại và hội nhập cho học sinh.</p>
+                        <p>Đội ngũ lãnh đạo hội tụ chuyên môn sâu, kinh nghiệm quản lý giáo dục và tinh thần đổi mới,
+                            cùng xây dựng môi trường học tập nhân văn, hiện đại và hội nhập cho học sinh.</p>
 
                         <div class="ld-chips">
                             <span>Lãnh đạo học thuật</span>
@@ -589,7 +591,8 @@
                     </div>
 
                     <div class="ld-hero-card">
-                        <img src="storage/doi-ngu-olym/nguyen-thi-thu-thao.png" alt="Ban lãnh đạo Meyschool Đoàn Thị Điểm">
+                        <img src="storage/doi-ngu-olym/nguyen-thi-thu-thao.png"
+                            alt="Ban lãnh đạo Meyschool Đoàn Thị Điểm">
                         <div class="ld-hero-metrics">
                             <div><b>04</b><span>Nhân sự nòng cốt</span></div>
                             <div><b>20+</b><span>Năm kinh nghiệm trung bình</span></div>
@@ -604,13 +607,29 @@
             <div class="ld-wrap ld-layout">
                 <div class="ld-main">
                     <article class="ld-card" data-aos="fade-up">
+                        <h2>Về Ban lãnh đạo</h2>
+                        <div class="ld-highlight"
+                            style="border-left:4px solid var(--ld-blue-1);border-radius:14px;padding:16px 20px;background:linear-gradient(120deg,#f4fbff 0%,#eaf7ff 100%);margin-bottom:6px;">
+                            <p style="margin:0 0 12px;">Ban lãnh đạo nhà trường là sự kết hợp giữa kinh nghiệm quản lý
+                                giáo dục lâu năm từ Hệ thống giáo dục Đoàn Thị Điểm Hà Nội và tư duy đổi mới, hội nhập.
+                            </p>
+                            <p style="margin:0;">Với định hướng lấy học sinh làm trung tâm, Ban lãnh đạo không ngừng xây
+                                dựng chiến lược phát triển bền vững, tiên phong trong ứng dụng công nghệ, nâng cao chất
+                                lượng giảng dạy và kiến tạo môi trường giáo dục truyền cảm hứng.</p>
+                        </div>
+                    </article>
+
+                    <article class="ld-card" data-aos="fade-up">
                         <h2>Chân dung lãnh đạo nổi bật</h2>
                         <div class="ld-feature">
                             <img src="storage/doi-ngu-olym/nguyen-thi-thu-thao.png" alt="Cô Nguyễn Thị Thu Thảo">
                             <div>
                                 <h4>Cô Nguyễn Thị Thu Thảo</h4>
                                 <p class="ld-role">Hiệu trưởng - Người sáng lập</p>
-                                <p>Với hơn 25 năm kinh nghiệm trong lĩnh vực giáo dục, cô Thu Thảo theo đuổi triết lý lấy học sinh làm trung tâm, chú trọng phát triển toàn diện và đề cao năng lực học tập suốt đời. Định hướng của cô là xây dựng một cộng đồng học tập giàu cảm hứng, nơi học sinh được khích lệ để tự tin khám phá thế mạnh cá nhân.</p>
+                                <p>Với hơn 25 năm kinh nghiệm trong lĩnh vực giáo dục, cô Thu Thảo theo đuổi triết lý
+                                    lấy học sinh làm trung tâm, chú trọng phát triển toàn diện và đề cao năng lực học
+                                    tập suốt đời. Định hướng của cô là xây dựng một cộng đồng học tập giàu cảm hứng, nơi
+                                    học sinh được khích lệ để tự tin khám phá thế mạnh cá nhân.</p>
                                 <div class="ld-tags">
                                     <span>Quản lý giáo dục</span>
                                     <span>Phát triển chương trình</span>
@@ -624,11 +643,13 @@
                         <h2>Đội ngũ ban lãnh đạo</h2>
                         <div class="ld-grid">
                             <div class="ld-member">
-                                <img src="storage/doi-ngu-olym/nguyen-thi-hang-pho-hieu-truong-th-thcs-thac-si-giao-duc-dai-hoc-su-pham-ha-noi.png" alt="Cô Nguyễn Thị Hằng">
+                                <img src="storage/doi-ngu-olym/nguyen-thi-hang-pho-hieu-truong-th-thcs-thac-si-giao-duc-dai-hoc-su-pham-ha-noi.png"
+                                    alt="Cô Nguyễn Thị Hằng">
                                 <div class="ld-member-body">
                                     <h5>Cô Nguyễn Thị Hằng</h5>
                                     <small>Phó Hiệu trưởng - Chuyên môn</small>
-                                    <p>Dẫn dắt công tác học thuật, chuẩn hóa chất lượng giảng dạy và phát triển đội ngũ giáo viên theo định hướng đổi mới.</p>
+                                    <p>Dẫn dắt công tác học thuật, chuẩn hóa chất lượng giảng dạy và phát triển đội ngũ
+                                        giáo viên theo định hướng đổi mới.</p>
                                 </div>
                             </div>
 
@@ -637,7 +658,8 @@
                                 <div class="ld-member-body">
                                     <h5>Cô Đặng Thu Hương</h5>
                                     <small>Trưởng khối Tiểu học</small>
-                                    <p>Phụ trách nền tảng học thuật và kỹ năng cho học sinh tiểu học, đảm bảo lộ trình phát triển phù hợp từng độ tuổi.</p>
+                                    <p>Phụ trách nền tảng học thuật và kỹ năng cho học sinh tiểu học, đảm bảo lộ trình
+                                        phát triển phù hợp từng độ tuổi.</p>
                                 </div>
                             </div>
 
@@ -646,7 +668,8 @@
                                 <div class="ld-member-body">
                                     <h5>Cô Nguyễn Thị Tâm Hiền</h5>
                                     <small>Đào tạo và phát triển</small>
-                                    <p>Tổ chức đào tạo giáo viên và triển khai các sáng kiến cải tiến chương trình, thúc đẩy chất lượng dạy học bền vững.</p>
+                                    <p>Tổ chức đào tạo giáo viên và triển khai các sáng kiến cải tiến chương trình, thúc
+                                        đẩy chất lượng dạy học bền vững.</p>
                                 </div>
                             </div>
 
@@ -655,7 +678,8 @@
                                 <div class="ld-member-body">
                                     <h5>Thầy Trần Quốc Dân</h5>
                                     <small>Quan hệ quốc tế</small>
-                                    <p>Phát triển hợp tác quốc tế, kết nối các chương trình học thuật toàn cầu và mở rộng cơ hội hội nhập cho học sinh.</p>
+                                    <p>Phát triển hợp tác quốc tế, kết nối các chương trình học thuật toàn cầu và mở
+                                        rộng cơ hội hội nhập cho học sinh.</p>
                                 </div>
                             </div>
                         </div>
@@ -665,8 +689,10 @@
                         <h2>Khoảnh khắc lãnh đạo</h2>
                         <div class="ld-gallery">
                             <figure class="tall">
-                                <img src="storage/banner/ve-chung-toi-web.jpg" alt="Ban lãnh đạo trong hoạt động trường học">
-                                <figcaption>Ban lãnh đạo đồng hành cùng các hoạt động trọng điểm của nhà trường</figcaption>
+                                <img src="storage/banner/ve-chung-toi-web.jpg"
+                                    alt="Ban lãnh đạo trong hoạt động trường học">
+                                <figcaption>Ban lãnh đạo đồng hành cùng các hoạt động trọng điểm của nhà trường
+                                </figcaption>
                             </figure>
                             <figure class="small">
                                 <img src="storage/banner/tieu-hoc.jpg" alt="Lãnh đạo tham gia hoạt động với học sinh">
@@ -678,7 +704,8 @@
                             </figure>
                             <figure class="wide">
                                 <img src="storage/banner/trung-hoc.jpg" alt="Các chương trình phát triển tại Meyschool">
-                                <figcaption>Kiến tạo chương trình phát triển toàn diện từ tiểu học đến trung học</figcaption>
+                                <figcaption>Kiến tạo chương trình phát triển toàn diện từ tiểu học đến trung học
+                                </figcaption>
                             </figure>
                             <figure class="small">
                                 <img src="olympia/images/0202.jpg" alt="Hoạt động chuyên môn giáo viên">
@@ -705,7 +732,8 @@
 
                     <div class="ld-side-card">
                         <h3>Thông tin nhanh</h3>
-                        <p>Ban lãnh đạo duy trì đối thoại thường xuyên với giáo viên và phụ huynh nhằm đảm bảo các quyết định quản trị luôn nhất quán với mục tiêu phát triển học sinh.</p>
+                        <p>Ban lãnh đạo duy trì đối thoại thường xuyên với giáo viên và phụ huynh nhằm đảm bảo các quyết
+                            định quản trị luôn nhất quán với mục tiêu phát triển học sinh.</p>
                     </div>
 
                     <div class="ld-side-card">
@@ -730,9 +758,10 @@
                 </aside>
             </div>
         </section>
+
     </main>
 
-    <?php include 'includes/footer.php'; ?>
+    <?php include 'includes/footer-dangkytuvan.php'; ?>
 
     <script type="text/javascript" src="olympia/js/jquery.toast.min.js"></script>
     <script type="text/javascript" src="olympia/js/jquery.validate.min.js"></script>

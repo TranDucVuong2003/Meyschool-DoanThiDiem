@@ -547,6 +547,144 @@
             display: block;
         }
 
+        /* ── CLB ── */
+        .ct-clb-intro {
+            background: #fff;
+            border: 1px solid rgba(67, 155, 212, .16);
+            border-radius: 16px;
+            padding: 24px 32px;
+            box-shadow: 0 6px 20px rgba(16, 49, 79, .06);
+            margin-bottom: 28px;
+        }
+
+        .ct-clb-intro p {
+            margin: 0;
+            font-size: 15px;
+            line-height: 1.8;
+            color: #3b5068;
+        }
+
+        .ct-clb-intro .ct-clb-time {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 12px;
+            background: var(--ct-blue-soft, #eef7ff);
+            color: var(--ct-navy, #1a3a5c);
+            border-radius: 999px;
+            padding: 7px 16px;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .ct-clb-groups {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .ct-clb-group {
+            background: #fff;
+            border: 1px solid rgba(67, 155, 212, .16);
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 8px 22px rgba(16, 49, 79, .08);
+        }
+
+        .ct-clb-group-header {
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .ct-clb-group-header .ct-clb-icon {
+            font-size: 28px;
+            line-height: 1;
+        }
+
+        .ct-clb-group-header h3 {
+            margin: 0;
+            font-size: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .04em;
+            line-height: 1.3;
+        }
+
+        .ct-clb-group:nth-child(1) .ct-clb-group-header {
+            background: linear-gradient(120deg, #1a3a5c, #2354a0);
+            color: #fff;
+        }
+
+        .ct-clb-group:nth-child(2) .ct-clb-group-header {
+            background: linear-gradient(120deg, #2354a0, #439bd4);
+            color: #fff;
+        }
+
+        .ct-clb-group:nth-child(3) .ct-clb-group-header {
+            background: linear-gradient(120deg, #439bd4, #4db0e4);
+            color: #fff;
+        }
+
+        .ct-clb-group ul {
+            list-style: none;
+            padding: 16px 20px;
+            margin: 0;
+            display: grid;
+            gap: 8px;
+        }
+
+        .ct-clb-group li {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: #2c4963;
+            font-weight: 600;
+        }
+
+        .ct-clb-group li::before {
+            content: '';
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .ct-clb-group:nth-child(1) li::before {
+            background: #2354a0;
+        }
+
+        .ct-clb-group:nth-child(2) li::before {
+            background: #439bd4;
+        }
+
+        .ct-clb-group:nth-child(3) li::before {
+            background: #4db0e4;
+        }
+
+        .ct-clb-note {
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            border-radius: 12px;
+            padding: 14px 20px;
+            font-size: 13px;
+            color: #78350f;
+            line-height: 1.7;
+        }
+
+        .ct-clb-note strong {
+            color: #92400e;
+        }
+
+        @media (max-width: 900px) {
+            .ct-clb-groups {
+                grid-template-columns: 1fr;
+            }
+        }
+
         /* ── Tin tức slider ── */
         .ct-news-section {
             padding: 56px 0 40px;
@@ -561,110 +699,6 @@
             text-transform: uppercase;
             margin-bottom: 36px;
             text-align: center;
-        }
-
-        /* ── CTA ── */
-        .ct-cta-wrap {
-            --ct-cta-h: 92px;
-            position: relative;
-            z-index: 5;
-            margin: calc(-1 * var(--ct-cta-h)) 20px calc(-1 * var(--ct-cta-h));
-            background: transparent;
-        }
-
-        .ct-cta-inner {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: center;
-        }
-
-        .ct-cta-card {
-            width: min(100%, 1020px);
-            min-height: calc(var(--ct-cta-h)*2);
-            border-radius: 26px;
-            overflow: hidden;
-            position: relative;
-            background: url('olympia/images/noibat_1.jpg') center/cover no-repeat;
-            box-shadow: 0 20px 40px rgba(16, 52, 92, .3);
-            color: #fff;
-            padding: 24px 32px;
-        }
-
-        .ct-cta-card::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(110deg, rgba(17, 64, 114, .93), rgba(28, 89, 153, .9) 52%, rgba(44, 121, 190, .82));
-        }
-
-        .ct-cta-content {
-            position: relative;
-            z-index: 2;
-            display: grid;
-            grid-template-columns: 1fr auto;
-            align-items: center;
-            gap: 24px;
-        }
-
-        .ct-cta-text>div {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 6px;
-        }
-
-        .ct-cta-text small {
-            display: inline-block;
-            font-size: 13px;
-            font-weight: 700;
-            letter-spacing: .06em;
-            text-transform: uppercase;
-            padding: 6px 12px;
-            border-radius: 999px;
-            background: rgba(255, 255, 255, .18);
-        }
-
-        .ct-cta-text h3 {
-            font-family: 'Garamond', serif;
-            font-size: clamp(30px, 2.6vw, 40px);
-            margin: 0;
-            color: #fff;
-        }
-
-        .ct-cta-text p {
-            font-size: 24px;
-            line-height: 1.35;
-            margin: 0;
-            color: rgba(255, 255, 255, .96);
-        }
-
-        .ct-cta-actions {
-            text-align: right;
-        }
-
-        .ct-cta-note {
-            margin-top: 10px;
-            font-size: 13px;
-            color: rgba(255, 255, 255, .88);
-        }
-
-        .ct-cta-btn {
-            display: inline-block;
-            min-width: 188px;
-            padding: 13px 28px;
-            border-radius: 999px;
-            background: #fff;
-            color: #1d4f87;
-            font-weight: 700;
-            font-size: 17px;
-            text-decoration: none;
-            transition: all .3s;
-        }
-
-        .ct-cta-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, .22);
         }
 
         /* ── Slider cards ── */
@@ -1089,6 +1123,61 @@
             </div>
         </section>
 
+        <!-- ═══ CÂU LẠC BỘ NĂNG KHIẾU ═══ -->
+        <section class="ct-section">
+            <div class="ct-wrap">
+                <h2 class="ct-section-title" data-aos="fade-up">Câu lạc bộ năng khiếu</h2>
+
+                <div class="ct-clb-intro" data-aos="fade-up">
+                    <p>Để phát huy tối đa năng khiếu và sở trường cá nhân, đồng thời tận dụng hiệu quả khoảng thời gian cuối giờ học trong lúc chờ cha mẹ đón, nhà trường tổ chức đa dạng các <strong>Câu lạc bộ Năng khiếu</strong>.</p>
+                    <div class="ct-clb-time">🕐 Thời gian: 16:35 – 17:55 | Thứ Hai – Thứ Sáu hàng tuần</div>
+                </div>
+
+                <div class="ct-clb-groups" data-aos="fade-up">
+                    <div class="ct-clb-group">
+                        <div class="ct-clb-group-header">
+                            <span class="ct-clb-icon">⚽</span>
+                            <h3>Nhóm CLB<br>Thể thao</h3>
+                        </div>
+                        <ul>
+                            <li>CLB Bóng rổ</li>
+                            <li>CLB Bơi</li>
+                            <li>CLB Khiêu vũ thể thao</li>
+                            <li>CLB Bóng đá</li>
+                            <li>CLB Pickleball</li>
+                        </ul>
+                    </div>
+                    <div class="ct-clb-group">
+                        <div class="ct-clb-group-header">
+                            <span class="ct-clb-icon">🎨</span>
+                            <h3>Nhóm CLB<br>Nghệ thuật</h3>
+                        </div>
+                        <ul>
+                            <li>CLB Mĩ thuật</li>
+                            <li>CLB Piano</li>
+                            <li>CLB Thanh nhạc</li>
+                        </ul>
+                    </div>
+                    <div class="ct-clb-group">
+                        <div class="ct-clb-group-header">
+                            <span class="ct-clb-icon">🤖</span>
+                            <h3>Nhóm CLB Sáng tạo &amp;<br>Phát triển tư duy</h3>
+                        </div>
+                        <ul>
+                            <li>CLB STEM Robotics</li>
+                            <li>CLB Cờ vua</li>
+                            <li>CLB Lập trình Scratch</li>
+                            <li>CLB Toán Soroban Nhật Bản</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="ct-clb-note" data-aos="fade-up">
+                    <strong>Lưu ý:</strong> Các câu lạc bộ được tổ chức theo khóa học. Nhà trường có thể tạm dừng nhận học sinh hoặc hủy lớp nếu số lượng đăng ký không đủ để mở lớp hoặc vượt quá khả năng đáp ứng về cơ sở vật chất và đội ngũ giáo viên.
+                </div>
+            </div>
+        </section>
+
         <!-- ═══ TIN TỨC & SỰ KIỆN ═══ -->
         <section class="ct-news-section ct-section" style="margin-bottom:115px;">
             <div class="ct-wrap">
@@ -1134,30 +1223,9 @@
             </div>
         </section>
 
-        <!-- ═══ CTA ĐĂNG KÝ TƯ VẤN ═══ -->
-        <section class="ct-cta-wrap">
-            <div class="ct-cta-inner">
-                <div class="ct-cta-card" data-aos="zoom-in-up">
-                    <div class="ct-cta-content">
-                        <div class="ct-cta-text">
-                            <div>
-                                <small>Tuyển sinh 2026 - 2027</small>
-                                <h3>Đăng ký tư vấn</h3>
-                            </div>
-                            <p>Liên hệ ngay để được tư vấn chi tiết lộ trình học phù hợp cho con.</p>
-                        </div>
-                        <div class="ct-cta-actions">
-                            <a href="lien-he.php" class="ct-cta-btn">Liên hệ ngay</a>
-                            <div class="ct-cta-note">Phản hồi trong vòng 24 giờ làm việc</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
     </main>
 
-    <?php include 'includes/footer.php'; ?>
+    <?php include 'includes/footer-dangkytuvan.php'; ?>
 
     <script type="text/javascript" src="olympia/js/jquery.toast.min.js"></script>
     <script type="text/javascript" src="olympia/js/jquery.validate.min.js"></script>

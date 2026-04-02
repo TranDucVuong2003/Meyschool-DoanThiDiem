@@ -917,7 +917,7 @@
         </div>
     </main>
 
-    <?php include 'includes/footer.php'; ?>
+    <?php include 'includes/footer-dangkytuvan.php'; ?>
 
     <script type="text/javascript" src="olympia/js/jquery.toast.min.js"></script>
     <script type="text/javascript" src="olympia/js/jquery.validate.min.js"></script>

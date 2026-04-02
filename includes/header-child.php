@@ -12,10 +12,6 @@
                         <span class="btn-icon envelope-icon">✉</span>
                         <span class="btn-text">Phụ huynh cần biết gì ?</span>
                     </button>
-                    <button class="top-bar-btn search-btn" id="btn-search-top"
-                        onclick="document.getElementById('btn-search').click();">
-                        <span class="btn-icon search-icon">🔍</span>
-                    </button>
                 </div>
             </div>
         </div>
@@ -157,9 +153,6 @@
 
                     <div class="header-info">
                         <ul class="header-info-list">
-                            <li class="info-item"><a href="#" title="" class="search" id="btn-search">
-                                    <img src="../olympia/images/pc-header-search.svg" alt=""></a>
-                            </li>
                             <li class="info-item">
                                 <a href="https://lms.theolympiaschools.edu.vn/" title="Login Canvas" class="account"
                                     target="_blank"><img src="../olympia/images/pc-header-login.svg" alt=""></a>
@@ -185,9 +178,6 @@
                     <a href="../index.php"><img src="../olympia/images/pc-header-logo.svg" alt=""></a>
                 </div>
                 <div class="header-mb-menu">
-                    <div class="mb-search">
-                        <img src="../olympia/images/mb-header-search.svg" alt="">
-                    </div>
                     <div class="mb-menu" id="mb-menu-collapse">
                         <img src="../olympia/images/mb-header-menu.svg" alt="">
                     </div>
@@ -206,174 +196,91 @@
                     </div>
                     <div class="mb-menu-body">
                         <ul class="mb-menu-list">
-                            <li class="mb-menu-item  has-children ">
+                            <li class="mb-menu-item has-children">
                                 <div class="mb-menu-item-box">
-                                    <a class="mb-menu-link" href="../ve-chung-toi.php">Về chúng tôi</a>
+                                    <a class="mb-menu-link" href="javascript:;">Giới thiệu</a>
                                 </div>
                                 <div class="mb-menu-sub">
                                     <div class="mb-menu-body">
                                         <ul class="mb-menu-sub-list">
-                                            <li class="mb-sub-item"><a href="../ve-chung-toi.php" title=""
-                                                    class="mb-sub-link">GIỚI THIỆU VỀ TRƯỜNG</a></li>
-                                            <li class="mb-sub-item"><a href="../category/bao-chi-noi-ve-chung-toi.php"
-                                                    title="" class="mb-sub-link">HỆ GIÁ TRỊ CỐT LÕI ĐOÀN THỊ ĐIỂM</a></li>
-                                            <li class="mb-sub-item"><a href="../thanh-tich.php" title=""
-                                                    class="mb-sub-link">BẢNG VÀNG THÀNH TÍCH</a></li>
-                                            <li class="mb-sub-item"><a href="../co-so-vat-chat.php" title=""
-                                                    class="mb-sub-link">CƠ SỞ VẬT CHẤT</a></li>
-                                            <li class="mb-sub-item"><a href="../doi-ngu-olympia.php" title=""
-                                                    class="mb-sub-link">ĐỘI NGŨ GIÁO VIÊN</a></li>
-                                            <li class="mb-sub-item"><a
-                                                    href="../storage/vie-2526-1-chinh-sach-bao-ve-tre-em.pdf" title=""
-                                                    class="mb-sub-link">Chính sách bảo vệ trẻ em</a></li>
+                                            <li class="mb-sub-item"><a href="../thong-diep-nguoi-sang-lap.php" title="" class="mb-sub-link">Thông điệp từ Nhà sáng lập</a></li>
+                                            <li class="mb-sub-item"><a href="../tam-nhin-su-menh.php" title="" class="mb-sub-link">Tầm nhìn – Sứ mệnh – Giá trị cốt lõi</a></li>
+                                            <li class="mb-sub-item"><a href="../ban-lanh-dao.php" title="" class="mb-sub-link">Ban lãnh đạo Trường Meyschool Đoàn Thị Điểm</a></li>
+                                            <li class="mb-sub-item"><a href="../doi-ngu-olympia.php" title="" class="mb-sub-link">Đội ngũ giáo viên</a></li>
+                                            <li class="mb-sub-item"><a href="../chan-dung-hoc-sinh.php" title="" class="mb-sub-link">Chân dung học sinh Meyschool</a></li>
                                         </ul>
-
-
                                     </div>
                                 </div>
                             </li>
-                            <li class="mb-menu-item ">
+                            <li class="mb-menu-item has-children">
                                 <div class="mb-menu-item-box">
-                                    <a class="mb-menu-link" href="../tieu-bieu.php">Olympian tiêu biểu</a>
-                                </div>
-                            </li>
-                            <li class="mb-menu-item  has-children ">
-                                <div class="mb-menu-item-box">
-                                    <a class="mb-menu-link" href="../chuong-trinh-dao-tao.php"> Chương trình đào tạo</a>
+                                    <a class="mb-menu-link" href="javascript:;">Tuyển sinh 2026 - 2027</a>
                                 </div>
                                 <div class="mb-menu-sub">
                                     <div class="mb-menu-body">
                                         <ul class="mb-menu-sub-list">
-                                            <li class="mb-sub-item"><a href="../lo-trinh-hoc-tap.php" title=""
-                                                    class="mb-sub-link">Lộ trình học tập</a></li>
-                                            <li class="mb-sub-item"><a href="../chuong-trinh-song-ngu-olympia.php"
-                                                    title="" class="mb-sub-link">Chương trình song ngữ Olympia</a>
-                                            </li>
-                                            <li class="mb-sub-item"><a href="https://theois.edu.vn/" title=""
-                                                    class="mb-sub-link">Chương trình song ngữ Oxford</a></li>
-                                            <li class="mb-sub-item"><a href="../chuong-trinh-tich-hop.php" title=""
-                                                    class="mb-sub-link">Chương trình Tích hợp</a></li>
-                                            <li class="mb-sub-item"><a href="../chuong-trinh-dac-thu.php" title=""
-                                                    class="mb-sub-link">Chỉ có tại Olympia</a></li>
-                                            <li class="mb-sub-item"><a href="../chuong-trinh-khac.php" title=""
-                                                    class="mb-sub-link">Chương trình khác</a></li>
+                                            <li class="mb-sub-item"><a href="../thong-tin-tuyen-sinh-tieu-hoc.php" title="" class="mb-sub-link">Thông tin tuyển sinh tiền tiểu học và tiểu học</a></li>
+                                            <li class="mb-sub-item"><a href="../thong-tin-tuyen-sinh-thcs.php" title="" class="mb-sub-link">Thông tin tuyển sinh THCS</a></li>
+                                            <li class="mb-sub-item"><a href="../uu-dai-tuyen-sinh.php" title="" class="mb-sub-link">Ưu đãi tuyển sinh</a></li>
+                                            <li class="mb-sub-item"><a href="../hoc-bong-2026-2027.php" title="" class="mb-sub-link">Học bổng 2026 - 2027</a></li>
+                                            <li class="mb-sub-item"><a href="../cau-hoi-thuong-gap.php" title="" class="mb-sub-link">Câu hỏi thường gặp (FAQ)</a></li>
+                                            <li class="mb-sub-item"><a href="../dang-ky-tu-van.php" title="" class="mb-sub-link">Đăng ký tư vấn</a></li>
                                         </ul>
-
-
                                     </div>
                                 </div>
                             </li>
-                            <li class="mb-menu-item  has-children ">
+                            <li class="mb-menu-item">
                                 <div class="mb-menu-item-box">
-                                    <a class="mb-menu-link" href="../index.php">Tuyển sinh</a>
+                                    <a class="mb-menu-link" href="../chuong-trinh-dao-tao.php">Chương trình đào tạo</a>
+                                </div>
+                            </li>
+                            <li class="mb-menu-item">
+                                <div class="mb-menu-item-box">
+                                    <a class="mb-menu-link" href="../co-so-vat-chat.php">Cơ sở vật chất</a>
+                                </div>
+                            </li>
+                            <li class="mb-menu-item has-children">
+                                <div class="mb-menu-item-box">
+                                    <a class="mb-menu-link" href="javascript:;">Dịch vụ học đường</a>
                                 </div>
                                 <div class="mb-menu-sub">
                                     <div class="mb-menu-body">
                                         <ul class="mb-menu-sub-list">
-                                            <li class="mb-sub-item"><a href="../tuyen-dung.php" title=""
-                                                    class="mb-sub-link">THÔNG BÁO TUYỂN SINH</a></li>
-                                            <li class="mb-sub-item"><a
-                                                    href="../storage/bieu-phi-va-chinh-sach-phi-2026-2027-final.pdf"
-                                                    title="" class="mb-sub-link">HÀNH TRANG TỰU TRƯỜNG</a></li>
-                                            <li class="mb-sub-item"><a href="../tieu-bieu.php" title=""
-                                                    class="mb-sub-link">TẠI SAO NÊN CHỌN ĐOÀN THỊ ĐIỂM</a></li>
-                                            <li class="mb-sub-item"><a href="../faq.php" title=""
-                                                    class="mb-sub-link">CÂU HỎI THƯỜNG GẶP</a></li>
+                                            <li class="mb-sub-item"><a href="../dong-phuc-hoc-sinh.php" title="" class="mb-sub-link">Đồng phục học sinh</a></li>
+                                            <li class="mb-sub-item"><a href="../ban-tru.php" title="" class="mb-sub-link">Bán trú</a></li>
+                                            <li class="mb-sub-item"><a href="../xe-bus-dua-don.php" title="" class="mb-sub-link">Xe Bus đưa đón</a></li>
+                                            <li class="mb-sub-item"><a href="../y-te-va-tu-van-tam-ly.php" title="" class="mb-sub-link">Y tế và tư vấn tâm lý học đường</a></li>
                                         </ul>
-
-
                                     </div>
                                 </div>
                             </li>
-                            <li class="mb-menu-item  has-children ">
+                            <li class="mb-menu-item has-children">
                                 <div class="mb-menu-item-box">
-                                    <a class="mb-menu-link" href="../index.php">Học bổng - Giải thưởng</a>
+                                    <a class="mb-menu-link" href="javascript:;">Tin tức</a>
                                 </div>
                                 <div class="mb-menu-sub">
                                     <div class="mb-menu-body">
                                         <ul class="mb-menu-sub-list">
-                                            <li class="mb-sub-item"><a href="../category/goc-nhin-chuyen-gia.php"
-                                                    title="" class="mb-sub-link">HỢP TÁC QUỐC TẾ</a></li>
-                                            <li class="mb-sub-item"><a href="../thong-tin-du-hoc.php"
-                                                    title="" class="mb-sub-link">THÔNG TIN DU HỌC</a></li>
-                                            <li class="mb-sub-item"><a href="../category/goc-nhin-chuyen-gia.php"
-                                                    title="" class="mb-sub-link">THI TÀI NĂNG QUỐC TẾ</a></li>
-                                            <li class="mb-sub-item"><a href="../category/goc-nhin-chuyen-gia.php"
-                                                    title="" class="mb-sub-link">HOẠT ĐỘNG KHỐI SONG NGỮ</a></li>
+                                            <li class="mb-sub-item"><a href="../tin-hoat-dong.php" title="" class="mb-sub-link">Tin hoạt động</a></li>
+                                            <li class="mb-sub-item"><a href="../thanh-tich.php" title="" class="mb-sub-link">Thành tích</a></li>
+                                            <li class="mb-sub-item"><a href="../su-kien-truong.php" title="" class="mb-sub-link">Sự kiện trường</a></li>
+                                            <li class="mb-sub-item"><a href="../thong-bao.php" title="" class="mb-sub-link">Thông báo</a></li>
                                         </ul>
-
-
                                     </div>
                                 </div>
                             </li>
-                            <li class="mb-menu-item  has-children ">
+                            <li class="mb-menu-item has-children">
                                 <div class="mb-menu-item-box">
-                                    <a class="mb-menu-link" href="../mot-ngay-o-olympia.php">Cuộc sống học đường</a>
+                                    <a class="mb-menu-link" href="javascript:;">Liên hệ</a>
                                 </div>
                                 <div class="mb-menu-sub">
                                     <div class="mb-menu-body">
                                         <ul class="mb-menu-sub-list">
-                                            <li class="mb-sub-item"><a href="../su-kien.php" title=""
-                                                    class="mb-sub-link">THÔNG BÁO</a></li>
-                                            <li class="mb-sub-item"><a href="../dich-vu-xe-dua-don-hoc-sinh.php"
-                                                    title="" class="mb-sub-link">LỊCH HOẠT ĐỘNG</a></li>
-                                            <li class="mb-sub-item"><a href="../dinh-duong-truong-hoc.php" title=""
-                                                    class="mb-sub-link">CÂU CHUYỆN HỌC ĐƯỜNG</a></li>
-                                            <li class="mb-sub-item"><a href="../dong-phuc-va-hoc-pham.php" title=""
-                                                    class="mb-sub-link">DỊCH VỤ BÁN TRÚ - XE BUÝT</a></li>
-                                            <li class="mb-sub-item"><a href="../dich-vu-y-te.php" title=""
-                                                    class="mb-sub-link">THƯ VIỆN ẢNH/VIDEO</a></li>
+                                            <li class="mb-sub-item"><a href="../lien-he.php" title="" class="mb-sub-link">Thông tin liên hệ</a></li>
+                                            <li class="mb-sub-item"><a href="../ban-do.php" title="" class="mb-sub-link">Bản đồ</a></li>
+                                            <li class="mb-sub-item"><a href="../dang-ky-tham-quan.php" title="" class="mb-sub-link">Đăng ký tham quan trường</a></li>
                                         </ul>
-
-
                                     </div>
-                                </div>
-                            </li>
-                            <li class="mb-menu-item  has-children ">
-                                <div class="mb-menu-item-box">
-                                    <a class="mb-menu-link" href="../tin-tuc-va-su-kien.php">Hoạt động Olympia</a>
-                                </div>
-                                <div class="mb-menu-sub">
-                                    <div class="mb-menu-body">
-                                        <ul class="mb-menu-sub-list">
-                                            <li class="mb-sub-item"><a href="../tin-tuc.php" title=""
-                                                    class="mb-sub-link">Tin tức Olympia</a></li>
-                                            <li class="mb-sub-item"><a href="../su-kien.php" title=""
-                                                    class="mb-sub-link">Sự kiện Olympia</a></li>
-                                            <li class="mb-sub-item"><a href="../category/goc-nhin-chuyen-gia.php"
-                                                    title="" class="mb-sub-link">Góc nhìn chuyên gia</a></li>
-                                            <li class="mb-sub-item"><a href="../tuyen-dung.php" title=""
-                                                    class="mb-sub-link">Tuyển dụng</a></li>
-                                        </ul>
-
-
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="mb-menu-item  has-children ">
-                                <div class="mb-menu-item-box">
-                                    <a class="mb-menu-link" href="../faq.php">Góc phụ huynh</a>
-                                </div>
-                                <div class="mb-menu-sub">
-                                    <div class="mb-menu-body">
-                                        <ul class="mb-menu-sub-list">
-                                            <li class="mb-sub-item"><a href="../faq.php" title=""
-                                                    class="mb-sub-link">Câu hỏi thường gặp</a></li>
-                                            <li class="mb-sub-item"><a href="https://lms.theolympiaschools.edu.vn/"
-                                                    title="" class="mb-sub-link">Canvas</a></li>
-                                            <li class="mb-sub-item"><a href="../category/talkshow.php" title=""
-                                                    class="mb-sub-link">Talkshow</a></li>
-                                            <li class="mb-sub-item"><a href="https://onepay.vn/olympia/" title=""
-                                                    class="mb-sub-link">Thanh toán trực tuyến</a></li>
-                                        </ul>
-
-
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="mb-menu-item ">
-                                <div class="mb-menu-item-box">
-                                    <a class="mb-menu-link" href="../lien-he.php">Liên hệ</a>
                                 </div>
                             </li>
                         </ul>

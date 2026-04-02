@@ -632,85 +632,6 @@
             display: block;
         }
 
-        .tq-footer-consult-wrap {
-            position: relative;
-            z-index: 3;
-            margin-top: 20px;
-            margin-bottom: -64px;
-        }
-
-        .tq-footer-consult-inner {
-            width: min(1120px, 92vw);
-            margin: 0 auto;
-        }
-
-        .tq-footer-consult-card {
-            position: relative;
-            border-radius: 24px;
-            overflow: hidden;
-            padding: 40px clamp(24px, 4vw, 52px);
-            background: linear-gradient(130deg, rgba(31, 108, 170, 0.9), rgba(77, 176, 228, 0.82)), url('assets/img/tuyensinh/tuyển sinh chung.jpg') center/cover no-repeat;
-            box-shadow: 0 22px 48px rgba(23, 63, 104, 0.35);
-            color: #fff;
-        }
-
-        .tq-footer-consult-content {
-            display: grid;
-            grid-template-columns: minmax(0, 1fr) auto;
-            gap: 22px;
-            align-items: end;
-        }
-
-        .tq-footer-consult-text small {
-            display: inline-block;
-            margin-bottom: 8px;
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            color: rgba(255, 255, 255, 0.94);
-        }
-
-        .tq-footer-consult-text h3 {
-            font-family: 'Garamond', serif;
-            font-size: clamp(42px, 5vw, 64px);
-            line-height: 0.95;
-            margin: 0;
-            color: #fff;
-            text-transform: none;
-        }
-
-        .tq-footer-consult-text p {
-            margin: 14px 0 0;
-            max-width: 760px;
-            font-size: 24px;
-            line-height: 1.35;
-            color: rgba(255, 255, 255, 0.96);
-        }
-
-        .tq-footer-consult-actions {
-            text-align: right;
-        }
-
-        .tq-footer-consult-btn {
-            display: inline-block;
-            min-width: 188px;
-            padding: 13px 28px;
-            border-radius: 999px;
-            background: #fff;
-            color: #1d4f87;
-            font-weight: 700;
-            font-size: 17px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .tq-footer-consult-note {
-            margin-top: 10px;
-            font-size: 13px;
-            color: rgba(255, 255, 255, 0.88);
-        }
-
         #footer,
         #footer .footer {
             margin-top: 0;
@@ -766,24 +687,6 @@
         @media (max-width: 768px) {
             .ad-wide {
                 width: min(94vw, 1520px);
-            }
-
-            .tq-footer-consult-wrap {
-                margin-bottom: -40px;
-            }
-
-            .tq-footer-consult-content {
-                grid-template-columns: 1fr;
-                align-items: start;
-                gap: 14px;
-            }
-
-            .tq-footer-consult-actions {
-                text-align: left;
-            }
-
-            .tq-footer-consult-text p {
-                font-size: 18px;
             }
 
             #footer .footer {
@@ -890,6 +793,43 @@
                     alt="Mey School Đoàn Thị Điểm Phú Quốc Tuyển Sinh 2026-2027"></div>
             <div class="ts-banner-slide"><img src="assets/img/tuyensinh/banner4.jpg"
                     alt="Câu Lạc Bộ Tuổi Thơ - Hành Trang Vào Lớp 1"></div>
+        </section>
+
+        <!-- Giới thiệu Chương trình THCS -->
+        <section style="padding:52px 0 40px;background:linear-gradient(180deg,#f4fbff 0%,#fff 100%);">
+            <div class="wrap" style="max-width:1100px;margin:0 auto;padding:0 20px;">
+                <div data-aos="fade-up" style="background:#fff;border-radius:20px;border:1px solid rgba(67,155,212,.18);box-shadow:0 12px 28px rgba(16,49,79,.08);padding:32px 36px 28px;">
+                    <h2 style="font-family:'Garamond',serif;font-size:32px;color:#1f5f8e;margin:0 0 14px;">Giới thiệu Chương trình THCS Meyschool Đoàn Thị Điểm</h2>
+                    <p style="font-size:16px;line-height:1.8;color:#3f6070;margin:0 0 14px;">Chương trình THCS Meyschool Đoàn Thị Điểm được xây dựng trên nền tảng giáo dục vững chắc của Hệ thống Đoàn Thị Điểm, phát triển theo định hướng liên thông và hội nhập. Nhà trường theo đuổi triết lý <em>"Giáo dục chính là cuộc sống"</em>, nơi mỗi ngày đến trường là một hành trình trải nghiệm, khám phá và trưởng thành trong môi trường yêu thương, sáng tạo.</p>
+                    <p style="font-size:16px;line-height:1.8;color:#3f6070;margin:0 0 14px;">Chương trình học được thiết kế cân bằng giữa Chương trình GDPT 2018 và chương trình nhà trường theo định hướng quốc tế, giúp học sinh phát triển toàn diện về kiến thức, kỹ năng và phẩm chất. Học sinh được định hướng rõ ràng theo năng lực và mục tiêu cá nhân thông qua các hệ học đa dạng: Tăng cường, Nâng cao và Tích hợp quốc tế.</p>
+                    <p style="font-size:16px;line-height:1.8;color:#3f6070;margin:0 0 26px;">Với cách tiếp cận cá nhân hóa, chú trọng trải nghiệm và phát triển năng lực, chương trình hướng tới hình thành những học sinh tự tin, chủ động, có tư duy toàn cầu và nền tảng vững vàng cho các bậc học tiếp theo.</p>
+
+                    <h3 style="font-size:20px;font-weight:700;color:#1f5f8e;margin:0 0 16px;">Các hệ học tại THCS Meyschool Đoàn Thị Điểm</h3>
+                    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:16px;">
+                        <div style="border:1px solid rgba(67,155,212,.22);border-radius:14px;padding:20px 22px;background:linear-gradient(120deg,#f4fbff 0%,#eaf7ff 100%);">
+                            <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap;">
+                                <span style="background:#439bd4;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:999px;text-transform:uppercase;letter-spacing:.4px;">Lớp S</span>
+                                <strong style="font-size:16px;color:#1f5f8e;">Hệ Tăng cường</strong>
+                            </div>
+                            <p style="margin:0;font-size:14px;line-height:1.75;color:#3f607a;">Chương trình cân bằng giữa kiến thức và kỹ năng, tăng cường hoạt động trải nghiệm. Hướng tới mục tiêu học chắc – rèn kỹ năng – phát triển hài hòa về tri thức và phẩm chất.</p>
+                        </div>
+                        <div style="border:1px solid rgba(67,155,212,.22);border-radius:14px;padding:20px 22px;background:linear-gradient(120deg,#f4fbff 0%,#eaf7ff 100%);">
+                            <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap;">
+                                <span style="background:#2354a0;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:999px;text-transform:uppercase;letter-spacing:.4px;">Lớp C</span>
+                                <strong style="font-size:16px;color:#1f5f8e;">Hệ Nâng cao</strong>
+                            </div>
+                            <p style="margin:0;font-size:14px;line-height:1.75;color:#3f607a;">Dành cho học sinh có năng lực nổi trội, tập trung vào Toán và Tiếng Anh theo định hướng học sâu – tư duy học thuật, hình thành nền tảng kiến thức vững chắc và khả năng ứng dụng linh hoạt.</p>
+                        </div>
+                        <div style="border:1px solid rgba(67,155,212,.22);border-radius:14px;padding:20px 22px;background:linear-gradient(120deg,#f4fbff 0%,#eaf7ff 100%);">
+                            <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap;">
+                                <span style="background:#1a8a6f;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:999px;text-transform:uppercase;letter-spacing:.4px;">Lớp Q</span>
+                                <strong style="font-size:16px;color:#1f5f8e;">Hệ Tích hợp Quốc tế</strong>
+                            </div>
+                            <p style="margin:0;font-size:14px;line-height:1.75;color:#3f607a;">Kết hợp Chương trình GDPT 2018 với chương trình quốc tế Cambridge, phát triển tư duy song ngữ – năng lực học tập toàn cầu, sẵn sàng cho các bậc học cao hơn.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section class="ad-content">
@@ -1128,29 +1068,9 @@
                 }
             </style>
         </section>
-
-        <section id="lien-he" class="tq-footer-consult-wrap">
-            <div class="tq-footer-consult-inner">
-                <div class="tq-footer-consult-card" data-aos="zoom-in-up">
-                    <div class="tq-footer-consult-content">
-                        <div class="tq-footer-consult-text">
-                            <div>
-                                <small>Tuyển sinh 2026 - 2027</small>
-                                <h3>Đăng ký tư vấn</h3>
-                            </div>
-                            <p>Liên hệ ngay để được tư vấn chi tiết lộ trình học phù hợp cho con.</p>
-                        </div>
-                        <div class="tq-footer-consult-actions">
-                            <a href="lien-he.php" class="tq-footer-consult-btn">Liên hệ ngay</a>
-                            <div class="tq-footer-consult-note">Phản hồi trong vòng 24 giờ làm việc</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
 
-    <?php include 'includes/footer.php'; ?>
+    <?php include 'includes/footer-dangkytuvan.php'; ?>
 
     <script type="text/javascript" src="olympia/js/jquery.toast.min.js"></script>
     <script type="text/javascript" src="olympia/js/jquery.validate.min.js"></script>

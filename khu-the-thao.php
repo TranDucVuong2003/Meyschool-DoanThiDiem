@@ -356,7 +356,7 @@
         </section>
     </main>
 
-    <?php include 'includes/footer.php'; ?>
+    <?php include 'includes/footer-dangkytuvan.php'; ?>
 
     <script type="text/javascript" src="olympia/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="olympia/js/toastr.min.js"></script>

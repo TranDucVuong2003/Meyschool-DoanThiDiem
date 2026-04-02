@@ -208,12 +208,13 @@
 
         .fq-main {
             padding: 40px 0 72px;
+            margin-bottom: 120px;
         }
 
         .fq-layout {
-            display: grid;
-            grid-template-columns: minmax(0, 1.35fr) minmax(290px, 0.65fr);
-            gap: 24px;
+            display: block;
+            max-width: 860px;
+            margin: 0 auto;
         }
 
         .fq-content,
@@ -541,6 +542,17 @@
                                         năng lực, phỏng vấn phụ huynh - học sinh và bài đánh giá đầu vào nếu cần.</p>
                                 </div>
                             </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <h4>Làm thế nào để đăng ký tuyển sinh?</h4>
+                                    <span class="faq-icon">▼</span>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Phụ huynh đăng ký trực tiếp tại trường hoặc qua hệ thống online của nhà trường.
+                                        Đội ngũ tuyển sinh sẽ liên hệ tư vấn và hướng dẫn các bước tiếp theo.</p>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="faq-category">
@@ -586,6 +598,42 @@
 
                             <div class="faq-item">
                                 <div class="faq-question">
+                                    <h4>Trường có chương trình Tiếng Anh như thế nào?</h4>
+                                    <span class="faq-icon">▼</span>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Chương trình Tiếng Anh tại Meyschool đạt 10 tiết/tuần, phát triển toàn diện 4 kỹ
+                                        năng Nghe – Nói – Đọc – Viết, hướng tới chuẩn đầu ra A2–B1 theo khung tham chiếu
+                                        châu Âu (CEFR).</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <h4>Học sinh có được học công nghệ và AI không?</h4>
+                                    <span class="faq-icon">▼</span>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Có. Nhà trường tích hợp AI Literacy và kỹ năng số ngay từ các lớp đầu cấp, giúp
+                                        học sinh làm quen và ứng dụng công nghệ một cách có chủ đích trong học tập và
+                                        cuộc sống.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <h4>Học sinh có hoạt động ngoại khóa không?</h4>
+                                    <span class="faq-icon">▼</span>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Rất đa dạng. Nhà trường tổ chức nhiều hoạt động ngoại khóa theo các lĩnh vực:
+                                        STEM, nghệ thuật, thể thao và trải nghiệm thực tế, giúp học sinh phát triển toàn
+                                        diện ngoài giờ học chính khóa.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-question">
                                     <h4>Chương trình song ngữ tại Meyschool có gì nổi bật?</h4>
                                     <span class="faq-icon">▼</span>
                                 </div>
@@ -613,8 +661,9 @@
                                     <span class="faq-icon">▼</span>
                                 </div>
                                 <div class="faq-answer">
-                                    <p>Có. Dịch vụ bán trú bao gồm bữa ăn, nghỉ trưa và quản lý học sinh theo khung giờ,
-                                        bảo đảm an toàn và phù hợp với nhịp sinh hoạt của từng lứa tuổi.</p>
+                                    <p>Có. Dịch vụ bán trú đảm bảo dinh dưỡng, an toàn và nề nếp sinh hoạt. Thực đơn
+                                        được xây dựng cân bằng theo nhóm tuổi, có nhân sự giám sát và quản lý học sinh
+                                        trong suốt thời gian bán trú.</p>
                                 </div>
                             </div>
                         </div>
@@ -663,42 +712,12 @@
                     </section>
                 </div>
 
-                <aside class="fq-side" data-aos="fade-up" data-aos-delay="120">
-                    <div class="fq-side-card">
-                        <h3>Danh mục tuyển sinh</h3>
-                        <div class="fq-side-links">
-                            <a href="thong-tin-tuyen-sinh-tieu-hoc.php">Tuyển sinh Tiểu học</a>
-                            <a href="thong-tin-tuyen-sinh-thcs.php">Tuyển sinh THCS</a>
-                            <a href="uu-dai-tuyen-sinh.php">Ưu đãi tuyển sinh</a>
-                            <a href="hoc-bong-2026-2027.php">Học bổng 2026 - 2027</a>
-                        </div>
-                    </div>
 
-                    <div class="fq-side-card">
-                        <h3>Liên hệ tư vấn</h3>
-                        <div class="fq-contact">
-                            <b>Hotline</b>
-                            <span>0934 525 889</span>
-                        </div>
-                        <div class="fq-contact">
-                            <b>Email</b>
-                            <span>tuyensinh@doanthidiem.edu.vn</span>
-                        </div>
-                        <div class="fq-contact" style="margin-bottom: 0;">
-                            <b>Địa chỉ</b>
-                            <span>KĐT Trung Văn, Nam Từ Liêm, Hà Nội</span>
-                        </div>
-                        <div class="fq-actions">
-                            <a href="dang-ky-tu-van.php" class="fq-btn fq-btn-primary">Đăng ký tư vấn</a>
-                            <a href="lien-he.php" class="fq-btn fq-btn-light">Liên hệ ngay</a>
-                        </div>
-                    </div>
-                </aside>
             </div>
         </section>
     </main>
 
-    <?php include 'includes/footer.php'; ?>
+    <?php include 'includes/footer-dangkytuvan.php'; ?>
 
     <script type="text/javascript" src="olympia/js/jquery.toast.min.js"></script>
     <script type="text/javascript" src="olympia/js/jquery.validate.min.js"></script>
