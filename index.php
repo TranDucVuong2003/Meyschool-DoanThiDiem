@@ -410,22 +410,26 @@
                 <h1 class="olympia-number-title font-garamond-bold color-21" style="margin-bottom: 20px">Trường phổ
                     thông liên cấp Meyschool Đoàn Thị Điểm</h1>
 
-                <p class="olympia-number-content font-avenir-regular size-14 color-3a">Không chỉ tiên phong trong xây
-                    dựng và đổi mới chương trình giáo dục theo định hướng phát triển năng lực tại Việt Nam, Meyschool tự
-                    hào là đơn vị dẫn đầu trong tiếp cận và vận dụng các nội dung, phương pháp giáo dục hiện đại của thế
-                    giới để học sinh Meyschool tự tin bước ra thế giới với tri thức, kĩ năng, phẩm chất và năng lực của
-                    những công dân toàn cầu.</p>
+                <p class="olympia-number-content font-avenir-regular size-14 color-3a">Meyschool Đoàn Thị Điểm là sự kết
+                    tinh của hợp tác chiến lược giữa Meygroup và Hệ thống Giáo dục Đoàn Thị Điểm Hà Nội - ngôi trường từ
+                    thực tiễn đào tạo hàng nghìn học sinh học tại Anh bằng chương trình quốc tế.
+                    Kế thừa nền tảng truyền thống và triết lý giáo dục nhân văn của Đoàn Thị Điểm, nhà trường đề cao kỷ
+                    cương - chất lượng - sáng tạo, hướng tới mục tiêu đào tạo những thế hệ học sinh không chỉ vững vàng
+                    về tri thức mà còn giàu bản lĩnh, kỹ năng và tinh thần trách nhiệm với cộng đồng, sẵn sàng hội nhập
+                    và phát triển trong tương lai.
+                </p>
 
                 <ul class="olym-index_list">
-                    <li><span>1</span>Trường song ngữ đầu tiên tại Hà Nội đạt chuẩn kiểm định toàn diện của ACS-WASC
-                        (Hoa Kỳ)</li>
-                    <li><span>1</span>Trường song ngữ đầu tiên tại Việt Nam trở thành IB World School</li>
+                    <li><span>1</span>Trường Tiểu học Đoàn Thị Điểm (Hà Nội) là trường đầu tiên được phong tặng danh
+                        hiệu Anh hùng Lao động thời kỳ đổi mới vào ngày 27/12/2025
+                    </li>
+                    <!-- <li><span>1</span>Trường song ngữ đầu tiên tại Việt Nam trở thành IB World School</li> -->
                 </ul>
             </div>
             <div class="olympia-number-right pc-device show-on-scroll" style="width: 50%; margin-left: 0;">
                 <div class="number-item text-right">
                     <div class="olympia-number-block-img number-img1 ">
-                        <img src="olympia/images/0201.jpg" alt="">
+                        <img src="assets/img/co-so-vat-chat/thư viện.jpg" alt="">
                     </div>
                     <div class="olympia-number-block-img number-img2">
                         <div class="flex-center-center number-blck number-blck-t" style="width: 180px;">
@@ -439,7 +443,7 @@
                 </div>
                 <div class="number-item text-left">
                     <div class="olympia-number-block-img number-img3">
-                        <img src="olympia/images/0202.jpg" alt="">
+                        <img src="assets/img/co-so-vat-chat/phòng học.JPG" alt="">
                     </div>
                     <div class="olympia-number-block-img number-img4">
                         <div class="flex-center-center number-blck number-blck-v">
@@ -450,7 +454,7 @@
                         </div>
                     </div>
                     <div class="olympia-number-block-img number-img5">
-                        <img src="olympia/images/0206.jpg" alt="">
+                        <img src="assets/img/co-so-vat-chat/sân bóng rổ.jpg" alt="">
                     </div>
 
 
@@ -471,7 +475,7 @@
                         </div>
                     </div>
                     <div class="olympia-number-block-img number-img8">
-                        <img src="olympia/images/0208.jpg" alt="">
+                        <img src="assets/img/co-so-vat-chat/phòng nhạc.jpg" alt="">
                     </div>
                     <div class="olympia-number-block-img number-img9">
                         <div class="flex-center-center number-blck number-blck-t" style="width: 190px">
@@ -497,7 +501,7 @@
                 <div class="mobile-item mobile-item-top">
                     <div class="mobile-item-top-left text-right">
                         <div class="mobile-item-img mobile-item-img1">
-                            <img src="olympia/images/0202.jpg" alt="" class="mobile1">
+                            <img src="assets/img/co-so-vat-chat/phòng học.JPG" alt="" class="mobile1">
                         </div>
                         <div class="mobile-item-img mobile-item-img2">
                             <div class="flex-center-center number-blck number-blck-v">
@@ -508,7 +512,7 @@
                             </div>
                         </div>
                         <div class="mobile-item-img mobile-item-img3">
-                            <img src="olympia/images/0206.jpg" alt="" class="mobile10">
+                            <img src="assets/img/co-so-vat-chat/sân bóng rổ.jpg" alt="" class="mobile10">
                         </div>
                     </div>
                     <div class="mobile-item-top-right text-left">
@@ -618,105 +622,17 @@
                 <h2 class="color-f font-garamond-bold">Hoạt động tại Meyschool</h2>
                 <div class="flex-center-between mgb-30">
                     <div class="olympia-event-entry-title font-24 text-underline font-weight-bold mgb-0">Tin tức</div>
-                    <a href="tin-tuc.html" title="" class="link-button righthover color-f">Tất cả tin tức
+                    <a href="tin-tuc.php" title="" class="link-button righthover color-f">Tất cả tin tức
                         <img class="white" src="olympia/images/button-1-3.svg" alt=""></a>
                 </div>
                 <div class="olym_news mgb-30">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class="olympia-event-post slide-item">
-                                <a href="leap-week-2025-tuan-dinh-huong-nghe-nghiep-danh-cho-olympians-chuong-trinh-tich-hop.html"
-                                    title=""><img src="storage/pcp-3248-300x300.jpg" alt=""></a>
-                                <p class="post-title"><a
-                                        href="leap-week-2025-tuan-dinh-huong-nghe-nghiep-danh-cho-olympians-chuong-trinh-tich-hop.html">LEAP
-                                        WEEK 2025 – Tuần định hướng nghề nghiệp dành cho Meyschool Chương trình Tích
-                                        hợp</a></p>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="olympia-event-post slide-item">
-                                <a href="hoc-bong-griffin-2026-khac-biet-ban-sac-dan-loi-tuong-lai.html" title=""><img
-                                        src="storage/anh-vuong-kv-300x300.jpg" alt=""></a>
-                                <p class="post-title"><a
-                                        href="hoc-bong-griffin-2026-khac-biet-ban-sac-dan-loi-tuong-lai.html">Học bổng
-                                        Griffin 2026 - Khác biệt bản sắc, dẫn lối tương lai</a></p>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="olympia-event-post slide-item">
-                                <a href="nhung-tieng-cuoi-gion-tan-trong-ngay-dai-hoi-the-thao-cua-cac-olympians-nhi.html"
-                                    title=""><img
-                                        src="storage/562452043-1264643732367476-6011133221642088308-n-1-300x300.jpg"
-                                        alt=""></a>
-                                <p class="post-title"><a
-                                        href="nhung-tieng-cuoi-gion-tan-trong-ngay-dai-hoi-the-thao-cua-cac-olympians-nhi.html">Những
-                                        tiếng cười giòn tan trong ngày Đại hội thể thao của các Meyschool nhí!</a></p>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="olympia-event-post slide-item">
-                                <a href="olympia-sport-family-2025-550-gia-dinh-cung-tham-gia-buoc-chay-hoa-no-cho-sach-ra-khoi.html"
-                                    title=""><img
-                                        src="storage/565657460-1266642185500964-7927902821603982118-n-300x300.jpg"
-                                        alt=""></a>
-                                <p class="post-title"><a
-                                        href="olympia-sport-family-2025-550-gia-dinh-cung-tham-gia-buoc-chay-hoa-no-cho-sach-ra-khoi.html">Meyschool
-                                        Sport Family 2025: 550 gia đình cùng tham gia Bước chạy hoa nở – Chở sách ra
-                                        khơi</a></p>
-                            </div>
-                        </div>
+                    <div class="row" id="home-news-row">
+                        <div class="col-md-12" style="text-align:center;color:rgba(255,255,255,0.6);padding:40px 0;">
+                            Đang tải...</div>
                     </div>
                 </div>
-
-
-
-
-
                 <div class="olym_events mgb-30">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class="olympia-event-post slide-item">
-                                <a href="olympia-alumni-talk-university-insights-lessons-then-and-now.html"
-                                    title=""><img
-                                        src="storage/561741140-1259781386187044-5214432535071835707-n-300x300.jpg"
-                                        alt=""></a>
-                                <p class="post-title"><a
-                                        href="olympia-alumni-talk-university-insights-lessons-then-and-now.html">Meyschool
-                                        Alumni talk: “Hành trình Đại học - Bài học của ngày ấy và hôm nay&quot;</a></p>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="olympia-event-post slide-item">
-                                <a href="chuc-mung-cac-olympians-xuat-sac-dat-giai-nhat-tai-vong-khoi-dong-giai-vex-robotic.html"
-                                    title=""><img
-                                        src="storage/559298648-1256741573157692-8182908271493890121-n-300x300.jpg"
-                                        alt=""></a>
-                                <p class="post-title"><a
-                                        href="chuc-mung-cac-olympians-xuat-sac-dat-giai-nhat-tai-vong-khoi-dong-giai-vex-robotic.html">Chúc
-                                        mứng các Meyschool xuất sắc đạt giải nhất tại vòng khởi động giải Vex
-                                        Robotics!</a></p>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="olympia-event-post slide-item">
-                                <a href="vuot-30000-tac-pham-olympian-co.html" title=""><img
-                                        src="storage/557010394-1254697353362114-5404053930275027418-n-2-300x300.jpg"
-                                        alt=""></a>
-                                <p class="post-title"><a href="vuot-30000-tac-pham-olympian-co.html">Vượt 30.000 tác
-                                        phẩm, Meyschool có tranh trưng bày tại Triển lãm Mỹ thuật Thiếu nhi toàn
-                                        quốc</a>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="olympia-event-post slide-item">
-                                <a href="ra-mat-hoi-su-tu-tieu-hoc.html" title=""><img
-                                        src="storage/555855820-1248332843998565-3065902610697368414-n-300x300.jpg"
-                                        alt=""></a>
-                                <p class="post-title"><a href="ra-mat-hoi-su-tu-tieu-hoc.html">Ra mắt Hội Sư tử Tiểu học
-                                        2025 - 2026</a></p>
-                            </div>
-                        </div>
+                    <div class="row" id="home-news-row-2">
                     </div>
                 </div>
                 <div class="flex-center-between mgb-30">
@@ -950,6 +866,48 @@
 
     <script src="olympia/js/contact.js"></script>
     <script src="olympia/js/custom.js"></script>
+
+    <script>
+        (function() {
+            function escHtml(str) {
+                var d = document.createElement('div');
+                d.textContent = str || '';
+                return d.innerHTML;
+            }
+            $.getJSON('api/news-public.php?page=1', function(res) {
+                var row = document.getElementById('home-news-row');
+                if (!res.success || !res.data || !res.data.length) {
+                    row.innerHTML =
+                        '<div class="col-md-12" style="text-align:center;color:rgba(255,255,255,0.6);padding:40px 0;">Chưa có bài viết nào.</div>';
+                    return;
+                }
+                var items = res.data.slice(0, 8);
+                var row1Items = items.slice(0, 4);
+                var row2Items = items.slice(4, 8);
+
+                function buildCards(arr) {
+                    var html = '';
+                    arr.forEach(function(r) {
+                        var thumb = r.thumbnail || 'storage/favicon.png';
+                        var link = 'doc-tin-tuc.php?slug=' + encodeURIComponent(r.slug);
+                        html += '<div class="col-md-3">';
+                        html += '<div class="olympia-event-post slide-item">';
+                        html += '<a href="' + link + '" title=""><img src="' + escHtml(thumb) +
+                            '" alt="' + escHtml(r.title) + '"></a>';
+                        html += '<p class="post-title"><a href="' + link + '">' + escHtml(r.title) +
+                            '</a></p>';
+                        html += '</div></div>';
+                    });
+                    return html;
+                }
+                row.innerHTML = buildCards(row1Items);
+                var row2 = document.getElementById('home-news-row-2');
+                if (row2 && row2Items.length) {
+                    row2.innerHTML = buildCards(row2Items);
+                }
+            });
+        })();
+    </script>
 </body>
 
 </html>

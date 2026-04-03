@@ -133,8 +133,8 @@
                             <a href="javascript:void(0)" title="" class="menu_link">Tin tức</a>
                             <ul class="dropdown-content">
                                 <li>
-                                    <a href="tin-hoat-dong.php">
-                                        <span>Tin hoạt động</span>
+                                    <a href="tin-tuc.php">
+                                        <span>Tin tức</span>
                                     </a>
                                 </li>
                                 <li>
@@ -298,8 +298,8 @@
                                 <div class="mb-menu-sub">
                                     <div class="mb-menu-body">
                                         <ul class="mb-menu-sub-list">
-                                            <li class="mb-sub-item"><a href="tin-hoat-dong.php" title=""
-                                                    class="mb-sub-link">Tin hoạt động</a></li>
+                                            <li class="mb-sub-item"><a href="tin-tuc.php" title=""
+                                                    class="mb-sub-link">Tin tức</a></li>
                                             <li class="mb-sub-item"><a href="thanh-tich.php" title=""
                                                     class="mb-sub-link">Thành tích</a></li>
                                             <li class="mb-sub-item"><a href="su-kien-truong.php" title=""

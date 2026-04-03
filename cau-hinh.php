@@ -1,0 +1,822 @@
+<?php
+session_start();
+if (empty($_SESSION['admin_id'])) {
+    header('Location: log-in.php');
+    exit;
+}
+$admin_name = htmlspecialchars($_SESSION['admin_name'] ?? 'Admin');
+$admin_username = htmlspecialchars($_SESSION['admin_username'] ?? '');
+?>
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Cấu hình | Meyschool Đoàn Thị Điểm</title>
+    <link rel="shortcut icon" href="storage/favicon.png">
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --sidebar-w: 220px;
+            --top-h: 60px;
+            --primary: #2d6a9f;
+            --primary-d: #1f3f5d;
+            --accent: #439bd4;
+            --bg: #f4f6f9;
+            --card: #ffffff;
+            --text: #2c3e50;
+            --muted: #7a8fa6;
+            --border: #e2e8f0;
+            --green: #27ae60;
+            --yellow: #f39c12;
+            --red: #e74c3c;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .main {
+            margin-left: var(--sidebar-w);
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* ── Topbar ── */
+        .topbar {
+            height: var(--top-h);
+            background: var(--card);
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 28px;
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+
+        .topbar-title {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--primary-d);
+        }
+
+        .topbar-right {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .topbar-time {
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        .topbar-user {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 15px;
+        }
+
+        .user-info {
+            text-align: right;
+            line-height: 1.3;
+        }
+
+        .user-info .name {
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .user-info .role {
+            font-size: 11px;
+            color: var(--muted);
+        }
+
+        .user-dropdown {
+            display: none;
+            position: absolute;
+            top: calc(100% + 8px);
+            right: 0;
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            min-width: 160px;
+            overflow: hidden;
+            z-index: 200;
+        }
+
+        .user-dropdown.open {
+            display: block;
+        }
+
+        .user-dropdown a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 11px 16px;
+            font-size: 13px;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .user-dropdown a:hover {
+            background: var(--bg);
+        }
+
+        .user-dropdown a.logout {
+            color: var(--red);
+        }
+
+        .content {
+            flex: 1;
+            padding: 28px;
+        }
+
+        /* ── Tabs ── */
+        .tabs-bar {
+            display: flex;
+            gap: 0;
+            border-bottom: 2px solid var(--border);
+            margin-bottom: 24px;
+            overflow-x: auto;
+        }
+
+        .tab-btn {
+            padding: 12px 22px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--muted);
+            background: none;
+            border: none;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            margin-bottom: -2px;
+            white-space: nowrap;
+            transition: color 0.2s, border-color 0.2s;
+        }
+
+        .tab-btn:hover {
+            color: var(--text);
+        }
+
+        .tab-btn.active {
+            color: var(--primary);
+            border-bottom-color: var(--primary);
+            font-weight: 600;
+        }
+
+        .tab-panel {
+            display: none;
+        }
+
+        .tab-panel.active {
+            display: block;
+        }
+
+        /* ── Card ── */
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .card-header h3 {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--primary-d);
+        }
+
+        /* ── Search ── */
+        .search-box {
+            position: relative;
+            max-width: 400px;
+            width: 100%;
+            margin-bottom: 18px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 10px 14px 10px 38px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 14px;
+            outline: none;
+            color: var(--text);
+        }
+
+        .search-box input:focus {
+            border-color: var(--accent);
+        }
+
+        .search-box::before {
+            content: '\1F50D';
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 14px;
+        }
+
+        /* ── Buttons ── */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 9px 18px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-d);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--text);
+        }
+
+        .btn-outline:hover {
+            background: var(--bg);
+        }
+
+        .btn-sm {
+            padding: 6px 10px;
+            font-size: 12px;
+        }
+
+        .btn-icon {
+            width: 32px;
+            height: 32px;
+            padding: 0;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+            background: #fff;
+            cursor: pointer;
+            font-size: 15px;
+            transition: background 0.15s;
+        }
+
+        .btn-icon:hover {
+            background: var(--bg);
+        }
+
+        .btn-icon.delete:hover {
+            background: #fdeaea;
+            border-color: var(--red);
+            color: var(--red);
+        }
+
+        /* ── Table ── */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .data-table th {
+            text-align: left;
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 10px 14px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .data-table td {
+            padding: 12px 14px;
+            font-size: 14px;
+            border-bottom: 1px solid var(--border);
+            vertical-align: middle;
+        }
+
+        .data-table tbody tr:hover {
+            background: #f8fafc;
+        }
+
+        .data-table .actions {
+            display: flex;
+            gap: 6px;
+        }
+
+        /* ── Status badge ── */
+        .badge {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .badge-active {
+            background: #e8f8ef;
+            color: var(--green);
+        }
+
+        .badge-inactive {
+            background: #fef3e2;
+            color: var(--yellow);
+        }
+
+        .empty-row td {
+            text-align: center;
+            color: var(--muted);
+            padding: 32px;
+            font-size: 14px;
+        }
+
+        /* ── Modal ── */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 300;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-overlay.open {
+            display: flex;
+        }
+
+        .modal {
+            background: #fff;
+            border-radius: 14px;
+            padding: 28px;
+            width: 440px;
+            max-width: 90vw;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .modal h3 {
+            font-size: 17px;
+            margin-bottom: 16px;
+            color: var(--primary-d);
+        }
+
+        .modal .form-group {
+            margin-bottom: 16px;
+        }
+
+        .modal .form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: var(--text);
+        }
+
+        .modal .form-group label .req {
+            color: var(--red);
+        }
+
+        .modal .form-group input,
+        .modal .form-group select {
+            width: 100%;
+            padding: 10px 14px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 14px;
+            outline: none;
+            color: var(--text);
+        }
+
+        .modal .form-group input:focus,
+        .modal .form-group select:focus {
+            border-color: var(--accent);
+        }
+
+        .modal-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        /* ── Confirm modal ── */
+        .confirm-text {
+            font-size: 14px;
+            color: var(--text);
+            line-height: 1.6;
+            margin-bottom: 4px;
+        }
+
+        .btn-danger {
+            background: var(--red);
+            color: #fff;
+        }
+
+        .btn-danger:hover {
+            background: #c0392b;
+        }
+
+        /* ── Toast ── */
+        .toast {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 12px 22px;
+            border-radius: 10px;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 500;
+            z-index: 500;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.3s, transform 0.3s;
+            pointer-events: none;
+        }
+
+        .toast.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .toast-success {
+            background: var(--green);
+        }
+
+        .toast-error {
+            background: var(--red);
+        }
+
+        @media (max-width: 700px) {
+            .main {
+                margin-left: 0;
+            }
+
+            .content {
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <?php include __DIR__ . '/dashboard/sidebar.php'; ?>
+
+    <div class="main">
+        <header class="topbar">
+            <div class="topbar-title">Cấu hình</div>
+            <div class="topbar-right">
+                <span class="topbar-time" id="clock"></span>
+                <div class="topbar-user" id="userMenu">
+                    <div class="user-info">
+                        <div class="name"><?= $admin_name ?></div>
+                        <div class="role">Quản trị viên</div>
+                    </div>
+                    <div class="avatar"><?= strtoupper(mb_substr($admin_name, 0, 1)) ?></div>
+                    <div class="user-dropdown" id="userDropdown">
+                        <a href="#">&#9881;&#65039; Cài đặt</a>
+                        <a href="api/logout.php" class="logout">&#128682; Đăng xuất</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="content">
+            <!-- Tabs bar -->
+            <div class="tabs-bar">
+                <button class="tab-btn active" data-tab="danh-muc">Danh mục tin tức</button>
+            </div>
+
+            <!-- Tab: Danh mục tin tức -->
+            <div class="tab-panel active" id="tab-danh-muc">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Quản lý danh mục tin tức</h3>
+                        <button class="btn btn-primary" onclick="openModal()">+ Thêm mới</button>
+                    </div>
+
+                    <div class="search-box">
+                        <input type="text" id="searchInput" placeholder="Tìm kiếm danh mục...">
+                    </div>
+
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th style="width:60px">ID</th>
+                                <th>Tên danh mục</th>
+                                <th>Slug</th>
+                                <th style="width:110px">Trạng thái</th>
+                                <th style="width:100px">Hành động</th>
+                            </tr>
+                        </thead>
+                        <tbody id="categoryBody">
+                            <tr class="empty-row">
+                                <td colspan="5">Đang tải...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- Modal thêm / sửa -->
+    <div class="modal-overlay" id="formModal">
+        <div class="modal">
+            <h3 id="modalTitle">Thêm danh mục</h3>
+            <form id="categoryForm">
+                <input type="hidden" id="catId" value="">
+                <div class="form-group">
+                    <label>Tên danh mục <span class="req">*</span></label>
+                    <input type="text" id="catName" placeholder="VD: Hoạt động, Tuyển sinh..." required>
+                </div>
+                <div class="form-group">
+                    <label>Slug</label>
+                    <input type="text" id="catSlug" placeholder="Tự động tạo nếu để trống">
+                </div>
+                <div class="form-group">
+                    <label>Trạng thái</label>
+                    <select id="catStatus">
+                        <option value="active">Hoạt động</option>
+                        <option value="inactive">Không hoạt động</option>
+                    </select>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-outline" onclick="closeModal()">Hủy</button>
+                    <button type="submit" class="btn btn-primary" id="modalSaveBtn">Lưu</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal xác nhận xóa -->
+    <div class="modal-overlay" id="deleteModal">
+        <div class="modal">
+            <h3>Xác nhận xóa</h3>
+            <p class="confirm-text">Bạn có chắc muốn xóa danh mục "<strong id="deleteName"></strong>"?</p>
+            <p class="confirm-text" style="font-size:12px;color:var(--muted);">Các bài viết thuộc danh mục này sẽ không bị xóa, chỉ mất liên kết danh mục.</p>
+            <div class="modal-actions">
+                <button class="btn btn-outline" onclick="closeDeleteModal()">Hủy</button>
+                <button class="btn btn-danger" id="confirmDeleteBtn">Xóa</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+    <script>
+        // ── Clock ──
+        (function() {
+            function pad(n) {
+                return String(n).padStart(2, '0');
+            }
+
+            function tick() {
+                var d = new Date();
+                document.getElementById('clock').textContent =
+                    pad(d.getHours()) + ':' + pad(d.getMinutes()) + ':' + pad(d.getSeconds()) +
+                    '  ' + d.getDate() + '/' + (d.getMonth() + 1) + '/' + d.getFullYear();
+            }
+            tick();
+            setInterval(tick, 1000);
+        })();
+
+        // ── User dropdown ──
+        document.getElementById('userMenu').addEventListener('click', function(e) {
+            e.stopPropagation();
+            document.getElementById('userDropdown').classList.toggle('open');
+        });
+        document.addEventListener('click', function() {
+            document.getElementById('userDropdown').classList.remove('open');
+        });
+
+        // ── Tabs ──
+        document.querySelectorAll('.tab-btn').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.tab-btn').forEach(function(b) {
+                    b.classList.remove('active');
+                });
+                document.querySelectorAll('.tab-panel').forEach(function(p) {
+                    p.classList.remove('active');
+                });
+                btn.classList.add('active');
+                document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+            });
+        });
+
+        // ── API ──
+        const API = 'api/news-categories.php';
+
+        function loadCategories(search) {
+            let url = API + '?t=' + Date.now();
+            if (search) url += '&search=' + encodeURIComponent(search);
+
+            fetch(url)
+                .then(r => r.json())
+                .then(res => {
+                    const tbody = document.getElementById('categoryBody');
+                    if (!res.success || !res.data.length) {
+                        tbody.innerHTML = '<tr class="empty-row"><td colspan="5">Không có danh mục nào</td></tr>';
+                        return;
+                    }
+                    tbody.innerHTML = res.data.map(c => `
+                        <tr>
+                            <td>${c.id}</td>
+                            <td><strong>${escHtml(c.name)}</strong></td>
+                            <td style="color:var(--muted);font-size:13px;">${escHtml(c.slug || '')}</td>
+                            <td>
+                                <span class="badge badge-${c.status === 'active' ? 'active' : 'inactive'}">
+                                    ${c.status === 'active' ? 'Hoạt động' : 'Không hoạt động'}
+                                </span>
+                            </td>
+                            <td>
+                                <div class="actions">
+                                    <button class="btn-icon" title="Sửa" onclick='editCat(${JSON.stringify(c)})'>&#9998;</button>
+                                    <button class="btn-icon delete" title="Xóa" onclick='deleteCat(${c.id}, ${JSON.stringify(escHtml(c.name))})'>&#128465;</button>
+                                </div>
+                            </td>
+                        </tr>
+                    `).join('');
+                });
+        }
+
+        function escHtml(str) {
+            var d = document.createElement('div');
+            d.textContent = str;
+            return d.innerHTML;
+        }
+
+        // ── Search ──
+        let searchTimer;
+        document.getElementById('searchInput').addEventListener('input', function() {
+            clearTimeout(searchTimer);
+            searchTimer = setTimeout(() => loadCategories(this.value.trim()), 300);
+        });
+
+        // ── Modal thêm / sửa ──
+        function openModal(data) {
+            document.getElementById('catId').value = data ? data.id : '';
+            document.getElementById('catName').value = data ? data.name : '';
+            document.getElementById('catSlug').value = data ? (data.slug || '') : '';
+            document.getElementById('catStatus').value = data ? data.status : 'active';
+            document.getElementById('modalTitle').textContent = data ? 'Sửa danh mục' : 'Thêm danh mục';
+            document.getElementById('modalSaveBtn').textContent = data ? 'Cập nhật' : 'Lưu';
+            document.getElementById('formModal').classList.add('open');
+        }
+
+        function closeModal() {
+            document.getElementById('formModal').classList.remove('open');
+        }
+
+        function editCat(data) {
+            openModal(data);
+        }
+
+        document.getElementById('categoryForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const id = document.getElementById('catId').value;
+            const payload = {
+                name: document.getElementById('catName').value.trim(),
+                slug: document.getElementById('catSlug').value.trim(),
+                status: document.getElementById('catStatus').value
+            };
+
+            if (!payload.name) return showToast('Vui lòng nhập tên danh mục', 'error');
+
+            let url = API;
+            let method = 'POST';
+
+            if (id) {
+                url += '?_method=PUT';
+                payload.id = id;
+            }
+
+            fetch(url, {
+                    method: method,
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(payload)
+                })
+                .then(r => r.json())
+                .then(res => {
+                    if (res.success) {
+                        showToast(res.message, 'success');
+                        closeModal();
+                        loadCategories();
+                    } else {
+                        showToast(res.message || 'Có lỗi xảy ra', 'error');
+                    }
+                })
+                .catch(() => showToast('Lỗi kết nối', 'error'));
+        });
+
+        // ── Delete ──
+        let deleteId = null;
+
+        function deleteCat(id, name) {
+            deleteId = id;
+            document.getElementById('deleteName').textContent = name;
+            document.getElementById('deleteModal').classList.add('open');
+        }
+
+        function closeDeleteModal() {
+            document.getElementById('deleteModal').classList.remove('open');
+            deleteId = null;
+        }
+
+        document.getElementById('confirmDeleteBtn').addEventListener('click', function() {
+            if (!deleteId) return;
+            fetch(API + '?_method=DELETE', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        id: deleteId
+                    })
+                })
+                .then(r => r.json())
+                .then(res => {
+                    if (res.success) {
+                        showToast(res.message, 'success');
+                        loadCategories();
+                    } else {
+                        showToast(res.message || 'Lỗi', 'error');
+                    }
+                    closeDeleteModal();
+                })
+                .catch(() => {
+                    showToast('Lỗi kết nối', 'error');
+                    closeDeleteModal();
+                });
+        });
+
+        // ── Toast ──
+        function showToast(msg, type) {
+            const t = document.getElementById('toast');
+            t.textContent = msg;
+            t.className = 'toast toast-' + type + ' show';
+            setTimeout(() => t.classList.remove('show'), 3000);
+        }
+
+        // ── Init ──
+        loadCategories();
+    </script>
+</body>
+
+</html>

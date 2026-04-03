@@ -261,7 +261,7 @@
                                 <div class="mb-menu-sub">
                                     <div class="mb-menu-body">
                                         <ul class="mb-menu-sub-list">
-                                            <li class="mb-sub-item"><a href="../tin-hoat-dong.php" title="" class="mb-sub-link">Tin hoạt động</a></li>
+                                            <li class="mb-sub-item"><a href="../tin-tuc.php" title="" class="mb-sub-link">Tin tức</a></li>
                                             <li class="mb-sub-item"><a href="../thanh-tich.php" title="" class="mb-sub-link">Thành tích</a></li>
                                             <li class="mb-sub-item"><a href="../su-kien-truong.php" title="" class="mb-sub-link">Sự kiện trường</a></li>
                                             <li class="mb-sub-item"><a href="../thong-bao.php" title="" class="mb-sub-link">Thông báo</a></li>

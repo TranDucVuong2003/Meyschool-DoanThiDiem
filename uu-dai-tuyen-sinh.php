@@ -541,60 +541,51 @@
             <div class="wrap">
                 <h2 class="ts-news-title"
                     style="font-family:'EB Garamond',serif;font-size:36px;font-weight:700;color:var(--ad-ink);text-transform:uppercase;margin-bottom:36px;text-align:center;">
-                    Tuyển sinh</h2>
+                    Tin Tức</h2>
                 <div class="ts-news-slider">
                     <div class="ts-news-card">
-                        <a href="thong-tin-tuyen-sinh-tieu-hoc.php" style="display:block;">
-                            <img src="assets/img/tuyensinh/banner4.jpg" alt="Thông báo lịch xét tuyển">
+                        <a href="https://hanoimoi.vn/truong-th-doan-thi-diem-ha-noi-don-nhan-danh-hieu-anh-hung-lao-dong-731567.html" target="_blank" rel="noopener" style="display:block;">
+                            <img src="assets/img/tin-tuc/ede751688b0805565c19.jpg" alt="Trường TH Đoàn Thị Điểm Hà Nội đón nhận danh hiệu Anh hùng Lao động">
                         </a>
                         <div class="ts-news-card-body">
-                            <h3>Mở cổng đăng ký tuyển sinh lớp 1: Hành trình khởi đầu cho con yêu</h3>
-                            <a href="thong-tin-tuyen-sinh-tieu-hoc.php" class="ts-news-link">Xem thêm <span>&rarr;</span></a>
+                            <h3><a href="https://hanoimoi.vn/truong-th-doan-thi-diem-ha-noi-don-nhan-danh-hieu-anh-hung-lao-dong-731567.html" target="_blank" rel="noopener">Trường TH Đoàn Thị Điểm - Hà Nội đón nhận danh hiệu Anh hùng Lao động</a></h3>
+                            <a href="https://hanoimoi.vn/truong-th-doan-thi-diem-ha-noi-don-nhan-danh-hieu-anh-hung-lao-dong-731567.html" target="_blank" rel="noopener" class="ts-news-link">Xem thêm <span>→</span></a>
                         </div>
                     </div>
                     <div class="ts-news-card">
-                        <a href="uu-dai-tuyen-sinh.php" style="display:block;">
-                            <img src="assets/img/tuyensinh/tuyển sinh chung.jpg" alt="Ưu đãi tuyển sinh">
+                        <a href="https://giaoduc.net.vn/30-nam-tien-phong-doi-moi-truong-th-doan-thi-diem-ha-noi-don-nhan-danh-hieu-anh-hung-lao-dong-post257603.gd" target="_blank" rel="noopener" style="display:block;">
+                            <img src="assets/img/tin-tuc/images.jpg" alt="30 năm tiên phong đổi mới Trường TH Đoàn Thị Điểm">
                         </a>
                         <div class="ts-news-card-body">
-                            <h3>Ưu đãi tuyển sinh và học bổng năm học 2026-2027</h3>
-                            <a href="uu-dai-tuyen-sinh.php" class="ts-news-link">Xem thêm <span>&rarr;</span></a>
+                            <h3><a href="https://giaoduc.net.vn/30-nam-tien-phong-doi-moi-truong-th-doan-thi-diem-ha-noi-don-nhan-danh-hieu-anh-hung-lao-dong-post257603.gd" target="_blank" rel="noopener">30 năm tiên phong đổi mới, Trường TH Đoàn Thị Điểm - Hà Nội đón nhận danh hiệu Anh hùng Lao động</a></h3>
+                            <a href="https://giaoduc.net.vn/30-nam-tien-phong-doi-moi-truong-th-doan-thi-diem-ha-noi-don-nhan-danh-hieu-anh-hung-lao-dong-post257603.gd" target="_blank" rel="noopener" class="ts-news-link">Xem thêm <span>→</span></a>
                         </div>
                     </div>
                     <div class="ts-news-card">
-                        <a href="thong-tin-tuyen-sinh-tieu-hoc.php" style="display:block;">
-                            <img src="assets/img/tuyensinh/tiền tiểu học 1.jpg" alt="Chương trình tiền tiểu học">
+                        <a href="https://nhandan.vn/anh-ngoi-truong-tieu-hoc-anh-hung-lao-dong-o-thu-do-ha-noi-post933413.html" target="_blank" rel="noopener" style="display:block;">
+                            <img src="assets/img/tin-tuc/z7369054786972-1a0cb760778270bac2703d36eb1c4ce3.jpg" alt="Ngôi trường tiểu học Anh hùng Lao động ở thủ đô Hà Nội">
                         </a>
                         <div class="ts-news-card-body">
-                            <h3>Chương trình Tiền tiểu học – Sẵn sàng cho hành trình học tập mới</h3>
-                            <a href="thong-tin-tuyen-sinh-tieu-hoc.php" class="ts-news-link">Xem thêm <span>&rarr;</span></a>
+                            <h3><a href="https://nhandan.vn/anh-ngoi-truong-tieu-hoc-anh-hung-lao-dong-o-thu-do-ha-noi-post933413.html" target="_blank" rel="noopener">Ngôi trường tiểu học "Anh hùng Lao động" ở thủ đô Hà Nội</a></h3>
+                            <a href="https://nhandan.vn/anh-ngoi-truong-tieu-hoc-anh-hung-lao-dong-o-thu-do-ha-noi-post933413.html" target="_blank" rel="noopener" class="ts-news-link">Xem thêm <span>→</span></a>
                         </div>
                     </div>
                     <div class="ts-news-card">
-                        <a href="thong-tin-tuyen-sinh-thcs.php" style="display:block;">
-                            <img src="assets/img/tuyensinh/banner5.jpg" alt="Tuyển sinh THCS">
+                        <a href="#" style="display:block;">
+                            <img src="assets/img/tin-tuc/z7672862397810-589fba3abb7ad0d4017e09b5151bc656.jpg" alt="Trường THCS Đoàn Thị Điểm đón nhận Huân chương Lao động Hạng Nhì">
                         </a>
                         <div class="ts-news-card-body">
-                            <h3>Thông tin tuyển sinh lớp 6 năm học 2026-2027</h3>
-                            <a href="thong-tin-tuyen-sinh-thcs.php" class="ts-news-link">Xem thêm <span>&rarr;</span></a>
+                            <h3><a href="#">Trường THCS Đoàn Thị Điểm đón nhận Huân chương Lao động Hạng Nhì</a></h3>
+                            <a href="#" class="ts-news-link">Xem thêm <span>→</span></a>
                         </div>
                     </div>
                     <div class="ts-news-card">
-                        <a href="hoc-bong-2026-2027.php" style="display:block;">
-                            <img src="assets/img/tuyensinh/thông tin tuyển sinh.jpg" alt="Học bổng">
+                        <a href="#" style="display:block;">
+                            <img src="assets/img/tin-tuc/3.jpg" alt="Meyschool Đoàn Thị Điểm Phú Quốc tuyển sinh lớp 1 - 8">
                         </a>
                         <div class="ts-news-card-body">
-                            <h3>Chương trình học bổng năm học 2026-2027 dành cho học sinh xuất sắc</h3>
-                            <a href="hoc-bong-2026-2027.php" class="ts-news-link">Xem thêm <span>&rarr;</span></a>
-                        </div>
-                    </div>
-                    <div class="ts-news-card">
-                        <a href="thong-tin-tuyen-sinh-tieu-hoc.php" style="display:block;">
-                            <img src="assets/img/tuyensinh/tiền tiểu học 2.jpg" alt="Ngày hội tuyển sinh">
-                        </a>
-                        <div class="ts-news-card-body">
-                            <h3>Ngày hội trải nghiệm và tư vấn tuyển sinh Meyschool 2026</h3>
-                            <a href="thong-tin-tuyen-sinh-tieu-hoc.php" class="ts-news-link">Xem thêm <span>&rarr;</span></a>
+                            <h3><a href="#">Meyschool Đoàn Thị Điểm Phú Quốc tuyển sinh lớp 1 - 8, nhiều học bổng hấp dẫn</a></h3>
+                            <a href="#" class="ts-news-link">Xem thêm <span>→</span></a>
                         </div>
                     </div>
                 </div>

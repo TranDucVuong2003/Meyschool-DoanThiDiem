@@ -38,6 +38,7 @@
         .ct-page {
             background: #f8fbff;
             color: #1f2a44;
+            margin-bottom: 120px;
         }
 
         .ct-wrap {
@@ -1014,7 +1015,7 @@
                             thêm</a>
                     </div>
                     <div class="ct-stem-img">
-                        <img src="assets/img/chan-dung-hoc-sinh/thư viện (1).jpg" alt="STEM tại Meyschool">
+                        <img src="assets/img/chuong-trinh-dao-tao/chuong-trinh-stem/stem.jpg" alt="STEM tại Meyschool">
                     </div>
                 </div>
             </div>
@@ -1026,7 +1027,7 @@
                 <h2 class="ct-section-title" data-aos="fade-up">Chương trình khác</h2>
                 <div class="ct-grid-2" data-aos="fade-up" style="margin-top:28px;">
                     <div class="ct-card ct-prog-card">
-                        <img src="assets/img/chan-dung-hoc-sinh/TUN09890.jpg" alt="Chương trình phát triển thể chất">
+                        <img src="assets/img/chuong-trinh-dao-tao/TUN09605.jpg" alt="Chương trình phát triển thể chất">
                         <div class="ct-prog-body">
                             <h3>Chương trình phát triển thể chất và năng khiếu nghệ thuật</h3>
                             <p>Chương trình phát triển thể chất và nghệ thuật được xây dựng với mục tiêu phát triển toàn
@@ -1035,7 +1036,7 @@
                         </div>
                     </div>
                     <div class="ct-card ct-prog-card">
-                        <img src="assets/img/chan-dung-hoc-sinh/TUN09909.jpg" alt="Chương trình Tin học và Công nghệ">
+                        <img src="assets/img/chuong-trinh-dao-tao/TUN09614.jpg" alt="Chương trình Tin học và Công nghệ">
                         <div class="ct-prog-body">
                             <h3>Chương trình Tin học và Công nghệ (ICT)</h3>
                             <p>Tích hợp khoa học với các giá trị phát triển và ứng dụng công nghệ thông tin vào giáo
@@ -1044,7 +1045,7 @@
                         </div>
                     </div>
                     <div class="ct-card ct-prog-card">
-                        <img src="assets/img/chan-dung-hoc-sinh/TUN09948.jpg" alt="Chương trình LiM – Leader in Me">
+                        <img src="assets/img/chuong-trinh-dao-tao/chuong-trinh-LIM/TUN07466.jpg" alt="Chương trình LiM – Leader in Me">
                         <div class="ct-prog-body">
                             <h3>Chương trình LiM – Leader in Me (Lãnh đạo Bản thân)</h3>
                             <p>Chương trình lãnh đạo bản thân giúp học sinh phát triển kỹ năng sống và tinh thần khởi
@@ -1053,7 +1054,7 @@
                         </div>
                     </div>
                     <div class="ct-card ct-prog-card">
-                        <img src="assets/img/chan-dung-hoc-sinh/TUN09961.jpg" alt="Chương trình Trại hè">
+                        <img src="assets/img/chuong-trinh-dao-tao/chuong-trinh-giao-lul-hop-tac-quoc-te/chuong-trinh-trai-he.jpeg" alt="Chương trình Trại hè">
                         <div class="ct-prog-body">
                             <h3>Chương trình Trại hè, Trao đổi Giao lưu và Hợp tác Quốc tế</h3>
                             <p>Chương trình hợp tác quốc tế, đưa thanh thiếu niên ra thế giới và mang bạn bè quốc tế về
@@ -1129,8 +1130,25 @@
                 <h2 class="ct-section-title" data-aos="fade-up">Câu lạc bộ năng khiếu</h2>
 
                 <div class="ct-clb-intro" data-aos="fade-up">
-                    <p>Để phát huy tối đa năng khiếu và sở trường cá nhân, đồng thời tận dụng hiệu quả khoảng thời gian cuối giờ học trong lúc chờ cha mẹ đón, nhà trường tổ chức đa dạng các <strong>Câu lạc bộ Năng khiếu</strong>.</p>
+                    <p>Để phát huy tối đa năng khiếu và sở trường cá nhân, đồng thời tận dụng hiệu quả khoảng thời gian
+                        cuối giờ học trong lúc chờ cha mẹ đón, nhà trường tổ chức đa dạng các <strong>Câu lạc bộ Năng
+                            khiếu</strong>.</p>
                     <div class="ct-clb-time">🕐 Thời gian: 16:35 – 17:55 | Thứ Hai – Thứ Sáu hàng tuần</div>
+                </div>
+
+                <div class="ct-clb-gallery" data-aos="fade-up" style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:32px 0;">
+                    <div style="border-radius:12px;overflow:hidden;aspect-ratio:4/3;">
+                        <img src="assets/img/chuong-trinh-dao-tao/TUN09621.jpg" alt="CLB Năng khiếu" style="width:100%;height:100%;object-fit:cover;display:block;">
+                    </div>
+                    <div style="border-radius:12px;overflow:hidden;aspect-ratio:4/3;">
+                        <img src="assets/img/chuong-trinh-dao-tao/TUN02870.jpg" alt="CLB Năng khiếu" style="width:100%;height:100%;object-fit:cover;display:block;">
+                    </div>
+                    <div style="border-radius:12px;overflow:hidden;aspect-ratio:4/3;">
+                        <img src="assets/img/chuong-trinh-dao-tao/TUN09637.jpg" alt="CLB Năng khiếu" style="width:100%;height:100%;object-fit:cover;display:block;">
+                    </div>
+                    <div style="border-radius:12px;overflow:hidden;aspect-ratio:4/3;">
+                        <img src="assets/img/chuong-trinh-dao-tao/TUN02892.jpg" alt="CLB Năng khiếu" style="width:100%;height:100%;object-fit:cover;display:block;">
+                    </div>
                 </div>
 
                 <div class="ct-clb-groups" data-aos="fade-up">
@@ -1173,52 +1191,9 @@
                 </div>
 
                 <div class="ct-clb-note" data-aos="fade-up">
-                    <strong>Lưu ý:</strong> Các câu lạc bộ được tổ chức theo khóa học. Nhà trường có thể tạm dừng nhận học sinh hoặc hủy lớp nếu số lượng đăng ký không đủ để mở lớp hoặc vượt quá khả năng đáp ứng về cơ sở vật chất và đội ngũ giáo viên.
-                </div>
-            </div>
-        </section>
-
-        <!-- ═══ TIN TỨC & SỰ KIỆN ═══ -->
-        <section class="ct-news-section ct-section" style="margin-bottom:115px;">
-            <div class="ct-wrap">
-                <h2 class="ct-news-title" data-aos="fade-up">Tin tức &amp; Sự kiện</h2>
-                <div class="ts-news-slider">
-                    <div class="ts-news-card">
-                        <a href="thong-tin-tuyen-sinh-tieu-hoc.php" style="display:block;">
-                            <img src="assets/img/tuyensinh/banner4.jpg" alt="Thông báo lịch xét tuyển">
-                        </a>
-                        <div class="ts-news-card-body">
-                            <h3>Thông báo lịch xét tuyển Lớp 1 năm học 2026-2027</h3>
-                            <a href="thong-tin-tuyen-sinh-tieu-hoc.php" class="ts-news-link">Xem thêm <span>→</span></a>
-                        </div>
-                    </div>
-                    <div class="ts-news-card">
-                        <a href="thong-tin-tuyen-sinh-tieu-hoc.php" style="display:block;">
-                            <img src="assets/img/tuyensinh/banner5.jpg" alt="Mở cổng đăng ký tuyển sinh">
-                        </a>
-                        <div class="ts-news-card-body">
-                            <h3>Mở cổng đăng ký tuyển sinh lớp 1: Hành trình khởi đầu cho con yêu</h3>
-                            <a href="thong-tin-tuyen-sinh-tieu-hoc.php" class="ts-news-link">Xem thêm <span>→</span></a>
-                        </div>
-                    </div>
-                    <div class="ts-news-card">
-                        <a href="hoc-bong-2026-2027.php" style="display:block;">
-                            <img src="assets/img/tuyensinh/tuyển sinh chung.jpg" alt="Ưu đãi tuyển sinh">
-                        </a>
-                        <div class="ts-news-card-body">
-                            <h3>Ưu đãi tuyển sinh và học bổng năm học 2026-2027</h3>
-                            <a href="hoc-bong-2026-2027.php" class="ts-news-link">Xem thêm <span>→</span></a>
-                        </div>
-                    </div>
-                    <div class="ts-news-card">
-                        <a href="thong-tin-tuyen-sinh-tieu-hoc.php" style="display:block;">
-                            <img src="assets/img/tuyensinh/tiền tiểu học 1.jpg" alt="Chương trình tiền tiểu học">
-                        </a>
-                        <div class="ts-news-card-body">
-                            <h3>Chương trình Tiền tiểu học – Sẵn sàng cho hành trình học tập mới</h3>
-                            <a href="thong-tin-tuyen-sinh-tieu-hoc.php" class="ts-news-link">Xem thêm <span>→</span></a>
-                        </div>
-                    </div>
+                    <strong>Lưu ý:</strong> Các câu lạc bộ được tổ chức theo khóa học. Nhà trường có thể tạm dừng nhận
+                    học sinh hoặc hủy lớp nếu số lượng đăng ký không đủ để mở lớp hoặc vượt quá khả năng đáp ứng về cơ
+                    sở vật chất và đội ngũ giáo viên.
                 </div>
             </div>
         </section>

@@ -650,8 +650,15 @@
                 <div>
                     <!-- <span class="hero-tag">Về chúng tôi</span> -->
 
-                    <p class="hero-desc">Tọa lạc tại khu đô thị Meyhomes Capital Phú Quốc, Meyschool Đoàn Thị Điểm được xây dựng theo mô hình <strong>&ldquo;Trường học trong công viên&rdquo;</strong> &ndash; nơi không gian học tập hòa quyện với thiên nhiên xanh mát, mang đến môi trường giáo dục hiện đại, an toàn và giàu trải nghiệm cho học sinh.</p>
-                    <p class="hero-desc" style="margin-top:12px;">Dự án nằm trong hệ sinh thái đô thị Meyhomes Capital Phú Quốc do Meygroup &ndash; thành viên Tập đoàn Tân Á Đại Thành &ndash; đầu tư và phát triển. Đồng hành cùng Hệ thống Giáo dục Đoàn Thị Điểm Hà Nội &ndash; thương hiệu uy tín với hơn 30 năm phát triển &ndash; nhà trường hướng tới đào tạo những công dân toàn cầu có tri thức, nhân cách và năng lực hội nhập tại Đảo Ngọc Phú Quốc.</p>
+                    <p class="hero-desc">Tọa lạc tại khu đô thị Meyhomes Capital Phú Quốc, Meyschool Đoàn Thị Điểm được
+                        xây dựng theo mô hình <strong>&ldquo;Trường học trong công viên&rdquo;</strong> &ndash; nơi
+                        không gian học tập hòa quyện với thiên nhiên xanh mát, mang đến môi trường giáo dục hiện đại, an
+                        toàn và giàu trải nghiệm cho học sinh.</p>
+                    <p class="hero-desc" style="margin-top:12px;">Dự án nằm trong hệ sinh thái đô thị Meyhomes Capital
+                        Phú Quốc do Meygroup &ndash; thành viên Tập đoàn Tân Á Đại Thành &ndash; đầu tư và phát triển.
+                        Đồng hành cùng Hệ thống Giáo dục Đoàn Thị Điểm Hà Nội &ndash; thương hiệu uy tín với hơn 30 năm
+                        phát triển &ndash; nhà trường hướng tới đào tạo những công dân toàn cầu có tri thức, nhân cách
+                        và năng lực hội nhập tại Đảo Ngọc Phú Quốc.</p>
                     <div class="hero-actions">
                         <a class="hero-btn primary" href="#thong-diep">Đọc thông điệp</a>
                         <a class="hero-btn ghost" href="#hanh-trinh">Khám phá hành trình</a>
@@ -673,13 +680,23 @@
                 <div class="message-grid">
                     <div class="message-card">
                         <h2>Triết lý giáo dục</h2>
-                        <blockquote style="border-left:4px solid var(--blue-2);padding:16px 22px;background:#f4faff;border-radius:12px;margin:0 0 22px;">
-                            <p style="font-size:19px;font-style:italic;color:#2354a0;margin:0 0 10px;">&ldquo;Giáo dục không chỉ để chuẩn bị cho cuộc sống, giáo dục chính là cuộc sống.&rdquo;</p>
-                            <cite style="font-size:13px;color:#5a7a94;font-weight:700;text-transform:uppercase;letter-spacing:.5px;">&mdash; John Dewey</cite>
+                        <blockquote
+                            style="border-left:4px solid var(--blue-2);padding:16px 22px;background:#f4faff;border-radius:12px;margin:0 0 22px;">
+                            <p style="font-size:19px;font-style:italic;color:#2354a0;margin:0 0 10px;">&ldquo;Giáo dục
+                                không chỉ để chuẩn bị cho cuộc sống, giáo dục chính là cuộc sống.&rdquo;</p>
+                            <cite
+                                style="font-size:13px;color:#5a7a94;font-weight:700;text-transform:uppercase;letter-spacing:.5px;">&mdash;
+                                John Dewey</cite>
                         </blockquote>
-                        <p>Kế thừa những giá trị giáo dục bền vững, Meyschool Đoàn Thị Điểm mang đến chương trình đào tạo hướng tới sự phát triển toàn diện, kết hợp chương trình Giáo dục phổ thông của Bộ GD&amp;ĐT với các chương trình tăng cường Tiếng Anh, STEM, LIM, công nghệ và kỹ năng sống.</p>
-                        <p>Nhà trường chú trọng xây dựng môi trường học tập hiện đại, nơi học sinh được phát triển tư duy sáng tạo, khả năng giao tiếp, tinh thần hợp tác và năng lực hội nhập quốc tế.</p>
-                        <p>Không gian trường học được thiết kế với cảnh quan xanh, lớp học hiện đại, khu thể thao và khu trải nghiệm ngoài trời &ndash; giúp mỗi ngày đến trường trở thành một hành trình khám phá, học tập và trưởng thành.</p>
+                        <p>Kế thừa những giá trị giáo dục bền vững, Meyschool Đoàn Thị Điểm mang đến chương trình đào
+                            tạo hướng tới sự phát triển toàn diện, kết hợp chương trình Giáo dục phổ thông của Bộ
+                            GD&amp;ĐT với các chương trình tăng cường Tiếng Anh, STEM, LIM, công nghệ và kỹ năng sống.
+                        </p>
+                        <p>Nhà trường chú trọng xây dựng môi trường học tập hiện đại, nơi học sinh được phát triển tư
+                            duy sáng tạo, khả năng giao tiếp, tinh thần hợp tác và năng lực hội nhập quốc tế.</p>
+                        <p>Không gian trường học được thiết kế với cảnh quan xanh, lớp học hiện đại, khu thể thao và khu
+                            trải nghiệm ngoài trời &ndash; giúp mỗi ngày đến trường trở thành một hành trình khám phá,
+                            học tập và trưởng thành.</p>
                     </div>
                     <div class="portrait-card">
                         <div class="portrait-main">
@@ -690,8 +707,10 @@
                             <img src="storage/banner/tien-tieu-hoc.jpg" alt="Học tập">
                             <img src="olympia/images/0208.jpg" alt="Trải nghiệm">
                         </div>
-                        <div style="background:#eef7ff;border-radius:12px;padding:14px 16px;margin-top:10px;text-align:center;">
-                            <p style="font-size:16px;font-weight:800;color:#2354a0;margin:0 0 4px;">Kiến tạo công dân toàn cầu</p>
+                        <div
+                            style="background:#eef7ff;border-radius:12px;padding:14px 16px;margin-top:10px;text-align:center;">
+                            <p style="font-size:16px;font-weight:800;color:#2354a0;margin:0 0 4px;">Kiến tạo công dân
+                                toàn cầu</p>
                             <p style="font-size:13px;color:#4a6a84;margin:0;">tại Đảo Ngọc Phú Quốc</p>
                         </div>
                     </div>
@@ -699,29 +718,44 @@
             </div>
         </section>
 
-        <section class="section-spacing" id="tam-nhin" style="padding:0 0 60px;background:linear-gradient(180deg,#f7fbff 0%,#fff 100%);">
+        <section class="section-spacing" id="tam-nhin"
+            style="padding:0 0 60px;background:linear-gradient(180deg,#f7fbff 0%,#fff 100%);">
             <div class="founder-container">
-                <h2 style="color:var(--blue-1);font-size:32px;margin-bottom:28px;text-align:center;">Tầm nhìn &ndash; Sứ mệnh &ndash; Giá trị cốt lõi</h2>
+                <h2 style="color:var(--blue-1);font-size:32px;margin-bottom:28px;text-align:center;">Tầm nhìn &ndash; Sứ
+                    mệnh &ndash; Giá trị cốt lõi</h2>
                 <div class="timeline">
                     <div class="timeline-card">
                         <span>Tầm nhìn</span>
                         <h4>Mô hình tiên phong tại Phú Quốc</h4>
-                        <p>Trở thành mô hình trường học dẫn đầu tại Phú Quốc và khu vực phía Nam trong giáo dục hội nhập quốc tế, ứng dụng công nghệ &amp; AI, và đào tạo con người phát triển toàn diện: trí tuệ &ndash; cảm xúc &ndash; đạo đức &ndash; thể chất.</p>
+                        <p>Trở thành mô hình trường học dẫn đầu tại Phú Quốc và khu vực phía Nam trong giáo dục hội nhập
+                            quốc tế, ứng dụng công nghệ &amp; AI, và đào tạo con người phát triển toàn diện: trí tuệ
+                            &ndash; cảm xúc &ndash; đạo đức &ndash; thể chất.</p>
                     </div>
                     <div class="timeline-card">
                         <span>Sứ mệnh</span>
                         <h4>Công dân toàn cầu gốc Việt</h4>
-                        <p>Đào tạo những công dân toàn cầu mang cốt cách Việt Nam tại Đảo Ngọc Phú Quốc, có tri thức, nhân cách, năng lực thích ứng và tinh thần phụng sự.</p>
+                        <p>Đào tạo những công dân toàn cầu mang cốt cách Việt Nam tại Đảo Ngọc Phú Quốc, có tri thức,
+                            nhân cách, năng lực thích ứng và tinh thần phụng sự.</p>
                     </div>
                     <div class="timeline-card">
                         <span>Giá trị cốt lõi</span>
                         <h4>Năm giá trị định hướng</h4>
                         <ul style="list-style:none;padding:0;margin:0;display:grid;gap:6px;">
-                            <li style="padding:6px 10px;background:#f4faff;border-radius:8px;font-size:14px;color:#2354a0;font-weight:700;">&#10003; Nhân ái</li>
-                            <li style="padding:6px 10px;background:#f4faff;border-radius:8px;font-size:14px;color:#2354a0;font-weight:700;">&#10003; Chủ động</li>
-                            <li style="padding:6px 10px;background:#f4faff;border-radius:8px;font-size:14px;color:#2354a0;font-weight:700;">&#10003; Sáng tạo</li>
-                            <li style="padding:6px 10px;background:#f4faff;border-radius:8px;font-size:14px;color:#2354a0;font-weight:700;">&#10003; Trung thực</li>
-                            <li style="padding:6px 10px;background:#f4faff;border-radius:8px;font-size:14px;color:#2354a0;font-weight:700;">&#10003; Hội nhập</li>
+                            <li
+                                style="padding:6px 10px;background:#f4faff;border-radius:8px;font-size:14px;color:#2354a0;font-weight:700;">
+                                &#10003; Nhân ái</li>
+                            <li
+                                style="padding:6px 10px;background:#f4faff;border-radius:8px;font-size:14px;color:#2354a0;font-weight:700;">
+                                &#10003; Chủ động</li>
+                            <li
+                                style="padding:6px 10px;background:#f4faff;border-radius:8px;font-size:14px;color:#2354a0;font-weight:700;">
+                                &#10003; Sáng tạo</li>
+                            <li
+                                style="padding:6px 10px;background:#f4faff;border-radius:8px;font-size:14px;color:#2354a0;font-weight:700;">
+                                &#10003; Trung thực</li>
+                            <li
+                                style="padding:6px 10px;background:#f4faff;border-radius:8px;font-size:14px;color:#2354a0;font-weight:700;">
+                                &#10003; Hội nhập</li>
                         </ul>
                     </div>
                 </div>
@@ -732,25 +766,35 @@
             <div class="founder-container">
                 <div class="message-card" style="max-width:860px;margin:0 auto;">
                     <h2 style="text-align:center;">Thông điệp nhà trường</h2>
-                    <p style="font-size:16px;font-weight:600;color:#2354a0;text-align:center;margin-bottom:24px;"><em>Nhà trường lấy giáo dục nhân cách làm gốc, lấy hội nhập toàn cầu làm đích đến.</em></p>
+                    <p style="font-size:16px;font-weight:600;color:#2354a0;text-align:center;margin-bottom:24px;">
+                        <em>Nhà trường lấy giáo dục nhân cách làm gốc, lấy hội nhập toàn cầu làm đích đến.</em>
+                    </p>
                     <p>Mỗi ngày đến trường, học sinh được:</p>
                     <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:16px 0 22px;">
-                        <div style="padding:14px 16px;background:#f0f8ff;border-radius:12px;border-left:4px solid var(--blue-2);">
+                        <div
+                            style="padding:14px 16px;background:#f0f8ff;border-radius:12px;border-left:4px solid var(--blue-2);">
                             <p style="margin:0;font-weight:700;color:#2354a0;font-size:15px;">Trải nghiệm thực tế</p>
                         </div>
-                        <div style="padding:14px 16px;background:#f0f8ff;border-radius:12px;border-left:4px solid var(--blue-2);">
+                        <div
+                            style="padding:14px 16px;background:#f0f8ff;border-radius:12px;border-left:4px solid var(--blue-2);">
                             <p style="margin:0;font-weight:700;color:#2354a0;font-size:15px;">Rèn luyện nhân cách</p>
                         </div>
-                        <div style="padding:14px 16px;background:#f0f8ff;border-radius:12px;border-left:4px solid var(--blue-2);">
+                        <div
+                            style="padding:14px 16px;background:#f0f8ff;border-radius:12px;border-left:4px solid var(--blue-2);">
                             <p style="margin:0;font-weight:700;color:#2354a0;font-size:15px;">Khám phá bản thân</p>
                         </div>
-                        <div style="padding:14px 16px;background:#f0f8ff;border-radius:12px;border-left:4px solid var(--blue-2);">
+                        <div
+                            style="padding:14px 16px;background:#f0f8ff;border-radius:12px;border-left:4px solid var(--blue-2);">
                             <p style="margin:0;font-weight:700;color:#2354a0;font-size:15px;">Phát triển năng lực</p>
                         </div>
                     </div>
-                    <p>Trong môi trường <strong>kỷ luật tích cực &ndash; yêu thương &ndash; truyền cảm hứng &ndash; giàu công nghệ</strong>, mỗi học sinh tại Meyschool Đoàn Thị Điểm được chuẩn bị hành trang vững vàng để bước vào tương lai.</p>
+                    <p>Trong môi trường <strong>kỷ luật tích cực &ndash; yêu thương &ndash; truyền cảm hứng &ndash; giàu
+                            công nghệ</strong>, mỗi học sinh tại Meyschool Đoàn Thị Điểm được chuẩn bị hành trang vững
+                        vàng để bước vào tương lai.</p>
                     <div style="text-align:center;margin-top:20px;">
-                        <a href="dang-ky-tu-van.php" class="hero-btn primary" style="background:linear-gradient(120deg,var(--blue-1),var(--blue-2));color:#fff;padding:14px 30px;border-radius:14px;text-decoration:none;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.5px;display:inline-block;">Đăng ký tư vấn ngay</a>
+                        <a href="dang-ky-tu-van.php" class="hero-btn primary"
+                            style="background:linear-gradient(120deg,var(--blue-1),var(--blue-2));color:#fff;padding:14px 30px;border-radius:14px;text-decoration:none;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.5px;display:inline-block;">Đăng
+                            ký tư vấn ngay</a>
                     </div>
                 </div>
             </div>
@@ -763,60 +807,68 @@
             <div class="founder-container">
                 <h2 class="ts-news-title"
                     style="font-family:'EB Garamond',serif;font-size:36px;font-weight:700;color:var(--blue-1);text-transform:uppercase;margin-bottom:36px;text-align:center;">
-                    Tuyển sinh</h2>
+                    Tin Tức</h2>
                 <div class="ts-news-slider">
                     <div class="ts-news-card">
-                        <a href="thong-tin-tuyen-sinh-tieu-hoc.php" style="display:block;">
-                            <img src="assets/img/tuyensinh/banner4.jpg" alt="Thông báo lịch xét tuyển">
+                        <a href="https://hanoimoi.vn/truong-th-doan-thi-diem-ha-noi-don-nhan-danh-hieu-anh-hung-lao-dong-731567.html"
+                            target="_blank" rel="noopener" style="display:block;">
+                            <img src="assets/img/tin-tuc/ede751688b0805565c19.jpg"
+                                alt="Trường TH Đoàn Thị Điểm Hà Nội đón nhận danh hiệu Anh hùng Lao động">
                         </a>
                         <div class="ts-news-card-body">
-                            <h3>Thông báo lịch xét tuyển Lớp 1 năm học 2026-2027</h3>
-                            <a href="thong-tin-tuyen-sinh-tieu-hoc.php" class="ts-news-link">Xem thêm <span>→</span></a>
+                            <h3><a href="https://hanoimoi.vn/truong-th-doan-thi-diem-ha-noi-don-nhan-danh-hieu-anh-hung-lao-dong-731567.html"
+                                    target="_blank" rel="noopener">Trường TH Đoàn Thị Điểm - Hà Nội đón nhận danh hiệu
+                                    Anh hùng Lao động</a></h3>
+                            <a href="https://hanoimoi.vn/truong-th-doan-thi-diem-ha-noi-don-nhan-danh-hieu-anh-hung-lao-dong-731567.html"
+                                target="_blank" rel="noopener" class="ts-news-link">Xem thêm <span>→</span></a>
                         </div>
                     </div>
                     <div class="ts-news-card">
-                        <a href="thong-tin-tuyen-sinh-tieu-hoc.php" style="display:block;">
-                            <img src="assets/img/tuyensinh/banner5.jpg" alt="Mở cổng đăng ký tuyển sinh">
+                        <a href="https://giaoduc.net.vn/30-nam-tien-phong-doi-moi-truong-th-doan-thi-diem-ha-noi-don-nhan-danh-hieu-anh-hung-lao-dong-post257603.gd"
+                            target="_blank" rel="noopener" style="display:block;">
+                            <img src="assets/img/tin-tuc/images.jpg"
+                                alt="30 năm tiên phong đổi mới Trường TH Đoàn Thị Điểm">
                         </a>
                         <div class="ts-news-card-body">
-                            <h3>Mở cổng đăng ký tuyển sinh lớp 1: Hành trình khởi đầu cho con yêu</h3>
-                            <a href="thong-tin-tuyen-sinh-tieu-hoc.php" class="ts-news-link">Xem thêm <span>→</span></a>
+                            <h3><a href="https://giaoduc.net.vn/30-nam-tien-phong-doi-moi-truong-th-doan-thi-diem-ha-noi-don-nhan-danh-hieu-anh-hung-lao-dong-post257603.gd"
+                                    target="_blank" rel="noopener">30 năm tiên phong đổi mới, Trường TH Đoàn Thị Điểm -
+                                    Hà Nội đón nhận danh hiệu Anh hùng Lao động</a></h3>
+                            <a href="https://giaoduc.net.vn/30-nam-tien-phong-doi-moi-truong-th-doan-thi-diem-ha-noi-don-nhan-danh-hieu-anh-hung-lao-dong-post257603.gd"
+                                target="_blank" rel="noopener" class="ts-news-link">Xem thêm <span>→</span></a>
                         </div>
                     </div>
                     <div class="ts-news-card">
-                        <a href="hoc-bong-2026-2027.php" style="display:block;">
-                            <img src="assets/img/tuyensinh/tuyển sinh chung.jpg" alt="Ưu đãi tuyển sinh">
+                        <a href="https://nhandan.vn/anh-ngoi-truong-tieu-hoc-anh-hung-lao-dong-o-thu-do-ha-noi-post933413.html"
+                            target="_blank" rel="noopener" style="display:block;">
+                            <img src="assets/img/tin-tuc/z7369054786972-1a0cb760778270bac2703d36eb1c4ce3.jpg"
+                                alt="Ngôi trường tiểu học Anh hùng Lao động ở thủ đô Hà Nội">
                         </a>
                         <div class="ts-news-card-body">
-                            <h3>Ưu đãi tuyển sinh và học bổng năm học 2026-2027</h3>
-                            <a href="hoc-bong-2026-2027.php" class="ts-news-link">Xem thêm <span>→</span></a>
+                            <h3><a href="https://nhandan.vn/anh-ngoi-truong-tieu-hoc-anh-hung-lao-dong-o-thu-do-ha-noi-post933413.html"
+                                    target="_blank" rel="noopener">Ngôi trường tiểu học "Anh hùng Lao động" ở thủ đô Hà
+                                    Nội</a></h3>
+                            <a href="https://nhandan.vn/anh-ngoi-truong-tieu-hoc-anh-hung-lao-dong-o-thu-do-ha-noi-post933413.html"
+                                target="_blank" rel="noopener" class="ts-news-link">Xem thêm <span>→</span></a>
                         </div>
                     </div>
                     <div class="ts-news-card">
-                        <a href="thong-tin-tuyen-sinh-tieu-hoc.php" style="display:block;">
-                            <img src="assets/img/tuyensinh/tiền tiểu học 1.jpg" alt="Chương trình tiền tiểu học">
+                        <a href="#" style="display:block;">
+                            <img src="assets/img/tin-tuc/z7672862397810-589fba3abb7ad0d4017e09b5151bc656.jpg"
+                                alt="Trường THCS Đoàn Thị Điểm đón nhận Huân chương Lao động Hạng Nhì">
                         </a>
                         <div class="ts-news-card-body">
-                            <h3>Chương trình Tiền tiểu học – Sẵn sàng cho hành trình học tập mới</h3>
-                            <a href="thong-tin-tuyen-sinh-tieu-hoc.php" class="ts-news-link">Xem thêm <span>→</span></a>
+                            <h3><a href="#">Trường THCS Đoàn Thị Điểm đón nhận Huân chương Lao động Hạng Nhì</a></h3>
+                            <a href="#" class="ts-news-link">Xem thêm <span>→</span></a>
                         </div>
                     </div>
                     <div class="ts-news-card">
-                        <a href="thong-tin-tuyen-sinh-tieu-hoc.php" style="display:block;">
-                            <img src="assets/img/tuyensinh/tiền tiểu học 2.jpg" alt="Lịch thi tuyển sinh">
+                        <a href="#" style="display:block;">
+                            <img src="assets/img/tin-tuc/3.jpg"
+                                alt="Meyschool Đoàn Thị Điểm Phú Quốc tuyển sinh lớp 1 - 8">
                         </a>
                         <div class="ts-news-card-body">
-                            <h3>Lịch thi và quy trình xét tuyển vào lớp 1 năm học 2026-2027</h3>
-                            <a href="thong-tin-tuyen-sinh-tieu-hoc.php" class="ts-news-link">Xem thêm <span>→</span></a>
-                        </div>
-                    </div>
-                    <div class="ts-news-card">
-                        <a href="thong-tin-tuyen-sinh-tieu-hoc.php" style="display:block;">
-                            <img src="assets/img/tuyensinh/thông tin tuyển sinh.jpg" alt="Ngày hội tuyển sinh">
-                        </a>
-                        <div class="ts-news-card-body">
-                            <h3>Ngày hội trải nghiệm và tư vấn tuyển sinh Meyschool 2026</h3>
-                            <a href="thong-tin-tuyen-sinh-tieu-hoc.php" class="ts-news-link">Xem thêm <span>→</span></a>
+                            <h3><a href="#">Meyschool Đoàn Thị Điểm Phú Quốc tuyển sinh lớp 1 - 8, nhiều học bổng hấp dẫn</a></h3>
+                            <a href="#" class="ts-news-link">Xem thêm <span>→</span></a>
                         </div>
                     </div>
                 </div>

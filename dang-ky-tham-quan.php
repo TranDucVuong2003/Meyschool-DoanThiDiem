@@ -40,360 +40,360 @@
 
     <link rel="alternate" href="en.html" hreflang="en" />
     <style>
-    nav#admin_bar {
-        display: none;
-    }
-
-    .jq-toast-wrap {
-        display: block;
-        position: fixed;
-        width: 250px;
-        pointer-events: none !important;
-        letter-spacing: normal;
-        z-index: 9000999999999 !important;
-    }
-
-    body.show-admin-bar {
-        margin-top: 0 !important;
-    }
-
-    :root {
-        --tour-blue-1: #439bd4;
-        --tour-blue-2: #4db0e4;
-        --tour-blue-3: #eaf7ff;
-        --tour-ink: #1f3f5d;
-    }
-
-    .tour-page {
-        background: radial-gradient(circle at 0% 0%, #eaf7ff 0%, #f8fcff 44%, #ffffff 100%);
-        color: var(--tour-ink);
-        margin-bottom: 120px;
-    }
-
-    .tour-wide {
-        width: min(95vw, 1500px);
-        margin: 0 auto;
-    }
-
-    .tour-hero {
-        padding: 112px 0 58px;
-        position: relative;
-        overflow: hidden;
-        background: linear-gradient(130deg, rgba(67, 155, 212, 0.96) 0%, rgba(77, 176, 228, 0.9) 65%, rgba(77, 176, 228, 0.8) 100%), url('storage/olympia-schools-1-1180x720.jpg') center/cover no-repeat;
-    }
-
-    .tour-hero::before,
-    .tour-hero::after {
-        content: '';
-        position: absolute;
-        border-radius: 50%;
-        pointer-events: none;
-    }
-
-    .tour-hero::before {
-        width: 360px;
-        height: 360px;
-        right: -120px;
-        top: -140px;
-        background: rgba(255, 255, 255, 0.2);
-    }
-
-    .tour-hero::after {
-        width: 260px;
-        height: 260px;
-        left: -90px;
-        bottom: -110px;
-        background: rgba(255, 255, 255, 0.12);
-    }
-
-    .tour-breadcrumb {
-        margin: 0 0 14px;
-        display: inline-flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        background: rgba(255, 255, 255, 0.2);
-        border: 1px solid rgba(255, 255, 255, 0.4);
-        border-radius: 999px;
-        padding: 8px 16px;
-        position: static !important;
-        transform: none !important;
-        left: auto !important;
-        right: auto !important;
-        top: auto !important;
-        bottom: auto !important;
-    }
-
-    .tour-breadcrumb li,
-    .tour-breadcrumb li a {
-        color: #fff;
-        font-size: 13px;
-        position: static !important;
-    }
-
-    .tour-hero h1 {
-        margin: 0;
-        color: #fff;
-        font-size: clamp(34px, 4.4vw, 58px);
-        line-height: 1.08;
-        font-family: 'Garamond', serif;
-        max-width: 960px;
-    }
-
-    .tour-hero p {
-        margin: 14px 0 0;
-        max-width: 830px;
-        color: rgba(255, 255, 255, 0.95);
-        font-size: 17px;
-        line-height: 1.75;
-    }
-
-    .tour-layout {
-        padding: 42px 0 70px;
-    }
-
-    .tour-grid {
-        display: grid;
-        grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.8fr);
-        gap: 24px;
-        align-items: start;
-    }
-
-    .tour-main,
-    .tour-side-card {
-        background: #fff;
-        border: 1px solid rgba(67, 155, 212, 0.16);
-        border-radius: 22px;
-        box-shadow: 0 14px 30px rgba(16, 49, 79, 0.09);
-    }
-
-    .tour-main {
-        padding: 24px;
-    }
-
-    .tour-intro {
-        margin-bottom: 18px;
-        padding: 14px 16px;
-        border-radius: 14px;
-        border: 1px solid rgba(67, 155, 212, 0.2);
-        border-left: 4px solid var(--tour-blue-1);
-        background: linear-gradient(120deg, #f3fbff 0%, #eaf7ff 100%);
-        color: #295f87;
-        line-height: 1.8;
-        font-weight: 600;
-    }
-
-    .tour-form {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 16px;
-    }
-
-    .form-group {
-        margin: 0;
-    }
-
-    .form-group.full {
-        grid-column: 1 / -1;
-    }
-
-    .form-group label {
-        display: block;
-        margin-bottom: 8px;
-        font-weight: 700;
-        font-size: 14px;
-        color: #275c86;
-    }
-
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-        width: 100%;
-        padding: 12px 13px;
-        border: 1px solid rgba(67, 155, 212, 0.26);
-        border-radius: 10px;
-        font-size: 14px;
-        color: #234866;
-        background: #fbfeff;
-        transition: all 0.2s ease;
-    }
-
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-        outline: none;
-        border-color: var(--tour-blue-2);
-        box-shadow: 0 0 0 4px rgba(77, 176, 228, 0.18);
-        background: #fff;
-    }
-
-    .form-group textarea {
-        resize: vertical;
-        min-height: 120px;
-    }
-
-    .tour-actions {
-        grid-column: 1 / -1;
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 12px;
-        margin-top: 6px;
-    }
-
-    .tour-submit,
-    .tour-link {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 48px;
-        padding: 11px 20px;
-        border-radius: 12px;
-        font-size: 13px;
-        letter-spacing: 0.45px;
-        text-transform: uppercase;
-        font-weight: 700;
-        text-decoration: none;
-        border: 1px solid transparent;
-        cursor: pointer;
-    }
-
-    .tour-submit {
-        background: linear-gradient(120deg, var(--tour-blue-1), var(--tour-blue-2));
-        color: #fff;
-        box-shadow: 0 10px 22px rgba(67, 155, 212, 0.25);
-    }
-
-    .tour-link {
-        background: #f6fbff;
-        color: #246b9d;
-        border-color: rgba(67, 155, 212, 0.3);
-    }
-
-    .tour-note {
-        grid-column: 1 / -1;
-        margin: 0;
-        color: #4a6f8d;
-        font-size: 13px;
-        line-height: 1.65;
-    }
-
-    .tour-side {
-        display: grid;
-        gap: 16px;
-    }
-
-    .tour-side-card {
-        padding: 16px;
-    }
-
-    .tour-side-card h3 {
-        margin: 0 0 12px;
-        color: #236c9d;
-        font-size: 28px;
-        line-height: 1.2;
-        font-family: 'Garamond', serif;
-        padding: 0 !important;
-    }
-
-    .tour-side-card p,
-    .tour-side-card li {
-        color: #3f6686;
-        line-height: 1.72;
-        font-size: 15px;
-    }
-
-    .tour-side-card ul {
-        margin: 0;
-        padding-left: 18px;
-        display: grid;
-        gap: 8px;
-    }
-
-    .tour-contact-item {
-        background: var(--tour-blue-3);
-        border: 1px solid rgba(67, 155, 212, 0.2);
-        border-radius: 12px;
-        padding: 10px 12px;
-        margin-bottom: 10px;
-    }
-
-    .tour-contact-item b {
-        display: block;
-        margin-bottom: 4px;
-        color: #2c78ad;
-        font-size: 13px;
-        text-transform: uppercase;
-        letter-spacing: 0.3px;
-    }
-
-    .tour-contact-item span {
-        color: #204a6d;
-        font-weight: 600;
-        font-size: 14px;
-        line-height: 1.5;
-    }
-
-    .tour-gallery {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 10px;
-    }
-
-    .tour-gallery figure {
-        margin: 0;
-        border-radius: 12px;
-        overflow: hidden;
-        box-shadow: 0 10px 20px rgba(16, 49, 79, 0.12);
-    }
-
-    .tour-gallery img {
-        width: 100%;
-        height: 130px;
-        object-fit: cover;
-        display: block;
-    }
-
-    @media (max-width: 1080px) {
-        .tour-grid {
-            grid-template-columns: 1fr;
+        nav#admin_bar {
+            display: none;
         }
 
-        .tour-gallery img {
-            height: 160px;
+        .jq-toast-wrap {
+            display: block;
+            position: fixed;
+            width: 250px;
+            pointer-events: none !important;
+            letter-spacing: normal;
+            z-index: 9000999999999 !important;
         }
-    }
 
-    @media (max-width: 768px) {
+        body.show-admin-bar {
+            margin-top: 0 !important;
+        }
+
+        :root {
+            --tour-blue-1: #439bd4;
+            --tour-blue-2: #4db0e4;
+            --tour-blue-3: #eaf7ff;
+            --tour-ink: #1f3f5d;
+        }
+
+        .tour-page {
+            background: radial-gradient(circle at 0% 0%, #eaf7ff 0%, #f8fcff 44%, #ffffff 100%);
+            color: var(--tour-ink);
+            margin-bottom: 120px;
+        }
+
         .tour-wide {
-            width: min(94vw, 1500px);
+            width: min(95vw, 1500px);
+            margin: 0 auto;
         }
 
         .tour-hero {
-            padding: 96px 0 42px;
+            padding: 112px 0 58px;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(130deg, rgba(67, 155, 212, 0.96) 0%, rgba(77, 176, 228, 0.9) 65%, rgba(77, 176, 228, 0.8) 100%), url('storage/olympia-schools-1-1180x720.jpg') center/cover no-repeat;
+        }
+
+        .tour-hero::before,
+        .tour-hero::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .tour-hero::before {
+            width: 360px;
+            height: 360px;
+            right: -120px;
+            top: -140px;
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .tour-hero::after {
+            width: 260px;
+            height: 260px;
+            left: -90px;
+            bottom: -110px;
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        .tour-breadcrumb {
+            margin: 0 0 14px;
+            display: inline-flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 999px;
+            padding: 8px 16px;
+            position: static !important;
+            transform: none !important;
+            left: auto !important;
+            right: auto !important;
+            top: auto !important;
+            bottom: auto !important;
+        }
+
+        .tour-breadcrumb li,
+        .tour-breadcrumb li a {
+            color: #fff;
+            font-size: 13px;
+            position: static !important;
+        }
+
+        .tour-hero h1 {
+            margin: 0;
+            color: #fff;
+            font-size: clamp(34px, 4.4vw, 58px);
+            line-height: 1.08;
+            font-family: 'Garamond', serif;
+            max-width: 960px;
         }
 
         .tour-hero p {
-            font-size: 15px;
+            margin: 14px 0 0;
+            max-width: 830px;
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 17px;
+            line-height: 1.75;
+        }
+
+        .tour-layout {
+            padding: 42px 0 70px;
+        }
+
+        .tour-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.8fr);
+            gap: 24px;
+            align-items: start;
         }
 
         .tour-main,
         .tour-side-card {
-            padding: 16px;
-            border-radius: 16px;
+            background: #fff;
+            border: 1px solid rgba(67, 155, 212, 0.16);
+            border-radius: 22px;
+            box-shadow: 0 14px 30px rgba(16, 49, 79, 0.09);
+        }
+
+        .tour-main {
+            padding: 24px;
+        }
+
+        .tour-intro {
+            margin-bottom: 18px;
+            padding: 14px 16px;
+            border-radius: 14px;
+            border: 1px solid rgba(67, 155, 212, 0.2);
+            border-left: 4px solid var(--tour-blue-1);
+            background: linear-gradient(120deg, #f3fbff 0%, #eaf7ff 100%);
+            color: #295f87;
+            line-height: 1.8;
+            font-weight: 600;
         }
 
         .tour-form {
-            grid-template-columns: 1fr;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .form-group {
+            margin: 0;
+        }
+
+        .form-group.full {
+            grid-column: 1 / -1;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 700;
+            font-size: 14px;
+            color: #275c86;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 13px;
+            border: 1px solid rgba(67, 155, 212, 0.26);
+            border-radius: 10px;
+            font-size: 14px;
+            color: #234866;
+            background: #fbfeff;
+            transition: all 0.2s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--tour-blue-2);
+            box-shadow: 0 0 0 4px rgba(77, 176, 228, 0.18);
+            background: #fff;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .tour-actions {
+            grid-column: 1 / -1;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 6px;
+        }
+
+        .tour-submit,
+        .tour-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 48px;
+            padding: 11px 20px;
+            border-radius: 12px;
+            font-size: 13px;
+            letter-spacing: 0.45px;
+            text-transform: uppercase;
+            font-weight: 700;
+            text-decoration: none;
+            border: 1px solid transparent;
+            cursor: pointer;
+        }
+
+        .tour-submit {
+            background: linear-gradient(120deg, var(--tour-blue-1), var(--tour-blue-2));
+            color: #fff;
+            box-shadow: 0 10px 22px rgba(67, 155, 212, 0.25);
+        }
+
+        .tour-link {
+            background: #f6fbff;
+            color: #246b9d;
+            border-color: rgba(67, 155, 212, 0.3);
+        }
+
+        .tour-note {
+            grid-column: 1 / -1;
+            margin: 0;
+            color: #4a6f8d;
+            font-size: 13px;
+            line-height: 1.65;
+        }
+
+        .tour-side {
+            display: grid;
+            gap: 16px;
+        }
+
+        .tour-side-card {
+            padding: 16px;
+        }
+
+        .tour-side-card h3 {
+            margin: 0 0 12px;
+            color: #236c9d;
+            font-size: 28px;
+            line-height: 1.2;
+            font-family: 'Garamond', serif;
+            padding: 0 !important;
+        }
+
+        .tour-side-card p,
+        .tour-side-card li {
+            color: #3f6686;
+            line-height: 1.72;
+            font-size: 15px;
+        }
+
+        .tour-side-card ul {
+            margin: 0;
+            padding-left: 18px;
+            display: grid;
+            gap: 8px;
+        }
+
+        .tour-contact-item {
+            background: var(--tour-blue-3);
+            border: 1px solid rgba(67, 155, 212, 0.2);
+            border-radius: 12px;
+            padding: 10px 12px;
+            margin-bottom: 10px;
+        }
+
+        .tour-contact-item b {
+            display: block;
+            margin-bottom: 4px;
+            color: #2c78ad;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        .tour-contact-item span {
+            color: #204a6d;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 1.5;
         }
 
         .tour-gallery {
-            grid-template-columns: 1fr;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 10px;
+        }
+
+        .tour-gallery figure {
+            margin: 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(16, 49, 79, 0.12);
         }
 
         .tour-gallery img {
-            height: 210px;
+            width: 100%;
+            height: 130px;
+            object-fit: cover;
+            display: block;
         }
-    }
+
+        @media (max-width: 1080px) {
+            .tour-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tour-gallery img {
+                height: 160px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .tour-wide {
+                width: min(94vw, 1500px);
+            }
+
+            .tour-hero {
+                padding: 96px 0 42px;
+            }
+
+            .tour-hero p {
+                font-size: 15px;
+            }
+
+            .tour-main,
+            .tour-side-card {
+                padding: 16px;
+                border-radius: 16px;
+            }
+
+            .tour-form {
+                grid-template-columns: 1fr;
+            }
+
+            .tour-gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .tour-gallery img {
+                height: 210px;
+            }
+        }
     </style>
 </head>
 
@@ -422,7 +422,10 @@
                     <div class="tour-intro">Vui lòng điền đầy đủ thông tin để đội ngũ tuyển sinh hỗ trợ nhanh nhất. Các
                         trường có dấu * là bắt buộc.</div>
 
-                    <form class="tour-form" action="#" method="post">
+                    <div id="tour-alert"
+                        style="display:none;padding:14px 18px;border-radius:8px;margin-bottom:18px;font-size:15px;font-weight:500;">
+                    </div>
+                    <form class="tour-form" id="tour-register-form" action="api/submit-tham-quan.php" method="post">
                         <div class="form-group">
                             <label>Họ và tên phụ huynh *</label>
                             <input type="text" name="parent_name" placeholder="Nhập họ và tên" required>
@@ -545,6 +548,69 @@
     <script src="olympia/js/slick.js"></script>
     <script type="text/javascript" src="olympia/js/script.js"></script>
     <script type="text/javascript" src="olympia/js/main.js"></script>
+
+    <script>
+        (function() {
+            var form = document.getElementById('tour-register-form');
+            var alert = document.getElementById('tour-alert');
+            if (!form) return;
+
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                var btn = form.querySelector('button[type="submit"]');
+                var originalText = btn.textContent;
+                btn.disabled = true;
+                btn.textContent = 'Đang gửi...';
+                showAlert('', '');
+
+                fetch('api/submit-tham-quan.php', {
+                        method: 'POST',
+                        body: new FormData(form)
+                    })
+                    .then(function(res) {
+                        return res.json();
+                    })
+                    .then(function(data) {
+                        if (data.success) {
+                            showAlert(data.message, 'success');
+                            form.reset();
+                        } else {
+                            showAlert(data.message, 'error');
+                        }
+                    })
+                    .catch(function() {
+                        showAlert('Có lỗi xảy ra. Vui lòng thử lại sau.', 'error');
+                    })
+                    .finally(function() {
+                        btn.disabled = false;
+                        btn.textContent = originalText;
+                    });
+            });
+
+            function showAlert(msg, type) {
+                if (!msg) {
+                    alert.style.display = 'none';
+                    return;
+                }
+                alert.textContent = msg;
+                alert.style.display = 'block';
+                if (type === 'success') {
+                    alert.style.background = '#e6f9ee';
+                    alert.style.color = '#1a7a3f';
+                    alert.style.border = '1px solid #a8e6c1';
+                } else {
+                    alert.style.background = '#fff0f0';
+                    alert.style.color = '#c0392b';
+                    alert.style.border = '1px solid #f5c0bb';
+                }
+                alert.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center'
+                });
+            }
+        })();
+    </script>
 </body>
 
 </html>
