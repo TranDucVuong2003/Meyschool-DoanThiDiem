@@ -537,6 +537,7 @@ $admin_username = htmlspecialchars($_SESSION['admin_username'] ?? '');
             <!-- Tabs bar -->
             <div class="tabs-bar">
                 <button class="tab-btn active" data-tab="danh-muc">Danh mục tin tức</button>
+                <button class="tab-btn" data-tab="danh-muc-thongbao">Danh mục thông báo</button>
             </div>
 
             <!-- Tab: Danh mục tin tức -->
@@ -570,6 +571,36 @@ $admin_username = htmlspecialchars($_SESSION['admin_username'] ?? '');
                 </div>
             </div>
 
+            <!-- Tab: Danh mục thông báo -->
+            <div class="tab-panel" id="tab-danh-muc-thongbao">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Quản lý danh mục thông báo</h3>
+                        <button class="btn btn-primary" onclick="openNotifModal()">+ Thêm mới</button>
+                    </div>
+
+                    <div class="search-box">
+                        <input type="text" id="notifSearchInput" placeholder="Tìm kiếm danh mục...">
+                    </div>
+
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th style="width:60px">ID</th>
+                                <th>Tên danh mục</th>
+                                <th>Slug</th>
+                                <th style="width:110px">Trạng thái</th>
+                                <th style="width:100px">Hành động</th>
+                            </tr>
+                        </thead>
+                        <tbody id="notifCategoryBody">
+                            <tr class="empty-row">
+                                <td colspan="5">Đang tải...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
 
         </div>
     </div>
@@ -598,6 +629,35 @@ $admin_username = htmlspecialchars($_SESSION['admin_username'] ?? '');
                 <div class="modal-actions">
                     <button type="button" class="btn btn-outline" onclick="closeModal()">Hủy</button>
                     <button type="submit" class="btn btn-primary" id="modalSaveBtn">Lưu</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal thêm / sửa danh mục thông báo -->
+    <div class="modal-overlay" id="notifFormModal">
+        <div class="modal">
+            <h3 id="notifModalTitle">Thêm danh mục thông báo</h3>
+            <form id="notifCategoryForm">
+                <input type="hidden" id="notifCatId" value="">
+                <div class="form-group">
+                    <label>Tên danh mục <span class="req">*</span></label>
+                    <input type="text" id="notifCatName" placeholder="VD: Học vụ, Học phí, Tuyển sinh..." required>
+                </div>
+                <div class="form-group">
+                    <label>Slug</label>
+                    <input type="text" id="notifCatSlug" placeholder="Tự động tạo nếu để trống">
+                </div>
+                <div class="form-group">
+                    <label>Trạng thái</label>
+                    <select id="notifCatStatus">
+                        <option value="active">Hoạt động</option>
+                        <option value="inactive">Không hoạt động</option>
+                    </select>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-outline" onclick="closeNotifModal()">Hủy</button>
+                    <button type="submit" class="btn btn-primary" id="notifModalSaveBtn">Lưu</button>
                 </div>
             </form>
         </div>
@@ -816,6 +876,185 @@ $admin_username = htmlspecialchars($_SESSION['admin_username'] ?? '');
 
         // ── Init ──
         loadCategories();
+
+        // ════════════════════════════════════
+        // Danh mục thông báo
+        // ════════════════════════════════════
+        const NOTIF_API = 'api/notification-categories.php';
+
+        function loadNotifCategories(search) {
+            let url = NOTIF_API + '?t=' + Date.now();
+            if (search) url += '&search=' + encodeURIComponent(search);
+
+            fetch(url)
+                .then(r => r.json())
+                .then(res => {
+                    const tbody = document.getElementById('notifCategoryBody');
+                    if (!res.success || !res.data.length) {
+                        tbody.innerHTML = '<tr class="empty-row"><td colspan="5">Không có danh mục nào</td></tr>';
+                        return;
+                    }
+                    tbody.innerHTML = res.data.map(c => `
+                        <tr>
+                            <td>${c.id}</td>
+                            <td><strong>${escHtml(c.name)}</strong></td>
+                            <td style="color:var(--muted);font-size:13px;">${escHtml(c.slug || '')}</td>
+                            <td>
+                                <span class="badge badge-${c.status === 'active' ? 'active' : 'inactive'}">
+                                    ${c.status === 'active' ? 'Hoạt động' : 'Không hoạt động'}
+                                </span>
+                            </td>
+                            <td>
+                                <div class="actions">
+                                    <button class="btn-icon" title="Sửa" onclick='editNotifCat(${JSON.stringify(c)})'>&#9998;</button>
+                                    <button class="btn-icon delete" title="Xóa" onclick='deleteNotifCat(${c.id}, ${JSON.stringify(escHtml(c.name))})'>&#128465;</button>
+                                </div>
+                            </td>
+                        </tr>
+                    `).join('');
+                });
+        }
+
+        // Search
+        let notifSearchTimer;
+        document.getElementById('notifSearchInput').addEventListener('input', function() {
+            clearTimeout(notifSearchTimer);
+            notifSearchTimer = setTimeout(() => loadNotifCategories(this.value.trim()), 300);
+        });
+
+        // Modal
+        function openNotifModal(data) {
+            document.getElementById('notifCatId').value = data ? data.id : '';
+            document.getElementById('notifCatName').value = data ? data.name : '';
+            document.getElementById('notifCatSlug').value = data ? (data.slug || '') : '';
+            document.getElementById('notifCatStatus').value = data ? data.status : 'active';
+            document.getElementById('notifModalTitle').textContent = data ? 'Sửa danh mục' : 'Thêm danh mục thông báo';
+            document.getElementById('notifModalSaveBtn').textContent = data ? 'Cập nhật' : 'Lưu';
+            document.getElementById('notifFormModal').classList.add('open');
+        }
+
+        function closeNotifModal() {
+            document.getElementById('notifFormModal').classList.remove('open');
+        }
+
+        function editNotifCat(data) {
+            openNotifModal(data);
+        }
+
+        document.getElementById('notifCategoryForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const id = document.getElementById('notifCatId').value;
+            const payload = {
+                name: document.getElementById('notifCatName').value.trim(),
+                slug: document.getElementById('notifCatSlug').value.trim(),
+                status: document.getElementById('notifCatStatus').value
+            };
+
+            if (!payload.name) return showToast('Vui lòng nhập tên danh mục', 'error');
+
+            let url = NOTIF_API;
+            let method = 'POST';
+            if (id) {
+                url += '?_method=PUT';
+                payload.id = id;
+            }
+
+            fetch(url, {
+                    method: method,
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(payload)
+                })
+                .then(r => r.json())
+                .then(res => {
+                    if (res.success) {
+                        showToast(res.message, 'success');
+                        closeNotifModal();
+                        loadNotifCategories();
+                    } else {
+                        showToast(res.message || 'Có lỗi xảy ra', 'error');
+                    }
+                })
+                .catch(() => showToast('Lỗi kết nối', 'error'));
+        });
+
+        // Delete danh mục thông báo
+        let deleteNotifId = null;
+
+        function deleteNotifCat(id, name) {
+            deleteNotifId = id;
+            document.getElementById('deleteName').textContent = name;
+            document.getElementById('deleteModal').classList.add('open');
+            // Gán lại handler cho nút xóa
+            document.getElementById('confirmDeleteBtn').onclick = function() {
+                fetch(NOTIF_API + '?_method=DELETE', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            id: deleteNotifId
+                        })
+                    })
+                    .then(r => r.json())
+                    .then(res => {
+                        if (res.success) {
+                            showToast(res.message, 'success');
+                            loadNotifCategories();
+                        } else {
+                            showToast(res.message || 'Lỗi', 'error');
+                        }
+                        closeDeleteModal();
+                    })
+                    .catch(() => {
+                        showToast('Lỗi kết nối', 'error');
+                        closeDeleteModal();
+                    });
+            };
+        }
+
+        // Reset delete handler cho danh mục tin tức khi dùng deleteCat
+        var _origDeleteCat = deleteCat;
+        deleteCat = function(id, name) {
+            deleteId = id;
+            document.getElementById('deleteName').textContent = name;
+            document.getElementById('deleteModal').classList.add('open');
+            document.getElementById('confirmDeleteBtn').onclick = function() {
+                fetch(API + '?_method=DELETE', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            id: deleteId
+                        })
+                    })
+                    .then(r => r.json())
+                    .then(res => {
+                        if (res.success) {
+                            showToast(res.message, 'success');
+                            loadCategories();
+                        } else {
+                            showToast(res.message || 'Lỗi', 'error');
+                        }
+                        closeDeleteModal();
+                    })
+                    .catch(() => {
+                        showToast('Lỗi kết nối', 'error');
+                        closeDeleteModal();
+                    });
+            };
+        };
+
+        // Load khi tab được click
+        document.querySelectorAll('.tab-btn').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                if (btn.dataset.tab === 'danh-muc-thongbao') {
+                    loadNotifCategories();
+                }
+            });
+        });
     </script>
 </body>
 

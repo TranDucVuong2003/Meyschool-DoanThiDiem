@@ -113,6 +113,12 @@ $_sidebar_page = basename($_SERVER['PHP_SELF']);
         <a href="tin-tuc-admin.php" class="nav-item <?= ($_sidebar_page === 'tin-tuc-admin.php' || $_sidebar_page === 'them-tin-tuc.php') ? 'active' : '' ?>">
             Tin tức
         </a>
+        <a href="thong-bao-admin.php" class="nav-item <?= ($_sidebar_page === 'thong-bao-admin.php' || $_sidebar_page === 'them-thong-bao.php') ? 'active' : '' ?>">
+            Thông báo
+        </a>
+        <a href="su-kien-admin.php" class="nav-item <?= ($_sidebar_page === 'su-kien-admin.php' || $_sidebar_page === 'them-su-kien.php') ? 'active' : '' ?>">
+            Sự kiện trường
+        </a>
 
         <div class="nav-section">Hệ thống</div>
         <a href="cau-hinh.php" class="nav-item <?= $_sidebar_page === 'cau-hinh.php' ? 'active' : '' ?>">

@@ -729,7 +729,9 @@
                         <p class="olympia-testimonial-name font-garamond-bold">Vũ Minh Ngọc</p>
                         <p class="olympia-testimonial-po4 font-avenir-regular size-14">Học sinh lớp 11.</p>
                     </div>
-                    <div class="olympia-testimonial-photo" style="opacity: 0"><img src="storage/minh-ngoc-1.jpg" alt="">
+                    <div class="olympia-testimonial-photo" style="opacity: 0; aspect-ratio: 1 / 1; overflow: hidden;">
+                        <img src="assets/img/anhpotrait.jpg" alt=""
+                            style="width: 100%; height: 100%; object-fit: cover; object-position: center top;">
                     </div>
                 </div>
                 <div class="slide-item testimonial-item">
@@ -803,7 +805,7 @@
             </div>
         </section>
         <!-- Section: Thông tin tuyển sinh + Video -->
-        <section id="olympia-readmore">
+        <!-- <section id="olympia-readmore">
             <div class="olympia-readmore">
                 <div class="olympia-readmore-entry bg-F1CC1F">
                     <h5 class="font-garamond-bold color-f">Hiểu rõ hơn về trường học & quy chế <br /> tuyển sinh</h5>
@@ -825,7 +827,7 @@
                     frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
             </div>
-        </section>
+        </section> -->
     </main>
     <?php include 'includes/footer.php'; ?>
     <section id="callnow" class="hotline mobile__none">
@@ -1124,7 +1126,7 @@
         <button onclick="closeTuyenSinhPopup()"
             style="position: absolute; top: 10px; right: 10px; width: 35px; height: 35px; background: rgba(255,255,255,0.9); border: none; border-radius: 50%; font-size: 20px; cursor: pointer; z-index: 100; display: flex; justify-content: center; align-items: center;">×</button>
         <div style="position: relative;">
-            <a href="tuyen-dung.php" style="display: block; line-height: 0;">
+            <a href="dang-ky-tu-van.php" style="display: block; line-height: 0;">
                 <img src="assets/img/banner/popup-tuyensinh.jpg" alt="Tuyển sinh 2026-2027"
                     style="width: 500px; height: 500px; max-width: 100%; object-fit: cover; display: block; cursor: pointer;">
             </a>

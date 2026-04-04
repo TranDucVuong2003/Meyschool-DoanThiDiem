@@ -935,7 +935,7 @@
                             </div>
                         </div>
 
-                        <a href="chuong-trinh-tieu-hoc.php" class="ct-btn ct-btn-outline">Xem thêm</a>
+                        <a href="javascript:void(0)" class="ct-btn ct-btn-outline">Xem thêm</a>
                     </div>
                 </div>
             </div>
@@ -954,7 +954,7 @@
                             <h3>Chương trình Ngoại ngữ</h3>
                             <p>Chương trình Ngoại ngữ tại trường Đoàn Thị Điểm – Hà Nội được xây dựng gắn liền với mục
                                 tiêu của Chương trình giáo dục phổ thông với chuẩn đầu ra theo từng cấp lớp.</p>
-                            <a href="chuong-trinh-tieu-hoc.php" class="ct-btn ct-btn-outline">Xem thêm</a>
+                            <a href="javascript:void(0)" class="ct-btn ct-btn-outline">Xem thêm</a>
                         </div>
                     </div>
                     <div class="ct-card ct-prog-card">
@@ -963,7 +963,7 @@
                             <h3>Chương trình tiếng Pháp tăng cường</h3>
                             <p>Chương trình tiếng Pháp cung cấp đa dạng giảng viên, giảng dạy theo chuẩn trình độ Giáo
                                 dục Đào Tạo.</p>
-                            <a href="chuong-trinh-tieu-hoc.php" class="ct-btn ct-btn-outline">Xem thêm</a>
+                            <a href="javascript:void(0)" class="ct-btn ct-btn-outline">Xem thêm</a>
                         </div>
                     </div>
                     <div class="ct-card ct-prog-card">
@@ -972,7 +972,7 @@
                             <h3>Chương trình tiếng Anh tăng cường</h3>
                             <p>Chương trình tiếng Anh tăng cường được giảng dạy bởi các giáo viên người nước ngoài có
                                 chứng chỉ trình độ quốc tế.</p>
-                            <a href="chuong-trinh-tieu-hoc.php" class="ct-btn ct-btn-outline">Xem thêm</a>
+                            <a href="javascript:void(0)" class="ct-btn ct-btn-outline">Xem thêm</a>
                         </div>
                     </div>
                     <div class="ct-card ct-prog-card">
@@ -981,7 +981,7 @@
                         <div class="ct-prog-body">
                             <h3>Chương trình liên kết Việt Nam – Cambridge &amp; Oxford</h3>
                             <p>Chương trình giúp các bậc phụ huynh mở ra cánh cửa hội nhập quốc tế cho con em mình.</p>
-                            <a href="chuong-trinh-tieu-hoc.php" class="ct-btn ct-btn-outline">Xem thêm</a>
+                            <a href="javascript:void(0)" class="ct-btn ct-btn-outline">Xem thêm</a>
                         </div>
                     </div>
                 </div>
@@ -1011,7 +1011,7 @@
                         <p>Chương trình STEM tại trường được thực hiện theo phương pháp Giáo dục STEM với mục tiêu giúp
                             học sinh tiếp cận, tìm hiểu khoa học qua VR (thực tế ảo), làm thí nghiệm, quan sát, trải
                             nghiệm thực hành trong các lĩnh vực khoa học tự nhiên.</p>
-                        <a href="chuong-trinh-tieu-hoc.php" class="ct-btn ct-btn-outline" style="margin-top:14px;">Xem
+                        <a href="javascript:void(0)" class="ct-btn ct-btn-outline" style="margin-top:14px;">Xem
                             thêm</a>
                     </div>
                     <div class="ct-stem-img">
@@ -1032,7 +1032,7 @@
                             <h3>Chương trình phát triển thể chất và năng khiếu nghệ thuật</h3>
                             <p>Chương trình phát triển thể chất và nghệ thuật được xây dựng với mục tiêu phát triển toàn
                                 diện cho học sinh.</p>
-                            <a href="hoat-dong-ngoai-khoa.php" class="ct-btn ct-btn-outline">Xem thêm</a>
+                            <a href="javascript:void(0)" class="ct-btn ct-btn-outline">Xem thêm</a>
                         </div>
                     </div>
                     <div class="ct-card ct-prog-card">
@@ -1041,7 +1041,7 @@
                             <h3>Chương trình Tin học và Công nghệ (ICT)</h3>
                             <p>Tích hợp khoa học với các giá trị phát triển và ứng dụng công nghệ thông tin vào giáo
                                 dục.</p>
-                            <a href="hoat-dong-ngoai-khoa.php" class="ct-btn ct-btn-outline">Xem thêm</a>
+                            <a href="javascript:void(0)" class="ct-btn ct-btn-outline">Xem thêm</a>
                         </div>
                     </div>
                     <div class="ct-card ct-prog-card">
@@ -1050,7 +1050,7 @@
                             <h3>Chương trình LiM – Leader in Me (Lãnh đạo Bản thân)</h3>
                             <p>Chương trình lãnh đạo bản thân giúp học sinh phát triển kỹ năng sống và tinh thần khởi
                                 nghiệp.</p>
-                            <a href="hoat-dong-ngoai-khoa.php" class="ct-btn ct-btn-outline">Xem thêm</a>
+                            <a href="javascript:void(0)" class="ct-btn ct-btn-outline">Xem thêm</a>
                         </div>
                     </div>
                     <div class="ct-card ct-prog-card">
@@ -1059,7 +1059,7 @@
                             <h3>Chương trình Trại hè, Trao đổi Giao lưu và Hợp tác Quốc tế</h3>
                             <p>Chương trình hợp tác quốc tế, đưa thanh thiếu niên ra thế giới và mang bạn bè quốc tế về
                                 trường.</p>
-                            <a href="hoat-dong-ngoai-khoa.php" class="ct-btn ct-btn-outline">Xem thêm</a>
+                            <a href="javascript:void(0)" class="ct-btn ct-btn-outline">Xem thêm</a>
                         </div>
                     </div>
                 </div>
@@ -1114,7 +1114,7 @@
                             <li>Hình thành những phẩm chất và giá trị cá nhân của công dân thế kỷ 21</li>
                             <li>Xây dựng định hướng nghề nghiệp cho tương lai</li>
                         </ul>
-                        <a href="hoat-dong-ngoai-khoa.php" class="ct-btn ct-btn-outline" style="margin-top:16px;">Xem
+                        <a href="javascript:void(0)" class="ct-btn ct-btn-outline" style="margin-top:16px;">Xem
                             thêm</a>
                     </div>
                     <div class="ct-extra-img">
