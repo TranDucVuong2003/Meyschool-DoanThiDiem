@@ -195,6 +195,7 @@
             height: 220px;
             border-radius: 14px;
             object-fit: cover;
+            object-position: top;
             display: block;
             margin-bottom: 10px;
         }
@@ -284,6 +285,7 @@
             height: 230px;
             border-radius: 12px;
             object-fit: cover;
+            object-position: top;
             display: block;
         }
 
@@ -338,6 +340,7 @@
             width: 100%;
             height: 220px;
             object-fit: cover;
+            object-position: top;
             display: block;
         }
 
@@ -591,7 +594,7 @@
                     </div>
 
                     <div class="ld-hero-card">
-                        <img src="storage/doi-ngu-olym/nguyen-thi-thu-thao.png"
+                        <img src="assets/img/ban-lanh-dao/hiệu trưởng.jpg"
                             alt="Ban lãnh đạo Meyschool Đoàn Thị Điểm">
                         <div class="ld-hero-metrics">
                             <div><b>04</b><span>Nhân sự nòng cốt</span></div>
@@ -622,13 +625,13 @@
                     <article class="ld-card" data-aos="fade-up">
                         <h2>Chân dung lãnh đạo nổi bật</h2>
                         <div class="ld-feature">
-                            <img src="storage/doi-ngu-olym/nguyen-thi-thu-thao.png" alt="Cô Nguyễn Thị Thu Thảo">
+                            <img src="assets/img/ban-lanh-dao/hiệu trưởng.jpg" alt="Thầy Dương Văn Hùng">
                             <div>
-                                <h4>Cô Nguyễn Thị Thu Thảo</h4>
-                                <p class="ld-role">Hiệu trưởng - Người sáng lập</p>
-                                <p>Với hơn 25 năm kinh nghiệm trong lĩnh vực giáo dục, cô Thu Thảo theo đuổi triết lý
+                                <h4>Thầy Dương Văn Hùng</h4>
+                                <p class="ld-role">Hiệu Trưởng</p>
+                                <p>Với hơn 25 năm kinh nghiệm trong lĩnh vực giáo dục, thầy Dương Văn Hùng theo đuổi triết lý
                                     lấy học sinh làm trung tâm, chú trọng phát triển toàn diện và đề cao năng lực học
-                                    tập suốt đời. Định hướng của cô là xây dựng một cộng đồng học tập giàu cảm hứng, nơi
+                                    tập suốt đời. Định hướng của thầy là xây dựng một cộng đồng học tập giàu cảm hứng, nơi
                                     học sinh được khích lệ để tự tin khám phá thế mạnh cá nhân.</p>
                                 <div class="ld-tags">
                                     <span>Quản lý giáo dục</span>
@@ -643,43 +646,20 @@
                         <h2>Đội ngũ ban lãnh đạo</h2>
                         <div class="ld-grid">
                             <div class="ld-member">
-                                <img src="storage/doi-ngu-olym/nguyen-thi-hang-pho-hieu-truong-th-thcs-thac-si-giao-duc-dai-hoc-su-pham-ha-noi.png"
-                                    alt="Cô Nguyễn Thị Hằng">
+                                <img src="assets/img/ban-lanh-dao/hiệu trưởng.jpg" alt="Thầy Dương Văn Hùng">
                                 <div class="ld-member-body">
-                                    <h5>Cô Nguyễn Thị Hằng</h5>
-                                    <small>Phó Hiệu trưởng - Chuyên môn</small>
-                                    <p>Dẫn dắt công tác học thuật, chuẩn hóa chất lượng giảng dạy và phát triển đội ngũ
-                                        giáo viên theo định hướng đổi mới.</p>
+                                    <h5>Thầy Dương Văn Hùng</h5>
+                                    <small>Hiệu Trưởng</small>
+                                    <p>Với hơn 25 năm kinh nghiệm trong lĩnh vực giáo dục, thầy Dương Văn Hùng dẫn dắt nhà trường theo định hướng lấy học sinh làm trung tâm, xây dựng môi trường học tập nhân văn, hiện đại và hội nhập.</p>
                                 </div>
                             </div>
 
                             <div class="ld-member">
-                                <img src="storage/doi-ngu-olym/dang-thu-huong-2.jpg" alt="Cô Đặng Thu Hương">
+                                <img src="assets/img/ban-lanh-dao/hiệu phó.png" alt="Cô Lê Kim Anh">
                                 <div class="ld-member-body">
-                                    <h5>Cô Đặng Thu Hương</h5>
-                                    <small>Trưởng khối Tiểu học</small>
-                                    <p>Phụ trách nền tảng học thuật và kỹ năng cho học sinh tiểu học, đảm bảo lộ trình
-                                        phát triển phù hợp từng độ tuổi.</p>
-                                </div>
-                            </div>
-
-                            <div class="ld-member">
-                                <img src="storage/doi-ngu-olym/nguyen-thi-tam-hien.png" alt="Cô Nguyễn Thị Tâm Hiền">
-                                <div class="ld-member-body">
-                                    <h5>Cô Nguyễn Thị Tâm Hiền</h5>
-                                    <small>Đào tạo và phát triển</small>
-                                    <p>Tổ chức đào tạo giáo viên và triển khai các sáng kiến cải tiến chương trình, thúc
-                                        đẩy chất lượng dạy học bền vững.</p>
-                                </div>
-                            </div>
-
-                            <div class="ld-member">
-                                <img src="storage/doi-ngu-olym/tran-quoc-dan-2.png" alt="Thầy Trần Quốc Dân">
-                                <div class="ld-member-body">
-                                    <h5>Thầy Trần Quốc Dân</h5>
-                                    <small>Quan hệ quốc tế</small>
-                                    <p>Phát triển hợp tác quốc tế, kết nối các chương trình học thuật toàn cầu và mở
-                                        rộng cơ hội hội nhập cho học sinh.</p>
+                                    <h5>Cô Lê Kim Anh</h5>
+                                    <small>Hiệu Phó</small>
+                                    <p>Dẫn dắt công tác học thuật, chuẩn hóa chất lượng giảng dạy và phát triển đội ngũ giáo viên theo định hướng đổi mới, đồng hành cùng học sinh và phụ huynh.</p>
                                 </div>
                             </div>
                         </div>
@@ -687,35 +667,7 @@
 
                     <article class="ld-card" data-aos="fade-up">
                         <h2>Khoảnh khắc lãnh đạo</h2>
-                        <div class="ld-gallery">
-                            <figure class="tall">
-                                <img src="storage/banner/ve-chung-toi-web.jpg"
-                                    alt="Ban lãnh đạo trong hoạt động trường học">
-                                <figcaption>Ban lãnh đạo đồng hành cùng các hoạt động trọng điểm của nhà trường
-                                </figcaption>
-                            </figure>
-                            <figure class="small">
-                                <img src="storage/banner/tieu-hoc.jpg" alt="Lãnh đạo tham gia hoạt động với học sinh">
-                                <figcaption>Kết nối gần gũi với học sinh</figcaption>
-                            </figure>
-                            <figure class="small">
-                                <img src="olympia/images/0201.jpg" alt="Không gian làm việc và học tập tại trường">
-                                <figcaption>Định hướng không gian học tập hiện đại</figcaption>
-                            </figure>
-                            <figure class="wide">
-                                <img src="storage/banner/trung-hoc.jpg" alt="Các chương trình phát triển tại Meyschool">
-                                <figcaption>Kiến tạo chương trình phát triển toàn diện từ tiểu học đến trung học
-                                </figcaption>
-                            </figure>
-                            <figure class="small">
-                                <img src="olympia/images/0202.jpg" alt="Hoạt động chuyên môn giáo viên">
-                                <figcaption>Đầu tư cho đội ngũ giáo viên chất lượng cao</figcaption>
-                            </figure>
-                            <figure class="small">
-                                <img src="olympia/images/0206.jpg" alt="Sự kiện cộng đồng của nhà trường">
-                                <figcaption>Xây dựng cộng đồng học tập nhân văn và hợp tác</figcaption>
-                            </figure>
-                        </div>
+                        <p style="color:#7a9ab5;font-style:italic;">Nội dung đang được cập nhật...</p>
                     </article>
                 </div>
 

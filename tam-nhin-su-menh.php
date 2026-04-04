@@ -84,7 +84,7 @@
         .vm-hero {
             position: relative;
             padding: 112px 0 60px;
-            background: linear-gradient(132deg, rgba(67, 155, 212, 0.95) 0%, rgba(77, 176, 228, 0.92) 72%, rgba(77, 176, 228, 0.84) 100%), url('storage/banner/ve-chung-toi-web.jpg') center/cover no-repeat;
+            background: linear-gradient(132deg, rgba(67, 155, 212, 0.95) 0%, rgba(77, 176, 228, 0.92) 72%, rgba(77, 176, 228, 0.84) 100%), url('assets/img/tamnhin-sumenh-giatricotloi/banner ký kết hợp tác.jpg') center/cover no-repeat;
             overflow: hidden;
         }
 
@@ -574,7 +574,7 @@
                     </div>
 
                     <div class="vm-hero-card">
-                        <img src="storage/banner/ve-chung-toi-web.jpg" alt="Tầm nhìn sứ mệnh Meyschool Đoàn Thị Điểm">
+                        <img src="assets/img/tamnhin-sumenh-giatricotloi/banner ký kết hợp tác.jpg" alt="Tầm nhìn sứ mệnh Meyschool Đoàn Thị Điểm">
                         <div class="vm-hero-metrics">
                             <div><b>2004</b><span>Năm thành lập</span></div>
                             <div><b>2000+</b><span>Học sinh đang theo học</span></div>

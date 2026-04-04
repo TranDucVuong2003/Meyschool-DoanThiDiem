@@ -700,12 +700,12 @@
                     </div>
                     <div class="portrait-card">
                         <div class="portrait-main">
-                            <img src="storage/doi-ngu-olym/nguyen-thi-thu-thao.png" alt="Nhà sáng lập">
+                            <img src="assets/img/anh-giao-vien/571224518_1232520592242867_6534519022383355468_n.jpg" alt="Nhà sáng lập">
                         </div>
                         <div class="portrait-meta">
-                            <img src="storage/banner/ve-chung-toi-web.jpg" alt="Campus">
-                            <img src="storage/banner/tien-tieu-hoc.jpg" alt="Học tập">
-                            <img src="olympia/images/0208.jpg" alt="Trải nghiệm">
+                            <img src="assets/img/anh-giao-vien/z7636896091483_97bdae49b2f2217c1965e54dd7213b67.jpg" alt="Giáo viên 1">
+                            <img src="assets/img/anh-giao-vien/z7636896424727_2275dd36da6e1307914206f64ea3881b.jpg" alt="Giáo viên 2">
+                            <img src="assets/img/anh-giao-vien/z7636896490264_972eafc2029a6f32736ca8ca30923450.jpg" alt="Giáo viên 3">
                         </div>
                         <div
                             style="background:#eef7ff;border-radius:12px;padding:14px 16px;margin-top:10px;text-align:center;">

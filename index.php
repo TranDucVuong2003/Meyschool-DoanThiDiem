@@ -573,7 +573,7 @@
                         <h6><a href="chuong-trinh-mam-non-olympia.html" class="white">Mầm non (4 - 5 tuổi)</a></h6>
                         <div class="level-img-box">
                             <a href="chuong-trinh-mam-non-olympia.html" title="">
-                                <img src="storage/banner/tien-tieu-hoc.jpg" alt="">
+                                <img src="assets/img/chuong-trinh-dao-tao/TUN02875.jpg" alt="">
                             </a>
                         </div>
                     </div>
@@ -581,7 +581,7 @@
                         <h6><a href="chuong-trinh-tieu-hoc-olympia.html" class="white">Tiểu học (lớp 1 - 4)</a></h6>
                         <div class="level-img-box">
                             <a href="chuong-trinh-tieu-hoc-olympia.html" title="">
-                                <img src="storage/banner/tieu-hoc.jpg" alt="">
+                                <img src="assets/img/chuong-trinh-dao-tao/TUN06677.jpg" alt="">
                             </a>
                         </div>
                     </div>
@@ -590,7 +590,7 @@
                                 8)</a></h6>
                         <div class="level-img-box">
                             <a href="chuong-trinh-trung-hoc-co-so-olympia.html" title="">
-                                <img src="storage/banner/trung-hoc.jpg" alt="">
+                                <img src="assets/img/chuong-trinh-dao-tao/TUN09634.jpg" alt="">
                             </a>
                         </div>
                     </div>
@@ -599,7 +599,7 @@
                                 (lớp 9 - 12)</a></h6>
                         <div class="level-img-box">
                             <a href="chuong-trinh-trung-hoc-pho-thong-olympia.html" title="">
-                                <img src="storage/banner/pho-thogn.jpg" alt="">
+                                <img src="assets/img/chuong-trinh-dao-tao/TUN09616.jpg" alt="">
                             </a>
                         </div>
                     </div>
