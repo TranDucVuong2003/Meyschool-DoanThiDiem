@@ -490,7 +490,7 @@ $pageTitle = $isEdit ? 'Sửa bài viết' : 'Thêm bài viết mới';
             }
         }
     </style>
-    <script src="https://cdn.ckeditor.com/4.22.1/full-all/ckeditor.js"></script>
+    <script src="ckeditor/ckeditor.js"></script>
 </head>
 
 <body>

@@ -7,22 +7,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=1"
         name="viewport" />
+
     <link rel="shortcut icon" href="storage/favicon.png">
 
     <title>Sự kiện trường</title>
+    <meta name="description" content="Cập nhật các sự kiện mới nhất của Meyschool Đoàn Thị Điểm">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:site_name" content="The Olympia Schools">
+    <meta property="og:site_name" content="Meyschool Đoàn Thị Điểm">
     <meta property="og:title" content="Sự kiện trường">
-    <meta property="og:description" content="">
-    <meta property="og:url" content="su-kien-truong.html">
+    <meta property="og:description" content="Cập nhật các sự kiện mới nhất của Meyschool Đoàn Thị Điểm">
+    <meta property="og:url" content="su-kien-truong.php">
     <meta property="og:type" content="article">
     <meta property="og:image" content="storage/favicon.png">
     <meta name="twitter:title" content="Sự kiện trường">
-    <meta name="twitter:description" content="">
+    <meta name="twitter:description" content="Cập nhật các sự kiện mới nhất của Meyschool Đoàn Thị Điểm">
 
     <link media="all" type="text/css" rel="stylesheet"
         href="vendor/core/plugins/language/css/language-publice209.css?v=1.0.0">
-    <link href="../unpkg.com/aos%402.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <link rel="stylesheet" href="olympia/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="olympia/css/reset.css">
     <link rel="stylesheet" href="olympia/css/bootstrap-datetimepicker.min.css">
@@ -37,9 +40,436 @@
     <script type="text/javascript" src="olympia/js/jquery.validate.min.js"></script>
     <script type="text/javascript" src="olympia/js/swiper-bundle.min.js"></script>
     <script src="olympia/js/slick.js"></script>
-    <script src="../unpkg.com/aos%402.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <style>
+        nav#admin_bar {
+            display: none;
+        }
+
+        .jq-toast-wrap {
+            display: block;
+            position: fixed;
+            width: 250px;
+            pointer-events: none !important;
+            letter-spacing: normal;
+            z-index: 9000999999999 !important;
+        }
+
+        body.show-admin-bar {
+            margin-top: 0 !important;
+        }
+
+        /* ── Events Page ── */
+        .events-page {
+            background: #fff;
+            color: #222;
+            padding-top: 120px;
+            margin-bottom: 180px;
+        }
+
+        .events-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Breadcrumb */
+        .events-breadcrumb {
+            padding: 20px 0 0;
+        }
+
+        .events-breadcrumb ol {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            font-size: 12px;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .events-breadcrumb ol li+li::before {
+            content: '>';
+            margin-right: 6px;
+            color: #aaa;
+        }
+
+        .events-breadcrumb ol li a {
+            color: #888;
+            text-decoration: none;
+        }
+
+        .events-breadcrumb ol li a:hover {
+            color: #2d6a9f;
+        }
+
+        .events-breadcrumb ol li:last-child {
+            color: #555;
+        }
+
+        /* Heading */
+        .events-heading {
+            padding: 16px 0 28px;
+        }
+
+        .events-heading h1 {
+            margin: 0;
+            font-family: 'Garamond', 'Times New Roman', serif;
+            font-size: 42px;
+            font-weight: 700;
+            font-style: normal;
+            color: #1a1a2e;
+            line-height: 1.2;
+        }
+
+        /* Category tabs */
+        .events-categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 32px;
+            border-bottom: 1px solid #e5e5e5;
+            padding-bottom: 0;
+        }
+
+        .events-cat-btn {
+            background: none;
+            border: none;
+            padding: 8px 16px 12px;
+            font-size: 14px;
+            color: #555;
+            cursor: pointer;
+            position: relative;
+            font-weight: 500;
+            transition: color 0.2s;
+            border-bottom: 2px solid transparent;
+            margin-bottom: -1px;
+        }
+
+        .events-cat-btn:hover {
+            color: #2d6a9f;
+        }
+
+        .events-cat-btn.active {
+            color: #2d6a9f;
+            font-weight: 600;
+            border-bottom-color: #2d6a9f;
+        }
+
+        /* Events grid */
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .events-card {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .events-card:hover .events-card-img img {
+            transform: scale(1.04);
+        }
+
+        .events-card-img {
+            width: 100%;
+            aspect-ratio: 4/3;
+            overflow: hidden;
+            border-radius: 8px;
+            margin-bottom: 12px;
+        }
+
+        .events-card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .events-card-title {
+            margin: 0;
+            font-size: 14px;
+            font-weight: 500;
+            color: #333;
+            line-height: 1.5;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* Pagination */
+        .events-pagination {
+            margin: 44px 0 60px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .pg-btn {
+            min-width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border: none;
+            background: none;
+            color: #555;
+            font-size: 14px;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background 0.15s, color 0.15s;
+        }
+
+        .pg-btn:hover:not(.active):not(.disabled) {
+            background: #f0f0f0;
+        }
+
+        .pg-btn.active {
+            background: #2d6a9f;
+            color: #fff;
+        }
+
+        .pg-btn.disabled {
+            opacity: 0.35;
+            pointer-events: none;
+        }
+
+        .pg-dots {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 36px;
+            height: 36px;
+            font-size: 14px;
+            color: #999;
+            letter-spacing: 2px;
+        }
+
+        @media (max-width: 1024px) {
+            .events-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .events-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .events-heading h1 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <?php include 'includes/header.php'; ?>
+    <div class="overlay_mark_search" style="display:none;"></div>
+
+    <main class="body-content events-page">
+        <div class="events-container">
+            <div class="events-breadcrumb">
+                <ol>
+                    <li><a href="index.php">Trang chủ</a></li>
+                    <li><a href="javascript:;">Tin tức &amp; sự kiện</a></li>
+                    <li>Sự kiện trường</li>
+                </ol>
+            </div>
+
+            <div class="events-heading">
+                <h1>Sự kiện trường</h1>
+            </div>
+
+            <div class="events-categories" id="events-filters">
+                <button class="events-cat-btn active" data-cate="">Tất cả</button>
+            </div>
+
+            <div class="events-grid" id="events-grid">
+                <p style="grid-column:1/-1;text-align:center;color:#999;padding:40px 0;">Đang tải...</p>
+            </div>
+
+            <div class="events-pagination" id="events-pagination"></div>
+        </div>
+    </main>
+
+    <?php include 'includes/footer-dangkytuvan.php'; ?>
+
+    <script src="olympia/js/bootstrap.min.js"></script>
+    <script src="olympia/js/jquery.toast.min.js"></script>
+    <script src="olympia/js/main.js"></script>
+    <script src="vendor/core/plugins/language/js/language-publice209.js?v=1.0.0"></script>
+    <script src="olympia/js/contact.js"></script>
+    <script src="olympia/js/custom.js"></script>
+
+    <script>
+        if (typeof AOS !== 'undefined') {
+            AOS.init({
+                once: true,
+                disable: function() {
+                    return window.innerWidth < 768;
+                }
+            });
+        }
+
+        (function() {
+            var grid = document.getElementById('events-grid');
+            var paginationEl = document.getElementById('events-pagination');
+            var filtersEl = document.getElementById('events-filters');
+            var currentPage = 1;
+            var currentCate = '';
+
+            // Load danh mục từ DB
+            $.getJSON('api/event-categories.php', function(res) {
+                if (res.success && res.data) {
+                    res.data.forEach(function(c) {
+                        if (c.status === 'active') {
+                            var btn = $('<button class="events-cat-btn"></button>');
+                            btn.attr('data-cate', c.id);
+                            btn.text(c.name);
+                            $(filtersEl).append(btn);
+                        }
+                    });
+                    bindFilterEvents();
+                }
+            });
+
+            function bindFilterEvents() {
+                $(filtersEl).on('click', '.events-cat-btn', function() {
+                    $(filtersEl).find('.events-cat-btn').removeClass('active');
+                    $(this).addClass('active');
+                    currentCate = $(this).data('cate');
+                    currentPage = 1;
+                    loadEvents();
+                });
+            }
+
+            function escHtml(str) {
+                var div = document.createElement('div');
+                div.textContent = str;
+                return div.innerHTML;
+            }
+
+            function loadEvents() {
+                var params = 'page=' + currentPage + '&status=xuat-ban';
+                if (currentCate) params += '&category_id=' + currentCate;
+
+                grid.innerHTML =
+                    '<p style="grid-column:1/-1;text-align:center;color:#999;padding:40px 0;">Đang tải...</p>';
+
+                $.getJSON('api/events-public.php?' + params, function(res) {
+                    if (!res.success || !res.data.length) {
+                        grid.innerHTML =
+                            '<p style="grid-column:1/-1;text-align:center;color:#999;padding:40px 0;">Chưa có sự kiện nào.</p>';
+                        paginationEl.innerHTML = '';
+                        return;
+                    }
+
+                    var html = '';
+                    res.data.forEach(function(r) {
+                        var thumb = r.thumbnail || 'storage/favicon.png';
+                        var link = 'doc-su-kien.php?slug=' + encodeURIComponent(r.slug);
+
+                        html += '<a class="events-card" href="' + link + '">';
+                        html += '<div class="events-card-img"><img src="' + escHtml(thumb) + '" alt="' + escHtml(r.title) + '"></div>';
+                        html += '<p class="events-card-title">' + escHtml(r.title) + '</p>';
+                        html += '</a>';
+                    });
+                    grid.innerHTML = html;
+
+                    // Pagination
+                    var totalPages = res.totalPages || 1;
+                    if (totalPages <= 1) {
+                        paginationEl.innerHTML = '';
+                        return;
+                    }
+                    var pages = buildPageNumbers(currentPage, totalPages);
+                    var pagHtml = '';
+                    pages.forEach(function(p) {
+                        if (p === '...') {
+                            pagHtml += '<span class="pg-dots">...</span>';
+                        } else {
+                            pagHtml += '<button class="pg-btn' + (p === currentPage ? ' active' : '') +
+                                '" data-page="' + p + '">' + p + '</button>';
+                        }
+                    });
+                    paginationEl.innerHTML = pagHtml;
+                });
+            }
+
+            function buildPageNumbers(current, total) {
+                var pages = [];
+                if (total <= 10) {
+                    for (var i = 1; i <= total; i++) pages.push(i);
+                    return pages;
+                }
+                var left = Math.max(2, current - 2);
+                var right = Math.min(total - 1, current + 2);
+                pages.push(1);
+                if (left > 2) pages.push('...');
+                for (var j = left; j <= right; j++) pages.push(j);
+                if (right < total - 1) pages.push('...');
+                pages.push(total);
+                return pages;
+            }
+
+            $(paginationEl).on('click', '.pg-btn', function() {
+                currentPage = Number($(this).data('page'));
+                loadEvents();
+                window.scrollTo({
+                    top: document.querySelector('.events-categories').offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            });
+
+            // Init
+            loadEvents();
+        })();
+    </script>
+</body>
+
+</html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:site_name" content="The Olympia Schools">
+<meta property="og:title" content="Sự kiện trường">
+<meta property="og:description" content="">
+<meta property="og:url" content="su-kien-truong.html">
+<meta property="og:type" content="article">
+<meta property="og:image" content="storage/favicon.png">
+<meta name="twitter:title" content="Sự kiện trường">
+<meta name="twitter:description" content="">
+
+<link media="all" type="text/css" rel="stylesheet"
+    href="vendor/core/plugins/language/css/language-publice209.css?v=1.0.0">
+<link href="../unpkg.com/aos%402.3.1/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="olympia/css/swiper-bundle.min.css">
+<link rel="stylesheet" href="olympia/css/reset.css">
+<link rel="stylesheet" href="olympia/css/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" href="olympia/css/fonts.css">
+<link rel="stylesheet" href="olympia/css/style.css">
+<link rel="stylesheet" href="olympia/css/styles-new.css">
+<link type="image/x-icon" href="#" rel="shortcut icon" />
+<link rel="stylesheet" type="text/css" href="olympia/css/slick.css">
+<link rel="stylesheet" type="text/css" href="olympia/css/slick-theme.css">
+<link rel="stylesheet" type="text/css" href="olympia/css/jquery.toast.min.css">
+<script type="text/javascript" src="olympia/js/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="olympia/js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="olympia/js/swiper-bundle.min.js"></script>
+<script src="olympia/js/slick.js"></script>
+<script src="../unpkg.com/aos%402.3.1/dist/aos.js"></script>
+
+<style>
     nav#admin_bar {
         display: none;
     }
@@ -405,7 +835,7 @@
             grid-template-columns: 1fr;
         }
     }
-    </style>
+</style>
 </head>
 
 <body>
@@ -550,35 +980,35 @@
     <script src="olympia/js/custom.js"></script>
 
     <script>
-    AOS.init({
-        once: true,
-        disable: function() {
-            return window.innerWidth < 768;
-        }
-    });
+        AOS.init({
+            once: true,
+            disable: function() {
+                return window.innerWidth < 768;
+            }
+        });
 
-    (function() {
-        var tabs = document.querySelectorAll('#ac-tabs .ac-tab');
-        var cards = document.querySelectorAll('#ac-grid .ac-item');
+        (function() {
+            var tabs = document.querySelectorAll('#ac-tabs .ac-tab');
+            var cards = document.querySelectorAll('#ac-grid .ac-item');
 
-        tabs.forEach(function(tab) {
-            tab.addEventListener('click', function() {
-                tabs.forEach(function(t) {
-                    t.classList.remove('active');
-                });
-                tab.classList.add('active');
+            tabs.forEach(function(tab) {
+                tab.addEventListener('click', function() {
+                    tabs.forEach(function(t) {
+                        t.classList.remove('active');
+                    });
+                    tab.classList.add('active');
 
-                var year = tab.getAttribute('data-year');
-                cards.forEach(function(card) {
-                    if (year === 'all' || card.getAttribute('data-year') === year) {
-                        card.style.display = 'flex';
-                    } else {
-                        card.style.display = 'none';
-                    }
+                    var year = tab.getAttribute('data-year');
+                    cards.forEach(function(card) {
+                        if (year === 'all' || card.getAttribute('data-year') === year) {
+                            card.style.display = 'flex';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
                 });
             });
-        });
-    })();
+        })();
     </script>
 </body>
 

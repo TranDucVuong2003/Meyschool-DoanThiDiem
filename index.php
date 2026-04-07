@@ -620,64 +620,113 @@
         <section id="olympia-event" class="bg-471873">
             <div class="olympia-event">
                 <h2 class="color-f font-garamond-bold">Hoạt động tại Meyschool</h2>
+
                 <div class="flex-center-between mgb-30">
                     <div class="olympia-event-entry-title font-24 text-underline font-weight-bold mgb-0">Tin tức</div>
                     <a href="tin-tuc.php" title="" class="link-button righthover color-f">Tất cả tin tức
                         <img class="white" src="olympia/images/button-1-3.svg" alt=""></a>
                 </div>
+
                 <div class="olym_news mgb-30">
                     <div class="row" id="home-news-row">
                         <div class="col-md-12" style="text-align:center;color:rgba(255,255,255,0.6);padding:40px 0;">
                             Đang tải...</div>
                     </div>
                 </div>
+
                 <div class="olym_events mgb-30">
-                    <div class="row" id="home-news-row-2">
+                    <div class="row" id="home-news-row-2"></div>
+                </div>
+
+                <section class="ts-news-section" style="padding:20px 0 10px; margin-bottom: 10px;">
+                    <div class="flex-center-between mgb-30">
+                        <div class="olympia-event-entry-title font-24 text-underline font-weight-bold mgb-0">Tin tức</div>
+                        <!-- <a href="tin-tuc.php" title="" class="link-button righthover color-f">Tất cả tin tức -->
+                            <!-- <img class="white" src="olympia/images/button-1-3.svg" alt=""></a> -->
                     </div>
-                </div>
-                <div class="flex-center-between mgb-30">
-                    <div class="olympia-event-entry-title font-24 text-underline font-weight-bold mgb-0">Sự kiện</div>
-                    <a href="su-kien.html" title="" class="link-button righthover color-f">Tất cả sự kiện
-                        <img class="white" src="olympia/images/button-1-3.svg" alt=""></a>
-                </div>
-                <div class="olym_events mgb-30">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class="olympia-event-date">
-                                <span class="time">17/01/2026</span>
-                                <span class="event-name"><a
-                                        href="xuan-olympia-2026-gieo-mam-hanh-phuc-mo-loi-tuong-lai.html" title="">Xuân
-                                        Meyschool 2026: Gieo mầm hạnh phúc, mở lối tương lai</a></span>
+
+                    <div class="ts-news-slider">
+                        <div class="ts-news-card">
+                            <a href="https://hanoimoi.vn/truong-th-doan-thi-diem-ha-noi-don-nhan-danh-hieu-anh-hung-lao-dong-731567.html" target="_blank" rel="noopener" style="display:block;">
+                                <img src="assets/img/tin-tuc/ede751688b0805565c19.jpg" alt="Trường TH Đoàn Thị Điểm Hà Nội đón nhận danh hiệu Anh hùng Lao động">
+                            </a>
+                            <div class="ts-news-card-body">
+                                <h3><a href="https://hanoimoi.vn/truong-th-doan-thi-diem-ha-noi-don-nhan-danh-hieu-anh-hung-lao-dong-731567.html" target="_blank" rel="noopener">Trường TH Đoàn Thị Điểm - Hà Nội đón nhận danh hiệu Anh hùng Lao động</a></h3>
+                                <a href="https://hanoimoi.vn/truong-th-doan-thi-diem-ha-noi-don-nhan-danh-hieu-anh-hung-lao-dong-731567.html" target="_blank" rel="noopener" class="ts-news-link">Xem thêm <span>→</span></a>
                             </div>
                         </div>
-                        <div class="col-md-3">
-                            <div class="olympia-event-date">
-                                <span class="time">15/12/2025</span>
-                                <span class="event-name"><a
-                                        href="ngay-hoi-trai-nghiem-giai-ma-hanh-trinh-truong-thanh.html" title="">Ngày
-                                        hội trải nghiệm | Giải mã hành trình trưởng thành</a></span>
+                        <div class="ts-news-card">
+                            <a href="https://giaoduc.net.vn/30-nam-tien-phong-doi-moi-truong-th-doan-thi-diem-ha-noi-don-nhan-danh-hieu-anh-hung-lao-dong-post257603.gd" target="_blank" rel="noopener" style="display:block;">
+                                <img src="assets/img/tin-tuc/images.jpg" alt="30 năm tiên phong đổi mới Trường TH Đoàn Thị Điểm">
+                            </a>
+                            <div class="ts-news-card-body">
+                                <h3><a href="https://giaoduc.net.vn/30-nam-tien-phong-doi-moi-truong-th-doan-thi-diem-ha-noi-don-nhan-danh-hieu-anh-hung-lao-dong-post257603.gd" target="_blank" rel="noopener">30 năm tiên phong đổi mới, Trường TH Đoàn Thị Điểm - Hà Nội đón nhận danh hiệu Anh hùng Lao động</a></h3>
+                                <a href="https://giaoduc.net.vn/30-nam-tien-phong-doi-moi-truong-th-doan-thi-diem-ha-noi-don-nhan-danh-hieu-anh-hung-lao-dong-post257603.gd" target="_blank" rel="noopener" class="ts-news-link">Xem thêm <span>→</span></a>
                             </div>
                         </div>
-                        <div class="col-md-3">
-                            <div class="olympia-event-date">
-                                <span class="time">15/12/2025</span>
-                                <span class="event-name"><a
-                                        href="hoc-bong-thcs-griffin-juniors-2026-khoi-day-ban-sac-phat-trien-tu-duy.html"
-                                        title="">Học bổng THCS Griffin Juniors 2026 - Khơi dậy bản sắc, phát triển tư
-                                        duy</a></span>
+                        <div class="ts-news-card">
+                            <a href="https://nhandan.vn/anh-ngoi-truong-tieu-hoc-anh-hung-lao-dong-o-thu-do-ha-noi-post933413.html" target="_blank" rel="noopener" style="display:block;">
+                                <img src="assets/img/tin-tuc/z7369054786972-1a0cb760778270bac2703d36eb1c4ce3.jpg" alt="Ngôi trường tiểu học Anh hùng Lao động ở thủ đô Hà Nội">
+                            </a>
+                            <div class="ts-news-card-body">
+                                <h3><a href="https://nhandan.vn/anh-ngoi-truong-tieu-hoc-anh-hung-lao-dong-o-thu-do-ha-noi-post933413.html" target="_blank" rel="noopener">Ngôi trường tiểu học "Anh hùng Lao động" ở thủ đô Hà Nội</a></h3>
+                                <a href="https://nhandan.vn/anh-ngoi-truong-tieu-hoc-anh-hung-lao-dong-o-thu-do-ha-noi-post933413.html" target="_blank" rel="noopener" class="ts-news-link">Xem thêm <span>→</span></a>
                             </div>
                         </div>
-                        <div class="col-md-3">
-                            <div class="olympia-event-date">
-                                <span class="time">15/12/2025</span>
-                                <span class="event-name"><a
-                                        href="hoc-bong-tai-nang-thpt-song-ngu-griffin-seniors-2026.html" title="">Học
-                                        bổng THPT Song ngữ Griffin Seniors 2026 - Chinh phục đỉnh cao, vững vàng bản
-                                        lĩnh</a></span>
+                        <div class="ts-news-card">
+                            <a href="#" style="display:block;">
+                                <img src="assets/img/tin-tuc/z7672862397810-589fba3abb7ad0d4017e09b5151bc656.jpg" alt="Trường THCS Đoàn Thị Điểm đón nhận Huân chương Lao động Hạng Nhì">
+                            </a>
+                            <div class="ts-news-card-body">
+                                <h3><a href="#">Trường THCS Đoàn Thị Điểm đón nhận Huân chương Lao động Hạng Nhì</a></h3>
+                                <a href="#" class="ts-news-link">Xem thêm <span>→</span></a>
+                            </div>
+                        </div>
+                        <div class="ts-news-card">
+                            <a href="#" style="display:block;">
+                                <img src="assets/img/tin-tuc/3.jpg" alt="Meyschool Đoàn Thị Điểm Phú Quốc tuyển sinh lớp 1 - 8">
+                            </a>
+                            <div class="ts-news-card-body">
+                                <h3><a href="#">Meyschool Đoàn Thị Điểm Phú Quốc tuyển sinh lớp 1 - 8, nhiều học bổng hấp dẫn</a></h3>
+                                <a href="#" class="ts-news-link">Xem thêm <span>→</span></a>
                             </div>
                         </div>
                     </div>
-                </div>
+
+                    <style>
+                        #olympia-event .ts-news-slider { margin: 0; padding: 0 46px; }
+                        #olympia-event .ts-news-slider .slick-slide { padding: 0 12px; }
+                        #olympia-event .ts-news-slider .slick-list { overflow: hidden; }
+                        #olympia-event .ts-news-card { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 24px rgba(23, 52, 93, .08); transition: transform .3s, box-shadow .3s; }
+                        #olympia-event .ts-news-card:hover { transform: translateY(-6px); box-shadow: 0 12px 36px rgba(23, 52, 93, .14); }
+                        #olympia-event .ts-news-card img { width: 100%; height: 220px; object-fit: cover; display: block; }
+                        #olympia-event .ts-news-card-body { padding: 20px 22px 24px; }
+                        #olympia-event .ts-news-card-body h3 { font-size: 16px; font-weight: 700; line-height: 1.5; margin: 0 0 16px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+                        #olympia-event .ts-news-card-body h3 a { color: #23336b; text-decoration: none; }
+                        #olympia-event .ts-news-link { font-size: 14px; font-weight: 600; color: #4aa6d9; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; }
+                        #olympia-event .ts-news-link span { font-size: 18px; }
+                        #olympia-event .ts-news-slider .slick-prev, #olympia-event .ts-news-slider .slick-next { width: 44px; height: 44px; z-index: 20; background: #fff; border-radius: 50%; box-shadow: 0 2px 12px rgba(23, 52, 93, .15); }
+                        #olympia-event .ts-news-slider .slick-prev { left: 4px; }
+                        #olympia-event .ts-news-slider .slick-next { right: 4px; }
+                        #olympia-event .ts-news-slider .slick-prev:before, #olympia-event .ts-news-slider .slick-next:before { color: #23336b; font-size: 20px; opacity: 1; }
+                        #olympia-event .ts-news-slider .slick-dots { bottom: -40px; }
+                        #olympia-event .ts-news-slider .slick-dots li button:before { font-size: 10px; color: #c5d3e0; opacity: 1; }
+                        #olympia-event .ts-news-slider .slick-dots li.slick-active button:before { color: #4aa6d9; }
+                        @media(max-width:1220px) {
+                            #olympia-event .ts-news-slider { padding: 0 38px; }
+                            #olympia-event .ts-news-slider .slick-prev { left: 2px; }
+                            #olympia-event .ts-news-slider .slick-next { right: 2px; }
+                        }
+                        @media(max-width:768px) {
+                            #olympia-event .ts-news-slider { padding: 0 30px; }
+                            #olympia-event .ts-news-card img { height: 180px; }
+                            #olympia-event .ts-news-slider .slick-prev, #olympia-event .ts-news-slider .slick-next { width: 36px; height: 36px; }
+                            #olympia-event .ts-news-slider .slick-prev { left: 0; }
+                            #olympia-event .ts-news-slider .slick-next { right: 0; }
+                            #olympia-event .ts-news-slider .slick-prev:before, #olympia-event .ts-news-slider .slick-next:before { font-size: 16px; }
+                        }
+                    </style>
+                </section>
             </div>
         </section>
         <!-- Section: Cảm nhận của phụ huynh và học sinh -->
@@ -1115,6 +1164,34 @@
         }
 
         newSlick()
+
+        if ($('.ts-news-slider').length) {
+            if ($('.ts-news-slider').hasClass('slick-initialized')) {
+                $('.ts-news-slider').slick('unslick');
+            }
+            $('.ts-news-slider').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                infinite: false,
+                dots: true,
+                arrows: true,
+                autoplay: true,
+                autoplaySpeed: 4000,
+                prevArrow: '<button class="slick-prev"><span>&#10094;</span></button>',
+                nextArrow: '<button class="slick-next"><span>&#10095;</span></button>',
+                responsive: [{
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                }, {
+                    breakpoint: 576,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }]
+            });
+        }
     })
 </script>
 

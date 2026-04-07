@@ -475,7 +475,7 @@ $pageTitle = $isEdit ? 'Sửa thông báo' : 'Thêm thông báo mới';
             }
         }
     </style>
-    <script src="https://cdn.ckeditor.com/4.22.1/full-all/ckeditor.js"></script>
+    <script src="ckeditor/ckeditor.js"></script>
 </head>
 
 <body>

@@ -119,6 +119,9 @@ $_sidebar_page = basename($_SERVER['PHP_SELF']);
         <a href="su-kien-admin.php" class="nav-item <?= ($_sidebar_page === 'su-kien-admin.php' || $_sidebar_page === 'them-su-kien.php') ? 'active' : '' ?>">
             Sự kiện trường
         </a>
+        <a href="thanh-tich-admin.php" class="nav-item <?= ($_sidebar_page === 'thanh-tich-admin.php' || $_sidebar_page === 'them-thanh-tich.php') ? 'active' : '' ?>">
+            Thành tích
+        </a>
 
         <div class="nav-section">Hệ thống</div>
         <a href="cau-hinh.php" class="nav-item <?= $_sidebar_page === 'cau-hinh.php' ? 'active' : '' ?>">

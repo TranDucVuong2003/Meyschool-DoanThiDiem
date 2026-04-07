@@ -140,7 +140,8 @@
         gap: 16px;
     }
 
-    .uniform-lookbook img {
+    .uniform-lookbook img,
+    .uniform-lookbook .img-empty {
         width: 100%;
         height: 240px;
         object-fit: cover;
@@ -186,7 +187,8 @@
         margin-top: 50px;
     }
 
-    .uniform-detail img {
+    .uniform-detail img,
+    .uniform-detail .img-empty {
         width: 100%;
         height: 320px;
         object-fit: cover;
@@ -213,7 +215,8 @@
         margin-top: 32px;
     }
 
-    .uniform-gallery img {
+    .uniform-gallery img,
+    .uniform-gallery .img-empty {
         width: 100%;
         height: 160px;
         object-fit: cover;
@@ -306,10 +309,10 @@
                         mọi hoạt động học tập, ngoại khóa.</p>
                 </div>
                 <div class="uniform-lookbook">
-                    <img src="olympia/images/noibat_6.jpg" alt="Đồng phục thường ngày">
-                    <img src="olympia/images/noibat_2.jpg" alt="Đồng phục thể thao">
-                    <img src="olympia/images/noibat_4.jpg" alt="Đồng phục dự lễ">
-                    <img src="olympia/images/noibat_7.jpg" alt="Đồng phục mùa đông">
+                    <div class="img-empty"></div>
+                    <div class="img-empty"></div>
+                    <div class="img-empty"></div>
+                    <div class="img-empty"></div>
                 </div>
             </div>
         </section>
@@ -336,7 +339,7 @@
                 </div>
 
                 <div class="uniform-detail">
-                    <img src="storage/banner/trung-hoc.jpg" alt="Chi tiết chất liệu">
+                    <div class="img-empty"></div>
                     <div>
                         <h3>Thiết kế đồng bộ, thoải mái cho mọi hoạt động</h3>
                         <p>Đồng phục Meyschool ưu tiên form dáng gọn gàng, chất liệu thấm hút tốt và bền màu, đảm bảo
@@ -348,12 +351,12 @@
 
                 <h3 style="color: var(--blue-1); font-size: 28px; margin: 40px 0 18px;">Bộ sưu tập đồng phục</h3>
                 <div class="uniform-gallery">
-                    <img class="wide" src="olympia/images/noibat_6.jpg" alt="Đồng phục học sinh">
-                    <img src="olympia/images/noibat_2.jpg" alt="Đồng phục thể thao">
-                    <img src="olympia/images/noibat_4.jpg" alt="Đồng phục dự lễ">
-                    <img class="wide" src="olympia/images/noibat_7.jpg" alt="Đồng phục mùa đông">
-                    <img src="storage/banner/tieu-hoc.jpg" alt="Hoạt động học đường">
-                    <img src="storage/banner/tien-tieu-hoc.jpg" alt="Phong cách học đường">
+                    <div class="img-empty wide"></div>
+                    <div class="img-empty"></div>
+                    <div class="img-empty"></div>
+                    <div class="img-empty wide"></div>
+                    <div class="img-empty"></div>
+                    <div class="img-empty"></div>
                 </div>
 
                 <div class="uniform-cta">

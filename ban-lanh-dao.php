@@ -123,6 +123,8 @@
             border: 1px solid rgba(255, 255, 255, 0.38);
             border-radius: 999px;
             padding: 8px 16px;
+            z-index: 10;
+            max-width: 100%;
         }
 
         .ld-breadcrumb li,
@@ -139,7 +141,7 @@
 
         .ld-hero-grid {
             display: grid;
-            grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr);
+            grid-template-columns: minmax(0, 1.1fr) minmax(360px, 0.9fr);
             gap: 24px;
             align-items: center;
             position: relative;
@@ -187,17 +189,18 @@
             border: 1px solid rgba(67, 155, 212, 0.24);
             border-radius: 22px;
             box-shadow: 0 16px 32px rgba(13, 54, 88, 0.22);
-            padding: 16px;
+            padding: 12px;
+            overflow: hidden;
         }
 
         .ld-hero-card img {
             width: 100%;
-            height: 220px;
+            height: 300px;
             border-radius: 14px;
             object-fit: cover;
-            object-position: top;
+            object-position: 50% 22%;
             display: block;
-            margin-bottom: 10px;
+            margin-bottom: 0;
         }
 
         .ld-hero-metrics {
@@ -281,11 +284,12 @@
         }
 
         .ld-feature img {
-            width: 100%;
-            height: 230px;
+            width: 75%;
+            height: 260px;
             border-radius: 12px;
-            object-fit: cover;
-            object-position: top;
+            object-fit: contain;
+            object-position: center;
+            background: #eef5fb;
             display: block;
         }
 
@@ -338,9 +342,10 @@
 
         .ld-member img {
             width: 100%;
-            height: 220px;
-            object-fit: cover;
-            object-position: top;
+            height: 340px;
+            object-fit: contain;
+            object-position: center;
+            background: #eef5fb;
             display: block;
         }
 
@@ -538,8 +543,50 @@
                 padding: 94px 0 42px;
             }
 
+            .ld-hero .ld-breadcrumb {
+                position: static !important;
+                left: auto !important;
+                top: auto !important;
+                bottom: auto !important;
+                transform: none !important;
+                float: none !important;
+                clear: both;
+                margin: 0 0 12px 0;
+                padding: 7px 12px;
+                gap: 6px;
+            }
+
+            .ld-hero .ld-breadcrumb li,
+            .ld-hero .ld-breadcrumb li a {
+                float: none !important;
+                display: inline-flex;
+                align-items: center;
+                font-size: 12px;
+                line-height: 1.3;
+            }
+
+            .ld-hero h1 {
+                font-size: 34px;
+                line-height: 1.12;
+            }
+
             .ld-hero p {
                 font-size: 15px;
+                line-height: 1.65;
+            }
+
+            .ld-chips {
+                margin-top: 14px;
+                gap: 8px;
+            }
+
+            .ld-chips span {
+                font-size: 12px;
+                padding: 7px 10px;
+            }
+
+            .ld-hero-card img {
+                height: 260px;
             }
 
             .ld-hero-metrics {
@@ -557,11 +604,26 @@
             }
 
             .ld-feature img {
-                height: 250px;
+                height: 220px;
+            }
+
+            .ld-member img {
+                height: 260px;
             }
 
             .ld-gallery {
                 grid-template-columns: 1fr;
+            }
+
+            .ld-breadcrumb {
+                padding: 6px 12px;
+                gap: 4px;
+                font-size: 12px;
+            }
+
+            .ld-breadcrumb li,
+            .ld-breadcrumb li a {
+                font-size: 12px;
             }
         }
     </style>
@@ -594,13 +656,13 @@
                     </div>
 
                     <div class="ld-hero-card">
-                        <img src="assets/img/ban-lanh-dao/hiệu trưởng.jpg"
+                        <img src="assets/img/hieu-truong-ba-hoc_sinh.jpg"
                             alt="Ban lãnh đạo Meyschool Đoàn Thị Điểm">
-                        <div class="ld-hero-metrics">
+                        <!-- <div class="ld-hero-metrics">
                             <div><b>04</b><span>Nhân sự nòng cốt</span></div>
                             <div><b>20+</b><span>Năm kinh nghiệm trung bình</span></div>
                             <div><b>100%</b><span>Sau đại học và chứng chỉ chuyên môn</span></div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -625,7 +687,7 @@
                     <article class="ld-card" data-aos="fade-up">
                         <h2>Chân dung lãnh đạo nổi bật</h2>
                         <div class="ld-feature">
-                            <img src="assets/img/ban-lanh-dao/hiệu trưởng.jpg" alt="Thầy Dương Văn Hùng">
+                            <img src="assets/img/hieu-truong-ba-hoc_sinh.jpg" alt="Thầy Dương Văn Hùng">
                             <div>
                                 <h4>Thầy Dương Văn Hùng</h4>
                                 <p class="ld-role">Hiệu Trưởng</p>
@@ -646,7 +708,7 @@
                         <h2>Đội ngũ ban lãnh đạo</h2>
                         <div class="ld-grid">
                             <div class="ld-member">
-                                <img src="assets/img/ban-lanh-dao/hiệu trưởng.jpg" alt="Thầy Dương Văn Hùng">
+                                <img src="assets/img/hieu-truong-ba-hoc_sinh.jpg" alt="Thầy Dương Văn Hùng">
                                 <div class="ld-member-body">
                                     <h5>Thầy Dương Văn Hùng</h5>
                                     <small>Hiệu Trưởng</small>

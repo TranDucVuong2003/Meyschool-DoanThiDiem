@@ -1036,7 +1036,7 @@
                         </div>
                     </div>
                     <div class="ct-card ct-prog-card">
-                        <img src="assets/img/chuong-trinh-dao-tao/TUN09614.jpg" alt="Chương trình Tin học và Công nghệ">
+                        <img src="assets/img/TUN00142.jpg" alt="Chương trình Tin học và Công nghệ">
                         <div class="ct-prog-body">
                             <h3>Chương trình Tin học và Công nghệ (ICT)</h3>
                             <p>Tích hợp khoa học với các giá trị phát triển và ứng dụng công nghệ thông tin vào giáo
