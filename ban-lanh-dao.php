@@ -47,585 +47,585 @@
 
     <link rel="alternate" href="en.html" hreflang="en" />
     <style>
-        nav#admin_bar {
-            display: none;
+    nav#admin_bar {
+        display: none;
+    }
+
+    .jq-toast-wrap {
+        display: block;
+        position: fixed;
+        width: 250px;
+        pointer-events: none !important;
+        letter-spacing: normal;
+        z-index: 9000999999999 !important;
+    }
+
+    body.show-admin-bar {
+        margin-top: 0 !important;
+    }
+
+    :root {
+        --ld-blue-1: #439bd4;
+        --ld-blue-2: #4db0e4;
+        --ld-blue-3: #eaf7ff;
+        --ld-ink: #214762;
+    }
+
+    .ld-page {
+        background: radial-gradient(circle at 0% 0%, #eaf7ff 0%, #f6fbff 46%, #ffffff 100%);
+        color: var(--ld-ink);
+    }
+
+    .ld-wrap {
+        width: min(95vw, 1520px);
+        margin: 0 auto;
+    }
+
+    .ld-hero {
+        position: relative;
+        padding: 110px 0 58px;
+        overflow: hidden;
+        background: linear-gradient(132deg, rgba(67, 155, 212, 0.95) 0%, rgba(77, 176, 228, 0.92) 72%, rgba(77, 176, 228, 0.84) 100%), url('storage/banner/ve-chung-toi-web.jpg') center/cover no-repeat;
+    }
+
+    .ld-hero::before,
+    .ld-hero::after {
+        content: '';
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.18);
+        pointer-events: none;
+    }
+
+    .ld-hero::before {
+        width: 360px;
+        height: 360px;
+        top: -120px;
+        right: -120px;
+    }
+
+    .ld-hero::after {
+        width: 230px;
+        height: 230px;
+        left: -80px;
+        bottom: -90px;
+    }
+
+    .ld-breadcrumb {
+        position: relative;
+        left: 0;
+        margin: 0 auto 14px 0;
+        align-self: flex-start;
+        display: inline-flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        background: rgba(255, 255, 255, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.38);
+        border-radius: 999px;
+        padding: 8px 16px;
+        z-index: 10;
+        max-width: 100%;
+    }
+
+    .ld-breadcrumb li,
+    .ld-breadcrumb li a {
+        color: #fff;
+        font-size: 13px;
+    }
+
+    .ld-hero-grid>div:first-child {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .ld-hero-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.1fr) minmax(360px, 0.9fr);
+        gap: 24px;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+    }
+
+    .ld-hero h1 {
+        margin: 0;
+        color: #fff;
+        font-family: 'Garamond', serif;
+        font-size: clamp(34px, 4.6vw, 62px);
+        line-height: 1.06;
+        max-width: 860px;
+    }
+
+    .ld-hero p {
+        margin: 16px 0 0;
+        color: rgba(255, 255, 255, 0.95);
+        line-height: 1.78;
+        font-size: 17px;
+        max-width: 820px;
+    }
+
+    .ld-chips {
+        margin-top: 18px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .ld-chips span {
+        display: inline-flex;
+        align-items: center;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        background: rgba(255, 255, 255, 0.2);
+        color: #fff;
+        font-size: 13px;
+        font-weight: 700;
+        padding: 8px 12px;
+    }
+
+    .ld-hero-card {
+        background: rgba(255, 255, 255, 0.94);
+        border: 1px solid rgba(67, 155, 212, 0.24);
+        border-radius: 22px;
+        box-shadow: 0 16px 32px rgba(13, 54, 88, 0.22);
+        padding: 12px;
+        overflow: hidden;
+    }
+
+    .ld-hero-card img {
+        width: 100%;
+        height: 300px;
+        border-radius: 14px;
+        object-fit: cover;
+        object-position: 50% 22%;
+        display: block;
+        margin-bottom: 0;
+    }
+
+    .ld-hero-metrics {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .ld-hero-metrics div {
+        border: 1px solid rgba(67, 155, 212, 0.2);
+        border-radius: 12px;
+        background: #fff;
+        padding: 10px;
+    }
+
+    .ld-hero-metrics b {
+        display: block;
+        color: #2d7bb1;
+        font-size: 23px;
+        margin-bottom: 4px;
+    }
+
+    .ld-hero-metrics span {
+        color: #4b6f8c;
+        font-size: 12px;
+        line-height: 1.45;
+    }
+
+    .ld-content {
+        padding: 40px 0 72px;
+        margin-bottom: 100px;
+    }
+
+    .ld-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1.35fr) minmax(290px, 0.65fr);
+        gap: 24px;
+    }
+
+    .ld-main {
+        display: grid;
+        gap: 24px;
+    }
+
+    .ld-card,
+    .ld-side-card {
+        background: #fff;
+        border: 1px solid rgba(67, 155, 212, 0.16);
+        border-radius: 20px;
+        box-shadow: 0 12px 24px rgba(16, 49, 79, 0.08);
+        padding: 22px;
+    }
+
+    .ld-card h2,
+    .ld-side-card h3 {
+        margin: 0 0 12px;
+        color: #236c9d;
+        font-family: 'Garamond', serif;
+        font-size: 33px;
+        line-height: 1.2;
+        padding: 0 !important;
+    }
+
+    .ld-card p,
+    .ld-card li,
+    .ld-side-card p,
+    .ld-side-card li {
+        color: #3f6686;
+        font-size: 15px;
+        line-height: 1.76;
+    }
+
+    .ld-feature {
+        display: grid;
+        grid-template-columns: 260px minmax(0, 1fr);
+        gap: 16px;
+        border: 1px solid rgba(67, 155, 212, 0.22);
+        border-radius: 16px;
+        padding: 14px;
+        background: linear-gradient(120deg, #f4fbff 0%, #eaf7ff 100%);
+    }
+
+    .ld-feature img {
+        width: 75%;
+        height: 260px;
+        border-radius: 12px;
+        object-fit: contain;
+        object-position: center;
+        background: #eef5fb;
+        display: block;
+    }
+
+    .ld-feature h4 {
+        margin: 0 0 4px;
+        font-size: 24px;
+        color: #2d7bb1;
+        font-family: 'Garamond', serif;
+    }
+
+    .ld-role {
+        margin: 0 0 10px;
+        color: #4f7a9c;
+        font-size: 13px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+
+    .ld-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 10px;
+    }
+
+    .ld-tags span {
+        border-radius: 999px;
+        border: 1px solid rgba(67, 155, 212, 0.26);
+        background: #fff;
+        color: #2d7bb1;
+        font-size: 12px;
+        font-weight: 700;
+        padding: 6px 10px;
+    }
+
+    .ld-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 12px;
+    }
+
+    .ld-member {
+        border: 1px solid rgba(67, 155, 212, 0.2);
+        border-radius: 14px;
+        overflow: hidden;
+        background: #fff;
+    }
+
+    .ld-member img {
+        width: 100%;
+        height: 340px;
+        object-fit: contain;
+        object-position: center;
+        background: #eef5fb;
+        display: block;
+    }
+
+    .ld-member-body {
+        padding: 12px;
+    }
+
+    .ld-member h5 {
+        margin: 0 0 4px;
+        color: #2f79ad;
+        font-size: 18px;
+        font-family: 'Garamond', serif;
+    }
+
+    .ld-member small {
+        display: block;
+        color: #5f7f99;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+        margin-bottom: 6px;
+    }
+
+    .ld-member p {
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .ld-gallery {
+        display: grid;
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        grid-auto-flow: dense;
+        gap: 10px;
+    }
+
+    .ld-gallery figure {
+        margin: 0;
+        border-radius: 12px;
+        overflow: hidden;
+        min-height: 180px;
+        position: relative;
+        box-shadow: 0 10px 20px rgba(16, 49, 79, 0.12);
+    }
+
+    .ld-gallery img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .ld-gallery figure.tall {
+        grid-column: span 2;
+        grid-row: span 2;
+        min-height: 370px;
+    }
+
+    .ld-gallery figure.wide {
+        grid-column: span 4;
+    }
+
+    .ld-gallery figure.small {
+        grid-column: span 2;
+    }
+
+    .ld-gallery figcaption {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        color: #fff;
+        font-size: 13px;
+        font-weight: 700;
+        padding: 10px 12px;
+        background: linear-gradient(to top, rgba(20, 60, 92, 0.88), rgba(20, 60, 92, 0));
+    }
+
+    .ld-side {
+        display: grid;
+        gap: 16px;
+        align-self: start;
+    }
+
+    .ld-links {
+        display: grid;
+        gap: 10px;
+    }
+
+    .ld-links a {
+        display: block;
+        text-decoration: none;
+        color: #2f638f;
+        border: 1px solid rgba(67, 155, 212, 0.18);
+        border-radius: 12px;
+        background: #f9fdff;
+        padding: 10px 12px;
+        font-size: 14px;
+        line-height: 1.55;
+    }
+
+    .ld-links a:hover {
+        background: #eaf7ff;
+    }
+
+    .ld-contact-item {
+        background: #f7fcff;
+        border: 1px solid rgba(67, 155, 212, 0.22);
+        border-radius: 12px;
+        padding: 10px 12px;
+        margin-bottom: 10px;
+    }
+
+    .ld-contact-item b {
+        display: block;
+        color: #2d7bb1;
+        font-size: 13px;
+        margin-bottom: 4px;
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+    }
+
+    .ld-contact-item span {
+        color: #204c70;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .ld-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 12px;
+    }
+
+    .ld-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        padding: 10px 16px;
+        border-radius: 12px;
+        text-decoration: none;
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+        font-weight: 700;
+        border: 1px solid transparent;
+    }
+
+    .ld-btn-primary {
+        color: #fff;
+        background: linear-gradient(120deg, var(--ld-blue-1), var(--ld-blue-2));
+        box-shadow: 0 10px 20px rgba(67, 155, 212, 0.24);
+    }
+
+    .ld-btn-light {
+        color: #2b79af;
+        background: #f7fcff;
+        border-color: rgba(67, 155, 212, 0.25);
+    }
+
+    @media (max-width: 1180px) {
+
+        .ld-hero-grid,
+        .ld-layout {
+            grid-template-columns: 1fr;
         }
 
-        .jq-toast-wrap {
-            display: block;
-            position: fixed;
-            width: 250px;
-            pointer-events: none !important;
-            letter-spacing: normal;
-            z-index: 9000999999999 !important;
+        .ld-grid {
+            grid-template-columns: 1fr;
         }
 
-        body.show-admin-bar {
-            margin-top: 0 !important;
+        .ld-gallery {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
         }
 
-        :root {
-            --ld-blue-1: #439bd4;
-            --ld-blue-2: #4db0e4;
-            --ld-blue-3: #eaf7ff;
-            --ld-ink: #214762;
+        .ld-gallery figure.tall,
+        .ld-gallery figure.wide,
+        .ld-gallery figure.small {
+            grid-column: span 1;
+            grid-row: span 1;
+            min-height: 220px;
         }
+    }
 
-        .ld-page {
-            background: radial-gradient(circle at 0% 0%, #eaf7ff 0%, #f6fbff 46%, #ffffff 100%);
-            color: var(--ld-ink);
-        }
-
+    @media (max-width: 768px) {
         .ld-wrap {
-            width: min(95vw, 1520px);
-            margin: 0 auto;
+            width: min(94vw, 1520px);
         }
 
         .ld-hero {
-            position: relative;
-            padding: 110px 0 58px;
-            overflow: hidden;
-            background: linear-gradient(132deg, rgba(67, 155, 212, 0.95) 0%, rgba(77, 176, 228, 0.92) 72%, rgba(77, 176, 228, 0.84) 100%), url('storage/banner/ve-chung-toi-web.jpg') center/cover no-repeat;
+            padding: 94px 0 42px;
         }
 
-        .ld-hero::before,
-        .ld-hero::after {
-            content: '';
-            position: absolute;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.18);
-            pointer-events: none;
+        .ld-hero .ld-breadcrumb {
+            position: static !important;
+            left: auto !important;
+            top: auto !important;
+            bottom: auto !important;
+            transform: none !important;
+            float: none !important;
+            clear: both;
+            margin: 0 0 12px 0;
+            padding: 7px 12px;
+            gap: 6px;
         }
 
-        .ld-hero::before {
-            width: 360px;
-            height: 360px;
-            top: -120px;
-            right: -120px;
-        }
-
-        .ld-hero::after {
-            width: 230px;
-            height: 230px;
-            left: -80px;
-            bottom: -90px;
-        }
-
-        .ld-breadcrumb {
-            position: relative;
-            left: 0;
-            margin: 0 auto 14px 0;
-            align-self: flex-start;
+        .ld-hero .ld-breadcrumb li,
+        .ld-hero .ld-breadcrumb li a {
+            float: none !important;
             display: inline-flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            background: rgba(255, 255, 255, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.38);
-            border-radius: 999px;
-            padding: 8px 16px;
-            z-index: 10;
-            max-width: 100%;
-        }
-
-        .ld-breadcrumb li,
-        .ld-breadcrumb li a {
-            color: #fff;
-            font-size: 13px;
-        }
-
-        .ld-hero-grid>div:first-child {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-
-        .ld-hero-grid {
-            display: grid;
-            grid-template-columns: minmax(0, 1.1fr) minmax(360px, 0.9fr);
-            gap: 24px;
             align-items: center;
-            position: relative;
-            z-index: 1;
+            font-size: 12px;
+            line-height: 1.3;
         }
 
         .ld-hero h1 {
-            margin: 0;
-            color: #fff;
-            font-family: 'Garamond', serif;
-            font-size: clamp(34px, 4.6vw, 62px);
-            line-height: 1.06;
-            max-width: 860px;
+            font-size: 34px;
+            line-height: 1.12;
         }
 
         .ld-hero p {
-            margin: 16px 0 0;
-            color: rgba(255, 255, 255, 0.95);
-            line-height: 1.78;
-            font-size: 17px;
-            max-width: 820px;
+            font-size: 15px;
+            line-height: 1.65;
         }
 
         .ld-chips {
-            margin-top: 18px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
+            margin-top: 14px;
+            gap: 8px;
         }
 
         .ld-chips span {
-            display: inline-flex;
-            align-items: center;
-            border-radius: 999px;
-            border: 1px solid rgba(255, 255, 255, 0.35);
-            background: rgba(255, 255, 255, 0.2);
-            color: #fff;
-            font-size: 13px;
-            font-weight: 700;
-            padding: 8px 12px;
-        }
-
-        .ld-hero-card {
-            background: rgba(255, 255, 255, 0.94);
-            border: 1px solid rgba(67, 155, 212, 0.24);
-            border-radius: 22px;
-            box-shadow: 0 16px 32px rgba(13, 54, 88, 0.22);
-            padding: 12px;
-            overflow: hidden;
+            font-size: 12px;
+            padding: 7px 10px;
         }
 
         .ld-hero-card img {
-            width: 100%;
-            height: 300px;
-            border-radius: 14px;
-            object-fit: cover;
-            object-position: 50% 22%;
-            display: block;
-            margin-bottom: 0;
+            height: 260px;
         }
 
         .ld-hero-metrics {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 10px;
-        }
-
-        .ld-hero-metrics div {
-            border: 1px solid rgba(67, 155, 212, 0.2);
-            border-radius: 12px;
-            background: #fff;
-            padding: 10px;
-        }
-
-        .ld-hero-metrics b {
-            display: block;
-            color: #2d7bb1;
-            font-size: 23px;
-            margin-bottom: 4px;
-        }
-
-        .ld-hero-metrics span {
-            color: #4b6f8c;
-            font-size: 12px;
-            line-height: 1.45;
-        }
-
-        .ld-content {
-            padding: 40px 0 72px;
-            margin-bottom: 100px;
-        }
-
-        .ld-layout {
-            display: grid;
-            grid-template-columns: minmax(0, 1.35fr) minmax(290px, 0.65fr);
-            gap: 24px;
-        }
-
-        .ld-main {
-            display: grid;
-            gap: 24px;
+            grid-template-columns: 1fr;
         }
 
         .ld-card,
         .ld-side-card {
-            background: #fff;
-            border: 1px solid rgba(67, 155, 212, 0.16);
-            border-radius: 20px;
-            box-shadow: 0 12px 24px rgba(16, 49, 79, 0.08);
-            padding: 22px;
-        }
-
-        .ld-card h2,
-        .ld-side-card h3 {
-            margin: 0 0 12px;
-            color: #236c9d;
-            font-family: 'Garamond', serif;
-            font-size: 33px;
-            line-height: 1.2;
-            padding: 0 !important;
-        }
-
-        .ld-card p,
-        .ld-card li,
-        .ld-side-card p,
-        .ld-side-card li {
-            color: #3f6686;
-            font-size: 15px;
-            line-height: 1.76;
+            padding: 16px;
+            border-radius: 16px;
         }
 
         .ld-feature {
-            display: grid;
-            grid-template-columns: 260px minmax(0, 1fr);
-            gap: 16px;
-            border: 1px solid rgba(67, 155, 212, 0.22);
-            border-radius: 16px;
-            padding: 14px;
-            background: linear-gradient(120deg, #f4fbff 0%, #eaf7ff 100%);
+            grid-template-columns: 1fr;
         }
 
         .ld-feature img {
-            width: 75%;
-            height: 260px;
-            border-radius: 12px;
-            object-fit: contain;
-            object-position: center;
-            background: #eef5fb;
-            display: block;
-        }
-
-        .ld-feature h4 {
-            margin: 0 0 4px;
-            font-size: 24px;
-            color: #2d7bb1;
-            font-family: 'Garamond', serif;
-        }
-
-        .ld-role {
-            margin: 0 0 10px;
-            color: #4f7a9c;
-            font-size: 13px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.4px;
-        }
-
-        .ld-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 10px;
-        }
-
-        .ld-tags span {
-            border-radius: 999px;
-            border: 1px solid rgba(67, 155, 212, 0.26);
-            background: #fff;
-            color: #2d7bb1;
-            font-size: 12px;
-            font-weight: 700;
-            padding: 6px 10px;
-        }
-
-        .ld-grid {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 12px;
-            margin-top: 12px;
-        }
-
-        .ld-member {
-            border: 1px solid rgba(67, 155, 212, 0.2);
-            border-radius: 14px;
-            overflow: hidden;
-            background: #fff;
+            height: 220px;
         }
 
         .ld-member img {
-            width: 100%;
-            height: 340px;
-            object-fit: contain;
-            object-position: center;
-            background: #eef5fb;
-            display: block;
-        }
-
-        .ld-member-body {
-            padding: 12px;
-        }
-
-        .ld-member h5 {
-            margin: 0 0 4px;
-            color: #2f79ad;
-            font-size: 18px;
-            font-family: 'Garamond', serif;
-        }
-
-        .ld-member small {
-            display: block;
-            color: #5f7f99;
-            font-size: 12px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.3px;
-            margin-bottom: 6px;
-        }
-
-        .ld-member p {
-            margin: 0;
-            font-size: 14px;
-            line-height: 1.65;
+            height: 260px;
         }
 
         .ld-gallery {
-            display: grid;
-            grid-template-columns: repeat(6, minmax(0, 1fr));
-            grid-auto-flow: dense;
-            gap: 10px;
+            grid-template-columns: 1fr;
         }
 
-        .ld-gallery figure {
-            margin: 0;
-            border-radius: 12px;
-            overflow: hidden;
-            min-height: 180px;
-            position: relative;
-            box-shadow: 0 10px 20px rgba(16, 49, 79, 0.12);
+        .ld-breadcrumb {
+            padding: 6px 12px;
+            gap: 4px;
+            font-size: 12px;
         }
 
-        .ld-gallery img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
+        .ld-breadcrumb li,
+        .ld-breadcrumb li a {
+            font-size: 12px;
         }
-
-        .ld-gallery figure.tall {
-            grid-column: span 2;
-            grid-row: span 2;
-            min-height: 370px;
-        }
-
-        .ld-gallery figure.wide {
-            grid-column: span 4;
-        }
-
-        .ld-gallery figure.small {
-            grid-column: span 2;
-        }
-
-        .ld-gallery figcaption {
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            color: #fff;
-            font-size: 13px;
-            font-weight: 700;
-            padding: 10px 12px;
-            background: linear-gradient(to top, rgba(20, 60, 92, 0.88), rgba(20, 60, 92, 0));
-        }
-
-        .ld-side {
-            display: grid;
-            gap: 16px;
-            align-self: start;
-        }
-
-        .ld-links {
-            display: grid;
-            gap: 10px;
-        }
-
-        .ld-links a {
-            display: block;
-            text-decoration: none;
-            color: #2f638f;
-            border: 1px solid rgba(67, 155, 212, 0.18);
-            border-radius: 12px;
-            background: #f9fdff;
-            padding: 10px 12px;
-            font-size: 14px;
-            line-height: 1.55;
-        }
-
-        .ld-links a:hover {
-            background: #eaf7ff;
-        }
-
-        .ld-contact-item {
-            background: #f7fcff;
-            border: 1px solid rgba(67, 155, 212, 0.22);
-            border-radius: 12px;
-            padding: 10px 12px;
-            margin-bottom: 10px;
-        }
-
-        .ld-contact-item b {
-            display: block;
-            color: #2d7bb1;
-            font-size: 13px;
-            margin-bottom: 4px;
-            text-transform: uppercase;
-            letter-spacing: 0.3px;
-        }
-
-        .ld-contact-item span {
-            color: #204c70;
-            font-weight: 600;
-            font-size: 14px;
-            line-height: 1.5;
-        }
-
-        .ld-actions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 12px;
-        }
-
-        .ld-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 44px;
-            padding: 10px 16px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 0.4px;
-            font-weight: 700;
-            border: 1px solid transparent;
-        }
-
-        .ld-btn-primary {
-            color: #fff;
-            background: linear-gradient(120deg, var(--ld-blue-1), var(--ld-blue-2));
-            box-shadow: 0 10px 20px rgba(67, 155, 212, 0.24);
-        }
-
-        .ld-btn-light {
-            color: #2b79af;
-            background: #f7fcff;
-            border-color: rgba(67, 155, 212, 0.25);
-        }
-
-        @media (max-width: 1180px) {
-
-            .ld-hero-grid,
-            .ld-layout {
-                grid-template-columns: 1fr;
-            }
-
-            .ld-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .ld-gallery {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-            }
-
-            .ld-gallery figure.tall,
-            .ld-gallery figure.wide,
-            .ld-gallery figure.small {
-                grid-column: span 1;
-                grid-row: span 1;
-                min-height: 220px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .ld-wrap {
-                width: min(94vw, 1520px);
-            }
-
-            .ld-hero {
-                padding: 94px 0 42px;
-            }
-
-            .ld-hero .ld-breadcrumb {
-                position: static !important;
-                left: auto !important;
-                top: auto !important;
-                bottom: auto !important;
-                transform: none !important;
-                float: none !important;
-                clear: both;
-                margin: 0 0 12px 0;
-                padding: 7px 12px;
-                gap: 6px;
-            }
-
-            .ld-hero .ld-breadcrumb li,
-            .ld-hero .ld-breadcrumb li a {
-                float: none !important;
-                display: inline-flex;
-                align-items: center;
-                font-size: 12px;
-                line-height: 1.3;
-            }
-
-            .ld-hero h1 {
-                font-size: 34px;
-                line-height: 1.12;
-            }
-
-            .ld-hero p {
-                font-size: 15px;
-                line-height: 1.65;
-            }
-
-            .ld-chips {
-                margin-top: 14px;
-                gap: 8px;
-            }
-
-            .ld-chips span {
-                font-size: 12px;
-                padding: 7px 10px;
-            }
-
-            .ld-hero-card img {
-                height: 260px;
-            }
-
-            .ld-hero-metrics {
-                grid-template-columns: 1fr;
-            }
-
-            .ld-card,
-            .ld-side-card {
-                padding: 16px;
-                border-radius: 16px;
-            }
-
-            .ld-feature {
-                grid-template-columns: 1fr;
-            }
-
-            .ld-feature img {
-                height: 220px;
-            }
-
-            .ld-member img {
-                height: 260px;
-            }
-
-            .ld-gallery {
-                grid-template-columns: 1fr;
-            }
-
-            .ld-breadcrumb {
-                padding: 6px 12px;
-                gap: 4px;
-                font-size: 12px;
-            }
-
-            .ld-breadcrumb li,
-            .ld-breadcrumb li a {
-                font-size: 12px;
-            }
-        }
+    }
     </style>
 </head>
 
@@ -656,8 +656,7 @@
                     </div>
 
                     <div class="ld-hero-card">
-                        <img src="assets/img/hieu-truong-ba-hoc_sinh.jpg"
-                            alt="Ban lãnh đạo Meyschool Đoàn Thị Điểm">
+                        <img src="assets/img/hieu-truong-ba-hoc_sinh.jpg" alt="Ban lãnh đạo Meyschool Đoàn Thị Điểm">
                         <!-- <div class="ld-hero-metrics">
                             <div><b>04</b><span>Nhân sự nòng cốt</span></div>
                             <div><b>20+</b><span>Năm kinh nghiệm trung bình</span></div>
@@ -689,11 +688,13 @@
                         <div class="ld-feature">
                             <img src="assets/img/hieu-truong-ba-hoc_sinh.jpg" alt="Thầy Dương Văn Hùng">
                             <div>
-                                <h4>Thầy Dương Văn Hùng</h4>
+                                <h4>ThS Dương Văn Hùng</h4>
                                 <p class="ld-role">Hiệu Trưởng</p>
-                                <p>Với hơn 25 năm kinh nghiệm trong lĩnh vực giáo dục, thầy Dương Văn Hùng theo đuổi triết lý
+                                <p>Với hơn 25 năm kinh nghiệm trong lĩnh vực giáo dục, thầy Dương Văn Hùng theo đuổi
+                                    triết lý
                                     lấy học sinh làm trung tâm, chú trọng phát triển toàn diện và đề cao năng lực học
-                                    tập suốt đời. Định hướng của thầy là xây dựng một cộng đồng học tập giàu cảm hứng, nơi
+                                    tập suốt đời. Định hướng của thầy là xây dựng một cộng đồng học tập giàu cảm hứng,
+                                    nơi
                                     học sinh được khích lệ để tự tin khám phá thế mạnh cá nhân.</p>
                                 <div class="ld-tags">
                                     <span>Quản lý giáo dục</span>
@@ -712,16 +713,19 @@
                                 <div class="ld-member-body">
                                     <h5>ThS Dương Văn Hùng</h5>
                                     <small>Hiệu Trưởng</small>
-                                    <p>Với hơn 25 năm kinh nghiệm trong lĩnh vực giáo dục, thầy Dương Văn Hùng dẫn dắt nhà trường theo định hướng lấy học sinh làm trung tâm, xây dựng môi trường học tập nhân văn, hiện đại và hội nhập.</p>
+                                    <p>Với hơn 25 năm kinh nghiệm trong lĩnh vực giáo dục, thầy Dương Văn Hùng dẫn dắt
+                                        nhà trường theo định hướng lấy học sinh làm trung tâm, xây dựng môi trường học
+                                        tập nhân văn, hiện đại và hội nhập.</p>
                                 </div>
                             </div>
 
                             <div class="ld-member">
                                 <img src="assets/img/ban-lanh-dao/hiệu phó.png" alt="Cô Lê Kim Anh">
                                 <div class="ld-member-body">
-                                    <h5>Ths Lê Kim Anh</h5>
+                                    <h5>ThS Lê Kim Anh</h5>
                                     <small>Hiệu Phó</small>
-                                    <p>Dẫn dắt công tác học thuật, chuẩn hóa chất lượng giảng dạy và phát triển đội ngũ giáo viên theo định hướng đổi mới, đồng hành cùng học sinh và phụ huynh.</p>
+                                    <p>Dẫn dắt công tác học thuật, chuẩn hóa chất lượng giảng dạy và phát triển đội ngũ
+                                        giáo viên theo định hướng đổi mới, đồng hành cùng học sinh và phụ huynh.</p>
                                 </div>
                             </div>
                         </div>
