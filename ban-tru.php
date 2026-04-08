@@ -360,7 +360,7 @@
                     </div>
                 </div>
                 <div class="boarding-card">
-                    <img src="storage/banner/ve-chung-toi-web.jpg" alt="Bán trú Meyschool">
+                    <img src="assets/img/ban-tru/anh-ban-tru.png" alt="Bán trú Meyschool">
                     <div class="boarding-metrics">
                         <div><b>2</b><span>Bữa ăn mỗi ngày</span></div>
                         <div><b>100%</b><span>Thực phẩm sạch</span></div>

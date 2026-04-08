@@ -407,10 +407,9 @@
             style="display: flex; justify-content: space-between; max-width: 1200px;">
             <div class="olympia-number-left olympia-number-left-pc text-left show-on-scroll home-page"
                 id="olympia-number" style="width: 48%; margin-right: 0;">
-                <h1 class="olympia-number-title font-garamond-bold color-21" style="margin-bottom: 20px">Trường phổ
-                    thông liên cấp Meyschool Đoàn Thị Điểm</h1>
+                <h1 class="olympia-number-title font-garamond-bold color-21" style="margin-bottom: 20px; text-align: justify; text-align-last: justify; font-size: 30.5px; line-height: 1.5; font-weight: bold; width: 100%;">Trường Tiểu học & THCS<br>Meyschool Đoàn Thị Điểm</h1>
 
-                <p class="olympia-number-content font-avenir-regular size-14 color-3a">Meyschool Đoàn Thị Điểm là sự kết
+                <p class="olympia-number-content font-avenir-regular size-14 color-3a" style="text-align: justify;">Meyschool Đoàn Thị Điểm là sự kết
                     tinh của hợp tác chiến lược giữa Meygroup và Hệ thống Giáo dục Đoàn Thị Điểm Hà Nội - ngôi trường từ
                     thực tiễn đào tạo hàng nghìn học sinh học tại Anh bằng chương trình quốc tế.
                     Kế thừa nền tảng truyền thống và triết lý giáo dục nhân văn của Đoàn Thị Điểm, nhà trường đề cao kỷ
@@ -435,8 +434,8 @@
                         <div class="flex-center-center number-blck number-blck-t" style="width: 180px;">
                             <div class="number-cnt text-center">
 
-                                <span>20</span>
-                                <p>Năm phát triển</p>
+                                <span>Cơ sở vật chất hiện đại</span>
+                                <p>Chương trình leader in me bản quyền</p>
                             </div>
                         </div>
                     </div>
@@ -448,8 +447,8 @@
                     <div class="olympia-number-block-img number-img4">
                         <div class="flex-center-center number-blck number-blck-v">
                             <div class="number-cnt text-center" style="color: #471873;">
-                                <span style="color: #471873;">17</span>
-                                <p>Quốc gia giáo viên Meyschool đã theo học Đại học, Thạc sĩ, Tiến sĩ</p>
+                                <span style="color: #471873;">30</span>
+                                <p>năm phát triển giáo dục tại Thủ đô Hà Nội</p>
                             </div>
                         </div>
                     </div>
@@ -469,7 +468,7 @@
                     <div class="olympia-number-block-img number-img7">
                         <div class="flex-center-center number-blck number-blck-t">
                             <div class="number-cnt text-center">
-                                <span>4</span>
+                                <span>2</span>
                                 <p>Cấp học</p>
                             </div>
                         </div>
@@ -480,9 +479,9 @@
                     <div class="olympia-number-block-img number-img9">
                         <div class="flex-center-center number-blck number-blck-t" style="width: 190px">
                             <div class="number-cnt text-center">
-                                <span style="display: inline-flex">40<sup
+                                <span style="display: inline-flex">100<sup
                                         style="font-size: 30px; margin-top: 5px">%</sup></span>
-                                <p>Giáo viên có trình độ <br> Thạc sĩ - Tiến sĩ</p>
+                                <p>Giáo viên được đào tạo tại <br> Đại học Sư Phạm</p>
                             </div>
                         </div>
                     </div>
@@ -506,8 +505,8 @@
                         <div class="mobile-item-img mobile-item-img2">
                             <div class="flex-center-center number-blck number-blck-v">
                                 <div class="number-cnt text-center">
-                                    <span>17</span>
-                                    <p>Quốc gia giáo viên Meyschool đã theo học Đại học, Thạc sĩ, Tiến sĩ</p>
+                                    <span>100</span>
+                                    <p>100% giáo viên có trình độ Thạc sĩ - Tiến sĩ</p>
                                 </div>
                             </div>
                         </div>
@@ -534,7 +533,7 @@
                         <div class="mobile-item-img mobile-item-img6">
                             <div class="flex-center-center number-blck number-blck-t">
                                 <div class="number-cnt text-center">
-                                    <span>4</span>
+                                    <span>2</span>
                                     <p>Cấp học</p>
                                 </div>
                             </div>
@@ -548,15 +547,15 @@
                             <div class="flex-center-center number-blck number-blck-v">
                                 <div class="number-cnt text-center">
                                     <span>20</span>
-                                    <p>Năm phát triển</p>
+                                    <p>Cơ sở vật chất hiện đại</p>
                                 </div>
                             </div>
                         </div>
                         <div class="mobile-item-img mobile-item-img9">
                             <div class="flex-center-center number-blck number-blck-t">
                                 <div class="number-cnt text-center">
-                                    <span>40%</span>
-                                    <p>Giáo viên có trình độ <br> Thạc sĩ - Tiến sĩ</p>
+                                    <span>100%</span>
+                                    <p>100% giáo viên được đào tạo tại <br> đại học sư phạm</p>
                                 </div>
                             </div>
                         </div>
@@ -565,18 +564,10 @@
             </div>
         </div>
 
-        <!-- Section: 4 cấp đào tạo -->
+        <!-- Section: 2 cấp đào tạo -->
         <section id="olympia-level-training" class="show-on-scroll home-page">
             <div class="olympia-level-training">
                 <div class="olympia-level-left olympia-level-left-pc text-left">
-                    <div class="olympia-level level-1 bg-471873" style="opacity: 0">
-                        <h6><a href="chuong-trinh-mam-non-olympia.html" class="white">Mầm non (4 - 5 tuổi)</a></h6>
-                        <div class="level-img-box">
-                            <a href="chuong-trinh-mam-non-olympia.html" title="">
-                                <img src="assets/img/chuong-trinh-dao-tao/TUN02875.jpg" alt="">
-                            </a>
-                        </div>
-                    </div>
                     <div class="olympia-level level-2 bg-F1CC1F" style="opacity: 0">
                         <h6><a href="chuong-trinh-tieu-hoc-olympia.html" class="white">Tiểu học (lớp 1 - 4)</a></h6>
                         <div class="level-img-box">
@@ -585,7 +576,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="olympia-level level-3 bg-471873" style="opacity: 0">
+                    <div class="olympia-level level-3" style="opacity: 0; background-color: #2354a0;">
                         <h6><a href="chuong-trinh-trung-hoc-co-so-olympia.html" class="white">Trung học cơ sở (lớp 5 -
                                 8)</a></h6>
                         <div class="level-img-box">
@@ -594,23 +585,14 @@
                             </a>
                         </div>
                     </div>
-                    <div class="olympia-level level-4 bg-F1CC1F" style="opacity: 0">
-                        <h6><a href="chuong-trinh-trung-hoc-pho-thong-olympia.html" class="white">Trung học phổ thông
-                                (lớp 9 - 12)</a></h6>
-                        <div class="level-img-box">
-                            <a href="chuong-trinh-trung-hoc-pho-thong-olympia.html" title="">
-                                <img src="assets/img/chuong-trinh-dao-tao/TUN09616.jpg" alt="">
-                            </a>
-                        </div>
-                    </div>
                 </div>
-                <div class="olympia-level-right olympia-level-right-pc text-left" style="opacity: 0">
-                    <h3 class="olympia-number-title font-garamond-bold color-471873">4 cấp đào tạo tại <br> Meyschool
+                <div class="olympia-level-right olympia-level-right-pc text-left" style="opacity: 0; padding-bottom: 100px;">
+                    <h3 class="olympia-number-title font-garamond-bold color-471873">2 cấp đào tạo tại <br> Meyschool
                         Schools</h3>
                     <p class="olympia-level-content font-avenir-regular">Gia nhập cộng đồng Meyschool để trải nghiệm môi
                         trường học tập thân thiện, tích cực, hiện đại bậc nhất và cùng kiến tạo những giá trị tốt đẹp
                         cho bản thân và cộng đồng</p>
-                    <a href="lo-trinh-hoc-tap.html" title="" class="link-button-bg white bg-471873 ltht-btn">Khám phá lộ
+                    <a href="lo-trinh-hoc-tap.html" title="" class="link-button-bg white bg-471873 ltht-btn" style="margin-bottom: 20px;">Khám phá lộ
                         trình học<img class="white" src="olympia/images/button-1-3.svg" alt="">
                     </a>
                 </div>
@@ -642,7 +624,7 @@
                     <div class="flex-center-between mgb-30">
                         <div class="olympia-event-entry-title font-24 text-underline font-weight-bold mgb-0">Tin tức</div>
                         <!-- <a href="tin-tuc.php" title="" class="link-button righthover color-f">Tất cả tin tức -->
-                            <!-- <img class="white" src="olympia/images/button-1-3.svg" alt=""></a> -->
+                        <!-- <img class="white" src="olympia/images/button-1-3.svg" alt=""></a> -->
                     </div>
 
                     <div class="ts-news-slider">
@@ -694,36 +676,153 @@
                     </div>
 
                     <style>
-                        #olympia-event .ts-news-slider { margin: 0; padding: 0 46px; }
-                        #olympia-event .ts-news-slider .slick-slide { padding: 0 12px; }
-                        #olympia-event .ts-news-slider .slick-list { overflow: hidden; }
-                        #olympia-event .ts-news-card { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 24px rgba(23, 52, 93, .08); transition: transform .3s, box-shadow .3s; }
-                        #olympia-event .ts-news-card:hover { transform: translateY(-6px); box-shadow: 0 12px 36px rgba(23, 52, 93, .14); }
-                        #olympia-event .ts-news-card img { width: 100%; height: 220px; object-fit: cover; display: block; }
-                        #olympia-event .ts-news-card-body { padding: 20px 22px 24px; }
-                        #olympia-event .ts-news-card-body h3 { font-size: 16px; font-weight: 700; line-height: 1.5; margin: 0 0 16px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
-                        #olympia-event .ts-news-card-body h3 a { color: #23336b; text-decoration: none; }
-                        #olympia-event .ts-news-link { font-size: 14px; font-weight: 600; color: #4aa6d9; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; }
-                        #olympia-event .ts-news-link span { font-size: 18px; }
-                        #olympia-event .ts-news-slider .slick-prev, #olympia-event .ts-news-slider .slick-next { width: 44px; height: 44px; z-index: 20; background: #fff; border-radius: 50%; box-shadow: 0 2px 12px rgba(23, 52, 93, .15); }
-                        #olympia-event .ts-news-slider .slick-prev { left: 4px; }
-                        #olympia-event .ts-news-slider .slick-next { right: 4px; }
-                        #olympia-event .ts-news-slider .slick-prev:before, #olympia-event .ts-news-slider .slick-next:before { color: #23336b; font-size: 20px; opacity: 1; }
-                        #olympia-event .ts-news-slider .slick-dots { bottom: -40px; }
-                        #olympia-event .ts-news-slider .slick-dots li button:before { font-size: 10px; color: #c5d3e0; opacity: 1; }
-                        #olympia-event .ts-news-slider .slick-dots li.slick-active button:before { color: #4aa6d9; }
-                        @media(max-width:1220px) {
-                            #olympia-event .ts-news-slider { padding: 0 38px; }
-                            #olympia-event .ts-news-slider .slick-prev { left: 2px; }
-                            #olympia-event .ts-news-slider .slick-next { right: 2px; }
+                        #olympia-event .ts-news-slider {
+                            margin: 0;
+                            padding: 0 46px;
                         }
+
+                        #olympia-event .ts-news-slider .slick-slide {
+                            padding: 0 12px;
+                        }
+
+                        #olympia-event .ts-news-slider .slick-list {
+                            overflow: hidden;
+                        }
+
+                        #olympia-event .ts-news-card {
+                            background: #fff;
+                            border-radius: 16px;
+                            overflow: hidden;
+                            box-shadow: 0 4px 24px rgba(23, 52, 93, .08);
+                            transition: transform .3s, box-shadow .3s;
+                        }
+
+                        #olympia-event .ts-news-card:hover {
+                            transform: translateY(-6px);
+                            box-shadow: 0 12px 36px rgba(23, 52, 93, .14);
+                        }
+
+                        #olympia-event .ts-news-card img {
+                            width: 100%;
+                            height: 220px;
+                            object-fit: cover;
+                            display: block;
+                        }
+
+                        #olympia-event .ts-news-card-body {
+                            padding: 20px 22px 24px;
+                        }
+
+                        #olympia-event .ts-news-card-body h3 {
+                            font-size: 16px;
+                            font-weight: 700;
+                            line-height: 1.5;
+                            margin: 0 0 16px;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 3;
+                            -webkit-box-orient: vertical;
+                            overflow: hidden;
+                        }
+
+                        #olympia-event .ts-news-card-body h3 a {
+                            color: #23336b;
+                            text-decoration: none;
+                        }
+
+                        #olympia-event .ts-news-link {
+                            font-size: 14px;
+                            font-weight: 600;
+                            color: #4aa6d9;
+                            text-decoration: none;
+                            display: inline-flex;
+                            align-items: center;
+                            gap: 4px;
+                        }
+
+                        #olympia-event .ts-news-link span {
+                            font-size: 18px;
+                        }
+
+                        #olympia-event .ts-news-slider .slick-prev,
+                        #olympia-event .ts-news-slider .slick-next {
+                            width: 44px;
+                            height: 44px;
+                            z-index: 20;
+                            background: #fff;
+                            border-radius: 50%;
+                            box-shadow: 0 2px 12px rgba(23, 52, 93, .15);
+                        }
+
+                        #olympia-event .ts-news-slider .slick-prev {
+                            left: 4px;
+                        }
+
+                        #olympia-event .ts-news-slider .slick-next {
+                            right: 4px;
+                        }
+
+                        #olympia-event .ts-news-slider .slick-prev:before,
+                        #olympia-event .ts-news-slider .slick-next:before {
+                            color: #23336b;
+                            font-size: 20px;
+                            opacity: 1;
+                        }
+
+                        #olympia-event .ts-news-slider .slick-dots {
+                            bottom: -40px;
+                        }
+
+                        #olympia-event .ts-news-slider .slick-dots li button:before {
+                            font-size: 10px;
+                            color: #c5d3e0;
+                            opacity: 1;
+                        }
+
+                        #olympia-event .ts-news-slider .slick-dots li.slick-active button:before {
+                            color: #4aa6d9;
+                        }
+
+                        @media(max-width:1220px) {
+                            #olympia-event .ts-news-slider {
+                                padding: 0 38px;
+                            }
+
+                            #olympia-event .ts-news-slider .slick-prev {
+                                left: 2px;
+                            }
+
+                            #olympia-event .ts-news-slider .slick-next {
+                                right: 2px;
+                            }
+                        }
+
                         @media(max-width:768px) {
-                            #olympia-event .ts-news-slider { padding: 0 30px; }
-                            #olympia-event .ts-news-card img { height: 180px; }
-                            #olympia-event .ts-news-slider .slick-prev, #olympia-event .ts-news-slider .slick-next { width: 36px; height: 36px; }
-                            #olympia-event .ts-news-slider .slick-prev { left: 0; }
-                            #olympia-event .ts-news-slider .slick-next { right: 0; }
-                            #olympia-event .ts-news-slider .slick-prev:before, #olympia-event .ts-news-slider .slick-next:before { font-size: 16px; }
+                            #olympia-event .ts-news-slider {
+                                padding: 0 30px;
+                            }
+
+                            #olympia-event .ts-news-card img {
+                                height: 180px;
+                            }
+
+                            #olympia-event .ts-news-slider .slick-prev,
+                            #olympia-event .ts-news-slider .slick-next {
+                                width: 36px;
+                                height: 36px;
+                            }
+
+                            #olympia-event .ts-news-slider .slick-prev {
+                                left: 0;
+                            }
+
+                            #olympia-event .ts-news-slider .slick-next {
+                                right: 0;
+                            }
+
+                            #olympia-event .ts-news-slider .slick-prev:before,
+                            #olympia-event .ts-news-slider .slick-next:before {
+                                font-size: 16px;
+                            }
                         }
                     </style>
                 </section>
@@ -745,7 +844,7 @@
                         <p class="olympia-testimonial-po4 font-avenir-regular size-14">Tốt nghiệp Thạc sỹ Đại học
                             Harvard, Hoa Kỳ, cựu học sinh Meyschool niên khóa 2013.</p>
                     </div>
-                    <div class="olympia-testimonial-photo" style="opacity: 0"><img src="storage/thac-si-havard.png"
+                    <div class="olympia-testimonial-photo" style="opacity: 0"><img src="assets/img/anh-phu-huynh/5.jpg"
                             alt="">
                     </div>
                 </div>
@@ -779,7 +878,7 @@
                         <p class="olympia-testimonial-po4 font-avenir-regular size-14">Học sinh lớp 11.</p>
                     </div>
                     <div class="olympia-testimonial-photo" style="opacity: 0; aspect-ratio: 1 / 1; overflow: hidden;">
-                        <img src="assets/img/anhpotrait.jpg" alt=""
+                        <img src="assets/img/anh-phu-huynh/2.jpg" alt=""
                             style="width: 100%; height: 100%; object-fit: cover; object-position: center top;">
                     </div>
                 </div>
@@ -815,7 +914,7 @@
                             lớp 7H2</p>
                     </div>
                     <div class="olympia-testimonial-photo" style="opacity: 0"><img
-                            src="storage/img-20220111-115333-2.jpg" alt="">
+                            src="assets/img/anh-phu-huynh/3.jpg" alt="">
                     </div>
                 </div>
                 <div class="slide-item testimonial-item">

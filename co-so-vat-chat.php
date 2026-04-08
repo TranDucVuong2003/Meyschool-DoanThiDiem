@@ -915,10 +915,8 @@
             <div class="csvc-feature two-col" data-aos="fade-up">
                 <div>
                     <!-- <span class="csvc-feature-icon">🎨</span> -->
-                    <h2>Không gian sáng tạo &amp; Hành lang trải nghiệm</h2>
-                    <p><strong>Hành lang trải nghiệm:</strong> Không chỉ là lối đi, đây là không gian trưng bày các sản
-                        phẩm học tập độc đáo, nơi nuôi dưỡng bản sắc cá nhân và lòng tự hào của mỗi học sinh về thành
-                        quả của mình.</p>
+                    <h2>Không gian sáng tạo </h2>
+                   
                     <p><strong>Không gian sáng tạo:</strong> Hệ thống phòng Nghệ thuật, STEM và các khu thực hành đa
                         giác quan được đầu tư hiện đại, là nơi các em tự do khám phá và hiện thực hóa những ý tưởng mới
                         mẻ.</p>

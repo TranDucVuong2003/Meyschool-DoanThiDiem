@@ -710,7 +710,7 @@
                             <div class="ld-member">
                                 <img src="assets/img/hieu-truong-ba-hoc_sinh.jpg" alt="Thầy Dương Văn Hùng">
                                 <div class="ld-member-body">
-                                    <h5>Thầy Dương Văn Hùng</h5>
+                                    <h5>ThS Dương Văn Hùng</h5>
                                     <small>Hiệu Trưởng</small>
                                     <p>Với hơn 25 năm kinh nghiệm trong lĩnh vực giáo dục, thầy Dương Văn Hùng dẫn dắt nhà trường theo định hướng lấy học sinh làm trung tâm, xây dựng môi trường học tập nhân văn, hiện đại và hội nhập.</p>
                                 </div>
@@ -719,7 +719,7 @@
                             <div class="ld-member">
                                 <img src="assets/img/ban-lanh-dao/hiệu phó.png" alt="Cô Lê Kim Anh">
                                 <div class="ld-member-body">
-                                    <h5>Cô Lê Kim Anh</h5>
+                                    <h5>Ths Lê Kim Anh</h5>
                                     <small>Hiệu Phó</small>
                                     <p>Dẫn dắt công tác học thuật, chuẩn hóa chất lượng giảng dạy và phát triển đội ngũ giáo viên theo định hướng đổi mới, đồng hành cùng học sinh và phụ huynh.</p>
                                 </div>

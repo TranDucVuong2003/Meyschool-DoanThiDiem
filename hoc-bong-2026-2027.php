@@ -574,6 +574,16 @@
                     alt="Câu Lạc Bộ Tuổi Thơ - Hành Trang Vào Lớp 1"></div>
         </section>
 
+        <section class="scholar-intro" style="padding: 40px 0 20px;">
+            <div class="wrap">
+                <div class="hero-card" data-aos="fade-up">
+                    <div class="hero-photo">
+                        <img src="assets/img/hoc-bong/z7703128125340_7d8bd9cc905e57e2152b63dc648a5a8d.png" alt="Học bổng Meyschool">
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="sc-main">
             <div class="wrap">
                 <div class="hero-card" data-aos="fade-up">

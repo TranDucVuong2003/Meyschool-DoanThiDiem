@@ -9528,8 +9528,8 @@ select.select-day option {
 }
 
 .number-img2 .number-cnt > span {
-  font-size: 75px;
-  text-align: left;
+  text-align: center;
+  font-size: 21px;
   display: block;
   padding-left: 10px;
 }

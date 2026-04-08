@@ -315,7 +315,7 @@
                     </div>
                 </div>
                 <div class="boarding-card">
-                    <img src="storage/banner/ve-chung-toi-web.jpg" alt="Y tế học đường Meyschool">
+                    <img src="assets/img/y-te/anh-y-te.jpg" alt="Y tế học đường Meyschool">
                 </div>
             </div>
         </section>
