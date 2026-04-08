@@ -43,315 +43,315 @@
     <script src="../unpkg.com/aos%402.3.1/dist/aos.js"></script>
 
     <style>
-    nav#admin_bar {
-        display: none;
-    }
-
-    body.show-admin-bar {
-        margin-top: 0 !important;
-    }
-
-    .jq-toast-wrap {
-        display: block;
-        position: fixed;
-        width: 250px;
-        pointer-events: none !important;
-        letter-spacing: normal;
-        z-index: 9000999999999 !important;
-    }
-
-    :root {
-        --ct-blue-1: #439bd4;
-        --ct-blue-2: #4db0e4;
-        --ct-blue-3: #eaf7ff;
-        --ct-text: #1f3c58;
-    }
-
-    .contact-page {
-        background: #f6fbff;
-        color: var(--ct-text);
-        margin-bottom: 120px;
-    }
-
-    .ct-wide {
-        width: min(96vw, 1520px);
-        margin: 0 auto;
-    }
-
-    .contact-top {
-        padding: 112px 0 26px;
-    }
-
-    .ct-breadcrumb {
-        margin: 0 0 14px;
-        display: inline-flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        border-radius: 999px;
-        padding: 7px 14px;
-        background: #ebf8ff;
-        border: 1px solid rgba(67, 155, 212, 0.22);
-    }
-
-    .ct-breadcrumb li,
-    .ct-breadcrumb li a {
-        color: #2a7fb7;
-        font-size: 13px;
-        position: static !important;
-    }
-
-    .contact-top h1 {
-        margin: 0 0 10px;
-        font-family: 'Garamond', serif;
-        color: #236ea4;
-        font-size: clamp(34px, 4vw, 56px);
-        line-height: 1.08;
-    }
-
-    .contact-top p {
-        margin: 0;
-        color: #48617c;
-        line-height: 1.8;
-        max-width: 980px;
-    }
-
-    .contact-layout {
-        padding-bottom: 32px;
-    }
-
-    .contact-grid {
-        display: grid;
-        grid-template-columns: 1.15fr 0.85fr;
-        gap: 22px;
-        align-items: start;
-    }
-
-    .ct-card {
-        background: #fff;
-        border: 1px solid rgba(67, 155, 212, 0.16);
-        border-radius: 20px;
-        box-shadow: 0 14px 28px rgba(14, 49, 79, 0.08);
-        padding: 22px;
-    }
-
-    .ct-card h2 {
-        margin: 0 0 6px;
-        color: #2472a8;
-        font-family: 'Garamond', serif;
-        font-size: clamp(28px, 2.6vw, 40px);
-        line-height: 1.2;
-        padding: 0 !important;
-    }
-
-    .ct-card h3 {
-        margin: 0 0 10px;
-        color: #286d9d;
-        font-family: 'Garamond', serif;
-        font-size: 26px;
-        line-height: 1.2;
-        padding: 0 !important;
-    }
-
-    .ct-sub {
-        margin: 0 0 18px;
-        color: #58718d;
-        font-size: 14px;
-        line-height: 1.75;
-    }
-
-    .ct-form-grid {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 12px;
-        margin-bottom: 12px;
-    }
-
-    .ct-field {
-        display: grid;
-        gap: 7px;
-    }
-
-    .ct-field label {
-        font-size: 12px;
-        font-weight: 700;
-        text-transform: uppercase;
-        color: #4a6886;
-        letter-spacing: 0.4px;
-    }
-
-    .ct-field input,
-    .ct-field textarea,
-    .ct-field select {
-        width: 100%;
-        border: 1px solid rgba(67, 155, 212, 0.24);
-        border-radius: 12px;
-        padding: 11px 12px;
-        font-size: 14px;
-        color: #284761;
-        outline: none;
-        background: #fff;
-    }
-
-    .ct-field textarea {
-        min-height: 130px;
-        resize: vertical;
-    }
-
-    .ct-full {
-        grid-column: 1 / -1;
-    }
-
-    .ct-radio-box {
-        border: 1px solid rgba(67, 155, 212, 0.2);
-        background: #f8fcff;
-        border-radius: 12px;
-        padding: 10px 12px;
-        display: flex;
-        gap: 12px;
-        flex-wrap: wrap;
-    }
-
-    .ct-radio-item {
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        font-size: 13px;
-        color: #3e5c79;
-    }
-
-    .ct-submit {
-        margin-top: 2px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 12px 20px;
-        border: 0;
-        border-radius: 999px;
-        background: linear-gradient(140deg, #439bd4, #4db0e4);
-        color: #fff;
-        font-weight: 700;
-        font-size: 13px;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        cursor: pointer;
-        text-decoration: none;
-    }
-
-    .ct-info-list {
-        display: grid;
-        gap: 12px;
-    }
-
-    .ct-info-block {
-        border: 1px solid rgba(67, 155, 212, 0.18);
-        border-radius: 14px;
-        padding: 12px;
-        background: #f9fdff;
-    }
-
-    .ct-info-block b {
-        display: block;
-        margin: 0 0 7px;
-        color: #2a78ae;
-        text-transform: uppercase;
-        font-size: 12px;
-        letter-spacing: 0.4px;
-    }
-
-    .ct-info-block p {
-        margin: 0 0 6px;
-        font-size: 14px;
-        line-height: 1.65;
-        color: #42607e;
-    }
-
-    .ct-info-block a {
-        color: #2f85bc;
-        text-decoration: none;
-    }
-
-    .ct-action-row {
-        margin-top: 14px;
-        display: grid;
-        gap: 10px;
-    }
-
-    .ct-action {
-        border: 1px solid rgba(67, 155, 212, 0.24);
-        background: #ebf7ff;
-        color: #2b7db4;
-        border-radius: 12px;
-        padding: 10px 12px;
-        text-decoration: none;
-        font-size: 13px;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.3px;
-    }
-
-    .ct-social {
-        margin-top: 14px;
-        display: flex;
-        gap: 8px;
-    }
-
-    .ct-social a {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        background: #ecf8ff;
-        border: 1px solid rgba(67, 155, 212, 0.22);
-    }
-
-    .ct-social img {
-        width: 18px;
-        height: 18px;
-    }
-
-    .ct-map-wrap {
-        margin: 18px 0 0;
-        width: 100vw;
-        margin-left: calc(50% - 50vw);
-        margin-right: calc(50% - 50vw);
-        border-radius: 0;
-        overflow: hidden;
-        border: 0;
-        box-shadow: none;
-    }
-
-    .ct-map-wrap iframe {
-        width: 100%;
-        height: 520px;
-        border: 0;
-        display: block;
-    }
-
-    @media (max-width: 1100px) {
-        .contact-grid {
-            grid-template-columns: 1fr;
+        nav#admin_bar {
+            display: none;
         }
-    }
 
-    @media (max-width: 768px) {
+        body.show-admin-bar {
+            margin-top: 0 !important;
+        }
+
+        .jq-toast-wrap {
+            display: block;
+            position: fixed;
+            width: 250px;
+            pointer-events: none !important;
+            letter-spacing: normal;
+            z-index: 9000999999999 !important;
+        }
+
+        :root {
+            --ct-blue-1: #439bd4;
+            --ct-blue-2: #4db0e4;
+            --ct-blue-3: #eaf7ff;
+            --ct-text: #1f3c58;
+        }
+
+        .contact-page {
+            background: #f6fbff;
+            color: var(--ct-text);
+            margin-bottom: 120px;
+        }
+
         .ct-wide {
-            width: min(94vw, 1520px);
+            width: min(96vw, 1520px);
+            margin: 0 auto;
         }
 
         .contact-top {
-            padding: 96px 0 18px;
+            padding: 112px 0 26px;
+        }
+
+        .ct-breadcrumb {
+            margin: 0 0 14px;
+            display: inline-flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            border-radius: 999px;
+            padding: 7px 14px;
+            background: #ebf8ff;
+            border: 1px solid rgba(67, 155, 212, 0.22);
+        }
+
+        .ct-breadcrumb li,
+        .ct-breadcrumb li a {
+            color: #2a7fb7;
+            font-size: 13px;
+            position: static !important;
+        }
+
+        .contact-top h1 {
+            margin: 0 0 10px;
+            font-family: 'Garamond', serif;
+            color: #236ea4;
+            font-size: clamp(34px, 4vw, 56px);
+            line-height: 1.08;
+        }
+
+        .contact-top p {
+            margin: 0;
+            color: #48617c;
+            line-height: 1.8;
+            max-width: 980px;
+        }
+
+        .contact-layout {
+            padding-bottom: 32px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 22px;
+            align-items: start;
+        }
+
+        .ct-card {
+            background: #fff;
+            border: 1px solid rgba(67, 155, 212, 0.16);
+            border-radius: 20px;
+            box-shadow: 0 14px 28px rgba(14, 49, 79, 0.08);
+            padding: 22px;
+        }
+
+        .ct-card h2 {
+            margin: 0 0 6px;
+            color: #2472a8;
+            font-family: 'Garamond', serif;
+            font-size: clamp(28px, 2.6vw, 40px);
+            line-height: 1.2;
+            padding: 0 !important;
+        }
+
+        .ct-card h3 {
+            margin: 0 0 10px;
+            color: #286d9d;
+            font-family: 'Garamond', serif;
+            font-size: 26px;
+            line-height: 1.2;
+            padding: 0 !important;
+        }
+
+        .ct-sub {
+            margin: 0 0 18px;
+            color: #58718d;
+            font-size: 14px;
+            line-height: 1.75;
         }
 
         .ct-form-grid {
-            grid-template-columns: 1fr;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .ct-field {
+            display: grid;
+            gap: 7px;
+        }
+
+        .ct-field label {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #4a6886;
+            letter-spacing: 0.4px;
+        }
+
+        .ct-field input,
+        .ct-field textarea,
+        .ct-field select {
+            width: 100%;
+            border: 1px solid rgba(67, 155, 212, 0.24);
+            border-radius: 12px;
+            padding: 11px 12px;
+            font-size: 14px;
+            color: #284761;
+            outline: none;
+            background: #fff;
+        }
+
+        .ct-field textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
+
+        .ct-full {
+            grid-column: 1 / -1;
+        }
+
+        .ct-radio-box {
+            border: 1px solid rgba(67, 155, 212, 0.2);
+            background: #f8fcff;
+            border-radius: 12px;
+            padding: 10px 12px;
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .ct-radio-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            color: #3e5c79;
+        }
+
+        .ct-submit {
+            margin-top: 2px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 20px;
+            border: 0;
+            border-radius: 999px;
+            background: linear-gradient(140deg, #439bd4, #4db0e4);
+            color: #fff;
+            font-weight: 700;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .ct-info-list {
+            display: grid;
+            gap: 12px;
+        }
+
+        .ct-info-block {
+            border: 1px solid rgba(67, 155, 212, 0.18);
+            border-radius: 14px;
+            padding: 12px;
+            background: #f9fdff;
+        }
+
+        .ct-info-block b {
+            display: block;
+            margin: 0 0 7px;
+            color: #2a78ae;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 0.4px;
+        }
+
+        .ct-info-block p {
+            margin: 0 0 6px;
+            font-size: 14px;
+            line-height: 1.65;
+            color: #42607e;
+        }
+
+        .ct-info-block a {
+            color: #2f85bc;
+            text-decoration: none;
+        }
+
+        .ct-action-row {
+            margin-top: 14px;
+            display: grid;
+            gap: 10px;
+        }
+
+        .ct-action {
+            border: 1px solid rgba(67, 155, 212, 0.24);
+            background: #ebf7ff;
+            color: #2b7db4;
+            border-radius: 12px;
+            padding: 10px 12px;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        .ct-social {
+            margin-top: 14px;
+            display: flex;
+            gap: 8px;
+        }
+
+        .ct-social a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #ecf8ff;
+            border: 1px solid rgba(67, 155, 212, 0.22);
+        }
+
+        .ct-social img {
+            width: 18px;
+            height: 18px;
+        }
+
+        .ct-map-wrap {
+            margin: 18px 0 0;
+            width: 100vw;
+            margin-left: calc(50% - 50vw);
+            margin-right: calc(50% - 50vw);
+            border-radius: 0;
+            overflow: hidden;
+            border: 0;
+            box-shadow: none;
         }
 
         .ct-map-wrap iframe {
-            height: 360px;
+            width: 100%;
+            height: 520px;
+            border: 0;
+            display: block;
         }
-    }
+
+        @media (max-width: 1100px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .ct-wide {
+                width: min(94vw, 1520px);
+            }
+
+            .contact-top {
+                padding: 96px 0 18px;
+            }
+
+            .ct-form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .ct-map-wrap iframe {
+                height: 360px;
+            }
+        }
     </style>
 </head>
 
@@ -379,23 +379,22 @@
                     <h2>Gửi lời nhắn</h2>
                     <p class="ct-sub">Vui lòng điền thông tin chính xác để nhà trường phản hồi nhanh nhất.</p>
 
-                    <form id="contact-form" action="https://theolympiaschools.edu.vn/send-contact" method="POST">
-                        <input type="hidden" name="_token" value="Xp0QD4AXEKvVFRQgq6zl6ESvt4HEk1o59HIf5UOU">
+                    <form id="contact-form" action="api/contact-submit.php" method="POST">
 
                         <div class="ct-form-grid">
                             <div class="ct-field">
                                 <label for="name">Họ tên *</label>
-                                <input type="text" name="name" id="name" placeholder="Nguyễn Ngọc Anh"
-                                    class="input-name">
+                                <input type="text" name="full_name" id="name" placeholder="Nguyễn Ngọc Anh"
+                                    class="input-name" required>
                             </div>
 
                             <div class="ct-field">
-                                <label for="phone">Điện thoại</label>
-                                <input type="text" name="phone" id="phone" placeholder="09xxxxxxxx" class="input-phone">
+                                <label for="phone">Điện thoại *</label>
+                                <input type="text" name="phone" id="phone" placeholder="09xxxxxxxx" class="input-phone" required>
                             </div>
 
                             <div class="ct-field">
-                                <label for="email">Email *</label>
+                                <label for="email">Email</label>
                                 <input type="text" name="email" id="email" placeholder="ngocanh@gmail.com"
                                     class="input-email">
                             </div>
@@ -403,25 +402,24 @@
                             <div class="ct-field">
                                 <label>Anh/chị là</label>
                                 <div class="ct-radio-box">
-                                    <label class="ct-radio-item"><input type="radio" value="parents" checked
-                                            id="parents" name="ct-position"> Phụ huynh</label>
-                                    <label class="ct-radio-item"><input type="radio" value="students" id="students"
-                                            name="ct-position"> Học sinh</label>
-                                    <label class="ct-radio-item"><input type="radio" value="vendor" id="vendor"
-                                            name="ct-position"> Đối tác</label>
+                                    <label class="ct-radio-item"><input type="radio" value="parent" checked
+                                            id="parents" name="audience_type"> Phụ huynh</label>
+                                    <label class="ct-radio-item"><input type="radio" value="student" id="students"
+                                            name="audience_type"> Học sinh</label>
+                                    <label class="ct-radio-item"><input type="radio" value="partner" id="vendor"
+                                            name="audience_type"> Đối tác</label>
                                 </div>
                             </div>
 
                             <div class="ct-field ct-full">
-                                <label for="ct-mess">Lời nhắn</label>
-                                <textarea name="ct-mess" id="ct-mess" class="input-mess"
-                                    placeholder="Nhập nội dung cần hỗ trợ..."></textarea>
+                                <label for="ct-mess">Lời nhắn *</label>
+                                <textarea name="message" id="ct-mess" class="input-mess"
+                                    placeholder="Nhập nội dung cần hỗ trợ..." required></textarea>
                             </div>
                         </div>
 
                         <button type="submit" class="ct-submit btn-submit-js">Gửi thông tin</button>
-                        <input type="hidden" name="url" value="lien-he.php">
-                        <input type="hidden" name="type" value="contact">
+                        <input type="hidden" name="source_page" value="lien-he.php">
                     </form>
                 </article>
 
@@ -479,21 +477,6 @@
             </div>
         </section>
 
-        <div class="csvc_main">
-            <div class="modal" id="submit_modal" tabindex="-1">
-                <div class="modal-inner">
-                    <div class="modal-content">
-                        <div class="modal-body">
-                            <div id="register-suceess" class="text-center">
-                                <img src="olympia/images/success-icon.png" alt="success">
-                                <p>Yêu cầu của anh/chị đã được gửi tới đội ngũ Meyschool Đoàn Thị Điểm. Chúng tôi sẽ
-                                    phản hồi trong thời gian sớm nhất.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </main>
 
     <?php include 'includes/footer-dangkytuvan.php'; ?>
@@ -516,12 +499,12 @@
     </section>
 
     <script>
-    AOS.init({
-        once: true,
-        disable: function() {
-            return window.innerWidth < 768;
-        }
-    });
+        AOS.init({
+            once: true,
+            disable: function() {
+                return window.innerWidth < 768;
+            }
+        });
     </script>
 
     <script src="olympia/js/bootstrap.min.js"></script>

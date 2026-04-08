@@ -424,7 +424,7 @@
                             trường, phụ huynh có thể liên hệ bảo vệ để được hướng dẫn khu vực đỗ xe và đón học sinh.</p>
                     </div>
 
-                    <div class="map-side-card">
+                    <!-- <div class="map-side-card">
                         <h4>Hình ảnh khuôn viên</h4>
                         <p>Không gian học tập xanh, thoáng và hiện đại, tạo cảm giác an toàn, thân thiện cho học sinh
                             mỗi ngày.</p>
@@ -438,7 +438,7 @@
                             <figure><img src="storage/olympia-hoc-sinh-tieu-hoc.jpg"
                                     alt="Học sinh tại Meyschool Đoàn Thị Điểm"></figure>
                         </div>
-                    </div>
+                    </div> -->
                 </aside>
             </div>
         </section>

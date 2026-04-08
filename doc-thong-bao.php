@@ -56,20 +56,6 @@
             margin-bottom: 120px;
         }
 
-        /* Hero */
-        .detail-hero {
-            background: linear-gradient(135deg, rgba(26, 82, 118, 0.85) 0%, rgba(41, 128, 185, 0.8) 50%, rgba(93, 173, 226, 0.75) 100%);
-            background-size: cover;
-            background-position: center;
-            padding: 140px 0 48px;
-            color: #fff;
-            position: relative;
-        }
-
-        .detail-hero.has-thumb {
-            background-blend-mode: overlay;
-        }
-
         .detail-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -77,8 +63,12 @@
             box-sizing: border-box;
         }
 
+        .detail-top {
+            padding: 120px 0 18px;
+        }
+
         .detail-breadcrumb {
-            margin: 0 0 20px;
+            margin: 0 0 14px;
             padding: 0;
             list-style: none;
             display: flex;
@@ -87,42 +77,42 @@
             font-size: 12px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            color: #fff;
+            color: #7f8ea1;
         }
 
         .detail-breadcrumb li+li::before {
             content: '>';
             margin-right: 6px;
-            color: rgba(255, 255, 255, 0.7);
+            color: #b0bcc8;
         }
 
         .detail-breadcrumb li a {
-            color: #fff;
+            color: #597288;
             text-decoration: none;
         }
 
         .detail-breadcrumb li a:hover {
-            color: #fff;
+            color: #2a5e86;
             text-decoration: underline;
         }
 
         .detail-breadcrumb li:last-child {
-            color: #fff;
+            color: #2a5e86;
             opacity: 1;
         }
 
-        .detail-hero h1 {
+        .detail-title {
             margin: 0 0 16px;
             font-size: 36px;
             font-weight: 700;
             line-height: 1.25;
             max-width: 700px;
-            color: #fff;
+            color: #1a1a2e;
         }
 
-        .detail-hero-date {
+        .detail-top-date {
             font-size: 13px;
-            color: #fff;
+            color: #58758d;
             opacity: 1;
             display: flex;
             align-items: center;
@@ -326,6 +316,7 @@
             transition: color 0.15s;
             display: -webkit-box;
             -webkit-line-clamp: 2;
+            line-clamp: 2;
             -webkit-box-orient: vertical;
             overflow: hidden;
         }
@@ -351,11 +342,11 @@
         }
 
         @media (max-width: 600px) {
-            .detail-hero {
-                padding: 120px 0 32px;
+            .detail-top {
+                padding: 96px 0 16px;
             }
 
-            .detail-hero h1 {
+            .detail-title {
                 font-size: 26px;
             }
 
@@ -372,18 +363,17 @@
     <div class="overlay_mark_search" style="display:none;"></div>
 
     <main class="body-content detail-page">
-        <!-- Hero -->
-        <section class="detail-hero">
+        <section class="detail-top">
             <div class="detail-container">
                 <ol class="detail-breadcrumb">
                     <li><a href="index.php">Trang chủ</a></li>
                     <li><a href="thong-bao.php">Thông báo</a></li>
                     <li id="breadcrumbTitle">Đang tải...</li>
                 </ol>
-                <h1 id="heroTitle">Đang tải...</h1>
-                <div class="detail-hero-date">
+                <h1 class="detail-title" id="pageTitleMain">Đang tải...</h1>
+                <div class="detail-top-date">
                     <span>📅</span>
-                    <span id="heroDate"></span>
+                    <span id="publishDate"></span>
                 </div>
             </div>
         </section>
@@ -438,7 +428,7 @@
             var params = new URLSearchParams(window.location.search);
             var slug = params.get('slug');
             if (!slug) {
-                document.getElementById('heroTitle').textContent = 'Không tìm thấy thông báo';
+                document.getElementById('pageTitleMain').textContent = 'Không tìm thấy thông báo';
                 document.getElementById('articleContent').innerHTML =
                     '<p style="text-align:center;color:#999;">Thông báo không tồn tại hoặc đã bị xóa.</p>';
                 return;
@@ -465,10 +455,32 @@
                 return h + ':' + m;
             }
 
+            function normalizeTitle(text) {
+                return String(text || '')
+                    .toLowerCase()
+                    .replace(/[^a-z0-9\u00C0-\u024F\u1E00-\u1EFF\s]/g, ' ')
+                    .replace(/\s+/g, ' ')
+                    .trim();
+            }
+
+            function removeDuplicateContentHeading(pageTitle) {
+                var contentEl = document.getElementById('articleContent');
+                var firstHeading = contentEl.querySelector('h1, h2, h3');
+                if (!firstHeading) return;
+
+                var headingText = normalizeTitle(firstHeading.textContent);
+                var titleText = normalizeTitle(pageTitle);
+                if (!headingText || !titleText) return;
+
+                if (headingText === titleText || headingText.indexOf(titleText) === 0 || titleText.indexOf(headingText) === 0) {
+                    firstHeading.remove();
+                }
+            }
+
             // Load article
             $.getJSON('api/notifications-public.php?slug=' + encodeURIComponent(slug), function(res) {
                 if (!res.success || !res.data) {
-                    document.getElementById('heroTitle').textContent = 'Không tìm thấy thông báo';
+                    document.getElementById('pageTitleMain').textContent = 'Không tìm thấy thông báo';
                     document.getElementById('articleContent').innerHTML =
                         '<p style="text-align:center;color:#999;">Thông báo không tồn tại hoặc đã bị xóa.</p>';
                     return;
@@ -476,19 +488,11 @@
                 var a = res.data;
                 document.title = a.title + ' - Meyschool Đoàn Thị Điểm';
                 document.getElementById('pageTitle').textContent = a.title + ' - Meyschool Đoàn Thị Điểm';
-                document.getElementById('heroTitle').textContent = a.title;
+                document.getElementById('pageTitleMain').textContent = a.title;
                 document.getElementById('breadcrumbTitle').textContent = a.title;
-                document.getElementById('heroDate').textContent = formatDate(a.created_at);
+                document.getElementById('publishDate').textContent = formatDate(a.created_at);
                 document.getElementById('articleContent').innerHTML = a.content || '<p>Chưa có nội dung.</p>';
-
-                // Set thumbnail as hero background
-                if (a.thumbnail) {
-                    var hero = document.querySelector('.detail-hero');
-                    hero.style.backgroundImage =
-                        'linear-gradient(135deg, rgba(26,82,118,0.85) 0%, rgba(41,128,185,0.8) 50%, rgba(93,173,226,0.75) 100%), url(' +
-                        a.thumbnail + ')';
-                    hero.classList.add('has-thumb');
-                }
+                removeDuplicateContentHeading(a.title);
             });
 
             // Load latest notifications for sidebar

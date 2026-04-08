@@ -77,6 +77,22 @@ $_sidebar_page = basename($_SERVER['PHP_SELF']);
         font-weight: 600;
     }
 
+    .nav-badge {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 20px;
+        height: 20px;
+        padding: 0 5px;
+        margin-left: auto;
+        border-radius: 50%;
+        font-size: 11px;
+        font-weight: 700;
+        background: #e74c3c;
+        color: #fff;
+        white-space: nowrap;
+    }
+
     .sidebar-footer {
         padding: 16px 20px;
         border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -122,6 +138,10 @@ $_sidebar_page = basename($_SERVER['PHP_SELF']);
         <a href="thanh-tich-admin.php" class="nav-item <?= ($_sidebar_page === 'thanh-tich-admin.php' || $_sidebar_page === 'them-thanh-tich.php') ? 'active' : '' ?>">
             Thành tích
         </a>
+        <a href="lien-he-admin.php" class="nav-item <?= $_sidebar_page === 'lien-he-admin.php' ? 'active' : '' ?>">
+            Thông tin liên hệ
+            <span class="nav-badge" id="contactBadge" style="display:none;">0</span>
+        </a>
 
         <div class="nav-section">Hệ thống</div>
         <a href="cau-hinh.php" class="nav-item <?= $_sidebar_page === 'cau-hinh.php' ? 'active' : '' ?>">
@@ -133,3 +153,25 @@ $_sidebar_page = basename($_SERVER['PHP_SELF']);
         <a href="api/logout.php">Đăng xuất</a>
     </div>
 </aside>
+
+<script>
+    function updateContactBadge() {
+        fetch('api/contact-unread-count.php')
+            .then(r => r.json())
+            .then(res => {
+                const badge = document.getElementById('contactBadge');
+                if (res.success && res.count > 0) {
+                    badge.textContent = res.count > 99 ? '99+' : res.count;
+                    badge.style.display = 'inline-flex';
+                } else {
+                    badge.style.display = 'none';
+                }
+            })
+            .catch(() => {});
+    }
+
+    updateContactBadge();
+    setInterval(updateContactBadge, 30000);
+
+    window.refreshContactBadge = updateContactBadge;
+</script>

@@ -154,10 +154,6 @@
                     <div class="header-info">
                         <ul class="header-info-list">
                             <li class="info-item">
-                                <a href="https://lms.theolympiaschools.edu.vn/" title="Login Canvas" class="account"
-                                    target="_blank"><img src="../olympia/images/pc-header-login.svg" alt=""></a>
-                            </li>
-                            <li class="info-item">
                                 <select class="language">
                                     <option class="lang-item" selected value="https://theolympiaschools.edu.vn/">VIE
                                     </option>

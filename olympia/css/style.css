@@ -6640,7 +6640,7 @@ select.select-day option {
   }
 
   .mb-menu {
-    background: #439bd4;
+    background: transparent;
     padding: 15px 15px;
   }
 
@@ -7095,7 +7095,7 @@ select.select-day option {
   }
 
   .mb-menu {
-    background: #439bd4;
+    background: transparent;
     padding: 22px;
   }
 
@@ -21261,7 +21261,7 @@ select.input-vendor::-ms-expand {
 
   .detail-content {
     width: 65%;
-    padding-top: 100px;
+    padding-top: 0px;
   }
 
   .detail-entry {

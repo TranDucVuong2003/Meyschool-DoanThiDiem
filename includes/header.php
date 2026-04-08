@@ -177,15 +177,10 @@
                     </ul>
 
 
-                    <div class="header-info">
+                    <!-- <div class="header-info">
                         <ul class="header-info-list">
-                            <li class="info-item">
-                                <a href="#" title="Login Canvas" class="account" target="_blank"><img
-                                        src="./olympia/images/pc-header-login.svg" alt=""></a>
-                            </li>
-
                         </ul>
-                    </div>
+                    </div> -->
                 </div>
                 <!--===========MENU MEGA========-->
             </div>

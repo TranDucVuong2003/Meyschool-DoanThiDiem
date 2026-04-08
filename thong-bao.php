@@ -15,14 +15,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:site_name" content="Meyschool Đoàn Thị Điểm">
     <meta property="og:title" content="Thông báo">
-    <meta property="og:description"
-        content="Cập nhật thông báo mới nhất của Meyschool Đoàn Thị Điểm">
+    <meta property="og:description" content="Cập nhật thông báo mới nhất của Meyschool Đoàn Thị Điểm">
     <meta property="og:url" content="thong-bao.php">
     <meta property="og:type" content="article">
     <meta property="og:image" content="storage/favicon.png">
     <meta name="twitter:title" content="Thông báo">
-    <meta name="twitter:description"
-        content="Cập nhật thông báo mới nhất của Meyschool Đoàn Thị Điểm">
+    <meta name="twitter:description" content="Cập nhật thông báo mới nhất của Meyschool Đoàn Thị Điểm">
 
     <link media="all" type="text/css" rel="stylesheet"
         href="vendor/core/plugins/language/css/language-publice209.css?v=1.0.0">
@@ -235,7 +233,11 @@
             gap: 20px;
         }
 
-        .news-heading h1 {
+        .news-page {
+            padding-top: 60px;
+        }
+
+        .new .news-heading h1 {
             font-size: 30px;
         }
     }

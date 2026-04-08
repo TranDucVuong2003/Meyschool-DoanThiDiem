@@ -5,18 +5,16 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=1"
-        name="viewport" />
+    <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=1" name="viewport" />
 
     <link rel="shortcut icon" href="storage/favicon.png">
 
-    <title id="pageTitle">Chi tiết sự kiện</title>
+    <title id="pageTitle">Chi tiết thành tích</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:site_name" content="Meyschool Đoàn Thị Điểm">
     <meta property="og:type" content="article">
 
-    <link media="all" type="text/css" rel="stylesheet"
-        href="vendor/core/plugins/language/css/language-publice209.css?v=1.0.0">
+    <link media="all" type="text/css" rel="stylesheet" href="vendor/core/plugins/language/css/language-publice209.css?v=1.0.0">
     <link rel="stylesheet" href="olympia/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="olympia/css/reset.css">
     <link rel="stylesheet" href="olympia/css/bootstrap-datetimepicker.min.css">
@@ -106,51 +104,78 @@
             font-size: 36px;
             font-weight: 700;
             line-height: 1.25;
-            max-width: 700px;
+            max-width: 760px;
             color: #1a1a2e;
         }
 
         .detail-top-meta {
             display: flex;
             flex-wrap: wrap;
-            gap: 18px;
+            align-items: center;
+            gap: 8px 14px;
             font-size: 13px;
             color: #58758d;
-            opacity: 1;
-            margin-top: 4px;
         }
 
-        .detail-top-meta span {
-            display: flex;
+        .detail-top-badge {
+            display: inline-flex;
             align-items: center;
             gap: 6px;
             padding: 5px 10px;
             border: 1px solid #d7e3ee;
             border-radius: 999px;
             background: #f3f8fc;
-            color: #2f5f86;
             font-weight: 600;
+            color: #2f5f86;
         }
 
-        /* Layout */
         .detail-layout {
             padding: 40px 0 60px;
         }
 
         .detail-grid {
             display: grid;
-            grid-template-columns: minmax(0, 1fr) 300px;
+            grid-template-columns: minmax(0, 1fr) 320px;
             gap: 40px;
             align-items: start;
             overflow: hidden;
         }
 
-        /* Article content */
         .detail-article {
             min-width: 0;
             max-width: 100%;
             overflow: hidden;
             box-sizing: border-box;
+        }
+
+        .detail-summary-box {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 10px;
+            margin-bottom: 22px;
+        }
+
+        .detail-summary-item {
+            border: 1px solid #e6edf3;
+            border-radius: 10px;
+            background: #f8fcff;
+            padding: 10px 12px;
+        }
+
+        .detail-summary-item b {
+            display: block;
+            font-size: 12px;
+            color: #2d6a9f;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            margin-bottom: 4px;
+        }
+
+        .detail-summary-item span {
+            color: #2f3e4d;
+            font-size: 14px;
+            line-height: 1.5;
+            font-weight: 600;
         }
 
         .detail-content {
@@ -191,51 +216,8 @@
             margin: 24px 0 12px;
         }
 
-        /* Share */
-        .detail-share {
-            margin-top: 28px;
-            padding-top: 20px;
-            border-top: 1px solid #e5e5e5;
-            font-size: 13px;
-            color: #666;
-        }
-
-        /* Related links below article */
-        .detail-related-links {
-            margin-top: 24px;
-        }
-
-        .detail-related-links h3 {
-            font-size: 14px;
-            color: #2980b9;
-            margin: 0 0 12px;
-            font-weight: 600;
-        }
-
-        .detail-related-links ul {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-        }
-
-        .detail-related-links li {
-            margin-bottom: 8px;
-        }
-
-        .detail-related-links li a {
-            color: #2980b9;
-            text-decoration: none;
-            font-size: 14px;
-            line-height: 1.5;
-        }
-
-        .detail-related-links li a:hover {
-            text-decoration: underline;
-        }
-
-        /* Tags */
         .detail-tags {
-            margin-top: 20px;
+            margin-top: 22px;
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
@@ -256,7 +238,6 @@
             background: #eee;
         }
 
-        /* Sidebar */
         .detail-sidebar {
             position: sticky;
             top: 100px;
@@ -277,48 +258,42 @@
             border-bottom: 2px solid #2980b9;
         }
 
-        /* Latest events list */
-        .latest-news-list {
+        .latest-list {
             list-style: none;
             margin: 0;
             padding: 0;
         }
 
-        .latest-news-item {
-            display: flex;
-            justify-content: space-between;
-            gap: 12px;
+        .latest-item {
+            display: block;
             padding: 10px 0;
             border-bottom: 1px solid #f0f0f0;
             text-decoration: none;
-            color: inherit;
         }
 
-        .latest-news-item:last-child {
+        .latest-item:last-child {
             border-bottom: none;
         }
 
-        .latest-news-item:hover .latest-news-title {
+        .latest-item:hover .latest-title {
             color: #2980b9;
         }
 
-        .latest-news-title {
+        .latest-title {
+            display: block;
             font-size: 13px;
             line-height: 1.45;
             color: #333;
-            flex: 1;
             transition: color 0.15s;
+            margin-bottom: 4px;
         }
 
-        .latest-news-time {
+        .latest-meta {
             font-size: 12px;
-            color: #2980b9;
+            color: #2d6a9f;
             font-weight: 600;
-            white-space: nowrap;
-            flex-shrink: 0;
         }
 
-        /* See all link */
         .sidebar-see-all {
             display: block;
             margin-top: 12px;
@@ -332,33 +307,6 @@
             text-decoration: underline;
         }
 
-        /* Category list */
-        .category-list {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .category-list li {
-            margin-bottom: 0;
-        }
-
-        .category-list li a {
-            display: block;
-            padding: 10px 12px;
-            font-size: 13px;
-            color: #444;
-            text-decoration: none;
-            border-bottom: 1px solid #f0f0f0;
-            transition: background 0.15s;
-        }
-
-        .category-list li a:hover {
-            background: #f5f5f5;
-            color: #2980b9;
-        }
-
-        /* Bottom related section */
         .detail-more {
             padding: 40px 0 60px;
             background: #f9f9f9;
@@ -416,7 +364,7 @@
             overflow: hidden;
         }
 
-        .more-card-date {
+        .more-card-meta {
             font-size: 11px;
             color: #999;
             margin-top: 4px;
@@ -436,7 +384,7 @@
             }
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 640px) {
             .detail-top {
                 padding: 100px 0 16px;
             }
@@ -445,11 +393,14 @@
                 font-size: 26px;
             }
 
+            .detail-summary-box {
+                grid-template-columns: 1fr;
+            }
+
             .more-grid {
                 grid-template-columns: 1fr 1fr;
                 gap: 14px;
             }
-
         }
     </style>
 </head>
@@ -463,63 +414,54 @@
             <div class="detail-container">
                 <ol class="detail-breadcrumb">
                     <li><a href="index.php">Trang chủ</a></li>
-                    <li><a href="su-kien-truong.php">Sự kiện</a></li>
+                    <li><a href="thanh-tich.php">Thành tích</a></li>
                     <li id="breadcrumbTitle">Đang tải...</li>
                 </ol>
                 <h1 class="detail-title" id="pageTitleMain">Đang tải...</h1>
-                <div class="detail-top-meta">
-                    <span id="topDate"></span>
-                    <span id="topLocation" style="display:none;"></span>
+                <div class="detail-top-meta" id="topMeta">
+                    <span class="detail-top-badge" id="topYear" style="display:none;"></span>
+                    <span class="detail-top-badge" id="topAward" style="display:none;"></span>
+                    <span class="detail-top-badge" id="topDate">📅 Đang tải...</span>
                 </div>
             </div>
         </section>
 
-        <!-- Content -->
         <section class="detail-layout">
             <div class="detail-container detail-grid">
-                <!-- Left: Article -->
                 <div class="detail-article">
+                    <div class="detail-summary-box" id="summaryBox" style="display:none;">
+                        <div class="detail-summary-item" id="summaryAward" style="display:none;">
+                            <b>Giải thưởng</b>
+                            <span></span>
+                        </div>
+                        <div class="detail-summary-item" id="summaryStudent" style="display:none;">
+                            <b>Học sinh</b>
+                            <span></span>
+                        </div>
+                    </div>
 
                     <div class="detail-content" id="articleContent">
                         <p style="color:#999;text-align:center;padding:40px 0;">Đang tải nội dung...</p>
                     </div>
 
-                    <div class="detail-share">
-                        Chia sẻ:
-                    </div>
-
-                    <div class="detail-related-links" id="relatedLinks" style="display:none;">
-                        <h3>Sự kiện liên quan</h3>
-                        <ul id="relatedLinksList"></ul>
-                    </div>
-
                     <div class="detail-tags" id="articleTags"></div>
                 </div>
 
-                <!-- Right: Sidebar -->
                 <aside class="detail-sidebar">
                     <div class="sidebar-box">
-                        <h3 class="sidebar-box-title">Sự kiện mới nhất</h3>
-                        <div class="latest-news-list" id="latestEventsList">
+                        <h3 class="sidebar-box-title">Thành tích mới nhất</h3>
+                        <div class="latest-list" id="latestList">
                             <p style="font-size:13px;color:#999;">Đang tải...</p>
                         </div>
-                        <a href="su-kien-truong.php" class="sidebar-see-all">TẤT CẢ SỰ KIỆN ►</a>
-                    </div>
-
-                    <div class="sidebar-box">
-                        <h3 class="sidebar-box-title">Danh mục</h3>
-                        <ul class="category-list" id="categoryList">
-                            <li><a href="su-kien-truong.php">Tất cả</a></li>
-                        </ul>
+                        <a href="thanh-tich.php" class="sidebar-see-all">TẤT CẢ THÀNH TÍCH ►</a>
                     </div>
                 </aside>
             </div>
         </section>
 
-        <!-- Related events bottom -->
         <section class="detail-more" id="moreSection" style="display:none;">
             <div class="detail-container">
-                <h2>Sự kiện khác</h2>
+                <h2>Thành tích khác</h2>
                 <div class="more-grid" id="moreGrid"></div>
             </div>
         </section>
@@ -539,9 +481,9 @@
             var params = new URLSearchParams(window.location.search);
             var slug = params.get('slug');
             if (!slug) {
-                document.getElementById('pageTitleMain').textContent = 'Không tìm thấy sự kiện';
-                document.getElementById('articleContent').innerHTML =
-                    '<p style="text-align:center;color:#999;">Sự kiện không tồn tại hoặc đã bị xóa.</p>';
+                document.getElementById('pageTitleMain').textContent = 'Không tìm thấy thành tích';
+                document.getElementById('breadcrumbTitle').textContent = 'Không tìm thấy';
+                document.getElementById('articleContent').innerHTML = '<p style="text-align:center;color:#999;">Thành tích không tồn tại hoặc đã bị xóa.</p>';
                 return;
             }
 
@@ -552,7 +494,6 @@
             }
 
             function formatDate(dateStr) {
-                if (!dateStr) return '';
                 var d = new Date(dateStr);
                 var day = String(d.getDate()).padStart(2, '0');
                 var month = String(d.getMonth() + 1).padStart(2, '0');
@@ -560,144 +501,105 @@
                 return day + '/' + month + '/' + year;
             }
 
-            function formatTime(timeStr) {
-                if (!timeStr) return '';
-                // timeStr có thể là "HH:MM:SS" hoặc "HH:MM"
-                return timeStr.slice(0, 5);
+            function buildTopBadges(a) {
+                if (a.year) {
+                    var y = document.getElementById('topYear');
+                    y.textContent = 'Năm ' + a.year;
+                    y.style.display = 'inline-flex';
+                }
+                if (a.award_level) {
+                    var aw = document.getElementById('topAward');
+                    aw.textContent = '🏆 ' + a.award_level;
+                    aw.style.display = 'inline-flex';
+                }
+                document.getElementById('topDate').textContent = '📅 ' + formatDate(a.created_at);
             }
 
-            function normalizeTitle(text) {
-                return String(text || '')
-                    .toLowerCase()
-                    .replace(/[^a-z0-9\u00C0-\u024F\u1E00-\u1EFF\s]/g, ' ')
-                    .replace(/\s+/g, ' ')
-                    .trim();
-            }
-
-            function removeDuplicateContentHeading(pageTitle) {
-                var contentEl = document.getElementById('articleContent');
-                var firstHeading = contentEl.querySelector('h1, h2, h3');
-                if (!firstHeading) return;
-
-                var headingText = normalizeTitle(firstHeading.textContent);
-                var titleText = normalizeTitle(pageTitle);
-                if (!headingText || !titleText) return;
-
-                if (headingText === titleText || headingText.indexOf(titleText) === 0 || titleText.indexOf(headingText) === 0) {
-                    firstHeading.remove();
+            function buildSummary(a) {
+                var hasSummary = false;
+                if (a.award_level) {
+                    var sAward = document.querySelector('#summaryAward span');
+                    sAward.textContent = a.award_level;
+                    document.getElementById('summaryAward').style.display = 'block';
+                    hasSummary = true;
+                }
+                if (a.student_name) {
+                    var sStudent = document.querySelector('#summaryStudent span');
+                    sStudent.textContent = a.student_name;
+                    document.getElementById('summaryStudent').style.display = 'block';
+                    hasSummary = true;
+                }
+                if (hasSummary) {
+                    document.getElementById('summaryBox').style.display = 'grid';
                 }
             }
 
-            // Load event detail
-            $.getJSON('api/events-public.php?slug=' + encodeURIComponent(slug), function(res) {
+            $.getJSON('api/achievements-public.php?slug=' + encodeURIComponent(slug), function(res) {
                 if (!res.success || !res.data) {
-                    document.getElementById('pageTitleMain').textContent = 'Không tìm thấy sự kiện';
-                    document.getElementById('articleContent').innerHTML =
-                        '<p style="text-align:center;color:#999;">Sự kiện không tồn tại hoặc đã bị xóa.</p>';
+                    document.getElementById('pageTitleMain').textContent = 'Không tìm thấy thành tích';
+                    document.getElementById('breadcrumbTitle').textContent = 'Không tìm thấy';
+                    document.getElementById('articleContent').innerHTML = '<p style="text-align:center;color:#999;">Thành tích không tồn tại hoặc đã bị xóa.</p>';
                     return;
                 }
+
                 var a = res.data;
-                document.title = a.title + ' - Meyschool Đoàn Thị Điểm';
-                document.getElementById('pageTitle').textContent = a.title + ' - Meyschool Đoàn Thị Điểm';
-                document.getElementById('pageTitleMain').textContent = a.title;
-                document.getElementById('breadcrumbTitle').textContent = a.category_name || 'Sự kiện';
-                document.getElementById('articleContent').innerHTML = a.content || '<p>Chưa có nội dung.</p>';
-                removeDuplicateContentHeading(a.title);
-
-                // Top meta
-                if (a.event_date) {
-                    var heroDateEl = document.getElementById('topDate');
-                    var dateText = '📅 ' + formatDate(a.event_date);
-                    if (a.event_time) dateText += ' • ' + formatTime(a.event_time);
-                    if (a.event_end_date && a.event_end_date !== a.event_date) {
-                        dateText += ' – ' + formatDate(a.event_end_date);
-                    }
-                    heroDateEl.textContent = dateText;
+                var contentHtml = a.content || '';
+                if (!contentHtml && a.excerpt) {
+                    contentHtml = '<p>' + escHtml(a.excerpt) + '</p>';
                 }
-                if (a.event_location) {
-                    var locEl = document.getElementById('topLocation');
-                    locEl.textContent = '📍 ' + a.event_location;
-                    locEl.style.display = '';
+                if (!contentHtml) {
+                    contentHtml = '<p>Chưa có nội dung chi tiết.</p>';
                 }
 
-                // Tags
-                if (a.category_name) {
-                    document.getElementById('articleTags').innerHTML =
-                        '<a class="detail-tag" href="su-kien-truong.php">' + escHtml(a.category_name) + '</a>';
-                }
+                document.title = (a.title || 'Chi tiết thành tích') + ' - Meyschool Đoàn Thị Điểm';
+                document.getElementById('pageTitle').textContent = document.title;
+                document.getElementById('pageTitleMain').textContent = a.title || 'Chi tiết thành tích';
+                document.getElementById('breadcrumbTitle').textContent = a.title || 'Chi tiết thành tích';
+                document.getElementById('articleContent').innerHTML = contentHtml;
 
-                // Load related events (same category, exclude current)
-                if (a.category_id) {
-                    $.getJSON('api/events-public.php?category_id=' + a.category_id + '&page=1', function(rel) {
-                        if (rel.success && rel.data && rel.data.length > 0) {
-                            var links = rel.data.filter(function(r) {
-                                return r.id !== a.id;
-                            }).slice(0, 4);
-                            if (links.length) {
-                                var listHtml = '';
-                                links.forEach(function(r) {
-                                    listHtml += '<li><a href="doc-su-kien.php?slug=' +
-                                        encodeURIComponent(r.slug) + '">' + escHtml(r.title) +
-                                        '</a></li>';
-                                });
-                                document.getElementById('relatedLinksList').innerHTML = listHtml;
-                                document.getElementById('relatedLinks').style.display = '';
-                            }
-                        }
-                    });
+                buildTopBadges(a);
+                buildSummary(a);
+
+                var tags = [];
+                if (a.year) {
+                    tags.push('<a class="detail-tag" href="thanh-tich.php?year=' + encodeURIComponent(a.year) + '">Năm ' + escHtml(String(a.year)) + '</a>');
                 }
-            }).fail(function() {
-                document.getElementById('pageTitleMain').textContent = 'Không tìm thấy sự kiện';
-                document.getElementById('articleContent').innerHTML =
-                    '<p style="text-align:center;color:#999;">Sự kiện không tồn tại hoặc đã bị xóa.</p>';
+                if (a.award_level) {
+                    tags.push('<a class="detail-tag" href="thanh-tich.php">' + escHtml(a.award_level) + '</a>');
+                }
+                if (a.student_name) {
+                    tags.push('<a class="detail-tag" href="thanh-tich.php">' + escHtml(a.student_name) + '</a>');
+                }
+                document.getElementById('articleTags').innerHTML = tags.join('');
             });
 
-            // Load latest events for sidebar
-            $.getJSON('api/events-public.php?page=1', function(res) {
+            $.getJSON('api/achievements-public.php?page=1', function(res) {
                 if (res.success && res.data && res.data.length) {
-                    var html = '';
-                    res.data.slice(0, 6).forEach(function(r) {
-                        html += '<a class="latest-news-item" href="doc-su-kien.php?slug=' +
-                            encodeURIComponent(r.slug) + '">';
-                        html += '<span class="latest-news-title">' + escHtml(r.title) + '</span>';
-                        html += '<span class="latest-news-time">' + formatDate(r.event_date || r.created_at) + '</span>';
-                        html += '</a>';
+                    var listHtml = '';
+                    res.data.slice(0, 6).forEach(function(item) {
+                        listHtml += '<a class="latest-item" href="doc-thanh-tich.php?slug=' + encodeURIComponent(item.slug) + '">';
+                        listHtml += '<span class="latest-title">' + escHtml(item.title) + '</span>';
+                        listHtml += '<span class="latest-meta">' + (item.year ? ('Năm ' + escHtml(String(item.year))) : 'Meyschool Đoàn Thị Điểm') + '</span>';
+                        listHtml += '</a>';
                     });
-                    document.getElementById('latestEventsList').innerHTML = html;
+                    document.getElementById('latestList').innerHTML = listHtml;
                 }
             });
 
-            // Load categories for sidebar
-            $.getJSON('api/event-categories.php', function(res) {
-                if (res.success && res.data && res.data.length) {
-                    var listEl = document.getElementById('categoryList');
-                    res.data.forEach(function(c) {
-                        var li = document.createElement('li');
-                        var a = document.createElement('a');
-                        a.href = 'su-kien-truong.php?cat=' + c.id;
-                        a.textContent = c.name;
-                        li.appendChild(a);
-                        listEl.appendChild(li);
-                    });
-                }
-            });
-
-            // Load more events for bottom section
-            $.getJSON('api/events-public.php?page=1', function(res) {
+            $.getJSON('api/achievements-public.php?page=1', function(res) {
                 if (res.success && res.data && res.data.length > 1) {
                     var items = res.data.filter(function(r) {
                         return r.slug !== slug;
                     }).slice(0, 4);
+
                     if (items.length) {
                         var html = '';
                         items.forEach(function(r) {
                             var thumb = r.thumbnail || 'storage/favicon.png';
-                            html += '<a class="more-card" href="doc-su-kien.php?slug=' +
-                                encodeURIComponent(r.slug) + '">';
-                            html += '<div class="more-card-img"><img src="' + escHtml(thumb) +
-                                '" alt="' + escHtml(r.title) + '"></div>';
+                            html += '<a class="more-card" href="doc-thanh-tich.php?slug=' + encodeURIComponent(r.slug) + '">';
+                            html += '<div class="more-card-img"><img src="' + escHtml(thumb) + '" alt="' + escHtml(r.title) + '"></div>';
                             html += '<p class="more-card-title">' + escHtml(r.title) + '</p>';
-                            html += '<p class="more-card-date">' + formatDate(r.event_date || r.created_at) + '</p>';
+                            html += '<p class="more-card-meta">' + (r.award_level ? ('🏆 ' + escHtml(r.award_level)) : (r.year ? ('Năm ' + escHtml(String(r.year))) : 'Thành tích')) + '</p>';
                             html += '</a>';
                         });
                         document.getElementById('moreGrid').innerHTML = html;
