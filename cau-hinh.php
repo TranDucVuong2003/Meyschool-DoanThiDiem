@@ -383,6 +383,58 @@ $admin_username = htmlspecialchars($_SESSION['admin_username'] ?? '');
             font-size: 14px;
         }
 
+        .settings-form {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .settings-form .form-group {
+            margin: 0;
+        }
+
+        .settings-form .form-group.full {
+            grid-column: 1 / -1;
+        }
+
+        .settings-form label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: var(--text);
+        }
+
+        .settings-form input,
+        .settings-form textarea {
+            width: 100%;
+            padding: 10px 14px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 14px;
+            outline: none;
+            color: var(--text);
+            font-family: inherit;
+        }
+
+        .settings-form input:focus,
+        .settings-form textarea:focus {
+            border-color: var(--accent);
+        }
+
+        .settings-form textarea {
+            min-height: 92px;
+            resize: vertical;
+        }
+
+        .settings-actions {
+            grid-column: 1 / -1;
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-top: 8px;
+        }
+
         /* ── Modal ── */
         .modal-overlay {
             display: none;
@@ -538,6 +590,7 @@ $admin_username = htmlspecialchars($_SESSION['admin_username'] ?? '');
             <div class="tabs-bar">
                 <button class="tab-btn active" data-tab="danh-muc">Danh mục tin tức</button>
                 <button class="tab-btn" data-tab="danh-muc-thongbao">Danh mục thông báo</button>
+                <button class="tab-btn" data-tab="thong-tin-chung">Chỉnh sửa thông tin</button>
             </div>
 
             <!-- Tab: Danh mục tin tức -->
@@ -599,6 +652,61 @@ $admin_username = htmlspecialchars($_SESSION['admin_username'] ?? '');
                             </tr>
                         </tbody>
                     </table>
+                </div>
+            </div>
+
+            <!-- Tab: Chỉnh sửa thông tin -->
+            <div class="tab-panel" id="tab-thong-tin-chung">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Thông tin liên hệ hiển thị ngoài website</h3>
+                    </div>
+
+                    <form id="siteSettingsForm" class="settings-form">
+                        <div class="form-group full">
+                            <label for="stAddress">Địa chỉ</label>
+                            <input type="text" id="stAddress" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="stHotline">Hotline</label>
+                            <input type="text" id="stHotline" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="stEmail">Email</label>
+                            <input type="email" id="stEmail" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="stWebsite">Website</label>
+                            <input type="text" id="stWebsite" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="stTiktok">Tiktok</label>
+                            <input type="url" id="stTiktok" required>
+                        </div>
+
+                        <div class="form-group full">
+                            <label for="stFanpage">Fanpage</label>
+                            <input type="url" id="stFanpage" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="stWorkWeekdays">Thời gian làm việc (Thứ 2 - Thứ 6)</label>
+                            <input type="text" id="stWorkWeekdays" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="stWorkSaturday">Thời gian làm việc (Thứ 7)</label>
+                            <input type="text" id="stWorkSaturday" required>
+                        </div>
+
+                        <div class="settings-actions">
+                            <button type="submit" class="btn btn-primary">Lưu thông tin</button>
+                        </div>
+                    </form>
                 </div>
             </div>
 
@@ -720,6 +828,7 @@ $admin_username = htmlspecialchars($_SESSION['admin_username'] ?? '');
 
         // ── API ──
         const API = 'api/news-categories.php';
+        const SETTINGS_API = 'api/site-settings.php';
 
         function loadCategories(search) {
             let url = API + '?t=' + Date.now();
@@ -1053,7 +1162,68 @@ $admin_username = htmlspecialchars($_SESSION['admin_username'] ?? '');
                 if (btn.dataset.tab === 'danh-muc-thongbao') {
                     loadNotifCategories();
                 }
+                if (btn.dataset.tab === 'thong-tin-chung') {
+                    loadSiteSettings();
+                }
             });
+        });
+
+        // ════════════════════════════════════
+        // Thông tin liên hệ chung
+        // ════════════════════════════════════
+        function loadSiteSettings() {
+            fetch(SETTINGS_API + '?t=' + Date.now())
+                .then(r => r.json())
+                .then(res => {
+                    if (!res.success || !res.data) {
+                        showToast('Không tải được thông tin', 'error');
+                        return;
+                    }
+
+                    const d = res.data;
+                    document.getElementById('stAddress').value = d.address || '';
+                    document.getElementById('stHotline').value = d.hotline || '';
+                    document.getElementById('stEmail').value = d.email || '';
+                    document.getElementById('stWebsite').value = d.website || '';
+                    document.getElementById('stTiktok').value = d.tiktok || '';
+                    document.getElementById('stFanpage').value = d.fanpage || '';
+                    document.getElementById('stWorkWeekdays').value = d.work_time_weekdays || '';
+                    document.getElementById('stWorkSaturday').value = d.work_time_saturday || '';
+                })
+                .catch(() => showToast('Lỗi kết nối', 'error'));
+        }
+
+        document.getElementById('siteSettingsForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const payload = {
+                address: document.getElementById('stAddress').value.trim(),
+                hotline: document.getElementById('stHotline').value.trim(),
+                email: document.getElementById('stEmail').value.trim(),
+                website: document.getElementById('stWebsite').value.trim(),
+                tiktok: document.getElementById('stTiktok').value.trim(),
+                fanpage: document.getElementById('stFanpage').value.trim(),
+                work_time_weekdays: document.getElementById('stWorkWeekdays').value.trim(),
+                work_time_saturday: document.getElementById('stWorkSaturday').value.trim()
+            };
+
+            fetch(SETTINGS_API + '?_method=PUT', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(payload)
+                })
+                .then(r => r.json())
+                .then(res => {
+                    if (res.success) {
+                        showToast(res.message || 'Đã lưu thông tin', 'success');
+                        loadSiteSettings();
+                    } else {
+                        showToast(res.message || 'Có lỗi xảy ra', 'error');
+                    }
+                })
+                .catch(() => showToast('Lỗi kết nối', 'error'));
         });
     </script>
 </body>

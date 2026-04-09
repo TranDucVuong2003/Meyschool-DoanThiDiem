@@ -1,3 +1,8 @@
+<?php
+require_once __DIR__ . '/includes/site-settings.php';
+$ss = load_site_settings();
+?>
+
 <!DOCTYPE html>
 <html lang="vi">
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
@@ -546,16 +551,16 @@
                         <div class="cs-info-grid">
                             <div class="cs-info-item">
                                 <b>Hotline</b>
-                                <p>0846.179.888</p>
-                                <p>7:30 - 17:00 (Thứ 2 - Thứ 6)<br>7:30 - 11:30 (Thứ 7)</p>
+                                <p><?= htmlspecialchars($ss['hotline']) ?></p>
+                                <p><?= htmlspecialchars($ss['work_time_weekdays']) ?><br><?= htmlspecialchars($ss['work_time_saturday']) ?></p>
                             </div>
                             <div class="cs-info-item">
                                 <b>Email</b>
-                                <p>meyschool@dtd.edu.vn</p>
+                                <p><?= htmlspecialchars($ss['email']) ?></p>
                             </div>
                             <div class="cs-info-item">
                                 <b>Địa chỉ</b>
-                                <p>KĐT Meyhomes Capital Phú Quốc<br>P. An Thới - TP. Phú Quốc</p>
+                                <p><?= nl2br(htmlspecialchars(str_replace(' - ', "\n", $ss['address']))) ?></p>
                             </div>
                         </div>
                     </article>
@@ -678,15 +683,15 @@
                         <h3>Liên hệ tư vấn</h3>
                         <div class="cs-contact">
                             <b>Hotline</b>
-                            <span>0934 525 889</span>
+                            <span><?= htmlspecialchars($ss['hotline']) ?></span>
                         </div>
                         <div class="cs-contact">
                             <b>Email</b>
-                            <span>tuyensinh@doanthidiem.edu.vn</span>
+                            <span><?= htmlspecialchars($ss['email']) ?></span>
                         </div>
                         <div class="cs-contact" style="margin-bottom: 0;">
                             <b>Địa chỉ</b>
-                            <span>KĐT Trung Văn, Nam Từ Liêm, Hà Nội</span>
+                            <span><?= htmlspecialchars($ss['address']) ?></span>
                         </div>
                         <div class="cs-actions">
                             <a href="dang-ky-tham-quan.php" class="cs-btn cs-btn-primary">Đặt lịch tham quan</a>

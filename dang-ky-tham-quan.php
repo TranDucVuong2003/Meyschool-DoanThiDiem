@@ -1,3 +1,8 @@
+<?php
+require_once __DIR__ . '/includes/site-settings.php';
+$ss = load_site_settings();
+?>
+
 <!DOCTYPE html>
 <html lang="vi">
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
@@ -508,15 +513,15 @@
                         <h3>Thông tin liên hệ</h3>
                         <div class="tour-contact-item">
                             <b>Hotline</b>
-                            <span>0934 525 889</span>
+                            <span><?= htmlspecialchars($ss['hotline']) ?></span>
                         </div>
                         <div class="tour-contact-item">
                             <b>Email</b>
-                            <span>info@doanthidiem.edu.vn</span>
+                            <span><?= htmlspecialchars($ss['email']) ?></span>
                         </div>
                         <div class="tour-contact-item" style="margin-bottom: 0;">
                             <b>Địa chỉ</b>
-                            <span>Khu đô thị Trung Văn, Nam Từ Liêm, Hà Nội</span>
+                            <span><?= htmlspecialchars($ss['address']) ?></span>
                         </div>
                     </div>
                     <!-- 

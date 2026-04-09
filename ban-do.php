@@ -1,3 +1,8 @@
+<?php
+require_once __DIR__ . '/includes/site-settings.php';
+$ss = load_site_settings();
+?>
+
 <!DOCTYPE html>
 <html lang="vi">
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
@@ -391,15 +396,15 @@
                     <div class="map-meta">
                         <div class="map-meta-item">
                             <b>Địa chỉ</b>
-                            <span>Khu đô thị Trung Văn, Nam Từ Liêm, Hà Nội</span>
+                            <span><?= htmlspecialchars($ss['address']) ?></span>
                         </div>
                         <div class="map-meta-item">
                             <b>Hotline</b>
-                            <span>0934 525 889</span>
+                            <span><?= htmlspecialchars($ss['hotline']) ?></span>
                         </div>
                         <div class="map-meta-item">
                             <b>Khung giờ hỗ trợ</b>
-                            <span>Thứ 2 - Thứ 6: 07:30 - 17:30</span>
+                            <span><?= htmlspecialchars($ss['work_time_weekdays']) ?></span>
                         </div>
                     </div>
 

@@ -1,3 +1,10 @@
+<?php
+require_once __DIR__ . '/site-settings.php';
+$ss = load_site_settings();
+$ss_hotline_tel = site_phone_to_tel($ss['hotline']);
+$ss_fanpage_encoded = urlencode($ss['fanpage']);
+?>
+
 <section id="footer" class="">
     <div class="footer footer-modern">
         <div class="container">
@@ -7,14 +14,11 @@
                         <img class="footer-logo-img" src="../assets/logo/logo.png" alt="Meyschool Đoàn Thị Điểm">
                     </a>
                     <div class="footer-social">
-                        <a href="https://www.facebook.com/theolympiaschools/" target="__blank">
+                        <a href="<?= htmlspecialchars($ss['fanpage']) ?>" target="_blank">
                             <img src="../olympia/images/facebook.svg" alt="Facebook">
                         </a>
-                        <a href="https://www.instagram.com/theolympiaschools/" target="__blank">
-                            <img src="../olympia/images/instagram.svg" alt="Instagram">
-                        </a>
-                        <a href="https://www.youtube.com/user/Olympiaschools" target="__blank">
-                            <img src="../olympia/images/youtube.svg" alt="Youtube">
+                        <a href="<?= htmlspecialchars($ss['tiktok']) ?>" target="_blank">
+                            <img src="../olympia/images/tiktok.svg" alt="Tiktok">
                         </a>
                     </div>
                 </div>
@@ -22,29 +26,28 @@
                     <span class="footer-modern-title">Thông tin liên hệ</span>
                     <ul class="footer-contact-list">
                         <li class="footer-contact-item">
-                            <p class="contact-item-value">Địa chỉ: Phường An Thới, Meyhomes Capital Phú Quốc, Phu Quoc,
-                                Vietnam</p>
+                            <p class="contact-item-value">Địa chỉ: <?= htmlspecialchars($ss['address']) ?></p>
                         </li>
                         <li class="footer-contact-item">
-                            <p class="contact-item-value">Hotline: <a href="tel:+0934525889"
-                                    class="address-phone-number">0934 525 889</a></p>
+                            <p class="contact-item-value">Hotline: <a href="tel:<?= htmlspecialchars($ss_hotline_tel) ?>"
+                                    class="address-phone-number"><?= htmlspecialchars($ss['hotline']) ?></a></p>
                         </li>
                         <li class="footer-contact-item">
-                            <p class="contact-item-value">Email: tuyensinh@theolympiaschools.edu.vn</p>
+                            <p class="contact-item-value">Email: <?= htmlspecialchars($ss['email']) ?></p>
                         </li>
                         <li class="footer-contact-item">
-                            <p class="contact-item-value">Website: www.theolympiaschools.edu.vn</p>
+                            <p class="contact-item-value">Website: <?= htmlspecialchars($ss['website']) ?></p>
                         </li>
                     </ul>
                     <span class="footer-modern-title">Thời gian làm việc</span>
-                    <p class="footer-time">Thứ 2 - Thứ 6: 7:30 - 17:00</p>
-                    <p class="footer-time">Thứ 7: 7:30 - 11:30</p>
+                    <p class="footer-time"><?= htmlspecialchars($ss['work_time_weekdays']) ?></p>
+                    <p class="footer-time"><?= htmlspecialchars($ss['work_time_saturday']) ?></p>
                 </div>
                 <div class="footer-modern-col">
                     <span class="footer-modern-title">Fanpage</span>
                     <div class="footer-embed">
                         <iframe
-                            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fmeyschooldtd.phuquoc%2F&tabs=timeline&width=360&height=220&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true"
+                            src="https://www.facebook.com/plugins/page.php?href=<?= $ss_fanpage_encoded ?>&tabs=timeline&width=360&height=220&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true"
                             width="360" height="220" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
                             allowfullscreen="true"
                             allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>

@@ -1,3 +1,10 @@
+<?php
+require_once __DIR__ . '/site-settings.php';
+$ss = load_site_settings();
+$ss_hotline_tel = site_phone_to_tel($ss['hotline']);
+$ss_fanpage_encoded = urlencode($ss['fanpage']);
+?>
+
 <section id="footer" class="">
     <div class="footer footer-modern">
         <div class="container">
@@ -7,10 +14,10 @@
                         <img class="footer-logo-img" src="assets/logo/logo.png" alt="Meyschool Đoàn Thị Điểm">
                     </a>
                     <div class="footer-social">
-                        <a href="https://www.facebook.com/meyschooldtd.phuquoc" target="_blank">
+                        <a href="<?= htmlspecialchars($ss['fanpage']) ?>" target="_blank">
                             <img src="olympia/images/facebook.svg" alt="Facebook">
                         </a>
-                        <a href="https://bit.ly/4sWLsmk" target="_blank">
+                        <a href="<?= htmlspecialchars($ss['tiktok']) ?>" target="_blank">
                             <img src="olympia/images/tiktok.svg" alt="Tiktok">
                         </a>
                     </div>
@@ -19,33 +26,33 @@
                     <span class="footer-modern-title">Thông tin liên hệ</span>
                     <ul class="footer-contact-list">
                         <li class="footer-contact-item">
-                            <p class="contact-item-value">Địa chỉ: KĐT Meyhomes Capital Phú Quốc - P. An Thới - TP. Phú Quốc</p>
+                            <p class="contact-item-value">Địa chỉ: <?= htmlspecialchars($ss['address']) ?></p>
                         </li>
                         <li class="footer-contact-item">
-                            <p class="contact-item-value">Hotline: <a href="tel:+84846179888" class="address-phone-number">0846.179.888</a></p>
+                            <p class="contact-item-value">Hotline: <a href="tel:<?= htmlspecialchars($ss_hotline_tel) ?>" class="address-phone-number"><?= htmlspecialchars($ss['hotline']) ?></a></p>
                         </li>
                         <li class="footer-contact-item">
-                            <p class="contact-item-value">Email: meyschool@dtd.edu.vn</p>
+                            <p class="contact-item-value">Email: <?= htmlspecialchars($ss['email']) ?></p>
                         </li>
                         <li class="footer-contact-item">
-                            <p class="contact-item-value">Website: meyschooldtd.edu.vn</p>
+                            <p class="contact-item-value">Website: <?= htmlspecialchars($ss['website']) ?></p>
                         </li>
                         <li class="footer-contact-item">
-                            <p class="contact-item-value">Tiktok: <a href="https://bit.ly/4sWLsmk" target="_blank">https://bit.ly/4sWLsmk</a></p>
+                            <p class="contact-item-value">Tiktok: <a href="<?= htmlspecialchars($ss['tiktok']) ?>" target="_blank"><?= htmlspecialchars($ss['tiktok']) ?></a></p>
                         </li>
                         <li class="footer-contact-item">
-                            <p class="contact-item-value">Fanpage: <a href="https://www.facebook.com/meyschooldtd.phuquoc" target="_blank">https://www.facebook.com/meyschooldtd.phuquoc</a></p>
+                            <p class="contact-item-value">Fanpage: <a href="<?= htmlspecialchars($ss['fanpage']) ?>" target="_blank"><?= htmlspecialchars($ss['fanpage']) ?></a></p>
                         </li>
                     </ul>
                     <span class="footer-modern-title">Thời gian làm việc</span>
-                    <p class="footer-time">7:30 – 17:00 (Thứ 2 – Thứ 6)</p>
-                    <p class="footer-time">7:30 – 11:30 (Thứ 7)</p>
+                    <p class="footer-time"><?= htmlspecialchars($ss['work_time_weekdays']) ?></p>
+                    <p class="footer-time"><?= htmlspecialchars($ss['work_time_saturday']) ?></p>
                 </div>
                 <div class="footer-modern-col">
                     <span class="footer-modern-title">Fanpage</span>
                     <div class="footer-embed">
                         <iframe
-                            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fmeyschooldtd.phuquoc%2F&tabs=timeline&width=360&height=220&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true"
+                            src="https://www.facebook.com/plugins/page.php?href=<?= $ss_fanpage_encoded ?>&tabs=timeline&width=360&height=220&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true"
                             width="360" height="220" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
                             allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
                     </div>

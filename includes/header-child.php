@@ -1,3 +1,9 @@
+<?php
+require_once __DIR__ . '/site-settings.php';
+$ss = load_site_settings();
+$ss_hotline_tel = site_phone_to_tel($ss['hotline']);
+?>
+
 <section id="header">
     <div class="wrap header" id="header-navbar">
         <!--===================TOP BAR==========================-->
@@ -289,7 +295,7 @@
                     <div class="mb-info-modal" id="info-email" style="display: none">
                         <div class="modal-content">
                             <p class="modal-title text-center text-uppercase">Email</p>
-                            <p class="model-text font-garamond-bold">info@theolympiaschools.edu.vn</p>
+                            <p class="model-text font-garamond-bold"><?= htmlspecialchars($ss['email']) ?></p>
                             <a href="#" class="link-button righthover link-big  purple">Gửi email
                                 <img src="../olympia/images/button-1-3.svg" alt="">
                             </a>
@@ -301,8 +307,7 @@
                             <div class="number-phone-box">
                                 <p class="phone-title"> Tuyển sinh</p>
                                 <p class="phone-number font-garamond-bold">
-                                    <a href="tel:+84934525889" class="phone-number font-garamond-bold">0934 525
-                                        889</a>
+                                    <a href="tel:<?= htmlspecialchars($ss_hotline_tel) ?>" class="phone-number font-garamond-bold"><?= htmlspecialchars($ss['hotline']) ?></a>
                                 </p>
                             </div>
                             <div class="number-phone-box">
@@ -320,7 +325,7 @@
                     <div class="mb-info-modal" id="info-address" style="display: none">
                         <div class="modal-content">
                             <p class="modal-title text-center text-uppercase">Địa chỉ</p>
-                            <p class="model-text font-garamond-bold">KĐT Trung Văn, Nam Từ Liêm, Hà Nội</p>
+                            <p class="model-text font-garamond-bold"><?= htmlspecialchars($ss['address']) ?></p>
                             <a href="#" class="link-button righthover link-big  purple">Chỉ đường
                                 <img src="../olympia/images/button-1-3.svg" alt="">
                             </a>
