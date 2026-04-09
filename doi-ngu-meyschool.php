@@ -713,15 +713,15 @@ $teacherImages = array_values($teacherImages);
                         <h3>Liên hệ</h3>
                         <div class="team-contact-item">
                             <b>Hotline</b>
-                            <span>0934 525 889</span>
+                            <span>0846.179.888</span>
                         </div>
                         <div class="team-contact-item">
                             <b>Email</b>
-                            <span>info@meyschool.edu.vn</span>
+                            <span>meyschool@dtd.edu.vn</span>
                         </div>
                         <div class="team-contact-item" style="margin-bottom: 0;">
                             <b>Địa chỉ</b>
-                            <span>KĐT Trung Văn, Nam Từ Liêm, Hà Nội</span>
+                            <span>KĐT Meyhomes Capital Phú Quốc - P. An Thới - TP. Phú Quốc</span>
                         </div>
                         <div class="team-actions">
                             <a href="dang-ky-tu-van.php" class="team-btn team-btn-primary">Đăng ký tư vấn</a>

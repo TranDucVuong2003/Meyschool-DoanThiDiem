@@ -142,6 +142,10 @@ $_sidebar_page = basename($_SERVER['PHP_SELF']);
             Thông tin liên hệ
             <span class="nav-badge" id="contactBadge" style="display:none;">0</span>
         </a>
+        <a href="dang-ky-tham-quan-admin.php" class="nav-item <?= $_sidebar_page === 'dang-ky-tham-quan-admin.php' ? 'active' : '' ?>">
+            Đăng ký tham quan
+            <span class="nav-badge" id="tourBadge" style="display:none;">0</span>
+        </a>
 
         <div class="nav-section">Hệ thống</div>
         <a href="cau-hinh.php" class="nav-item <?= $_sidebar_page === 'cau-hinh.php' ? 'active' : '' ?>">
@@ -170,8 +174,27 @@ $_sidebar_page = basename($_SERVER['PHP_SELF']);
             .catch(() => {});
     }
 
+    function updateTourBadge() {
+        fetch('api/tour-submissions.php')
+            .then(r => r.json())
+            .then(res => {
+                const badge = document.getElementById('tourBadge');
+                if (!badge) return;
+                if (res.success && res.unreadCount > 0) {
+                    badge.textContent = res.unreadCount > 99 ? '99+' : res.unreadCount;
+                    badge.style.display = 'inline-flex';
+                } else {
+                    badge.style.display = 'none';
+                }
+            })
+            .catch(() => {});
+    }
+
     updateContactBadge();
+    updateTourBadge();
     setInterval(updateContactBadge, 30000);
+    setInterval(updateTourBadge, 30000);
 
     window.refreshContactBadge = updateContactBadge;
+    window.refreshTourBadge = updateTourBadge;
 </script>

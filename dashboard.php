@@ -16,19 +16,38 @@ $total_xu_ly  = 0;
 $chart_labels = [];
 $chart_data   = [];
 $grade_data   = ['tieu-hoc' => 0, 'thcs' => 0, 'thpt' => 0];
+$status_data  = [
+    'moi' => 0,
+    'da_lien_he' => 0,
+    'da_xep_lich' => 0,
+    'da_tham_quan' => 0,
+    'huy' => 0,
+];
 
 try {
     // Kiểm tra bảng tồn tại
-    $tables = $pdo->query("SHOW TABLES LIKE 'dang_ky_tham_quan'")->fetchAll();
+    $tables = $pdo->query("SHOW TABLES LIKE 'register_for_tour'")->fetchAll();
     if (!empty($tables)) {
-        $total_dktt  = $pdo->query("SELECT COUNT(*) FROM dang_ky_tham_quan")->fetchColumn();
-        $total_moi   = $pdo->query("SELECT COUNT(*) FROM dang_ky_tham_quan WHERE status='moi'")->fetchColumn();
-        $total_xu_ly = $pdo->query("SELECT COUNT(*) FROM dang_ky_tham_quan WHERE status='da_xu_ly'")->fetchColumn();
+        $total_dktt  = $pdo->query("SELECT COUNT(*) FROM register_for_tour")->fetchColumn();
+
+        $statusRows = $pdo->query(
+            "SELECT status, COUNT(*) AS cnt
+             FROM register_for_tour
+             GROUP BY status"
+        )->fetchAll();
+        foreach ($statusRows as $row) {
+            if (isset($status_data[$row['status']])) {
+                $status_data[$row['status']] = (int) $row['cnt'];
+            }
+        }
+
+        $total_moi = $status_data['moi'];
+        $total_xu_ly = $total_dktt - $total_moi - $status_data['huy'];
 
         // Đăng ký 7 ngày gần nhất
         $rows = $pdo->query(
             "SELECT DATE(created_at) as ngay, COUNT(*) as so_luong
-             FROM dang_ky_tham_quan
+             FROM register_for_tour
              WHERE created_at >= DATE_SUB(NOW(), INTERVAL 7 DAY)
              GROUP BY DATE(created_at)
              ORDER BY ngay ASC"
@@ -40,7 +59,7 @@ try {
 
         // Phân bổ cấp học
         $gcols = $pdo->query(
-            "SELECT grade_level, COUNT(*) as cnt FROM dang_ky_tham_quan GROUP BY grade_level"
+            "SELECT grade_level, COUNT(*) as cnt FROM register_for_tour GROUP BY grade_level"
         )->fetchAll();
         foreach ($gcols as $g) {
             if (isset($grade_data[$g['grade_level']])) {
@@ -604,17 +623,24 @@ $total_users = $pdo->query("SELECT COUNT(*) FROM users")->fetchColumn();
                 <?php
                 $recent = [];
                 try {
-                    $t = $pdo->query("SHOW TABLES LIKE 'dang_ky_tham_quan'")->fetchAll();
+                    $t = $pdo->query("SHOW TABLES LIKE 'register_for_tour'")->fetchAll();
                     if (!empty($t)) {
                         $recent = $pdo->query(
                             "SELECT parent_name, phone, student_name, grade_level, preferred_time, status, created_at
-                         FROM dang_ky_tham_quan ORDER BY created_at DESC LIMIT 10"
+                         FROM register_for_tour ORDER BY created_at DESC LIMIT 10"
                         )->fetchAll();
                     }
                 } catch (PDOException $e) {
                 }
 
                 $grade_label = ['tieu-hoc' => 'Tiểu học', 'thcs' => 'THCS', 'thpt' => 'THPT'];
+                $status_label = [
+                    'moi' => 'Mới',
+                    'da_lien_he' => 'Đã liên hệ',
+                    'da_xep_lich' => 'Đã xếp lịch',
+                    'da_tham_quan' => 'Đã tham quan',
+                    'huy' => 'Đã hủy',
+                ];
                 ?>
                 <?php if (empty($recent)): ?>
                     <div class="empty-state">&#128203; Chưa có đăng ký nào. Khi có dữ liệu sẽ hiển thị ở đây.</div>
@@ -642,11 +668,11 @@ $total_users = $pdo->query("SELECT COUNT(*) FROM users")->fetchColumn();
                                     <td><?= $grade_label[$row['grade_level']] ?? $row['grade_level'] ?></td>
                                     <td><?= htmlspecialchars($row['preferred_time'] ?: '—') ?></td>
                                     <td>
-                                        <?php if ($row['status'] === 'moi'): ?>
-                                            <span class="badge badge-new">Mới</span>
-                                        <?php else: ?>
-                                            <span class="badge badge-done">Đã xử lý</span>
-                                        <?php endif; ?>
+                                        <?php
+                                        $current_status = $row['status'] ?? 'moi';
+                                        $badge_class = $current_status === 'moi' ? 'badge-new' : 'badge-done';
+                                        ?>
+                                        <span class="badge <?= $badge_class ?>"><?= htmlspecialchars($status_label[$current_status] ?? $current_status) ?></span>
                                     </td>
                                     <td><?= date('d/m/Y H:i', strtotime($row['created_at'])) ?></td>
                                 </tr>

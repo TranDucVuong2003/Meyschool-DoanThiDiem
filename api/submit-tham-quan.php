@@ -78,7 +78,7 @@ if (!empty($errors)) {
 // 3. LƯU VÀO DATABASE
 // =====================
 try {
-    $sql = "INSERT INTO dang_ky_tham_quan 
+    $sql = "INSERT INTO register_for_tour 
             (parent_name, phone, email, student_name, birth_year, grade_level, preferred_time, message)
             VALUES 
             (:parent_name, :phone, :email, :student_name, :birth_year, :grade_level, :preferred_time, :message)";
