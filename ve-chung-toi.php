@@ -9,7 +9,7 @@
         name="viewport" />
 
 
-    <link rel="shortcut icon" href="storage/favicon.png">
+    <link rel="shortcut icon" href="assets/img/favicon.png">
 
     <title>Về chúng tôi</title>
     <meta name="description" content="Về Olympia">

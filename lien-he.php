@@ -8,7 +8,7 @@
     <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=1"
         name="viewport" />
 
-    <link rel="shortcut icon" href="storage/favicon.png">
+    <link rel="shortcut icon" href="assets/img/favicon.png">
 
     <title>Liên hệ</title>
     <meta name="description" content="Liên hệ">
@@ -18,7 +18,7 @@
     <meta property="og:description" content="Liên hệ">
     <meta property="og:url" content="lien-he.php">
     <meta property="og:type" content="article">
-    <meta property="og:image" content="storage/favicon.png">
+    <meta property="og:image" content="assets/img/favicon.png">
     <meta name="twitter:title" content="Liên hệ">
     <meta name="twitter:description" content="Liên hệ">
 

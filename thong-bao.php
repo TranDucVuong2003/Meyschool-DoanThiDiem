@@ -8,7 +8,7 @@
     <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=1"
         name="viewport" />
 
-    <link rel="shortcut icon" href="storage/favicon.png">
+    <link rel="shortcut icon" href="assets/img/favicon.png">
 
     <title>Thông báo</title>
     <meta name="description" content="Cập nhật thông báo mới nhất của Meyschool Đoàn Thị Điểm">
@@ -18,7 +18,7 @@
     <meta property="og:description" content="Cập nhật thông báo mới nhất của Meyschool Đoàn Thị Điểm">
     <meta property="og:url" content="thong-bao.php">
     <meta property="og:type" content="article">
-    <meta property="og:image" content="storage/favicon.png">
+    <meta property="og:image" content="assets/img/favicon.png">
     <meta name="twitter:title" content="Thông báo">
     <meta name="twitter:description" content="Cập nhật thông báo mới nhất của Meyschool Đoàn Thị Điểm">
 
@@ -315,7 +315,7 @@
 
                 var html = '';
                 res.data.forEach(function(r) {
-                    var thumb = r.thumbnail || 'storage/favicon.png';
+                    var thumb = r.thumbnail || 'assets/img/favicon.png';
                     var link = 'doc-thong-bao.php?slug=' + encodeURIComponent(r.slug);
 
                     html += '<a class="news-card" href="' + link + '">';

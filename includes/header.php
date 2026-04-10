@@ -9,6 +9,67 @@
         $ss = load_site_settings();
         $ss_hotline_tel = site_phone_to_tel($ss['hotline']);
     ?>
+    <style>
+        .header-menu {
+            justify-content: center !important;
+            position: relative;
+            padding-right: 132px;
+        }
+
+        .header-menu .menu-list {
+            margin: 0 auto;
+            justify-content: center;
+        }
+
+        .header-contact-quick {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #439bd4;
+            color: #fff;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            border-radius: 999px;
+            padding: 8px 14px;
+            margin-right: 0;
+            box-shadow: 0 8px 18px rgba(67, 155, 212, 0.25);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            white-space: nowrap;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .header-contact-quick:hover {
+            transform: translateY(calc(-50% - 1px));
+            box-shadow: 0 10px 20px rgba(67, 155, 212, 0.3);
+        }
+
+        .header-contact-quick .phone-ico {
+            font-size: 14px;
+            line-height: 1;
+            color: #ffe08a;
+        }
+
+        @media (max-width: 1200px) {
+            .header-menu {
+                padding-right: 64px;
+            }
+
+            .header-contact-quick {
+                padding: 8px;
+                margin-right: 10px;
+            }
+
+            .header-contact-quick span {
+                display: none;
+            }
+        }
+    </style>
     <div class="wrap header" id="header-navbar">
         <!--===================TOP BAR==========================-->
         <div class="header-top-bar">
@@ -178,6 +239,11 @@
                             </ul>
                         </li>
                     </ul>
+
+                    <a href="lien-he.php" class="header-contact-quick" aria-label="Liên hệ">
+                        <span class="phone-ico" aria-hidden="true">☎</span>
+                        <span>Liên hệ</span>
+                    </a>
 
 
                     <!-- <div class="header-info">

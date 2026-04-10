@@ -87,7 +87,7 @@ $total_users = $pdo->query("SELECT COUNT(*) FROM users")->fetchColumn();
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex, nofollow">
     <title>Dashboard | Meyschool Đoàn Thị Điểm</title>
-    <link rel="shortcut icon" href="storage/favicon.png">
+    <link rel="shortcut icon" href="assets/img/favicon.png">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
     <style>
         *,

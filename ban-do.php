@@ -12,7 +12,7 @@ $ss = load_site_settings();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=1"
         name="viewport" />
-    <link rel="shortcut icon" href="storage/favicon.png">
+    <link rel="shortcut icon" href="assets/img/favicon.png">
     <title>Bản đồ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:site_name" content="The Olympia Schools">
@@ -20,7 +20,7 @@ $ss = load_site_settings();
     <meta property="og:description" content="">
     <meta property="og:url" content="ban-do.html">
     <meta property="og:type" content="article">
-    <meta property="og:image" content="storage/favicon.png">
+    <meta property="og:image" content="assets/img/favicon.png">
     <meta name="twitter:title" content="Bản đồ">
     <meta name="twitter:description" content="">
 

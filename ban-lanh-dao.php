@@ -13,7 +13,7 @@ $ss = load_site_settings();
     <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=1"
         name="viewport" />
 
-    <link rel="shortcut icon" href="storage/favicon.png">
+    <link rel="shortcut icon" href="assets/img/favicon.png">
 
     <title>Ban lãnh đạo Trường Meyschool Đoàn Thị Điểm</title>
     <meta name="description" content="Ban lãnh đạo Trường Meyschool Đoàn Thị Điểm">

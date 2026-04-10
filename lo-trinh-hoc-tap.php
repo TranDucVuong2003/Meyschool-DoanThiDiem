@@ -10,7 +10,7 @@
         name="viewport" />
 
 
-    <link rel="shortcut icon" href="storage/favicon.png">
+    <link rel="shortcut icon" href="assets/img/favicon.png">
 
     <title>Lộ trình học tập</title>
     <meta name="description" content="Lộ trình học tập">
@@ -20,7 +20,7 @@
     <meta property="og:description" content="Lộ trình học tập">
     <meta property="og:url" content="lo-trinh-hoc-tap.html">
     <meta property="og:type" content="article">
-    <meta property="og:image" content="storage/favicon.png">
+    <meta property="og:image" content="assets/img/favicon.png">
     <meta name="twitter:title" content="Lộ trình học tập">
     <meta name="twitter:description" content="Lộ trình học tập">
 

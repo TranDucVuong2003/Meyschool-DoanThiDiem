@@ -45,16 +45,17 @@ function uploadEventThumbnail($file)
     if (!in_array($file['type'], $allowed)) return false;
     if ($file['size'] > $maxSize) return false;
 
-    $ext    = pathinfo($file['name'], PATHINFO_EXTENSION);
-    $name   = 'events/' . uniqid('ev_', true) . '.' . strtolower($ext);
-    $target = __DIR__ . '/../storage/' . $name;
+    $ext       = strtolower(pathinfo($file['name'], PATHINFO_EXTENSION));
+    $filename  = uniqid('ev_', true) . '.' . $ext;
+    $uploadDir = __DIR__ . '/../storage/events';
+    $target    = $uploadDir . '/' . $filename;
 
-    if (!is_dir(dirname($target))) {
-        mkdir(dirname($target), 0775, true);
+    if (!is_dir($uploadDir)) {
+        mkdir($uploadDir, 0775, true);
     }
 
     if (!move_uploaded_file($file['tmp_name'], $target)) return false;
-    return 'storage/' . $name;
+    return 'storage/events/' . $filename;
 }
 
 // ── GET: Lấy danh sách hoặc chi tiết ──

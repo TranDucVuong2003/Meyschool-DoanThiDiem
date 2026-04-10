@@ -7,14 +7,14 @@
         <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=1" name="viewport"/>
 
 
-        <link rel="shortcut icon" href="storage/favicon.png">
+        <link rel="shortcut icon" href="assets/img/favicon.png">
 
 <title>The Olympia Schools</title>
 <meta name="description" content="Website chinh thuc cua truong pho thong lien cap Olympia (Ha Noi).">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta property="og:site_name" content="The Olympia Schools">
 <meta property="og:type" content="website">
-<meta property="og:image" content="storage/favicon.png">
+<meta property="og:image" content="assets/img/favicon.png">
 
 <link media="all" type="text/css" rel="stylesheet" href="vendor/core/plugins/language/css/language-publice209.css?v=1.0.0">
 

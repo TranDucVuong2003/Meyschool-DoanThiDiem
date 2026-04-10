@@ -120,7 +120,7 @@ $_sidebar_page = basename($_SERVER['PHP_SELF']);
 
 <aside class="sidebar">
     <div class="sidebar-logo">
-        <img src="storage/favicon.png" alt="Logo">
+        <img src="assets/img/favicon.png" alt="Logo">
         <span>Meyschool<br>Đoàn Thị Điểm</span>
     </div>
 

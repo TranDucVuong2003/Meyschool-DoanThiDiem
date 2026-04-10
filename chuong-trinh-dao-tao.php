@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=1"
         name="viewport" />
-    <link rel="shortcut icon" href="storage/favicon.png">
+    <link rel="shortcut icon" href="assets/img/favicon.png">
     <title>Chương trình đào tạo – Meyschool Đoàn Thị Điểm</title>
     <meta name="description" content="Chương trình đào tạo tại Meyschool Đoàn Thị Điểm Phú Quốc">
 

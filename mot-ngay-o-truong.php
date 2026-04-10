@@ -10,7 +10,7 @@
         name="viewport" />
 
 
-    <link rel="shortcut icon" href="storage/favicon.png">
+    <link rel="shortcut icon" href="assets/img/favicon.png">
 
     <title>Một ngày ở Olympia</title>
     <meta name="description" content="Một ngày ở Olympia">
@@ -20,7 +20,7 @@
     <meta property="og:description" content="Một ngày ở Olympia">
     <meta property="og:url" content="mot-ngay-o-olympia.html">
     <meta property="og:type" content="article">
-    <meta property="og:image" content="storage/favicon.png">
+    <meta property="og:image" content="assets/img/favicon.png">
     <meta name="twitter:title" content="Một ngày ở Olympia">
     <meta name="twitter:description" content="Một ngày ở Olympia">
 

@@ -8,7 +8,7 @@
     <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=1"
         name="viewport" />
 
-    <link rel="shortcut icon" href="storage/favicon.png">
+    <link rel="shortcut icon" href="assets/img/favicon.png">
 
     <title>Tin tức</title>
     <meta name="description" content="Cập nhật tin tức, hoạt động và sự kiện mới nhất của Meyschool Đoàn Thị Điểm">
@@ -19,7 +19,7 @@
         content="Cập nhật tin tức, hoạt động và sự kiện mới nhất của Meyschool Đoàn Thị Điểm">
     <meta property="og:url" content="tin-tuc.php">
     <meta property="og:type" content="article">
-    <meta property="og:image" content="storage/favicon.png">
+    <meta property="og:image" content="assets/img/favicon.png">
     <meta name="twitter:title" content="Tin tức">
     <meta name="twitter:description"
         content="Cập nhật tin tức, hoạt động và sự kiện mới nhất của Meyschool Đoàn Thị Điểm">
@@ -384,7 +384,7 @@
 
                     var html = '';
                     res.data.forEach(function(r) {
-                        var thumb = r.thumbnail || 'storage/favicon.png';
+                        var thumb = r.thumbnail || 'assets/img/favicon.png';
                         var link = 'doc-tin-tuc.php?slug=' + encodeURIComponent(r.slug);
 
                         html += '<a class="news-card" href="' + link + '">';

@@ -15,7 +15,7 @@ $admin_username = htmlspecialchars($_SESSION['admin_username'] ?? '');
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex, nofollow">
     <title>Cấu hình | Meyschool Đoàn Thị Điểm</title>
-    <link rel="shortcut icon" href="storage/favicon.png">
+    <link rel="shortcut icon" href="assets/img/favicon.png">
     <style>
         *,
         *::before,

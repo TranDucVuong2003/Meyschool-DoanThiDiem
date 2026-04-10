@@ -8,7 +8,7 @@
     <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=1"
         name="viewport" />
 
-    <link rel="shortcut icon" href="storage/favicon.png">
+    <link rel="shortcut icon" href="assets/img/favicon.png">
 
     <title>Sự kiện trường</title>
     <meta name="description" content="Cập nhật các sự kiện mới nhất của Meyschool Đoàn Thị Điểm">
@@ -18,7 +18,7 @@
     <meta property="og:description" content="Cập nhật các sự kiện mới nhất của Meyschool Đoàn Thị Điểm">
     <meta property="og:url" content="su-kien-truong.php">
     <meta property="og:type" content="article">
-    <meta property="og:image" content="storage/favicon.png">
+    <meta property="og:image" content="assets/img/favicon.png">
     <meta name="twitter:title" content="Sự kiện trường">
     <meta name="twitter:description" content="Cập nhật các sự kiện mới nhất của Meyschool Đoàn Thị Điểm">
 
@@ -382,7 +382,7 @@
 
                 var html = '';
                 res.data.forEach(function(r) {
-                    var thumb = r.thumbnail || 'storage/favicon.png';
+                    var thumb = r.thumbnail || 'assets/img/favicon.png';
                     var link = 'doc-su-kien.php?slug=' + encodeURIComponent(r.slug);
 
                     html += '<a class="events-card" href="' + link + '">';

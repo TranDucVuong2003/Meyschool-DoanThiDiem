@@ -19,7 +19,7 @@ $pageTitle = $isEdit ? 'Sửa thông báo' : 'Thêm thông báo mới';
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex, nofollow">
     <title><?= $pageTitle ?> | Meyschool Đoàn Thị Điểm</title>
-    <link rel="shortcut icon" href="storage/favicon.png">
+    <link rel="shortcut icon" href="assets/img/favicon.png">
     <style>
         *,
         *::before,

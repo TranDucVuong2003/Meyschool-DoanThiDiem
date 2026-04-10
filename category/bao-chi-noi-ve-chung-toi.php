@@ -7,7 +7,7 @@
         <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=1" name="viewport"/>
 
 
-        <link rel="shortcut icon" href="../storage/favicon.png">
+        <link rel="shortcut icon" href="../assets/img/favicon.png">
 
 <title>Báo chí nói về chúng tôi</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,7 +16,7 @@
 <meta property="og:url" content="bao-chi-noi-ve-chung-toi.html">
 <meta property="og:title" content="Báo chí nói về chúng tôi">
 <meta property="og:type" content="article">
-<meta property="og:image" content="../storage/favicon.png">
+<meta property="og:image" content="../assets/img/favicon.png">
 <meta name="twitter:title" content="Báo chí nói về chúng tôi">
 <meta name="twitter:description" content="">
 

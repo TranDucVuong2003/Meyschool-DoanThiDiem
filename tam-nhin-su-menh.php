@@ -8,7 +8,7 @@
     <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=1"
         name="viewport" />
 
-    <link rel="shortcut icon" href="storage/favicon.png">
+    <link rel="shortcut icon" href="assets/img/favicon.png">
 
     <title>Tầm nhìn – Sứ mệnh – Giá trị cốt lõi</title>
     <meta name="description" content="Tầm nhìn, Sứ mệnh và Giá trị cốt lõi của Meyschool">

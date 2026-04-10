@@ -8,7 +8,7 @@
     <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=1"
         name="viewport" />
 
-    <link rel="shortcut icon" href="storage/favicon.png">
+    <link rel="shortcut icon" href="assets/img/favicon.png">
 
     <title id="pageTitle">Chi tiết tin tức</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -660,7 +660,7 @@
                     if (items.length) {
                         var html = '';
                         items.forEach(function(r) {
-                            var thumb = r.thumbnail || 'storage/favicon.png';
+                            var thumb = r.thumbnail || 'assets/img/favicon.png';
                             html += '<a class="more-card" href="doc-tin-tuc.php?slug=' +
                                 encodeURIComponent(r.slug) + '">';
                             html += '<div class="more-card-img"><img src="' + escHtml(thumb) +

@@ -8,9 +8,9 @@
     <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=1"
         name="viewport" />
 
-    <link rel="icon" type="image/png" href="storage/favicon.png?v=20260320-1">
-    <link rel="shortcut icon" type="image/png" href="storage/favicon.png?v=20260320-1">
-    <link rel="apple-touch-icon" href="storage/favicon.png?v=20260320-1">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png?v=20260320-1">
+    <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png?v=20260320-1">
+    <link rel="apple-touch-icon" href="assets/img/favicon.png?v=20260320-1">
 
     <title>Ưu đãi tuyển sinh - Meyschool Đoàn Thị Điểm</title>
     <meta name="description" content="Các chương trình ưu đãi tuyển sinh năm học 2026-2027 tại Meyschool Đoàn Thị Điểm">

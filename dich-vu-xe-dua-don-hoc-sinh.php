@@ -10,7 +10,7 @@
         name="viewport" />
 
 
-    <link rel="shortcut icon" href="storage/favicon.png">
+    <link rel="shortcut icon" href="assets/img/favicon.png">
 
     <title>Dịch vụ xe đưa đón Học sinh</title>
     <meta name="description"

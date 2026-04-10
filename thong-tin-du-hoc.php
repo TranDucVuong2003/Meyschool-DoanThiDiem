@@ -10,7 +10,7 @@
         name="viewport" />
 
 
-    <link rel="shortcut icon" href="storage/favicon.png">
+    <link rel="shortcut icon" href="assets/img/favicon.png">
 
     <title>Thông tin du học</title>
     <meta name="description" content="Thông tin du học">
@@ -20,7 +20,7 @@
     <meta property="og:description" content="Thông tin du học">
     <meta property="og:url" content="tin-tuc.html">
     <meta property="og:type" content="article">
-    <meta property="og:image" content="storage/favicon.png">
+    <meta property="og:image" content="assets/img/favicon.png">
     <meta name="twitter:title" content="Thông tin du học">
     <meta name="twitter:description" content="Thông tin du học">
 

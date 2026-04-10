@@ -6,9 +6,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=1" name="viewport" />
-    <link rel="icon" type="image/png" href="storage/favicon.png?v=20260320-1">
-    <link rel="shortcut icon" type="image/png" href="storage/favicon.png?v=20260320-1">
-    <link rel="apple-touch-icon" href="storage/favicon.png?v=20260320-1">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png?v=20260320-1">
+    <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png?v=20260320-1">
+    <link rel="apple-touch-icon" href="assets/img/favicon.png?v=20260320-1">
     <title>Tổng quan campus</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:site_name" content="The Olympia Schools">
@@ -16,7 +16,7 @@
     <meta property="og:description" content="">
     <meta property="og:url" content="tong-quan-campus.html">
     <meta property="og:type" content="article">
-    <meta property="og:image" content="storage/favicon.png?v=20260320-1">
+    <meta property="og:image" content="assets/img/favicon.png?v=20260320-1">
     <meta name="twitter:title" content="Tổng quan campus">
     <meta name="twitter:description" content="">
 

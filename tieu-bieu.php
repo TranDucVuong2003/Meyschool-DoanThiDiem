@@ -7,7 +7,7 @@
         <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=1" name="viewport"/>
 
 
-        <link rel="shortcut icon" href="storage/favicon.png">
+        <link rel="shortcut icon" href="assets/img/favicon.png">
 
 <title>Tiêu biểu</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,7 +16,7 @@
 <meta property="og:description" content="">
 <meta property="og:url" content="tieu-bieu.html">
 <meta property="og:type" content="article">
-<meta property="og:image" content="storage/favicon.png">
+<meta property="og:image" content="assets/img/favicon.png">
 <meta name="twitter:title" content="Tiêu biểu">
 <meta name="twitter:description" content="">
 

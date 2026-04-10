@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=1"
         name="viewport" />
-    <link rel="shortcut icon" href="storage/favicon.png">
+    <link rel="shortcut icon" href="assets/img/favicon.png">
     <title>Y tế và tư vấn tâm lý học đường</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:site_name" content="Meyschool Đoàn Thị Điểm">
@@ -15,7 +15,7 @@
     <meta property="og:description" content="">
     <meta property="og:url" content="y-te-va-tu-van-tam-ly.php">
     <meta property="og:type" content="article">
-    <meta property="og:image" content="storage/favicon.png">
+    <meta property="og:image" content="assets/img/favicon.png">
     <meta name="twitter:title" content="Y tế và tư vấn tâm lý học đường">
     <meta name="twitter:description" content="">
 
