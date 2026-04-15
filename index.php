@@ -385,7 +385,7 @@
         <!-- Section: Clip giới thiệu về trường -->
         <section id="principal-welcome" class="show-on-scroll home-page">
             <div class="container-fluid" style="padding: 0 40px;">
-                <div class="principal-welcome-wrapper" style="padding: 60px 0;">
+                <div class="principal-welcome-wrapper" style="padding: 20px 0 60px  0;">
                     <div class="principal-message text-center" style="max-width: 1400px; margin: 0 auto; width: 100%;">
                         <h2 class="font-garamond-bold color-471873" style="font-size: 42px; margin-bottom: 30px;">
                             Hiểu rõ hơn về trường học
