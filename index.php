@@ -110,13 +110,14 @@
 
     .slider-title-box {
         position: absolute !important;
-        bottom: -280px !important;
+        top: auto !important;
+        bottom: 24px !important;
         right: 20px !important;
         left: auto !important;
         width: auto !important;
         opacity: 1 !important;
         transform: none !important;
-        z-index: 5;
+        z-index: 20;
     }
 
     .banner-cta {
@@ -127,7 +128,7 @@
         overflow: hidden;
         box-shadow: 0 18px 36px rgba(0, 0, 0, 0.28);
         height: 100px;
-        margin-top: 516px;
+        margin-top: 0;
     }
 
     .banner-cta a {
@@ -136,12 +137,14 @@
         justify-content: space-between;
         gap: 12px;
         padding: 18px 26px;
-        min-width: 190px;
+        min-width: 210px;
+        flex: 0 0 auto;
         font-size: 14px;
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 0.9px;
         text-decoration: none;
+        white-space: nowrap;
         background: transparent;
         color: #fff;
         border-right: 1px solid rgba(255, 255, 255, 0.25);
@@ -422,7 +425,7 @@
                 </p>
 
                 <ul class="olym-index_list">
-                    <li><span>1</span>Trường Tiểu học Đoàn Thị Điểm (Hà Nội) là trường đầu tiên được phong tặng danh
+                    <li><span>1</span>Trường Tiểu học Đoàn Thị Điểm Hà Nội là trường đầu tiên được phong tặng danh
                         hiệu Anh hùng Lao động thời kỳ đổi mới vào ngày 27/12/2025
                     </li>
                     <!-- <li><span>1</span>Trường song ngữ đầu tiên tại Việt Nam trở thành IB World School</li> -->
@@ -434,7 +437,8 @@
                         <img src="assets/img/co-so-vat-chat/thư viện.jpg" alt="">
                     </div>
                     <div class="olympia-number-block-img number-img2">
-                        <div class="flex-center-center number-blck number-blck-t" style="width: 160px;">
+                        <div class="flex-center-center number-blck number-blck-t"
+                            style="width: 160px; background-color: #314d9b;">
                             <div class="number-cnt text-center">
 
                                 <span>Cơ sở vật chất hiện đại</span>
@@ -448,7 +452,7 @@
                         <img src="assets/img/co-so-vat-chat/phòng học.JPG" alt="">
                     </div>
                     <div class="olympia-number-block-img number-img4">
-                        <div class="flex-center-center number-blck number-blck-v">
+                        <div class="flex-center-center number-blck number-blck-v" style="background-color: #00a0e4;">
                             <div class="number-cnt text-center" style="color: #471873;">
                                 <span style="color: #471873;">30</span>
                                 <p>năm phát triển giáo dục tại Thủ đô Hà Nội</p>
@@ -458,18 +462,10 @@
                     <div class="olympia-number-block-img number-img5">
                         <img src="assets/img/co-so-vat-chat/sân bóng rổ.jpg" alt="">
                     </div>
-
-
-
-
-
-
-
-
                 </div>
                 <div class="number-item text-left">
                     <div class="olympia-number-block-img number-img7">
-                        <div class="flex-center-center number-blck number-blck-t">
+                        <div class="flex-center-center number-blck number-blck-t" style="background-color: #314d9b;">
                             <div class="number-cnt text-center">
                                 <span>2</span>
                                 <p>Cấp học</p>
@@ -480,7 +476,8 @@
                         <img src="assets/img/co-so-vat-chat/phòng nhạc.jpg" alt="">
                     </div>
                     <div class="olympia-number-block-img number-img9">
-                        <div class="flex-center-center number-blck number-blck-t" style="width: 190px">
+                        <div class="flex-center-center number-blck number-blck-t"
+                            style="width: 190px; background-color: #314d9b;">
                             <div class="number-cnt text-center">
                                 <span style="display: inline-flex">100<sup
                                         style="font-size: 30px; margin-top: 5px">%</sup></span>
@@ -534,7 +531,8 @@
                 <div class="mobile-item mobile-item-bottom">
                     <div class="mobile-item-top-left text-right">
                         <div class="mobile-item-img mobile-item-img6">
-                            <div class="flex-center-center number-blck number-blck-t">
+                            <div class="flex-center-center number-blck number-blck-t"
+                                style="background-color: #314d9b;">
                                 <div class="number-cnt text-center">
                                     <span>2</span>
                                     <p>Cấp học</p>
@@ -555,7 +553,8 @@
                             </div>
                         </div>
                         <div class="mobile-item-img mobile-item-img9">
-                            <div class="flex-center-center number-blck number-blck-t">
+                            <div class="flex-center-center number-blck number-blck-t"
+                                style="background-color: #314d9b;">
                                 <div class="number-cnt text-center">
                                     <span>100%</span>
                                     <p>100% giáo viên được đào tạo tại <br> đại học sư phạm</p>
@@ -568,10 +567,10 @@
         </div>
 
         <!-- Section: 2 cấp đào tạo -->
-        <section id="olympia-level-training" class="show-on-scroll home-page">
+        <section id="olympia-level-training" class="show-on-scroll home-page" style="position: relative; z-index: 1;">
             <div class="olympia-level-training">
                 <div class="olympia-level-left olympia-level-left-pc text-left">
-                    <div class="olympia-level level-2 bg-F1CC1F" style="opacity: 0">
+                    <div class="olympia-level level-2 bg-F1CC1F" style="opacity: 0; background-color: #00a0e4;">
                         <h6><a href="chuong-trinh-tieu-hoc-olympia.html" class="white">Tiểu học (lớp 1 - 4)</a></h6>
                         <div class="level-img-box">
                             <a href="chuong-trinh-tieu-hoc-olympia.html" title="">
@@ -579,7 +578,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="olympia-level level-3" style="opacity: 0; background-color: #2354a0;">
+                    <div class="olympia-level level-3" style="opacity: 0; background-color: #314d9b;">
                         <h6><a href="chuong-trinh-trung-hoc-co-so-olympia.html" class="white">Trung học cơ sở (lớp 5 -
                                 8)</a></h6>
                         <div class="level-img-box">
@@ -604,7 +603,8 @@
             </div>
         </section>
         <!-- Section: Hoạt động tại Olympia (Tin tức + Sự kiện) -->
-        <section id="olympia-event" class="bg-471873">
+        <section id="olympia-event" class="bg-471873"
+            style="background-color: #314d9b; position: relative; z-index: 2;">
             <div class="olympia-event">
                 <!-- <h2 class="color-f font-garamond-bold">Hoạt động tại Meyschool</h2> -->
 
@@ -860,14 +860,16 @@
             <div class="olympia-testimonial slide-customs-dot show-on-scroll home-page" id="testimonial">
                 <div class="slide-item testimonial-item">
                     <div class="olympia-testimonial-entry" style="opacity: 0">
-                        <h5 class="font-garamond-bold">“Ngay cả khi mình đi học ở Mỹ ở Harvard, thì mình vẫn thấy rằng
-                            triết lý giáo dục của họ không hề khác quá với cách làm của Meyschool đâu”</h5>
-                        <p class="olympia-testimonial-content font-avenir-regular size-14 color-3a">Một trong những
-                            triết lý mà mình rất tâm đắc là luôn lấy học sinh làm trung tâm. Và mình tự hào khi biết
-                            điều này đã có ở Meyschool từ những ngày đầu thành lập trường.</p>
-                        <p class="olympia-testimonial-name font-garamond-bold">Nguyễn Vũ Thanh An</p>
-                        <p class="olympia-testimonial-po4 font-avenir-regular size-14">Tốt nghiệp Thạc sỹ Đại học
-                            Harvard, Hoa Kỳ, cựu học sinh Meyschool niên khóa 2013.</p>
+                        <!-- <h5 class="font-garamond-bold">“Ngay cả khi mình đi học ở Mỹ ở Harvard, thì mình vẫn thấy rằng
+                            triết lý giáo dục của họ không hề khác quá với cách làm của Meyschool đâu”</h5> -->
+                        <p class="olympia-testimonial-content font-avenir-regular size-14 color-3a">Điều mình ấn tượng
+                            nhất là cách nhà trường đưa AI và Toán Eduten vào giảng dạy. Ở Phú Quốc hiện tại hiếm có
+                            trường nào chú trọng kỹ năng số sớm như vậy. Dù là trường mới nhưng quy trình vận hành rất
+                            chuyên nghiệp, từ xe đưa đón đến việc cập nhật tình hình học tập hàng ngày cho phụ huynh.
+                        </p>
+                        <p class="olympia-testimonial-name font-garamond-bold">Anh Quốc Bảo</p>
+                        <!-- <p class="olympia-testimonial-po4 font-avenir-regular size-14">Tốt nghiệp Thạc sỹ Đại học
+                            Harvard, Hoa Kỳ, cựu học sinh Meyschool niên khóa 2013.</p> -->
                     </div>
                     <div class="olympia-testimonial-photo" style="opacity: 0"><img src="assets/img/anh-phu-huynh/5.jpg"
                             alt="">
@@ -875,16 +877,15 @@
                 </div>
                 <div class="slide-item testimonial-item">
                     <div class="olympia-testimonial-entry" style="opacity: 0">
-                        <h5 class="font-garamond-bold">“Tôi rất tự hào vì con được học tại trường Meyschool.”</h5>
-                        <p class="olympia-testimonial-content font-avenir-regular size-14 color-3a">Việc nộp hồ sơ vào
-                            các trường đại học không thông qua các công ty tư vấn bên ngoài mà chỉ nhờ tới văn phòng tư
-                            vấn của trường Meyschool UCC đã giúp con chủ động và tự lập hơn nhiều. Đến nay, con đã nắm
-                            rất
-                            rõ việc học tập và sinh hoạt tại trường. Tôi thấy con khá tự tin và chắc chắn. Cảm ơn trường
-                            Meyschool rất nhiều.</p>
-                        <p class="olympia-testimonial-name font-garamond-bold">Chị Nguyễn Phương Hà</p>
-                        <p class="olympia-testimonial-po4 font-avenir-regular size-14">Phụ huynh học sinh Thảo Anh tốt
-                            nghiệp khóa 2019.</p>
+                        <!-- <h5 class="font-garamond-bold">“Tôi rất tự hào vì con được học tại trường Meyschool.”</h5> -->
+                        <p class="olympia-testimonial-content font-avenir-regular size-14 color-3a">Lúc đầu mình cũng
+                            khá đắn đo vì Meyschool là trường mới tại Phú Quốc. nhưng sau khi cho con theo học khóa Tiền
+                            tiểu học, mình hoàn toàn bị thuyết phục. Con không còn sợ đi học mà lúc nào cũng hào hứng kể
+                            về các tiết học STEM và thầy cô. Cơ sở vật chất quá hiện đại, cảm giác con được chăm sóc rất
+                            kỹ lưỡng.</p>
+                        <p class="olympia-testimonial-name font-garamond-bold">Chị Minh Anh</p>
+                        <!-- <p class="olympia-testimonial-po4 font-avenir-regular size-14">Phụ huynh học sinh Thảo Anh tốt
+                            nghiệp khóa 2019.</p> -->
                     </div>
                     <div class="olympia-testimonial-photo" style="opacity: 0"><img src="storage/chi-phuong-ha-ph.jpg"
                             alt="">
@@ -892,22 +893,21 @@
                 </div>
                 <div class="slide-item testimonial-item">
                     <div class="olympia-testimonial-entry" style="opacity: 0">
-                        <h5 class="font-garamond-bold">“Mình nghĩ rằng bản thân đã lựa chọn đúng đắn khi quyết định gửi
-                            gắm những hoài bão ước mơ tuổi học trò của mình tại Meyschool.”</h5>
-                        <p class="olympia-testimonial-content font-avenir-regular size-14 color-3a">Ba năm ở Meyschool
-                            là
-                            khoảng thời gian khiến mình tự tin hơn, biết thấu cảm, suy nghĩ vì người khác, có trách
-                            nhiệm và cũng như luôn biết tự hào về bản thân mà sống hết mình. Mỗi năm nhìn lại, mình đều
-                            cảm thấy bất ngờ hơn một chút, rằng hoá ra mình cũng làm được nhiều thứ.</p>
-                        <p class="olympia-testimonial-name font-garamond-bold">Vũ Minh Ngọc</p>
-                        <p class="olympia-testimonial-po4 font-avenir-regular size-14">Học sinh lớp 11.</p>
+                        <!-- <h5 class="font-garamond-bold">“Mình nghĩ rằng bản thân đã lựa chọn đúng đắn khi quyết định gửi
+                            gắm những hoài bão ước mơ tuổi học trò của mình tại Meyschool.”</h5> -->
+                        <p class="olympia-testimonial-content font-avenir-regular size-14 color-3a">Không gian xanh và
+                            rộng rãi của trường là điểm cộng lớn nhất với gia đình mình. Con được chạy nhảy, học Piano
+                            và chơi thể thao trong môi trường trong lành của Meyhomes. Nhìn con tự tin và năng động hơn
+                            hẳn sau một học kỳ, mình biết mình đã đặt niềm tin đúng chỗ</p>
+                        <p class="olympia-testimonial-name font-garamond-bold">Chị Thu Thủy </p>
+                        <!-- <p class="olympia-testimonial-po4 font-avenir-regular size-14">Học sinh lớp 11.</p> -->
                     </div>
                     <div class="olympia-testimonial-photo" style="opacity: 0; aspect-ratio: 1 / 1; overflow: hidden;">
                         <img src="assets/img/anh-phu-huynh/2.jpg" alt=""
                             style="width: 100%; height: 100%; object-fit: cover; object-position: center top;">
                     </div>
                 </div>
-                <div class="slide-item testimonial-item">
+                <!-- <div class="slide-item testimonial-item">
                     <div class="olympia-testimonial-entry" style="opacity: 0">
                         <h5 class="font-garamond-bold">&quot;Tôi rất yên tâm khi cho con theo học Meyschool&quot;</h5>
                         <p class="olympia-testimonial-content font-avenir-regular size-14 color-3a">Khi học ở Meyschool,
@@ -921,60 +921,24 @@
                     <div class="olympia-testimonial-photo" style="opacity: 0"><img src="storage/me-van-hai-nam-1.png"
                             alt="">
                     </div>
-                </div>
+                </div> -->
                 <div class="slide-item testimonial-item">
                     <div class="olympia-testimonial-entry" style="opacity: 0">
-                        <h5 class="font-garamond-bold">&quot;Meyschool Đoàn Thị Điểm là một môi trường tốt cho con
-                            tôi&quot;</h5>
-                        <p class="olympia-testimonial-content font-avenir-regular size-14 color-3a">Qua thời gian học
-                            tại Meyschool Đoàn Thị Điểm, tôi thấy con phát triển đều về kiến thức, kỹ năng và cả đạo
-                            đức. Meyschool là
-                            một
-                            môi trường tốt cho con tôi, bởi trường được quản trị bởi Ban lãnh đạo có tâm và có tầm, và
-                            có một đội ngũ nhân sự có chuyên môn rất có tâm với nghề. Tôi nhìn nhận thấy những điều này
-                            dựa trên sự tiến bộ của con tôi từng ngày và cách thức tương tác của nhà trường với phụ
-                            huynh.</p>
-                        <p class="olympia-testimonial-name font-garamond-bold">Anh Lê Quang Việt</p>
-                        <p class="olympia-testimonial-po4 font-avenir-regular size-14">Phụ huynh học sinh Lê Việt Anh
-                            lớp 7H2</p>
+                        <!-- <h5 class="font-garamond-bold">&quot;Meyschool Đoàn Thị Điểm là một môi trường tốt cho con
+                            tôi&quot;</h5> -->
+                        <p class="olympia-testimonial-content font-avenir-regular size-14 color-3a">Gia đình mình vốn
+                            biết tiếng trường Đoàn Thị Điểm ở Hà Nội nên khi Meyschool mở tại Phú Quốc là mình đăng ký
+                            ngay. Chất lượng đào tạo và đội ngũ giáo viên đúng như kỳ vọng: tận tâm, chuyên môn cao và
+                            rất hiểu tâm lý học sinh. Một khởi đầu tuyệt vời cho các con tại Đảo Ngọc.</p>
+                        <p class="olympia-testimonial-name font-garamond-bold">Anh Hoàng Nam</p>
+                        <!-- <p class="olympia-testimonial-po4 font-avenir-regular size-14">Phụ huynh học sinh Lê Việt Anh
+                            lớp 7H2</p> -->
                     </div>
                     <div class="olympia-testimonial-photo" style="opacity: 0"><img src="assets/img/anh-phu-huynh/3.jpg"
                             alt="">
                     </div>
                 </div>
-                <div class="slide-item testimonial-item">
-                    <div class="olympia-testimonial-entry" style="opacity: 0">
-                        <h5 class="font-garamond-bold">&quot;Học tại Meyschool giúp con tôi phát triển toàn diện&quot;
-                        </h5>
-                        <p class="olympia-testimonial-content font-avenir-regular size-14 color-3a">Mình thấy môi trường
-                            học tập tại Meyschool rất tốt cho con với nhiều hoạt động thể chất, dã ngoại. Con được trải
-                            nghiệm nhiều các dự án, bài tập nhóm với những nội dung mới mẻ, chính những điều này khiến
-                            con mình luôn hào hứng đến trường mỗi ngày</p>
-                        <p class="olympia-testimonial-name font-garamond-bold">Chị Dư Xuyến</p>
-                        <p class="olympia-testimonial-po4 font-avenir-regular size-14">Phụ huynh học sinh Phạm Tuấn Lam
-                            lớp 6H4</p>
-                    </div>
-                    <div class="olympia-testimonial-photo" style="opacity: 0"><img src="storage/chi-du-xuyen-2.jpg"
-                            alt="">
-                    </div>
-                </div>
-                <div class="slide-item testimonial-item">
-                    <div class="olympia-testimonial-entry" style="opacity: 0">
-                        <h5 class="font-garamond-bold">&quot;Môi trường giúp con tự lập, tư duy làm chủ tài chính&quot;
-                        </h5>
-                        <p class="olympia-testimonial-content font-avenir-regular size-14 color-3a">Nhà trường hiện đang
-                            làm rất tốt, đúng theo định hướng mà nhà trường đề ra. Đội ngũ giáo viên rất thân thiện và
-                            nhiệt tình, có trình độ cao, đặc biệt được thể hiện qua thời điểm học online. Sau khi học ở
-                            Meyschool, con đã chủ động hơn rất nhiều, đã biết tự sắp xếp công việc của mình, tự hoàn tất
-                            bài tập về nhà. Con cũng hình thành tư duy về làm chủ tài chính trong khả năng có thể</p>
-                        <p class="olympia-testimonial-name font-garamond-bold">Chị Lê Thanh Thủy</p>
-                        <p class="olympia-testimonial-po4 font-avenir-regular size-14">Phụ huynh học sinh Lê Bảo Ngọc
-                            lớp 2A1</p>
-                    </div>
-                    <div class="olympia-testimonial-photo" style="opacity: 0"><img src="storage/chi-le-thanh-thuy.jpg"
-                            alt="">
-                    </div>
-                </div>
+
             </div>
         </section>
         <!-- Section: Thông tin tuyển sinh + Video -->
@@ -1320,6 +1284,7 @@ $(document).on('ready', function() {
 </script>
 
 <!-- Popup Tuyển sinh -->
+<!-- 
 <div id="tuyensinh-popup"
     style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 999999; justify-content: center; align-items: center; padding: 20px;">
     <div
@@ -1331,12 +1296,13 @@ $(document).on('ready', function() {
                 <img src="assets/img/banner/popup-tuyensinh.jpg" alt="Tuyển sinh 2026-2027"
                     style="width: 100%; height: auto; display: block; cursor: pointer;">
             </a>
-            <!-- <a href="tuyen-dung.php"
+            <a href="tuyen-dung.php"
                 style="position: absolute; bottom: 15%; left: 50%; transform: translateX(-50%); display: inline-block; padding: 12px 35px; background: #ff6b35; color: white; text-decoration: none; font-weight: bold; font-size: 16px; border-radius: 30px; text-transform: uppercase; box-shadow: 0 5px 15px rgba(255,107,53,0.4); white-space: nowrap;">Đăng
-                ký ngay</a> -->
+                ký ngay</a>
         </div>
     </div>
-</div>
+</div> -->
+
 
 <style>
 body.popup-open {

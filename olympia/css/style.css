@@ -2231,11 +2231,23 @@ html {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
 }
 
 .hotline-phone-ring-img-circle .pps-btn-img img {
+  display: none;
+}
+
+.hotline-phone-ring-img-circle .pps-btn-img::before {
+  content: "";
+  display: block;
   width: 20px;
   height: 20px;
+  background: center / contain no-repeat
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23ffffff' d='M256 32C132.3 32 32 124.8 32 240c0 65 30.7 123.7 79.9 162.9V480l72.5-39.9c22.7 6.2 46.8 9.5 71.6 9.5 123.7 0 224-92.8 224-208S379.7 32 256 32zm41.3 279.2l-66.1-70.4-126.9 70.4 139.5-148.2 67.9 72.4 127.8-72.4-142.2 148.2z'/%3E%3C/svg%3E");
 }
 
 .hotline-bar {
@@ -5218,6 +5230,18 @@ a.righthover.bg-white.color-471873:hover img {
   text-transform: uppercase;
   line-height: 20px;
   letter-spacing: 1px;
+}
+
+.breadcrumb li,
+.breadcrumb li a,
+.breadcrumb .breadcrumb-item,
+.breadcrumb .breadcrumb-item a,
+[class*="breadcrumb"] li,
+[class*="breadcrumb"] li a,
+[class*="breadcrumb"] .breadcrumb-item,
+[class*="breadcrumb"] .breadcrumb-item a {
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
 }
 
 /*----------Banner Pc-----------*/
@@ -8669,7 +8693,7 @@ select.select-day option {
 
 /*---------------FOOTER-------------*/
 .footer {
-  background-color: #2354a0;
+  background: linear-gradient(120deg, #314d9b 0%, #00a0e4 100%);
   padding: 0 30px;
 }
 
@@ -23000,11 +23024,23 @@ figcaption {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
 }
 
 .hotline-phone-ring-img-circle .pps-btn-img img {
+  display: none;
+}
+
+.hotline-phone-ring-img-circle .pps-btn-img::before {
+  content: "";
+  display: block;
   width: 20px;
   height: 20px;
+  background: center / contain no-repeat
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23ffffff' d='M256 32C132.3 32 32 124.8 32 240c0 65 30.7 123.7 79.9 162.9V480l72.5-39.9c22.7 6.2 46.8 9.5 71.6 9.5 123.7 0 224-92.8 224-208S379.7 32 256 32zm41.3 279.2l-66.1-70.4-126.9 70.4 139.5-148.2 67.9 72.4 127.8-72.4-142.2 148.2z'/%3E%3C/svg%3E");
 }
 
 .hotline-bar {

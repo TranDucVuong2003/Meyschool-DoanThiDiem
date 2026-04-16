@@ -29,7 +29,8 @@ $ss_fanpage_encoded = urlencode($ss['fanpage']);
                             <p class="contact-item-value">Địa chỉ: <?= htmlspecialchars($ss['address']) ?></p>
                         </li>
                         <li class="footer-contact-item">
-                            <p class="contact-item-value">Hotline: <a href="tel:<?= htmlspecialchars($ss_hotline_tel) ?>"
+                            <p class="contact-item-value">Hotline: <a
+                                    href="tel:<?= htmlspecialchars($ss_hotline_tel) ?>"
                                     class="address-phone-number"><?= htmlspecialchars($ss['hotline']) ?></a></p>
                         </li>
                         <li class="footer-contact-item">
@@ -64,7 +65,7 @@ $ss_fanpage_encoded = urlencode($ss['fanpage']);
                 </div>
             </div>
             <div class="footer-copyright">
-                <div class="footer-copyright-text">© 2026 TMayschool Đoàn Thị Điểm Phú Quốc. All rights reserved.</div>
+                <div class="footer-copyright-text">© 2026 Meyschool Đoàn Thị Điểm Phú Quốc. All rights reserved.</div>
             </div>
         </div>
     </div>

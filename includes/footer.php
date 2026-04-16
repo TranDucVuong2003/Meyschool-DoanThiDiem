@@ -29,7 +29,9 @@ $ss_fanpage_encoded = urlencode($ss['fanpage']);
                             <p class="contact-item-value">Địa chỉ: <?= htmlspecialchars($ss['address']) ?></p>
                         </li>
                         <li class="footer-contact-item">
-                            <p class="contact-item-value">Hotline: <a href="tel:<?= htmlspecialchars($ss_hotline_tel) ?>" class="address-phone-number"><?= htmlspecialchars($ss['hotline']) ?></a></p>
+                            <p class="contact-item-value">Hotline: <a
+                                    href="tel:<?= htmlspecialchars($ss_hotline_tel) ?>"
+                                    class="address-phone-number"><?= htmlspecialchars($ss['hotline']) ?></a></p>
                         </li>
                         <li class="footer-contact-item">
                             <p class="contact-item-value">Email: <?= htmlspecialchars($ss['email']) ?></p>
@@ -38,10 +40,12 @@ $ss_fanpage_encoded = urlencode($ss['fanpage']);
                             <p class="contact-item-value">Website: <?= htmlspecialchars($ss['website']) ?></p>
                         </li>
                         <li class="footer-contact-item">
-                            <p class="contact-item-value">Tiktok: <a href="<?= htmlspecialchars($ss['tiktok']) ?>" target="_blank"><?= htmlspecialchars($ss['tiktok']) ?></a></p>
+                            <p class="contact-item-value">Tiktok: <a href="<?= htmlspecialchars($ss['tiktok']) ?>"
+                                    target="_blank"><?= htmlspecialchars($ss['tiktok']) ?></a></p>
                         </li>
                         <li class="footer-contact-item">
-                            <p class="contact-item-value">Fanpage: <a href="<?= htmlspecialchars($ss['fanpage']) ?>" target="_blank"><?= htmlspecialchars($ss['fanpage']) ?></a></p>
+                            <p class="contact-item-value">Fanpage: <a href="<?= htmlspecialchars($ss['fanpage']) ?>"
+                                    target="_blank"><?= htmlspecialchars($ss['fanpage']) ?></a></p>
                         </li>
                     </ul>
                     <span class="footer-modern-title">Thời gian làm việc</span>
@@ -54,7 +58,8 @@ $ss_fanpage_encoded = urlencode($ss['fanpage']);
                         <iframe
                             src="https://www.facebook.com/plugins/page.php?href=<?= $ss_fanpage_encoded ?>&tabs=timeline&width=360&height=220&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true"
                             width="360" height="220" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
-                            allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                            allowfullscreen="true"
+                            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
                     </div>
                 </div>
                 <div class="footer-modern-col">
@@ -68,7 +73,7 @@ $ss_fanpage_encoded = urlencode($ss['fanpage']);
                 </div>
             </div>
             <div class="footer-copyright">
-                <div class="footer-copyright-text">© 2026 TMayschool Đoàn Thị Điểm Phú Quốc. All rights reserved.</div>
+                <div class="footer-copyright-text">© 2026 Meyschool Đoàn Thị Điểm Phú Quốc. All rights reserved.</div>
             </div>
         </div>
     </div>

@@ -2227,7 +2227,7 @@ img {
 
 /* Footer layout hiện đại theo mẫu */
 .footer-modern {
-  background: linear-gradient(120deg, #2354a0 0%, #439bd4 55%, #4db0e4 100%);
+  background: linear-gradient(120deg, #314d9b 0%, #00a0e4 100%);
   color: #fff;
   padding: 90px 0 40px;
 }
@@ -2246,7 +2246,7 @@ img {
 
 .footer-modern-title {
   display: block;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
   margin-bottom: 12px;
   color: #fff;
@@ -2262,6 +2262,11 @@ img {
   font-size: 13px;
   color: rgba(255, 255, 255, 0.92);
   line-height: 1.6;
+}
+
+.footer-modern .contact-item-value a,
+.footer-modern .footer-time {
+  font-size: 13px;
 }
 
 .footer-modern .contact-item-value a {
@@ -2402,4 +2407,40 @@ img {
   background: transparent !important;
   margin: 0 8px 0 2px;
   padding: 0 !important;
+}
+
+.header_cover .breadcrumb li,
+.cp-hero .breadcrumb li,
+.ad-hero .breadcrumb li,
+.sc-hero .breadcrumb li,
+.fq-hero .breadcrumb li,
+.cs-hero .breadcrumb li,
+.sp-hero .breadcrumb li,
+.lr-hero .breadcrumb li,
+.header_cover .breadcrumb li a,
+.cp-hero .breadcrumb li a,
+.ad-hero .breadcrumb li a,
+.sc-hero .breadcrumb li a,
+.fq-hero .breadcrumb li a,
+.cs-hero .breadcrumb li a,
+.sp-hero .breadcrumb li a,
+.lr-hero .breadcrumb li a,
+.header_cover .breadcrumb .breadcrumb-item,
+.cp-hero .breadcrumb .breadcrumb-item,
+.ad-hero .breadcrumb .breadcrumb-item,
+.sc-hero .breadcrumb .breadcrumb-item,
+.fq-hero .breadcrumb .breadcrumb-item,
+.cs-hero .breadcrumb .breadcrumb-item,
+.sp-hero .breadcrumb .breadcrumb-item,
+.lr-hero .breadcrumb .breadcrumb-item,
+.header_cover .breadcrumb .breadcrumb-item a,
+.cp-hero .breadcrumb .breadcrumb-item a,
+.ad-hero .breadcrumb .breadcrumb-item a,
+.sc-hero .breadcrumb .breadcrumb-item a,
+.fq-hero .breadcrumb .breadcrumb-item a,
+.cs-hero .breadcrumb .breadcrumb-item a,
+.sp-hero .breadcrumb .breadcrumb-item a,
+.lr-hero .breadcrumb .breadcrumb-item a {
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
 }

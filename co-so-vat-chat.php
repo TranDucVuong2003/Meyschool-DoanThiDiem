@@ -854,9 +854,9 @@
             <div class="csvc-feature two-col" data-aos="fade-up">
                 <div>
                     <!-- <span class="csvc-feature-icon">🍀</span> -->
-                    <h2>Khuôn viên xanh – Điều hòa vi khí hậu</h2>
+                    <h2>Khuôn viên xanh </h2>
                     <p>Đúng với mô hình <strong>"Trường học trong công viên"</strong>, sắc xanh bao phủ khắp 16.000 m²
-                        diện tích không chỉ giúp điều hòa vi khí hậu mà còn tạo ra một môi trường học tập thư giãn, lành
+                        diện tích giúp tạo ra một môi trường học tập thư giãn, lành
                         mạnh.</p>
                     <p>Đây là không gian lý tưởng để học sinh giải tỏa áp lực, nuôi dưỡng tâm hồn và tận hưởng sự trong
                         lành mỗi ngày.</p>
@@ -916,7 +916,7 @@
                 <div>
                     <!-- <span class="csvc-feature-icon">🎨</span> -->
                     <h2>Không gian sáng tạo </h2>
-                   
+
                     <p><strong>Không gian sáng tạo:</strong> Hệ thống phòng Nghệ thuật, STEM và các khu thực hành đa
                         giác quan được đầu tư hiện đại, là nơi các em tự do khám phá và hiện thực hóa những ý tưởng mới
                         mẻ.</p>

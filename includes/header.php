@@ -5,9 +5,9 @@
     {
         return ($page === $current) ? 'active' : '';
     }
-        require_once __DIR__ . '/site-settings.php';
-        $ss = load_site_settings();
-        $ss_hotline_tel = site_phone_to_tel($ss['hotline']);
+    require_once __DIR__ . '/site-settings.php';
+    $ss = load_site_settings();
+    $ss_hotline_tel = site_phone_to_tel($ss['hotline']);
     ?>
     <style>
         .header-menu {
@@ -115,17 +115,20 @@
                                         <span>Ban lãnh đạo Trường Meyschool Đoàn Thị Điểm</span>
                                     </a>
                                 </li>
-                                <li>
+                                <!-- <li>
                                     <a href="doi-ngu-meyschool.php">
-                                        <span>Đội ngũ giáo viên</span>
+                                        <span>Giới thiệu đội ngũ</span>
                                     </a>
-                                </li>
+                                </li> -->
                                 <li>
                                     <a href="chan-dung-hoc-sinh.php">
                                         <span>Chân dung học sinh Meyschool</span>
                                     </a>
                                 </li>
                             </ul>
+                        </li>
+                        <li class="menu-item <?php echo isActive('doi-ngu-meyschool.php', $current_page); ?>">
+                            <a href="doi-ngu-meyschool.php" title="" class="menu_link">Giới thiệu đội ngũ</a>
                         </li>
                         <li class="menu-item <?php echo isActive('tuyen-dung.php', $current_page); ?>">
                             <a href="javascript:void(0)" title="" class="menu_link">Tuyển sinh 2026 - 2027</a>
@@ -295,7 +298,7 @@
                                                     class="mb-sub-link">Ban lãnh đạo Trường Meyschool Đoàn Thị Điểm</a>
                                             </li>
                                             <li class="mb-sub-item"><a href="doi-ngu-meyschool.php" title=""
-                                                    class="mb-sub-link">Đội ngũ giáo viên</a></li>
+                                                    class="mb-sub-link">Giới thiệu đội ngũ</a></li>
                                             <li class="mb-sub-item"><a href="chan-dung-hoc-sinh.php" title=""
                                                     class="mb-sub-link">Chân dung học sinh Meyschool</a></li>
                                         </ul>
@@ -398,7 +401,7 @@
                     <div class="mb-info-modal" id="info-email" style="display: none">
                         <div class="modal-content">
                             <p class="modal-title text-center text-uppercase">Email</p>
-                                <p class="model-text font-garamond-bold"><?= htmlspecialchars($ss['email']) ?></p>
+                            <p class="model-text font-garamond-bold"><?= htmlspecialchars($ss['email']) ?></p>
                             <a href="#" class="link-button righthover link-big  purple">Gửi email
                                 <img src="olympia/images/button-1-3.svg" alt="">
                             </a>
@@ -410,7 +413,8 @@
                             <div class="number-phone-box">
                                 <p class="phone-title"> Tuyển sinh</p>
                                 <p class="phone-number font-garamond-bold">
-                                        <a href="tel:<?= htmlspecialchars($ss_hotline_tel) ?>" class="phone-number font-garamond-bold"><?= htmlspecialchars($ss['hotline']) ?></a>
+                                    <a href="tel:<?= htmlspecialchars($ss_hotline_tel) ?>"
+                                        class="phone-number font-garamond-bold"><?= htmlspecialchars($ss['hotline']) ?></a>
                                 </p>
                             </div>
                             <div class="number-phone-box">
@@ -428,7 +432,7 @@
                     <div class="mb-info-modal" id="info-address" style="display: none">
                         <div class="modal-content">
                             <p class="modal-title text-center text-uppercase">Địa chỉ</p>
-                                <p class="model-text font-garamond-bold"><?= htmlspecialchars($ss['address']) ?></p>
+                            <p class="model-text font-garamond-bold"><?= htmlspecialchars($ss['address']) ?></p>
                             <a href="#" class="link-button righthover link-big  purple">Chỉ đường
                                 <img src="olympia/images/button-1-3.svg" alt="">
                             </a>

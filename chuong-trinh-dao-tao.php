@@ -27,854 +27,854 @@
     <script src="olympia/js/slick.js"></script>
     <script src="../unpkg.com/aos%402.3.1/dist/aos.js"></script>
     <style>
-        :root {
-            --ct-navy: #1e3a5f;
-            --ct-blue: #2b6cb0;
-            --ct-sky: #439bd4;
-            --ct-light: #eef6ff;
-            --ct-white: #ffffff;
+    :root {
+        --ct-navy: #1e3a5f;
+        --ct-blue: #2b6cb0;
+        --ct-sky: #439bd4;
+        --ct-light: #eef6ff;
+        --ct-white: #ffffff;
+    }
+
+    .ct-page {
+        background: #f8fbff;
+        color: #1f2a44;
+        margin-bottom: 120px;
+    }
+
+    .ct-wrap {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    /* ── Hero ── */
+    .ct-hero {
+        padding: 110px 0 50px;
+        background: linear-gradient(130deg, rgba(30, 58, 95, .94), rgba(43, 108, 176, .88)),
+            url('assets/img/chan-dung-hoc-sinh/thư viện.jpg') center/cover no-repeat;
+    }
+
+    .ct-hero h1 {
+        color: #fff;
+        font-family: 'EB Garamond', 'Garamond', serif;
+        font-size: clamp(32px, 4vw, 52px);
+        margin: 0 0 12px;
+    }
+
+    .ct-hero p {
+        color: rgba(255, 255, 255, .92);
+        font-size: 17px;
+        line-height: 1.7;
+        max-width: 760px;
+    }
+
+    .ct-breadcrumb {
+        display: inline-flex;
+        gap: 6px;
+        list-style: none;
+        padding: 6px 14px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, .18);
+        border: 1px solid rgba(255, 255, 255, .3);
+        margin: 0 0 16px;
+        font-size: 13px;
+    }
+
+    .ct-breadcrumb li,
+    .ct-breadcrumb a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .ct-breadcrumb li+li::before {
+        content: "·";
+        margin-right: 6px;
+    }
+
+    /* ── Section generic ── */
+    .ct-section {
+        padding: 56px 0;
+    }
+
+    .ct-section:nth-child(even) {
+        background: var(--ct-light);
+    }
+
+    .ct-section-title {
+        font-family: 'EB Garamond', 'Garamond', serif;
+        font-size: 32px;
+        color: var(--ct-navy);
+        text-transform: uppercase;
+        text-align: center;
+        margin: 0 0 10px;
+        position: relative;
+    }
+
+    .ct-section-title::after {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 3px;
+        background: var(--ct-sky);
+        margin: 10px auto 0;
+        border-radius: 2px;
+    }
+
+    .ct-section-sub {
+        text-align: center;
+        color: #4a6785;
+        font-size: 15px;
+        line-height: 1.7;
+        max-width: 700px;
+        margin: 8px auto 32px;
+        font-style: italic;
+    }
+
+    /* ── Card chung ── */
+    .ct-card {
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 6px 20px rgba(16, 49, 79, .07);
+        overflow: hidden;
+        transition: transform .3s, box-shadow .3s;
+    }
+
+    .ct-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 32px rgba(16, 49, 79, .12);
+    }
+
+    /* ── Chương trình học tiêu chuẩn ── */
+    .ct-standard {
+        display: grid;
+        grid-template-columns: .45fr .55fr;
+        gap: 48px;
+        align-items: start;
+    }
+
+    /* Collage ảnh */
+    .ct-collage {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        padding: 20px 0 20px 20px;
+    }
+
+    .ct-collage img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 14px;
+        display: block;
+    }
+
+    .ct-collage img:nth-child(1) {
+        border-radius: 14px 14px 14px 40px;
+    }
+
+    .ct-collage img:nth-child(4) {
+        border-radius: 14px 14px 40px 14px;
+    }
+
+    .ct-collage-dots {
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        display: grid;
+        grid-template-columns: repeat(5, 10px);
+        gap: 6px;
+    }
+
+    .ct-collage-dots span {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--ct-sky);
+        opacity: .35;
+    }
+
+    .ct-collage-dots span:nth-child(odd) {
+        opacity: .6;
+    }
+
+    .ct-standard-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .ct-standard-body h2 {
+        font-family: 'EB Garamond', 'Garamond', serif;
+        font-size: 32px;
+        color: var(--ct-navy);
+        margin: 0 0 28px;
+        text-transform: uppercase;
+        line-height: 1.25;
+    }
+
+    /* Timeline items */
+    .ct-timeline {
+        position: relative;
+        padding-left: 40px;
+        margin: 0 0 24px;
+    }
+
+    .ct-timeline::before {
+        content: '';
+        position: absolute;
+        left: 15px;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        border-left: 2px dashed var(--ct-sky);
+    }
+
+    .ct-timeline-item {
+        position: relative;
+        margin-bottom: 28px;
+    }
+
+    .ct-timeline-item:last-child {
+        margin-bottom: 0;
+    }
+
+    .ct-timeline-num {
+        position: absolute;
+        left: -40px;
+        top: 0;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: var(--ct-navy);
+        color: #fff;
+        font-size: 14px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+    }
+
+    .ct-timeline-item h3 {
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--ct-navy);
+        margin: 4px 0 8px;
+    }
+
+    .ct-timeline-item p {
+        font-size: 14px;
+        color: #3b5068;
+        line-height: 1.7;
+        margin: 0 0 6px;
+    }
+
+    .ct-btn {
+        display: inline-block;
+        padding: 10px 24px;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 700;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: .4px;
+        transition: all .3s;
+    }
+
+    .ct-btn-outline {
+        color: var(--ct-blue);
+        border: 2px solid var(--ct-blue);
+        background: transparent;
+        width: 130px
+    }
+
+    .ct-btn-outline:hover {
+        background: var(--ct-blue);
+        color: #fff;
+    }
+
+    .ct-btn-primary {
+        color: #fff;
+        background: var(--ct-blue);
+        border: 2px solid var(--ct-blue);
+    }
+
+    .ct-btn-primary:hover {
+        background: #1d5a9e;
+    }
+
+    /* ── Grid 2-col cho ngoại ngữ / khác ── */
+    .ct-grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+    }
+
+    .ct-prog-card {
+        display: grid;
+        grid-template-columns: .4fr .6fr;
+        overflow: hidden;
+    }
+
+    .ct-prog-card img {
+        width: 100%;
+        height: 100%;
+        min-height: 200px;
+        object-fit: cover;
+        display: block;
+    }
+
+    .ct-prog-body {
+        padding: 22px 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .ct-prog-body h3 {
+        font-size: 18px;
+        color: var(--ct-navy);
+        margin: 0 0 8px;
+        font-weight: 700;
+    }
+
+    .ct-prog-body p {
+        font-size: 13px;
+        color: #4a6785;
+        line-height: 1.6;
+        margin: 0 0 12px;
+    }
+
+    /* ── Banner full-width ── */
+    .ct-banner {
+        position: relative;
+        overflow: hidden;
+        min-height: 320px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .ct-banner img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .ct-banner-overlay {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        color: #fff;
+        padding: 40px 20px;
+    }
+
+    .ct-banner-overlay h2 {
+        font-family: 'EB Garamond', 'Garamond', serif;
+        font-size: clamp(28px, 4vw, 48px);
+        margin: 0 0 8px;
+        text-shadow: 0 2px 12px rgba(0, 0, 0, .4);
+    }
+
+    .ct-banner-overlay p {
+        font-size: 20px;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, .3);
+    }
+
+    /* ── STEM section ── */
+    .ct-stem-layout {
+        display: grid;
+        grid-template-columns: .55fr .45fr;
+        gap: 32px;
+        align-items: start;
+    }
+
+    .ct-stem-layout h2 {
+        font-family: 'EB Garamond', 'Garamond', serif;
+        font-size: 26px;
+        color: var(--ct-navy);
+        text-transform: uppercase;
+        margin: 0 0 14px;
+    }
+
+    .ct-stem-layout h3 {
+        font-size: 16px;
+        color: var(--ct-blue);
+        margin: 18px 0 6px;
+    }
+
+    .ct-stem-layout p {
+        font-size: 14px;
+        color: #3b5068;
+        line-height: 1.7;
+    }
+
+    .ct-stem-img {
+        border-radius: 14px;
+        overflow: hidden;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, .1);
+    }
+
+    .ct-stem-img img {
+        width: 100%;
+        display: block;
+    }
+
+    /* ── Kỹ năng mềm banner ── */
+    .ct-skills-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 8px;
+        border-radius: 16px;
+        overflow: hidden;
+    }
+
+    .ct-skills-grid>* {
+        min-height: 0;
+    }
+
+    /* Cell 1: text box top-left */
+    .ct-skills-text {
+        background: linear-gradient(135deg, var(--ct-navy), #2c5282);
+        color: #fff;
+        padding: 36px 32px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 16px;
+    }
+
+    .ct-skills-text h2 {
+        font-family: 'EB Garamond', 'Garamond', serif;
+        font-size: 26px;
+        margin: 0 0 14px;
+        text-transform: uppercase;
+    }
+
+    .ct-skills-text p {
+        font-size: 14px;
+        line-height: 1.7;
+        color: rgba(255, 255, 255, .9);
+        margin: 0;
+    }
+
+    /* Cell 2: big photo top-right */
+    .ct-skills-big {
+        border-radius: 16px;
+        overflow: hidden;
+    }
+
+    .ct-skills-big img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        min-height: 280px;
+    }
+
+    /* Cell 3: medium photo bottom-left */
+    .ct-skills-med {
+        border-radius: 16px;
+        overflow: hidden;
+    }
+
+    .ct-skills-med img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        min-height: 240px;
+    }
+
+    /* Cell 4: 2-photo sub-grid bottom-right */
+    .ct-skills-small {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+
+    .ct-skills-small img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        border-radius: 16px;
+        min-height: 120px;
+    }
+
+    /* ── Ngoại khóa ── */
+    .ct-extra-wrap {
+        display: grid;
+        grid-template-columns: 1fr .4fr;
+        gap: 0;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 6px 20px rgba(16, 49, 79, .06);
+        background: #fff;
+        border: 1px solid rgba(67, 155, 212, .16);
+    }
+
+    .ct-extra-box {
+        padding: 28px 32px;
+    }
+
+    .ct-extra-box h3 {
+        font-size: 18px;
+        color: var(--ct-navy);
+        margin: 0 0 10px;
+        font-weight: 700;
+    }
+
+    .ct-extra-list {
+        list-style: disc;
+        padding-left: 20px;
+        color: #3b5068;
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .ct-extra-img {
+        overflow: hidden;
+    }
+
+    .ct-extra-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    /* ── CLB ── */
+    .ct-clb-intro {
+        background: #fff;
+        border: 1px solid rgba(67, 155, 212, .16);
+        border-radius: 16px;
+        padding: 24px 32px;
+        box-shadow: 0 6px 20px rgba(16, 49, 79, .06);
+        margin-bottom: 28px;
+    }
+
+    .ct-clb-intro p {
+        margin: 0;
+        font-size: 15px;
+        line-height: 1.8;
+        color: #3b5068;
+    }
+
+    .ct-clb-intro .ct-clb-time {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 12px;
+        background: var(--ct-blue-soft, #eef7ff);
+        color: var(--ct-navy, #1a3a5c);
+        border-radius: 999px;
+        padding: 7px 16px;
+        font-size: 13px;
+        font-weight: 700;
+    }
+
+    .ct-clb-groups {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+
+    .ct-clb-group {
+        background: #fff;
+        border: 1px solid rgba(67, 155, 212, .16);
+        border-radius: 18px;
+        overflow: hidden;
+        box-shadow: 0 8px 22px rgba(16, 49, 79, .08);
+    }
+
+    .ct-clb-group-header {
+        padding: 16px 20px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .ct-clb-group-header .ct-clb-icon {
+        font-size: 28px;
+        line-height: 1;
+    }
+
+    .ct-clb-group-header h3 {
+        margin: 0;
+        font-size: 15px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: .04em;
+        line-height: 1.3;
+    }
+
+    .ct-clb-group:nth-child(1) .ct-clb-group-header {
+        background: linear-gradient(120deg, #1a3a5c, #2354a0);
+        color: #fff;
+    }
+
+    .ct-clb-group:nth-child(2) .ct-clb-group-header {
+        background: linear-gradient(120deg, #2354a0, #439bd4);
+        color: #fff;
+    }
+
+    .ct-clb-group:nth-child(3) .ct-clb-group-header {
+        background: linear-gradient(120deg, #439bd4, #4db0e4);
+        color: #fff;
+    }
+
+    .ct-clb-group ul {
+        list-style: none;
+        padding: 16px 20px;
+        margin: 0;
+        display: grid;
+        gap: 8px;
+    }
+
+    .ct-clb-group li {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 14px;
+        color: #2c4963;
+        font-weight: 600;
+    }
+
+    .ct-clb-group li::before {
+        content: '';
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        flex-shrink: 0;
+    }
+
+    .ct-clb-group:nth-child(1) li::before {
+        background: #2354a0;
+    }
+
+    .ct-clb-group:nth-child(2) li::before {
+        background: #439bd4;
+    }
+
+    .ct-clb-group:nth-child(3) li::before {
+        background: #4db0e4;
+    }
+
+    .ct-clb-note {
+        background: #fffbeb;
+        border: 1px solid #fcd34d;
+        border-radius: 12px;
+        padding: 14px 20px;
+        font-size: 13px;
+        color: #78350f;
+        line-height: 1.7;
+    }
+
+    .ct-clb-note strong {
+        color: #92400e;
+    }
+
+    @media (max-width: 900px) {
+        .ct-clb-groups {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /* ── Tin tức slider ── */
+    .ct-news-section {
+        padding: 56px 0 40px;
+        margin-bottom: 115px;
+    }
+
+    .ct-news-title {
+        font-family: 'EB Garamond', 'Garamond', serif;
+        font-size: 32px;
+        font-weight: 700;
+        color: var(--ct-navy);
+        text-transform: uppercase;
+        margin-bottom: 36px;
+        text-align: center;
+    }
+
+    /* ── Slider cards ── */
+    .ts-news-slider {
+        margin: 0 -12px;
+    }
+
+    .ts-news-slider .slick-slide {
+        padding: 0 12px;
+    }
+
+    .ts-news-slider .slick-list {
+        overflow: hidden;
+    }
+
+    .ts-news-card {
+        background: #fff;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 4px 24px rgba(23, 52, 93, .08);
+        transition: transform .3s, box-shadow .3s;
+    }
+
+    .ts-news-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 36px rgba(23, 52, 93, .14);
+    }
+
+    .ts-news-card img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        display: block;
+    }
+
+    .ts-news-card-body {
+        padding: 20px 22px 24px;
+    }
+
+    .ts-news-card-body h3 {
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--ct-navy);
+        line-height: 1.5;
+        margin: 0 0 16px;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .ts-news-link {
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--ct-sky);
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+    }
+
+    .ts-news-link span {
+        font-size: 18px;
+    }
+
+    .ts-news-slider .slick-prev,
+    .ts-news-slider .slick-next {
+        width: 44px;
+        height: 44px;
+        z-index: 2;
+        background: #fff;
+        border-radius: 50%;
+        box-shadow: 0 2px 12px rgba(23, 52, 93, .15);
+    }
+
+    .ts-news-slider .slick-prev:hover,
+    .ts-news-slider .slick-next:hover {
+        background: var(--ct-sky);
+    }
+
+    .ts-news-slider .slick-prev {
+        left: -22px;
+    }
+
+    .ts-news-slider .slick-next {
+        right: -22px;
+    }
+
+    .ts-news-slider .slick-prev:before,
+    .ts-news-slider .slick-next:before {
+        color: var(--ct-navy);
+        font-size: 20px;
+        opacity: 1;
+    }
+
+    .ts-news-slider .slick-prev:hover:before,
+    .ts-news-slider .slick-next:hover:before {
+        color: #fff;
+    }
+
+    .ts-news-slider .slick-dots {
+        bottom: -40px;
+    }
+
+    .ts-news-slider .slick-dots li button:before {
+        font-size: 10px;
+        color: #c5d3e0;
+        opacity: 1;
+    }
+
+    .ts-news-slider .slick-dots li.slick-active button:before {
+        color: var(--ct-sky);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 992px) {
+
+        .ct-standard,
+        .ct-stem-layout,
+        .ct-extra-wrap {
+            grid-template-columns: 1fr;
         }
 
-        .ct-page {
-            background: #f8fbff;
-            color: #1f2a44;
-            margin-bottom: 120px;
+        .ct-skills-grid {
+            grid-template-columns: 1fr 1fr;
         }
 
-        .ct-wrap {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* ── Hero ── */
-        .ct-hero {
-            padding: 110px 0 50px;
-            background: linear-gradient(130deg, rgba(30, 58, 95, .94), rgba(43, 108, 176, .88)),
-                url('assets/img/chan-dung-hoc-sinh/thư viện.jpg') center/cover no-repeat;
-        }
-
-        .ct-hero h1 {
-            color: #fff;
-            font-family: 'EB Garamond', 'Garamond', serif;
-            font-size: clamp(32px, 4vw, 52px);
-            margin: 0 0 12px;
-        }
-
-        .ct-hero p {
-            color: rgba(255, 255, 255, .92);
-            font-size: 17px;
-            line-height: 1.7;
-            max-width: 760px;
-        }
-
-        .ct-breadcrumb {
-            display: inline-flex;
-            gap: 6px;
-            list-style: none;
-            padding: 6px 14px;
-            border-radius: 999px;
-            background: rgba(255, 255, 255, .18);
-            border: 1px solid rgba(255, 255, 255, .3);
-            margin: 0 0 16px;
-            font-size: 13px;
-        }
-
-        .ct-breadcrumb li,
-        .ct-breadcrumb a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        .ct-breadcrumb li+li::before {
-            content: "·";
-            margin-right: 6px;
-        }
-
-        /* ── Section generic ── */
-        .ct-section {
-            padding: 56px 0;
-        }
-
-        .ct-section:nth-child(even) {
-            background: var(--ct-light);
-        }
-
-        .ct-section-title {
-            font-family: 'EB Garamond', 'Garamond', serif;
-            font-size: 32px;
-            color: var(--ct-navy);
-            text-transform: uppercase;
-            text-align: center;
-            margin: 0 0 10px;
-            position: relative;
-        }
-
-        .ct-section-title::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 3px;
-            background: var(--ct-sky);
-            margin: 10px auto 0;
-            border-radius: 2px;
-        }
-
-        .ct-section-sub {
-            text-align: center;
-            color: #4a6785;
-            font-size: 15px;
-            line-height: 1.7;
-            max-width: 700px;
-            margin: 8px auto 32px;
-            font-style: italic;
-        }
-
-        /* ── Card chung ── */
-        .ct-card {
-            background: #fff;
-            border-radius: 16px;
-            box-shadow: 0 6px 20px rgba(16, 49, 79, .07);
-            overflow: hidden;
-            transition: transform .3s, box-shadow .3s;
-        }
-
-        .ct-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 32px rgba(16, 49, 79, .12);
-        }
-
-        /* ── Chương trình học tiêu chuẩn ── */
-        .ct-standard {
-            display: grid;
-            grid-template-columns: .45fr .55fr;
-            gap: 48px;
-            align-items: start;
-        }
-
-        /* Collage ảnh */
         .ct-collage {
-            position: relative;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            padding: 20px 0 20px 20px;
+            max-width: 480px;
         }
 
-        .ct-collage img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-            border-radius: 14px;
-            display: block;
-        }
-
-        .ct-collage img:nth-child(1) {
-            border-radius: 14px 14px 14px 40px;
-        }
-
-        .ct-collage img:nth-child(4) {
-            border-radius: 14px 14px 40px 14px;
-        }
-
-        .ct-collage-dots {
-            position: absolute;
-            bottom: -8px;
-            left: 0;
-            display: grid;
-            grid-template-columns: repeat(5, 10px);
-            gap: 6px;
-        }
-
-        .ct-collage-dots span {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: var(--ct-sky);
-            opacity: .35;
-        }
-
-        .ct-collage-dots span:nth-child(odd) {
-            opacity: .6;
-        }
-
-        .ct-standard-body {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .ct-standard-body h2 {
-            font-family: 'EB Garamond', 'Garamond', serif;
-            font-size: 32px;
-            color: var(--ct-navy);
-            margin: 0 0 28px;
-            text-transform: uppercase;
-            line-height: 1.25;
-        }
-
-        /* Timeline items */
-        .ct-timeline {
-            position: relative;
-            padding-left: 40px;
-            margin: 0 0 24px;
-        }
-
-        .ct-timeline::before {
-            content: '';
-            position: absolute;
-            left: 15px;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            border-left: 2px dashed var(--ct-sky);
-        }
-
-        .ct-timeline-item {
-            position: relative;
-            margin-bottom: 28px;
-        }
-
-        .ct-timeline-item:last-child {
-            margin-bottom: 0;
-        }
-
-        .ct-timeline-num {
-            position: absolute;
-            left: -40px;
-            top: 0;
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            background: var(--ct-navy);
-            color: #fff;
-            font-size: 14px;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 1;
-        }
-
-        .ct-timeline-item h3 {
-            font-size: 16px;
-            font-weight: 700;
-            color: var(--ct-navy);
-            margin: 4px 0 8px;
-        }
-
-        .ct-timeline-item p {
-            font-size: 14px;
-            color: #3b5068;
-            line-height: 1.7;
-            margin: 0 0 6px;
-        }
-
-        .ct-btn {
-            display: inline-block;
-            padding: 10px 24px;
-            border-radius: 8px;
-            font-size: 14px;
-            font-weight: 700;
-            text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: .4px;
-            transition: all .3s;
-        }
-
-        .ct-btn-outline {
-            color: var(--ct-blue);
-            border: 2px solid var(--ct-blue);
-            background: transparent;
-            width: 130px
-        }
-
-        .ct-btn-outline:hover {
-            background: var(--ct-blue);
-            color: #fff;
-        }
-
-        .ct-btn-primary {
-            color: #fff;
-            background: var(--ct-blue);
-            border: 2px solid var(--ct-blue);
-        }
-
-        .ct-btn-primary:hover {
-            background: #1d5a9e;
-        }
-
-        /* ── Grid 2-col cho ngoại ngữ / khác ── */
         .ct-grid-2 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 24px;
+            grid-template-columns: 1fr;
         }
 
         .ct-prog-card {
-            display: grid;
-            grid-template-columns: .4fr .6fr;
-            overflow: hidden;
+            grid-template-columns: .35fr .65fr;
+        }
+
+        .ct-cta-content {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+
+        .ct-cta-text>div {
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .ct-cta-actions {
+            text-align: center;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .ct-prog-card {
+            grid-template-columns: 1fr;
         }
 
         .ct-prog-card img {
-            width: 100%;
-            height: 100%;
-            min-height: 200px;
-            object-fit: cover;
-            display: block;
+            min-height: 180px;
         }
 
-        .ct-prog-body {
-            padding: 22px 24px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+        .ct-collage img {
+            height: 140px;
         }
 
-        .ct-prog-body h3 {
-            font-size: 18px;
-            color: var(--ct-navy);
-            margin: 0 0 8px;
-            font-weight: 700;
-        }
-
-        .ct-prog-body p {
-            font-size: 13px;
-            color: #4a6785;
-            line-height: 1.6;
-            margin: 0 0 12px;
-        }
-
-        /* ── Banner full-width ── */
-        .ct-banner {
-            position: relative;
-            overflow: hidden;
-            min-height: 320px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .ct-banner img {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .ct-banner-overlay {
-            position: relative;
-            z-index: 1;
-            text-align: center;
-            color: #fff;
-            padding: 40px 20px;
-        }
-
-        .ct-banner-overlay h2 {
-            font-family: 'EB Garamond', 'Garamond', serif;
-            font-size: clamp(28px, 4vw, 48px);
-            margin: 0 0 8px;
-            text-shadow: 0 2px 12px rgba(0, 0, 0, .4);
-        }
-
-        .ct-banner-overlay p {
-            font-size: 20px;
-            text-shadow: 0 2px 8px rgba(0, 0, 0, .3);
-        }
-
-        /* ── STEM section ── */
-        .ct-stem-layout {
-            display: grid;
-            grid-template-columns: .55fr .45fr;
-            gap: 32px;
-            align-items: start;
-        }
-
-        .ct-stem-layout h2 {
-            font-family: 'EB Garamond', 'Garamond', serif;
-            font-size: 26px;
-            color: var(--ct-navy);
-            text-transform: uppercase;
-            margin: 0 0 14px;
-        }
-
-        .ct-stem-layout h3 {
-            font-size: 16px;
-            color: var(--ct-blue);
-            margin: 18px 0 6px;
-        }
-
-        .ct-stem-layout p {
-            font-size: 14px;
-            color: #3b5068;
-            line-height: 1.7;
-        }
-
-        .ct-stem-img {
-            border-radius: 14px;
-            overflow: hidden;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, .1);
-        }
-
-        .ct-stem-img img {
-            width: 100%;
-            display: block;
-        }
-
-        /* ── Kỹ năng mềm banner ── */
         .ct-skills-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: auto auto;
-            gap: 8px;
-            border-radius: 16px;
-            overflow: hidden;
+            grid-template-columns: 1fr;
         }
 
-        .ct-skills-grid>* {
-            min-height: 0;
-        }
-
-        /* Cell 1: text box top-left */
-        .ct-skills-text {
-            background: linear-gradient(135deg, var(--ct-navy), #2c5282);
-            color: #fff;
-            padding: 36px 32px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            border-radius: 16px;
-        }
-
-        .ct-skills-text h2 {
-            font-family: 'EB Garamond', 'Garamond', serif;
-            font-size: 26px;
-            margin: 0 0 14px;
-            text-transform: uppercase;
-        }
-
-        .ct-skills-text p {
-            font-size: 14px;
-            line-height: 1.7;
-            color: rgba(255, 255, 255, .9);
-            margin: 0;
-        }
-
-        /* Cell 2: big photo top-right */
-        .ct-skills-big {
-            border-radius: 16px;
-            overflow: hidden;
-        }
-
-        .ct-skills-big img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            min-height: 280px;
-        }
-
-        /* Cell 3: medium photo bottom-left */
-        .ct-skills-med {
-            border-radius: 16px;
-            overflow: hidden;
-        }
-
-        .ct-skills-med img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            min-height: 240px;
-        }
-
-        /* Cell 4: 2-photo sub-grid bottom-right */
         .ct-skills-small {
-            display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 8px;
         }
-
-        .ct-skills-small img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            border-radius: 16px;
-            min-height: 120px;
-        }
-
-        /* ── Ngoại khóa ── */
-        .ct-extra-wrap {
-            display: grid;
-            grid-template-columns: 1fr .4fr;
-            gap: 0;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 6px 20px rgba(16, 49, 79, .06);
-            background: #fff;
-            border: 1px solid rgba(67, 155, 212, .16);
-        }
-
-        .ct-extra-box {
-            padding: 28px 32px;
-        }
-
-        .ct-extra-box h3 {
-            font-size: 18px;
-            color: var(--ct-navy);
-            margin: 0 0 10px;
-            font-weight: 700;
-        }
-
-        .ct-extra-list {
-            list-style: disc;
-            padding-left: 20px;
-            color: #3b5068;
-            font-size: 14px;
-            line-height: 1.8;
-        }
-
-        .ct-extra-img {
-            overflow: hidden;
-        }
-
-        .ct-extra-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-
-        /* ── CLB ── */
-        .ct-clb-intro {
-            background: #fff;
-            border: 1px solid rgba(67, 155, 212, .16);
-            border-radius: 16px;
-            padding: 24px 32px;
-            box-shadow: 0 6px 20px rgba(16, 49, 79, .06);
-            margin-bottom: 28px;
-        }
-
-        .ct-clb-intro p {
-            margin: 0;
-            font-size: 15px;
-            line-height: 1.8;
-            color: #3b5068;
-        }
-
-        .ct-clb-intro .ct-clb-time {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            margin-top: 12px;
-            background: var(--ct-blue-soft, #eef7ff);
-            color: var(--ct-navy, #1a3a5c);
-            border-radius: 999px;
-            padding: 7px 16px;
-            font-size: 13px;
-            font-weight: 700;
-        }
-
-        .ct-clb-groups {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 20px;
-            margin-bottom: 20px;
-        }
-
-        .ct-clb-group {
-            background: #fff;
-            border: 1px solid rgba(67, 155, 212, .16);
-            border-radius: 18px;
-            overflow: hidden;
-            box-shadow: 0 8px 22px rgba(16, 49, 79, .08);
-        }
-
-        .ct-clb-group-header {
-            padding: 16px 20px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .ct-clb-group-header .ct-clb-icon {
-            font-size: 28px;
-            line-height: 1;
-        }
-
-        .ct-clb-group-header h3 {
-            margin: 0;
-            font-size: 15px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: .04em;
-            line-height: 1.3;
-        }
-
-        .ct-clb-group:nth-child(1) .ct-clb-group-header {
-            background: linear-gradient(120deg, #1a3a5c, #2354a0);
-            color: #fff;
-        }
-
-        .ct-clb-group:nth-child(2) .ct-clb-group-header {
-            background: linear-gradient(120deg, #2354a0, #439bd4);
-            color: #fff;
-        }
-
-        .ct-clb-group:nth-child(3) .ct-clb-group-header {
-            background: linear-gradient(120deg, #439bd4, #4db0e4);
-            color: #fff;
-        }
-
-        .ct-clb-group ul {
-            list-style: none;
-            padding: 16px 20px;
-            margin: 0;
-            display: grid;
-            gap: 8px;
-        }
-
-        .ct-clb-group li {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 14px;
-            color: #2c4963;
-            font-weight: 600;
-        }
-
-        .ct-clb-group li::before {
-            content: '';
-            width: 7px;
-            height: 7px;
-            border-radius: 50%;
-            flex-shrink: 0;
-        }
-
-        .ct-clb-group:nth-child(1) li::before {
-            background: #2354a0;
-        }
-
-        .ct-clb-group:nth-child(2) li::before {
-            background: #439bd4;
-        }
-
-        .ct-clb-group:nth-child(3) li::before {
-            background: #4db0e4;
-        }
-
-        .ct-clb-note {
-            background: #fffbeb;
-            border: 1px solid #fcd34d;
-            border-radius: 12px;
-            padding: 14px 20px;
-            font-size: 13px;
-            color: #78350f;
-            line-height: 1.7;
-        }
-
-        .ct-clb-note strong {
-            color: #92400e;
-        }
-
-        @media (max-width: 900px) {
-            .ct-clb-groups {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* ── Tin tức slider ── */
-        .ct-news-section {
-            padding: 56px 0 40px;
-            margin-bottom: 115px;
-        }
-
-        .ct-news-title {
-            font-family: 'EB Garamond', 'Garamond', serif;
-            font-size: 32px;
-            font-weight: 700;
-            color: var(--ct-navy);
-            text-transform: uppercase;
-            margin-bottom: 36px;
-            text-align: center;
-        }
-
-        /* ── Slider cards ── */
-        .ts-news-slider {
-            margin: 0 -12px;
-        }
-
-        .ts-news-slider .slick-slide {
-            padding: 0 12px;
-        }
-
-        .ts-news-slider .slick-list {
-            overflow: hidden;
-        }
-
-        .ts-news-card {
-            background: #fff;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 4px 24px rgba(23, 52, 93, .08);
-            transition: transform .3s, box-shadow .3s;
-        }
-
-        .ts-news-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 12px 36px rgba(23, 52, 93, .14);
-        }
-
-        .ts-news-card img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .ts-news-card-body {
-            padding: 20px 22px 24px;
-        }
-
-        .ts-news-card-body h3 {
-            font-size: 16px;
-            font-weight: 700;
-            color: var(--ct-navy);
-            line-height: 1.5;
-            margin: 0 0 16px;
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-
-        .ts-news-link {
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--ct-sky);
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-        }
-
-        .ts-news-link span {
-            font-size: 18px;
-        }
-
-        .ts-news-slider .slick-prev,
-        .ts-news-slider .slick-next {
-            width: 44px;
-            height: 44px;
-            z-index: 2;
-            background: #fff;
-            border-radius: 50%;
-            box-shadow: 0 2px 12px rgba(23, 52, 93, .15);
-        }
-
-        .ts-news-slider .slick-prev:hover,
-        .ts-news-slider .slick-next:hover {
-            background: var(--ct-sky);
-        }
-
-        .ts-news-slider .slick-prev {
-            left: -22px;
-        }
-
-        .ts-news-slider .slick-next {
-            right: -22px;
-        }
-
-        .ts-news-slider .slick-prev:before,
-        .ts-news-slider .slick-next:before {
-            color: var(--ct-navy);
-            font-size: 20px;
-            opacity: 1;
-        }
-
-        .ts-news-slider .slick-prev:hover:before,
-        .ts-news-slider .slick-next:hover:before {
-            color: #fff;
-        }
-
-        .ts-news-slider .slick-dots {
-            bottom: -40px;
-        }
-
-        .ts-news-slider .slick-dots li button:before {
-            font-size: 10px;
-            color: #c5d3e0;
-            opacity: 1;
-        }
-
-        .ts-news-slider .slick-dots li.slick-active button:before {
-            color: var(--ct-sky);
-        }
-
-        /* ── Responsive ── */
-        @media (max-width: 992px) {
-
-            .ct-standard,
-            .ct-stem-layout,
-            .ct-extra-wrap {
-                grid-template-columns: 1fr;
-            }
-
-            .ct-skills-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .ct-collage {
-                max-width: 480px;
-            }
-
-            .ct-grid-2 {
-                grid-template-columns: 1fr;
-            }
-
-            .ct-prog-card {
-                grid-template-columns: .35fr .65fr;
-            }
-
-            .ct-cta-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .ct-cta-text>div {
-                justify-content: center;
-                flex-wrap: wrap;
-            }
-
-            .ct-cta-actions {
-                text-align: center;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .ct-prog-card {
-                grid-template-columns: 1fr;
-            }
-
-            .ct-prog-card img {
-                min-height: 180px;
-            }
-
-            .ct-collage img {
-                height: 140px;
-            }
-
-            .ct-skills-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .ct-skills-small {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
+    }
     </style>
 </head>
 
@@ -957,7 +957,7 @@
                             <a href="javascript:void(0)" class="ct-btn ct-btn-outline">Xem thêm</a>
                         </div>
                     </div>
-                    <div class="ct-card ct-prog-card">
+                    <!-- <div class="ct-card ct-prog-card">
                         <img src="assets/img/chan-dung-hoc-sinh/TUN09909.jpg" alt="Chương trình tiếng Pháp tăng cường">
                         <div class="ct-prog-body">
                             <h3>Chương trình tiếng Pháp tăng cường</h3>
@@ -965,7 +965,7 @@
                                 dục Đào Tạo.</p>
                             <a href="javascript:void(0)" class="ct-btn ct-btn-outline">Xem thêm</a>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="ct-card ct-prog-card">
                         <img src="assets/img/chan-dung-hoc-sinh/TUN09948.jpg" alt="Chương trình tiếng Anh tăng cường">
                         <div class="ct-prog-body">
@@ -975,7 +975,7 @@
                             <a href="javascript:void(0)" class="ct-btn ct-btn-outline">Xem thêm</a>
                         </div>
                     </div>
-                    <div class="ct-card ct-prog-card">
+                    <!-- <div class="ct-card ct-prog-card">
                         <img src="assets/img/chan-dung-hoc-sinh/TUN09961.jpg"
                             alt="Chương trình liên kết Việt Nam – Cambridge & Oxford">
                         <div class="ct-prog-body">
@@ -983,7 +983,7 @@
                             <p>Chương trình giúp các bậc phụ huynh mở ra cánh cửa hội nhập quốc tế cho con em mình.</p>
                             <a href="javascript:void(0)" class="ct-btn ct-btn-outline">Xem thêm</a>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </section>
@@ -1045,7 +1045,8 @@
                         </div>
                     </div>
                     <div class="ct-card ct-prog-card">
-                        <img src="assets/img/chuong-trinh-dao-tao/chuong-trinh-LIM/TUN07466.jpg" alt="Chương trình LiM – Leader in Me">
+                        <img src="assets/img/chuong-trinh-dao-tao/chuong-trinh-LIM/TUN07466.jpg"
+                            alt="Chương trình LiM – Leader in Me">
                         <div class="ct-prog-body">
                             <h3>Chương trình LiM – Leader in Me (Lãnh đạo Bản thân)</h3>
                             <p>Chương trình lãnh đạo bản thân giúp học sinh phát triển kỹ năng sống và tinh thần khởi
@@ -1054,7 +1055,8 @@
                         </div>
                     </div>
                     <div class="ct-card ct-prog-card">
-                        <img src="assets/img/chuong-trinh-dao-tao/chuong-trinh-giao-lul-hop-tac-quoc-te/chuong-trinh-trai-he.jpeg" alt="Chương trình Trại hè">
+                        <img src="assets/img/chuong-trinh-dao-tao/chuong-trinh-giao-lul-hop-tac-quoc-te/chuong-trinh-trai-he.jpeg"
+                            alt="Chương trình Trại hè">
                         <div class="ct-prog-body">
                             <h3>Chương trình Trại hè, Trao đổi Giao lưu và Hợp tác Quốc tế</h3>
                             <p>Chương trình hợp tác quốc tế, đưa thanh thiếu niên ra thế giới và mang bạn bè quốc tế về
@@ -1136,18 +1138,23 @@
                     <div class="ct-clb-time">🕐 Thời gian: 16:35 – 17:55 | Thứ Hai – Thứ Sáu hàng tuần</div>
                 </div>
 
-                <div class="ct-clb-gallery" data-aos="fade-up" style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:32px 0;">
+                <div class="ct-clb-gallery" data-aos="fade-up"
+                    style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:32px 0;">
                     <div style="border-radius:12px;overflow:hidden;aspect-ratio:4/3;">
-                        <img src="assets/img/chuong-trinh-dao-tao/TUN09621.jpg" alt="CLB Năng khiếu" style="width:100%;height:100%;object-fit:cover;display:block;">
+                        <img src="assets/img/chuong-trinh-dao-tao/TUN09621.jpg" alt="CLB Năng khiếu"
+                            style="width:100%;height:100%;object-fit:cover;display:block;">
                     </div>
                     <div style="border-radius:12px;overflow:hidden;aspect-ratio:4/3;">
-                        <img src="assets/img/chuong-trinh-dao-tao/TUN02870.jpg" alt="CLB Năng khiếu" style="width:100%;height:100%;object-fit:cover;display:block;">
+                        <img src="assets/img/chuong-trinh-dao-tao/TUN02870.jpg" alt="CLB Năng khiếu"
+                            style="width:100%;height:100%;object-fit:cover;display:block;">
                     </div>
                     <div style="border-radius:12px;overflow:hidden;aspect-ratio:4/3;">
-                        <img src="assets/img/chuong-trinh-dao-tao/TUN09637.jpg" alt="CLB Năng khiếu" style="width:100%;height:100%;object-fit:cover;display:block;">
+                        <img src="assets/img/chuong-trinh-dao-tao/TUN09637.jpg" alt="CLB Năng khiếu"
+                            style="width:100%;height:100%;object-fit:cover;display:block;">
                     </div>
                     <div style="border-radius:12px;overflow:hidden;aspect-ratio:4/3;">
-                        <img src="assets/img/chuong-trinh-dao-tao/TUN02892.jpg" alt="CLB Năng khiếu" style="width:100%;height:100%;object-fit:cover;display:block;">
+                        <img src="assets/img/chuong-trinh-dao-tao/TUN02892.jpg" alt="CLB Năng khiếu"
+                            style="width:100%;height:100%;object-fit:cover;display:block;">
                     </div>
                 </div>
 
@@ -1206,30 +1213,30 @@
     <script type="text/javascript" src="olympia/js/jquery.validate.min.js"></script>
     <script src="olympia/js/main.js"></script>
     <script>
-        $(document).ready(function() {
-            $(".ts-news-slider").slick({
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                infinite: false,
-                dots: true,
-                arrows: true,
-                autoplay: true,
-                autoplaySpeed: 4000,
-                prevArrow: '<button class="slick-prev"><span>&#10094;</span></button>',
-                nextArrow: '<button class="slick-next"><span>&#10095;</span></button>',
-                responsive: [{
-                    breakpoint: 992,
-                    settings: {
-                        slidesToShow: 2
-                    }
-                }, {
-                    breakpoint: 576,
-                    settings: {
-                        slidesToShow: 1
-                    }
-                }]
-            });
+    $(document).ready(function() {
+        $(".ts-news-slider").slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            infinite: false,
+            dots: true,
+            arrows: true,
+            autoplay: true,
+            autoplaySpeed: 4000,
+            prevArrow: '<button class="slick-prev"><span>&#10094;</span></button>',
+            nextArrow: '<button class="slick-next"><span>&#10095;</span></button>',
+            responsive: [{
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2
+                }
+            }, {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 1
+                }
+            }]
         });
+    });
     </script>
 </body>
 

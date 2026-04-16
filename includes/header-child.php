@@ -4,65 +4,65 @@ $ss = load_site_settings();
 $ss_hotline_tel = site_phone_to_tel($ss['hotline']);
 ?>
 <style>
-    .header-menu {
-        justify-content: center !important;
-        position: relative;
-        padding-right: 132px;
-    }
+.header-menu {
+    justify-content: center !important;
+    position: relative;
+    padding-right: 132px;
+}
 
-    .header-menu .menu-list {
-        margin: 0 auto;
-        justify-content: center;
+.header-menu .menu-list {
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.header-contact-quick {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #439bd4;
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    border-radius: 999px;
+    padding: 8px 14px;
+    margin-right: 0;
+    box-shadow: 0 8px 18px rgba(67, 155, 212, 0.25);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    white-space: nowrap;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.header-contact-quick:hover {
+    transform: translateY(calc(-50% - 1px));
+    box-shadow: 0 10px 20px rgba(67, 155, 212, 0.3);
+}
+
+.header-contact-quick .phone-ico {
+    font-size: 14px;
+    line-height: 1;
+    color: #ffe08a;
+}
+
+@media (max-width: 1200px) {
+    .header-menu {
+        padding-right: 64px;
     }
 
     .header-contact-quick {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        background: #439bd4;
-        color: #fff;
-        text-decoration: none;
-        font-size: 12px;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.3px;
-        border-radius: 999px;
-        padding: 8px 14px;
-        margin-right: 0;
-        box-shadow: 0 8px 18px rgba(67, 155, 212, 0.25);
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-        white-space: nowrap;
-        position: absolute;
-        right: 10px;
-        top: 50%;
-        transform: translateY(-50%);
+        padding: 8px;
+        margin-right: 10px;
     }
 
-    .header-contact-quick:hover {
-        transform: translateY(calc(-50% - 1px));
-        box-shadow: 0 10px 20px rgba(67, 155, 212, 0.3);
+    .header-contact-quick span {
+        display: none;
     }
-
-    .header-contact-quick .phone-ico {
-        font-size: 14px;
-        line-height: 1;
-        color: #ffe08a;
-    }
-
-    @media (max-width: 1200px) {
-        .header-menu {
-            padding-right: 64px;
-        }
-
-        .header-contact-quick {
-            padding: 8px;
-            margin-right: 10px;
-        }
-
-        .header-contact-quick span {
-            display: none;
-        }
-    }
+}
 </style>
 
 <section id="header">
@@ -103,7 +103,7 @@ $ss_hotline_tel = site_phone_to_tel($ss['hotline']);
                                 </li>
 
                                 <a href="../lien-he.php" class="header-contact-quick" aria-label="Liên hệ">
-                        <span class="phone-ico" aria-hidden="true">☎</span>
+                                    <span class="phone-ico" aria-hidden="true">☎</span>
                                     <span>Liên hệ</span>
                                 </a>
                                 <li>
@@ -142,8 +142,7 @@ $ss_hotline_tel = site_phone_to_tel($ss['hotline']);
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="../storage/bieu-phi-va-chinh-sach-phi-2026-2027-final.pdf"
-                                        target="_blank">
+                                    <a href="../storage/bieu-phi-va-chinh-sach-phi-2026-2027-final.pdf" target="_blank">
                                         <span>HÀNH TRANG TỰU TRƯỜNG</span>
                                     </a>
                                 </li>
@@ -271,11 +270,16 @@ $ss_hotline_tel = site_phone_to_tel($ss['hotline']);
                                 <div class="mb-menu-sub">
                                     <div class="mb-menu-body">
                                         <ul class="mb-menu-sub-list">
-                                            <li class="mb-sub-item"><a href="../thong-diep-nguoi-sang-lap.php" title="" class="mb-sub-link">Thông điệp từ Nhà sáng lập</a></li>
-                                            <li class="mb-sub-item"><a href="../tam-nhin-su-menh.php" title="" class="mb-sub-link">Tầm nhìn – Sứ mệnh – Giá trị cốt lõi</a></li>
-                                            <li class="mb-sub-item"><a href="../ban-lanh-dao.php" title="" class="mb-sub-link">Ban lãnh đạo Trường Meyschool Đoàn Thị Điểm</a></li>
-                                            <li class="mb-sub-item"><a href="../doi-ngu-olympia.php" title="" class="mb-sub-link">Đội ngũ giáo viên</a></li>
-                                            <li class="mb-sub-item"><a href="../chan-dung-hoc-sinh.php" title="" class="mb-sub-link">Chân dung học sinh Meyschool</a></li>
+                                            <li class="mb-sub-item"><a href="../thong-diep-nguoi-sang-lap.php" title=""
+                                                    class="mb-sub-link">Thông điệp từ Nhà sáng lập</a></li>
+                                            <li class="mb-sub-item"><a href="../tam-nhin-su-menh.php" title=""
+                                                    class="mb-sub-link">Tầm nhìn – Sứ mệnh – Giá trị cốt lõi</a></li>
+                                            <li class="mb-sub-item"><a href="../ban-lanh-dao.php" title=""
+                                                    class="mb-sub-link">Ban lãnh đạo Trường Meyschool Đoàn Thị Điểm</a>
+                                            </li>
+                                            <!-- <li class="mb-sub-item"><a href="../doi-ngu-olympia.php" title="" class="mb-sub-link">Đội ngũ giáo viên</a></li> -->
+                                            <li class="mb-sub-item"><a href="../chan-dung-hoc-sinh.php" title=""
+                                                    class="mb-sub-link">Chân dung học sinh Meyschool</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -287,12 +291,19 @@ $ss_hotline_tel = site_phone_to_tel($ss['hotline']);
                                 <div class="mb-menu-sub">
                                     <div class="mb-menu-body">
                                         <ul class="mb-menu-sub-list">
-                                            <li class="mb-sub-item"><a href="../thong-tin-tuyen-sinh-tieu-hoc.php" title="" class="mb-sub-link">Thông tin tuyển sinh tiền tiểu học và tiểu học</a></li>
-                                            <li class="mb-sub-item"><a href="../thong-tin-tuyen-sinh-thcs.php" title="" class="mb-sub-link">Thông tin tuyển sinh THCS</a></li>
-                                            <li class="mb-sub-item"><a href="../uu-dai-tuyen-sinh.php" title="" class="mb-sub-link">Ưu đãi tuyển sinh</a></li>
-                                            <li class="mb-sub-item"><a href="../hoc-bong-2026-2027.php" title="" class="mb-sub-link">Học bổng 2026 - 2027</a></li>
-                                            <li class="mb-sub-item"><a href="../cau-hoi-thuong-gap.php" title="" class="mb-sub-link">Câu hỏi thường gặp (FAQ)</a></li>
-                                            <li class="mb-sub-item"><a href="../dang-ky-tu-van.php" title="" class="mb-sub-link">Đăng ký tư vấn</a></li>
+                                            <li class="mb-sub-item"><a href="../thong-tin-tuyen-sinh-tieu-hoc.php"
+                                                    title="" class="mb-sub-link">Thông tin tuyển sinh tiền tiểu học và
+                                                    tiểu học</a></li>
+                                            <li class="mb-sub-item"><a href="../thong-tin-tuyen-sinh-thcs.php" title=""
+                                                    class="mb-sub-link">Thông tin tuyển sinh THCS</a></li>
+                                            <li class="mb-sub-item"><a href="../uu-dai-tuyen-sinh.php" title=""
+                                                    class="mb-sub-link">Ưu đãi tuyển sinh</a></li>
+                                            <li class="mb-sub-item"><a href="../hoc-bong-2026-2027.php" title=""
+                                                    class="mb-sub-link">Học bổng 2026 - 2027</a></li>
+                                            <li class="mb-sub-item"><a href="../cau-hoi-thuong-gap.php" title=""
+                                                    class="mb-sub-link">Câu hỏi thường gặp (FAQ)</a></li>
+                                            <li class="mb-sub-item"><a href="../dang-ky-tu-van.php" title=""
+                                                    class="mb-sub-link">Đăng ký tư vấn</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -314,10 +325,14 @@ $ss_hotline_tel = site_phone_to_tel($ss['hotline']);
                                 <div class="mb-menu-sub">
                                     <div class="mb-menu-body">
                                         <ul class="mb-menu-sub-list">
-                                            <li class="mb-sub-item"><a href="../dong-phuc-hoc-sinh.php" title="" class="mb-sub-link">Đồng phục học sinh</a></li>
-                                            <li class="mb-sub-item"><a href="../ban-tru.php" title="" class="mb-sub-link">Bán trú</a></li>
-                                            <li class="mb-sub-item"><a href="../xe-bus-dua-don.php" title="" class="mb-sub-link">Xe Bus đưa đón</a></li>
-                                            <li class="mb-sub-item"><a href="../y-te-va-tu-van-tam-ly.php" title="" class="mb-sub-link">Y tế và tư vấn tâm lý học đường</a></li>
+                                            <li class="mb-sub-item"><a href="../dong-phuc-hoc-sinh.php" title=""
+                                                    class="mb-sub-link">Đồng phục học sinh</a></li>
+                                            <li class="mb-sub-item"><a href="../ban-tru.php" title=""
+                                                    class="mb-sub-link">Bán trú</a></li>
+                                            <li class="mb-sub-item"><a href="../xe-bus-dua-don.php" title=""
+                                                    class="mb-sub-link">Xe Bus đưa đón</a></li>
+                                            <li class="mb-sub-item"><a href="../y-te-va-tu-van-tam-ly.php" title=""
+                                                    class="mb-sub-link">Y tế và tư vấn tâm lý học đường</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -329,10 +344,14 @@ $ss_hotline_tel = site_phone_to_tel($ss['hotline']);
                                 <div class="mb-menu-sub">
                                     <div class="mb-menu-body">
                                         <ul class="mb-menu-sub-list">
-                                            <li class="mb-sub-item"><a href="../tin-tuc.php" title="" class="mb-sub-link">Tin tức</a></li>
-                                            <li class="mb-sub-item"><a href="../thanh-tich.php" title="" class="mb-sub-link">Thành tích</a></li>
-                                            <li class="mb-sub-item"><a href="../su-kien-truong.php" title="" class="mb-sub-link">Sự kiện trường</a></li>
-                                            <li class="mb-sub-item"><a href="../thong-bao.php" title="" class="mb-sub-link">Thông báo</a></li>
+                                            <li class="mb-sub-item"><a href="../tin-tuc.php" title=""
+                                                    class="mb-sub-link">Tin tức</a></li>
+                                            <li class="mb-sub-item"><a href="../thanh-tich.php" title=""
+                                                    class="mb-sub-link">Thành tích</a></li>
+                                            <li class="mb-sub-item"><a href="../su-kien-truong.php" title=""
+                                                    class="mb-sub-link">Sự kiện trường</a></li>
+                                            <li class="mb-sub-item"><a href="../thong-bao.php" title=""
+                                                    class="mb-sub-link">Thông báo</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -344,9 +363,12 @@ $ss_hotline_tel = site_phone_to_tel($ss['hotline']);
                                 <div class="mb-menu-sub">
                                     <div class="mb-menu-body">
                                         <ul class="mb-menu-sub-list">
-                                            <li class="mb-sub-item"><a href="../lien-he.php" title="" class="mb-sub-link">Thông tin liên hệ</a></li>
-                                            <li class="mb-sub-item"><a href="../ban-do.php" title="" class="mb-sub-link">Bản đồ</a></li>
-                                            <li class="mb-sub-item"><a href="../dang-ky-tham-quan.php" title="" class="mb-sub-link">Đăng ký tham quan trường</a></li>
+                                            <li class="mb-sub-item"><a href="../lien-he.php" title=""
+                                                    class="mb-sub-link">Thông tin liên hệ</a></li>
+                                            <li class="mb-sub-item"><a href="../ban-do.php" title=""
+                                                    class="mb-sub-link">Bản đồ</a></li>
+                                            <li class="mb-sub-item"><a href="../dang-ky-tham-quan.php" title=""
+                                                    class="mb-sub-link">Đăng ký tham quan trường</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -373,7 +395,8 @@ $ss_hotline_tel = site_phone_to_tel($ss['hotline']);
                             <div class="number-phone-box">
                                 <p class="phone-title"> Tuyển sinh</p>
                                 <p class="phone-number font-garamond-bold">
-                                    <a href="tel:<?= htmlspecialchars($ss_hotline_tel) ?>" class="phone-number font-garamond-bold"><?= htmlspecialchars($ss['hotline']) ?></a>
+                                    <a href="tel:<?= htmlspecialchars($ss_hotline_tel) ?>"
+                                        class="phone-number font-garamond-bold"><?= htmlspecialchars($ss['hotline']) ?></a>
                                 </p>
                             </div>
                             <div class="number-phone-box">

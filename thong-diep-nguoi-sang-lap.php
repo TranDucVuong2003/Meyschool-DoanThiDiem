@@ -261,7 +261,9 @@
         .td-breadcrumb li a {
             color: #fff;
             font-size: 13px;
+            font-weight: 600;
             text-decoration: none;
+            text-transform: uppercase;
         }
 
         .td-breadcrumb li a:hover {
