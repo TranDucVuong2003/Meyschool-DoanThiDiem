@@ -47,6 +47,7 @@ require_once __DIR__ . '/config/db.php';
             color: var(--text);
             display: flex;
             min-height: 100vh;
+            overflow-x: hidden;
         }
 
         .main {
@@ -55,6 +56,8 @@ require_once __DIR__ . '/config/db.php';
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            min-width: 0;
+            width: calc(100% - var(--sidebar-w));
         }
 
         .topbar {
@@ -163,6 +166,7 @@ require_once __DIR__ . '/config/db.php';
         .content {
             flex: 1;
             padding: 28px;
+            min-width: 0;
         }
 
         /* ── Page header ── */
@@ -264,10 +268,19 @@ require_once __DIR__ . '/config/db.php';
             border-radius: 12px;
             padding: 0;
             overflow: hidden;
+            width: 100%;
+            min-width: 0;
+        }
+
+        .card-body {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
         }
 
         table {
             width: 100%;
+            min-width: 920px;
             border-collapse: collapse;
             font-size: 13.5px;
         }
@@ -320,6 +333,7 @@ require_once __DIR__ . '/config/db.php';
 
         .title-cell {
             max-width: 320px;
+            min-width: 0;
         }
 
         .title-cell a {
@@ -328,6 +342,7 @@ require_once __DIR__ . '/config/db.php';
             font-weight: 600;
             line-height: 1.4;
             display: -webkit-box;
+            line-clamp: 2;
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
             overflow: hidden;
@@ -493,10 +508,118 @@ require_once __DIR__ . '/config/db.php';
         @media (max-width: 700px) {
             .main {
                 margin-left: 0;
+                width: 100%;
             }
 
-            .toolbar input[type="text"] {
+            .topbar {
+                padding: 0 12px 0 58px;
+                min-height: 56px;
+                height: auto;
+                gap: 8px;
+            }
+
+            .topbar-title {
+                font-size: 15px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .topbar-right {
+                gap: 8px;
+                min-width: 0;
+            }
+
+            .topbar-time {
+                display: none;
+            }
+
+            .user-info {
+                display: none;
+            }
+
+            .avatar {
+                width: 32px;
+                height: 32px;
+                font-size: 13px;
+            }
+
+            .content {
+                padding: 12px;
+            }
+
+            .page-header {
+                margin-bottom: 14px;
+            }
+
+            .page-header h2 {
+                font-size: 19px;
+            }
+
+            .btn {
+                padding: 8px 14px;
+            }
+
+            .toolbar {
+                gap: 10px;
+                margin-bottom: 14px;
+            }
+
+            .toolbar input[type="text"],
+            .toolbar select {
                 width: 100%;
+            }
+
+            .card {
+                border-radius: 12px;
+                width: 100%;
+                min-width: 0;
+            }
+
+            .card-body {
+                overflow-x: auto;
+                max-width: 100%;
+            }
+
+            table {
+                min-width: 920px;
+            }
+
+            th,
+            td {
+                padding: 10px 12px;
+                white-space: nowrap;
+            }
+
+            .thumb-cell img,
+            .thumb-placeholder {
+                width: 56px;
+                height: 38px;
+            }
+
+            .title-cell {
+                max-width: 220px;
+            }
+
+            .title-cell a {
+                line-clamp: 1;
+                -webkit-line-clamp: 1;
+            }
+
+            .actions {
+                gap: 4px;
+                flex-wrap: nowrap;
+            }
+
+            .btn-sm {
+                padding: 5px 9px;
+                font-size: 11px;
+            }
+
+            .pagination {
+                flex-wrap: wrap;
+                gap: 6px;
+                padding: 14px;
             }
         }
     </style>
@@ -541,24 +664,26 @@ require_once __DIR__ . '/config/db.php';
             </div>
 
             <div class="card">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Ảnh</th>
-                            <th>Tiêu đề</th>
-                            <th>Trạng thái</th>
-                            <th>Nổi bật</th>
-                            <th>Ngày tạo</th>
-                            <th>Thao tác</th>
-                        </tr>
-                    </thead>
-                    <tbody id="newsTable">
-                        <tr>
-                            <td colspan="7" class="empty-state">Đang tải...</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="card-body">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Ảnh</th>
+                                <th>Tiêu đề</th>
+                                <th>Trạng thái</th>
+                                <th>Nổi bật</th>
+                                <th>Ngày tạo</th>
+                                <th>Thao tác</th>
+                            </tr>
+                        </thead>
+                        <tbody id="newsTable">
+                            <tr>
+                                <td colspan="7" class="empty-state">Đang tải...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
                 <div class="pagination" id="pagination"></div>
             </div>
         </div>

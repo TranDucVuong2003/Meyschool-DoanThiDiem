@@ -82,24 +82,6 @@
             padding: 112px 0 26px;
         }
 
-        .ct-breadcrumb {
-            margin: 0 0 14px;
-            display: inline-flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            border-radius: 999px;
-            padding: 7px 14px;
-            background: #ebf8ff;
-            border: 1px solid rgba(67, 155, 212, 0.22);
-        }
-
-        .ct-breadcrumb li,
-        .ct-breadcrumb li a {
-            color: #2a7fb7;
-            font-size: 13px;
-            position: static !important;
-        }
-
         .contact-top h1 {
             margin: 0 0 10px;
             font-family: 'Garamond', serif;
@@ -362,10 +344,6 @@
     <main class="body-content contact-page">
         <section class="contact-top">
             <div class="ct-wide" data-aos="fade-up">
-                <ol class="breadcrumb ct-breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.php">Trang chủ</a></li>
-                    <li class="breadcrumb-item active">Liên hệ</li>
-                </ol>
                 <h1>Liên hệ với Meyschool Đoàn Thị Điểm</h1>
                 <p>Trang liên hệ được tối ưu theo chức năng chính: gửi yêu cầu nhanh, tìm đúng đầu mối phụ trách và tra
                     cứu địa điểm thuận tiện. Phụ huynh, học sinh và đối tác có thể liên hệ trực tiếp qua biểu mẫu hoặc

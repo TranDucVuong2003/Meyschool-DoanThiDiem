@@ -45,6 +45,7 @@ $admin_username = htmlspecialchars($_SESSION['admin_username'] ?? '');
             color: var(--text);
             display: flex;
             min-height: 100vh;
+            overflow-x: hidden;
         }
 
         .main {
@@ -53,6 +54,8 @@ $admin_username = htmlspecialchars($_SESSION['admin_username'] ?? '');
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            min-width: 0;
+            width: calc(100% - var(--sidebar-w));
         }
 
         /* ── Topbar ── */
@@ -161,6 +164,7 @@ $admin_username = htmlspecialchars($_SESSION['admin_username'] ?? '');
         .content {
             flex: 1;
             padding: 28px;
+            min-width: 0;
         }
 
         /* ── Tabs ── */
@@ -210,6 +214,8 @@ $admin_username = htmlspecialchars($_SESSION['admin_username'] ?? '');
             border: 1px solid var(--border);
             border-radius: 12px;
             padding: 24px;
+            min-width: 0;
+            overflow-x: auto;
         }
 
         .card-header {
@@ -385,6 +391,7 @@ $admin_username = htmlspecialchars($_SESSION['admin_username'] ?? '');
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 16px;
+            min-width: 0;
         }
 
         .settings-form .form-group {
@@ -437,6 +444,7 @@ $admin_username = htmlspecialchars($_SESSION['admin_username'] ?? '');
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             gap: 16px;
+            min-width: 0;
         }
 
         .home-banner-item {
@@ -511,6 +519,7 @@ $admin_username = htmlspecialchars($_SESSION['admin_username'] ?? '');
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 12px;
+            min-width: 0;
         }
 
         .popup-fields .full {
@@ -552,6 +561,10 @@ $admin_username = htmlspecialchars($_SESSION['admin_username'] ?? '');
             border-radius: 8px;
             border: 1px solid var(--border);
             display: block;
+        }
+
+        .data-table {
+            min-width: 760px;
         }
 
         .popup-actions {
@@ -686,10 +699,140 @@ $admin_username = htmlspecialchars($_SESSION['admin_username'] ?? '');
         @media (max-width: 700px) {
             .main {
                 margin-left: 0;
+                width: 100%;
+            }
+
+            .topbar {
+                padding: 0 12px 0 58px;
+                min-height: 56px;
+                height: auto;
+                gap: 8px;
+            }
+
+            .topbar-title {
+                font-size: 15px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .topbar-right {
+                gap: 8px;
+                min-width: 0;
+            }
+
+            .topbar-time {
+                display: none;
+            }
+
+            .user-info {
+                display: none;
+            }
+
+            .avatar {
+                width: 32px;
+                height: 32px;
+                font-size: 13px;
             }
 
             .content {
-                padding: 16px;
+                padding: 12px;
+            }
+
+            .tabs-bar {
+                margin-bottom: 14px;
+            }
+
+            .tab-btn {
+                padding: 10px 14px;
+                font-size: 13px;
+            }
+
+            .card {
+                padding: 14px;
+                border-radius: 12px;
+            }
+
+            .card-header {
+                margin-bottom: 14px;
+                gap: 10px;
+            }
+
+            .card-header h3 {
+                font-size: 15px;
+            }
+
+            .search-box {
+                max-width: 100%;
+                margin-bottom: 14px;
+            }
+
+            .settings-form,
+            .popup-fields,
+            .home-banner-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .settings-actions,
+            .popup-actions {
+                justify-content: stretch;
+                flex-direction: column;
+            }
+
+            .settings-actions .btn,
+            .popup-actions .btn,
+            .home-banner-actions .btn,
+            .modal-actions .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .home-banner-actions {
+                flex-direction: column;
+            }
+
+            .home-banner-item {
+                padding: 12px;
+            }
+
+            .home-banner-preview {
+                margin-bottom: 8px;
+            }
+
+            .home-banner-note {
+                font-size: 11px;
+            }
+
+            .modal {
+                width: min(94vw, 440px);
+                padding: 18px;
+            }
+
+            .modal h3 {
+                font-size: 16px;
+                margin-bottom: 12px;
+            }
+
+            .modal-actions {
+                flex-direction: column;
+            }
+
+            .data-table {
+                min-width: 720px;
+            }
+
+            .data-table th,
+            .data-table td {
+                padding: 10px 12px;
+                white-space: nowrap;
+            }
+
+            .btn {
+                padding: 8px 14px;
+            }
+
+            .btn-sm {
+                padding: 6px 10px;
             }
         }
     </style>

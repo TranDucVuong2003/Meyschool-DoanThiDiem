@@ -43,6 +43,7 @@ $_sidebar_page = 'chat-admin.php';
             color: var(--text);
             display: flex;
             min-height: 100vh;
+            overflow-x: hidden;
         }
 
         .main {
@@ -51,6 +52,7 @@ $_sidebar_page = 'chat-admin.php';
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            min-width: 0;
         }
 
         .topbar {
@@ -323,12 +325,83 @@ $_sidebar_page = 'chat-admin.php';
         @media (max-width: 1024px) {
             .main {
                 margin-left: 0;
+                width: 100%;
+            }
+
+            .topbar {
+                padding: 0 12px 0 58px;
+                min-height: 56px;
+                height: auto;
+                gap: 8px;
+            }
+
+            .topbar-title {
+                font-size: 15px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .topbar-user {
+                min-width: 0;
+            }
+
+            .user-info {
+                display: none;
+            }
+
+            .avatar {
+                width: 32px;
+                height: 32px;
+                font-size: 13px;
+            }
+
+            .content {
+                padding: 12px;
             }
 
             .chat-admin {
                 grid-template-columns: 1fr;
                 height: auto;
-                min-height: calc(100vh - var(--top-h) - 32px);
+                min-height: calc(100vh - var(--top-h) - 24px);
+            }
+
+            .panel-head {
+                padding: 12px;
+            }
+
+            .panel-head input {
+                width: 100%;
+            }
+
+            .conversation-list {
+                max-height: 260px;
+            }
+
+            .chat-head-row {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+
+            .chat-messages {
+                min-height: 260px;
+            }
+
+            .chat-form {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .chat-form textarea {
+                width: 100%;
+                min-height: 92px;
+            }
+
+            .chat-form button {
+                width: 100%;
+                min-width: 0;
+                height: 42px;
             }
         }
     </style>

@@ -1059,7 +1059,6 @@
 <script type="text/javascript" src="olympia/js/bootstrap-datetimepicker.min.js"></script>
 <script type="text/javascript" src="olympia/js/bootstrap-datetimepicker.fr.js"></script>
 <script type="text/javascript" src="olympia/js/jquery.ui.datepicker-vi.js"></script>
-<script src="olympia/js/main.js"></script>
 <script type="text/javascript">
 $(document).ready(function() {
     document.getElementById("defaultOpen").click();

@@ -5,9 +5,46 @@ $_sidebar_page = basename($_SERVER['PHP_SELF']);
 require_once __DIR__ . '/access.php';
 ?>
 <style>
+    .sidebar-toggle-btn {
+        display: none;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        width: 38px;
+        height: 38px;
+        border: 0;
+        border-radius: 10px;
+        background: var(--primary-d);
+        color: #fff;
+        font-size: 22px;
+        line-height: 1;
+        align-items: center;
+        justify-content: center;
+        z-index: 160;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+    }
+
+    .sidebar-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.35);
+        z-index: 140;
+    }
+
+    body.sidebar-open .sidebar-overlay {
+        display: block;
+    }
+
+    body.sidebar-open .sidebar-toggle-btn {
+        display: none;
+    }
+
     /* ── Sidebar ── */
     .sidebar {
         width: var(--sidebar-w);
+        min-width: var(--sidebar-w);
         min-height: 100vh;
         background: var(--primary-d);
         display: flex;
@@ -16,6 +53,7 @@ require_once __DIR__ . '/access.php';
         top: 0;
         left: 0;
         z-index: 100;
+        transition: transform 0.25s ease;
     }
 
     .sidebar-logo {
@@ -38,9 +76,54 @@ require_once __DIR__ . '/access.php';
         line-height: 1.3;
     }
 
+    .sidebar-module {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 0 0 2px;
+        padding: 10px 20px;
+        color: rgba(255, 255, 255, 0.75);
+        text-decoration: none;
+        font-size: 14px;
+        transition: background 0.15s, color 0.15s;
+        border-left: 3px solid transparent;
+        cursor: pointer;
+    }
+
+    .sidebar-module:hover {
+        background: rgba(255, 255, 255, 0.08);
+        color: #fff;
+    }
+
+    .sidebar-module.active {
+        background: rgba(67, 155, 212, 0.2);
+        color: #fff;
+        border-left-color: var(--accent);
+        font-weight: 600;
+    }
+
+    .sidebar-module-label {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.35);
+        margin: 0 0 6px;
+    }
+
+    .sidebar-module-title {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 1.3;
+    }
+
+    .sidebar-module-desc {
+        display: none;
+    }
+
     .sidebar-nav {
         flex: 1;
-        padding: 12px 0;
+        padding: 4px 0 12px;
         overflow-y: auto;
     }
 
@@ -113,11 +196,64 @@ require_once __DIR__ . '/access.php';
     }
 
     @media (max-width: 700px) {
+        .sidebar-toggle-btn {
+            display: inline-flex;
+        }
+
         .sidebar {
             transform: translateX(-100%);
+            z-index: 150;
+            width: min(280px, 84vw);
+            box-shadow: 12px 0 30px rgba(0, 0, 0, 0.18);
+        }
+
+        .sidebar-logo {
+            padding: 16px;
+        }
+
+        .sidebar-logo span {
+            font-size: 12px;
+        }
+
+        .sidebar-module {
+            margin: 0 0 2px;
+            padding: 10px 16px;
+            font-size: 13px;
+        }
+
+        .sidebar-module-title {
+            font-size: 13px;
+        }
+
+        .sidebar-module-desc {
+            font-size: 11px;
+        }
+
+        .nav-section {
+            padding: 12px 16px 6px;
+        }
+
+        .nav-item {
+            padding: 12px 16px;
+            font-size: 13px;
+        }
+
+        .sidebar-footer {
+            padding: 14px 16px;
+        }
+
+        body.sidebar-open .sidebar {
+            transform: translateX(0);
+        }
+
+        body.sidebar-open {
+            overflow: hidden;
         }
     }
 </style>
+
+<button class="sidebar-toggle-btn" id="sidebarToggle" aria-label="Mở menu" aria-expanded="false">&#9776;</button>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
 
 <aside class="sidebar">
     <div class="sidebar-logo">
@@ -125,25 +261,35 @@ require_once __DIR__ . '/access.php';
         <span>Meyschool<br>Đoàn Thị Điểm</span>
     </div>
 
+    <a href="dashboard.php"
+        class="sidebar-module <?= $_sidebar_page === 'dashboard.php' ? 'active' : '' ?>"
+        aria-label="Đi tới trang dashboard">
+        Trang quản trị
+    </a>
+
     <nav class="sidebar-nav">
         <div class="nav-section">Quản lý</div>
         <?php if (dashboard_can_access('news')): ?>
-            <a href="tin-tuc-admin.php" class="nav-item <?= ($_sidebar_page === 'tin-tuc-admin.php' || $_sidebar_page === 'them-tin-tuc.php') ? 'active' : '' ?>">
+            <a href="tin-tuc-admin.php"
+                class="nav-item <?= ($_sidebar_page === 'tin-tuc-admin.php' || $_sidebar_page === 'them-tin-tuc.php') ? 'active' : '' ?>">
                 Tin tức
             </a>
         <?php endif; ?>
         <?php if (dashboard_can_access('notifications')): ?>
-            <a href="thong-bao-admin.php" class="nav-item <?= ($_sidebar_page === 'thong-bao-admin.php' || $_sidebar_page === 'them-thong-bao.php') ? 'active' : '' ?>">
+            <a href="thong-bao-admin.php"
+                class="nav-item <?= ($_sidebar_page === 'thong-bao-admin.php' || $_sidebar_page === 'them-thong-bao.php') ? 'active' : '' ?>">
                 Thông báo
             </a>
         <?php endif; ?>
         <?php if (dashboard_can_access('events')): ?>
-            <a href="su-kien-admin.php" class="nav-item <?= ($_sidebar_page === 'su-kien-admin.php' || $_sidebar_page === 'them-su-kien.php') ? 'active' : '' ?>">
+            <a href="su-kien-admin.php"
+                class="nav-item <?= ($_sidebar_page === 'su-kien-admin.php' || $_sidebar_page === 'them-su-kien.php') ? 'active' : '' ?>">
                 Sự kiện trường
             </a>
         <?php endif; ?>
         <?php if (dashboard_can_access('achievements')): ?>
-            <a href="thanh-tich-admin.php" class="nav-item <?= ($_sidebar_page === 'thanh-tich-admin.php' || $_sidebar_page === 'them-thanh-tich.php') ? 'active' : '' ?>">
+            <a href="thanh-tich-admin.php"
+                class="nav-item <?= ($_sidebar_page === 'thanh-tich-admin.php' || $_sidebar_page === 'them-thanh-tich.php') ? 'active' : '' ?>">
                 Thành tích
             </a>
         <?php endif; ?>
@@ -154,7 +300,8 @@ require_once __DIR__ . '/access.php';
             </a>
         <?php endif; ?>
         <?php if (dashboard_can_access('tour')): ?>
-            <a href="dang-ky-tham-quan-admin.php" class="nav-item <?= $_sidebar_page === 'dang-ky-tham-quan-admin.php' ? 'active' : '' ?>">
+            <a href="dang-ky-tham-quan-admin.php"
+                class="nav-item <?= $_sidebar_page === 'dang-ky-tham-quan-admin.php' ? 'active' : '' ?>">
                 Đăng ký tham quan
                 <span class="nav-badge" id="tourBadge" style="display:none;">0</span>
             </a>
@@ -248,4 +395,40 @@ require_once __DIR__ . '/access.php';
     window.refreshContactBadge = updateContactBadge;
     window.refreshTourBadge = updateTourBadge;
     window.refreshChatBadge = updateChatBadge;
+
+    (function setupMobileSidebar() {
+        var toggle = document.getElementById('sidebarToggle');
+        var overlay = document.getElementById('sidebarOverlay');
+        var sidebar = document.querySelector('.sidebar');
+        if (!toggle || !overlay || !sidebar) {
+            return;
+        }
+
+        function setOpen(open) {
+            document.body.classList.toggle('sidebar-open', open);
+            toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        }
+
+        toggle.addEventListener('click', function() {
+            setOpen(!document.body.classList.contains('sidebar-open'));
+        });
+
+        overlay.addEventListener('click', function() {
+            setOpen(false);
+        });
+
+        sidebar.querySelectorAll('.nav-item, .sidebar-footer a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 700) {
+                    setOpen(false);
+                }
+            });
+        });
+
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 700) {
+                setOpen(false);
+            }
+        });
+    })();
 </script>

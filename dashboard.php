@@ -97,7 +97,7 @@ $total_users = $pdo->query("SELECT COUNT(*) FROM users")->fetchColumn();
         }
 
         :root {
-            --sidebar-w: 220px;
+            --sidebar-w: 240px;
             --top-h: 60px;
             --primary: #2d6a9f;
             --primary-d: #1f3f5d;
@@ -119,6 +119,13 @@ $total_users = $pdo->query("SELECT COUNT(*) FROM users")->fetchColumn();
             color: var(--text);
             display: flex;
             min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        img,
+        canvas,
+        table {
+            max-width: 100%;
         }
 
         /* ── Main ── */
@@ -128,6 +135,7 @@ $total_users = $pdo->query("SELECT COUNT(*) FROM users")->fetchColumn();
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            width: calc(100% - var(--sidebar-w));
         }
 
         /* ── Topbar ── */
@@ -372,8 +380,10 @@ $total_users = $pdo->query("SELECT COUNT(*) FROM users")->fetchColumn();
         }
 
         .donut-chart {
-            width: 200px;
-            height: 200px;
+            width: 200px !important;
+            height: 200px !important;
+            max-width: 200px;
+            max-height: 200px;
         }
 
         .donut-legend {
@@ -416,6 +426,14 @@ $total_users = $pdo->query("SELECT COUNT(*) FROM users")->fetchColumn();
         /* ── Table ── */
         .table-card {
             margin-bottom: 24px;
+        }
+
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            border: 1px solid var(--border);
+            border-radius: 10px;
         }
 
         .table-header {
@@ -497,10 +515,136 @@ $total_users = $pdo->query("SELECT COUNT(*) FROM users")->fetchColumn();
         @media (max-width: 700px) {
             .main {
                 margin-left: 0;
+                width: 100%;
+            }
+
+            .topbar {
+                padding: 0 12px 0 58px;
+                min-height: 56px;
+                height: auto;
+                gap: 8px;
+            }
+
+            .topbar-title {
+                font-size: 15px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .topbar-right {
+                gap: 8px;
+                min-width: 0;
+            }
+
+            .topbar-time {
+                display: none;
+            }
+
+            .user-info {
+                display: none;
+            }
+
+            .avatar {
+                width: 32px;
+                height: 32px;
+                font-size: 13px;
+            }
+
+            .content {
+                padding: 12px;
+            }
+
+            .page-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 6px;
+                margin-bottom: 14px;
+            }
+
+            .page-header h2 {
+                font-size: 19px;
             }
 
             .stat-grid {
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns: 1fr;
+                gap: 12px;
+                margin-bottom: 14px;
+            }
+
+            .stat-card {
+                padding: 14px;
+                border-radius: 12px;
+                align-items: center;
+            }
+
+            .stat-info .label {
+                margin-bottom: 6px;
+            }
+
+            .stat-info .value {
+                font-size: 22px;
+            }
+
+            .stat-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 18px;
+            }
+
+            .charts-row {
+                gap: 12px;
+                margin-bottom: 14px;
+            }
+
+            .card {
+                padding: 14px;
+                border-radius: 12px;
+            }
+
+            .card-title {
+                margin-bottom: 12px;
+                font-size: 14px;
+            }
+
+            .chart-wrap {
+                height: 220px;
+            }
+
+            .donut-wrap {
+                align-items: stretch;
+            }
+
+            .donut-chart {
+                width: 170px !important;
+                height: 170px !important;
+                margin: 0 auto;
+            }
+
+            .donut-legend {
+                margin-top: 14px;
+            }
+
+            .legend-item {
+                font-size: 12px;
+            }
+
+            .table-header {
+                margin-bottom: 10px;
+            }
+
+            .table-responsive {
+                border-radius: 12px;
+            }
+
+            .table-responsive table {
+                min-width: 760px;
+            }
+
+            th,
+            td {
+                padding: 10px 12px;
+                white-space: nowrap;
             }
         }
     </style>
@@ -643,40 +787,42 @@ $total_users = $pdo->query("SELECT COUNT(*) FROM users")->fetchColumn();
                 <?php if (empty($recent)): ?>
                     <div class="empty-state">&#128203; Chưa có đăng ký nào. Khi có dữ liệu sẽ hiển thị ở đây.</div>
                 <?php else: ?>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Phụ huynh</th>
-                                <th>Điện thoại</th>
-                                <th>Học sinh</th>
-                                <th>Cấp học</th>
-                                <th>Thời gian mong muốn</th>
-                                <th>Trạng thái</th>
-                                <th>Ngày đăng ký</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php foreach ($recent as $i => $row): ?>
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
                                 <tr>
-                                    <td><?= $i + 1 ?></td>
-                                    <td><?= htmlspecialchars($row['parent_name']) ?></td>
-                                    <td><?= htmlspecialchars($row['phone']) ?></td>
-                                    <td><?= htmlspecialchars($row['student_name']) ?></td>
-                                    <td><?= $grade_label[$row['grade_level']] ?? $row['grade_level'] ?></td>
-                                    <td><?= htmlspecialchars($row['preferred_time'] ?: '—') ?></td>
-                                    <td>
-                                        <?php
-                                        $current_status = $row['status'] ?? 'moi';
-                                        $badge_class = $current_status === 'moi' ? 'badge-new' : 'badge-done';
-                                        ?>
-                                        <span class="badge <?= $badge_class ?>"><?= htmlspecialchars($status_label[$current_status] ?? $current_status) ?></span>
-                                    </td>
-                                    <td><?= date('d/m/Y H:i', strtotime($row['created_at'])) ?></td>
+                                    <th>#</th>
+                                    <th>Phụ huynh</th>
+                                    <th>Điện thoại</th>
+                                    <th>Học sinh</th>
+                                    <th>Cấp học</th>
+                                    <th>Thời gian mong muốn</th>
+                                    <th>Trạng thái</th>
+                                    <th>Ngày đăng ký</th>
                                 </tr>
-                            <?php endforeach; ?>
-                        </tbody>
-                    </table>
+                            </thead>
+                            <tbody>
+                                <?php foreach ($recent as $i => $row): ?>
+                                    <tr>
+                                        <td><?= $i + 1 ?></td>
+                                        <td><?= htmlspecialchars($row['parent_name']) ?></td>
+                                        <td><?= htmlspecialchars($row['phone']) ?></td>
+                                        <td><?= htmlspecialchars($row['student_name']) ?></td>
+                                        <td><?= $grade_label[$row['grade_level']] ?? $row['grade_level'] ?></td>
+                                        <td><?= htmlspecialchars($row['preferred_time'] ?: '—') ?></td>
+                                        <td>
+                                            <?php
+                                            $current_status = $row['status'] ?? 'moi';
+                                            $badge_class = $current_status === 'moi' ? 'badge-new' : 'badge-done';
+                                            ?>
+                                            <span class="badge <?= $badge_class ?>"><?= htmlspecialchars($status_label[$current_status] ?? $current_status) ?></span>
+                                        </td>
+                                        <td><?= date('d/m/Y H:i', strtotime($row['created_at'])) ?></td>
+                                    </tr>
+                                <?php endforeach; ?>
+                            </tbody>
+                        </table>
+                    </div>
                 <?php endif; ?>
             </div>
 
@@ -726,28 +872,52 @@ $total_users = $pdo->query("SELECT COUNT(*) FROM users")->fetchColumn();
                     fill: true,
                     tension: 0.4,
                     pointBackgroundColor: '#439bd4',
-                    pointRadius: 4
+                    pointRadius: 4,
+                    pointHoverRadius: 5
                 }]
             },
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
+                layout: {
+                    padding: {
+                        top: 8,
+                        right: 4,
+                        bottom: 0,
+                        left: 0
+                    }
+                },
                 plugins: {
                     legend: {
                         display: false
+                    },
+                    tooltip: {
+                        mode: 'index',
+                        intersect: false
                     }
                 },
                 scales: {
                     y: {
                         beginAtZero: true,
                         ticks: {
-                            stepSize: 1
+                            stepSize: 1,
+                            precision: 0,
+                            font: {
+                                size: 10
+                            }
                         },
                         grid: {
                             color: '#f0f0f0'
                         }
                     },
                     x: {
+                        ticks: {
+                            font: {
+                                size: 10
+                            },
+                            maxRotation: 0,
+                            autoSkip: true
+                        },
                         grid: {
                             display: false
                         }
@@ -774,11 +944,20 @@ $total_users = $pdo->query("SELECT COUNT(*) FROM users")->fetchColumn();
             },
             options: {
                 responsive: true,
-                maintainAspectRatio: false,
+                maintainAspectRatio: true,
+                aspectRatio: 1,
                 cutout: '65%',
                 plugins: {
                     legend: {
                         display: false
+                    },
+                    tooltip: {
+                        bodyFont: {
+                            size: 12
+                        },
+                        titleFont: {
+                            size: 12
+                        }
                     }
                 }
             }
