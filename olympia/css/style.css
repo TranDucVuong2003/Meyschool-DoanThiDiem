@@ -10281,7 +10281,7 @@ select.select-day option {
   }
 
   .olympia-testimonial-entry {
-    max-width: 500px;
+    /* max-width: 500px; */
   }
 
   .olympia-testimonial {
@@ -10452,7 +10452,7 @@ select.select-day option {
   #olympia-testimonial {
     background: url("../images/1301/bg-11.png") no-repeat left top;
     margin: 0;
-    padding: 100px 0;
+    padding: 40px 0;
   }
   #olympia-testimonial h2 {
     color: #2354a0;

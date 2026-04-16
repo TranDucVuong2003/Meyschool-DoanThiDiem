@@ -677,7 +677,7 @@ $ss = load_site_settings();
                         </div>
                     </article>
 
-                    <article class="team-card" data-aos="fade-up">
+                    <!-- <article class="team-card" data-aos="fade-up">
                         <h2>Gặp gỡ đội ngũ Meyschool Đoàn Thị Điểm</h2>
                         <div class="team-news-list">
                             <a class="team-news-item" href="nhung-chuyen-xe-cho-binh-yen.html">
@@ -693,7 +693,7 @@ $ss = load_site_settings();
                                 <span>Lễ trao giải cuộc thi thiết kế dự án dạy học sáng tạo trên nền tảng CNTT</span>
                             </a>
                         </div>
-                    </article>
+                    </article> -->
                 </div>
 
                 <aside class="team-side" data-aos="fade-up" data-aos-delay="120">
