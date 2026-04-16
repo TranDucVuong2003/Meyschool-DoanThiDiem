@@ -1530,11 +1530,6 @@ p.slider-number {
   transform: translateY(-100%);
 }
 
-html {
-  /*scroll-behavior: smooth;*/
-}
-}
-
 .mission-content {
   background-image: url("../images/08_quote_mark.html");
   background-repeat: no-repeat;
