@@ -2,6 +2,7 @@
 // dashboard/sidebar.php — Sidebar component
 // Dùng basename($_SERVER['PHP_SELF']) để tự động đánh dấu nav-item active
 $_sidebar_page = basename($_SERVER['PHP_SELF']);
+require_once __DIR__ . '/access.php';
 ?>
 <style>
     /* ── Sidebar ── */
@@ -126,31 +127,58 @@ $_sidebar_page = basename($_SERVER['PHP_SELF']);
 
     <nav class="sidebar-nav">
         <div class="nav-section">Quản lý</div>
-        <a href="tin-tuc-admin.php" class="nav-item <?= ($_sidebar_page === 'tin-tuc-admin.php' || $_sidebar_page === 'them-tin-tuc.php') ? 'active' : '' ?>">
-            Tin tức
-        </a>
-        <a href="thong-bao-admin.php" class="nav-item <?= ($_sidebar_page === 'thong-bao-admin.php' || $_sidebar_page === 'them-thong-bao.php') ? 'active' : '' ?>">
-            Thông báo
-        </a>
-        <a href="su-kien-admin.php" class="nav-item <?= ($_sidebar_page === 'su-kien-admin.php' || $_sidebar_page === 'them-su-kien.php') ? 'active' : '' ?>">
-            Sự kiện trường
-        </a>
-        <a href="thanh-tich-admin.php" class="nav-item <?= ($_sidebar_page === 'thanh-tich-admin.php' || $_sidebar_page === 'them-thanh-tich.php') ? 'active' : '' ?>">
-            Thành tích
-        </a>
-        <a href="lien-he-admin.php" class="nav-item <?= $_sidebar_page === 'lien-he-admin.php' ? 'active' : '' ?>">
-            Thông tin liên hệ
-            <span class="nav-badge" id="contactBadge" style="display:none;">0</span>
-        </a>
-        <a href="dang-ky-tham-quan-admin.php" class="nav-item <?= $_sidebar_page === 'dang-ky-tham-quan-admin.php' ? 'active' : '' ?>">
-            Đăng ký tham quan
-            <span class="nav-badge" id="tourBadge" style="display:none;">0</span>
-        </a>
+        <?php if (dashboard_can_access('news')): ?>
+            <a href="tin-tuc-admin.php" class="nav-item <?= ($_sidebar_page === 'tin-tuc-admin.php' || $_sidebar_page === 'them-tin-tuc.php') ? 'active' : '' ?>">
+                Tin tức
+            </a>
+        <?php endif; ?>
+        <?php if (dashboard_can_access('notifications')): ?>
+            <a href="thong-bao-admin.php" class="nav-item <?= ($_sidebar_page === 'thong-bao-admin.php' || $_sidebar_page === 'them-thong-bao.php') ? 'active' : '' ?>">
+                Thông báo
+            </a>
+        <?php endif; ?>
+        <?php if (dashboard_can_access('events')): ?>
+            <a href="su-kien-admin.php" class="nav-item <?= ($_sidebar_page === 'su-kien-admin.php' || $_sidebar_page === 'them-su-kien.php') ? 'active' : '' ?>">
+                Sự kiện trường
+            </a>
+        <?php endif; ?>
+        <?php if (dashboard_can_access('achievements')): ?>
+            <a href="thanh-tich-admin.php" class="nav-item <?= ($_sidebar_page === 'thanh-tich-admin.php' || $_sidebar_page === 'them-thanh-tich.php') ? 'active' : '' ?>">
+                Thành tích
+            </a>
+        <?php endif; ?>
+        <?php if (dashboard_can_access('contact')): ?>
+            <a href="lien-he-admin.php" class="nav-item <?= $_sidebar_page === 'lien-he-admin.php' ? 'active' : '' ?>">
+                Thông tin liên hệ
+                <span class="nav-badge" id="contactBadge" style="display:none;">0</span>
+            </a>
+        <?php endif; ?>
+        <?php if (dashboard_can_access('tour')): ?>
+            <a href="dang-ky-tham-quan-admin.php" class="nav-item <?= $_sidebar_page === 'dang-ky-tham-quan-admin.php' ? 'active' : '' ?>">
+                Đăng ký tham quan
+                <span class="nav-badge" id="tourBadge" style="display:none;">0</span>
+            </a>
+        <?php endif; ?>
+        <?php if (dashboard_can_access('chat')): ?>
+            <a href="chat-admin.php" class="nav-item <?= $_sidebar_page === 'chat-admin.php' ? 'active' : '' ?>">
+                Chat trực tuyến
+                <span class="nav-badge" id="chatBadge" style="display:none;">0</span>
+            </a>
+        <?php endif; ?>
 
-        <div class="nav-section">Hệ thống</div>
-        <a href="cau-hinh.php" class="nav-item <?= $_sidebar_page === 'cau-hinh.php' ? 'active' : '' ?>">
-            Cấu hình
-        </a>
+        <?php if (dashboard_can_access('users') || dashboard_can_access('config')): ?>
+            <div class="nav-section">Hệ thống</div>
+        <?php endif; ?>
+        <?php if (dashboard_can_access('users')): ?>
+            <a href="users-admin.php" class="nav-item <?= $_sidebar_page === 'users-admin.php' ? 'active' : '' ?>">
+                Quản lý người dùng
+            </a>
+        <?php endif; ?>
+        <?php if (dashboard_can_access('config')): ?>
+            <a href="cau-hinh.php" class="nav-item <?= $_sidebar_page === 'cau-hinh.php' ? 'active' : '' ?>">
+                Cấu hình
+            </a>
+        <?php endif; ?>
     </nav>
 
     <div class="sidebar-footer">
@@ -160,10 +188,12 @@ $_sidebar_page = basename($_SERVER['PHP_SELF']);
 
 <script>
     function updateContactBadge() {
+        const badge = document.getElementById('contactBadge');
+        if (!badge) return;
+
         fetch('api/contact-unread-count.php')
             .then(r => r.json())
             .then(res => {
-                const badge = document.getElementById('contactBadge');
                 if (res.success && res.count > 0) {
                     badge.textContent = res.count > 99 ? '99+' : res.count;
                     badge.style.display = 'inline-flex';
@@ -175,11 +205,12 @@ $_sidebar_page = basename($_SERVER['PHP_SELF']);
     }
 
     function updateTourBadge() {
+        const badge = document.getElementById('tourBadge');
+        if (!badge) return;
+
         fetch('api/tour-submissions.php')
             .then(r => r.json())
             .then(res => {
-                const badge = document.getElementById('tourBadge');
-                if (!badge) return;
                 if (res.success && res.unreadCount > 0) {
                     badge.textContent = res.unreadCount > 99 ? '99+' : res.unreadCount;
                     badge.style.display = 'inline-flex';
@@ -190,11 +221,31 @@ $_sidebar_page = basename($_SERVER['PHP_SELF']);
             .catch(() => {});
     }
 
+    function updateChatBadge() {
+        const badge = document.getElementById('chatBadge');
+        if (!badge) return;
+
+        fetch('admin/chat/unread_count.php')
+            .then(r => r.json())
+            .then(res => {
+                if (res.success && res.count > 0) {
+                    badge.textContent = res.count > 99 ? '99+' : res.count;
+                    badge.style.display = 'inline-flex';
+                } else {
+                    badge.style.display = 'none';
+                }
+            })
+            .catch(() => {});
+    }
+
     updateContactBadge();
     updateTourBadge();
+    updateChatBadge();
     setInterval(updateContactBadge, 30000);
     setInterval(updateTourBadge, 30000);
+    setInterval(updateChatBadge, 30000);
 
     window.refreshContactBadge = updateContactBadge;
     window.refreshTourBadge = updateTourBadge;
+    window.refreshChatBadge = updateChatBadge;
 </script>

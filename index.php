@@ -55,218 +55,218 @@
 
     <link rel="alternate" href="en.html" hreflang="en" />
     <style>
-    nav#admin_bar {
-        display: none;
+        nav#admin_bar {
+            display: none;
 
-    }
+        }
 
-    .jq-toast-wrap {
-        display: block;
-        position: fixed;
-        width: 250px;
-        pointer-events: none !important;
-        letter-spacing: normal;
-        z-index: 9000999999999 !important;
-    }
+        .jq-toast-wrap {
+            display: block;
+            position: fixed;
+            width: 250px;
+            pointer-events: none !important;
+            letter-spacing: normal;
+            z-index: 9000999999999 !important;
+        }
 
-    .btn-dk {
-        width: 210px;
-        height: 50px;
-        line-height: 50px;
-        text-align: center;
-        background-color: #471873;
-        font-size: 14px;
-        font-weight: 600;
-        text-transform: uppercase;
-        border: none;
-        color: #fff;
-        display: inline-block;
-        margin-top: 20px;
-    }
+        .btn-dk {
+            width: 210px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            background-color: #471873;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            border: none;
+            color: #fff;
+            display: inline-block;
+            margin-top: 20px;
+        }
 
-    .btn-full {
-        text-align: center;
-        line-height: 60px;
-    }
+        .btn-full {
+            text-align: center;
+            line-height: 60px;
+        }
 
-    body.show-admin-bar {
-        margin-top: 0px !important;
-        /* position: relative; */
-    }
+        body.show-admin-bar {
+            margin-top: 0px !important;
+            /* position: relative; */
+        }
 
-    /* Offset fixed header so it doesn't cover homepage banner */
-    .body-content {
-        padding-top: 70px !important;
-    }
-
-    #pc_slider_cover,
-    #mb_slider_cover {
-        margin-top: 0 !important;
-    }
-
-    .slider-item {
-        position: relative;
-    }
-
-    .slider-title-box {
-        position: absolute !important;
-        top: auto !important;
-        bottom: 24px !important;
-        right: 20px !important;
-        left: auto !important;
-        width: auto !important;
-        opacity: 1 !important;
-        transform: none !important;
-        z-index: 20;
-    }
-
-    .banner-cta {
-        display: inline-flex;
-        align-items: stretch;
-        background: #1f4b8f;
-        border-radius: 0;
-        overflow: hidden;
-        box-shadow: 0 18px 36px rgba(0, 0, 0, 0.28);
-        height: 100px;
-        margin-top: 0;
-    }
-
-    .banner-cta a {
-        display: inline-flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 12px;
-        padding: 18px 26px;
-        min-width: 210px;
-        flex: 0 0 auto;
-        font-size: 14px;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.9px;
-        text-decoration: none;
-        white-space: nowrap;
-        background: transparent;
-        color: #fff;
-        border-right: 1px solid rgba(255, 255, 255, 0.25);
-    }
-
-    .banner-cta a:last-child {
-        border-right: none;
-    }
-
-    .banner-cta a::after {
-        content: '›';
-        font-size: 18px;
-        line-height: 1;
-        color: #f6c343;
-    }
-
-    @media (max-width: 768px) {
+        /* Offset fixed header so it doesn't cover homepage banner */
         .body-content {
             padding-top: 70px !important;
         }
 
-        /* Ẩn CTA trên banner khi ở mobile */
-        .slider-title-box,
-        .banner-cta,
-        .banner-cta-fixed {
-            display: none !important;
+        #pc_slider_cover,
+        #mb_slider_cover {
+            margin-top: 0 !important;
         }
 
-        /* Mũi tên slider mobile */
-        #mb_slider_cover .slick-prev,
-        #mb_slider_cover .slick-next {
-            display: flex !important;
-            align-items: center;
-            justify-content: center;
-            width: 36px;
-            height: 36px;
-            background: rgba(255, 255, 255, 0.85);
-            border-radius: 50%;
-            z-index: 10;
-            font-size: 16px;
-            color: #1f5f8e;
-            border: none;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+        .slider-item {
+            position: relative;
         }
 
-        #mb_slider_cover .slick-prev {
-            left: 10px;
-        }
-
-        #mb_slider_cover .slick-next {
-            right: 10px;
-        }
-
-        #mb_slider_cover .slick-prev:before,
-        #mb_slider_cover .slick-next:before {
-            display: none;
-        }
-
-        /* Hiển thị section Hiểu rõ hơn về trường học trên mobile */
-        #principal-welcome .principal-message {
+        .slider-title-box {
+            position: absolute !important;
+            top: auto !important;
+            bottom: 24px !important;
+            right: 20px !important;
+            left: auto !important;
+            width: auto !important;
             opacity: 1 !important;
             transform: none !important;
+            z-index: 20;
         }
 
-        #principal-welcome .container-fluid {
-            padding: 0 15px !important;
+        .banner-cta {
+            display: inline-flex;
+            align-items: stretch;
+            background: #1f4b8f;
+            border-radius: 0;
+            overflow: hidden;
+            box-shadow: 0 18px 36px rgba(0, 0, 0, 0.28);
+            height: 100px;
+            margin-top: 0;
         }
 
-        #principal-welcome h2 {
-            font-size: 28px !important;
+        .banner-cta a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 18px 26px;
+            min-width: 210px;
+            flex: 0 0 auto;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.9px;
+            text-decoration: none;
+            white-space: nowrap;
+            background: transparent;
+            color: #fff;
+            border-right: 1px solid rgba(255, 255, 255, 0.25);
         }
-    }
 
-    /* Hiệu ứng fade-in cho Lời chào Hiệu trưởng */
-    .principal-image {
-        opacity: 0;
-        transform: translateY(5em);
-        transition: all 0.8s ease-in-out;
-    }
+        .banner-cta a:last-child {
+            border-right: none;
+        }
 
-    .principal-message {
-        opacity: 0;
-        transform: translateY(5em);
-        transition: all 0.8s ease-in-out 0.2s;
-    }
+        .banner-cta a::after {
+            content: '›';
+            font-size: 18px;
+            line-height: 1;
+            color: #f6c343;
+        }
 
-    .is-visible .principal-image,
-    .is-visible .principal-message {
-        opacity: 1;
-        transform: none;
-    }
+        @media (max-width: 768px) {
+            .body-content {
+                padding-top: 70px !important;
+            }
+
+            /* Ẩn CTA trên banner khi ở mobile */
+            .slider-title-box,
+            .banner-cta,
+            .banner-cta-fixed {
+                display: none !important;
+            }
+
+            /* Mũi tên slider mobile */
+            #mb_slider_cover .slick-prev,
+            #mb_slider_cover .slick-next {
+                display: flex !important;
+                align-items: center;
+                justify-content: center;
+                width: 36px;
+                height: 36px;
+                background: rgba(255, 255, 255, 0.85);
+                border-radius: 50%;
+                z-index: 10;
+                font-size: 16px;
+                color: #1f5f8e;
+                border: none;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+            }
+
+            #mb_slider_cover .slick-prev {
+                left: 10px;
+            }
+
+            #mb_slider_cover .slick-next {
+                right: 10px;
+            }
+
+            #mb_slider_cover .slick-prev:before,
+            #mb_slider_cover .slick-next:before {
+                display: none;
+            }
+
+            /* Hiển thị section Hiểu rõ hơn về trường học trên mobile */
+            #principal-welcome .principal-message {
+                opacity: 1 !important;
+                transform: none !important;
+            }
+
+            #principal-welcome .container-fluid {
+                padding: 0 15px !important;
+            }
+
+            #principal-welcome h2 {
+                font-size: 28px !important;
+            }
+        }
+
+        /* Hiệu ứng fade-in cho Lời chào Hiệu trưởng */
+        .principal-image {
+            opacity: 0;
+            transform: translateY(5em);
+            transition: all 0.8s ease-in-out;
+        }
+
+        .principal-message {
+            opacity: 0;
+            transform: translateY(5em);
+            transition: all 0.8s ease-in-out 0.2s;
+        }
+
+        .is-visible .principal-image,
+        .is-visible .principal-message {
+            opacity: 1;
+            transform: none;
+        }
     </style>
     <!-- Google Tag Manager -->
     <script>
-    (function(w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({
-            'gtm.start': new Date().getTime(),
-            event: 'gtm.js'
-        });
-        var f = d.getElementsByTagName(s)[0],
-            j = d.createElement(s),
-            dl = l != 'dataLayer' ? '&l=' + l : '';
-        j.async = true;
-        j.src =
-            '../www.googletagmanager.com/gtm5445.html?id=' + i + dl;
-        f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-5SS24C7N');
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                '../www.googletagmanager.com/gtm5445.html?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5SS24C7N');
     </script>
     <!-- End Google Tag Manager -->
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GDK27ZMYYW"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
+        window.dataLayer = window.dataLayer || [];
 
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
 
-    gtag('config', 'G-GDK27ZMYYW');
+        gtag('config', 'G-GDK27ZMYYW');
     </script>
     <meta property="fb:admins" content="100003174617936" />
     <meta property="fb:admins" content="100000009019012" />
@@ -281,25 +281,25 @@
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <script>
-    window.fbAsyncInit = function() {
-        FB.init({
-            appId: '1759201507895169',
-            xfbml: true,
-            version: 'v19.0'
-        });
-        FB.AppEvents.logPageView();
-    };
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId: '1759201507895169',
+                xfbml: true,
+                version: 'v19.0'
+            });
+            FB.AppEvents.logPageView();
+        };
 
-    (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {
-            return;
-        }
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "../connect.facebook.net/en_US/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "../connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
     </script>
     <?php include 'includes/header.php'; ?>
     <div class="overlay_mark_search" style="display:none;"></div>
@@ -309,13 +309,13 @@
         <!-- Section: Banner/Slider Mobile - Fixed CTA -->
         <section class="mobile slider show-on-scroll home-page" data-sizes="50vw" id="mb_slider_cover">
             <a href="./index.php" class="slider-item" title="">
-                <img src="assets/img/banner/banner1.jpeg" alt="">
+                <img src="assets/img/banner/banner1.jpeg" data-home-banner-slot="1" alt="">
             </a>
             <a href="./index.php" class="slider-item" title="">
-                <img src="assets/img/banner/banner2.jpeg" alt="">
+                <img src="assets/img/banner/banner2.jpeg" data-home-banner-slot="2" alt="">
             </a>
             <a href="./index.php" class="slider-item" title="">
-                <img src="assets/img/banner/banner3.jpeg" alt="">
+                <img src="assets/img/banner/banner3.jpeg" data-home-banner-slot="3" alt="">
             </a>
         </section>
 
@@ -330,7 +330,7 @@
         <section class="pc slider show-on-scroll home-page" data-sizes="50vw" id="pc_slider_cover">
             <div class="slider-item">
                 <a href="./index.php" title="">
-                    <img src="assets/img/banner/banner1.jpeg" alt="">
+                    <img src="assets/img/banner/banner1.jpeg" data-home-banner-slot="1" alt="">
                 </a>
                 <div class="slider-title-box" style="opacity:1;transform:none;">
                     <div class="banner-cta">
@@ -342,7 +342,7 @@
             </div>
             <div class="slider-item">
                 <a href="./index.php" title="">
-                    <img src="assets/img/banner/banner2.jpeg" alt="">
+                    <img src="assets/img/banner/banner2.jpeg" data-home-banner-slot="2" alt="">
                 </a>
                 <div class="slider-title-box">
                     <div class="banner-cta">
@@ -354,7 +354,7 @@
             </div>
             <div class="slider-item">
                 <a href="./index.php" title="">
-                    <img src="assets/img/banner/banner3.jpeg" alt="">
+                    <img src="assets/img/banner/banner3.jpeg" data-home-banner-slot="3" alt="">
                 </a>
                 <div class="slider-title-box">
                     <div class="banner-cta">
@@ -701,154 +701,154 @@
                     </div>
 
                     <style>
-                    #olympia-event .ts-news-slider {
-                        margin: 0;
-                        padding: 0 46px;
-                    }
-
-                    #olympia-event .ts-news-slider .slick-slide {
-                        padding: 0 12px;
-                    }
-
-                    #olympia-event .ts-news-slider .slick-list {
-                        overflow: hidden;
-                    }
-
-                    #olympia-event .ts-news-card {
-                        background: #fff;
-                        border-radius: 16px;
-                        overflow: hidden;
-                        box-shadow: 0 4px 24px rgba(23, 52, 93, .08);
-                        transition: transform .3s, box-shadow .3s;
-                    }
-
-                    #olympia-event .ts-news-card:hover {
-                        transform: translateY(-6px);
-                        box-shadow: 0 12px 36px rgba(23, 52, 93, .14);
-                    }
-
-                    #olympia-event .ts-news-card img {
-                        width: 100%;
-                        height: 220px;
-                        object-fit: cover;
-                        display: block;
-                    }
-
-                    #olympia-event .ts-news-card-body {
-                        padding: 20px 22px 24px;
-                    }
-
-                    #olympia-event .ts-news-card-body h3 {
-                        font-size: 16px;
-                        font-weight: 700;
-                        line-height: 1.5;
-                        margin: 0 0 16px;
-                        display: -webkit-box;
-                        -webkit-line-clamp: 3;
-                        -webkit-box-orient: vertical;
-                        overflow: hidden;
-                    }
-
-                    #olympia-event .ts-news-card-body h3 a {
-                        color: #23336b;
-                        text-decoration: none;
-                    }
-
-                    #olympia-event .ts-news-link {
-                        font-size: 14px;
-                        font-weight: 600;
-                        color: #4aa6d9;
-                        text-decoration: none;
-                        display: inline-flex;
-                        align-items: center;
-                        gap: 4px;
-                    }
-
-                    #olympia-event .ts-news-link span {
-                        font-size: 18px;
-                    }
-
-                    #olympia-event .ts-news-slider .slick-prev,
-                    #olympia-event .ts-news-slider .slick-next {
-                        width: 44px;
-                        height: 44px;
-                        z-index: 20;
-                        background: #fff;
-                        border-radius: 50%;
-                        box-shadow: 0 2px 12px rgba(23, 52, 93, .15);
-                    }
-
-                    #olympia-event .ts-news-slider .slick-prev {
-                        left: 4px;
-                    }
-
-                    #olympia-event .ts-news-slider .slick-next {
-                        right: 4px;
-                    }
-
-                    #olympia-event .ts-news-slider .slick-prev:before,
-                    #olympia-event .ts-news-slider .slick-next:before {
-                        color: #23336b;
-                        font-size: 20px;
-                        opacity: 1;
-                    }
-
-                    #olympia-event .ts-news-slider .slick-dots {
-                        bottom: -40px;
-                    }
-
-                    #olympia-event .ts-news-slider .slick-dots li button:before {
-                        font-size: 10px;
-                        color: #c5d3e0;
-                        opacity: 1;
-                    }
-
-                    #olympia-event .ts-news-slider .slick-dots li.slick-active button:before {
-                        color: #4aa6d9;
-                    }
-
-                    @media(max-width:1220px) {
                         #olympia-event .ts-news-slider {
-                            padding: 0 38px;
+                            margin: 0;
+                            padding: 0 46px;
                         }
 
-                        #olympia-event .ts-news-slider .slick-prev {
-                            left: 2px;
+                        #olympia-event .ts-news-slider .slick-slide {
+                            padding: 0 12px;
                         }
 
-                        #olympia-event .ts-news-slider .slick-next {
-                            right: 2px;
+                        #olympia-event .ts-news-slider .slick-list {
+                            overflow: hidden;
                         }
-                    }
 
-                    @media(max-width:768px) {
-                        #olympia-event .ts-news-slider {
-                            padding: 0 30px;
+                        #olympia-event .ts-news-card {
+                            background: #fff;
+                            border-radius: 16px;
+                            overflow: hidden;
+                            box-shadow: 0 4px 24px rgba(23, 52, 93, .08);
+                            transition: transform .3s, box-shadow .3s;
+                        }
+
+                        #olympia-event .ts-news-card:hover {
+                            transform: translateY(-6px);
+                            box-shadow: 0 12px 36px rgba(23, 52, 93, .14);
                         }
 
                         #olympia-event .ts-news-card img {
-                            height: 180px;
+                            width: 100%;
+                            height: 220px;
+                            object-fit: cover;
+                            display: block;
+                        }
+
+                        #olympia-event .ts-news-card-body {
+                            padding: 20px 22px 24px;
+                        }
+
+                        #olympia-event .ts-news-card-body h3 {
+                            font-size: 16px;
+                            font-weight: 700;
+                            line-height: 1.5;
+                            margin: 0 0 16px;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 3;
+                            -webkit-box-orient: vertical;
+                            overflow: hidden;
+                        }
+
+                        #olympia-event .ts-news-card-body h3 a {
+                            color: #23336b;
+                            text-decoration: none;
+                        }
+
+                        #olympia-event .ts-news-link {
+                            font-size: 14px;
+                            font-weight: 600;
+                            color: #4aa6d9;
+                            text-decoration: none;
+                            display: inline-flex;
+                            align-items: center;
+                            gap: 4px;
+                        }
+
+                        #olympia-event .ts-news-link span {
+                            font-size: 18px;
                         }
 
                         #olympia-event .ts-news-slider .slick-prev,
                         #olympia-event .ts-news-slider .slick-next {
-                            width: 36px;
-                            height: 36px;
+                            width: 44px;
+                            height: 44px;
+                            z-index: 20;
+                            background: #fff;
+                            border-radius: 50%;
+                            box-shadow: 0 2px 12px rgba(23, 52, 93, .15);
                         }
 
                         #olympia-event .ts-news-slider .slick-prev {
-                            left: 0;
+                            left: 4px;
                         }
 
                         #olympia-event .ts-news-slider .slick-next {
-                            right: 0;
+                            right: 4px;
                         }
 
                         #olympia-event .ts-news-slider .slick-prev:before,
                         #olympia-event .ts-news-slider .slick-next:before {
-                            font-size: 16px;
+                            color: #23336b;
+                            font-size: 20px;
+                            opacity: 1;
                         }
-                    }
+
+                        #olympia-event .ts-news-slider .slick-dots {
+                            bottom: -40px;
+                        }
+
+                        #olympia-event .ts-news-slider .slick-dots li button:before {
+                            font-size: 10px;
+                            color: #c5d3e0;
+                            opacity: 1;
+                        }
+
+                        #olympia-event .ts-news-slider .slick-dots li.slick-active button:before {
+                            color: #4aa6d9;
+                        }
+
+                        @media(max-width:1220px) {
+                            #olympia-event .ts-news-slider {
+                                padding: 0 38px;
+                            }
+
+                            #olympia-event .ts-news-slider .slick-prev {
+                                left: 2px;
+                            }
+
+                            #olympia-event .ts-news-slider .slick-next {
+                                right: 2px;
+                            }
+                        }
+
+                        @media(max-width:768px) {
+                            #olympia-event .ts-news-slider {
+                                padding: 0 30px;
+                            }
+
+                            #olympia-event .ts-news-card img {
+                                height: 180px;
+                            }
+
+                            #olympia-event .ts-news-slider .slick-prev,
+                            #olympia-event .ts-news-slider .slick-next {
+                                width: 36px;
+                                height: 36px;
+                            }
+
+                            #olympia-event .ts-news-slider .slick-prev {
+                                left: 0;
+                            }
+
+                            #olympia-event .ts-news-slider .slick-next {
+                                right: 0;
+                            }
+
+                            #olympia-event .ts-news-slider .slick-prev:before,
+                            #olympia-event .ts-news-slider .slick-next:before {
+                                font-size: 16px;
+                            }
+                        }
                     </style>
                 </section>
             </div>
@@ -985,14 +985,14 @@
         </div>
     </section>
     <script>
-    AOS.init({
-        once: true,
+        AOS.init({
+            once: true,
 
-        disable: function() {
-            var maxWidth = 767;
-            return window.innerWidth < maxWidth;
-        }
-    });
+            disable: function() {
+                var maxWidth = 767;
+                return window.innerWidth < maxWidth;
+            }
+        });
     </script>
     <script src="olympia/js/bootstrap.min.js"></script>
     <script src="olympia/js/jquery.toast.min.js"></script>
@@ -1007,160 +1007,198 @@
     <script src="olympia/js/custom.js"></script>
 
     <script>
-    (function() {
-        function escHtml(str) {
-            var d = document.createElement('div');
-            d.textContent = str || '';
-            return d.innerHTML;
-        }
-        $.getJSON('api/news-public.php?page=1', function(res) {
-            var row = document.getElementById('home-news-row');
-            if (!res.success || !res.data || !res.data.length) {
-                row.innerHTML =
-                    '<div class="col-md-12" style="text-align:center;color:rgba(255,255,255,0.6);padding:40px 0;">Chưa có bài viết nào.</div>';
-                return;
+        (function() {
+            function escHtml(str) {
+                var d = document.createElement('div');
+                d.textContent = str || '';
+                return d.innerHTML;
             }
-            var items = res.data.slice(0, 8);
-            var row1Items = items.slice(0, 4);
-            var row2Items = items.slice(4, 8);
+            $.getJSON('api/news-public.php?page=1', function(res) {
+                var row = document.getElementById('home-news-row');
+                if (!res.success || !res.data || !res.data.length) {
+                    row.innerHTML =
+                        '<div class="col-md-12" style="text-align:center;color:rgba(255,255,255,0.6);padding:40px 0;">Chưa có bài viết nào.</div>';
+                    return;
+                }
+                var items = res.data.slice(0, 8);
+                var row1Items = items.slice(0, 4);
+                var row2Items = items.slice(4, 8);
 
-            function buildCards(arr) {
-                var html = '';
-                arr.forEach(function(r) {
-                    var thumb = r.thumbnail || 'assets/img/favicon.png';
-                    var link = 'doc-tin-tuc.php?slug=' + encodeURIComponent(r.slug);
-                    html += '<div class="col-md-3">';
-                    html += '<div class="olympia-event-post slide-item">';
-                    html += '<a href="' + link + '" title=""><img src="' + escHtml(thumb) +
-                        '" alt="' + escHtml(r.title) + '"></a>';
-                    html += '<p class="post-title"><a href="' + link + '">' + escHtml(r.title) +
-                        '</a></p>';
-                    html += '</div></div>';
-                });
-                return html;
-            }
-            row.innerHTML = buildCards(row1Items);
-            var row2 = document.getElementById('home-news-row-2');
-            if (row2 && row2Items.length) {
-                row2.innerHTML = buildCards(row2Items);
-            }
-        });
-    })();
+                function buildCards(arr) {
+                    var html = '';
+                    arr.forEach(function(r) {
+                        var thumb = r.thumbnail || 'assets/img/favicon.png';
+                        var link = 'doc-tin-tuc.php?slug=' + encodeURIComponent(r.slug);
+                        html += '<div class="col-md-3">';
+                        html += '<div class="olympia-event-post slide-item">';
+                        html += '<a href="' + link + '" title=""><img src="' + escHtml(thumb) +
+                            '" alt="' + escHtml(r.title) + '"></a>';
+                        html += '<p class="post-title"><a href="' + link + '">' + escHtml(r.title) +
+                            '</a></p>';
+                        html += '</div></div>';
+                    });
+                    return html;
+                }
+                row.innerHTML = buildCards(row1Items);
+                var row2 = document.getElementById('home-news-row-2');
+                if (row2 && row2Items.length) {
+                    row2.innerHTML = buildCards(row2Items);
+                }
+            });
+        })();
     </script>
 </body>
 
 </html>
 
 <script type="text/javascript">
-$(document).on('ready', function() {
-    $('.olympia-testimonial').slick({
-        initialSlide: 0,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: true,
-        infinite: true,
-        autoplay: true,
-        autoplaySpeed: 10200,
-        customPaging: function(slider, i) {
-            return '<div class="pager__item" id=' + i + "></div>";
-        },
-        prevArrow: false,
-        nextArrow: false,
-        // autoplaySpeed: 5000,
-        responsive: [{
-            breakpoint: 1024,
-            settings: {
-                dots: false,
-                autoplay: true,
+    $(document).on('ready', function() {
+        $('.olympia-testimonial').slick({
+            initialSlide: 0,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+            infinite: true,
+            autoplay: true,
+            autoplaySpeed: 10200,
+            customPaging: function(slider, i) {
+                return '<div class="pager__item" id=' + i + "></div>";
+            },
+            prevArrow: false,
+            nextArrow: false,
+            // autoplaySpeed: 5000,
+            responsive: [{
+                breakpoint: 1024,
+                settings: {
+                    dots: false,
+                    autoplay: true,
+                }
+            }]
+        });
+        // effect for slider olympia-testimonial
+        var slider = $('.olympia-testimonial');
+        slider.on('init reInit afterChange', function(event, slick, currentSlide, nextSlide) {
+
+            var slick_slide = document.getElementsByClassName('olympia-testimonial')[0];
+            var slick_item = slick_slide.getElementsByClassName('slick-slide');
+
+            for (var i = 0; i < slick_item.length; i++) {
+                var slick_item_info = slick_item[i].getElementsByClassName('olympia-testimonial-entry')[0];
+                var slick_item_img = slick_item[i].getElementsByClassName('olympia-testimonial-photo')[0];
+
+                if (slick_item[i].classList.contains('slick-active')) {
+                    opacityEffect(slick_item_img, 0, 1, 500, 10);
+                    translateEffect(slick_item_img, 80, 0, 500, 10, 'y');
+
+                    opacityEffect(slick_item_info, 0, 1, 500, 10, 700);
+                    translateEffect(slick_item_info, 65, 0, 500, 10, 'y', 700);
+                } else {
+                    // opacityEffect(slick_item_img, 1, 0, 500, 10);
+                    // translateEffect(slick_item_img, 0, 80, 500, 10, 'y');
+                    slick_item_img.style.opacity = 0;
+                    slick_item_img.style.transform = 'translate3d(0px, 80px, 0px)';
+
+                    // opacityEffect(slick_item_info, 1, 0, 500, 10);
+                    // translateEffect( slick_item_info, 0, 80, 500, 10, 'y');
+                    slick_item_info.style.opacity = 0;
+                    slick_item_info.style.transform = 'translate3d(0px, 80px, 0px)';
+                }
             }
-        }]
-    });
-    // effect for slider olympia-testimonial
-    var slider = $('.olympia-testimonial');
-    slider.on('init reInit afterChange', function(event, slick, currentSlide, nextSlide) {
+        });
 
-        var slick_slide = document.getElementsByClassName('olympia-testimonial')[0];
-        var slick_item = slick_slide.getElementsByClassName('slick-slide');
+        $(".mobile").slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            prevArrow: '<button type="button" class="slick-prev">&#10094;</button>',
+            nextArrow: '<button type="button" class="slick-next">&#10095;</button>',
+            arrows: true,
+            infinite: true,
+            fade: false,
+            swipe: true,
+            touchMove: true,
+            cssEase: 'linear',
+            autoplay: true,
+            autoplaySpeed: 5000,
+        });
+        // effect for slider pc
+        var slider = $('.mobile');
+        slider.on('init reInit afterChange', function(event, slick, currentSlide, nextSlide) {
 
-        for (var i = 0; i < slick_item.length; i++) {
-            var slick_item_info = slick_item[i].getElementsByClassName('olympia-testimonial-entry')[0];
-            var slick_item_img = slick_item[i].getElementsByClassName('olympia-testimonial-photo')[0];
+            var slick_slide = document.getElementsByClassName('mobile')[0];
+            var slick_item = slick_slide.getElementsByClassName('slick-slide');
 
-            if (slick_item[i].classList.contains('slick-active')) {
-                opacityEffect(slick_item_img, 0, 1, 500, 10);
-                translateEffect(slick_item_img, 80, 0, 500, 10, 'y');
+            for (var i = 0; i < slick_item.length; i++) {
+                var slick_item_info = slick_item[i].getElementsByClassName('slider-title-box')[0];
 
-                opacityEffect(slick_item_info, 0, 1, 500, 10, 700);
-                translateEffect(slick_item_info, 65, 0, 500, 10, 'y', 700);
-            } else {
-                // opacityEffect(slick_item_img, 1, 0, 500, 10);
-                // translateEffect(slick_item_img, 0, 80, 500, 10, 'y');
-                slick_item_img.style.opacity = 0;
-                slick_item_img.style.transform = 'translate3d(0px, 80px, 0px)';
+                if (slick_item[i].classList.contains('slick-active')) {
 
-                // opacityEffect(slick_item_info, 1, 0, 500, 10);
-                // translateEffect( slick_item_info, 0, 80, 500, 10, 'y');
-                slick_item_info.style.opacity = 0;
-                slick_item_info.style.transform = 'translate3d(0px, 80px, 0px)';
+                    opacityEffect(slick_item_info, 0, 1, 500, 10);
+                    translateEffect(slick_item_info, 65, 0, 500, 10, 'y');
+                } else {
+                    opacityEffect(slick_item_info, 1, 0, 500, 10);
+                    translateEffect(slick_item_info, 0, 80, 500, 10, 'y');
+                }
             }
-        }
-    });
+        });
 
-    $(".mobile").slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        prevArrow: '<button type="button" class="slick-prev">&#10094;</button>',
-        nextArrow: '<button type="button" class="slick-next">&#10095;</button>',
-        arrows: true,
-        infinite: true,
-        fade: false,
-        swipe: true,
-        touchMove: true,
-        cssEase: 'linear',
-        autoplay: true,
-        autoplaySpeed: 5000,
-    });
-    // effect for slider pc
-    var slider = $('.mobile');
-    slider.on('init reInit afterChange', function(event, slick, currentSlide, nextSlide) {
+        $(".pc").slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            prevArrow: '<div class="rcl-prev"><img src="https://theolympiaschools.edu.vn/olympia/images/button-1-3.svg"></div>',
+            nextArrow: '<div class="rcl-next"><img src="https://theolympiaschools.edu.vn/olympia/images/button-1-3.svg"></div>',
+            infinite: true,
+            cssEase: 'linear',
+            autoplay: true,
+            autoplaySpeed: 5000,
+            fade: true,
+        });
+        // effect for slider pc
+        var slider = $('.pc');
+        slider.on('init reInit afterChange', function(event, slick, currentSlide, nextSlide) {
 
-        var slick_slide = document.getElementsByClassName('mobile')[0];
-        var slick_item = slick_slide.getElementsByClassName('slick-slide');
+            // effect for the first time.
+            var pc_slider = document.getElementById('pc_slider_cover');
 
-        for (var i = 0; i < slick_item.length; i++) {
-            var slick_item_info = slick_item[i].getElementsByClassName('slider-title-box')[0];
+            if (pc_slider.classList.contains('appear is-visible')) {
+                var slick_slide = document.getElementsByClassName('pc')[0];
+                var slick_item = slick_slide.getElementsByClassName('slick-slide');
 
-            if (slick_item[i].classList.contains('slick-active')) {
+                for (var i = 0; i < slick_item.length; i++) {
+                    var slick_item_info = slick_item[i].getElementsByClassName('slider-title-box')[0];
 
-                opacityEffect(slick_item_info, 0, 1, 500, 10);
-                translateEffect(slick_item_info, 65, 0, 500, 10, 'y');
-            } else {
-                opacityEffect(slick_item_info, 1, 0, 500, 10);
-                translateEffect(slick_item_info, 0, 80, 500, 10, 'y');
+                    if (slick_item[i].classList.contains('slick-active')) {
+
+                        opacityEffect(slick_item_info, 0, 1, 500, 10);
+                        translateEffect(slick_item_info, 65, 0, 500, 10, 'y');
+                    } else {
+                        opacityEffect(slick_item_info, 1, 0, 500, 10);
+                        translateEffect(slick_item_info, 0, 80, 500, 10, 'y');
+                    }
+                }
             }
-        }
-    });
 
-    $(".pc").slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        prevArrow: '<div class="rcl-prev"><img src="https://theolympiaschools.edu.vn/olympia/images/button-1-3.svg"></div>',
-        nextArrow: '<div class="rcl-next"><img src="https://theolympiaschools.edu.vn/olympia/images/button-1-3.svg"></div>',
-        infinite: true,
-        cssEase: 'linear',
-        autoplay: true,
-        autoplaySpeed: 5000,
-        fade: true,
-    });
-    // effect for slider pc
-    var slider = $('.pc');
-    slider.on('init reInit afterChange', function(event, slick, currentSlide, nextSlide) {
-
-        // effect for the first time.
-        var pc_slider = document.getElementById('pc_slider_cover');
-
-        if (pc_slider.classList.contains('appear is-visible')) {
             var slick_slide = document.getElementsByClassName('pc')[0];
+            var slick_item = slick_slide.getElementsByClassName('slick-slide');
+
+            for (var i = 0; i < slick_item.length; i++) {
+                var slick_item_info = slick_item[i].getElementsByClassName('slider-title-box')[0];
+
+                if (slick_item[i].classList.contains('slick-active')) {
+
+                    opacityEffect(slick_item_info, 0, 1, 500, 10);
+                    translateEffect(slick_item_info, 65, 0, 500, 10, 'y');
+                } else {
+                    opacityEffect(slick_item_info, 1, 0, 500, 10);
+                    translateEffect(slick_item_info, 0, 80, 500, 10, 'y');
+                }
+            }
+        });
+
+
+        var mb_slider = document.getElementById('mb_slider_cover');
+
+        if (mb_slider.classList.contains('appear is-visible')) {
+            var slick_slide = document.getElementsByClassName('mobile')[0];
             var slick_item = slick_slide.getElementsByClassName('slick-slide');
 
             for (var i = 0; i < slick_item.length; i++) {
@@ -1177,180 +1215,182 @@ $(document).on('ready', function() {
             }
         }
 
-        var slick_slide = document.getElementsByClassName('pc')[0];
-        var slick_item = slick_slide.getElementsByClassName('slick-slide');
-
-        for (var i = 0; i < slick_item.length; i++) {
-            var slick_item_info = slick_item[i].getElementsByClassName('slider-title-box')[0];
-
-            if (slick_item[i].classList.contains('slick-active')) {
-
-                opacityEffect(slick_item_info, 0, 1, 500, 10);
-                translateEffect(slick_item_info, 65, 0, 500, 10, 'y');
-            } else {
-                opacityEffect(slick_item_info, 1, 0, 500, 10);
-                translateEffect(slick_item_info, 0, 80, 500, 10, 'y');
-            }
-        }
-    });
-
-
-    var mb_slider = document.getElementById('mb_slider_cover');
-
-    if (mb_slider.classList.contains('appear is-visible')) {
-        var slick_slide = document.getElementsByClassName('mobile')[0];
-        var slick_item = slick_slide.getElementsByClassName('slick-slide');
-
-        for (var i = 0; i < slick_item.length; i++) {
-            var slick_item_info = slick_item[i].getElementsByClassName('slider-title-box')[0];
-
-            if (slick_item[i].classList.contains('slick-active')) {
-
-                opacityEffect(slick_item_info, 0, 1, 500, 10);
-                translateEffect(slick_item_info, 65, 0, 500, 10, 'y');
-            } else {
-                opacityEffect(slick_item_info, 1, 0, 500, 10);
-                translateEffect(slick_item_info, 0, 80, 500, 10, 'y');
-            }
-        }
-    }
-
-    function newSlick() {
-        $('.olympia-event-posts').slick({
-            infinite: true,
-            slidesToShow: 2,
-            slidesToScroll: 1,
-            autoplay: true,
-            prevArrow: false,
-            nextArrow: false,
-            autoplaySpeed: 2000,
-            cssEase: 'linear',
-            responsive: [{
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 1,
-                        variableWidth: true,
-                        autoplay: true,
-                        prevArrow: '<div class="rcl-prev"><img class="disable" src="https://theolympiaschools.edu.vn/olympia/images/button-1-3.svg" alt=""></div>',
-                        nextArrow: '<div class="rcl-next"><img class="disable" src="https://theolympiaschools.edu.vn/olympia/images/button-1-3.svg" alt=""></div>'
+        function newSlick() {
+            $('.olympia-event-posts').slick({
+                infinite: true,
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                autoplay: true,
+                prevArrow: false,
+                nextArrow: false,
+                autoplaySpeed: 2000,
+                cssEase: 'linear',
+                responsive: [{
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 1,
+                            variableWidth: true,
+                            autoplay: true,
+                            prevArrow: '<div class="rcl-prev"><img class="disable" src="https://theolympiaschools.edu.vn/olympia/images/button-1-3.svg" alt=""></div>',
+                            nextArrow: '<div class="rcl-next"><img class="disable" src="https://theolympiaschools.edu.vn/olympia/images/button-1-3.svg" alt=""></div>'
+                        }
+                    },
+                    {
+                        breakpoint: 800,
+                        settings: {
+                            slidesToShow: 2,
+                            variableWidth: true,
+                            slidesToScroll: 1,
+                            autoplay: true,
+                            prevArrow: '<div class="rcl-prev"><img class="disable" src="https://theolympiaschools.edu.vn/olympia/images/button-1-3.svg" alt=""></div>',
+                            nextArrow: '<div class="rcl-next"><img class="disable" src="https://theolympiaschools.edu.vn/olympia/images/button-1-3.svg" alt=""></div>'
+                        }
                     }
-                },
-                {
-                    breakpoint: 800,
-                    settings: {
-                        slidesToShow: 2,
-                        variableWidth: true,
-                        slidesToScroll: 1,
-                        autoplay: true,
-                        prevArrow: '<div class="rcl-prev"><img class="disable" src="https://theolympiaschools.edu.vn/olympia/images/button-1-3.svg" alt=""></div>',
-                        nextArrow: '<div class="rcl-next"><img class="disable" src="https://theolympiaschools.edu.vn/olympia/images/button-1-3.svg" alt=""></div>'
-                    }
-                }
-            ]
-        });
-    }
-
-    newSlick()
-
-    if ($('.ts-news-slider').length) {
-        if ($('.ts-news-slider').hasClass('slick-initialized')) {
-            $('.ts-news-slider').slick('unslick');
+                ]
+            });
         }
-        $('.ts-news-slider').slick({
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            infinite: false,
-            dots: true,
-            arrows: true,
-            autoplay: true,
-            autoplaySpeed: 4000,
-            prevArrow: '<button class="slick-prev"><span>&#10094;</span></button>',
-            nextArrow: '<button class="slick-next"><span>&#10095;</span></button>',
-            responsive: [{
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 2
-                }
-            }, {
-                breakpoint: 576,
-                settings: {
-                    slidesToShow: 1
-                }
-            }]
-        });
-    }
-})
+
+        newSlick()
+
+        if ($('.ts-news-slider').length) {
+            if ($('.ts-news-slider').hasClass('slick-initialized')) {
+                $('.ts-news-slider').slick('unslick');
+            }
+            $('.ts-news-slider').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                infinite: false,
+                dots: true,
+                arrows: true,
+                autoplay: true,
+                autoplaySpeed: 4000,
+                prevArrow: '<button class="slick-prev"><span>&#10094;</span></button>',
+                nextArrow: '<button class="slick-next"><span>&#10095;</span></button>',
+                responsive: [{
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                }, {
+                    breakpoint: 576,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }]
+            });
+        }
+    })
 </script>
 
-<!-- Popup Tuyển sinh -->
-<!-- 
-<div id="tuyensinh-popup"
-    style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 999999; justify-content: center; align-items: center; padding: 20px;">
-    <div
-        style="position: relative; width: 750px; max-width: 96vw; max-height: 90vh; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.3);">
-        <button onclick="closeTuyenSinhPopup()"
-            style="position: absolute; top: 10px; right: 10px; width: 35px; height: 35px; background: rgba(255,255,255,0.9); border: none; border-radius: 50%; font-size: 20px; cursor: pointer; z-index: 100; display: flex; justify-content: center; align-items: center;">×</button>
-        <div style="position: relative; width: 100%; height: 100%; overflow: auto;">
-            <a href="dang-ky-tu-van.php" style="display: block; line-height: 0;">
-                <img src="assets/img/banner/popup-tuyensinh.jpg" alt="Tuyển sinh 2026-2027"
-                    style="width: 100%; height: auto; display: block; cursor: pointer;">
-            </a>
-            <a href="tuyen-dung.php"
-                style="position: absolute; bottom: 15%; left: 50%; transform: translateX(-50%); display: inline-block; padding: 12px 35px; background: #ff6b35; color: white; text-decoration: none; font-weight: bold; font-size: 16px; border-radius: 30px; text-transform: uppercase; box-shadow: 0 5px 15px rgba(255,107,53,0.4); white-space: nowrap;">Đăng
-                ký ngay</a>
-        </div>
-    </div>
-</div> -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        fetch('api/home-banners.php?t=' + Date.now())
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(res) {
+                if (!res || !res.success || !Array.isArray(res.data)) {
+                    return;
+                }
 
+                var bySlot = {};
+                res.data.forEach(function(item) {
+                    var slot = Number(item.slot || 0);
+                    if (slot >= 1 && slot <= 3 && item.image_url) {
+                        bySlot[slot] = item.image_url;
+                    }
+                });
+
+                document.querySelectorAll('img[data-home-banner-slot]').forEach(function(img) {
+                    var slot = Number(img.getAttribute('data-home-banner-slot') || 0);
+                    if (slot >= 1 && slot <= 3 && bySlot[slot]) {
+                        img.src = bySlot[slot];
+                    }
+                });
+            })
+            .catch(function() {
+                // Keep default static banners when API is unavailable.
+            });
+    });
+</script>
+
+<div id="homePopupOverlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:999999;justify-content:center;align-items:center;padding:20px;">
+    <div style="position:relative;width:750px;max-width:96vw;max-height:90vh;background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,0.3);">
+        <button id="homePopupCloseBtn" style="position:absolute;top:10px;right:10px;width:35px;height:35px;background:rgba(255,255,255,0.9);border:none;border-radius:50%;font-size:20px;cursor:pointer;z-index:10;display:flex;justify-content:center;align-items:center;">×</button>
+        <a id="homePopupLink" href="dang-ky-tu-van.php" style="display:block;line-height:0;" target="_self" rel="noopener">
+            <img id="homePopupImage" src="assets/img/banner/popup-tuyensinh.jpg" alt="Popup trang chủ" style="width:100%;height:auto;display:block;cursor:pointer;">
+        </a>
+    </div>
+</div>
 
 <style>
-body.popup-open {
-    overflow: hidden !important;
-    height: 100% !important;
-}
+    body.popup-open {
+        overflow: hidden !important;
+        height: 100% !important;
+    }
 </style>
 
 <script>
-// Xóa localStorage để test (có thể comment dòng này sau khi test xong)
-localStorage.removeItem('tuyensinhPopupShown');
+    document.addEventListener('DOMContentLoaded', function() {
+        var popupOverlay = document.getElementById('homePopupOverlay');
+        var popupCloseBtn = document.getElementById('homePopupCloseBtn');
+        var popupLink = document.getElementById('homePopupLink');
+        var popupImage = document.getElementById('homePopupImage');
+        var reopenTimer = null;
 
-// Hiện popup sau 10 giây khi DOM ready, sau khi tắt thì 3 phút lại hiện lại
-document.addEventListener('DOMContentLoaded', function() {
-    function showPopup() {
-        var popup = document.getElementById('tuyensinh-popup');
-        if (popup) {
-            popup.style.display = 'flex';
+        function showPopup() {
+            popupOverlay.style.display = 'flex';
             document.body.classList.add('popup-open');
         }
-    }
 
-    // Lần đầu: hiện sau 10 giây
-    setTimeout(showPopup, 10000);
-});
+        function hidePopup() {
+            popupOverlay.style.display = 'none';
+            document.body.classList.remove('popup-open');
+        }
 
-function closeTuyenSinhPopup() {
-    var popup = document.getElementById('tuyensinh-popup');
-    if (popup) {
-        popup.style.display = 'none';
-        document.body.classList.remove('popup-open');
-        // Sau 3 phút (180000ms) hiện lại popup
-        setTimeout(function() {
-            popup.style.display = 'flex';
-            document.body.classList.add('popup-open');
-        }, 180000);
-    }
-}
+        fetch('api/home-popup.php?t=' + Date.now())
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(res) {
+                if (!res || !res.success || !res.data) {
+                    return;
+                }
 
-// Đóng popup khi click ra ngoài
-document.addEventListener('DOMContentLoaded', function() {
-    var popup = document.getElementById('tuyensinh-popup');
-    if (popup) {
-        popup.addEventListener('click', function(e) {
-            if (e.target === this) {
-                closeTuyenSinhPopup();
-            }
-        });
-    }
-});
+                var d = res.data;
+                if (!d.is_enabled) {
+                    return;
+                }
+
+                popupImage.src = d.image_url || 'assets/img/banner/popup-tuyensinh.jpg';
+                popupLink.href = d.cta_url || 'dang-ky-tu-van.php';
+
+                var showDelay = Math.max(1, Number(d.show_delay_seconds || 10));
+                var repeatInterval = Math.max(30, Number(d.repeat_interval_seconds || 180));
+
+                setTimeout(showPopup, showDelay * 1000);
+
+                popupCloseBtn.addEventListener('click', function() {
+                    hidePopup();
+                    if (reopenTimer) {
+                        clearTimeout(reopenTimer);
+                    }
+                    reopenTimer = setTimeout(showPopup, repeatInterval * 1000);
+                });
+
+                popupOverlay.addEventListener('click', function(e) {
+                    if (e.target === popupOverlay) {
+                        hidePopup();
+                        if (reopenTimer) {
+                            clearTimeout(reopenTimer);
+                        }
+                        reopenTimer = setTimeout(showPopup, repeatInterval * 1000);
+                    }
+                });
+            })
+            .catch(function() {
+                // Keep popup disabled when config API is unavailable.
+            });
+    });
 </script>

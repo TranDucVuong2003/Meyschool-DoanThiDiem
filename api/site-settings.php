@@ -2,6 +2,19 @@
 session_start();
 header('Content-Type: application/json; charset=utf-8');
 
+if (empty($_SESSION['admin_id'])) {
+    http_response_code(401);
+    echo json_encode(['success' => false, 'message' => 'Chưa đăng nhập']);
+    exit;
+}
+
+require_once __DIR__ . '/../dashboard/access.php';
+if (!dashboard_can_access('config')) {
+    http_response_code(403);
+    echo json_encode(['success' => false, 'message' => 'Bạn không có quyền truy cập module này.']);
+    exit;
+}
+
 require_once __DIR__ . '/../config/db.php';
 
 $method = $_SERVER['REQUEST_METHOD'];

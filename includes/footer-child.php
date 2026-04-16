@@ -70,3 +70,8 @@ $ss_fanpage_encoded = urlencode($ss['fanpage']);
         </div>
     </div>
 </section>
+
+<?php
+$chatBasePath = '../';
+include __DIR__ . '/../chat/widget.php';
+?>

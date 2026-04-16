@@ -6,6 +6,14 @@ if (empty($_SESSION['admin_id'])) {
     exit;
 }
 
+require_once __DIR__ . '/../dashboard/access.php';
+if (!dashboard_can_access('events')) {
+    http_response_code(403);
+    header('Content-Type: application/json; charset=utf-8');
+    echo json_encode(['success' => false, 'message' => 'Bạn không có quyền truy cập module này.']);
+    exit;
+}
+
 require_once __DIR__ . '/../config/db.php';
 header('Content-Type: application/json; charset=utf-8');
 
@@ -15,19 +23,73 @@ $method = $_SERVER['REQUEST_METHOD'];
 function createEventSlug($str)
 {
     $map = [
-        'à'=>'a','á'=>'a','ả'=>'a','ã'=>'a','ạ'=>'a',
-        'ă'=>'a','ằ'=>'a','ắ'=>'a','ẳ'=>'a','ẵ'=>'a','ặ'=>'a',
-        'â'=>'a','ầ'=>'a','ấ'=>'a','ẩ'=>'a','ẫ'=>'a','ậ'=>'a',
-        'đ'=>'d',
-        'è'=>'e','é'=>'e','ẻ'=>'e','ẽ'=>'e','ẹ'=>'e',
-        'ê'=>'e','ề'=>'e','ế'=>'e','ể'=>'e','ễ'=>'e','ệ'=>'e',
-        'ì'=>'i','í'=>'i','ỉ'=>'i','ĩ'=>'i','ị'=>'i',
-        'ò'=>'o','ó'=>'o','ỏ'=>'o','õ'=>'o','ọ'=>'o',
-        'ô'=>'o','ồ'=>'o','ố'=>'o','ổ'=>'o','ỗ'=>'o','ộ'=>'o',
-        'ơ'=>'o','ờ'=>'o','ớ'=>'o','ở'=>'o','ỡ'=>'o','ợ'=>'o',
-        'ù'=>'u','ú'=>'u','ủ'=>'u','ũ'=>'u','ụ'=>'u',
-        'ư'=>'u','ừ'=>'u','ứ'=>'u','ử'=>'u','ữ'=>'u','ự'=>'u',
-        'ỳ'=>'y','ý'=>'y','ỷ'=>'y','ỹ'=>'y','ỵ'=>'y',
+        'à' => 'a',
+        'á' => 'a',
+        'ả' => 'a',
+        'ã' => 'a',
+        'ạ' => 'a',
+        'ă' => 'a',
+        'ằ' => 'a',
+        'ắ' => 'a',
+        'ẳ' => 'a',
+        'ẵ' => 'a',
+        'ặ' => 'a',
+        'â' => 'a',
+        'ầ' => 'a',
+        'ấ' => 'a',
+        'ẩ' => 'a',
+        'ẫ' => 'a',
+        'ậ' => 'a',
+        'đ' => 'd',
+        'è' => 'e',
+        'é' => 'e',
+        'ẻ' => 'e',
+        'ẽ' => 'e',
+        'ẹ' => 'e',
+        'ê' => 'e',
+        'ề' => 'e',
+        'ế' => 'e',
+        'ể' => 'e',
+        'ễ' => 'e',
+        'ệ' => 'e',
+        'ì' => 'i',
+        'í' => 'i',
+        'ỉ' => 'i',
+        'ĩ' => 'i',
+        'ị' => 'i',
+        'ò' => 'o',
+        'ó' => 'o',
+        'ỏ' => 'o',
+        'õ' => 'o',
+        'ọ' => 'o',
+        'ô' => 'o',
+        'ồ' => 'o',
+        'ố' => 'o',
+        'ổ' => 'o',
+        'ỗ' => 'o',
+        'ộ' => 'o',
+        'ơ' => 'o',
+        'ờ' => 'o',
+        'ớ' => 'o',
+        'ở' => 'o',
+        'ỡ' => 'o',
+        'ợ' => 'o',
+        'ù' => 'u',
+        'ú' => 'u',
+        'ủ' => 'u',
+        'ũ' => 'u',
+        'ụ' => 'u',
+        'ư' => 'u',
+        'ừ' => 'u',
+        'ứ' => 'u',
+        'ử' => 'u',
+        'ữ' => 'u',
+        'ự' => 'u',
+        'ỳ' => 'y',
+        'ý' => 'y',
+        'ỷ' => 'y',
+        'ỹ' => 'y',
+        'ỵ' => 'y',
     ];
     $str = mb_strtolower($str, 'UTF-8');
     $str = strtr($str, $map);
@@ -147,9 +209,17 @@ if ($method === 'POST' && empty($_GET['_method'])) {
 
     $stmt = $pdo->prepare("INSERT INTO events (title, slug, excerpt, content, thumbnail, event_date, event_time, event_end_date, event_location, status, is_featured) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
     $stmt->execute([
-        $title, $slug, $excerpt, $content, $thumbnailPath,
-        $event_date ?: null, $event_time ?: null, $event_end_date ?: null,
-        $event_location, $status, $is_featured
+        $title,
+        $slug,
+        $excerpt,
+        $content,
+        $thumbnailPath,
+        $event_date ?: null,
+        $event_time ?: null,
+        $event_end_date ?: null,
+        $event_location,
+        $status,
+        $is_featured
     ]);
 
     echo json_encode(['success' => true, 'message' => 'Tạo sự kiện thành công', 'id' => $pdo->lastInsertId()]);
@@ -204,9 +274,18 @@ if ($method === 'POST' && ($_GET['_method'] ?? '') === 'PUT') {
 
     $stmt = $pdo->prepare("UPDATE events SET title=?, slug=?, excerpt=?, content=?, thumbnail=?, event_date=?, event_time=?, event_end_date=?, event_location=?, status=?, is_featured=? WHERE id=?");
     $stmt->execute([
-        $title, $slug, $excerpt, $content, $thumbnailPath,
-        $event_date ?: null, $event_time ?: null, $event_end_date ?: null,
-        $event_location, $status, $is_featured, $id
+        $title,
+        $slug,
+        $excerpt,
+        $content,
+        $thumbnailPath,
+        $event_date ?: null,
+        $event_time ?: null,
+        $event_end_date ?: null,
+        $event_location,
+        $status,
+        $is_featured,
+        $id
     ]);
 
     echo json_encode(['success' => true, 'message' => 'Cập nhật thành công']);

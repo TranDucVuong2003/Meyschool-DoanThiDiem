@@ -1,9 +1,7 @@
 <?php
 session_start();
-if (empty($_SESSION['admin_id'])) {
-    header('Location: log-in.php');
-    exit;
-}
+require_once __DIR__ . '/dashboard/access.php';
+dashboard_require_access('notifications');
 $admin_name = htmlspecialchars($_SESSION['admin_name'] ?? 'Admin');
 $admin_username = htmlspecialchars($_SESSION['admin_username'] ?? '');
 require_once __DIR__ . '/config/db.php';

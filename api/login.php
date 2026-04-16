@@ -36,7 +36,7 @@ if (strlen($username) > 100 || strlen($password) > 200) {
 }
 
 try {
-    $stmt = $pdo->prepare('SELECT id, username, password FROM users WHERE username = ? LIMIT 1');
+    $stmt = $pdo->prepare('SELECT id, username, name, role_id, password FROM users WHERE username = ? LIMIT 1');
     $stmt->execute([$username]);
     $user = $stmt->fetch();
 
@@ -53,7 +53,8 @@ try {
     session_regenerate_id(true);
     $_SESSION['admin_id']       = $user['id'];
     $_SESSION['admin_username'] = $user['username'];
-    $_SESSION['admin_name']     = $user['username'];
+    $_SESSION['admin_name']     = $user['name'] ?: $user['username'];
+    $_SESSION['admin_role_id']  = (int) ($user['role_id'] ?? 0);
 
     echo json_encode(['success' => true, 'message' => 'Đăng nhập thành công!', 'redirect' => 'dashboard.php']);
 } catch (PDOException $e) {

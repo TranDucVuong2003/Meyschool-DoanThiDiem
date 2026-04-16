@@ -2247,7 +2247,7 @@ html {
   width: 20px;
   height: 20px;
   background: center / contain no-repeat
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23ffffff' d='M256 32C132.3 32 32 124.8 32 240c0 65 30.7 123.7 79.9 162.9V480l72.5-39.9c22.7 6.2 46.8 9.5 71.6 9.5 123.7 0 224-92.8 224-208S379.7 32 256 32zm41.3 279.2l-66.1-70.4-126.9 70.4 139.5-148.2 67.9 72.4 127.8-72.4-142.2 148.2z'/%3E%3C/svg%3E");
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23ffffff' d='M493.4 24.6l-104-24c-11.3-2.6-23.2 3.3-28 13.7l-48 112c-4.6 10.5-1.7 22.8 7.1 30.1l60.6 49.6c-36 76.7-98.4 139.1-175.1 175.1l-49.6-60.6c-7.2-8.8-19.6-11.7-30.1-7.1l-112 48c-10.5 4.5-16.3 16.7-13.7 28l24 104c2.6 11.1 12.5 19 23.9 19 256.5 0 464-207.5 464-464 0-11.4-7.8-21.3-18.9-23.9z'/%3E%3C/svg%3E");
 }
 
 .hotline-bar {
@@ -22938,10 +22938,163 @@ figcaption {
   z-index: 999999;
 }
 
+.hotline-social-stack {
+  position: absolute;
+  left: 37px;
+  bottom: 83px;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  z-index: 12;
+}
+
+.hotline-social-btn {
+  position: relative;
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0;
+  line-height: 0;
+  text-decoration: none;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+  animation: hotline-social-icon-anim 1s infinite ease-in-out;
+}
+
+.hotline-social-btn::before,
+.hotline-social-btn::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hotline-social-btn::before {
+  width: 52px;
+  height: 52px;
+  top: -10px;
+  left: -10px;
+  border: 2px solid transparent;
+  opacity: 0.5;
+  animation: hotline-social-circle-anim 1.2s infinite ease-in-out;
+}
+
+.hotline-social-btn::after {
+  width: 41px;
+  height: 41px;
+  top: -4px;
+  left: -4px;
+  border: 2px solid transparent;
+  opacity: 0.35;
+  animation: hotline-social-circle-fill-anim 2.2s infinite ease-in-out;
+}
+
+.hotline-social-icon {
+  width: 18px;
+  height: 18px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 2;
+}
+
+.hotline-social-zalo {
+  background: #0068ff;
+}
+
+.hotline-social-zalo::before,
+.hotline-social-zalo::after {
+  border-color: #0068ff;
+}
+
+.hotline-social-zalo .hotline-social-icon {
+  width: 18px;
+  height: 18px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%23ffffff'/%3E%3Crect x='18' y='34' width='64' height='32' rx='16' fill='%230068ff'/%3E%3Ctext x='50' y='56' text-anchor='middle' font-family='Arial,sans-serif' font-size='18' font-weight='700' fill='%23ffffff'%3EZalo%3C/text%3E%3C/svg%3E");
+}
+
+.hotline-social-messenger {
+  background: #0084ff;
+}
+
+.hotline-social-messenger::before,
+.hotline-social-messenger::after {
+  border-color: #0084ff;
+}
+
+.hotline-social-messenger .hotline-social-icon {
+  width: 18px;
+  height: 18px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23fff' d='M256 32C132.3 32 32 124.8 32 240c0 65 30.7 123.7 79.9 162.9V480l72.5-39.9c22.7 6.2 46.8 9.5 71.6 9.5 123.7 0 224-92.8 224-208S379.7 32 256 32zm41.3 279.2l-66.1-70.4-126.9 70.4 139.5-148.2 67.9 72.4 127.8-72.4-142.2 148.2z'/%3E%3C/svg%3E");
+}
+
+@keyframes hotline-social-circle-anim {
+  0% {
+    transform: rotate(0) scale(0.5);
+    opacity: 0.6;
+  }
+
+  30% {
+    transform: rotate(0) scale(0.75);
+    opacity: 0.35;
+  }
+
+  100% {
+    transform: rotate(0) scale(1);
+    opacity: 0.1;
+  }
+}
+
+@keyframes hotline-social-circle-fill-anim {
+  0%,
+  100% {
+    transform: scale(0.75);
+    opacity: 0.3;
+  }
+
+  50% {
+    transform: scale(1);
+    opacity: 0.1;
+  }
+}
+
+@keyframes hotline-social-icon-anim {
+  0%,
+  100% {
+    transform: rotate(0) scale(1);
+  }
+
+  10% {
+    transform: rotate(-20deg) scale(1);
+  }
+
+  20% {
+    transform: rotate(20deg) scale(1);
+  }
+
+  30% {
+    transform: rotate(-20deg) scale(1);
+  }
+
+  40% {
+    transform: rotate(20deg) scale(1);
+  }
+
+  50% {
+    transform: rotate(0) scale(1);
+  }
+}
+
 @media (max-width: 768px) {
   .hotline-phone-ring-wrap {
     bottom: 30px;
     right: 0;
+  }
+
+  .hotline-social-stack {
+    bottom: 79px;
   }
 }
 
@@ -23040,7 +23193,7 @@ figcaption {
   width: 20px;
   height: 20px;
   background: center / contain no-repeat
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23ffffff' d='M256 32C132.3 32 32 124.8 32 240c0 65 30.7 123.7 79.9 162.9V480l72.5-39.9c22.7 6.2 46.8 9.5 71.6 9.5 123.7 0 224-92.8 224-208S379.7 32 256 32zm41.3 279.2l-66.1-70.4-126.9 70.4 139.5-148.2 67.9 72.4 127.8-72.4-142.2 148.2z'/%3E%3C/svg%3E");
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23ffffff' d='M493.4 24.6l-104-24c-11.3-2.6-23.2 3.3-28 13.7l-48 112c-4.6 10.5-1.7 22.8 7.1 30.1l60.6 49.6c-36 76.7-98.4 139.1-175.1 175.1l-49.6-60.6c-7.2-8.8-19.6-11.7-30.1-7.1l-112 48c-10.5 4.5-16.3 16.7-13.7 28l24 104c2.6 11.1 12.5 19 23.9 19 256.5 0 464-207.5 464-464 0-11.4-7.8-21.3-18.9-23.9z'/%3E%3C/svg%3E");
 }
 
 .hotline-bar {

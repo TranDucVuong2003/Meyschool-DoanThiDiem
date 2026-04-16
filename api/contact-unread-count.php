@@ -6,6 +6,13 @@ if (empty($_SESSION['admin_id'])) {
     exit;
 }
 
+require_once __DIR__ . '/../dashboard/access.php';
+if (!dashboard_can_access('contact')) {
+    http_response_code(403);
+    echo json_encode(['success' => false, 'message' => 'Bạn không có quyền truy cập module này.', 'count' => 0]);
+    exit;
+}
+
 require_once __DIR__ . '/../config/db.php';
 header('Content-Type: application/json; charset=utf-8');
 

@@ -1,9 +1,7 @@
 <?php
 session_start();
-if (empty($_SESSION['admin_id'])) {
-    header('Location: log-in.php');
-    exit;
-}
+require_once __DIR__ . '/dashboard/access.php';
+dashboard_require_access('achievements');
 $admin_name = htmlspecialchars($_SESSION['admin_name'] ?? 'Admin');
 $_sidebar_page = 'thanh-tich-admin.php';
 require_once __DIR__ . '/config/db.php';

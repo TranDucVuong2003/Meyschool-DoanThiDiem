@@ -1,9 +1,7 @@
 <?php
 session_start();
-if (empty($_SESSION['admin_id'])) {
-    header('Location: log-in.php');
-    exit;
-}
+require_once __DIR__ . '/dashboard/access.php';
+dashboard_require_access('config');
 $admin_name = htmlspecialchars($_SESSION['admin_name'] ?? 'Admin');
 $admin_username = htmlspecialchars($_SESSION['admin_username'] ?? '');
 ?>
@@ -435,6 +433,140 @@ $admin_username = htmlspecialchars($_SESSION['admin_username'] ?? '');
             margin-top: 8px;
         }
 
+        .home-banner-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
+        }
+
+        .home-banner-item {
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 14px;
+            background: #fff;
+        }
+
+        .home-banner-item h4 {
+            font-size: 14px;
+            color: var(--primary-d);
+            margin-bottom: 10px;
+        }
+
+        .home-banner-preview {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            overflow: hidden;
+            background: #f8fafc;
+            margin-bottom: 10px;
+        }
+
+        .home-banner-preview img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .home-banner-actions {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .home-banner-note {
+            margin-top: 12px;
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        .popup-settings-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+
+        .popup-settings-form {
+            display: grid;
+            gap: 12px;
+        }
+
+        .popup-switch {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .popup-switch input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--primary);
+        }
+
+        .popup-fields {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+        }
+
+        .popup-fields .full {
+            grid-column: 1 / -1;
+        }
+
+        .popup-field label {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .popup-field input {
+            width: 100%;
+            height: 38px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 0 12px;
+            font-size: 14px;
+            outline: none;
+        }
+
+        .popup-field input:focus {
+            border-color: var(--accent);
+        }
+
+        .popup-preview {
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 12px;
+            background: #fff;
+        }
+
+        .popup-preview img {
+            width: 100%;
+            max-width: 520px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            display: block;
+        }
+
+        .popup-actions {
+            margin-top: 12px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 900px) {
+            .popup-fields {
+                grid-template-columns: 1fr;
+            }
+        }
+
         /* ── Modal ── */
         .modal-overlay {
             display: none;
@@ -590,6 +722,8 @@ $admin_username = htmlspecialchars($_SESSION['admin_username'] ?? '');
             <div class="tabs-bar">
                 <button class="tab-btn active" data-tab="danh-muc">Danh mục tin tức</button>
                 <button class="tab-btn" data-tab="danh-muc-thongbao">Danh mục thông báo</button>
+                <button class="tab-btn" data-tab="banner-index">Banner trang chủ</button>
+                <button class="tab-btn" data-tab="popup-index">Popup trang chủ</button>
                 <button class="tab-btn" data-tab="thong-tin-chung">Chỉnh sửa thông tin</button>
             </div>
 
@@ -652,6 +786,107 @@ $admin_username = htmlspecialchars($_SESSION['admin_username'] ?? '');
                             </tr>
                         </tbody>
                     </table>
+                </div>
+            </div>
+
+            <!-- Tab: Banner trang chủ -->
+            <div class="tab-panel" id="tab-banner-index">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Quản lý ảnh banner cho trang index.php</h3>
+                    </div>
+
+                    <div class="home-banner-grid" id="homeBannerGrid">
+                        <div class="home-banner-item" data-slot="1">
+                            <h4>Banner 1</h4>
+                            <div class="home-banner-preview">
+                                <img id="homeBannerPreview1" src="assets/img/banner/banner1.jpeg" alt="Banner 1">
+                            </div>
+                            <form class="home-banner-form" data-slot="1">
+                                <input type="file" name="banner" accept="image/jpeg,image/png,image/gif,image/webp" required>
+                                <div class="home-banner-actions" style="margin-top:10px;">
+                                    <button type="submit" class="btn btn-primary btn-sm">Cập nhật</button>
+                                    <button type="button" class="btn btn-outline btn-sm" onclick="resetHomeBanner(1)">Về mặc định</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="home-banner-item" data-slot="2">
+                            <h4>Banner 2</h4>
+                            <div class="home-banner-preview">
+                                <img id="homeBannerPreview2" src="assets/img/banner/banner2.jpeg" alt="Banner 2">
+                            </div>
+                            <form class="home-banner-form" data-slot="2">
+                                <input type="file" name="banner" accept="image/jpeg,image/png,image/gif,image/webp" required>
+                                <div class="home-banner-actions" style="margin-top:10px;">
+                                    <button type="submit" class="btn btn-primary btn-sm">Cập nhật</button>
+                                    <button type="button" class="btn btn-outline btn-sm" onclick="resetHomeBanner(2)">Về mặc định</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="home-banner-item" data-slot="3">
+                            <h4>Banner 3</h4>
+                            <div class="home-banner-preview">
+                                <img id="homeBannerPreview3" src="assets/img/banner/banner3.jpeg" alt="Banner 3">
+                            </div>
+                            <form class="home-banner-form" data-slot="3">
+                                <input type="file" name="banner" accept="image/jpeg,image/png,image/gif,image/webp" required>
+                                <div class="home-banner-actions" style="margin-top:10px;">
+                                    <button type="submit" class="btn btn-primary btn-sm">Cập nhật</button>
+                                    <button type="button" class="btn btn-outline btn-sm" onclick="resetHomeBanner(3)">Về mặc định</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <p class="home-banner-note">Tab này chỉ thay đổi ảnh banner hiển thị ở trang chủ index.php.</p>
+                </div>
+            </div>
+
+            <!-- Tab: Popup trang chủ -->
+            <div class="tab-panel" id="tab-popup-index">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Quản lý popup hiển thị ở trang index.php</h3>
+                    </div>
+
+                    <div class="popup-settings-grid">
+                        <form id="homePopupForm" class="popup-settings-form">
+                            <label class="popup-switch">
+                                <input type="checkbox" id="popupEnabled">
+                                Bật popup trang chủ
+                            </label>
+
+                            <div class="popup-fields">
+                                <div class="popup-field full">
+                                    <label for="popupCtaUrl">Đường dẫn khi click popup</label>
+                                    <input type="text" id="popupCtaUrl" placeholder="vd: dang-ky-tu-van.php">
+                                </div>
+                                <div class="popup-field">
+                                    <label for="popupDelay">Thời gian hiện lần đầu (giây)</label>
+                                    <input type="number" id="popupDelay" min="1" max="600" value="10">
+                                </div>
+                                <div class="popup-field">
+                                    <label for="popupRepeat">Chu kỳ hiện lại (giây)</label>
+                                    <input type="number" id="popupRepeat" min="30" max="7200" value="180">
+                                </div>
+                                <div class="popup-field full">
+                                    <label for="popupImageFile">Ảnh popup mới</label>
+                                    <input type="file" id="popupImageFile" accept="image/jpeg,image/png,image/gif,image/webp">
+                                </div>
+                            </div>
+
+                            <div class="popup-actions">
+                                <button type="submit" class="btn btn-primary">Lưu popup</button>
+                                <button type="button" class="btn btn-outline" id="btnResetPopupImage">Đưa ảnh về mặc định</button>
+                            </div>
+                        </form>
+
+                        <div class="popup-preview">
+                            <img id="popupPreviewImage" src="assets/img/banner/popup-tuyensinh.jpg" alt="Popup preview">
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -829,6 +1064,8 @@ $admin_username = htmlspecialchars($_SESSION['admin_username'] ?? '');
         // ── API ──
         const API = 'api/news-categories.php';
         const SETTINGS_API = 'api/site-settings.php';
+        const HOME_BANNER_API = 'api/home-banners.php';
+        const HOME_POPUP_API = 'api/home-popup.php';
 
         function loadCategories(search) {
             let url = API + '?t=' + Date.now();
@@ -1162,6 +1399,12 @@ $admin_username = htmlspecialchars($_SESSION['admin_username'] ?? '');
                 if (btn.dataset.tab === 'danh-muc-thongbao') {
                     loadNotifCategories();
                 }
+                if (btn.dataset.tab === 'banner-index') {
+                    loadHomeBanners();
+                }
+                if (btn.dataset.tab === 'popup-index') {
+                    loadHomePopupSettings();
+                }
                 if (btn.dataset.tab === 'thong-tin-chung') {
                     loadSiteSettings();
                 }
@@ -1221,6 +1464,159 @@ $admin_username = htmlspecialchars($_SESSION['admin_username'] ?? '');
                         loadSiteSettings();
                     } else {
                         showToast(res.message || 'Có lỗi xảy ra', 'error');
+                    }
+                })
+                .catch(() => showToast('Lỗi kết nối', 'error'));
+        });
+
+        // ════════════════════════════════════
+        // Banner trang chủ (index.php)
+        // ════════════════════════════════════
+        function loadHomeBanners() {
+            fetch(HOME_BANNER_API + '?t=' + Date.now())
+                .then(r => r.json())
+                .then(res => {
+                    if (!res.success || !Array.isArray(res.data)) {
+                        showToast('Không tải được dữ liệu banner', 'error');
+                        return;
+                    }
+
+                    res.data.forEach(function(item) {
+                        const slot = Number(item.slot || 0);
+                        if (slot < 1 || slot > 3) return;
+                        const img = document.getElementById('homeBannerPreview' + slot);
+                        if (!img) return;
+                        img.src = item.image_url || item.default_url || img.src;
+                    });
+                })
+                .catch(() => showToast('Lỗi kết nối', 'error'));
+        }
+
+        document.querySelectorAll('.home-banner-form').forEach(function(form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const slot = Number(form.dataset.slot || 0);
+                const fileInput = form.querySelector('input[type="file"]');
+                const file = fileInput && fileInput.files ? fileInput.files[0] : null;
+
+                if (!slot || !file) {
+                    showToast('Vui lòng chọn ảnh để cập nhật', 'error');
+                    return;
+                }
+
+                const fd = new FormData();
+                fd.append('slot', String(slot));
+                fd.append('banner', file);
+
+                fetch(HOME_BANNER_API, {
+                        method: 'POST',
+                        body: fd
+                    })
+                    .then(r => r.json())
+                    .then(res => {
+                        if (res.success) {
+                            showToast(res.message || 'Đã cập nhật banner', 'success');
+                            fileInput.value = '';
+                            loadHomeBanners();
+                        } else {
+                            showToast(res.message || 'Không cập nhật được banner', 'error');
+                        }
+                    })
+                    .catch(() => showToast('Lỗi kết nối', 'error'));
+            });
+        });
+
+        function resetHomeBanner(slot) {
+            fetch(HOME_BANNER_API + '?_method=DELETE', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        slot: slot
+                    })
+                })
+                .then(r => r.json())
+                .then(res => {
+                    if (res.success) {
+                        showToast(res.message || 'Đã đưa về mặc định', 'success');
+                        loadHomeBanners();
+                    } else {
+                        showToast(res.message || 'Không thể đặt lại banner', 'error');
+                    }
+                })
+                .catch(() => showToast('Lỗi kết nối', 'error'));
+        }
+
+        // ════════════════════════════════════
+        // Popup trang chủ (index.php)
+        // ════════════════════════════════════
+        function loadHomePopupSettings() {
+            fetch(HOME_POPUP_API + '?t=' + Date.now())
+                .then(r => r.json())
+                .then(res => {
+                    if (!res.success || !res.data) {
+                        showToast('Không tải được cấu hình popup', 'error');
+                        return;
+                    }
+
+                    const d = res.data;
+                    document.getElementById('popupEnabled').checked = !!d.is_enabled;
+                    document.getElementById('popupCtaUrl').value = d.cta_url || '';
+                    document.getElementById('popupDelay').value = d.show_delay_seconds || 10;
+                    document.getElementById('popupRepeat').value = d.repeat_interval_seconds || 180;
+                    document.getElementById('popupPreviewImage').src = d.image_url || d.default_image_url || 'assets/img/banner/popup-tuyensinh.jpg';
+                    document.getElementById('popupImageFile').value = '';
+                })
+                .catch(() => showToast('Lỗi kết nối', 'error'));
+        }
+
+        document.getElementById('homePopupForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const fd = new FormData();
+            const enabled = document.getElementById('popupEnabled').checked ? '1' : '0';
+            const ctaUrl = document.getElementById('popupCtaUrl').value.trim();
+            const delay = document.getElementById('popupDelay').value;
+            const repeat = document.getElementById('popupRepeat').value;
+            const fileInput = document.getElementById('popupImageFile');
+            const file = fileInput.files ? fileInput.files[0] : null;
+
+            fd.append('is_enabled', enabled);
+            fd.append('cta_url', ctaUrl);
+            fd.append('show_delay_seconds', delay);
+            fd.append('repeat_interval_seconds', repeat);
+            if (file) {
+                fd.append('image', file);
+            }
+
+            fetch(HOME_POPUP_API, {
+                    method: 'POST',
+                    body: fd
+                })
+                .then(r => r.json())
+                .then(res => {
+                    if (res.success) {
+                        showToast(res.message || 'Đã lưu cấu hình popup', 'success');
+                        loadHomePopupSettings();
+                    } else {
+                        showToast(res.message || 'Không lưu được popup', 'error');
+                    }
+                })
+                .catch(() => showToast('Lỗi kết nối', 'error'));
+        });
+
+        document.getElementById('btnResetPopupImage').addEventListener('click', function() {
+            fetch(HOME_POPUP_API + '?_method=DELETE', {
+                    method: 'POST'
+                })
+                .then(r => r.json())
+                .then(res => {
+                    if (res.success) {
+                        showToast(res.message || 'Đã đưa ảnh popup về mặc định', 'success');
+                        loadHomePopupSettings();
+                    } else {
+                        showToast(res.message || 'Không thể reset ảnh popup', 'error');
                     }
                 })
                 .catch(() => showToast('Lỗi kết nối', 'error'));
