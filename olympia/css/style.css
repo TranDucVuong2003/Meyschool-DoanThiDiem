@@ -2145,7 +2145,9 @@ p.slider-number {
   cursor: pointer;
   z-index: 11;
   -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   -webkit-transform: translateZ(0);
+  transform: translateZ(0);
   transition: visibility 0.5s;
   left: 0;
   bottom: 0;
@@ -23158,7 +23160,9 @@ figcaption {
   cursor: pointer;
   z-index: 11;
   -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   -webkit-transform: translateZ(0);
+  transform: translateZ(0);
   transition: visibility 0.5s;
   left: 0;
   bottom: 0;
