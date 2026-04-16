@@ -2485,10 +2485,6 @@ p.slider-number {
     /*padding: 0 33px;*/
   }
 
-  .register-form-group {
-    /*margin: 0 0 25px;*/
-  }
-
   .student-feedback-content h4 {
     font-size: 26px;
     line-height: 28px;
@@ -2785,9 +2781,6 @@ p.slider-number {
   .step-box-content,
   .step-box-image {
     max-width: 100%;
-  }
-
-  .step-box-image {
   }
 
   .step-box {
@@ -3230,11 +3223,7 @@ p.slider-number {
   .address-map {
     /*margin-top: 40px;*/
   }
-
-  .school-address,
-  .address-email p,
-  .address-phone p {
-    margin-bottom: 20px;
+ margin-bottom: 20px;
   }
 
   .register-infor h6 {
@@ -3898,9 +3887,6 @@ p.slider-number {
     margin-bottom: 46px;
   }
 
-  #carouselFeedback {
-  }
-
   #processModal button.close {
     top: -20%;
     right: 20px;
@@ -3939,9 +3925,6 @@ p.slider-number {
 
   .admissions-team-item {
     max-width: 310px;
-  }
-
-  .button-header {
   }
 
   .header-box .navbar-brand {
@@ -15072,23 +15055,12 @@ html {
   .cs_content {
     margin-top: 30px;
   }
-
-  .cs__header-img .img-cover {
-    /*transform: translateX(-33%) translateY(-40%) scale(0.5);*/
-  }
-}
-
-@media (min-width: 375px) {
 }
 
 @media (min-width: 480px) {
   .cs_des {
     -webkit-line-clamp: 3; /* number of lines to show */
     line-clamp: 3;
-  }
-
-  .cs__header-img .img-cover {
-    /*transform: translateX(-34%) translateY(-35%) scale(0.8);*/
   }
 }
 
