@@ -32,10 +32,6 @@ h1 {
   justify-content: space-between;
 }
 
-.container-full {
-  /*padding: 80px;*/
-}
-
 .header-navbar-item {
   font-weight: 600;
   font-size: 16px;
@@ -913,9 +909,6 @@ p.admissions-team-item-icon-email a {
   transform: translate(-112px, -348px);
 }
 
-.img-step-icon-chat {
-}
-
 .img-step-icon-olympia {
   transform: translate(135px, -21px);
 }
@@ -1540,10 +1533,6 @@ p.slider-number {
 html {
   /*scroll-behavior: smooth;*/
 }
-
-.admissions-team-item-icon img {
-  padding: 10px;
-  margin-bottom: 0;
 }
 
 .mission-content {
@@ -4388,6 +4377,7 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type="number"] {
   -moz-appearance: textfield;
+  appearance: textfield;
 }
 
 /*-----------BUTTON-----------*/
@@ -4657,19 +4647,19 @@ img.cl-471873 {
 .datetimepicker-dropdown-bottom-left:before {
   display: none;
   border-bottom-color: transparent;
-  border-bottom-top: transparent;
+  border-top-color: transparent;
 }
 
 .datetimepicker-dropdown-bottom-right:after {
   display: none;
   border-bottom-color: transparent;
-  border-bottom-top: transparent;
+  border-top-color: transparent;
 }
 
 .datetimepicker-dropdown-bottom-right:before {
   display: none;
   border-bottom-color: transparent;
-  border-bottom-top: transparent;
+  border-top-color: transparent;
 }
 
 .ui-loader {
@@ -11012,7 +11002,7 @@ select.select-day option {
   }
 
   .about-quote {
-    lign-self: self-end;
+    align-self: flex-end;
     width: 100%;
     padding-left: 14%;
     margin-top: 40px;
@@ -15061,6 +15051,7 @@ html {
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 2; /* number of lines to show */
+    line-clamp: 2;
     -webkit-box-orient: vertical;
   }
 
@@ -15096,6 +15087,7 @@ html {
 @media (min-width: 480px) {
   .cs_des {
     -webkit-line-clamp: 3; /* number of lines to show */
+    line-clamp: 3;
   }
 
   .cs__header-img .img-cover {
@@ -15144,6 +15136,7 @@ html {
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 3; /* number of lines to show */
+    line-clamp: 3;
     -webkit-box-orient: vertical;
   }
 
@@ -15202,6 +15195,7 @@ html {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
+    line-clamp: 7;
     -webkit-line-clamp: 7; /* number of lines to show */
     -webkit-box-orient: vertical;
   }
@@ -24381,6 +24375,7 @@ figcaption {
 .dr-cache .desc {
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   height: 72px;
@@ -24908,6 +24903,7 @@ figcaption {
 .olym_events .event-name {
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   height: 91px;
@@ -25429,6 +25425,7 @@ figcaption {
 }
 .epm_news_2 .n_titles a {
   display: -webkit-box;
+  line-clamp: 3;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;

@@ -261,8 +261,7 @@ require_once __DIR__ . '/access.php';
         <span>Meyschool<br>Đoàn Thị Điểm</span>
     </div>
 
-    <a href="dashboard.php"
-        class="sidebar-module <?= $_sidebar_page === 'dashboard.php' ? 'active' : '' ?>"
+    <a href="dashboard.php" class="sidebar-module <?= $_sidebar_page === 'dashboard.php' ? 'active' : '' ?>"
         aria-label="Đi tới trang dashboard">
         Trang quản trị
     </a>
