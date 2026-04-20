@@ -23,7 +23,6 @@
     <meta name="twitter:description" content="Cập nhật các sự kiện mới nhất của Meyschool Đoàn Thị Điểm">
 
     <link media="all" type="text/css" rel="stylesheet"
-        href="vendor/core/plugins/language/css/language-publice209.css?v=1.0.0">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <link rel="stylesheet" href="olympia/css/swiper-bundle.min.css">
@@ -313,7 +312,6 @@
     <script src="olympia/js/bootstrap.min.js"></script>
     <script src="olympia/js/jquery.toast.min.js"></script>
     <script src="olympia/js/main.js"></script>
-    <script src="vendor/core/plugins/language/js/language-publice209.js?v=1.0.0"></script>
     <script src="olympia/js/contact.js"></script>
     <script src="olympia/js/custom.js"></script>
 

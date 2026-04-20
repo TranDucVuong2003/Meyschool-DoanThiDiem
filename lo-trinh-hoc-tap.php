@@ -25,7 +25,6 @@
     <meta name="twitter:description" content="Lộ trình học tập">
 
     <link media="all" type="text/css" rel="stylesheet"
-        href="vendor/core/plugins/language/css/language-publice209.css?v=1.0.0">
 
 
 
@@ -34,7 +33,7 @@
     <link rel="alternate" href="lo-trinh-hoc-tap.html" hreflang="vi" />
 
 
-    <link href="../unpkg.com/aos%402.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <link rel="stylesheet" href="olympia/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="olympia/css/reset.css">
@@ -50,7 +49,7 @@
     <script type="text/javascript" src="olympia/js/jquery.validate.min.js"></script>
     <script type="text/javascript" src="olympia/js/swiper-bundle.min.js"></script>
     <script src="olympia/js/slick.js"></script>
-    <script src="../unpkg.com/aos%402.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <link rel="alternate" href="en.html" hreflang="en" />
     <style>
@@ -446,7 +445,7 @@
                 dl = l != 'dataLayer' ? '&l=' + l : '';
             j.async = true;
             j.src =
-                '../www.googletagmanager.com/gtm5445.html?id=' + i + dl;
+                'https://www.googletagmanager.com/gtm5445.html?id=' + i + dl;
             f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-5SS24C7N');
     </script>
@@ -467,7 +466,7 @@
     <meta property="fb:admins" content="100003174617936" />
     <meta property="fb:admins" content="100000009019012" />
     <script type="text/javascript"
-        src="../platform-api.sharethis.com/js/sharethis.js#property=65b715d1dce46a00126a9bb7&product=inline-share-buttons&source=platform"
+        src="https://platform-api.sharethis.com/js/sharethis.js#property=65b715d1dce46a00126a9bb7&product=inline-share-buttons&source=platform"
         async="async"></script>
 </head>
 
@@ -493,7 +492,7 @@
             }
             js = d.createElement(s);
             js.id = id;
-            js.src = "../connect.facebook.net/en_US/sdk.js";
+            js.src = "https://connect.facebook.net/en_US/sdk.js";
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </script>
@@ -737,7 +736,6 @@
     <script src="olympia/js/bootstrap.min.js"></script>
     <script src="olympia/js/jquery.toast.min.js"></script>
     <script src="olympia/js/main.js"></script>
-    <script src="vendor/core/plugins/language/js/language-publice209.js?v=1.0.0"></script>
 
 
 

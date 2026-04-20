@@ -16,7 +16,6 @@
     <meta property="og:type" content="article">
 
     <link media="all" type="text/css" rel="stylesheet"
-        href="vendor/core/plugins/language/css/language-publice209.css?v=1.0.0">
     <link rel="stylesheet" href="olympia/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="olympia/css/reset.css">
     <link rel="stylesheet" href="olympia/css/bootstrap-datetimepicker.min.css">
@@ -530,7 +529,6 @@
     <script src="olympia/js/bootstrap.min.js"></script>
     <script src="olympia/js/jquery.toast.min.js"></script>
     <script src="olympia/js/main.js"></script>
-    <script src="vendor/core/plugins/language/js/language-publice209.js?v=1.0.0"></script>
     <script src="olympia/js/contact.js"></script>
     <script src="olympia/js/custom.js"></script>
 

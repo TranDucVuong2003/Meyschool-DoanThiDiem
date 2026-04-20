@@ -11,7 +11,7 @@
     <title>Chương trình đào tạo – Meyschool Đoàn Thị Điểm</title>
     <meta name="description" content="Chương trình đào tạo tại Meyschool Đoàn Thị Điểm Phú Quốc">
 
-    <link href="../unpkg.com/aos%402.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="olympia/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="olympia/css/reset.css">
     <link rel="stylesheet" href="olympia/css/bootstrap-datetimepicker.min.css">
@@ -25,7 +25,7 @@
     <script type="text/javascript" src="olympia/js/jquery.validate.min.js"></script>
     <script type="text/javascript" src="olympia/js/swiper-bundle.min.js"></script>
     <script src="olympia/js/slick.js"></script>
-    <script src="../unpkg.com/aos%402.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <style>
     :root {
         --ct-navy: #1e3a5f;

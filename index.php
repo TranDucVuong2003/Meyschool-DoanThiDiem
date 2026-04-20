@@ -25,17 +25,11 @@
     <meta name="twitter:title" content="Trang chủ">
     <meta name="twitter:description" content="">
 
-    <link media="all" type="text/css" rel="stylesheet"
-        href="vendor/core/plugins/language/css/language-publice209.css?v=1.0.0">
-
-
-
-
-    <link rel="alternate" href="en.html" hreflang="en" />
+    <link media="all" type="text/css" rel="stylesheet" <link rel="alternate" href="en.html" hreflang="en" />
     <link rel="alternate" href="index.html" hreflang="vi" />
 
 
-    <link href="../unpkg.com/aos%402.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <link rel="stylesheet" href="olympia/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="olympia/css/reset.css">
@@ -51,7 +45,7 @@
     <script type="text/javascript" src="olympia/js/jquery.validate.min.js"></script>
     <script type="text/javascript" src="olympia/js/swiper-bundle.min.js"></script>
     <script src="olympia/js/slick.js"></script>
-    <script src="../unpkg.com/aos%402.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <link rel="alternate" href="en.html" hreflang="en" />
     <style>
@@ -294,7 +288,7 @@
             dl = l != 'dataLayer' ? '&l=' + l : '';
         j.async = true;
         j.src =
-            '../www.googletagmanager.com/gtm5445.html?id=' + i + dl;
+            'https://www.googletagmanager.com/gtm5445.html?id=' + i + dl;
         f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-5SS24C7N');
     </script>
@@ -314,9 +308,6 @@
     </script>
     <meta property="fb:admins" content="100003174617936" />
     <meta property="fb:admins" content="100000009019012" />
-    <script type="text/javascript"
-        src="../platform-api.sharethis.com/js/sharethis.js#property=65b715d1dce46a00126a9bb7&product=inline-share-buttons&source=platform"
-        async="async"></script>
 </head>
 
 <body>
@@ -324,27 +315,6 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5SS24C7N" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <script>
-    window.fbAsyncInit = function() {
-        FB.init({
-            appId: '1759201507895169',
-            xfbml: true,
-            version: 'v19.0'
-        });
-        FB.AppEvents.logPageView();
-    };
-
-    (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {
-            return;
-        }
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "../connect.facebook.net/en_US/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-    </script>
     <?php include 'includes/header.php'; ?>
     <div class="overlay_mark_search" style="display:none;"></div>
 
@@ -533,78 +503,58 @@
             </div>
 
             <div class="olympia-number-right mobile-device show-on-scroll">
-                <h3 class="olympia-number-title font-garamond-bold color-21">Meyschool qua những con số</h3>
-                <p class="olympia-number-content font-avenir-regular size-14 color-3a">Không chỉ đi tiên phong trong xây
-                    dựng và đổi mới chương trình giáo dục theo định hướng phát triển năng lực tại Việt Nam, trường
-                    Meyschool tự hào là đơn vị dẫn đầu trong tiếp cận và vận dụng các nội dung và phương pháp giáo dục
-                    hiện đại của thế giới để học sinh Meyschool tự tin bước ra thế giới với tri thức, kĩ năng, phẩm chất
-                    và năng lực của những công dân thế kỷ 21.</p>
+                <p class="olympia-number-content font-avenir-regular size-14 color-3a">Meyschool Đoàn Thị Điểm là sự kết
+                    tinh của hợp tác chiến lược giữa Meygroup và Hệ thống Giáo dục Đoàn Thị Điểm Hà Nội - ngôi trường từ
+                    thực tiễn đào tạo hàng nghìn học sinh học tại Anh bằng chương trình quốc tế. Kế thừa nền tảng truyền
+                    thống và triết lý giáo dục nhân văn của Đoàn Thị Điểm, nhà trường đề cao kỷ cương - chất lượng - sáng
+                    tạo, hướng tới mục tiêu đào tạo những thế hệ học sinh không chỉ vững vàng về tri thức mà còn giàu bản
+                    lĩnh, kỹ năng và tinh thần trách nhiệm với cộng đồng, sẵn sàng hội nhập và phát triển trong tương lai.</p>
                 <a class="link-button font-avenir-demibold  color-471873 text-uppercase" href="page/ve-chung-toi.html"
                     title="" target="_blank">về chúng tôi</a>
-                <div class="mobile-item mobile-item-top">
-                    <div class="mobile-item-top-left text-right">
-                        <div class="mobile-item-img mobile-item-img1">
-                            <img src="assets/img/co-so-vat-chat/phòng học.JPG" alt="" class="mobile1">
-                        </div>
-                        <div class="mobile-item-img mobile-item-img2">
-                            <div class="flex-center-center number-blck number-blck-v">
-                                <div class="number-cnt text-center">
-                                    <span>100</span>
-                                    <p>100% giáo viên có trình độ Thạc sĩ - Tiến sĩ</p>
-                                </div>
+                <div class="number-mobile-grid">
+                    <div class="number-mobile-card number-mobile-image">
+                        <img src="assets/img/co-so-vat-chat/thư viện.jpg" alt="">
+                    </div>
+                    <div class="number-mobile-card number-mobile-block">
+                        <div class="flex-center-center number-blck number-blck-t" style="background-color: #314d9b;">
+                            <div class="number-cnt text-center">
+                                <span style="font-size: 18px; line-height: 1.3;">Cơ sở vật chất hiện đại</span>
+                                <p style="font-size: 15px; line-height: 1.4;">Chương trình leader in me bản quyền</p>
                             </div>
-                        </div>
-                        <div class="mobile-item-img mobile-item-img3">
-                            <img src="assets/img/co-so-vat-chat/sân bóng rổ.jpg" alt="" class="mobile10">
                         </div>
                     </div>
-                    <div class="mobile-item-top-right text-left">
-                        <div class="mobile-item-img mobile-item-img4">
-                            <div class="flex-center-center number-blck number-blck-t">
-                                <div class="number-cnt text-center">
-                                    <span>7.0</span>
-                                    <p>Điểm IELTS trung bình của học sinh lớp 12 khi tốt nghiệp</p>
-                                </div>
+                    <div class="number-mobile-card number-mobile-block">
+                        <div class="flex-center-center number-blck number-blck-v">
+                            <div class="number-cnt text-center">
+                                <span style="color: #471873;">30</span>
+                                <p style="color: #471873;">năm phát triển giáo dục tại Thủ đô Hà Nội</p>
                             </div>
-                        </div>
-                        <div class="mobile-item-img mobile-item-img5">
-                            <img src="olympia/images/mobile5.jpg" alt="" class="mobile5">
                         </div>
                     </div>
-                </div>
-                <div class="mobile-item mobile-item-bottom">
-                    <div class="mobile-item-top-left text-right">
-                        <div class="mobile-item-img mobile-item-img6">
-                            <div class="flex-center-center number-blck number-blck-t"
-                                style="background-color: #314d9b;">
-                                <div class="number-cnt text-center">
-                                    <span>2</span>
-                                    <p>Cấp học</p>
-                                </div>
+                    <div class="number-mobile-card number-mobile-image">
+                        <img src="assets/img/co-so-vat-chat/phòng học.JPG" alt="">
+                    </div>
+                    <div class="number-mobile-card number-mobile-image">
+                        <img src="assets/img/co-so-vat-chat/sân bóng rổ.jpg" alt="">
+                    </div>
+                    <div class="number-mobile-card number-mobile-block">
+                        <div class="flex-center-center number-blck number-blck-t" style="background-color: #314d9b;">
+                            <div class="number-cnt text-center">
+                                <span>2</span>
+                                <p>Cấp học</p>
                             </div>
-                        </div>
-                        <div class="mobile-item-img mobile-item-img7">
-                            <img src="olympia/images/mobile3.jpg" alt="" class="mobile3">
                         </div>
                     </div>
-                    <div class="mobile-item-top-right text-left">
-                        <div class="mobile-item-img mobile-item-img8">
-                            <div class="flex-center-center number-blck number-blck-v">
-                                <div class="number-cnt text-center">
-                                    <span>20</span>
-                                    <p>Cơ sở vật chất hiện đại</p>
-                                </div>
+                    <div class="number-mobile-card number-mobile-block">
+                        <div class="flex-center-center number-blck number-blck-v">
+                            <div class="number-cnt text-center">
+                                <span>100<sup style="font-size: 30px; margin-top: 5px">%</sup></span>
+                                <p>Giáo viên được đào tạo tại <br> Đại học Sư Phạm</p>
                             </div>
                         </div>
-                        <div class="mobile-item-img mobile-item-img9">
-                            <div class="flex-center-center number-blck number-blck-t"
-                                style="background-color: #314d9b;">
-                                <div class="number-cnt text-center">
-                                    <span>100%</span>
-                                    <p>100% giáo viên được đào tạo tại <br> đại học sư phạm</p>
-                                </div>
-                            </div>
-                        </div>
+                    </div>
+                    <div class="number-mobile-card number-mobile-image">
+                        <img src="assets/img/co-so-vat-chat/phòng nhạc.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -1039,15 +989,12 @@
     });
     </script>
     <script src="olympia/js/bootstrap.min.js"></script>
-    <script src="olympia/js/jquery.toast.min.js"></script>
     <script src="olympia/js/main.js"></script>
-    <script src="vendor/core/plugins/language/js/language-publice209.js?v=1.0.0"></script>
 
 
 
 
 
-    <script src="olympia/js/contact.js"></script>
     <script src="olympia/js/custom.js"></script>
 
     <script>

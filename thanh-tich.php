@@ -21,8 +21,7 @@
     <meta name="twitter:description" content="">
 
     <link media="all" type="text/css" rel="stylesheet"
-        href="vendor/core/plugins/language/css/language-publice209.css?v=1.0.0">
-    <link href="../unpkg.com/aos%402.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="olympia/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="olympia/css/reset.css">
     <link rel="stylesheet" href="olympia/css/bootstrap-datetimepicker.min.css">
@@ -37,7 +36,7 @@
     <script type="text/javascript" src="olympia/js/jquery.validate.min.js"></script>
     <script type="text/javascript" src="olympia/js/swiper-bundle.min.js"></script>
     <script src="olympia/js/slick.js"></script>
-    <script src="../unpkg.com/aos%402.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <style>
     nav#admin_bar {
@@ -333,7 +332,6 @@
     <script src="olympia/js/bootstrap.min.js"></script>
     <script src="olympia/js/jquery.toast.min.js"></script>
     <script src="olympia/js/main.js"></script>
-    <script src="vendor/core/plugins/language/js/language-publice209.js?v=1.0.0"></script>
     <script src="olympia/js/contact.js"></script>
     <script src="olympia/js/custom.js"></script>
 

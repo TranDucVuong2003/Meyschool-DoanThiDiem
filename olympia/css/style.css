@@ -32,6 +32,10 @@ h1 {
   justify-content: space-between;
 }
 
+.container-full {
+  /*padding: 80px;*/
+}
+
 .header-navbar-item {
   font-weight: 600;
   font-size: 16px;
@@ -909,6 +913,9 @@ p.admissions-team-item-icon-email a {
   transform: translate(-112px, -348px);
 }
 
+.img-step-icon-chat {
+}
+
 .img-step-icon-olympia {
   transform: translate(135px, -21px);
 }
@@ -1530,6 +1537,15 @@ p.slider-number {
   transform: translateY(-100%);
 }
 
+html {
+  /*scroll-behavior: smooth;*/
+}
+
+.admissions-team-item-icon img {
+  padding: 10px;
+  margin-bottom: 0;
+}
+
 .mission-content {
   background-image: url("../images/08_quote_mark.html");
   background-repeat: no-repeat;
@@ -2145,9 +2161,7 @@ p.slider-number {
   cursor: pointer;
   z-index: 11;
   -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
   -webkit-transform: translateZ(0);
-  transform: translateZ(0);
   transition: visibility 0.5s;
   left: 0;
   bottom: 0;
@@ -2485,6 +2499,10 @@ p.slider-number {
     /*padding: 0 33px;*/
   }
 
+  .register-form-group {
+    /*margin: 0 0 25px;*/
+  }
+
   .student-feedback-content h4 {
     font-size: 26px;
     line-height: 28px;
@@ -2781,6 +2799,9 @@ p.slider-number {
   .step-box-content,
   .step-box-image {
     max-width: 100%;
+  }
+
+  .step-box-image {
   }
 
   .step-box {
@@ -3223,7 +3244,11 @@ p.slider-number {
   .address-map {
     /*margin-top: 40px;*/
   }
- margin-bottom: 20px;
+
+  .school-address,
+  .address-email p,
+  .address-phone p {
+    margin-bottom: 20px;
   }
 
   .register-infor h6 {
@@ -3887,6 +3912,9 @@ p.slider-number {
     margin-bottom: 46px;
   }
 
+  #carouselFeedback {
+  }
+
   #processModal button.close {
     top: -20%;
     right: 20px;
@@ -3925,6 +3953,9 @@ p.slider-number {
 
   .admissions-team-item {
     max-width: 310px;
+  }
+
+  .button-header {
   }
 
   .header-box .navbar-brand {
@@ -4357,7 +4388,6 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type="number"] {
   -moz-appearance: textfield;
-  appearance: textfield;
 }
 
 /*-----------BUTTON-----------*/
@@ -4627,19 +4657,19 @@ img.cl-471873 {
 .datetimepicker-dropdown-bottom-left:before {
   display: none;
   border-bottom-color: transparent;
-  border-top-color: transparent;
+  border-bottom-top: transparent;
 }
 
 .datetimepicker-dropdown-bottom-right:after {
   display: none;
   border-bottom-color: transparent;
-  border-top-color: transparent;
+  border-bottom-top: transparent;
 }
 
 .datetimepicker-dropdown-bottom-right:before {
   display: none;
   border-bottom-color: transparent;
-  border-top-color: transparent;
+  border-bottom-top: transparent;
 }
 
 .ui-loader {
@@ -9698,7 +9728,8 @@ select.select-day option {
   }
 
   .olympia-testimonial-content {
-    display: none;
+    display: block;
+    margin-top: 16px;
   }
 
   .olympia-testimonial-entry h5 {
@@ -9947,6 +9978,43 @@ select.select-day option {
     margin: 20px 0;
   }
 
+  .home-index .number-mobile-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 12px;
+  }
+
+  .home-index .number-mobile-card {
+    min-height: 120px;
+  }
+
+  .home-index .number-mobile-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 120px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .home-index .number-mobile-block .number-blck {
+    width: 100% !important;
+    min-height: 120px;
+    height: 100%;
+    padding: 16px 10px;
+  }
+
+  .home-index .number-mobile-block .number-cnt > span {
+    font-size: 56px;
+    line-height: 1;
+  }
+
+  .home-index .number-mobile-block .number-cnt p {
+    font-size: 16px;
+    line-height: 1.35;
+  }
+
   .numbertext {
     /*margin-top: 220px;*/
     left: 50%;
@@ -9955,6 +10023,7 @@ select.select-day option {
     text-align: center;
     margin-top: 45vh;
   }
+
 }
 
 @media (min-width: 320px) {
@@ -10982,7 +11051,7 @@ select.select-day option {
   }
 
   .about-quote {
-    align-self: flex-end;
+    lign-self: self-end;
     width: 100%;
     padding-left: 14%;
     margin-top: 40px;
@@ -15031,7 +15100,6 @@ html {
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 2; /* number of lines to show */
-    line-clamp: 2;
     -webkit-box-orient: vertical;
   }
 
@@ -15055,12 +15123,22 @@ html {
   .cs_content {
     margin-top: 30px;
   }
+
+  .cs__header-img .img-cover {
+    /*transform: translateX(-33%) translateY(-40%) scale(0.5);*/
+  }
+}
+
+@media (min-width: 375px) {
 }
 
 @media (min-width: 480px) {
   .cs_des {
     -webkit-line-clamp: 3; /* number of lines to show */
-    line-clamp: 3;
+  }
+
+  .cs__header-img .img-cover {
+    /*transform: translateX(-34%) translateY(-35%) scale(0.8);*/
   }
 }
 
@@ -15105,7 +15183,6 @@ html {
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 3; /* number of lines to show */
-    line-clamp: 3;
     -webkit-box-orient: vertical;
   }
 
@@ -15164,7 +15241,6 @@ html {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    line-clamp: 7;
     -webkit-line-clamp: 7; /* number of lines to show */
     -webkit-box-orient: vertical;
   }
@@ -22966,7 +23042,7 @@ figcaption {
 .hotline-social-stack {
   position: absolute;
   left: 37px;
-  bottom: 83px;
+  bottom: 5px;
   display: flex;
   flex-direction: column;
   gap: 13px;
@@ -23119,7 +23195,7 @@ figcaption {
   }
 
   .hotline-social-stack {
-    bottom: 79px;
+    bottom: 2px;
   }
 }
 
@@ -23132,9 +23208,7 @@ figcaption {
   cursor: pointer;
   z-index: 11;
   -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
   -webkit-transform: translateZ(0);
-  transform: translateZ(0);
   transition: visibility 0.5s;
   left: 0;
   bottom: 0;
@@ -24346,7 +24420,6 @@ figcaption {
 .dr-cache .desc {
   display: -webkit-box;
   -webkit-line-clamp: 3;
-  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   height: 72px;
@@ -24874,7 +24947,6 @@ figcaption {
 .olym_events .event-name {
   display: -webkit-box;
   -webkit-line-clamp: 3;
-  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   height: 91px;
@@ -25396,7 +25468,6 @@ figcaption {
 }
 .epm_news_2 .n_titles a {
   display: -webkit-box;
-  line-clamp: 3;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
