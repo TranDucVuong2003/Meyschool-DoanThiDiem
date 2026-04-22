@@ -83,3 +83,14 @@ $ss_fanpage_encoded = urlencode($ss['fanpage']);
 $chatBasePath = '';
 include __DIR__ . '/../chat/widget.php';
 ?>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    if (typeof AOS !== 'undefined') {
+        AOS.init({
+            duration: 700,
+            once: true
+        });
+    }
+});
+</script>

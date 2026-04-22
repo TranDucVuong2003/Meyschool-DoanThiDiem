@@ -19,8 +19,8 @@
     <meta name="twitter:title" content="Xe bus đưa đón">
     <meta name="twitter:description" content="">
 
-    <link media="all" type="text/css" rel="stylesheet"
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- <link media="all" type="text/css" rel="stylesheet" <link href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+        rel="stylesheet"> -->
     <link rel="stylesheet" href="olympia/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="olympia/css/reset.css">
     <link rel="stylesheet" href="olympia/css/bootstrap-datetimepicker.min.css">

@@ -19,7 +19,6 @@
     <meta name="twitter:title" content="Bán trú">
     <meta name="twitter:description" content="">
 
-    <link media="all" type="text/css" rel="stylesheet"
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="olympia/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="olympia/css/reset.css">
@@ -39,299 +38,299 @@
 
     <link rel="alternate" href="en.html" hreflang="en" />
     <style>
-    nav#admin_bar {
-        display: none;
-    }
+        nav#admin_bar {
+            display: none;
+        }
 
-    .jq-toast-wrap {
-        display: block;
-        position: fixed;
-        width: 250px;
-        pointer-events: none !important;
-        letter-spacing: normal;
-        z-index: 9000999999999 !important;
-    }
+        .jq-toast-wrap {
+            display: block;
+            position: fixed;
+            width: 250px;
+            pointer-events: none !important;
+            letter-spacing: normal;
+            z-index: 9000999999999 !important;
+        }
 
-    .btn-dk {
-        width: 210px;
-        height: 50px;
-        line-height: 50px;
-        text-align: center;
-        background-color: #2354a0;
-        font-size: 14px;
-        font-weight: 600;
-        text-transform: uppercase;
-        border: none;
-        color: #fff;
-        display: inline-block;
-        margin-top: 20px;
-        border-radius: 10px;
-    }
+        .btn-dk {
+            width: 210px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            background-color: #2354a0;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            border: none;
+            color: #fff;
+            display: inline-block;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
 
-    .btn-full {
-        text-align: center;
-        line-height: 60px;
-    }
+        .btn-full {
+            text-align: center;
+            line-height: 60px;
+        }
 
-    body.show-admin-bar {
-        margin-top: 0px !important;
-    }
+        body.show-admin-bar {
+            margin-top: 0px !important;
+        }
 
-    :root {
-        --blue-1: #2354a0;
-        --blue-2: #439bd4;
-        --blue-3: #4db0e4;
-        --blue-soft: #eef7ff;
-    }
+        :root {
+            --blue-1: #2354a0;
+            --blue-2: #439bd4;
+            --blue-3: #4db0e4;
+            --blue-soft: #eef7ff;
+        }
 
-    .boarding-wrap {
-        background: #f7fbff;
-    }
+        .boarding-wrap {
+            background: #f7fbff;
+        }
 
-    .boarding-container {
-        max-width: 1260px;
-        margin: 0 auto;
-        padding: 0 20px;
-    }
+        .boarding-container {
+            max-width: 1260px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-    .boarding-hero {
-        padding: 120px 0 60px;
-        position: relative;
-        overflow: hidden;
-        background: linear-gradient(130deg, rgba(35, 84, 160, 0.94) 0%, rgba(67, 155, 212, 0.9) 60%, rgba(77, 176, 228, 0.84) 100%), url('storage/banner/ve-chung-toi-web.jpg') center/cover no-repeat;
-    }
+        .boarding-hero {
+            padding: 120px 0 60px;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(130deg, rgba(35, 84, 160, 0.94) 0%, rgba(67, 155, 212, 0.9) 60%, rgba(77, 176, 228, 0.84) 100%), url('storage/banner/ve-chung-toi-web.jpg') center/cover no-repeat;
+        }
 
-    .boarding-hero::before,
-    .boarding-hero::after {
-        content: '';
-        position: absolute;
-        border-radius: 50%;
-        pointer-events: none;
-    }
+        .boarding-hero::before,
+        .boarding-hero::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+        }
 
-    .boarding-hero::before {
-        width: 380px;
-        height: 380px;
-        right: -140px;
-        top: -130px;
-        background: rgba(255, 255, 255, 0.18);
-    }
+        .boarding-hero::before {
+            width: 380px;
+            height: 380px;
+            right: -140px;
+            top: -130px;
+            background: rgba(255, 255, 255, 0.18);
+        }
 
-    .boarding-hero::after {
-        width: 270px;
-        height: 270px;
-        left: -100px;
-        bottom: -120px;
-        background: rgba(255, 255, 255, 0.1);
-    }
+        .boarding-hero::after {
+            width: 270px;
+            height: 270px;
+            left: -100px;
+            bottom: -120px;
+            background: rgba(255, 255, 255, 0.1);
+        }
 
-    .boarding-hero-grid {
-        display: grid;
-        grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
-        gap: 28px;
-        align-items: center;
-    }
-
-    .boarding-hero h1 {
-        font-family: 'Garamond', serif;
-        font-size: clamp(34px, 4.2vw, 52px);
-        margin: 14px 0 16px;
-        color: #fff;
-        line-height: 1.1;
-    }
-
-    .boarding-hero p {
-        font-size: 16px;
-        line-height: 1.8;
-        color: rgba(255, 255, 255, 0.93);
-        max-width: 540px;
-        margin: 0;
-    }
-
-    .boarding-hero .breadcrumb {
-        margin: 0 0 14px;
-        background: rgba(255, 255, 255, 0.18);
-        border: 1px solid rgba(255, 255, 255, 0.38);
-        display: inline-flex;
-        flex-wrap: wrap;
-        padding: 8px 16px;
-        border-radius: 999px;
-        position: static !important;
-        transform: none !important;
-    }
-
-    .boarding-hero .breadcrumb-item a,
-    .boarding-hero .breadcrumb-item.active {
-        color: #fff;
-        font-size: 13px;
-    }
-
-    .boarding-highlights {
-        margin-top: 18px;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    .boarding-highlights span {
-        display: inline-flex;
-        align-items: center;
-        padding: 8px 14px;
-        border-radius: 999px;
-        background: rgba(255, 255, 255, 0.18);
-        color: #fff;
-        font-size: 13px;
-        font-weight: 700;
-        border: 1px solid rgba(255, 255, 255, 0.32);
-    }
-
-    .boarding-card {
-        background: rgba(255, 255, 255, 0.93);
-        border-radius: 22px;
-        border: 1px solid rgba(67, 155, 212, 0.16);
-        box-shadow: 0 16px 32px rgba(20, 55, 100, 0.26);
-        padding: 16px;
-    }
-
-    .boarding-card img {
-        width: 100%;
-        height: 220px;
-        border-radius: 16px;
-        object-fit: cover;
-        display: block;
-        margin-bottom: 12px;
-    }
-
-    .boarding-metrics {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 10px;
-    }
-
-    .boarding-metrics div {
-        background: #fff;
-        border: 1px solid rgba(67, 155, 212, 0.2);
-        border-radius: 12px;
-        padding: 10px;
-        text-align: center;
-    }
-
-    .boarding-metrics b {
-        display: block;
-        color: #2354a0;
-        font-size: 22px;
-        margin-bottom: 3px;
-    }
-
-    .boarding-metrics span {
-        color: #436b8b;
-        font-size: 12px;
-        line-height: 1.4;
-    }
-
-    .boarding-content {
-        padding: 40px 0 60px;
-        margin-bottom: 110px;
-    }
-
-    .boarding-content .boarding-text-card {
-        background: #fff;
-        border-radius: 22px;
-        box-shadow: 0 14px 30px rgba(23, 52, 93, .08);
-        border: 1px solid rgba(67, 155, 212, .14);
-        padding: 36px 40px;
-    }
-
-    .boarding-content .boarding-text-card>p:first-child {
-        font-size: 16px;
-        line-height: 1.85;
-        color: #2c4963;
-        margin: 0 0 28px;
-    }
-
-    .boarding-content h3 {
-        font-family: 'Garamond', serif;
-        font-size: 22px;
-        color: var(--blue-1);
-        margin: 28px 0 12px;
-        padding-bottom: 8px;
-        border-bottom: 2px solid var(--blue-soft);
-    }
-
-    .boarding-content h3:first-of-type {
-        margin-top: 0;
-    }
-
-    .boarding-content ul {
-        list-style: none;
-        padding: 0;
-        margin: 0 0 8px;
-    }
-
-    .boarding-content li {
-        position: relative;
-        padding-left: 20px;
-        font-size: 15px;
-        line-height: 1.8;
-        color: #3f6686;
-        margin-bottom: 6px;
-    }
-
-    .boarding-content li::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 11px;
-        width: 7px;
-        height: 7px;
-        border-radius: 50%;
-        background: var(--blue-2);
-    }
-
-    .boarding-content ol {
-        padding-left: 20px;
-        margin: 0 0 8px;
-    }
-
-    .boarding-content ol li {
-        padding-left: 6px;
-        list-style: decimal;
-    }
-
-    .boarding-content ol li::before {
-        display: none;
-    }
-
-    .boarding-content .boarding-note {
-        margin-top: 28px;
-        background: #fffbeb;
-        border: 1px solid #fcd34d;
-        border-radius: 14px;
-        padding: 18px 22px;
-        font-size: 14px;
-        color: #78350f;
-        line-height: 1.75;
-    }
-
-    .boarding-content .boarding-note strong {
-        color: #92400e;
-    }
-
-    @media (max-width: 1100px) {
         .boarding-hero-grid {
-            grid-template-columns: 1fr;
+            display: grid;
+            grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+            gap: 28px;
+            align-items: center;
+        }
+
+        .boarding-hero h1 {
+            font-family: 'Garamond', serif;
+            font-size: clamp(34px, 4.2vw, 52px);
+            margin: 14px 0 16px;
+            color: #fff;
+            line-height: 1.1;
+        }
+
+        .boarding-hero p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.93);
+            max-width: 540px;
+            margin: 0;
+        }
+
+        .boarding-hero .breadcrumb {
+            margin: 0 0 14px;
+            background: rgba(255, 255, 255, 0.18);
+            border: 1px solid rgba(255, 255, 255, 0.38);
+            display: inline-flex;
+            flex-wrap: wrap;
+            padding: 8px 16px;
+            border-radius: 999px;
+            position: static !important;
+            transform: none !important;
+        }
+
+        .boarding-hero .breadcrumb-item a,
+        .boarding-hero .breadcrumb-item.active {
+            color: #fff;
+            font-size: 13px;
+        }
+
+        .boarding-highlights {
+            margin-top: 18px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .boarding-highlights span {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 14px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.18);
+            color: #fff;
+            font-size: 13px;
+            font-weight: 700;
+            border: 1px solid rgba(255, 255, 255, 0.32);
         }
 
         .boarding-card {
+            background: rgba(255, 255, 255, 0.93);
+            border-radius: 22px;
+            border: 1px solid rgba(67, 155, 212, 0.16);
+            box-shadow: 0 16px 32px rgba(20, 55, 100, 0.26);
+            padding: 16px;
+        }
+
+        .boarding-card img {
+            width: 100%;
+            height: 220px;
+            border-radius: 16px;
+            object-fit: cover;
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        .boarding-metrics {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 10px;
+        }
+
+        .boarding-metrics div {
+            background: #fff;
+            border: 1px solid rgba(67, 155, 212, 0.2);
+            border-radius: 12px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .boarding-metrics b {
+            display: block;
+            color: #2354a0;
+            font-size: 22px;
+            margin-bottom: 3px;
+        }
+
+        .boarding-metrics span {
+            color: #436b8b;
+            font-size: 12px;
+            line-height: 1.4;
+        }
+
+        .boarding-content {
+            padding: 40px 0 60px;
+            margin-bottom: 110px;
+        }
+
+        .boarding-content .boarding-text-card {
+            background: #fff;
+            border-radius: 22px;
+            box-shadow: 0 14px 30px rgba(23, 52, 93, .08);
+            border: 1px solid rgba(67, 155, 212, .14);
+            padding: 36px 40px;
+        }
+
+        .boarding-content .boarding-text-card>p:first-child {
+            font-size: 16px;
+            line-height: 1.85;
+            color: #2c4963;
+            margin: 0 0 28px;
+        }
+
+        .boarding-content h3 {
+            font-family: 'Garamond', serif;
+            font-size: 22px;
+            color: var(--blue-1);
+            margin: 28px 0 12px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--blue-soft);
+        }
+
+        .boarding-content h3:first-of-type {
+            margin-top: 0;
+        }
+
+        .boarding-content ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 8px;
+        }
+
+        .boarding-content li {
+            position: relative;
+            padding-left: 20px;
+            font-size: 15px;
+            line-height: 1.8;
+            color: #3f6686;
+            margin-bottom: 6px;
+        }
+
+        .boarding-content li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 11px;
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--blue-2);
+        }
+
+        .boarding-content ol {
+            padding-left: 20px;
+            margin: 0 0 8px;
+        }
+
+        .boarding-content ol li {
+            padding-left: 6px;
+            list-style: decimal;
+        }
+
+        .boarding-content ol li::before {
             display: none;
         }
-    }
 
-    @media (max-width: 768px) {
-        .boarding-hero {
-            padding: 96px 0 44px;
+        .boarding-content .boarding-note {
+            margin-top: 28px;
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            border-radius: 14px;
+            padding: 18px 22px;
+            font-size: 14px;
+            color: #78350f;
+            line-height: 1.75;
         }
-    }
+
+        .boarding-content .boarding-note strong {
+            color: #92400e;
+        }
+
+        @media (max-width: 1100px) {
+            .boarding-hero-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .boarding-card {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .boarding-hero {
+                padding: 96px 0 44px;
+            }
+        }
     </style>
 </head>
 
@@ -427,6 +426,16 @@
     <script src="olympia/js/slick.js"></script>
     <script type="text/javascript" src="olympia/js/script.js"></script>
     <script type="text/javascript" src="olympia/js/main.js"></script>
+    <script>
+        $(document).ready(function() {
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    duration: 700,
+                    once: true
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

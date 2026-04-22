@@ -21,8 +21,6 @@
     <meta name="twitter:title" content="Chân dung học sinh Meyschool">
     <meta name="twitter:description" content="Chân dung học sinh tại Meyschool - Những công dân toàn cầu tương lai">
 
-    <link media="all" type="text/css" rel="stylesheet"
-
     <link rel="alternate" href="en/student-profile.html" hreflang="en" />
     <link rel="alternate" href="chan-dung-hoc-sinh.html" hreflang="vi" />
 
@@ -761,6 +759,7 @@
                     margin: 0 0 16px;
                     display: -webkit-box;
                     -webkit-line-clamp: 3;
+                    line-clamp: 3;
                     -webkit-box-orient: vertical;
                     overflow: hidden;
                 }
@@ -876,28 +875,37 @@
     <script src="olympia/js/main.js"></script>
     <script>
         $(document).ready(function() {
-            $(".ts-news-slider").slick({
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                infinite: false,
-                dots: true,
-                arrows: true,
-                autoplay: true,
-                autoplaySpeed: 4000,
-                prevArrow: '<button class="slick-prev"><span>&#10094;</span></button>',
-                nextArrow: '<button class="slick-next"><span>&#10095;</span></button>',
-                responsive: [{
-                    breakpoint: 992,
-                    settings: {
-                        slidesToShow: 2
-                    }
-                }, {
-                    breakpoint: 576,
-                    settings: {
-                        slidesToShow: 1
-                    }
-                }]
-            });
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    duration: 700,
+                    once: true
+                });
+            }
+
+            if ($('.ts-news-slider').length && typeof $.fn.slick === 'function') {
+                $(".ts-news-slider").slick({
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: false,
+                    dots: true,
+                    arrows: true,
+                    autoplay: true,
+                    autoplaySpeed: 4000,
+                    prevArrow: '<button class="slick-prev"><span>&#10094;</span></button>',
+                    nextArrow: '<button class="slick-next"><span>&#10095;</span></button>',
+                    responsive: [{
+                        breakpoint: 992,
+                        settings: {
+                            slidesToShow: 2
+                        }
+                    }, {
+                        breakpoint: 576,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    }]
+                });
+            }
         });
     </script>
 </body>

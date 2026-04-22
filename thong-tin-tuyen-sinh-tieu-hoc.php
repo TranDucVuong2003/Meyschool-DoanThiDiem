@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="assets/img/favicon.png">
     <title>Tuyển sinh Tiểu học - Meyschool Đoàn Thị Điểm</title>
     <link media="all" type="text/css" rel="stylesheet"
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="olympia/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="olympia/css/reset.css">
     <link rel="stylesheet" href="olympia/css/bootstrap-datetimepicker.min.css">
@@ -891,7 +891,7 @@
                         </div>
                         <div style="border:1px solid rgba(67,155,212,.22);border-radius:14px;padding:20px 22px;background:linear-gradient(120deg,#f4fbff 0%,#eaf7ff 100%);">
                             <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:10px;">
-                                <span style="background:#2354a0;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:999px;text-transform:uppercase;letter-spacing:.4px;">Hệ 2</span>
+                                <span style="background:#2354a0;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:999px;text-transform:uppercase;letter-spacing:.4px;white-space:nowrap;">Hệ 2</span>
                                 <strong style="font-size:16px;color:#1f5f8e;">Tích hợp Quốc tế (Cambridge)</strong>
                             </div>
                             <p style="margin:0;font-size:14px;line-height:1.75;color:#3f607a;">Kết hợp chương trình Việt Nam với chương trình quốc tế Cambridge, giúp học sinh phát triển tư duy song ngữ, năng lực học tập toàn cầu và khả năng hội nhập sớm.</p>

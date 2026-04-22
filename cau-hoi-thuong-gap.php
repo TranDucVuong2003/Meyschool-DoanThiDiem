@@ -23,7 +23,7 @@
     <meta name="twitter:title" content="Câu hỏi thường gặp (FAQ) - Meyschool Đoàn Thị Điểm">
     <meta name="twitter:description" content="Câu hỏi thường gặp về tuyển sinh và học tập tại Meyschool Đoàn Thị Điểm">
 
-    <link media="all" type="text/css" rel="stylesheet"
+    <!-- <link media="all" type="text/css" rel="stylesheet" -->
 
     <link rel="alternate" href="en.html" hreflang="en" />
 
@@ -723,17 +723,26 @@
     <script src="olympia/js/main.js"></script>
     <script>
         $(document).ready(function() {
-            $(".ts-banner-slider").slick({
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                prevArrow: '<div class="rcl-prev"><img src="olympia/images/button-1-3.svg"></div>',
-                nextArrow: '<div class="rcl-next"><img src="olympia/images/button-1-3.svg"></div>',
-                infinite: true,
-                autoplay: true,
-                autoplaySpeed: 5000,
-                fade: true,
-                cssEase: 'linear'
-            });
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    duration: 700,
+                    once: true
+                });
+            }
+
+            if ($('.ts-banner-slider').length && typeof $.fn.slick === 'function') {
+                $(".ts-banner-slider").slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    prevArrow: '<div class="rcl-prev"><img src="olympia/images/button-1-3.svg"></div>',
+                    nextArrow: '<div class="rcl-next"><img src="olympia/images/button-1-3.svg"></div>',
+                    infinite: true,
+                    autoplay: true,
+                    autoplaySpeed: 5000,
+                    fade: true,
+                    cssEase: 'linear'
+                });
+            }
         });
     </script>
     <script>
