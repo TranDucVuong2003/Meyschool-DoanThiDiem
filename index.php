@@ -274,47 +274,46 @@
                 font-size: 30px !important;
             }
         }
-    </style>
-    <!-- Google Tag Manager -->
-    <script>
-        (function(w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({
-                'gtm.start': new Date().getTime(),
-                event: 'gtm.js'
-            });
-            var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s),
-                dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true;
-            j.src =
-                'https://www.googletagmanager.com/gtm5445.html?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-5SS24C7N');
-    </script>
-    <!-- End Google Tag Manager -->
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GDK27ZMYYW"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
+        @media (max-width: 991px) {
+            .principal-welcome-wrapper {
+                padding: 20px 0 3px 0 !important;
+            }
         }
-        gtag('js', new Date());
 
-        gtag('config', 'G-GDK27ZMYYW');
-    </script>
-    <meta property="fb:admins" content="100003174617936" />
-    <meta property="fb:admins" content="100000009019012" />
+        @media (max-width: 1023px) {
+            .olympia-level-left .olympia-level.level-2,
+            .olympia-level-left .olympia-level.level-3 {
+                padding: 25px 0;
+                margin-bottom: 0;
+            }
+
+            .olympia-level-left .olympia-level.level-2 h6,
+            .olympia-level-left .olympia-level.level-3 h6 {
+                max-width: 100%;
+                width: 100%;
+                padding: 0 10px;
+                margin-top: 15px;
+                font-size: 14px;
+                line-height: 1.4;
+            }
+
+            .olympia-level-left .olympia-level .level-img-box {
+                width: 90%;
+                max-width: unset;
+            }
+
+            .olympia-level-left .olympia-level .level-img-box img {
+                width: 100%;
+                height: 140px;
+                object-fit: cover;
+                display: block;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5SS24C7N" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
     <?php include 'includes/header.php'; ?>
     <div class="overlay_mark_search" style="display:none;"></div>
 
@@ -572,7 +571,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="olympia-level level-3" style="opacity: 0; background-color: #314d9b;">
+                    <div class="olympia-level level-3" style="opacity: 0; background-color: #00a0e4;">
                         <h6><a href="chuong-trinh-trung-hoc-co-so-olympia.html" class="white">Trung học cơ sở (lớp 6 -
                                 8)</a></h6>
                         <div class="level-img-box">
@@ -714,6 +713,9 @@
                             overflow: hidden;
                             box-shadow: 0 4px 24px rgba(23, 52, 93, .08);
                             transition: transform .3s, box-shadow .3s;
+                            display: flex;
+                            flex-direction: column;
+                            height: 100%;
                         }
 
                         #olympia-event .ts-news-card:hover {
@@ -730,6 +732,9 @@
 
                         #olympia-event .ts-news-card-body {
                             padding: 20px 22px 24px;
+                            flex: 1;
+                            display: flex;
+                            flex-direction: column;
                         }
 
                         #olympia-event .ts-news-card-body h3 {
@@ -789,6 +794,7 @@
 
                         #olympia-event .ts-news-slider .slick-dots {
                             bottom: -40px;
+                            text-align: center;
                         }
 
                         #olympia-event .ts-news-slider .slick-dots li button:before {
@@ -799,6 +805,18 @@
 
                         #olympia-event .ts-news-slider .slick-dots li.slick-active button:before {
                             color: #4aa6d9;
+                        }
+
+                        #olympia-event .ts-news-slider .slick-track {
+                            display: flex !important;
+                        }
+
+                        #olympia-event .ts-news-slider .slick-slide {
+                            height: auto !important;
+                        }
+
+                        #olympia-event .ts-news-slider .slick-slide > div {
+                            height: 100%;
                         }
 
                         @media(max-width:1220px) {
@@ -812,6 +830,21 @@
 
                             #olympia-event .ts-news-slider .slick-next {
                                 right: 2px;
+                            }
+                        }
+
+                        @media(max-width:1023px) {
+                            #olympia-event .ts-news-card img {
+                                height: 200px;
+                            }
+
+                            #olympia-event .ts-news-slider .slick-dots {
+                                bottom: -40px;
+                                text-align: center;
+                                left: 0;
+                                right: 0;
+                                margin: 0 auto;
+                                width: 100%;
                             }
                         }
 
@@ -841,6 +874,15 @@
                             #olympia-event .ts-news-slider .slick-prev:before,
                             #olympia-event .ts-news-slider .slick-next:before {
                                 font-size: 16px;
+                            }
+
+                            #olympia-event .ts-news-slider .slick-dots {
+                                bottom: -40px;
+                                text-align: center;
+                                left: 0;
+                                right: 0;
+                                margin: 0 auto;
+                                width: 100%;
                             }
                         }
                     </style>

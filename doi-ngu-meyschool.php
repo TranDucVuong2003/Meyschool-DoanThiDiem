@@ -637,7 +637,7 @@ $ss = load_site_settings();
                     </div>
 
                     <div class="team-hero-card">
-                        <img src="assets/img/anh-giao-vien/z7369054786972-1a0cb760778270bac2703d36eb1c4ce3 (1).jpg"
+                        <img src="assets/img/tin-tuc/z7369054786972-1a0cb760778270bac2703d36eb1c4ce3.jpg"
                             alt="Đội ngũ Meyschool Đoàn Thị Điểm">
                     </div>
                 </div>

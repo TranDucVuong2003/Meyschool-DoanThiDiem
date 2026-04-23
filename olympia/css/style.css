@@ -9967,7 +9967,7 @@ select.select-day option {
   }
 
   .olympia-number-box.home-index {
-    margin-top: 60px !important;
+    margin-top: 19px !important;
   }
 
   .home-index .olympia-number-right.mobile-device h3 {
@@ -10023,7 +10023,6 @@ select.select-day option {
     text-align: center;
     margin-top: 45vh;
   }
-
 }
 
 @media (min-width: 320px) {
@@ -10263,6 +10262,12 @@ select.select-day option {
     padding: unset;
     padding-top: 70px;
     padding-bottom: 70px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .olympia-event {
+    padding: 10px 27px 70px;
   }
 }
 

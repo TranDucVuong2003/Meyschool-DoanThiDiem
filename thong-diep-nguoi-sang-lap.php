@@ -252,8 +252,12 @@
         position: static !important;
         float: none !important;
         clear: both;
-        z-index: 3;
+        z-index: 999;
         list-style: none;
+    }
+
+    .td-breadcrumb a {
+        pointer-events: auto !important;
     }
 
     .td-breadcrumb li,
@@ -631,6 +635,12 @@
             justify-content: center;
         }
     }
+
+    @media (max-width: 1023px) {
+        .hero-container {
+            margin-top: -76px !important;
+        }
+    }
     </style>
 </head>
 
@@ -643,23 +653,24 @@
             <div class="founder-container">
                 <ol class="breadcrumb td-breadcrumb">
                     <li class="breadcrumb-item"><a href="index.php">Trang chủ</a></li>
-                    <li class="breadcrumb-item"><a href="ve-chung-toi.php">Về chúng tôi</a></li>
-                    <li class="breadcrumb-item active">Thông điệp từ Nhà sáng tạo</li>
+                    <li class="breadcrumb-item active">Thông điệp từ người sáng lập</li>
                 </ol>
             </div>
             <div class="founder-container hero-grid">
-                <div>
-                    <!-- <span class="hero-tag">Về chúng tôi</span> -->
+                <div class="hero-container">
+                    <div class="hero-content">
+                        <!-- <span class="hero-tag">Về chúng tôi</span> -->
 
-                    <p class="hero-desc">Tọa lạc tại khu đô thị Meyhomes Capital Phú Quốc, Meyschool Đoàn Thị Điểm được
-                        xây dựng theo mô hình <strong>&ldquo;Trường học trong công viên&rdquo;</strong> &ndash; nơi
-                        không gian học tập hòa quyện với thiên nhiên xanh mát, mang đến môi trường giáo dục hiện đại, an
-                        toàn và giàu trải nghiệm cho học sinh.</p>
-                    <p class="hero-desc" style="margin-top:12px;">Dự án nằm trong hệ sinh thái đô thị Meyhomes Capital
-                        Phú Quốc do Meygroup &ndash; thành viên Tập đoàn Tân Á Đại Thành &ndash; đầu tư và phát triển.
-                        Đồng hành cùng Hệ thống Giáo dục Đoàn Thị Điểm Hà Nội &ndash; thương hiệu uy tín với hơn 30 năm
-                        phát triển &ndash; nhà trường hướng tới đào tạo những công dân toàn cầu có tri thức, nhân cách
-                        và năng lực hội nhập tại Đảo Ngọc Phú Quốc.</p>
+                        <p class="hero-desc" style="text-align: justify;">Tọa lạc tại khu đô thị Meyhomes Capital Phú Quốc, Meyschool Đoàn Thị Điểm được
+                            xây dựng theo mô hình <strong>&ldquo;Trường học trong công viên&rdquo;</strong> &ndash; nơi
+                            không gian học tập hòa quyện với thiên nhiên xanh mát, mang đến môi trường giáo dục hiện đại, an
+                            toàn và giàu trải nghiệm cho học sinh.</p>
+                        <p class="hero-desc" style="text-align: justify;">Dự án nằm trong hệ sinh thái đô thị Meyhomes Capital
+                            Phú Quốc do Meygroup &ndash; thành viên Tập đoàn Tân Á Đại Thành &ndash; đầu tư và phát triển.
+                            Đồng hành cùng Hệ thống Giáo dục Đoàn Thị Điểm Hà Nội &ndash; thương hiệu uy tín với hơn 30 năm
+                            phát triển &ndash; nhà trường hướng tới đào tạo những công dân toàn cầu có tri thức, nhân cách
+                            và năng lực hội nhập tại Đảo Ngọc Phú Quốc.</p>
+                    </div>
                     <div class="hero-actions">
                         <a class="hero-btn primary" href="#thong-diep">Đọc thông điệp</a>
                         <a class="hero-btn ghost" href="#hanh-trinh">Khám phá hành trình</a>
@@ -680,7 +691,7 @@
             <div class="founder-container">
                 <div class="message-grid">
                     <div class="message-card">
-                        <h2>Triết lý giáo dục</h2>
+                        <h2 style="text-align:center;">Triết lý giáo dục</h2>
                         <blockquote
                             style="border-left:4px solid var(--blue-2);padding:16px 22px;background:#f4faff;border-radius:12px;margin:0 0 22px;">
                             <p style="font-size:19px;font-style:italic;color:#2354a0;margin:0 0 10px;">&ldquo;Giáo dục
@@ -689,13 +700,13 @@
                                 style="font-size:13px;color:#5a7a94;font-weight:700;text-transform:uppercase;letter-spacing:.5px;">&mdash;
                                 John Dewey</cite>
                         </blockquote>
-                        <p>Kế thừa những giá trị giáo dục bền vững, Meyschool Đoàn Thị Điểm mang đến chương trình đào
+                        <p style="text-align: justify;">Kế thừa những giá trị giáo dục bền vững, Meyschool Đoàn Thị Điểm mang đến chương trình đào
                             tạo hướng tới sự phát triển toàn diện, kết hợp chương trình Giáo dục phổ thông của Bộ
                             GD&amp;ĐT với các chương trình tăng cường Tiếng Anh, STEM, LIM, công nghệ và kỹ năng sống.
                         </p>
-                        <p>Nhà trường chú trọng xây dựng môi trường học tập hiện đại, nơi học sinh được phát triển tư
+                        <p style="text-align: justify;">Nhà trường chú trọng xây dựng môi trường học tập hiện đại, nơi học sinh được phát triển tư
                             duy sáng tạo, khả năng giao tiếp, tinh thần hợp tác và năng lực hội nhập quốc tế.</p>
-                        <p>Không gian trường học được thiết kế với cảnh quan xanh, lớp học hiện đại, khu thể thao và khu
+                        <p style="text-align: justify;">Không gian trường học được thiết kế với cảnh quan xanh, lớp học hiện đại, khu thể thao và khu
                             trải nghiệm ngoài trời &ndash; giúp mỗi ngày đến trường trở thành một hành trình khám phá,
                             học tập và trưởng thành.</p>
                     </div>

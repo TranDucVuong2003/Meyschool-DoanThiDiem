@@ -1013,23 +1013,6 @@
     </main>
 
     <?php include 'includes/footer-dangkytuvan.php'; ?>
-    <section id="callnow" class="hotline mobile__none">
-        <div class="hotline-phone-ring-wrap">
-            <div class="hotline-phone-ring" id="call-now-1">
-                <div class="hotline-phone-ring-circle"></div>
-                <div class="hotline-phone-ring-circle-fill"></div>
-                <div class="hotline-phone-ring-img-circle">
-                    <a href="tel:0934525889" class="pps-btn-img"> <img
-                            src="data:image/webp;base64,UklGRswAAABXRUJQVlA4TMAAAAAvMUAMECcw//M//2raNmBTAdOrhFaAC0dguIokSbEODCycABSAAqj9m1qqe/Af0X8FbtsoOWZoX1H9UzC2hqmXZsgtHbBPkljzCjS0LXW0DSf2EQeETlxi2he8aGA83qirUAi71oznrahYPNg4sahVz5cZ8YlPGOATWz4wv3MhdZtnLFwmo7S4i9teSdGXj+sTL9zSjMzuVuKhRXEArzdPGstdaw6hYUZfarCuLkC6kPImRCiW2ZJEwrCPIf17qAA="
-                            alt="Gọi điện thoại">
-                    </a>
-                </div>
-            </div>
-            <div class="hotline-bar">
-                <a href="tel:0934525889"> <span class="text-hotline" id="call-now-1">024 6267 7999</span> </a>
-            </div>
-        </div>
-    </section>
     <script>
         AOS.init({
             once: true,
