@@ -28,7 +28,7 @@
 
 
 
-    <link rel="alternate" href="en/our-facilities.html" hreflang="en" />
+        <link rel="alternate" href="en/our-facilities.html" hreflang="en" />
     <link rel="alternate" href="co-so-vat-chat.html" hreflang="vi" />
 
 
@@ -820,7 +820,7 @@
                             <li class="breadcrumb-item active">Cơ sở vật chất</li>
                         </ol>
                         <h1>Quy mô đẳng cấp &amp; Không gian giáo dục truyền cảm hứng</h1>
-                        <p>Tọa lạc tại "trái tim" của đại đô thị tinh khiết Meyhomes Capital, Meyschool Đoàn Thị Điểm sở
+                        <p style="text-align:justify;">Tọa lạc tại "trái tim" của đại đô thị tinh khiết Meyhomes Capital, Meyschool Đoàn Thị Điểm sở
                             hữu khuôn viên rộng lớn lên đến 16.000 m² với hệ sinh thái giáo dục hiện đại bậc nhất Đảo
                             Ngọc.</p>
                         <div class="csvc-hero-pills">
@@ -839,7 +839,7 @@
         <!-- ===== INTRO ===== -->
         <section class="csvc-intro csvc-wrap" data-aos="fade-up">
             <div class="csvc-intro-card">
-                <p>Tọa lạc tại "trái tim" của đại đô thị tinh khiết <strong>Meyhomes Capital</strong>, <strong>Meyschool
+                <p style="text-align:justify;">Tọa lạc tại "trái tim" của đại đô thị tinh khiết <strong>Meyhomes Capital</strong>, <strong>Meyschool
                         Đoàn Thị Điểm</strong> sở hữu khuôn viên rộng lớn lên đến <strong>16.000 m²</strong>. Trường
                     được quy hoạch bài bản với hệ thống <strong>gần 60 phòng học và phòng chức năng</strong>, kiến tạo
                     nên một hệ sinh thái giáo dục hiện đại và quy mô bậc nhất Đảo Ngọc.</p>
@@ -885,7 +885,7 @@
                 <div>
                     <!-- <span class="csvc-feature-icon">📖</span> -->
                     <h2>Phòng học hiện đại – Linh hoạt và sáng tạo</h2>
-                    <p>Mỗi phòng học tại Meyschool là một <strong>không gian mở</strong>, được thiết kế tối ưu để đáp
+                    <p style="text-align:justify;">Mỗi phòng học tại Meyschool là một <strong>không gian mở</strong>, được thiết kế tối ưu để đáp
                         ứng linh hoạt cho các phương pháp giáo dục tiên tiến: từ học tập theo dự án, thảo luận nhóm sôi
                         nổi đến nghiên cứu độc lập chuyên sâu.</p>
                     <p>Trang thiết bị thông minh cùng ánh sáng tự nhiên giúp kích thích tối đa tư duy của học sinh.</p>
@@ -916,7 +916,7 @@
                     <!-- <span class="csvc-feature-icon">🎨</span> -->
                     <h2>Không gian sáng tạo </h2>
 
-                    <p><strong>Không gian sáng tạo:</strong> Hệ thống phòng Nghệ thuật, STEM và các khu thực hành đa
+                    <p style="text-align:justify;"><strong>Không gian sáng tạo:</strong> Hệ thống phòng Nghệ thuật, STEM và các khu thực hành đa
                         giác quan được đầu tư hiện đại, là nơi các em tự do khám phá và hiện thực hóa những ý tưởng mới
                         mẻ.</p>
                 </div>

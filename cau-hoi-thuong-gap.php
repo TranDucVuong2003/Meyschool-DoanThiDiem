@@ -152,6 +152,7 @@
             font-size: 17px;
             line-height: 1.75;
             max-width: 780px;
+            text-align: justify;
         }
 
         .fq-tags {
@@ -249,6 +250,7 @@
             color: #416987;
             font-size: 15px;
             line-height: 1.75;
+            text-align: justify;
         }
 
         .faq-category {
@@ -326,6 +328,7 @@
             line-height: 1.75;
             color: #4a6f8d;
             margin: 0;
+            text-align: justify;
         }
 
         .fq-side-links {
@@ -425,10 +428,10 @@
         .fq-contact-banner p {
             margin: 0;
             color: rgba(255, 255, 255, 0.96);
+            text-align: justify;
         }
 
         @media (max-width: 1180px) {
-
             .fq-hero-grid,
             .fq-layout {
                 grid-template-columns: 1fr;

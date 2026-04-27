@@ -834,6 +834,14 @@
             }
         }
 
+        @media (max-width: 768px) {
+            section h2 {
+                font-size: 22px !important;
+                line-height: 1.3;
+                text-align: left;
+            }
+        }
+
         .ts-banner-slider {
             position: relative;
             padding-top: 18px;
@@ -874,11 +882,11 @@
         </section>
 
         <!-- Giới thiệu Chương trình Tiểu học -->
-        <section style="padding:52px 0 40px;background:linear-gradient(180deg,#f4fbff 0%,#fff 100%);">
+        <section style="padding:10px 0 40px;background:linear-gradient(180deg,#f4fbff 0%,#fff 100%);">
             <div class="wrap" style="max-width:1100px;margin:0 auto;padding:0 20px;">
                 <div data-aos="fade-up" style="background:#fff;border-radius:20px;border:1px solid rgba(67,155,212,.18);box-shadow:0 12px 28px rgba(16,49,79,.08);padding:32px 36px 28px;">
                     <h2 style="font-family:'Garamond',serif;font-size:32px;color:#1f5f8e;margin:0 0 14px;">Giới thiệu Chương trình Tiểu học Meyschool Đoàn Thị Điểm</h2>
-                    <p style="font-size:16px;line-height:1.8;color:#3f6070;margin:0 0 24px;">Chương trình Tiểu học Meyschool Đoàn Thị Điểm được xây dựng theo định hướng hiện đại, kết hợp Chương trình GDPT 2018 với chương trình nhà trường, mang đến môi trường học tập cân bằng giữa kiến thức – kỹ năng – trải nghiệm. Học sinh được nuôi dưỡng nền tảng vững chắc, phát triển tư duy, sự tự tin và niềm yêu thích học tập ngay từ những năm đầu đời.</p>
+                    <p style="font-size:16px;line-height:1.8;color:#3f6070;margin:0 0 24px; text-align:justify">Chương trình Tiểu học Meyschool Đoàn Thị Điểm được xây dựng theo định hướng hiện đại, kết hợp Chương trình GDPT 2018 với chương trình nhà trường, mang đến môi trường học tập cân bằng giữa kiến thức – kỹ năng – trải nghiệm. Học sinh được nuôi dưỡng nền tảng vững chắc, phát triển tư duy, sự tự tin và niềm yêu thích học tập ngay từ những năm đầu đời.</p>
 
                     <h3 style="font-size:20px;font-weight:700;color:#1f5f8e;margin:0 0 16px;">Các hệ học Tiểu học</h3>
                     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;">
@@ -887,14 +895,14 @@
                                 <span style="background:#439bd4;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:999px;text-transform:uppercase;letter-spacing:.4px;">Hệ 1</span>
                                 <strong style="font-size:16px;color:#1f5f8e;">Tăng cường Tiếng Anh</strong>
                             </div>
-                            <p style="margin:0;font-size:14px;line-height:1.75;color:#3f607a;">Chương trình chuẩn của Bộ GD&amp;ĐT kết hợp tăng cường Tiếng Anh và các hoạt động kỹ năng. Học sinh phát triển nền tảng kiến thức vững vàng, khả năng giao tiếp và sự tự tin trong học tập.</p>
+                            <p style="margin:0;font-size:14px;line-height:1.75;color:#3f607a;text-align:justify">Chương trình chuẩn của Bộ GD&amp;ĐT kết hợp tăng cường Tiếng Anh và các hoạt động kỹ năng. Học sinh phát triển nền tảng kiến thức vững vàng, khả năng giao tiếp và sự tự tin trong học tập.</p>
                         </div>
                         <div style="border:1px solid rgba(67,155,212,.22);border-radius:14px;padding:20px 22px;background:linear-gradient(120deg,#f4fbff 0%,#eaf7ff 100%);">
                             <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:10px;">
                                 <span style="background:#2354a0;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:999px;text-transform:uppercase;letter-spacing:.4px;white-space:nowrap;">Hệ 2</span>
                                 <strong style="font-size:16px;color:#1f5f8e;">Tích hợp Quốc tế (Cambridge)</strong>
                             </div>
-                            <p style="margin:0;font-size:14px;line-height:1.75;color:#3f607a;">Kết hợp chương trình Việt Nam với chương trình quốc tế Cambridge, giúp học sinh phát triển tư duy song ngữ, năng lực học tập toàn cầu và khả năng hội nhập sớm.</p>
+                            <p style="margin:0;font-size:14px;line-height:1.75;color:#3f607a;text-align:justify">Kết hợp chương trình Việt Nam với chương trình quốc tế Cambridge, giúp học sinh phát triển tư duy song ngữ, năng lực học tập toàn cầu và khả năng hội nhập sớm.</p>
                         </div>
                     </div>
                 </div>

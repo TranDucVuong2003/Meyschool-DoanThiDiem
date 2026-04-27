@@ -9,11 +9,11 @@ $ss_fanpage_encoded = urlencode($ss['fanpage']);
     <div class="footer footer-modern">
         <div class="container">
             <div class="footer-modern-grid">
-                <div class="footer-modern-col footer-brand">
-                    <a href="index.php" title="" class="ft_logo_lg">
-                        <img class="footer-logo-img" src="assets/logo/logo.png" alt="Meyschool Đoàn Thị Điểm">
+                <div class="footer-modern-col footer-brand" style="text-align:center; padding: 15px 0px 0px 0px;">
+                    <a href="index.php" title="" class="ft_logo_lg" style="display:inline-block;">
+                        <img class="footer-logo-img" src="assets/logo/logo.png" alt="Meyschool Đoàn Thị Điểm" style="display:block;margin:0 auto;">
                     </a>
-                    <div class="footer-social">
+                    <div class="footer-social" style="display:flex;justify-content:center;gap:12px;margin-top:16px;">
                         <a href="<?= htmlspecialchars($ss['fanpage']) ?>" target="_blank">
                             <img src="olympia/images/facebook.svg" alt="Facebook">
                         </a>
@@ -48,9 +48,6 @@ $ss_fanpage_encoded = urlencode($ss['fanpage']);
                                     target="_blank"><?= htmlspecialchars($ss['fanpage']) ?></a></p>
                         </li>
                     </ul>
-                    <span class="footer-modern-title">Thời gian làm việc</span>
-                    <p class="footer-time"><?= htmlspecialchars($ss['work_time_weekdays']) ?></p>
-                    <p class="footer-time"><?= htmlspecialchars($ss['work_time_saturday']) ?></p>
                 </div>
                 <div class="footer-modern-col">
                     <span class="footer-modern-title">Fanpage</span>
@@ -73,7 +70,7 @@ $ss_fanpage_encoded = urlencode($ss['fanpage']);
                 </div>
             </div>
             <div class="footer-copyright">
-                <div class="footer-copyright-text">© 2026 Meyschool Đoàn Thị Điểm Phú Quốc. All rights reserved.</div>
+                <div class="footer-copyright-text" style="color: white;">© 2026 Meyschool Đoàn Thị Điểm Phú Quốc. All rights reserved.</div>
             </div>
         </div>
     </div>

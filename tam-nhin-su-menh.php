@@ -205,7 +205,7 @@
 
         .vm-hero-card img {
             width: 100%;
-            height: 220px;
+            height: 100%;
             border-radius: 14px;
             object-fit: cover;
             display: block;
@@ -482,14 +482,16 @@
             background: #eaf7ff;
         }
 
-        @media (max-width: 1180px) {
-
-            .vm-hero-grid,
+        @media (max-width: 991px) {
             .vm-layout {
                 grid-template-columns: 1fr;
             }
 
             .vm-mission-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .vm-hero-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -521,6 +523,7 @@
 
             .vm-hero p {
                 font-size: 15px;
+                text-align: justify;
             }
 
             .vm-hero-metrics {
@@ -533,8 +536,47 @@
                 border-radius: 16px;
             }
 
+            .vm-card p,
+            .vm-card li,
+            .vm-side-card p,
+            .vm-side-card li {
+                text-align: justify;
+            }
+
+            .vm-lead p {
+                text-align: justify;
+            }
+
+            .vm-mission-item p {
+                text-align: justify;
+            }
+
+            .vm-value p {
+                text-align: justify;
+            }
+
+            .vm-contact-item span {
+                text-align: justify;
+            }
+
             .vm-values {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .vm-value {
+                text-align: left;
+                padding: 16px;
+            }
+
+            .vm-value b {
+                font-size: 15px;
+                margin-bottom: 8px;
+            }
+
+            .vm-value p {
+                font-size: 13px;
+                margin: 0;
             }
 
             .vm-gallery {
@@ -555,10 +597,9 @@
                     <div>
                         <ol class="breadcrumb vm-breadcrumb">
                             <li class="breadcrumb-item"><a href="index.php">Trang chủ</a></li>
-                            <li class="breadcrumb-item"><a href="ve-chung-toi.php">Về chúng tôi</a></li>
+                            <!-- <li class="breadcrumb-item"><a href="ve-chung-toi.php">Về chúng tôi</a></li> -->
                             <li class="breadcrumb-item active">Tầm nhìn - Sứ mệnh</li>
                         </ol>
-
                         <h1>Tầm nhìn - Sứ mệnh - Giá trị cốt lõi</h1>
                         <p>Meyschool Đoàn Thị Điểm theo đuổi mô hình giáo dục khai phóng, nuôi dưỡng bản lĩnh, nhân cách
                             và năng lực hội nhập để mỗi học sinh tự tin trưởng thành trong thế giới luôn đổi thay.</p>
@@ -640,31 +681,31 @@
                         <div class="vm-values">
                             <div class="vm-value">
                                 <b>Nhân ái</b>
-                                <p style="font-size:12px; color:#5f7f99; margin:6px 0 0; text-align:left;">Giáo dục bắt
+                                <p style="font-size:12px; color:#5f7f99; margin:6px 0 0; text-align:left; text-align:justify;">Giáo dục bắt
                                     đầu từ tình yêu thương. Nhà trường nuôi dưỡng ở học sinh sự thấu cảm, biết quan tâm
                                     tới bản thân, cộng đồng và thế giới xung quanh.</p>
                             </div>
                             <div class="vm-value">
                                 <b>Chủ động</b>
-                                <p style="font-size:12px; color:#5f7f99; margin:6px 0 0; text-align:left;">Học sinh được
+                                <p style="font-size:12px; color:#5f7f99; margin:6px 0 0; text-align:left; text-align:justify;">Học sinh được
                                     rèn luyện tinh thần tự học, tự chịu trách nhiệm, biết đặt mục tiêu, dám thử thách và
                                     không ngại sửa sai để trưởng thành.</p>
                             </div>
                             <div class="vm-value">
                                 <b>Sáng tạo</b>
-                                <p style="font-size:12px; color:#5f7f99; margin:6px 0 0; text-align:left;">Meyschool
+                                <p style="font-size:12px; color:#5f7f99; margin:6px 0 0; text-align:left; text-align:justify;">Meyschool
                                     Đoàn Thị Điểm khuyến khích tư duy khác biệt, tinh thần khám phá, đổi mới và ứng dụng
                                     kiến thức vào thực tiễn cuộc sống.</p>
                             </div>
                             <div class="vm-value">
                                 <b>Trung thực</b>
-                                <p style="font-size:12px; color:#5f7f99; margin:6px 0 0; text-align:left;">Trung thực là
+                                <p style="font-size:12px; color:#5f7f99; margin:6px 0 0; text-align:left; text-align:justify;">Trung thực là
                                     nền tảng của nhân cách. Học sinh được giáo dục để sống ngay thẳng, tôn trọng sự
                                     thật, giữ lời hứa và xây dựng niềm tin.</p>
                             </div>
                             <div class="vm-value">
                                 <b>Hội nhập</b>
-                                <p style="font-size:12px; color:#5f7f99; margin:6px 0 0; text-align:left;">Hội nhập là
+                                <p style="font-size:12px; color:#5f7f99; margin:6px 0 0; text-align:left; text-align:justify;">Hội nhập là
                                     khả năng hiểu mình – hiểu người – hiểu thế giới. Học sinh được trang bị năng lực
                                     ngôn ngữ, công nghệ, văn hóa và tư duy toàn cầu để tự tin bước ra thế giới.</p>
                             </div>

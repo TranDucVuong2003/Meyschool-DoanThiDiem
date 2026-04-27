@@ -294,8 +294,14 @@ require_once __DIR__ . '/access.php';
         <?php endif; ?>
         <?php if (dashboard_can_access('contact')): ?>
             <a href="lien-he-admin.php" class="nav-item <?= $_sidebar_page === 'lien-he-admin.php' ? 'active' : '' ?>">
-                Thông tin liên hệ
+                Lời nhắn liên hệ
                 <span class="nav-badge" id="contactBadge" style="display:none;">0</span>
+            </a>
+            <a href="thong-tin-lien-he-admin.php" class="nav-item <?= $_sidebar_page === 'thong-tin-lien-he-admin.php' ? 'active' : '' ?>">
+                Thông tin liên hệ
+            </a>
+            <a href="thong-tin-tuyen-sinh-admin.php" class="nav-item <?= $_sidebar_page === 'thong-tin-tuyen-sinh-admin.php' ? 'active' : '' ?>">
+                Thông tin tuyển sinh
             </a>
         <?php endif; ?>
         <?php if (dashboard_can_access('tour')): ?>

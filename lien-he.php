@@ -1,3 +1,34 @@
+<?php
+require_once __DIR__ . '/includes/site-settings.php';
+$ss = load_site_settings();
+
+// Parse contact info
+function parseContactInfo($text) {
+    $lines = explode("\n", trim($text));
+    $result = [];
+    foreach ($lines as $line) {
+        $line = trim($line);
+        if (empty($line)) continue;
+        $parts = explode(':', $line, 2);
+        if (count($parts) == 2) {
+            $result[] = [
+                'label' => trim($parts[0]),
+                'value' => trim($parts[1])
+            ];
+        } else {
+            $result[] = [
+                'label' => '',
+                'value' => $line
+            ];
+        }
+    }
+    return $result;
+}
+
+$hotlines = parseContactInfo($ss['contact_hotlines'] ?? '');
+$emails = parseContactInfo($ss['contact_emails'] ?? '');
+$addresses = parseContactInfo($ss['contact_addresses'] ?? '');
+?>
 <!DOCTYPE html>
 <html lang="vi">
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
@@ -198,6 +229,7 @@
             gap: 6px;
             font-size: 13px;
             color: #3e5c79;
+            white-space: nowrap;
         }
 
         .ct-submit {
@@ -329,6 +361,12 @@
                 grid-template-columns: 1fr;
             }
 
+            .ct-map-wrap {
+                width: 100vw;
+                margin-left: calc(50% - 50vw);
+                margin-right: calc(50% - 50vw);
+            }
+
             .ct-map-wrap iframe {
                 height: 360px;
             }
@@ -404,76 +442,83 @@
                     <h3>Thông tin liên hệ</h3>
 
                     <div class="ct-info-list">
+                        <?php if (!empty($hotlines)): ?>
                         <div class="ct-info-block">
                             <b>Hotline</b>
-                            <p>Văn phòng THCS cơ sở 1: <a href="tel:+842462872448">0246.2872.448</a> – <a
-                                    href="tel:+842466744699">0246.6744.699</a></p>
-                            <p>Văn phòng THCS cơ sở 2: <a href="tel:+842462652709">0246.265.2709</a></p>
-                            <p>Văn phòng THPT: <a href="tel:+842466752216">0246.675.2216</a></p>
+                            <?php foreach ($hotlines as $hotline): ?>
+                            <p><?= htmlspecialchars($hotline['label']) ?>:
+                                <?php
+                                $phones = preg_split('/[-–]/', $hotline['value']);
+                                $phoneLinks = [];
+                                foreach ($phones as $phone) {
+                                    $phone = trim($phone);
+                                    if (!empty($phone)) {
+                                        $tel = preg_replace('/[^0-9+]/', '', $phone);
+                                        $phoneLinks[] = '<a href="tel:' . $tel . '">' . htmlspecialchars($phone) . '</a>';
+                                    }
+                                }
+                                echo implode(' – ', $phoneLinks);
+                                ?>
+                            </p>
+                            <?php endforeach; ?>
                         </div>
+                        <?php endif; ?>
 
+                        <?php if (!empty($emails)): ?>
                         <div class="ct-info-block">
                             <b>Email</b>
-                            <p>Góp ý phụ huynh: <a href="mailto:ykphdoanthidiem@gmail.com">ykphdoanthidiem@gmail.com</a>
-                            </p>
-                            <p>Ban giám hiệu: <a href="mailto:bghdoanthidiem@gmail.com">bghdoanthidiem@gmail.com</a></p>
-                            <p>Ban biên tập website: <a
-                                    href="mailto:bbtdoanthidiem@gmail.com">bbtdoanthidiem@gmail.com</a></p>
+                            <?php foreach ($emails as $email): ?>
+                            <p><?= htmlspecialchars($email['label']) ?>: <a href="mailto:<?= htmlspecialchars(trim($email['value'])) ?>"><?= htmlspecialchars(trim($email['value'])) ?></a></p>
+                            <?php endforeach; ?>
                         </div>
+                        <?php endif; ?>
 
+                        <?php if (!empty($addresses)): ?>
                         <div class="ct-info-block">
                             <b>Địa chỉ</b>
-                            <p>Cơ sở 1: Số 64 Lưu Hữu Phước, phường Từ Liêm, TP Hà Nội</p>
-                            <p>Cơ sở 2: Phố Nguyễn Đình Tứ, KĐT Bắc Cổ Nhuế, phường Đông Ngạc, TP Hà Nội</p>
-                            <p>Website: <a href="https://www.thcs-doanthidiem.edu.vn" target="_blank"
-                                    rel="noopener">www.thcs-doanthidiem.edu.vn</a></p>
+                            <?php foreach ($addresses as $addr): ?>
+                            <p><?= htmlspecialchars($addr['label']) ?>: <?= htmlspecialchars($addr['value']) ?></p>
+                            <?php endforeach; ?>
+                            <?php if (!empty($ss['website'])): ?>
+                            <p>Website: <a href="https://<?= htmlspecialchars($ss['website']) ?>" target="_blank" rel="noopener"><?= htmlspecialchars($ss['website']) ?></a></p>
+                            <?php endif; ?>
                         </div>
+                        <?php endif; ?>
                     </div>
 
                     <div class="ct-action-row">
-                        <a class="ct-action" href="faq.php" target="_blank">Câu hỏi thường gặp</a>
+                        <a class="ct-action" href="cau-hoi-thuong-gap.php" target="_blank">Câu hỏi thường gặp</a>
                         <a class="ct-action download_multiple_file" href="#" style="cursor:pointer;">Tải về tài liệu
                             Đoàn Thị Điểm</a>
                     </div>
 
                     <div class="ct-social">
-                        <a href="https://www.facebook.com/theolympiaschools/" target="_blank"><img
+                        <?php if (!empty($ss['fanpage'])): ?>
+                        <a href="<?= htmlspecialchars($ss['fanpage']) ?>" target="_blank"><img
                                 src="olympia/images/facebook.svg" alt="Facebook"></a>
-                        <a href="https://www.instagram.com/theolympiaschools/" target="_blank"><img
+                        <?php endif; ?>
+                        <a href="#" target="_blank"><img
                                 src="olympia/images/instagram.svg" alt="Instagram"></a>
-                        <a href="https://www.youtube.com/user/Olympiaschools" target="_blank"><img
+                        <a href="#" target="_blank"><img
                                 src="olympia/images/youtube.svg" alt="Youtube"></a>
                     </div>
                 </aside>
             </div>
 
             <div class="ct-wide ct-map-wrap" data-aos="fade-up">
+                <?php if (!empty($ss['map_iframe'])): ?>
+                    <?= $ss['map_iframe'] ?>
+                <?php else: ?>
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.438051721944!2d105.7992801759767!3d21.01515148824447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab001745cb03%3A0x5512842ae90b2dd7!2zVHLGsOG7nW5nIFRow6BuaCBXZWI!5e0!3m2!1svi!2s!4v1768911025495!5m2!1svi!2s"
                     loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <?php endif; ?>
             </div>
         </section>
 
     </main>
 
     <?php include 'includes/footer-dangkytuvan.php'; ?>
-
-    <section id="callnow" class="hotline mobile__none">
-        <div class="hotline-phone-ring-wrap">
-            <div class="hotline-phone-ring" id="call-now-1">
-                <div class="hotline-phone-ring-circle"></div>
-                <div class="hotline-phone-ring-circle-fill"></div>
-                <div class="hotline-phone-ring-img-circle">
-                    <a href="tel:0934525889" class="pps-btn-img"><img
-                            src="data:image/webp;base64,UklGRswAAABXRUJQVlA4TMAAAAAvMUAMECcw//M//2raNmBTAdOrhFaAC0dguIokSbEODCycABSAAqj9m1qqe/Af0X8FbtsoOWZoX1H9UzC2hqmXZsgtHbBPkljzCjS0LXW0DSf2EQeETlxi2he8aGA83qirUAi71oznrahYPNg4sahVz5cZ8YlPGOATWz4wv3MhdZtnLFwmo7S4i9teSdGXj+sTL9zSjMzuVuKhRXEArzdPGstdaw6hYUZfarCuLkC6kPImRCiW2ZJEwrCPIf17qAA="
-                            alt="Gọi điện thoại"></a>
-                </div>
-            </div>
-            <div class="hotline-bar">
-                <a href="tel:0934525889"><span class="text-hotline" id="call-now-1">024 6267 7999</span></a>
-            </div>
-        </div>
-    </section>
 
     <script>
         AOS.init({

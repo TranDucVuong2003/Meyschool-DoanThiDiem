@@ -826,21 +826,6 @@
                         </li>
                     </ul>
                 </div>
-
-                <!-- <div class="th-info-card">
-                    <div class="th-info-card-img">
-                        <img src="olympia/images/about-us-3.jpg" alt="Cơ sở vật chất">
-                    </div>
-                    <div class="th-info-card-content">
-                        <h5>Thông tin nhanh</h5>
-                        <ul class="th-info-list">
-                            <li><strong>Độ tuổi</strong>6-11 tuổi</li>
-                            <li><strong>Sĩ số</strong>25-30 học sinh/lớp</li>
-                            <li><strong>Thời gian</strong>7:30 - 16:30</li>
-                            <li><strong>Bữa ăn</strong>2 bữa chính + phụ</li>
-                        </ul>
-                    </div>
-                </div> -->
             </aside>
 
             <!-- Center Content -->

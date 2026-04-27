@@ -150,7 +150,7 @@
             color: #fff;
             font-family: 'Garamond', serif;
             font-size: clamp(36px, 4.8vw, 64px);
-            line-height: 1.05;
+            line-height: 1.15;
             max-width: 860px;
         }
 
@@ -195,7 +195,7 @@
 
         .sp-hero-collage img {
             width: 100%;
-            height: 120px;
+            height: 100%;
             border-radius: 12px;
             object-fit: cover;
             display: block;
@@ -509,6 +509,7 @@
 
             .sp-hero p {
                 font-size: 15px;
+                text-align: justify;
             }
 
             .sp-card,
@@ -547,7 +548,7 @@
                     <div>
                         <ol class="breadcrumb sp-breadcrumb">
                             <li class="breadcrumb-item"><a href="index.php">Trang chủ</a></li>
-                            <li class="breadcrumb-item"><a href="ve-chung-toi.php">Về chúng tôi</a></li>
+                            <!-- <li class="breadcrumb-item"><a href="ve-chung-toi.php">Về chúng tôi</a></li> -->
                             <li class="breadcrumb-item active">Chân dung học sinh</li>
                         </ol>
 

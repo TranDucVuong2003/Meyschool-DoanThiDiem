@@ -779,6 +779,20 @@
         .ts-banner-slider .rcl-next {
             right: 15px;
         }
+
+        @media (max-width: 1180px) {
+            .ts-section-title {
+                font-size: 22px !important;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .ts-section-title {
+                font-size: 18px !important;
+                text-align: center;
+            }
+        }
     </style>
 </head>
 
@@ -795,23 +809,23 @@
         </section>
 
         <!-- Giới thiệu Chương trình THCS -->
-        <section style="padding:52px 0 40px;background:linear-gradient(180deg,#f4fbff 0%,#fff 100%);">
+        <section style="padding:10px 0 40px;background:linear-gradient(180deg,#f4fbff 0%,#fff 100%);">
             <div class="wrap" style="max-width:1100px;margin:0 auto;padding:0 20px;">
                 <div data-aos="fade-up"
                     style="background:#fff;border-radius:20px;border:1px solid rgba(67,155,212,.18);box-shadow:0 12px 28px rgba(16,49,79,.08);padding:32px 36px 28px;">
-                    <h2 style="font-family:'Garamond',serif;font-size:32px;color:#1f5f8e;margin:0 0 14px;">Giới thiệu
+                    <h2 class="ts-section-title" style="font-family:'Garamond',serif;font-size:32px;color:#1f5f8e;margin:0 0 14px;">Giới thiệu
                         Chương trình THCS Meyschool Đoàn Thị Điểm</h2>
-                    <p style="font-size:16px;line-height:1.8;color:#3f6070;margin:0 0 14px;">Chương trình THCS Meyschool
+                    <p style="font-size:16px;line-height:1.8;color:#3f6070;margin:0 0 14px; text-align:justify">Chương trình THCS Meyschool
                         Đoàn Thị Điểm được xây dựng trên nền tảng giáo dục vững chắc của Hệ thống Đoàn Thị Điểm, phát
                         triển theo định hướng liên thông và hội nhập. Nhà trường theo đuổi triết lý <em>"Giáo dục chính
                             là cuộc sống"</em>, nơi mỗi ngày đến trường là một hành trình trải nghiệm, khám phá và
                         trưởng thành trong môi trường yêu thương, sáng tạo.</p>
-                    <p style="font-size:16px;line-height:1.8;color:#3f6070;margin:0 0 14px;">Chương trình học được thiết
+                    <p style="font-size:16px;line-height:1.8;color:#3f6070;margin:0 0 14px; text-align:justify">Chương trình học được thiết
                         kế cân bằng giữa Chương trình GDPT 2018 và chương trình nhà trường theo định hướng quốc tế, giúp
                         học sinh phát triển toàn diện về kiến thức, kỹ năng và phẩm chất. Học sinh được định hướng rõ
                         ràng theo năng lực và mục tiêu cá nhân thông qua các hệ học đa dạng: Tăng cường, Nâng cao và
                         Tích hợp quốc tế.</p>
-                    <p style="font-size:16px;line-height:1.8;color:#3f6070;margin:0 0 26px;">Với cách tiếp cận cá nhân
+                    <p style="font-size:16px;line-height:1.8;color:#3f6070;margin:0 0 26px; text-align:justify">Với cách tiếp cận cá nhân
                         hóa, chú trọng trải nghiệm và phát triển năng lực, chương trình hướng tới hình thành những học
                         sinh tự tin, chủ động, có tư duy toàn cầu và nền tảng vững vàng cho các bậc học tiếp theo.</p>
 
@@ -826,7 +840,7 @@
                                     S</span>
                                 <strong style="font-size:16px;color:#1f5f8e;">Hệ Tăng cường</strong>
                             </div>
-                            <p style="margin:0;font-size:14px;line-height:1.75;color:#3f607a;">Chương trình cân bằng
+                            <p style="margin:0;font-size:14px;line-height:1.75;color:#3f607a;text-align:justify">Chương trình cân bằng
                                 giữa kiến thức và kỹ năng, tăng cường hoạt động trải nghiệm. Hướng tới mục tiêu học chắc
                                 – rèn kỹ năng – phát triển hài hòa về tri thức và phẩm chất.</p>
                         </div>
@@ -838,7 +852,7 @@
                                     C</span>
                                 <strong style="font-size:16px;color:#1f5f8e;">Hệ Nâng cao</strong>
                             </div>
-                            <p style="margin:0;font-size:14px;line-height:1.75;color:#3f607a;">Dành cho học sinh có năng
+                            <p style="margin:0;font-size:14px;line-height:1.75;color:#3f607a;text-align:justify">Dành cho học sinh có năng
                                 lực nổi trội, tập trung vào Toán và Tiếng Anh theo định hướng học sâu – tư duy học
                                 thuật, hình thành nền tảng kiến thức vững chắc và khả năng ứng dụng linh hoạt.</p>
                         </div>
@@ -850,7 +864,7 @@
                                     Q</span>
                                 <strong style="font-size:16px;color:#1f5f8e;">Hệ Tích hợp Quốc tế</strong>
                             </div>
-                            <p style="margin:0;font-size:14px;line-height:1.75;color:#3f607a;">Kết hợp Chương trình GDPT
+                            <p style="margin:0;font-size:14px;line-height:1.75;color:#3f607a;text-align:justify">Kết hợp Chương trình GDPT
                                 2018 với chương trình quốc tế Cambridge, phát triển tư duy song ngữ – năng lực học tập
                                 toàn cầu, sẵn sàng cho các bậc học cao hơn.</p>
                         </div>

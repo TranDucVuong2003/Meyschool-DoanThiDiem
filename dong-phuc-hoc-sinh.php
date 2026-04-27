@@ -124,13 +124,18 @@
         margin: 0 0 16px;
         background: rgba(255, 255, 255, 0.15);
         display: inline-flex;
+        flex-wrap: wrap;
+        gap: 6px;
         padding: 10px 18px;
         border-radius: 999px;
+        position: static !important;
+        transform: none !important;
     }
 
     .uniform-hero .breadcrumb-item a,
     .uniform-hero .breadcrumb-item.active {
         color: #fff;
+        position: static !important;
     }
 
     .uniform-lookbook {
@@ -269,6 +274,16 @@
     }
 
     @media (max-width: 768px) {
+        .uniform-hero .breadcrumb {
+            padding: 8px 12px;
+        }
+
+        .uniform-hero .breadcrumb-item a,
+        .uniform-hero .breadcrumb-item.active {
+            font-size: 12px;
+            line-height: 1.4;
+        }
+
         .uniform-hero h1 {
             font-size: 32px;
         }

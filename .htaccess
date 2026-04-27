@@ -3,10 +3,21 @@
 # =============================================
 
 Options -Indexes
+Options +FollowSymLinks
 
 # Bảo vệ thư mục config/ - không cho truy cập trực tiếp
 <IfModule mod_rewrite.c>
     RewriteEngine On
+    RewriteBase /
+
+    # Ẩn đuôi .php
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}\.php -f
+    RewriteRule ^(.*)$ $1.php [L]
+
+    # Ẩn index.php
+    RewriteCond %{THE_REQUEST} /index\.php [NC]
+    RewriteRule ^index\.php$ / [L,R=301]
 
     # Chặn truy cập trực tiếp vào config/
     RewriteRule ^config/ - [F,L]
@@ -14,6 +25,9 @@ Options -Indexes
     # Chặn truy cập trực tiếp vào .git/
     RewriteRule ^\.git/ - [F,L]
 </IfModule>
+
+# DirectoryIndex ưu tiên index.php
+DirectoryIndex index.php
 
 # Bảo mật header
 <IfModule mod_headers.c>

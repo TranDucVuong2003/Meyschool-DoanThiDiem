@@ -408,14 +408,18 @@ $ss = load_site_settings();
                     </div>
 
                     <div class="map-embed">
+                        <?php if (!empty($ss['map_iframe'])): ?>
+                            <?= $ss['map_iframe'] ?>
+                        <?php else: ?>
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.296041924963!2d105.79331437582938!3d20.98148598065586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135acc508fd03ab%3A0x329f2eb08c404f27!2sThe%20Olympia%20Schools!5e0!3m2!1sen!2s!4v1709712345678!5m2!1sen!2s"
                             allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                         </iframe>
+                        <?php endif; ?>
                     </div>
 
                     <div class="map-actions">
-                        <a href="https://maps.app.goo.gl/ABC123" target="_blank" class="map-btn map-btn-primary">Mở
+                        <a href="<?= htmlspecialchars(!empty($ss['map_link']) ? $ss['map_link'] : 'https://maps.app.goo.gl/ABC123') ?>" target="_blank" class="map-btn map-btn-primary">Mở
                             Google Maps</a>
                         <a href="lien-he.php" class="map-btn map-btn-ghost">Liên hệ tư vấn</a>
                     </div>

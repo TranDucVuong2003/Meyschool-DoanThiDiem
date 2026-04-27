@@ -206,7 +206,7 @@ $ss = load_site_settings();
             color: #fff;
             font-family: 'Garamond', serif;
             font-size: clamp(30px, 4vw, 54px);
-            line-height: 1.05;
+            line-height: 1.25;
             max-width: 880px;
         }
 
@@ -216,6 +216,7 @@ $ss = load_site_settings();
             font-size: 17px;
             line-height: 1.78;
             max-width: 820px;
+            text-align: justify;
         }
 
         .team-hero-tags {
@@ -321,6 +322,7 @@ $ss = load_site_settings();
             color: var(--team-text);
             font-size: 15px;
             line-height: 1.76;
+            text-align: justify;
         }
 
         .team-highlight {
@@ -329,6 +331,10 @@ $ss = load_site_settings();
             padding: 14px 16px;
             background: linear-gradient(120deg, #f4fbff 0%, #eaf7ff 100%);
             margin-bottom: 12px;
+        }
+
+        .team-highlight p {
+            text-align: justify;
         }
 
         .team-filter {
@@ -376,7 +382,7 @@ $ss = load_site_settings();
         .team-person img {
             width: 100%;
             height: auto;
-            object-fit: contain;
+            object-fit: cover;
             display: block;
             background: #eef8ff;
         }
@@ -407,6 +413,7 @@ $ss = load_site_settings();
             margin: 0;
             font-size: 14px;
             line-height: 1.65;
+            text-align: justify;
         }
 
         .team-person[data-group] {
@@ -619,7 +626,7 @@ $ss = load_site_settings();
                     <div>
                         <ol class="breadcrumb team-breadcrumb">
                             <li class="breadcrumb-item"><a href="index.php">Trang chủ</a></li>
-                            <li class="breadcrumb-item"><a href="ve-chung-toi.php">Về chúng tôi</a></li>
+                            <!-- <li class="breadcrumb-item"><a href="ve-chung-toi.php">Về chúng tôi</a></li> -->
                             <li class="breadcrumb-item active">Đội ngũ Meyschool Đoàn Thị Điểm</li>
                         </ol>
 

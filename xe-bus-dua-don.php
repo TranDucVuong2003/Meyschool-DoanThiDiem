@@ -147,6 +147,7 @@
         color: rgba(255, 255, 255, 0.93);
         max-width: 540px;
         margin: 0;
+        text-align: justify;
     }
 
     .boarding-hero .breadcrumb {
@@ -247,6 +248,7 @@
         line-height: 1.85;
         color: #2c4963;
         margin: 0 0 20px;
+        text-align: justify;
     }
 
     .boarding-content .boarding-text-card p:last-child {

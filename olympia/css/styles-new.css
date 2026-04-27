@@ -2240,7 +2240,7 @@ img {
 }
 
 .footer-modern .footer-logo-img {
-  max-width: 140px;
+  max-width: 240px;
   height: auto;
 }
 
@@ -2276,6 +2276,7 @@ img {
 
 .footer-modern .footer-social {
   display: flex;
+  justify-content: center;
   gap: 12px;
   margin-top: 14px;
 }

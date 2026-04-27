@@ -66,6 +66,7 @@
             font-size: 17px;
             line-height: 1.7;
             max-width: 760px;
+            text-align: justify;
         }
 
         .ct-breadcrumb {
@@ -121,7 +122,7 @@
         }
 
         .ct-section-sub {
-            text-align: center;
+            text-align: justify;
             color: #4a6785;
             font-size: 15px;
             line-height: 1.7;
@@ -268,6 +269,7 @@
             color: #3b5068;
             line-height: 1.7;
             margin: 0 0 6px;
+            text-align: justify;
         }
 
         .ct-btn {
@@ -344,6 +346,7 @@
             color: #4a6785;
             line-height: 1.6;
             margin: 0 0 12px;
+            text-align: justify;
         }
 
         /* ── Banner full-width ── */
@@ -382,6 +385,7 @@
         .ct-banner-overlay p {
             font-size: 20px;
             text-shadow: 0 2px 8px rgba(0, 0, 0, .3);
+            text-align: justify;
         }
 
         /* ── STEM section ── */
@@ -410,6 +414,7 @@
             font-size: 14px;
             color: #3b5068;
             line-height: 1.7;
+            text-align: justify;
         }
 
         .ct-stem-img {
@@ -460,6 +465,7 @@
             line-height: 1.7;
             color: rgba(255, 255, 255, .9);
             margin: 0;
+            text-align: justify;
         }
 
         /* Cell 2: big photo top-right */
@@ -535,6 +541,7 @@
             color: #3b5068;
             font-size: 14px;
             line-height: 1.8;
+            text-align: justify;
         }
 
         .ct-extra-img {
@@ -563,6 +570,7 @@
             font-size: 15px;
             line-height: 1.8;
             color: #3b5068;
+            text-align: justify;
         }
 
         .ct-clb-intro .ct-clb-time {
@@ -856,11 +864,19 @@
 
         @media (max-width: 576px) {
             .ct-prog-card {
-                grid-template-columns: 1fr;
+                display: block;
             }
 
             .ct-prog-card img {
+                height: auto;
+                width: 100%;
                 min-height: 180px;
+            }
+
+            .ct-prog-body {
+                background: #fff;
+                position: relative;
+                z-index: 1;
             }
 
             .ct-collage img {
@@ -918,18 +934,18 @@
                             <div class="ct-timeline-item">
                                 <div class="ct-timeline-num">1</div>
                                 <h3>Chương trình tiêu chuẩn theo bộ giáo dục</h3>
-                                <p>Các em học sinh có thể tự tin chuyên cấp trong hệ thống, hoặc thi vào các trường
+                                <p style="text-align:justify;">Các em học sinh có thể tự tin chuyên cấp trong hệ thống, hoặc thi vào các trường
                                     chuyên, công lập, ngoài công lập, song ngữ và quốc tế.</p>
                             </div>
                             <div class="ct-timeline-item">
                                 <div class="ct-timeline-num">2</div>
                                 <h3>Chương trình bổ trợ nâng cao Toán, Tiếng Việt</h3>
                                 <p>Hệ thống bài tập bổ trợ, nâng cao môn Toán và Tiếng Việt từ lớp 1 đến lớp 5.</p>
-                                <p>Chương trình Toán online VioEdu của FPT tích hợp các nội dung cơ bản và nâng cao
+                                <p style="text-align:justify;">Chương trình Toán online VioEdu của FPT tích hợp các nội dung cơ bản và nâng cao
                                     trong chương trình Toán của Bộ GD&ĐT thành các bài tập trắc nghiệm, trò chơi, các
                                     bài kiểm tra online giúp học sinh có thể học toán mọi nơi. Chương trình được triển
                                     khai đồng bộ cho các khối lớp 1-2-4-5.</p>
-                                <p>Chương trình Toán Tư duy Eduten Playground được xây dựng bởi các chuyên gia Phần Lan
+                                <p style="text-align:justify;">Chương trình Toán Tư duy Eduten Playground được xây dựng bởi các chuyên gia Phần Lan
                                     trên cơ sở chuẩn kiến thức kỹ năng của Toán Quốc tế được áp dụng rộng rãi trên thế
                                     giới. Chương trình được triển khai đồng bộ cho khối lớp 3.</p>
                             </div>
@@ -1003,12 +1019,12 @@
                 <div class="ct-stem-layout" data-aos="fade-up" style="margin-top:28px;">
                     <div>
                         <h3>Giáo dục STEM là gì?</h3>
-                        <p>Giáo dục STEM là cách tiếp cận liên ngành trong quá trình học, trong đó các khái niệm học
+                        <p style="text-align:justify;">Giáo dục STEM là cách tiếp cận liên ngành trong quá trình học, trong đó các khái niệm học
                             thuật mang tính nguyên tắc được lồng ghép với bài học trong thế giới thực. Bao Trùm giữa các
                             lĩnh vực khoa học, công nghệ, kỹ thuật và toán học.</p>
 
                         <h3>Chương trình Giáo dục STEM tại Tiểu học Đoàn Thị Điểm</h3>
-                        <p>Chương trình STEM tại trường được thực hiện theo phương pháp Giáo dục STEM với mục tiêu giúp
+                        <p style="text-align:justify;">Chương trình STEM tại trường được thực hiện theo phương pháp Giáo dục STEM với mục tiêu giúp
                             học sinh tiếp cận, tìm hiểu khoa học qua VR (thực tế ảo), làm thí nghiệm, quan sát, trải
                             nghiệm thực hành trong các lĩnh vực khoa học tự nhiên.</p>
                         <a href="javascript:void(0)" class="ct-btn ct-btn-outline" style="margin-top:14px;">Xem
@@ -1075,7 +1091,7 @@
                     <!-- Top-left: text -->
                     <div class="ct-skills-text">
                         <h2>Phát triển kỹ năng mềm</h2>
-                        <p>Chương trình phát triển thể chất và nghệ thuật được xây dựng theo hệ thống với sự hỗ trợ của
+                        <p style="text-align:justify;">Chương trình phát triển thể chất và nghệ thuật được xây dựng theo hệ thống với sự hỗ trợ của
                             các tổ chức thể thao uy tín như Liên đoàn bóng đá Nauy, Bóng đá cộng đồng Việt Nam, Nike,
                             các dự án phát triển chương trình và đào tạo giáo viên của bộ GD và ĐT</p>
                     </div>
@@ -1103,7 +1119,7 @@
                 <div class="ct-extra-wrap" data-aos="fade-up" style="margin-top:28px;">
                     <div class="ct-extra-box">
                         <h3>Chương trình ngoại khóa, trải nghiệm, sáng tạo</h3>
-                        <p style="font-size:14px;color:#3b5068;line-height:1.7;margin-bottom:14px;">Hoạt động ngoại
+                        <p style="font-size:14px;color:#3b5068;line-height:1.7;margin-bottom:14px; text-align:justify;">Hoạt động ngoại
                             khóa,
                             trải nghiệm và sáng tạo là một cấu phần quan trọng trong hoạt động giảng dạy của Nhà trường.
                             Các
@@ -1197,7 +1213,7 @@
                     </div>
                 </div>
 
-                <div class="ct-clb-note" data-aos="fade-up">
+                <div class="ct-clb-note" data-aos="fade-up" style="text-align:justify;">
                     <strong>Lưu ý:</strong> Các câu lạc bộ được tổ chức theo khóa học. Nhà trường có thể tạm dừng nhận
                     học sinh hoặc hủy lớp nếu số lượng đăng ký không đủ để mở lớp hoặc vượt quá khả năng đáp ứng về cơ
                     sở vật chất và đội ngũ giáo viên.

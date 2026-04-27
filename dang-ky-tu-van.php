@@ -471,7 +471,6 @@ $ss = load_site_settings();
         }
 
         @media (max-width: 1180px) {
-
             .cs-hero-grid,
             .cs-layout,
             .cs-info-grid {
@@ -498,8 +497,33 @@ $ss = load_site_settings();
                 border-radius: 16px;
             }
 
+            .cs-form-box {
+                padding: 12px;
+            }
+
+            .form-group {
+                margin-bottom: 10px;
+            }
+
+            .form-group label {
+                margin-bottom: 4px;
+                font-size: 13px;
+            }
+
+            .form-group input,
+            .form-group select,
+            .form-group textarea {
+                padding: 10px;
+                font-size: 13px;
+            }
+
             .form-row {
                 grid-template-columns: 1fr;
+                gap: 8px;
+            }
+
+            .form-submit {
+                margin-top: 2px;
             }
         }
 

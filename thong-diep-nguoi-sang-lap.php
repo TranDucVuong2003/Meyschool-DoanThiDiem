@@ -581,6 +581,14 @@
             overflow-x: hidden;
         }
 
+        #tam-nhin h2 {
+            font-size: 20px !important;
+        }
+
+        #thong-diep h2 {
+            font-size: 20px !important;
+        }
+
         .hero-split {
             padding: 60px 0 40px;
         }
@@ -737,8 +745,7 @@
         <section class="section-spacing" id="tam-nhin"
             style="padding:0 0 60px;background:linear-gradient(180deg,#f7fbff 0%,#fff 100%);">
             <div class="founder-container">
-                <h2 style="color:var(--blue-1);font-size:32px;margin-bottom:28px;text-align:center;">Tầm nhìn &ndash; Sứ
-                    mệnh &ndash; Giá trị cốt lõi</h2>
+                <h2 style="color:var(--blue-1);font-size:32px;margin-bottom:28px;text-align:center;white-space:nowrap;">Tầm nhìn &ndash; Sứ mệnh &ndash; Giá trị cốt lõi</h2>
                 <div class="timeline">
                     <div class="timeline-card">
                         <span>Tầm nhìn</span>
@@ -781,7 +788,7 @@
         <section class="section-spacing" id="thong-diep" style="padding:0 0 70px;">
             <div class="founder-container">
                 <div class="message-card" style="max-width:860px;margin:0 auto;">
-                    <h2 style="text-align:center;">Thông điệp nhà trường</h2>
+                    <h2 style="text-align:center;white-space:nowrap;">Thông điệp nhà trường</h2>
                     <p style="font-size:16px;font-weight:600;color:#2354a0;text-align:center;margin-bottom:24px;">
                         <em>Nhà trường lấy giáo dục nhân cách làm gốc, lấy hội nhập toàn cầu làm đích đến.</em>
                     </p>

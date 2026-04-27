@@ -35,6 +35,11 @@ function ensureSiteSettingsTable(PDO $pdo): void
             fanpage VARCHAR(255) NOT NULL,
             work_time_weekdays VARCHAR(120) NOT NULL,
             work_time_saturday VARCHAR(120) NOT NULL,
+            contact_hotlines TEXT NULL,
+            contact_emails TEXT NULL,
+            contact_addresses TEXT NULL,
+            map_iframe TEXT NULL,
+            map_link VARCHAR(500) NULL,
             updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
             PRIMARY KEY (id)
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci"
@@ -52,6 +57,11 @@ function getDefaultSettings(): array
         'fanpage' => 'https://www.facebook.com/meyschooldtd.phuquoc',
         'work_time_weekdays' => '7:30 - 17:00 (Thứ 2 - Thứ 6)',
         'work_time_saturday' => '7:30 - 11:30 (Thứ 7)',
+        'contact_hotlines' => '',
+        'contact_emails' => '',
+        'contact_addresses' => '',
+        'map_iframe' => '',
+        'map_link' => '',
     ];
 }
 
@@ -66,8 +76,8 @@ function getCurrentSettings(PDO $pdo): array
 
     $defaults = getDefaultSettings();
     $insert = $pdo->prepare(
-        'INSERT INTO site_settings (address, hotline, email, website, tiktok, fanpage, work_time_weekdays, work_time_saturday)
-         VALUES (:address, :hotline, :email, :website, :tiktok, :fanpage, :work_time_weekdays, :work_time_saturday)'
+        'INSERT INTO site_settings (address, hotline, email, website, tiktok, fanpage, work_time_weekdays, work_time_saturday, contact_hotlines, contact_emails, contact_addresses, map_iframe, map_link)
+         VALUES (:address, :hotline, :email, :website, :tiktok, :fanpage, :work_time_weekdays, :work_time_saturday, :contact_hotlines, :contact_emails, :contact_addresses, :map_iframe, :map_link)'
     );
     $insert->execute([
         ':address' => $defaults['address'],
@@ -78,6 +88,11 @@ function getCurrentSettings(PDO $pdo): array
         ':fanpage' => $defaults['fanpage'],
         ':work_time_weekdays' => $defaults['work_time_weekdays'],
         ':work_time_saturday' => $defaults['work_time_saturday'],
+        ':contact_hotlines' => $defaults['contact_hotlines'],
+        ':contact_emails' => $defaults['contact_emails'],
+        ':contact_addresses' => $defaults['contact_addresses'],
+        ':map_iframe' => $defaults['map_iframe'],
+        ':map_link' => $defaults['map_link'],
     ]);
 
     return $pdo->query('SELECT * FROM site_settings ORDER BY id ASC LIMIT 1')->fetch(PDO::FETCH_ASSOC);
@@ -110,6 +125,11 @@ try {
         $fanpage = trim((string) ($input['fanpage'] ?? ''));
         $workWeekdays = trim((string) ($input['work_time_weekdays'] ?? ''));
         $workSaturday = trim((string) ($input['work_time_saturday'] ?? ''));
+        $contactHotlines = trim((string) ($input['contact_hotlines'] ?? ''));
+        $contactEmails = trim((string) ($input['contact_emails'] ?? ''));
+        $contactAddresses = trim((string) ($input['contact_addresses'] ?? ''));
+        $mapIframe = trim((string) ($input['map_iframe'] ?? ''));
+        $mapLink = trim((string) ($input['map_link'] ?? ''));
 
         if (
             $address === '' || $hotline === '' || $email === '' || $website === '' ||
@@ -147,6 +167,11 @@ try {
                  fanpage = :fanpage,
                  work_time_weekdays = :work_time_weekdays,
                  work_time_saturday = :work_time_saturday,
+                 contact_hotlines = :contact_hotlines,
+                 contact_emails = :contact_emails,
+                 contact_addresses = :contact_addresses,
+                 map_iframe = :map_iframe,
+                 map_link = :map_link,
                  updated_at = NOW()
              WHERE id = :id'
         );
@@ -160,6 +185,11 @@ try {
             ':fanpage' => $fanpage,
             ':work_time_weekdays' => $workWeekdays,
             ':work_time_saturday' => $workSaturday,
+            ':contact_hotlines' => $contactHotlines,
+            ':contact_emails' => $contactEmails,
+            ':contact_addresses' => $contactAddresses,
+            ':map_iframe' => $mapIframe,
+            ':map_link' => $mapLink,
             ':id' => $id,
         ]);
 

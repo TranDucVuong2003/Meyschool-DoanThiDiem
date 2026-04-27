@@ -330,6 +330,28 @@
             .boarding-hero {
                 padding: 96px 0 44px;
             }
+
+            .boarding-wrap h1,
+            .boarding-wrap h2,
+            .boarding-wrap h4,
+            .boarding-wrap h5,
+            .boarding-wrap h6,
+            .boarding-wrap p,
+            .boarding-wrap li,
+            .boarding-wrap span,
+            .boarding-wrap td {
+                text-align: justify !important;
+            }
+
+            .boarding-wrap h3 {
+                text-align: left !important;
+            }
+
+            .boarding-wrap .breadcrumb,
+            .boarding-wrap .boarding-highlights span,
+            .boarding-wrap .boarding-metrics div {
+                text-align: center !important;
+            }
         }
     </style>
 </head>
@@ -403,7 +425,7 @@
                             phục vụ, tự giác trong ăn uống, và hình thành nếp sống văn minh lành mạnh.</li>
                     </ol>
 
-                    <div class="boarding-note">
+                    <div class="boarding-note" style="text-align:justify;">
                         <strong>Lưu ý:</strong> Để Nhà trường có thể kiểm soát vấn đề vệ sinh an toàn thực phẩm, cũng
                         như phòng tránh các nguy cơ ngộ độc thực phẩm từ nguồn thức ăn bên ngoài và vấn nạn thực phẩm
                         không rõ nguồn gốc trên thị trường, Trường TH, THCS Meyschool Đoàn Thị Điểm quy định học sinh và

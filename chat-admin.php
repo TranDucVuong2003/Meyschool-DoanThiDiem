@@ -247,6 +247,28 @@ $_sidebar_page = 'chat-admin.php';
             cursor: not-allowed;
         }
 
+        .delete-chat-btn {
+            border: 1px solid #fecaca;
+            border-radius: 8px;
+            background: #fef2f2;
+            color: #dc2626;
+            font-size: 12px;
+            font-weight: 700;
+            height: 32px;
+            padding: 0 10px;
+            cursor: pointer;
+            margin-left: 8px;
+        }
+
+        .delete-chat-btn:hover:not(:disabled) {
+            background: #fee2e2;
+        }
+
+        .delete-chat-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
         .chat-messages {
             flex: 1;
             overflow: auto;
@@ -320,6 +342,150 @@ $_sidebar_page = 'chat-admin.php';
             margin: auto;
             color: #9aa3af;
             font-size: 14px;
+        }
+
+        /* Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal {
+            background: #fff;
+            border-radius: 12px;
+            padding: 24px;
+            max-width: 400px;
+            width: 90%;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .modal-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 12px;
+        }
+
+        .modal-content {
+            font-size: 14px;
+            color: #4b5563;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+        }
+
+        .modal-btn {
+            border: none;
+            border-radius: 8px;
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .modal-btn-cancel {
+            background: #e5e7eb;
+            color: #374151;
+        }
+
+        .modal-btn-cancel:hover {
+            background: #d1d5db;
+        }
+
+        .modal-btn-confirm {
+            background: #dc2626;
+            color: #fff;
+        }
+
+        .modal-btn-confirm:hover {
+            background: #b91c1c;
+        }
+
+        /* Toast */
+        .toast-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1100;
+        }
+
+        .toast {
+            background: #fff;
+            border-radius: 10px;
+            padding: 16px 20px;
+            margin-bottom: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            min-width: 300px;
+            max-width: 400px;
+            animation: slideIn 0.3s ease;
+        }
+
+        .toast.success {
+            border-left: 4px solid #10b981;
+        }
+
+        .toast.error {
+            border-left: 4px solid #ef4444;
+        }
+
+        .toast-icon {
+            font-size: 20px;
+        }
+
+        .toast.success .toast-icon {
+            color: #10b981;
+        }
+
+        .toast.error .toast-icon {
+            color: #ef4444;
+        }
+
+        .toast-message {
+            font-size: 14px;
+            color: #1f2937;
+            line-height: 1.5;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideOut {
+            from {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            to {
+                transform: translateX(100%);
+                opacity: 0;
+            }
         }
 
         @media (max-width: 1024px) {
@@ -453,6 +619,21 @@ $_sidebar_page = 'chat-admin.php';
         </main>
     </div>
 
+    <!-- Modal xác nhận xóa -->
+    <div id="deleteModal" class="modal-overlay">
+        <div class="modal">
+            <div class="modal-title">Xác nhận xóa hội thoại</div>
+            <div class="modal-content">Bạn có chắc chắn muốn xóa toàn bộ hội thoại này? Hành động này không thể hoàn tác.</div>
+            <div class="modal-actions">
+                <button id="cancelDeleteBtn" class="modal-btn modal-btn-cancel">Hủy</button>
+                <button id="confirmDeleteBtn" class="modal-btn modal-btn-confirm">Xóa</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast container -->
+    <div id="toastContainer" class="toast-container"></div>
+
     <script>
         (function() {
             const listEl = document.getElementById('conversationList');
@@ -506,7 +687,8 @@ $_sidebar_page = 'chat-admin.php';
                     headEl.innerHTML =
                         '<div class="chat-head-row">' +
                         '<div><div class="name">Chọn hội thoại để bắt đầu</div><div class="meta"></div></div>' +
-                        '<button id="closeChatBtn" class="close-chat-btn" type="button" disabled>Kết thúc chat</button>' +
+                        '<div><button id="closeChatBtn" class="close-chat-btn" type="button" disabled>Kết thúc chat</button>' +
+                        '<button id="deleteChatBtn" class="delete-chat-btn" type="button" disabled>Xóa</button></div>' +
                         '</div>';
                     selectedConversationStatus = '';
                     updateComposerState();
@@ -514,17 +696,25 @@ $_sidebar_page = 'chat-admin.php';
                 }
 
                 selectedConversationStatus = String(conversation.status || 'open');
+                const canDelete = !!selectedConversationId;
                 headEl.innerHTML =
                     '<div class="chat-head-row">' +
                     '<div>' +
                     '<div class="name">' + escapeHtml(conversation.guest_name || 'Khách') + '</div>' +
                     '<div class="meta">' + escapeHtml(conversation.guest_phone || '') + ' | Trạng thái: ' + escapeHtml(conversation.status || 'open') + '</div>' +
                     '</div>' +
+                    '<div>' +
                     '<button id="closeChatBtn" class="close-chat-btn" type="button" ' + (selectedConversationStatus === 'open' ? '' : 'disabled') + '>Kết thúc chat</button>' +
+                    '<button id="deleteChatBtn" class="delete-chat-btn" type="button" ' + (canDelete ? '' : 'disabled') + '>Xóa</button>' +
+                    '</div>' +
                     '</div>';
                 const newCloseButton = document.getElementById('closeChatBtn');
                 if (newCloseButton) {
                     newCloseButton.addEventListener('click', handleCloseConversation);
+                }
+                const newDeleteButton = document.getElementById('deleteChatBtn');
+                if (newDeleteButton) {
+                    newDeleteButton.addEventListener('click', handleDeleteConversation);
                 }
                 updateComposerState();
             }
@@ -667,6 +857,93 @@ $_sidebar_page = 'chat-admin.php';
                         updateComposerState();
                     });
             }
+
+            function showToast(message, type) {
+                const container = document.getElementById('toastContainer');
+                const toast = document.createElement('div');
+                toast.className = 'toast ' + (type === 'success' ? 'success' : 'error');
+                const icon = type === 'success' ? '✓' : '✕';
+                toast.innerHTML =
+                    '<span class="toast-icon">' + icon + '</span>' +
+                    '<span class="toast-message">' + escapeHtml(message) + '</span>';
+                container.appendChild(toast);
+
+                setTimeout(function() {
+                    toast.style.animation = 'slideOut 0.3s ease';
+                    setTimeout(function() {
+                        container.removeChild(toast);
+                    }, 300);
+                }, 3000);
+            }
+
+            function handleDeleteConversation() {
+                if (!selectedConversationId) {
+                    return;
+                }
+
+                const modal = document.getElementById('deleteModal');
+                if (modal) {
+                    modal.classList.add('active');
+                }
+            }
+
+            function hideDeleteModal() {
+                const modal = document.getElementById('deleteModal');
+                if (modal) {
+                    modal.classList.remove('active');
+                }
+            }
+
+            function confirmDeleteConversation() {
+                if (!selectedConversationId) {
+                    hideDeleteModal();
+                    return;
+                }
+
+                const body = new URLSearchParams();
+                body.set('conversation_id', String(selectedConversationId));
+
+                fetch('admin/chat/delete.php', {
+                        method: 'POST',
+                        credentials: 'same-origin',
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+                        },
+                        body: body.toString(),
+                    })
+                    .then(function(res) {
+                        return res.json();
+                    })
+                    .then(function(data) {
+                        if (!data.success) {
+                            throw new Error(data.message || 'Không thể xóa hội thoại.');
+                        }
+                        showToast('Đã xóa hội thoại thành công', 'success');
+                        hideDeleteModal();
+                        selectedConversationId = null;
+                        selectedConversationStatus = '';
+                        setChatHeader(null);
+                        messagesEl.innerHTML = '<div class="empty-state">Chưa chọn hội thoại.</div>';
+                        loadConversations();
+                        if (typeof window.refreshChatBadge === 'function') {
+                            window.refreshChatBadge();
+                        }
+                    })
+                    .catch(function(error) {
+                        showToast(error.message || 'Không thể xóa hội thoại.', 'error');
+                    });
+            }
+
+            // Modal event listeners
+            document.getElementById('cancelDeleteBtn').addEventListener('click', hideDeleteModal);
+            document.getElementById('confirmDeleteBtn').addEventListener('click', confirmDeleteConversation);
+
+            // Close modal when clicking overlay
+            document.getElementById('deleteModal').addEventListener('click', function(event) {
+                if (event.target === this) {
+                    hideDeleteModal();
+                }
+            });
 
             function selectConversation(conversationId) {
                 selectedConversationId = Number(conversationId);

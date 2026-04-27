@@ -32,10 +32,6 @@ h1 {
   justify-content: space-between;
 }
 
-.container-full {
-  /*padding: 80px;*/
-}
-
 .header-navbar-item {
   font-weight: 600;
   font-size: 16px;
@@ -7154,7 +7150,7 @@ select.select-day option {
   }
 
   .header-mb-logo img {
-    height: 25px;
+    height: 65px;
     max-width: 240px;
   }
 }
@@ -9839,11 +9835,11 @@ select.select-day option {
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-image: url(../images/mb-bg.jpg);
+    background-image: url(../images/bg.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: bottom;
-    background-color: #f7f2fa;
+    background-color: #eaf7ff;
   }
 
   .link-button-bg.bg-471873 {
@@ -10359,7 +10355,7 @@ select.select-day option {
   }
 
   .olympia-number-box.home-index {
-    margin-top: 150px !important;
+    margin-top: 15px !important;
   }
   .home-index .olympia-number-left {
     width: 100%;
@@ -10533,7 +10529,7 @@ select.select-day option {
   }
 
   #olympia-level-training {
-    margin-top: 160px;
+    margin-top: 15 px;
   }
 
   .olympia-level-left .olympia-level.level-1,
